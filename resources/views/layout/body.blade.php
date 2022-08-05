@@ -1,64 +1,52 @@
+
 <div class="fullwidth-template">
     <div class="slide-home-04">
         <div class="response-product product-list-owl owl-slick equal-container better-height"
              data-slick="{&quot;arrows&quot;:false,&quot;slidesMargin&quot;:0,&quot;dots&quot;:true,&quot;infinite&quot;:false,&quot;speed&quot;:300,&quot;slidesToShow&quot;:1,&quot;rows&quot;:1}"
              data-responsive="[{&quot;breakpoint&quot;:480,&quot;settings&quot;:{&quot;slidesToShow&quot;:1,&quot;slidesMargin&quot;:&quot;0&quot;}},{&quot;breakpoint&quot;:768,&quot;settings&quot;
                 :{&quot;slidesToShow&quot;:1,&quot;slidesMargin&quot;:&quot;0&quot;}},{&quot;breakpoint&quot;:992,&quot;settings&quot;:{&quot;slidesToShow&quot;:1,&quot;slidesMargin&quot;:&quot;0&quot;}},
-                {&quot;breakpoint&quot;:1200,&quot;settings&quot;:{&quot;slidesToShow&quot;:1,&quot;slidesMargin&quot;:&quot;0&quot;}},{&quot;breakpoint&quot;:1500,&quot;settings&quot;:{&quot;slidesToShow&quot;:1,&quot;slidesMargin&quot;:&quot;0&quot;}}]">
-            <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-                <ol class="carousel-indicators">
-                    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-                    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-                    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-                </ol>
-                <div class="carousel-inner">
-                    <div class="carousel-item active">
-                        <div class="slide-wrap">
-                            <img src="{{asset('images/home1.1.jpg')}}" alt="image">
-                            <div class="slide-info">
-                                <div class="container">
-                                    <div class="slide-inner">
-                                        <h2>The Lookbook</h2>
-                                        <h1>New Collection<br>
-                                            Girl's T-shirt</h1>
-                                        <h5>Price from:<strong>$75.00</strong></h5>
-                                        <a href="shop.html">Shop now</a>
-                                    </div>
-                                </div>
+                {&quot;breakpoint&quot;:1200,&quot;settings&quot;:{&quot;slidesToShow&quot;:1,&quot;slidesMargin&quot;:&quot;0&quot;}},{&quot;breakpoint&quot;:1500,&quot;settings&quot;
+                :{&quot;slidesToShow&quot;:1,&quot;slidesMargin&quot;:&quot;0&quot;}}]">
+                <div class="slide-wrap">
+                    <img src="{{asset('images/home1.1.jpg')}}" alt="image">
+                    <div class="slide-info">
+                        <div class="container">
+                            <div class="slide-inner">
+                                <h2>The Lookbook</h2>
+                                <h1>New Collection<br>
+                                    Girl's T-shirt</h1>
+                                <h5>Price from:<strong>$75.00</strong></h5>
+                                <a href="shop.html">Shop now</a>
                             </div>
                         </div>
                     </div>
-                    <div class="carousel-item">
-                        <div class="slide-wrap">
-                            <img src="{{asset('images/home1.2.jpg')}}" alt="image">
-                            <div class="slide-info">
-                                <div class="container">
-                                    <div class="slide-inner">
-                                        <h2>New Arrivals</h2>
-                                        <h1>Deal Of Day <br>
-                                            Store Items
-                                        </h1>
-                                        <h5>Price from:<strong>$95.00</strong></h5>
-                                        <a href="shop.html">Shop now</a>
-                                    </div>
-                                </div>
+                </div>
+                <div class="slide-wrap">
+                    <img src="{{asset('images/home1.2.jpg')}}" alt="image">
+                    <div class="slide-info">
+                        <div class="container">
+                            <div class="slide-inner">
+                                <h2>New Arrivals</h2>
+                                <h1>Deal Of Day <br>
+                                    Store Items
+                                </h1>
+                                <h5>Price from:<strong>$95.00</strong></h5>
+                                <a href="shop.html">Shop now</a>
                             </div>
                         </div>
                     </div>
-                    <div class="carousel-item">
-                        <div class="slide-wrap">
-                            <img src="{{asset('images/home1.3.jpg')}}" alt="image">
-                            <div class="slide-info">
-                                <div class="container">
-                                    <div class="slide-inner">
-                                        <h2>Handpick Items</h2>
-                                        <h1>Best Seller<br>
-                                            Grow a Clothes!
-                                        </h1>
-                                        <h5>Price from:<strong>$55.00</strong></h5>
-                                        <a href="shop.html">Shop now</a>
-                                    </div>
-                                </div>
+                </div>
+                <div class="slide-wrap">
+                    <img src="{{asset('images/home1.3.jpg')}}" alt="image">
+                    <div class="slide-info">
+                        <div class="container">
+                            <div class="slide-inner">
+                                <h2>Handpick Items</h2>
+                                <h1>Best Seller<br>
+                                    Grow a Clothes!
+                                </h1>
+                                <h5>Price from:<strong>$55.00</strong></h5>
+                                <a href="shop.html">Shop now</a>
                             </div>
                         </div>
                     </div>
@@ -73,7 +61,7 @@
                     <div class="kodory-banner style-01 left-top new">
                         <div class="banner-inner">
                             <figure class="banner-thumb">
-                                <img src="assets/images/banner41.jpg"
+                                <img src="{{asset('images/nc 1.1.jpg')}}"
                                      class="attachment-full size-full" alt="img">
                             </figure>
                             <div class="banner-info ">
@@ -92,7 +80,7 @@
                     <div class="kodory-banner style-01 left-center">
                         <div class="banner-inner">
                             <figure class="banner-thumb">
-                                <img src="assets/images/banner42.jpg"
+                                <img src="{{asset('images/ws 1.2.jpg')}}"
                                      class="attachment-full size-full" alt="img">
                             </figure>
                             <div class="banner-info ">
@@ -111,7 +99,7 @@
                             <div class="kodory-banner style-01 left-top  kodory_custom_5d67efefec0b8 ">
                                 <div class="banner-inner">
                                     <figure class="banner-thumb">
-                                        <img src="assets/images/banner43.jpg"
+                                        <img src="{{asset('images/ks 1.3.jpg')}}"
                                              class="attachment-full size-full" alt="img"></figure>
                                     <div class="banner-info ">
                                         <div class="banner-content">
@@ -131,7 +119,7 @@
                             <div class="kodory-banner style-01 left-bottom">
                                 <div class="banner-inner">
                                     <figure class="banner-thumb">
-                                        <img src="assets/images/banner44.jpg"
+                                        <img src="{{asset('images/sh 1.4.jpg')}}"
                                              class="attachment-full size-full" alt="img"></figure>
                                     <div class="banner-info ">
                                         <div class="banner-content">
@@ -187,7 +175,7 @@
                                             <a class="thumb-link"
                                                href="single-product.html">
                                                 <img class="img-responsive"
-                                                     src="assets/images/apro13-1-270x350.jpg"
+                                                     src="{{asset('images/prt 1.1.jpg')}}"
                                                      alt="Hello Shirt" width="270" height="350">
                                             </a>
                                             <div class="flash">
@@ -228,7 +216,7 @@
                                             <a class="thumb-link"
                                                href="single-product.html">
                                                 <img class="img-responsive"
-                                                     src="assets/images/apro302-270x350.jpg"
+                                                     src="{{asset('images/prt 1.2.jpg')}}"
                                                      alt="Cute Shoes" width="270" height="350">
                                             </a>
                                             <div class="flash">
@@ -268,7 +256,7 @@
                                         <div class="product-thumb">
                                             <a class="thumb-link" href="single-product.html">
                                                 <img class="img-responsive"
-                                                     src="assets/images/apro31-1-270x350.jpg"
+                                                     src="{{asset('images/prt 1.2.jpg')}}"
                                                      alt="Cute Girl Shirt" width="270" height="350">
                                             </a>
                                             <div class="flash">
@@ -309,7 +297,7 @@
                                             <a class="thumb-link"
                                                href="single-product.html">
                                                 <img class="img-responsive"
-                                                     src="assets/images/apro51012-1-270x350.jpg"
+                                                    src="{{asset('images/prt 1.2.jpg')}}"
                                                      alt="Dazzling Toys" width="270" height="350">
                                             </a>
                                             <div class="flash">
@@ -353,7 +341,7 @@
                                             <a class="thumb-link"
                                                href="single-product.html">
                                                 <img class="img-responsive"
-                                                     src="assets/images/apro41-1-270x350.jpg"
+                                                    src="{{asset('images/prt 1.2.jpg')}}"
                                                      alt="Cute Shoes" width="270" height="350">
                                             </a>
                                             <div class="flash">
@@ -394,7 +382,7 @@
                                             <a class="thumb-link"
                                                href="single-product.html">
                                                 <img class="img-responsive"
-                                                     src="assets/images/apro61-1-270x350.jpg"
+                                                    src="{{asset('images/prt 1.2.jpg')}}"
                                                      alt="Shark Shirt" width="270" height="350">
                                             </a>
                                             <div class="flash">
@@ -437,7 +425,7 @@
                                             <a class="thumb-link"
                                                href="single-product.html">
                                                 <img class="img-responsive"
-                                                     src="assets/images/apro71-1-270x350.jpg"
+                                                    src="{{asset('images/prt 1.2.jpg')}}"
                                                      alt="Kid Backpack" width="270" height="350">
                                             </a>
                                             <div class="flash">
@@ -481,7 +469,7 @@
                                             <a class="thumb-link"
                                                href="single-product.html">
                                                 <img class="img-responsive"
-                                                     src="assets/images/apro83-1-270x350.jpg"
+                                                src="{{asset('images/prt 1.2.jpg')}}"
                                                      alt="Glasses" width="270" height="350">
                                             </a>
                                             <div class="flash">

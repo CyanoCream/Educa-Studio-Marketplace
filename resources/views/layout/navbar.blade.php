@@ -16,34 +16,34 @@
                     </div>
                     <div class="header-logo-nav">
                         <div class="header-logo">
-                            <a href="index.html"><img alt="Kodory" src="assets/images/logo.png"
+                            <a href="index.html"><img alt="Kodory" src="{{asset('images/logoo.png')}}" width="100px"
                             class="logo"></a></div>
                         <div class="box-header-nav menu-nocenter">
                             <ul id="menu-primary-menu"
                                 class="clone-main-menu kodory-clone-mobile-menu kodory-nav main-menu">
                                 <li id="menu-item-230"
                                     class="menu-item menu-item-type-post_type menu-item-object-megamenu menu-item-230 parent parent-megamenu item-megamenu menu-item-has-children">
-                                    <a class="kodory-menu-item-title" title="Home" href="index.html">Home</a>
-                                    <span class="toggle-submenu"></span>
+                                    <a class="kodory-menu-item-title" title="Home" href="body.blade.php">Home</a>
+                                    {{-- <span class="toggle-submenu"></span> --}}
                                     <div class="submenu megamenu megamenu-home">
-                                        <div class="demo-item">
-                                            <div class="row">
+                                        {{-- <div class="demo-item"> --}}
+                                            {{-- <div class="row">
                                                 <div class="col-md-6 col-lg-4 col-sm-6">
                                                     <div class="dreaming_single_image dreaming_content_element az_align_left shadow-img">
                                                         <figure class="dreaming_wrapper az_figure">
                                                             <a href="index.html" target="_self"
                                                                class="az_single_image-wrapper az_box_border_grey effect normal-effect dark-bg">
-                                                                <img src="assets/images/demo001.jpg"
+                                                                <img src="{{asset('images/home1.1.jpg')}}"
                                                                      class="az_single_image-img attachment-full"
                                                                      alt="img">
                                                             </a>
                                                         </figure>
                                                     </div>
                                                     <h5 class="az_custom_heading">
-                                                        <a href="index.html">Home 01</a>
+                                                        <a href="body.php">Home 01</a>
                                                     </h5>
-                                                </div>
-                                                <div class="col-md-6 col-lg-4 col-sm-6">
+                                                </div> --}}
+                                                {{-- <div class="col-md-6 col-lg-4 col-sm-6">
                                                     <div class="dreaming_single_image dreaming_content_element az_align_left shadow-img">
                                                         <figure class="dreaming_wrapper az_figure">
                                                             <a href="home-02.html" target="_self"
@@ -52,8 +52,8 @@
                                                                      class="az_single_image-img attachment-full"
                                                                      alt="img"></a>
                                                         </figure>
-                                                    </div>
-                                                    <h5 class="az_custom_heading">
+                                                    </div> --}}
+                                                    {{-- <h5 class="az_custom_heading">
                                                         <a href="home-02.html">Home 02</a>
                                                     </h5>
                                                 </div>
@@ -115,51 +115,41 @@
                                                     <h5 class="az_custom_heading">
                                                         <a href="home-06.html">Home 06</a>
                                                     </h5>
-                                                </div>
-                                            </div>
-                                        </div>
+                                                </div> --}}
+                                            {{-- </div> --}}
+                                        {{-- </div> --}}
                                     </div>
                                 </li>
                                 <li id="menu-item-228"
                                     class="menu-item menu-item-type-post_type menu-item-object-megamenu menu-item-228 parent parent-megamenu item-megamenu menu-item-has-children">
                                     <a class="kodory-menu-item-title" title="Shop"
-                                       href="shop.html">Shop</a>
+                                       href="shop.html">Katalog</a>
                                     <span class="toggle-submenu"></span>
                                     <div class="submenu megamenu megamenu-shop">
                                         <div class="row">
                                             <div class="col-md-4">
                                                 <div class="kodory-listitem style-01">
                                                     <div class="listitem-inner">
-                                                        <h4 class="title">Shop Layouts </h4>
                                                         <ul class="listitem-list">
                                                             <li>
-                                                                <a href="shop.html" target="_self">Shop Grid </a>
+                                                                <a href="#" target="_self">Aktivitas</a>
                                                             </li>
                                                             <li>
-                                                                <a href="shop-list.html" target="_self">
-                                                                    <span class="image">
-                                                                        <img src="assets/images/label-new.png"
-                                                                             class="attachment-full size-full"
-                                                                             alt="img">
-                                                                    </span>
-                                                                    Shop List
-                                                                </a>
+                                                                <a href="#" target="_self">Shop List</a>
                                                             </li>
                                                             <li>
-                                                                <a href="shop.html" target="_self">No Sidebar </a>
+                                                                <a href="#" target="_self">No Sidebar</a>
                                                             </li>
                                                             <li>
-                                                                <a href="shop-leftsidebar.html" target="_self">Left
-                                                                    Sidebar </a>
+                                                                <a href="#" target="_self">Left Sidebar</a>
                                                             </li>
                                                             <li>
-                                                                <a href="shop-rightsidebar.html" target="_self">Right
-                                                                    Sidebar </a>
+                                                                <a href="#" target="_self">Right Sidebar</a>
                                                             </li>
                                                         </ul>
                                                     </div>
                                                 </div>
-                                                <div class="kodory-listitem style-01">
+                                                {{-- <div class="kodory-listitem style-01">
                                                     <div class="listitem-inner">
                                                         <h4 class="title">Product Layouts </h4>
                                                         <ul class="listitem-list">
@@ -191,8 +181,8 @@
                                                         </ul>
                                                     </div>
                                                 </div>
-                                            </div>
-                                            <div class="col-md-4">
+                                            </div> --}}
+                                            {{-- <div class="col-md-4">
                                                 <div class="kodory-listitem style-01">
                                                     <div class="listitem-inner">
                                                         <h4 class="title">
@@ -226,8 +216,8 @@
                                                             </li>
                                                         </ul>
                                                     </div>
-                                                </div>
-                                                <div class="kodory-listitem style-01">
+                                                </div> --}}
+                                                {{-- <div class="kodory-listitem style-01">
                                                     <div class="listitem-inner">
                                                         <h4 class="title">
                                                             Other Pages </h4>
@@ -254,8 +244,8 @@
                                                         </ul>
                                                     </div>
                                                 </div>
-                                            </div>
-                                            <div class="col-md-4">
+                                            </div> --}}
+                                            {{-- <div class="col-md-4">
                                                 <div class="kodory-listitem style-01">
                                                     <div class="listitem-inner">
                                                         <h4 class="title">
@@ -297,8 +287,8 @@
                                                             </li>
                                                         </ul>
                                                     </div>
-                                                </div>
-                                                <div class="kodory-listitem style-01">
+                                                </div> --}}
+                                                {{-- <div class="kodory-listitem style-01">
                                                     <div class="listitem-inner">
                                                         <h4 class="title">
                                                             Other Account Page</h4>
@@ -326,15 +316,15 @@
                                                             </li>
                                                         </ul>
                                                     </div>
-                                                </div>
+                                                </div> --}}
                                             </div>
                                         </div>
                                     </div>
                                 </li>
                                 <li id="menu-item-229"
                                     class="menu-item menu-item-type-post_type menu-item-object-megamenu menu-item-229 parent parent-megamenu item-megamenu menu-item-has-children">
-                                    <a class="kodory-menu-item-title" title="Elements" href="#">Elements</a>
-                                    <span class="toggle-submenu"></span>
+                                    <a class="kodory-menu-item-title" title="Elements" href="#">Pesanan</a>
+                                    {{-- <span class="toggle-submenu"></span>
                                     <div class="submenu megamenu megamenu-elements">
                                         <div class="row">
                                             <div class="col-md-4">
@@ -363,8 +353,8 @@
                                                         </ul>
                                                     </div>
                                                 </div>
-                                            </div>
-                                            <div class="col-md-4">
+                                            </div> --}}
+                                            {{-- <div class="col-md-4">
                                                 <div class="kodory-listitem style-01">
                                                     <div class="listitem-inner">
                                                         <h4 class="title">
@@ -398,8 +388,8 @@
                                                         </ul>
                                                     </div>
                                                 </div>
-                                            </div>
-                                            <div class="col-md-4">
+                                            </div> --}}
+                                            {{-- <div class="col-md-4">
                                                 <div class="kodory-listitem style-01">
                                                     <div class="listitem-inner">
                                                         <h4 class="title">
@@ -423,15 +413,15 @@
                                                         </ul>
                                                     </div>
                                                 </div>
-                                            </div>
-                                        </div>
-                                    </div>
+                                            </div> --}}
+                                        {{-- </div>
+                                    </div> --}}
                                 </li>
                                 <li id="menu-item-996"
                                     class="menu-item menu-item-type-post_type menu-item-object-megamenu menu-item-996 parent parent-megamenu item-megamenu menu-item-has-children">
                                     <a class="kodory-menu-item-title" title="Blog"
-                                       href="blog.html">Blog</a>
-                                    <span class="toggle-submenu"></span>
+                                       href="blog.html">Premium</a>
+                                    {{-- <span class="toggle-submenu"></span>
                                     <div class="submenu megamenu megamenu-blog">
                                         <div class="row">
                                             <div class="col-md-4">
@@ -460,8 +450,8 @@
                                                         </ul>
                                                     </div>
                                                 </div>
-                                            </div>
-                                            <div class="col-md-4">
+                                            </div> --}}
+                                            {{-- <div class="col-md-4">
                                                 <div class="kodory-listitem style-01">
                                                     <div class="listitem-inner">
                                                         <h4 class="title">
@@ -528,11 +518,11 @@
                                                         </ul>
                                                     </div>
                                                 </div>
-                                            </div>
-                                        </div>
-                                    </div>
+                                            </div> --}}
+                                        {{-- </div>
+                                    </div> --}}
                                 </li>
-                                <li id="menu-item-237"
+                                {{-- <li id="menu-item-237"
                                     class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-237 parent">
                                     <a class="kodory-menu-item-title" title="Pages" href="#">Pages</a>
                                     <span class="toggle-submenu"></span>
@@ -550,7 +540,7 @@
                                             <a class="kodory-menu-item-title" title="Page 404"
                                                href="404.html">Page 404</a></li>
                                     </ul>
-                                </li>
+                                </li> --}}
                             </ul>
                         </div>
                     </div>
@@ -601,15 +591,15 @@
                                         <span class="flaticon-profile"></span>
                                     </a>
                                     <ul class="sub-menu">
-                                        <li class="menu-item kodory-MyAccount-navigation-link kodory-MyAccount-navigation-link--dashboard is-active">
+                                        {{-- <li class="menu-item kodory-MyAccount-navigation-link kodory-MyAccount-navigation-link--dashboard is-active">
                                             <a href="#">Dashboard</a>
-                                        </li>
+                                        </li> --}}
                                         <li class="menu-item kodory-MyAccount-navigation-link kodory-MyAccount-navigation-link--orders">
                                             <a href="#">Orders</a>
                                         </li>
-                                        <li class="menu-item kodory-MyAccount-navigation-link kodory-MyAccount-navigation-link--downloads">
+                                        {{-- <li class="menu-item kodory-MyAccount-navigation-link kodory-MyAccount-navigation-link--downloads">
                                             <a href="#">Downloads</a>
-                                        </li>
+                                        </li> --}}
                                         <li class="menu-item kodory-MyAccount-navigation-link kodory-MyAccount-navigation-link--edit-address">
                                             <a href="#">Addresses</a>
                                         </li>
@@ -633,7 +623,7 @@
                                             <h3 class="minicart-title">Your Cart<span
                                                     class="minicart-number-items">3</span></h3>
                                             <ul class="kodory-mini-cart cart_list product_list_widget">
-                                                <li class="kodory-mini-cart-item mini_cart_item">
+                                                {{-- <li class="kodory-mini-cart-item mini_cart_item">
                                                     <a href="#" class="remove remove_from_cart_button">×</a>
                                                     <a href="#">
                                                         <img src="assets/images/apro134-1-600x778.jpg"
@@ -666,11 +656,11 @@
                                                     <span class="quantity">1 × <span
                                                             class="kodory-Price-amount amount"><span
                                                             class="kodory-Price-currencySymbol">$</span>139.00</span></span>
-                                                </li>
+                                                </li> --}}
                                             </ul>
                                             <p class="kodory-mini-cart__total total"><strong>Subtotal:</strong>
                                                 <span class="kodory-Price-amount amount"><span
-                                                        class="kodory-Price-currencySymbol">$</span>418.00</span>
+                                                        class="kodory-Price-currencySymbol">$</span></span>
                                             </p>
                                             <p class="kodory-mini-cart__buttons buttons">
                                                 <a href="cart.html" class="button kodory-forward">Viewcart</a>
