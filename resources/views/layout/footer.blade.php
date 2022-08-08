@@ -5,10 +5,9 @@
                 <div class="newsletter-inner">
                     <div class="newsletter-info">
                         <div class="newsletter-wrap">
-                            <h3 class="title">Newsletter<span></span></h3>
-                            <h4 class="subtitle">Get Discount 30% Off</h4>
-                            <p class="desc">Suspendisse netus proin eleifend fusce sollicitudin potenti vel magnis
-                                nascetur</p>
+                            <h3 class="title">News<span></span></h3>
+                            <h4 class="subtitle">Get Discount 100%</h4>
+                            <p class="desc">send your suggestions and criticism</p>
                         </div>
                     </div>
                     <div class="newsletter-form-wrap">
@@ -16,7 +15,7 @@
                             <input class="email email-newsletter" name="email" placeholder="Enter your email ..."
                                    type="email">
                             <a href="#" class="button btn-submit submit-newsletter">
-                                <span class="text">Subscribe</span>
+                                <span class="text">Submit</span>
                             </a>
                         </div>
                     </div>
@@ -26,14 +25,14 @@
     </div>
     <div class="section-025">
         <div class="container">
-            <div class="row">
-                <div class="col-md-12 col-lg-12 d-lg-none">
+            <div class="row justify-content-center">
+                <div class="col-md-12 col-lg-12 d-lg-none text-align-center">
                     <div class="logo-footer">
-                        <img src="assets/images/logo.png"
+                        <img src="{{asset('images/logoo.png')}}"
                              class="az_single_image-img attachment-full" alt="img">
                     </div>
-                    <div class="footer-desc">Kodory helps you sell anything.<br/>
-                        The best choice for your next personal
+                    <div class="footer-desc">Child can develop your child's abilities.<br/>
+                        The best choice for parents who want to advance their child's development
                     </div>
                     <div class="kodory-socials style-01">
                         <div class="content-socials">
@@ -57,7 +56,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-6 col-lg-3">
+                {{-- <div class="col-md-6 col-lg-3">
                     <div class="kodory-listitem style-04">
                         <div class="listitem-inner">
                             <h4 class="title">Customer </h4>
@@ -81,14 +80,14 @@
                             </ul>
                         </div>
                     </div>
-                </div>
+                </div> --}}
                 <div class="col-lg-6 d-none d-lg-block">
                     <div class="logo-footer">
-                        <img src="assets/images/logo.png"
+                        <img src="{{asset('images/logoo.png')}}"
                              class="az_single_image-img attachment-full" alt="img">
                     </div>
-                    <div class="footer-desc">Kodory helps you sell anything.<br/>
-                        The best choice for your next personal
+                    <div class="footer-desc">Child can develop your child's abilities.<br/>
+                        The best choice for parents who want to advance their child's development
                     </div>
                     <div class="kodory-socials style-01">
                         <div class="content-socials">
@@ -112,7 +111,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-6 col-lg-3">
+                {{-- <div class="col-md-6 col-lg-3">
                     <div class="kodory-listitem style-04">
                         <div class="listitem-inner">
                             <h4 class="title">
@@ -137,7 +136,7 @@
                             </ul>
                         </div>
                     </div>
-                </div>
+                </div> --}}
             </div>
         </div>
     </div>
@@ -145,14 +144,14 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-6">
-                    <p>© Copyright 2021 <a href="#">Kodory</a>. All Rights Reserved.</p>
+                    <p>© Copyright 2022 <a href="#">Child</a>. All Rights Reserved.</p>
                 </div>
-                <div class="col-md-6">
+                {{-- <div class="col-md-6">
                     <div class="payment">
                         <img src="assets/images/payment.png"
                              class="az_single_image-img attachment-full" alt="img">
                     </div>
-                </div>
+                </div> --}}
             </div>
         </div>
     </div>

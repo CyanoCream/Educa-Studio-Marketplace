@@ -148,19 +148,19 @@
                         <li class="active">
                             <a class="loaded" data-ajax="0" data-animate="" data-section="1547652538969-4e9e849f-123a"
                                data-id="330" href="#1547652538969-4e9e849f-123a-5d80aefaa70e2">
-                                <span>Latest</span>
+                                <span>New Arrival</span>
                             </a>
                         </li>
                         <li class="">
                             <a class="" data-ajax="0" data-animate="" data-section="1547652726354-2b0cdba5-80e9"
                                data-id="330" href="#1547652726354-2b0cdba5-80e9-5d80aefaa70e2">
-                                <span>Most Popular</span>
+                                <span>Top Rated</span>
                             </a>
                         </li>
                         <li class="">
                             <a class="" data-ajax="0" data-animate="" data-section="1547652725565-7e88bea3-ede2"
                                data-id="330" href="#1547652725565-7e88bea3-ede2-5d80aefaa70e2">
-                                <span>Limited Edition</span>
+                                <span>Featured</span>
                             </a>
                         </li>
                     </ul>
@@ -1317,7 +1317,7 @@
         <div class="kodory-banner style-11 left-center">
             <div class="banner-inner">
                 <figure class="banner-thumb">
-                    <img src="{{asset('images/home 1.jpg')}}"
+                    <img src="assets/images/banner4-41.jpg"
                          class="attachment-full size-full" alt="img"></figure>
                 <div class="banner-info container">
                     <div class="banner-content">
@@ -1342,6 +1342,9 @@
                 <div class="heading-inner">
                     <h3 class="title">
                         Follow Us <span></span></h3>
+                    <div class="subtitle">
+                        @kodorystore
+                    </div>
                 </div>
             </div>
             <div class="kodory-instagram style-01">
@@ -1350,7 +1353,7 @@
                      data-responsive="[{&quot;breakpoint&quot;:480,&quot;settings&quot;:{&quot;slidesToShow&quot;:2,&quot;slidesMargin&quot;:&quot;10&quot;}},{&quot;breakpoint&quot;:768,&quot;settings&quot;:{&quot;slidesToShow&quot;:2,&quot;slidesMargin&quot;:&quot;10&quot;}},{&quot;breakpoint&quot;:992,&quot;settings&quot;:{&quot;slidesToShow&quot;:3,&quot;slidesMargin&quot;:&quot;10&quot;}},{&quot;breakpoint&quot;:1200,&quot;settings&quot;:{&quot;slidesToShow&quot;:3,&quot;slidesMargin&quot;:&quot;10&quot;}},{&quot;breakpoint&quot;:1500,&quot;settings&quot;:{&quot;slidesToShow&quot;:4,&quot;slidesMargin&quot;:&quot;10&quot;}}]">
                     <div class="rows-space-0">
                         <a target="_blank" href="#" class="item" tabindex="0">
-                            <img class="img-responsive lazy" src="{{asset('images/poto 1.1.jpg')}}" alt="">
+                            <img class="img-responsive lazy" src="assets/images/insta1.jpg" alt="Home 04">
                             <span class="instagram-info">
                                          <span class="social-wrap">
                                             <span class="social-info">1
@@ -1365,7 +1368,7 @@
                     </div>
                     <div class="rows-space-0">
                         <a target="_blank" href="#" class="item" tabindex="0">
-                            <img class="img-responsive lazy" src="{{asset('images/poto 1.2.jpg')}}" alt="">
+                            <img class="img-responsive lazy" src="assets/images/insta2.jpg" alt="Home 04">
                             <span class="instagram-info">
                                          <span class="social-wrap">
                                             <span class="social-info">1
@@ -1380,7 +1383,7 @@
                     </div>
                     <div class="rows-space-0">
                         <a target="_blank" href="#" class="item" tabindex="0">
-                            <img class="img-responsive lazy" src="{{asset('images/poto 1.3.jpg')}}" alt="">
+                            <img class="img-responsive lazy" src="assets/images/insta3.jpg" alt="Home 04">
                             <span class="instagram-info">
                                          <span class="social-wrap">
                                             <span class="social-info">1
@@ -1395,7 +1398,7 @@
                     </div>
                     <div class="rows-space-0">
                         <a target="_blank" href="#" class="item" tabindex="0">
-                            <img class="img-responsive lazy" src="{{asset('images/poto 1.4.jpg')}}" alt="">
+                            <img class="img-responsive lazy" src="assets/images/insta4.jpg" alt="Home 04">
                             <span class="instagram-info">
                                          <span class="social-wrap">
                                             <span class="social-info">1
@@ -1410,7 +1413,7 @@
                     </div>
                     <div class="rows-space-0">
                         <a target="_blank" href="#" class="item" tabindex="0">
-                            <img class="img-responsive lazy" src="{{asset('images/poto 1.5.jpg')}}" alt="">
+                            <img class="img-responsive lazy" src="assets/images/insta5.jpg" alt="Home 04">
                             <span class="instagram-info">
                                          <span class="social-wrap">
                                             <span class="social-info">1
@@ -1425,7 +1428,7 @@
                     </div>
                     <div class="rows-space-0">
                         <a target="_blank" href="#" class="item" tabindex="0">
-                            <img class="img-responsive lazy" src="{{asset('images/poto 1.6.jpg')}}" alt="">
+                            <img class="img-responsive lazy" src="assets/images/insta6.jpg" alt="Home 04">
                             <span class="instagram-info">
                                          <span class="social-wrap">
                                             <span class="social-info">1
@@ -1440,7 +1443,7 @@
                     </div>
                     <div class="rows-space-0">
                         <a target="_blank" href="#" class="item" tabindex="0">
-                            <img class="img-responsive lazy" src="{{asset('images/poto 1.7.jpg')}}" alt="">
+                            <img class="img-responsive lazy" src="assets/images/insta7.jpg" alt="Home 04">
                             <span class="instagram-info">
                                          <span class="social-wrap">
                                             <span class="social-info">1
@@ -1453,7 +1456,7 @@
                                     </span>
                         </a>
                     </div>
-                    {{-- <div class="rows-space-0">
+                    <div class="rows-space-0">
                         <a target="_blank" href="#" class="item" tabindex="0">
                             <img class="img-responsive lazy" src="assets/images/insta8.jpg" alt="Home 04">
                             <span class="instagram-info">
@@ -1467,7 +1470,7 @@
                                 </span>
                             </span>
                         </a>
-                    </div> --}}
+                    </div>
                 </div>
             </div>
         </div>
@@ -1493,7 +1496,7 @@
                                            href="single-product.html"
                                            tabindex="0">
                                             <img class="img-responsive"
-                                                 src="{{asset('images/bs 1.1.jpg')}}"
+                                                 src="assets/images/apro151-1-90x90.jpg"
                                                  alt="Modern Platinum" width="90" height="90">
                                         </a>
                                     </div>
@@ -1522,7 +1525,7 @@
                                            href="single-product.html"
                                            tabindex="0">
                                             <img class="img-responsive"
-                                                 src="{{asset('images/bs 1.2.jpg')}}"
+                                                 src="assets/images/apro171-1-90x90.jpg"
                                                  alt="Cute Girl Shirt" width="90" height="90">
                                         </a>
                                     </div>
@@ -1551,7 +1554,7 @@
                                            href="single-product.html"
                                            tabindex="0">
                                             <img class="img-responsive"
-                                                 src="{{asset('images/bs 1.3.jpg')}}"
+                                                 src="assets/images/apro71-1-90x90.jpg"
                                                  alt="Kid Backpack" width="90" height="90">
                                         </a>
                                     </div>
@@ -1580,7 +1583,7 @@
                                            href="single-product.html"
                                            tabindex="-1">
                                             <img class="img-responsive"
-                                                 src="{{asset('images/bs 1.4.jpg')}}"
+                                                 src="assets/images/apro201-1-90x90.jpg"
                                                  alt="Red Car" width="90" height="90">
                                         </a>
                                     </div>
@@ -1609,7 +1612,7 @@
                                            href="single-product.html"
                                            tabindex="-1">
                                             <img class="img-responsive"
-                                                 src="{{asset('images/bs 1.5.jpg')}}"
+                                                 src="assets/images/apro51012-1-90x90.jpg"
                                                  alt="Dazzling Toys" width="90" height="90">
                                         </a>
                                     </div>
@@ -1638,7 +1641,7 @@
                                            href="single-product.html"
                                            tabindex="-1">
                                             <img class="img-responsive"
-                                                 src="{{asset('images/bs 1.6.jpg')}}"
+                                                 src="assets/images/apro302-90x90.jpg"
                                                  alt="Cute Shoes" width="90" height="90">
                                         </a>
                                     </div>
@@ -1665,7 +1668,7 @@
                                            href="single-product.html"
                                            tabindex="-1">
                                             <img class="img-responsive"
-                                                 src="{{asset('images/bs 1.7.jpg')}}"
+                                                 src="assets/images/apro13-1-90x90.jpg"
                                                  alt="Hello Shirt" width="90" height="90">
                                         </a>
                                     </div>
@@ -1692,7 +1695,7 @@
                                            href="single-product.html"
                                            tabindex="-1">
                                             <img class="img-responsive"
-                                                 src="{{asset('images/bs 1.8.jpg')}}"
+                                                 src="assets/images/apro1211-2-90x90.jpg"
                                                  alt="Blue Shoes" width="90" height="90">
                                         </a>
                                     </div>
@@ -1721,7 +1724,7 @@
                                            href="single-product.html"
                                            tabindex="-1">
                                             <img class="img-responsive"
-                                                 src="{{asset('images/bs 1.9.jpg')}}"
+                                                 src="assets/images/apro181-2-90x90.jpg"
                                                  alt="Soccer Shoes" width="90" height="90">
                                         </a>
                                     </div>
@@ -1759,7 +1762,7 @@
                                            href="single-product.html"
                                            tabindex="0">
                                             <img class="img-responsive"
-                                                 src="{{asset('images/os 1.1.jpg')}}"
+                                                 src="assets/images/apro51012-1-90x90.jpg"
                                                  alt="Dazzling Toys" width="90" height="90">
                                         </a>
                                     </div>
@@ -1788,7 +1791,7 @@
                                            href="single-product.html"
                                            tabindex="0">
                                             <img class="img-responsive"
-                                                 src="{{asset('images/os 1.2.jpg')}}"
+                                                 src="assets/images/apro71-1-90x90.jpg"
                                                  alt="Kid Backpack" width="90" height="90">
                                         </a>
                                     </div>
@@ -1817,7 +1820,7 @@
                                            href="single-product.html"
                                            tabindex="0">
                                             <img class="img-responsive"
-                                                 src="{{asset('images/os 1.3.jpg')}}"
+                                                 src="assets/images/apro1211-2-90x90.jpg"
                                                  alt="Blue Shoes" width="90" height="90">
                                         </a>
                                     </div>
@@ -1846,7 +1849,7 @@
                                            href="single-product.html"
                                            tabindex="-1">
                                             <img class="img-responsive"
-                                                 src="{{asset('images/os 1.4.jpg')}}"
+                                                 src="assets/images/apro151-1-90x90.jpg"
                                                  alt="Modern Platinum" width="90" height="90">
                                         </a>
                                     </div>
@@ -1875,7 +1878,7 @@
                                            href="single-product.html"
                                            tabindex="-1">
                                             <img class="img-responsive"
-                                                 src="{{asset('images/os 1.5.jpg')}}"
+                                                 src="assets/images/apro201-1-90x90.jpg"
                                                  alt="Red Car" width="90" height="90">
                                         </a>
                                     </div>
@@ -1906,7 +1909,7 @@
                             <div class="kodory-banner style-12 left-center">
                                 <div class="banner-inner">
                                     <figure class="banner-thumb">
-                                        <img src="{{asset('images/dt.jpg')}}"
+                                        <img src="assets/images/banner4-6.jpg"
                                              class="attachment-full size-full" alt="img"></figure>
                                     <div class="banner-info ">
                                         <div class="banner-content">
@@ -1928,7 +1931,7 @@
                             <div class="kodory-banner style-12 left-center">
                                 <div class="banner-inner">
                                     <figure class="banner-thumb">
-                                        <img src="{{asset('images/fc.jpg')}}"
+                                        <img src="assets/images/banner4-7.jpg"
                                              class="attachment-full size-full" alt="img"></figure>
                                     <div class="banner-info ">
                                         <div class="banner-content">
@@ -2021,7 +2024,7 @@
                         <div class="post-inner blog-grid">
                             <div class="post-thumb">
                                 <a href="single-post.html" tabindex="0">
-                                    <img src="{{asset('images/bp1.1.jpg')}}"
+                                    <img src="assets/images/blogpost1-370x330.jpg"
                                          class="img-responsive attachment-370x330 size-370x330" alt="img"
                                          width="370" height="330"> </a>
                             </div>
@@ -2050,7 +2053,7 @@
                             <div class="post-thumb">
                                 <a href="single-post.html"
                                    tabindex="0">
-                                    <img src="{{asset('images/bp1.2.jpg')}}"
+                                    <img src="assets/images/blogpost5-370x330.jpg"
                                          class="img-responsive attachment-370x330 size-370x330" alt="img"
                                          width="370" height="330"> </a>
                             </div>
@@ -2079,7 +2082,7 @@
                             <div class="post-thumb">
                                 <a href="single-post.html"
                                    tabindex="0">
-                                    <img src="{{asset('images/bp1.3.jpg')}}"
+                                    <img src="assets/images/blogpost9-370x330.jpg"
                                          class="img-responsive attachment-370x330 size-370x330" alt="img"
                                          width="370" height="330"> </a>
                             </div>
@@ -2108,7 +2111,7 @@
                             <div class="post-thumb">
                                 <a href="single-post.html"
                                    tabindex="-1">
-                                    <img src="{{asset('images/bp1.4.jpg')}}"
+                                    <img src="assets/images/blogpost4-370x330.jpg"
                                          class="img-responsive attachment-370x330 size-370x330" alt="img"
                                          width="370" height="330"> </a>
                             </div>
@@ -2136,7 +2139,7 @@
                         <div class="post-inner blog-grid">
                             <div class="post-thumb">
                                 <a href="single-post.html" tabindex="-1">
-                                    <img src="{{asset('images/bp1.5.jpg')}}"
+                                    <img src="assets/images/blogpost2-370x330.jpg"
                                          class="img-responsive attachment-370x330 size-370x330" alt="img"
                                          width="370" height="330"> </a>
                             </div>

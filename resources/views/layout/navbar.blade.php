@@ -16,14 +16,14 @@
                     </div>
                     <div class="header-logo-nav">
                         <div class="header-logo">
-                            <a href="index.html"><img alt="Kodory" src="{{asset('images/logoo.png')}}" width="100px"
+                            <a href=""><img alt="" src="{{asset('images/logoo.png')}}" width="100px"
                             class="logo"></a></div>
                         <div class="box-header-nav menu-nocenter">
                             <ul id="menu-primary-menu"
                                 class="clone-main-menu kodory-clone-mobile-menu kodory-nav main-menu">
                                 <li id="menu-item-230"
                                     class="menu-item menu-item-type-post_type menu-item-object-megamenu menu-item-230 parent parent-megamenu item-megamenu menu-item-has-children">
-                                    <a class="kodory-menu-item-title" title="Home" href="body.blade.php">Home</a>
+                                    <a class="kodory-menu-item-title" title="" href="">Home</a>
                                     {{-- <span class="toggle-submenu"></span> --}}
                                     <div class="submenu megamenu megamenu-home">
                                         {{-- <div class="demo-item"> --}}
@@ -122,29 +122,29 @@
                                 </li>
                                 <li id="menu-item-228"
                                     class="menu-item menu-item-type-post_type menu-item-object-megamenu menu-item-228 parent parent-megamenu item-megamenu menu-item-has-children">
-                                    <a class="kodory-menu-item-title" title="Shop"
-                                       href="shop.html">Katalog</a>
+                                    <a class="kodory-menu-item-title" title=""
+                                       href="#">Katalog</a>
                                     <span class="toggle-submenu"></span>
                                     <div class="submenu megamenu megamenu-shop">
                                         <div class="row">
-                                            <div class="col-md-4">
+                                            <div class="col-md-5">
                                                 <div class="kodory-listitem style-01">
                                                     <div class="listitem-inner">
                                                         <ul class="listitem-list">
                                                             <li>
-                                                                <a href="#" target="_self">Aktivitas</a>
+                                                                <a href="{{route('katalog.aktivitas')}}" target="_self">Aktivitas</a>
                                                             </li>
                                                             <li>
-                                                                <a href="#" target="_self">Shop List</a>
+                                                                <a href="{{route('katalog.kursus')}}" target="_self">Kursus</a>
                                                             </li>
                                                             <li>
-                                                                <a href="#" target="_self">No Sidebar</a>
+                                                                <a href="{{route('katalog.experience')}}" target="_self">Experience</a>
                                                             </li>
                                                             <li>
-                                                                <a href="#" target="_self">Left Sidebar</a>
+                                                                <a href="{{route('katalog.activity_kit')}}" target="_self">Activity Kit</a>
                                                             </li>
                                                             <li>
-                                                                <a href="#" target="_self">Right Sidebar</a>
+                                                                <a href="{{route('katalog.gratis')}}" target="_self">Gratis</a>
                                                             </li>
                                                         </ul>
                                                     </div>
@@ -323,37 +323,33 @@
                                 </li>
                                 <li id="menu-item-229"
                                     class="menu-item menu-item-type-post_type menu-item-object-megamenu menu-item-229 parent parent-megamenu item-megamenu menu-item-has-children">
-                                    <a class="kodory-menu-item-title" title="Elements" href="#">Pesanan</a>
-                                    {{-- <span class="toggle-submenu"></span>
+                                    <a class="kodory-menu-item-title" title="" href="#">Pesanan</a>
+                                    <span class="toggle-submenu"></span>
                                     <div class="submenu megamenu megamenu-elements">
                                         <div class="row">
                                             <div class="col-md-4">
                                                 <div class="kodory-listitem style-01">
                                                     <div class="listitem-inner">
-                                                        <h4 class="title">Element 1 </h4>
+                                                        {{-- <h4 class="title">Element 1 </h4> --}}
                                                         <ul class="listitem-list">
                                                             <li>
-                                                                <a href="banner.html"
-                                                                   target="_self">Banner </a>
+                                                                <a href="{{route('pesanan.keranjang')}}" target="_self">Keranjang</a>
                                                             </li>
                                                             <li>
-                                                                <a href="blog-element.html"
-                                                                   target="_self">Blog Element </a>
+                                                                <a href="{{route('pesanan.tiket')}}" target="_self">Tiket</a>
                                                             </li>
                                                             <li>
-                                                                <a href="categories-element.html"
-                                                                   target="_self">
-                                                                    Categories Element </a>
+                                                                <a href="{{route('pesanan.riwayat_pemesanan')}}" target="_self">Riwayat Pemesanan</a>
                                                             </li>
-                                                            <li>
+                                                            {{-- <li>
                                                                 <a href="product-element.html"
                                                                    target="_self">
                                                                     Product Element </a>
-                                                            </li>
+                                                            </li> --}}
                                                         </ul>
                                                     </div>
                                                 </div>
-                                            </div> --}}
+                                            </div>
                                             {{-- <div class="col-md-4">
                                                 <div class="kodory-listitem style-01">
                                                     <div class="listitem-inner">
@@ -414,13 +410,13 @@
                                                     </div>
                                                 </div>
                                             </div> --}}
-                                        {{-- </div>
-                                    </div> --}}
+                                        </div>
+                                    </div>
                                 </li>
                                 <li id="menu-item-996"
                                     class="menu-item menu-item-type-post_type menu-item-object-megamenu menu-item-996 parent parent-megamenu item-megamenu menu-item-has-children">
-                                    <a class="kodory-menu-item-title" title="Blog"
-                                       href="blog.html">Premium</a>
+                                    <a class="kodory-menu-item-title" title=""
+                                       href="{{asset('premium.index')}}">Premium</a>
                                     {{-- <span class="toggle-submenu"></span>
                                     <div class="submenu megamenu megamenu-blog">
                                         <div class="row">
@@ -569,14 +565,11 @@
                                                         class="category-search-option"
                                                         tabindex="-1" style="display: none;">
                                                     <option value="0">All Categories</option>
-                                                    <option class="level-0" value="Toy">Toys</option>
-                                                    <option class="level-0" value="Teddy Bear">Teddy Bear</option>
-                                                    <option class="level-0" value="Clothing">Clothing</option>
-                                                    <option class="level-0" value="Backpack">Backpack</option>
-                                                    <option class="level-0" value="new-arrivals">New arrivals</option>
-                                                    <option class="level-0" value="Footwear">Footwear</option>
-                                                    <option class="level-0" value="T-shirt">T-shirt</option>
-                                                    <option class="level-0" value="Hoodie">Hoodie</option>
+                                                    <option class="level-0" value="aktivitas">Aktivitas</option>
+                                                    <option class="level-0" value="kursus">Kursus</option>
+                                                    <option class="level-0" value="experience">Experience</option>
+                                                    <option class="level-0" value="aktivity_kit">Aktivity Kit</option>
+                                                    <option class="level-0" value="gratis">Gratis</option>
                                                 </select>
                                             </div>
                                             <button type="submit" class="btn-submit">
@@ -585,7 +578,7 @@
                                         </form><!-- block search -->
                                     </div>
                                 </div>
-                                <div class="kodory-dropdown-close">x</div>
+                                <div class="kodory-dropdown-close"></div>
                                 <div class="menu-item block-user block-dreaming kodory-dropdown">
                                     <a class="block-link" href="my-account.html">
                                         <span class="flaticon-profile"></span>
@@ -613,15 +606,15 @@
                                 </div>
                                 <div class="block-minicart block-dreaming kodory-mini-cart kodory-dropdown">
                                     <div class="shopcart-dropdown block-cart-link" data-kodory="kodory-dropdown">
-                                        <a class="block-link link-dropdown" href="cart.html">
+                                        <a class="block-link link-dropdown" href="">
                                             <span class="flaticon-shopping-bag-1"></span>
-                                            <span class="count">3</span>
+                                            <span class="count"></span>
                                         </a>
                                     </div>
                                     <div class="widget kodory widget_shopping_cart">
                                         <div class="widget_shopping_cart_content">
                                             <h3 class="minicart-title">Your Cart<span
-                                                    class="minicart-number-items">3</span></h3>
+                                                    class="minicart-number-items"></span></h3>
                                             <ul class="kodory-mini-cart cart_list product_list_widget">
                                                 {{-- <li class="kodory-mini-cart-item mini_cart_item">
                                                     <a href="#" class="remove remove_from_cart_button">×</a>
@@ -677,7 +670,7 @@
             </div>
         </div>
     </div>
-    <div class="header-mobile">
+    {{-- <div class="header-mobile">
         <div class="header-mobile-left">
             <div class="block-menu-bar">
                 <a class="menu-bar menu-toggle" href="#">
@@ -708,14 +701,11 @@
                                     class="category-search-option" tabindex="-1"
                             >
                                 <option value="0">All Categories</option>
-                                <option class="level-0" value="Toy">Toys</option>
-                                <option class="level-0" value="Teddy Bear">Teddy Bear</option>
-                                <option class="level-0" value="Clothing">Clothing</option>
-                                <option class="level-0" value="Backpack">Backpack</option>
-                                <option class="level-0" value="new-arrivals">New arrivals</option>
-                                <option class="level-0" value="Footwear">Footwear</option>
-                                <option class="level-0" value="T-shirt">T-shirt</option>
-                                <option class="level-0" value="Hoodie">Hoodie</option>
+                                <option class="level-0" value="aktivitas">Aktivitas</option>
+                                <option class="level-0" value="kursus">Kursus</option>
+                                <option class="level-0" value="experience">Experience</option>
+                                <option class="level-0" value="aktivity_kit">Aktivity Kit</option>
+                                <option class="level-0" value="gratis">Gratis</option>
                             </select>
                         </div>
                         <button type="submit" class="btn-submit">
@@ -762,12 +752,12 @@
                         <div class="shopcart-dropdown block-cart-link" data-kodory="kodory-dropdown">
                             <a class="block-link link-dropdown" href="cart.html">
                                 <span class="flaticon-shopping-bag-1"></span>
-                                <span class="count">3</span>
+                                <span class="count"></span>
                             </a>
                         </div>
                         <div class="widget kodory widget_shopping_cart">
                             <div class="widget_shopping_cart_content">
-                                <h3 class="minicart-title">Your Cart<span class="minicart-number-items">3</span></h3>
+                                <h3 class="minicart-title">Your Cart<span class="minicart-number-items"></span></h3>
                                 <ul class="kodory-mini-cart cart_list product_list_widget">
                                     <li class="kodory-mini-cart-item mini_cart_item">
                                         <a href="#" class="remove remove_from_cart_button">×</a>
@@ -805,7 +795,7 @@
                                 </ul>
                                 <p class="kodory-mini-cart__total total"><strong>Subtotal:</strong>
                                     <span class="kodory-Price-amount amount"><span
-                                            class="kodory-Price-currencySymbol">$</span>418.00</span>
+                                            class="kodory-Price-currencySymbol">$</span></span>
                                 </p>
                                 <p class="kodory-mini-cart__buttons buttons">
                                     <a href="cart.html" class="button kodory-forward">Viewcart</a>
@@ -817,6 +807,6 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> --}}
 </header>
 

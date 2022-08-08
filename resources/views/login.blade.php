@@ -1,3 +1,5 @@
+@extends('views.login')
+
 <!doctype html>
 <html lang="en">
   <head>
@@ -16,6 +18,7 @@
 	<section class="ftco-section">
 		<div class="container">
 			<div class="row justify-content-center">
+				<form action="{{route('login')}}" method="POST">
 				<div class="col-md-6 text-center mb-5">
 					<h2 class="heading-section">Login #04</h2>
 				</div>
