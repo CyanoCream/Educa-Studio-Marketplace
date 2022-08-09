@@ -19,6 +19,9 @@ Route::get('index', function () {
     return view('premium.index');
 });
 
+Route::get('katalog', function () {
+    return view('katalog.index');
+})->name('katalog.index');
 Route::prefix('katalog')->group(function () {
     Route::get('aktivitas', function () {
         return view('katalog.aktivitas');
@@ -37,6 +40,9 @@ Route::prefix('katalog')->group(function () {
     })->name('katalog.gratis');
 });
 
+Route::get('pesanan', function () {
+    return view('pesanan.index');
+})->name('pesanan.index');
 Route::prefix('pesanan')->group(function () {
     Route::get('keranjang', function () {
         return view('pesanan.keranjang');
@@ -48,6 +54,21 @@ Route::prefix('pesanan')->group(function () {
         return view('pesanan.riwayat_pemesanan');
     })->name('pesanan.riwayat_pemesanan');    
 });
+
+// Route::prefix('kontak')->group(function () {
+//     Route::get('orders', function () {
+//         return view('kontak.orders');
+//     })->name('kontak.orders');  
+//     Route::get('addresses', function () {
+//         return view('kontak.addresses');
+//     })->name('kontak.addresses');    
+//     Route::get('account_details', function () {
+//         return view('kontak.account_details');
+//     })->name('kontak.account_details'); 
+//     Route::get('logout', function () {
+//         return view('kontak.logout');
+//     })->name('kontak.logout');    
+// });
 
 
 

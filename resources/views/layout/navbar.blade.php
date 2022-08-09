@@ -123,8 +123,8 @@
                                 <li id="menu-item-228"
                                     class="menu-item menu-item-type-post_type menu-item-object-megamenu menu-item-228 parent parent-megamenu item-megamenu menu-item-has-children">
                                     <a class="kodory-menu-item-title" title=""
-                                       href="#">Katalog</a>
-                                    <span class="toggle-submenu"></span>
+                                       href="{{route('katalog.index')}}">Katalog</a>
+                                    {{-- <span class="toggle-submenu"></span>
                                     <div class="submenu megamenu megamenu-shop">
                                         <div class="row">
                                             <div class="col-md-5">
@@ -148,7 +148,7 @@
                                                             </li>
                                                         </ul>
                                                     </div>
-                                                </div>
+                                                </div> --}}
                                                 {{-- <div class="kodory-listitem style-01">
                                                     <div class="listitem-inner">
                                                         <h4 class="title">Product Layouts </h4>
@@ -317,20 +317,20 @@
                                                         </ul>
                                                     </div>
                                                 </div> --}}
-                                            </div>
+                                            {{-- </div>
                                         </div>
-                                    </div>
+                                    </div> --}}
                                 </li>
                                 <li id="menu-item-229"
                                     class="menu-item menu-item-type-post_type menu-item-object-megamenu menu-item-229 parent parent-megamenu item-megamenu menu-item-has-children">
-                                    <a class="kodory-menu-item-title" title="" href="#">Pesanan</a>
-                                    <span class="toggle-submenu"></span>
+                                    <a class="kodory-menu-item-title" title="" href="{{route('pesanan.index')}}">Pesanan</a>
+                                    {{-- <span class="toggle-submenu"></span>
                                     <div class="submenu megamenu megamenu-elements">
                                         <div class="row">
                                             <div class="col-md-4">
                                                 <div class="kodory-listitem style-01">
                                                     <div class="listitem-inner">
-                                                        {{-- <h4 class="title">Element 1 </h4> --}}
+                                                        <h4 class="title">Element 1 </h4>
                                                         <ul class="listitem-list">
                                                             <li>
                                                                 <a href="{{route('pesanan.keranjang')}}" target="_self">Keranjang</a>
@@ -341,16 +341,16 @@
                                                             <li>
                                                                 <a href="{{route('pesanan.riwayat_pemesanan')}}" target="_self">Riwayat Pemesanan</a>
                                                             </li>
-                                                            {{-- <li>
+                                                            <li>
                                                                 <a href="product-element.html"
                                                                    target="_self">
                                                                     Product Element </a>
-                                                            </li> --}}
+                                                            </li>
                                                         </ul>
                                                     </div>
                                                 </div>
                                             </div>
-                                            {{-- <div class="col-md-4">
+                                            <div class="col-md-4">
                                                 <div class="kodory-listitem style-01">
                                                     <div class="listitem-inner">
                                                         <h4 class="title">
@@ -384,8 +384,8 @@
                                                         </ul>
                                                     </div>
                                                 </div>
-                                            </div> --}}
-                                            {{-- <div class="col-md-4">
+                                            </div>
+                                            <div class="col-md-4">
                                                 <div class="kodory-listitem style-01">
                                                     <div class="listitem-inner">
                                                         <h4 class="title">
@@ -409,9 +409,9 @@
                                                         </ul>
                                                     </div>
                                                 </div>
-                                            </div> --}}
+                                            </div>
                                         </div>
-                                    </div>
+                                    </div> --}}
                                 </li>
                                 <li id="menu-item-996"
                                     class="menu-item menu-item-type-post_type menu-item-object-megamenu menu-item-996 parent parent-megamenu item-megamenu menu-item-has-children">
@@ -580,7 +580,7 @@
                                 </div>
                                 <div class="kodory-dropdown-close"></div>
                                 <div class="menu-item block-user block-dreaming kodory-dropdown">
-                                    <a class="block-link" href="my-account.html">
+                                    <a class="block-link" href="#">
                                         <span class="flaticon-profile"></span>
                                     </a>
                                     <ul class="sub-menu">
@@ -608,13 +608,13 @@
                                     <div class="shopcart-dropdown block-cart-link" data-kodory="kodory-dropdown">
                                         <a class="block-link link-dropdown" href="">
                                             <span class="flaticon-shopping-bag-1"></span>
-                                            <span class="count"></span>
+                                            <span class="count">0</span>
                                         </a>
                                     </div>
                                     <div class="widget kodory widget_shopping_cart">
                                         <div class="widget_shopping_cart_content">
                                             <h3 class="minicart-title">Your Cart<span
-                                                    class="minicart-number-items"></span></h3>
+                                                    class="minicart-number-items">0</span></h3>
                                             <ul class="kodory-mini-cart cart_list product_list_widget">
                                                 {{-- <li class="kodory-mini-cart-item mini_cart_item">
                                                     <a href="#" class="remove remove_from_cart_button">×</a>
@@ -656,8 +656,8 @@
                                                         class="kodory-Price-currencySymbol">$</span></span>
                                             </p>
                                             <p class="kodory-mini-cart__buttons buttons">
-                                                <a href="cart.html" class="button kodory-forward">Viewcart</a>
-                                                <a href="checkout.html"
+                                                <a href="#" class="button kodory-forward">Viewcart</a>
+                                                <a href="#"
                                                    class="button checkout kodory-forward">Checkout</a>
                                             </p>
                                         </div>

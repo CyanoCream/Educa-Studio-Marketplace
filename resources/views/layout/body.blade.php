@@ -8,45 +8,43 @@
                 {&quot;breakpoint&quot;:1200,&quot;settings&quot;:{&quot;slidesToShow&quot;:1,&quot;slidesMargin&quot;:&quot;0&quot;}},{&quot;breakpoint&quot;:1500,&quot;settings&quot;
                 :{&quot;slidesToShow&quot;:1,&quot;slidesMargin&quot;:&quot;0&quot;}}]">
                 <div class="slide-wrap">
-                    <img src="{{asset('images/home1.1.jpg')}}" alt="image">
+                    <img src="{{asset('images/home1.1.jpg')}}" alt="img">
                     <div class="slide-info">
                         <div class="container">
                             <div class="slide-inner">
-                                <h2>The Lookbook</h2>
+                                <h2>Get</h2>
                                 <h1>New Collection<br>
-                                    Girl's T-shirt</h1>
-                                <h5>Price from:<strong>$75.00</strong></h5>
-                                <a href="shop.html">Shop now</a>
+                                    T-shirt</h1>
+                                <h5>Price from:<strong>$100.00</strong></h5>
+                                <a href="{{route('katalog.aktivitas')}}">Shop now</a>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="slide-wrap">
-                    <img src="{{asset('images/home1.2.jpg')}}" alt="image">
+                    <img src="{{asset('images/home1.2.jpg')}}" alt="img">
                     <div class="slide-info">
                         <div class="container">
                             <div class="slide-inner">
-                                <h2>New Arrivals</h2>
-                                <h1>Deal Of Day <br>
-                                    Store Items
-                                </h1>
-                                <h5>Price from:<strong>$95.00</strong></h5>
-                                <a href="shop.html">Shop now</a>
+                                <h2>New Stuff</h2>
+                                <h1>Today's Deal<br>
+                                    Progress for You</h1>
+                                <h5>Price from:<strong>$100.00</strong></h5>
+                                <a href="{{route('katalog.aktivitas')}}">Shop now</a>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="slide-wrap">
-                    <img src="{{asset('images/home1.3.jpg')}}" alt="image">
+                    <img src="{{asset('images/home1.3.jpg')}}" alt="img">
                     <div class="slide-info">
                         <div class="container">
                             <div class="slide-inner">
-                                <h2>Handpick Items</h2>
-                                <h1>Best Seller<br>
-                                    Grow a Clothes!
-                                </h1>
-                                <h5>Price from:<strong>$55.00</strong></h5>
-                                <a href="shop.html">Shop now</a>
+                                <h2>Featured Items</h2>
+                                <h1>Best Product<br>
+                                    Convenience for Your Child!</h1>
+                                <h5>Price from:<strong>$100.00</strong></h5>
+                                <a href="{{route('katalog.aktivitas')}}">Shop now</a>
                             </div>
                         </div>
                     </div>
@@ -1596,9 +1594,9 @@
                                             <span class="review">(0)</span></div>
                                         <span class="price"><del><span
                                                 class="kodory-Price-amount amount"><span
-                                                class="kodory-Price-currencySymbol">$</span>150.00</span></del> <ins><span
+                                                class="kodory-Price-currencySymbol">$</span></span></del> <ins><span
                                                 class="kodory-Price-amount amount"><span
-                                                class="kodory-Price-currencySymbol">$</span>139.00</span></ins></span>
+                                                class="kodory-Price-currencySymbol">$</span></span></ins></span>
                                     </div>
                                 </div>
                             </div>
@@ -1959,40 +1957,40 @@
                      data-responsive="[{&quot;breakpoint&quot;:480,&quot;settings&quot;:{&quot;slidesToShow&quot;:3,&quot;slidesMargin&quot;:&quot;30&quot;}},{&quot;breakpoint&quot;:768,&quot;settings&quot;:{&quot;slidesToShow&quot;:3,&quot;slidesMargin&quot;:&quot;30&quot;}},{&quot;breakpoint&quot;:992,&quot;settings&quot;:{&quot;slidesToShow&quot;:4,&quot;slidesMargin&quot;:&quot;40&quot;}},{&quot;breakpoint&quot;:1200,&quot;settings&quot;:{&quot;slidesToShow&quot;:5,&quot;slidesMargin&quot;:&quot;50&quot;}},{&quot;breakpoint&quot;:1500,&quot;settings&quot;:{&quot;slidesToShow&quot;:5,&quot;slidesMargin&quot;:&quot;60&quot;}}]">
                     <div class="dreaming_single_image dreaming_content_element az_align_center">
                         <figure class="dreaming_wrapper az_figure">
-                            <div class="az_single_image-wrapper   az_box_border_grey effect bounce-in "><img
-                                    src="assets/images/brand-logo-1.png"
+                            <div class="az_single_image-wrapper   az_box_border_grey effect bounce-in ">
+                                <img src="{{asset('images/loggo2.1.jpeg')}}"
                                     class="az_single_image-img attachment-full" alt="img" width="200" height="100">
                             </div>
                         </figure>
                     </div>
                     <div class="dreaming_single_image dreaming_content_element az_align_center">
                         <figure class="dreaming_wrapper az_figure">
-                            <div class="az_single_image-wrapper   az_box_border_grey effect bounce-in "><img
-                                    src="assets/images/brand-logo-5.png"
+                            <div class="az_single_image-wrapper   az_box_border_grey effect bounce-in ">
+                                <img src="{{asset('images/loggo2.2.jpeg')}}"
                                     class="az_single_image-img attachment-full" alt="img" width="200" height="100">
                             </div>
                         </figure>
                     </div>
                     <div class="dreaming_single_image dreaming_content_element az_align_center">
                         <figure class="dreaming_wrapper az_figure">
-                            <div class="az_single_image-wrapper   az_box_border_grey effect bounce-in "><img
-                                    src="assets/images/brand-logo-4.png"
+                            <div class="az_single_image-wrapper   az_box_border_grey effect bounce-in ">
+                                <img src="{{asset('images/loggo2.3.jpeg')}}"
                                     class="az_single_image-img attachment-full" alt="img" width="200" height="100">
                             </div>
                         </figure>
                     </div>
                     <div class="dreaming_single_image dreaming_content_element az_align_center">
                         <figure class="dreaming_wrapper az_figure">
-                            <div class="az_single_image-wrapper   az_box_border_grey effect bounce-in "><img
-                                    src="assets/images/brand-logo-3.png"
+                            <div class="az_single_image-wrapper   az_box_border_grey effect bounce-in ">
+                                <img src="{{asset('images/loggo2.4.jpeg')}}"
                                     class="az_single_image-img attachment-full" alt="img" width="200" height="100">
                             </div>
                         </figure>
                     </div>
                     <div class="dreaming_single_image dreaming_content_element az_align_center">
                         <figure class="dreaming_wrapper az_figure">
-                            <div class="az_single_image-wrapper   az_box_border_grey effect bounce-in "><img
-                                    src="assets/images/brand-logo-2.png"
+                            <div class="az_single_image-wrapper   az_box_border_grey effect bounce-in ">
+                                <img src="{{asset('images/loggo2.5.jpeg')}}"
                                     class="az_single_image-img attachment-full" alt="img" width="200" height="100">
                             </div>
                         </figure>

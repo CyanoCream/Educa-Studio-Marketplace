@@ -24,16 +24,6 @@
 <body>
 @yield('content')
 
-@include('layout.navbar')
-
-{{-- body --}}
-@include('layout.body')
-
-{{-- footer --}}
-@include('layout.footer')
-
-
-
 <script src="{{asset('js/jquery-1.12.4.min.js')}}"></script>
 <script src="{{asset('js/bootstrap.min.js')}}"></script>
 <script src="{{asset('js/chosen.min.js')}}"></script>
