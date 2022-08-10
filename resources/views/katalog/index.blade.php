@@ -5,7 +5,7 @@
     <div class="header-top">
         <div class="container">
             <div class="header-top-inner">
-                <ul id="menu-top-left-menu" class="kodory-nav top-bar-menu">
+                <ul id="menu-top-center-menu" class="kodory-nav top-bar-menu" style="text-align-last: center">
                     <li id="menu-item-864" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-864">
                         <a class="kodory-menu-item-title" title="" href="#"><span
                                 class="icon pe-7s-map-marker"></span>Store Direction</a></li>
@@ -62,7 +62,7 @@
                         </a>
                     </div>
                     <div class="header-logo">
-                        <a href="#"><img alt="img" src="{{asset('images/logoo.png')}}" width="100px" class="logo"></a>
+                        <a href="{{route('layout.master')}}"><img alt="img" src="{{asset('images/logoo.png')}}" width="100px" class="logo"></a>
                     </div>
                 </div>
                 <div class="header-search-mid">
@@ -100,7 +100,7 @@
                     <div class="header-control-inner">
                         <div class="meta-dreaming">
                             <div class="menu-item block-user block-dreaming kodory-dropdown">
-                                <a class="block-link" href="my-account.html">
+                                <a class="block-link" href="#">
                                     <span class="flaticon-profile"></span>
                                 </a>
                                 <ul class="sub-menu">
@@ -987,7 +987,7 @@
         <h1 class="page-title">Shop</h1>
         <div role="navigation" aria-label="Breadcrumbs" class="breadcrumb-trail breadcrumbs">
             <ul class="trail-items breadcrumb">
-                <li class="trail-item trail-begin"><a href="#"><span>Home</span></a></li>
+                <li class="trail-item trail-begin"><a href="{{route('layout.master')}}"><span>Home</span></a></li>
                 <li class="trail-item trail-end active"><span>Shop</span>
                 </li>
             </ul>

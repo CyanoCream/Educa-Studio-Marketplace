@@ -15,9 +15,13 @@ Route::get('/', function () {
     return view('layout.master');
 });
 
-Route::get('index', function () {
+Route::get('layout', function () {
+    return view('layout.master');
+})->name('layout.master');
+
+Route::get('premium', function () {
     return view('premium.index');
-});
+})->name('premium.index');
 
 Route::get('katalog', function () {
     return view('katalog.index');

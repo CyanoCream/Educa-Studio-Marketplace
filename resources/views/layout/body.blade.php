@@ -12,11 +12,10 @@
                     <div class="slide-info">
                         <div class="container">
                             <div class="slide-inner">
-                                <h2>Get</h2>
-                                <h1>New Collection<br>
-                                    T-shirt</h1>
-                                <h5>Price from:<strong>$100.00</strong></h5>
-                                <a href="{{route('katalog.aktivitas')}}">Shop now</a>
+                                <h2> Get Ready</h2>
+                                <h1>Panduan<br>Kegiatan Anak</h1>
+                                {{-- <h5>Price from:<strong>$100.00</strong></h5> --}}
+                                <a href="{{route('katalog.index')}}">Shop now</a>
                             </div>
                         </div>
                     </div>
@@ -26,11 +25,10 @@
                     <div class="slide-info">
                         <div class="container">
                             <div class="slide-inner">
-                                <h2>New Stuff</h2>
-                                <h1>Today's Deal<br>
-                                    Progress for You</h1>
-                                <h5>Price from:<strong>$100.00</strong></h5>
-                                <a href="{{route('katalog.aktivitas')}}">Shop now</a>
+                                <h2>Get Ready</h2>
+                                <h1>Rekomendasi<br>Aktivitas</h1>
+                                {{-- <h5>Price from:<strong>$100.00</strong></h5> --}}
+                                <a href="{{route('katalog.index')}}">Shop now</a>
                             </div>
                         </div>
                     </div>
@@ -40,11 +38,10 @@
                     <div class="slide-info">
                         <div class="container">
                             <div class="slide-inner">
-                                <h2>Featured Items</h2>
-                                <h1>Best Product<br>
-                                    Convenience for Your Child!</h1>
-                                <h5>Price from:<strong>$100.00</strong></h5>
-                                <a href="{{route('katalog.aktivitas')}}">Shop now</a>
+                                <h2>Get Ready</h2>
+                                <h1>Jurnal<br>Anak</h1>
+                                {{-- <h5>Price from:<strong>$100.00</strong></h5> --}}
+                                <a href="{{route('katalog.index')}}">Shop now</a>
                             </div>
                         </div>
                     </div>
@@ -59,14 +56,14 @@
                     <div class="kodory-banner style-01 left-top new">
                         <div class="banner-inner">
                             <figure class="banner-thumb">
-                                <img src="{{asset('images/nc 1.1.jpg')}}"
+                                <img src="{{asset('images/priv.jpeg')}}"
                                      class="attachment-full size-full" alt="img">
                             </figure>
                             <div class="banner-info ">
                                 <div class="banner-content">
                                     <div class="title-wrap">
                                         <h6 class="title">
-                                            <a target=" _blank" href="#">New Collection</a>
+                                            <a target=" _blank" href="#">New Private</a>
                                         </h6>
                                     </div>
                                 </div>
@@ -78,14 +75,14 @@
                     <div class="kodory-banner style-01 left-center">
                         <div class="banner-inner">
                             <figure class="banner-thumb">
-                                <img src="{{asset('images/ws 1.2.jpg')}}"
+                                <img src="{{asset('images/kursus.jpg')}}"
                                      class="attachment-full size-full" alt="img">
                             </figure>
                             <div class="banner-info ">
                                 <div class="banner-content">
                                     <div class="title-wrap">
                                         <h6 class="title">
-                                            <a target=" _blank" href="#">With Style</a>
+                                            <a target=" _blank" href="#">Kursus</a>
                                         </h6>
                                     </div>
                                 </div>
@@ -97,13 +94,13 @@
                             <div class="kodory-banner style-01 left-top  kodory_custom_5d67efefec0b8 ">
                                 <div class="banner-inner">
                                     <figure class="banner-thumb">
-                                        <img src="{{asset('images/ks 1.3.jpg')}}"
+                                        <img src="{{asset('images/aktiv1.jpg')}}"
                                              class="attachment-full size-full" alt="img"></figure>
                                     <div class="banner-info ">
                                         <div class="banner-content">
                                             <div class="title-wrap">
                                                 <h6 class="title">
-                                                    <a target=" _blank" href="#">Kid Set</a>
+                                                    <a target=" _blank" href="#">Aktivitas</a>
                                                 </h6>
                                             </div>
                                             <div class="button-wrap">
@@ -117,13 +114,13 @@
                             <div class="kodory-banner style-01 left-bottom">
                                 <div class="banner-inner">
                                     <figure class="banner-thumb">
-                                        <img src="{{asset('images/sh 1.4.jpg')}}"
+                                        <img src="{{asset('images/aktiv2.jpg')}}"
                                              class="attachment-full size-full" alt="img"></figure>
                                     <div class="banner-info ">
                                         <div class="banner-content">
                                             <div class="title-wrap">
                                                 <h6 class="title">
-                                                    <a target=" _blank" href="#">Shirts</a>
+                                                    <a target=" _blank" href="#">Aktivitas</a>
                                                 </h6>
                                             </div>
                                             <div class="button-wrap">
@@ -1320,14 +1317,11 @@
                 <div class="banner-info container">
                     <div class="banner-content">
                         <div class="title-wrap">
-                            <div class="banner-label">
-                                New Arrivals
-                            </div>
-                            <h6 class="title">
-                                Check Out The Lastest</h6>
+                            <div class="banner-label">Ikuti Perkembangan Anak</div>
+                            <h6 class="title">Dengan Mengikuti Program Kami</h6>
                         </div>
                         <div class="button-wrap">
-                            <a class="button" target=" _blank" href="shop.html"><span>Shop now</span></a>
+                            <a class="button" target=" _blank" href="{{route('katalog.index')}}"><span>Shop now</span></a>
                         </div>
                     </div>
                 </div>
@@ -1904,18 +1898,17 @@
                             <div class="kodory-banner style-12 left-center">
                                 <div class="banner-inner">
                                     <figure class="banner-thumb">
-                                        <img src="{{asset('images/dt.jpg')}}"
+                                        <img src="{{asset('images/kom1.jpeg')}}"
                                              class="attachment-full size-full" alt="img"></figure>
                                     <div class="banner-info ">
                                         <div class="banner-content">
                                             <div class="title-wrap">
-                                                <h6 class="title">Designer <br>
-                                                    T-shirt</h6>
+                                                <h6 class="title">Babies<br>Bagor</h6>
                                             </div>
-                                            <div class="cate">Adipiscing elitet</div>
+                                            <div class="cate">Komunitas</div>
                                             <div class="button-wrap">
                                                 <a class="button" target="_self"
-                                                   href="shop.html"><span>Show now</span></a>
+                                                   href="#"><span>View</span></a>
                                             </div>
                                         </div>
                                     </div>
@@ -1926,18 +1919,17 @@
                             <div class="kodory-banner style-12 left-center">
                                 <div class="banner-inner">
                                     <figure class="banner-thumb">
-                                        <img src="{{asset('images/fc.jpg')}}"
+                                        <img src="{{asset('images/kom2.jpeg')}}"
                                              class="attachment-full size-full" alt="img"></figure>
                                     <div class="banner-info ">
                                         <div class="banner-content">
                                             <div class="title-wrap">
-                                                <h6 class="title">Fashion <br>
-                                                    Clothes</h6>
+                                                <h6 class="title">Babies<br>Jakarta</h6>
                                             </div>
-                                            <div class="cate">Cras pulvinar</div>
+                                            <div class="cate">Komunitas</div>
                                             <div class="button-wrap">
                                                 <a class="button" target="_self"
-                                                   href="shop.html"><span>Show now</span></a>
+                                                   href="#"><span>Read More</span></a>
                                             </div>
                                         </div>
                                     </div>
@@ -1966,14 +1958,6 @@
                     <div class="dreaming_single_image dreaming_content_element az_align_center">
                         <figure class="dreaming_wrapper az_figure">
                             <div class="az_single_image-wrapper   az_box_border_grey effect bounce-in ">
-                                <img src="{{asset('images/loggo2.2.jpeg')}}"
-                                    class="az_single_image-img attachment-full" alt="img" width="200" height="100">
-                            </div>
-                        </figure>
-                    </div>
-                    <div class="dreaming_single_image dreaming_content_element az_align_center">
-                        <figure class="dreaming_wrapper az_figure">
-                            <div class="az_single_image-wrapper   az_box_border_grey effect bounce-in ">
                                 <img src="{{asset('images/loggo2.3.jpeg')}}"
                                     class="az_single_image-img attachment-full" alt="img" width="200" height="100">
                             </div>
@@ -1982,7 +1966,7 @@
                     <div class="dreaming_single_image dreaming_content_element az_align_center">
                         <figure class="dreaming_wrapper az_figure">
                             <div class="az_single_image-wrapper   az_box_border_grey effect bounce-in ">
-                                <img src="{{asset('images/loggo2.4.jpeg')}}"
+                                <img src="{{asset('images/loggo2.2.jpeg')}}"
                                     class="az_single_image-img attachment-full" alt="img" width="200" height="100">
                             </div>
                         </figure>
@@ -1991,6 +1975,14 @@
                         <figure class="dreaming_wrapper az_figure">
                             <div class="az_single_image-wrapper   az_box_border_grey effect bounce-in ">
                                 <img src="{{asset('images/loggo2.5.jpeg')}}"
+                                    class="az_single_image-img attachment-full" alt="img" width="200" height="100">
+                            </div>
+                        </figure>
+                    </div>
+                    <div class="dreaming_single_image dreaming_content_element az_align_center">
+                        <figure class="dreaming_wrapper az_figure">
+                            <div class="az_single_image-wrapper   az_box_border_grey effect bounce-in ">
+                                <img src="{{asset('images/loggo2.4.jpeg')}}"
                                     class="az_single_image-img attachment-full" alt="img" width="200" height="100">
                             </div>
                         </figure>

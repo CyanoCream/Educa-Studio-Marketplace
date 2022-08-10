@@ -16,14 +16,14 @@
                     </div>
                     <div class="header-logo-nav">
                         <div class="header-logo">
-                            <a href=""><img alt="" src="{{asset('images/logoo.png')}}" width="100px"
+                            <a href="{{route('layout.master')}}"><img alt="" src="{{asset('images/logoo.png')}}" width="100px"
                             class="logo"></a></div>
                         <div class="box-header-nav menu-nocenter">
                             <ul id="menu-primary-menu"
                                 class="clone-main-menu kodory-clone-mobile-menu kodory-nav main-menu">
                                 <li id="menu-item-230"
                                     class="menu-item menu-item-type-post_type menu-item-object-megamenu menu-item-230 parent parent-megamenu item-megamenu menu-item-has-children">
-                                    <a class="kodory-menu-item-title" title="" href="">Home</a>
+                                    <a class="kodory-menu-item-title" title="" href="{{route('layout.master')}}">Home</a>
                                     {{-- <span class="toggle-submenu"></span> --}}
                                     <div class="submenu megamenu megamenu-home">
                                         {{-- <div class="demo-item"> --}}
@@ -416,7 +416,7 @@
                                 <li id="menu-item-996"
                                     class="menu-item menu-item-type-post_type menu-item-object-megamenu menu-item-996 parent parent-megamenu item-megamenu menu-item-has-children">
                                     <a class="kodory-menu-item-title" title=""
-                                       href="{{asset('premium.index')}}">Premium</a>
+                                       href="{{route('premium.index')}}">Premium</a>
                                     {{-- <span class="toggle-submenu"></span>
                                     <div class="submenu megamenu megamenu-blog">
                                         <div class="row">
