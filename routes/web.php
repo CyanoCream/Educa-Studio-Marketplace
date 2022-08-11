@@ -11,9 +11,9 @@
 |
 */
 
-Route::get('/', function () {
-    return view('layout.master');
-});
+// Route::get('/', function () {
+//     return view('layout.master');
+// });
 
 Route::get('layout', function () {
     return view('layout.master');
@@ -59,24 +59,28 @@ Route::prefix('pesanan')->group(function () {
     })->name('pesanan.riwayat_pemesanan');    
 });
 
-// Route::prefix('kontak')->group(function () {
-//     Route::get('orders', function () {
-//         return view('kontak.orders');
-//     })->name('kontak.orders');  
-//     Route::get('addresses', function () {
-//         return view('kontak.addresses');
-//     })->name('kontak.addresses');    
-//     Route::get('account_details', function () {
-//         return view('kontak.account_details');
-//     })->name('kontak.account_details'); 
-//     Route::get('logout', function () {
-//         return view('kontak.logout');
-//     })->name('kontak.logout');    
-// });
+Route::get('akun', function () {
+    return view('akun.index');
+})->name('akun.index');
+Route::prefix('akun')->group(function () {
+    Route::get('orders', function () {
+        return view('akun.orders');
+    })->name('akun.orders');  
+    Route::get('addresses', function () {
+        return view('akun.addresses');
+    })->name('akun.addresses');    
+    Route::get('account_details', function () {
+        return view('akun.account_details');
+    })->name('akun.account_details'); 
+    Route::get('logout', function () {
+        return view('akun.logout');
+    })->name('akun.logout');    
+});
 
 
 
 // Route::get('/', function () {
 //     return redirect(route('login'));
 // });
+
 // Route::get('/dashboard', 'DashboardController@index')->name('dashboard')

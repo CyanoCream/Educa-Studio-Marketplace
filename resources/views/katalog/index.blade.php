@@ -5,7 +5,7 @@
     <div class="header-top">
         <div class="container">
             <div class="header-top-inner">
-                <ul id="menu-top-center-menu" class="kodory-nav top-bar-menu" style="text-align-last: center">
+                <ul id="menu-top-center-menu" class="kodory-nav top-bar-menu" style="text-align: center">
                     <li id="menu-item-864" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-864">
                         <a class="kodory-menu-item-title" title="" href="#"><span
                                 class="icon pe-7s-map-marker"></span>Store Direction</a></li>
@@ -100,35 +100,29 @@
                     <div class="header-control-inner">
                         <div class="meta-dreaming">
                             <div class="menu-item block-user block-dreaming kodory-dropdown">
-                                <a class="block-link" href="#">
+                                <a class="block-link" href="{{route('akun.index')}}">
                                     <span class="flaticon-profile"></span>
                                 </a>
-                                <ul class="sub-menu">
-                                    {{-- <li
-                                        class="menu-item kodory-MyAccount-navigation-link kodory-MyAccount-navigation-link--dashboard is-active">
-                                        <a href="#">Dashboard</a>
-                                    </li> --}}
-                                    <li
-                                        class="menu-item kodory-MyAccount-navigation-link kodory-MyAccount-navigation-link--orders">
-                                        <a href="#">Orders</a>
-                                    </li>
-                                    {{-- <li
-                                        class="menu-item kodory-MyAccount-navigation-link kodory-MyAccount-navigation-link--downloads">
-                                        <a href="#">Downloads</a>
-                                    </li> --}}
-                                    <li
-                                        class="menu-item kodory-MyAccount-navigation-link kodory-MyAccount-navigation-link--edit-address">
-                                        <a href="#">Addresses</a>
-                                    </li>
-                                    <li
-                                        class="menu-item kodory-MyAccount-navigation-link kodory-MyAccount-navigation-link--edit-account">
-                                        <a href="#">Account details</a>
-                                    </li>
-                                    <li
-                                        class="menu-item kodory-MyAccount-navigation-link kodory-MyAccount-navigation-link--customer-logout">
-                                        <a href="#">Logout</a>
-                                    </li>
-                                </ul>
+                                {{-- <ul class="sub-menu">
+                                        <li class="menu-item kodory-MyAccount-navigation-link kodory-MyAccount-navigation-link--dashboard is-active">
+                                            <a href="#">Dashboard</a>
+                                        </li>
+                                        <li class="menu-item kodory-MyAccount-navigation-link kodory-MyAccount-navigation-link--orders">
+                                            <a href="#">Orders</a>
+                                        </li>
+                                        <li class="menu-item kodory-MyAccount-navigation-link kodory-MyAccount-navigation-link--downloads">
+                                            <a href="#">Downloads</a>
+                                        </li>
+                                        <li class="menu-item kodory-MyAccount-navigation-link kodory-MyAccount-navigation-link--edit-address">
+                                            <a href="#">Addresses</a>
+                                        </li>
+                                        <li class="menu-item kodory-MyAccount-navigation-link kodory-MyAccount-navigation-link--edit-account">
+                                            <a href="#">Account details</a>
+                                        </li>
+                                        <li class="menu-item kodory-MyAccount-navigation-link kodory-MyAccount-navigation-link--customer-logout">
+                                            <a href="#">Logout</a>
+                                        </li>
+                                </ul> --}}
                             </div>
                             <div class="block-minicart block-dreaming kodory-mini-cart kodory-dropdown">
                                 <div class="shopcart-dropdown block-cart-link" data-kodory="kodory-dropdown">
