@@ -1,10 +1,10 @@
-@extends('layout.master')
-
-@section('content')
-<div class="text-strong">
-    <a href="#" target="_self">
-        <p><i class="fa fa-truck" aria-hidden="true"></i>Pengiriman</p>
+<div>
+    <a href="{{route('layout.master')}}" target="_self">
+        <h5 class="d-flex justify-content-between">
+            <i class="fa fa-truck" aria-hidden="true"></i>
+            Pengiriman
+            <a href=""><i class="fa fa-arrow-right" aria-hidden="true"></i></a>
+        </h5>
     </a>
     <hr>
 </div>
-@endsection

@@ -77,7 +77,16 @@ Route::prefix('akun')->group(function () {
     })->name('akun.logout');    
 });
 
+Route::get('top_up', function () {
+    return view('top_up.index');
+})->name('top_up.index');
+// Route::prefix('top_up')->group(function () {
 
+// })
+
+Route::get('pengiriman', function () {
+    return view('pengiriman');
+});
 
 // Route::get('/', function () {
 //     return redirect(route('login'));

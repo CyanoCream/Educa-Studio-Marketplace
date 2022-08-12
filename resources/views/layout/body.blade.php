@@ -63,7 +63,7 @@
                                 <div class="banner-content">
                                     <div class="title-wrap">
                                         <h6 class="title">
-                                            <a target=" _blank" href="#">New Private</a>
+                                            <a target=" _blank" href="#">New Program</a>
                                         </h6>
                                     </div>
                                 </div>

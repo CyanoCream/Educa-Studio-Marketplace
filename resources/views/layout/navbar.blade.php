@@ -537,6 +537,11 @@
                                                href="404.html">Page 404</a></li>
                                     </ul>
                                 </li> --}}
+                                <li id="menu-item-996"
+                                    class="menu-item menu-item-type-post_type menu-item-object-megamenu menu-item-996 parent parent-megamenu item-megamenu menu-item-has-children">
+                                    <a class="kodory-menu-item-title" title=""
+                                       href="{{route('top_up.index')}}">Top Up</a>
+                                </li>
                             </ul>
                         </div>
                     </div>
