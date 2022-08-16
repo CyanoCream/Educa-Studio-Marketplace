@@ -1057,7 +1057,7 @@
                             <div class="product-inner tooltip-left">
                                 <div class="product-thumb">
                                     <a class="thumb-link" href="single-product.html">
-                                        <img class="img-responsive" src="assets/images/apro161-1-600x778.jpg"
+                                        <img class="img-responsive" src="{{asset('images/np1.jpeg')}}"
                                             alt="Kid Backpack" width="600" height="778">
                                     </a>
                                     <div class="flash">
@@ -1090,7 +1090,7 @@
                                                                 value="pink" class="attached enabled">Pink
                                                             </option>
                                                         </select>
-                                                        <div class="data-val attribute-pa_color"
+                                                        {{-- <div class="data-val attribute-pa_color"
                                                             data-attributetype="box_style">
                                                             <label>
                                                                 <input type="radio" name="color">
@@ -1110,7 +1110,7 @@
                                                                     style="background: #ffe59e;" data-value="pink">
                                                                 </span>
                                                             </label>
-                                                        </div>
+                                                        </div> --}}
                                                         <a class="reset_variations" href="#"
                                                             style="visibility: hidden;">Clear</a>
                                                     </td>
@@ -1139,13 +1139,13 @@
                                 </div>
                                 <div class="product-info equal-elem">
                                     <h3 class="product-name product_title">
-                                        <a href="single-product.html">Kid Backpack</a>
+                                        <a href="single-product.html">Kindergarten English Course Power</a>
                                     </h3>
-                                    <div class="rating-wapper nostar">
+                                    {{-- <div class="rating-wapper nostar">
                                         <div class="star-rating"><span style="width:0%">Rated <strong
                                                     class="rating">0</strong> out of 5</span></div>
                                         <span class="review">(0)</span>
-                                    </div>
+                                    </div> --}}
                                     <span class="price"><span class="kodory-Price-amount amount"><span
                                                 class="kodory-Price-currencySymbol">$</span>45.00</span> – <span
                                             class="kodory-Price-amount amount"><span
@@ -1186,13 +1186,13 @@
                             <div class="product-inner tooltip-left">
                                 <div class="product-thumb">
                                     <a class="thumb-link" href="single-product.html">
-                                        <img class="img-responsive" src="assets/images/apro1211-2-600x778.jpg"
+                                        <img class="img-responsive" src="{{asset('images/np2.jpeg')}}"
                                             alt="Blue Shoes" width="600" height="778">
                                     </a>
-                                    <div class="flash">
+                                    {{-- <div class="flash">
                                         <span class="onsale"><span class="number">-14%</span></span>
                                         <span class="onnew"><span class="text">New</span></span>
-                                    </div>
+                                    </div> --}}
                                     <a href="#" class="button yith-wcqv-button" data-product_id="24">Quick
                                         View</a>
                                     <div class="group-button">
@@ -1214,14 +1214,14 @@
                                 </div>
                                 <div class="product-info equal-elem">
                                     <h3 class="product-name product_title">
-                                        <a href="single-product.html">Blue Shoes</a>
+                                        <a href="single-product.html"> Private English Course Les Bahasa Inggris Privat</a>
                                     </h3>
-                                    <div class="rating-wapper ">
+                                    {{-- <div class="rating-wapper ">
                                         <div class="star-rating"><span style="width:100%">Rated <strong
                                                     class="rating">5.00</strong> out of 5</span>
                                         </div>
                                         <span class="review">(1)</span>
-                                    </div>
+                                    </div> --}}
                                     <span class="price"><del><span class="kodory-Price-amount amount"><span
                                                     class="kodory-Price-currencySymbol">$</span>138.00</span></del>
                                         <ins><span class="kodory-Price-amount amount"><span
@@ -1262,7 +1262,7 @@
                             <div class="product-inner tooltip-left">
                                 <div class="product-thumb">
                                     <a class="thumb-link" href="single-product.html">
-                                        <img class="img-responsive" src="assets/images/apro101-1-600x778.jpg"
+                                        <img class="img-responsive" src="{{asset('images/np3.jpg')}}"
                                             alt="Penguin Hoodie" width="600" height="778">
                                     </a>
                                     <div class="flash">
@@ -1289,13 +1289,13 @@
                                 </div>
                                 <div class="product-info equal-elem">
                                     <h3 class="product-name product_title">
-                                        <a href="single-product.html">Penguin Hoodie</a>
+                                        <a href="single-product.html">Praxis Fun English Online Course</a>
                                     </h3>
-                                    <div class="rating-wapper nostar">
+                                    {{-- <div class="rating-wapper nostar">
                                         <div class="star-rating"><span style="width:0%">Rated <strong
                                                     class="rating">0</strong> out of 5</span></div>
                                         <span class="review">(0)</span>
-                                    </div>
+                                    </div> --}}
                                     <span class="price"><span class="kodory-Price-amount amount"><span
                                                 class="kodory-Price-currencySymbol">$</span>60.00</span></span>
                                     <div class="kodory-product-details__short-description">
@@ -1334,7 +1334,7 @@
                             <div class="product-inner tooltip-left">
                                 <div class="product-thumb">
                                     <a class="thumb-link" href="single-product.html">
-                                        <img class="img-responsive" src="assets/images/apro171-1-600x778.jpg"
+                                        <img class="img-responsive" src="{{asset('images/np4.jpeg')}}"
                                             alt="Cute Girl Shirt" width="600" height="778">
                                     </a>
                                     <div class="flash">
@@ -1367,7 +1367,7 @@
                                                                 value="red" class="attached enabled">Red
                                                             </option>
                                                         </select>
-                                                        <div class="data-val attribute-pa_color"
+                                                        {{-- <div class="data-val attribute-pa_color"
                                                             data-attributetype="box_style">
                                                             <label>
                                                                 <input type="radio" name="color">
@@ -1387,7 +1387,7 @@
                                                                     style="background: #ffe59e;" data-value="pink">
                                                                 </span>
                                                             </label>
-                                                        </div>
+                                                        </div> --}}
                                                         <a class="reset_variations" href="#"
                                                             style="visibility: hidden;">Clear</a>
                                                     </td>
@@ -1416,13 +1416,13 @@
                                 </div>
                                 <div class="product-info equal-elem">
                                     <h3 class="product-name product_title">
-                                        <a href="single-product.html">Cute Girl Shirt</a>
+                                        <a href="single-product.html">English for SchoolAge (Offline Kota Madiun)</a>
                                     </h3>
-                                    <div class="rating-wapper nostar">
+                                    {{-- <div class="rating-wapper nostar">
                                         <div class="star-rating"><span style="width:0%">Rated <strong
                                                     class="rating">0</strong> out of 5</span></div>
                                         <span class="review">(0)</span>
-                                    </div>
+                                    </div> --}}
                                     <span class="price"><span class="kodory-Price-amount amount"><span
                                                 class="kodory-Price-currencySymbol">$</span>105.00</span> – <span
                                             class="kodory-Price-amount amount"><span
@@ -1463,7 +1463,7 @@
                             <div class="product-inner tooltip-left">
                                 <div class="product-thumb">
                                     <a class="thumb-link" href="single-product.html">
-                                        <img class="img-responsive" src="assets/images/apro41-1-600x778.jpg"
+                                        <img class="img-responsive" src="{{asset('images/np5.jpeg')}}"
                                             alt="Cute Shoes" width="600" height="778">
                                     </a>
                                     <div class="flash">
@@ -1490,13 +1490,13 @@
                                 </div>
                                 <div class="product-info equal-elem">
                                     <h3 class="product-name product_title">
-                                        <a href="single-product.html">Cute Shoes</a>
+                                        <a href="single-product.html">Class English Preschool & TK</a>
                                     </h3>
-                                    <div class="rating-wapper nostar">
+                                    {{-- <div class="rating-wapper nostar">
                                         <div class="star-rating"><span style="width:0%">Rated <strong
                                                     class="rating">0</strong> out of 5</span></div>
                                         <span class="review">(0)</span>
-                                    </div>
+                                    </div> --}}
                                     <span class="price"><span class="kodory-Price-amount amount"><span
                                                 class="kodory-Price-currencySymbol">$</span>134.00</span></span>
                                     <div class="kodory-product-details__short-description">
@@ -1535,7 +1535,7 @@
                             <div class="product-inner tooltip-left">
                                 <div class="product-thumb">
                                     <a class="thumb-link" href="single-product.html">
-                                        <img class="img-responsive" src="assets/images/apro181-2-600x778.jpg"
+                                        <img class="img-responsive" src="{{asset('images/np6.jpeg')}}"
                                             alt="Soccer Shoes" width="600" height="778">
                                     </a>
                                     <div class="flash">
@@ -1562,13 +1562,13 @@
                                 </div>
                                 <div class="product-info equal-elem">
                                     <h3 class="product-name product_title">
-                                        <a href="single-product.html">Soccer Shoes</a>
+                                        <a href="single-product.html">Trial Class Sakamoto Class</a>
                                     </h3>
-                                    <div class="rating-wapper nostar">
+                                    {{-- <div class="rating-wapper nostar">
                                         <div class="star-rating"><span style="width:0%">Rated <strong
                                                     class="rating">0</strong> out of 5</span></div>
                                         <span class="review">(0)</span>
-                                    </div>
+                                    </div> --}}
                                     <span class="price"><span class="kodory-Price-amount amount"><span
                                                 class="kodory-Price-currencySymbol">$</span>98.00</span></span>
                                     <div class="kodory-product-details__short-description">
@@ -1607,7 +1607,7 @@
                             <div class="product-inner tooltip-left">
                                 <div class="product-thumb">
                                     <a class="thumb-link" href="single-product.html">
-                                        <img class="img-responsive" src="assets/images/apro83-1-600x778.jpg"
+                                        <img class="img-responsive" src="{{asset('images/np7.jpeg')}}"
                                             alt="Glasses" width="600" height="778">
                                     </a>
                                     <div class="flash">
@@ -1636,7 +1636,7 @@
                                                                 value="red" class="attached enabled">Red
                                                             </option>
                                                         </select>
-                                                        <div class="data-val attribute-pa_color"
+                                                        {{-- <div class="data-val attribute-pa_color"
                                                             data-attributetype="box_style">
                                                             <label>
                                                                 <input type="radio" name="color">
@@ -1656,7 +1656,7 @@
                                                                     style="background: #ffe59e;" data-value="pink">
                                                                 </span>
                                                             </label>
-                                                        </div>
+                                                        </div> --}}
                                                         <a class="reset_variations" href="#"
                                                             style="visibility: hidden;">Clear</a>
                                                     </td>
@@ -1685,13 +1685,13 @@
                                 </div>
                                 <div class="product-info equal-elem">
                                     <h3 class="product-name product_title">
-                                        <a href="single-product.html">Star Shoes</a>
+                                        <a href="single-product.html">Eye Level Calistung</a>
                                     </h3>
-                                    <div class="rating-wapper nostar">
+                                    {{-- <div class="rating-wapper nostar">
                                         <div class="star-rating"><span style="width:0%">Rated <strong
                                                     class="rating">0</strong> out of 5</span></div>
                                         <span class="review">(0)</span>
-                                    </div>
+                                    </div> --}}
                                     <span class="price"><span class="kodory-Price-amount amount"><span
                                                 class="kodory-Price-currencySymbol">$</span>56.00</span> – <span
                                             class="kodory-Price-amount amount"><span
@@ -1732,7 +1732,7 @@
                             <div class="product-inner tooltip-left">
                                 <div class="product-thumb">
                                     <a class="thumb-link" href="single-product.html">
-                                        <img class="img-responsive" src="assets/images/apro141-1-600x778.jpg"
+                                        <img class="img-responsive" src="{{asset('images/np8.jpeg')}}"
                                             alt="Red Car" width="600" height="778">
                                     </a>
                                     <div class="flash">
@@ -1759,14 +1759,14 @@
                                 </div>
                                 <div class="product-info equal-elem">
                                     <h3 class="product-name product_title">
-                                        <a href="single-product.html">Red Car</a>
+                                        <a href="single-product.html">Matematika Online</a>
                                     </h3>
-                                    <div class="rating-wapper ">
+                                    {{-- <div class="rating-wapper ">
                                         <div class="star-rating"><span style="width:100%">Rated <strong
                                                     class="rating">5.00</strong> out of 5</span>
                                         </div>
                                         <span class="review">(1)</span>
-                                    </div>
+                                    </div> --}}
                                     <span class="price"><span class="kodory-Price-amount amount"><span
                                                 class="kodory-Price-currencySymbol">$</span>207.00</span></span>
                                     <div class="kodory-product-details__short-description">
@@ -1805,7 +1805,7 @@
                             <div class="product-inner tooltip-left">
                                 <div class="product-thumb">
                                     <a class="thumb-link" href="single-product.html">
-                                        <img class="img-responsive" src="assets/images/apro61-1-600x778.jpg"
+                                        <img class="img-responsive" src="{{asset('images/mp1.jpg')}}"
                                             alt="Shark Shirt" width="600" height="778">
                                     </a>
                                     <div class="flash">
@@ -1832,13 +1832,13 @@
                                 </div>
                                 <div class="product-info equal-elem">
                                     <h3 class="product-name product_title">
-                                        <a href="single-product.html">Shark Shirt</a>
+                                        <a href="single-product.html">FREE 1 Month Trial - English - P3</a>
                                     </h3>
-                                    <div class="rating-wapper nostar">
+                                    {{-- <div class="rating-wapper nostar">
                                         <div class="star-rating"><span style="width:0%">Rated <strong
                                                     class="rating">0</strong> out of 5</span></div>
                                         <span class="review">(0)</span>
-                                    </div>
+                                    </div> --}}
                                     <span class="price"><span class="kodory-Price-amount amount"><span
                                                 class="kodory-Price-currencySymbol">$</span>79.00</span> – <span
                                             class="kodory-Price-amount amount"><span
@@ -1879,13 +1879,13 @@
                             <div class="product-inner tooltip-left">
                                 <div class="product-thumb">
                                     <a class="thumb-link" href="single-product.html">
-                                        <img class="img-responsive" src="assets/images/apro71-1-600x778.jpg"
+                                        <img class="img-responsive" src="{{asset('images/mp4.jpeg')}}"
                                             alt="Kid Backpack" width="600" height="778">
                                     </a>
-                                    <div class="flash">
+                                    {{-- <div class="flash">
                                         <span class="onsale"><span class="number">-18%</span></span>
                                         <span class="onnew"><span class="text">New</span></span>
-                                    </div>
+                                    </div> --}}
                                     <a href="#" class="button yith-wcqv-button" data-product_id="24">Quick
                                         View</a>
                                     <div class="group-button">
@@ -1907,13 +1907,13 @@
                                 </div>
                                 <div class="product-info equal-elem">
                                     <h3 class="product-name product_title">
-                                        <a href="single-product.html">Kid Backpack</a>
+                                        <a href="single-product.html">Math Lessons for Elementary School</a>
                                     </h3>
-                                    <div class="rating-wapper nostar">
+                                    {{-- <div class="rating-wapper nostar">
                                         <div class="star-rating"><span style="width:0%">Rated <strong
                                                     class="rating">0</strong> out of 5</span></div>
                                         <span class="review">(0)</span>
-                                    </div>
+                                    </div> --}}
                                     <span class="price"><del><span class="kodory-Price-amount amount"><span
                                                     class="kodory-Price-currencySymbol">$</span>109.00</span></del>
                                         <ins><span class="kodory-Price-amount amount"><span
@@ -1954,12 +1954,12 @@
                             <div class="product-inner tooltip-left">
                                 <div class="product-thumb">
                                     <a class="thumb-link" href="single-product.html">
-                                        <img class="img-responsive" src="assets/images/apro191-1-600x778.jpg"
+                                        <img class="img-responsive" src="{{asset('images/mp2.jpeg')}}"
                                             alt="Baby Shirt" width="600" height="778">
                                     </a>
-                                    <div class="flash">
+                                    {{-- <div class="flash">
                                         <span class="sold-out"><span>Sold out</span></span>
-                                    </div>
+                                    </div> --}}
                                     <a href="#" class="button yith-wcqv-button" data-product_id="24">Quick
                                         View</a>
                                     <div class="group-button">
@@ -1981,13 +1981,13 @@
                                 </div>
                                 <div class="product-info equal-elem">
                                     <h3 class="product-name product_title">
-                                        <a href="single-product.html">Baby Shirt</a>
+                                        <a href="single-product.html">Superstar Package for 6 Months</a>
                                     </h3>
-                                    <div class="rating-wapper nostar">
+                                    {{-- <div class="rating-wapper nostar">
                                         <div class="star-rating"><span style="width:0%">Rated <strong
                                                     class="rating">0</strong> out of 5</span></div>
                                         <span class="review">(0)</span>
-                                    </div>
+                                    </div> --}}
                                     <span class="price"><span class="kodory-Price-amount amount"><span
                                                 class="kodory-Price-currencySymbol">$</span>35.00</span></span>
                                     <div class="kodory-product-details__short-description">
@@ -2026,7 +2026,7 @@
                             <div class="product-inner tooltip-left">
                                 <div class="product-thumb">
                                     <a class="thumb-link" href="single-product.html">
-                                        <img class="img-responsive" src="assets/images/apro13-1-600x778.jpg"
+                                        <img class="img-responsive" src="{{asset('images/mp3.jpg')}}"
                                             alt="Hello Shirt" width="600" height="778">
                                     </a>
                                     <div class="flash">
@@ -2053,13 +2053,13 @@
                                 </div>
                                 <div class="product-info equal-elem">
                                     <h3 class="product-name product_title">
-                                        <a href="single-product.html">Hello Shirt</a>
+                                        <a href="single-product.html">Trial Coding Program for Children</a>
                                     </h3>
-                                    <div class="rating-wapper nostar">
+                                    {{-- <div class="rating-wapper nostar">
                                         <div class="star-rating"><span style="width:0%">Rated <strong
                                                     class="rating">0</strong> out of 5</span></div>
                                         <span class="review">(0)</span>
-                                    </div>
+                                    </div> --}}
                                     <span class="price"><span class="kodory-Price-amount amount"><span
                                                 class="kodory-Price-currencySymbol">$</span>109.00</span></span>
                                     <div class="kodory-product-details__short-description">
@@ -2096,11 +2096,11 @@
                     </ul>
                 </div>
                 <div class="shop-control shop-after-control">
-                    <nav class="kodory-pagination">
+                    {{-- <nav class="kodory-pagination">
                         <span class="page-numbers current">1</span>
                         <a class="page-numbers" href="#">2</a>
                         <a class="next page-numbers" href="#">Next</a>
-                    </nav>
+                    </nav> --}}
                     {{-- <p class="kodory-result-count">Showing 1–12 of 20 results</p> --}}
                 </div>
             </div>
@@ -2123,7 +2123,7 @@
                                 <div class="price_slider_amount">
                                     <button type="submit" class="button">Filter</button>
                                     <div class="price_label">
-                                        Price: <span class="from">$100</span> — <span class="to">$800</span>
+                                        Price: <span class="from">$1.00</span> — <span class="to">$100.00</span>
                                     </div>
                                 </div>
                             </div>
@@ -2194,38 +2194,43 @@
                     </div>
                     <div id="kodory_layered_nav-6"
                         class="widget kodory widget_layered_nav kodory-widget-layered-nav">
-                        <h2 class="widgettitle">Filter By Size<span class="arrow"></span></h2>
+                        <h2 class="widgettitle">Price<span class="arrow"></span></h2>
                         <ul class="kodory-widget-layered-nav-list">
                             <li class="kodory-widget-layered-nav-list__item kodory-layered-nav-term ">
                                 <label><input type="checkbox" name="size">
-                                    <span>XS</span>
-                                    <span class="count">(0)</span></label>
+                                    <span>$1.00 - $10.00</span>
+                                    {{-- <span class="count">(0)</span> --}}
+                                </label>
                             </li>
                             <li class="kodory-widget-layered-nav-list__item kodory-layered-nav-term ">
                                 <label><input type="checkbox" name="size">
-                                    <span>S</span>
-                                    <span class="count">(0)</span></label>
+                                    <span>$10.00 - $30.00</span>
+                                    {{-- <span class="count">(0)</span> --}}
+                                </label>
                             </li>
                             <li class="kodory-widget-layered-nav-list__item kodory-layered-nav-term ">
                                 <label><input type="checkbox" name="size">
-                                    <span>M</span>
-                                    <span class="count">(0)</span></label>
+                                    <span>$30.00 - $40.00</span>
+                                    {{-- <span class="count">(0)</span> --}}
+                                </label>
                             </li>
                             <li class="kodory-widget-layered-nav-list__item kodory-layered-nav-term ">
                                 <label><input type="checkbox" name="size">
-                                    <span>L</span>
-                                    <span class="count">(0)</span></label>
+                                    <span>$40.00 - $50.00</span>
+                                    {{-- <span class="count">(0)</span> --}}
+                                </label>
                             </li>
                             <li class="kodory-widget-layered-nav-list__item kodory-layered-nav-term ">
                                 <label><input type="checkbox" name="size">
-                                    <span>XL</span>
-                                    <span class="count">(0)</span></label>
+                                    <span>$50.00 - $100.00</span>
+                                    {{-- <span class="count">(0)</span> --}}
+                                </label>
                             </li>
-                            <li class="kodory-widget-layered-nav-list__item kodory-layered-nav-term ">
+                            {{-- <li class="kodory-widget-layered-nav-list__item kodory-layered-nav-term ">
                                 <label><input type="checkbox" name="size">
                                     <span>XXL</span>
                                     <span class="count">(0)</span></label>
-                            </li>
+                            </li> --}}
                         </ul>
                     </div>
                     {{-- <div id="kodory_product_categories-3" class="widget kodory widget_product_categories">

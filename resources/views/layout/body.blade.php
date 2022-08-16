@@ -196,12 +196,18 @@
                                             <h3 class="product-name product_title">
                                                 <a href="#">Kindergarten English Course Power</a>
                                             </h3>
-                                            <div class="rating-wapper nostar">
-                                                <div class="star-rating"><span style="width:0%">Rated <strong
-                                                        class="rating">0</strong> out of 5</span></div>
-                                                <span class="review">(0)</span></div>
-                                            <span class="price"><span class="kodory-Price-amount amount"><span
-                                                    class="kodory-Price-currencySymbol">$</span>109.00</span></span>
+                                            <p class="m-1"><i class="fa fa-calendar-o" aria-hidden="true"></i> 8x Pertemuan</p>
+                                            <p class="m-1"><i class="fa fa-clock-o" aria-hidden="true"></i> 75 Menit</p>
+                                            <p class="m-1"><i class="fa fa-map-marker" aria-hidden="true"></i> Online</p>
+                                            {{-- <div class="rating-wapper nostar">
+                                                <div class="star-rating">
+                                                    <span style="width:0%">Rated<strong class="rating">0</strong> out of 5</span>
+                                                </div>
+                                                <span class="review">(0)</span>
+                                            </div> --}}
+                                            <span class="price"><span class="kodory-Price-amount amount">
+                                                <span class="kodory-Price-currencySymbol">$</span>109.00</span>
+                                            </span>
                                         </div>
                                     </div>
                                 </div>
@@ -237,10 +243,13 @@
                                             <h3 class="product-name product_title">
                                                 <a href="#">Private English Course Les Bahasa Inggris Privat</a>
                                             </h3>
-                                            <div class="rating-wapper nostar">
+                                            <p class="m-1"><i class="fa fa-calendar-o" aria-hidden="true"></i> 8x Pertemuan</p>
+                                            <p class="m-1"><i class="fa fa-clock-o" aria-hidden="true"></i> 75 Menit</p>
+                                            <p class="m-1"><i class="fa fa-map-marker" aria-hidden="true"></i> Online</p>
+                                            {{-- <div class="rating-wapper nostar">
                                                 <div class="star-rating"><span style="width:0%">Rated <strong
                                                         class="rating">0</strong> out of 5</span></div>
-                                                <span class="review">(0)</span></div>
+                                                <span class="review">(0)</span></div> --}}
                                             <span class="price"><span class="kodory-Price-amount amount"><span
                                                     class="kodory-Price-currencySymbol">$</span>79.00</span></span>
                                         </div>
@@ -277,10 +286,13 @@
                                             <h3 class="product-name product_title">
                                                 <a href="#">Praxis Fun English Online Course</a>
                                             </h3>
-                                            <div class="rating-wapper nostar">
+                                            <p class="m-1"><i class="fa fa-calendar-o" aria-hidden="true"></i> 8x Pertemuan Sebulan</p>
+                                            <p class="m-1"><i class="fa fa-clock-o" aria-hidden="true"></i> 60 Menit</p>
+                                            <p class="m-1"><i class="fa fa-map-marker" aria-hidden="true"></i> Online</p>
+                                            {{-- <div class="rating-wapper nostar">
                                                 <div class="star-rating"><span style="width:0%">Rated <strong
                                                         class="rating">0</strong> out of 5</span></div>
-                                                <span class="review">(0)</span></div>
+                                                <span class="review">(0)</span></div> --}}
                                             <span class="price"><span class="kodory-Price-amount amount"><span
                                                     class="kodory-Price-currencySymbol">$</span>120.00</span></span>
                                         </div>
@@ -319,10 +331,13 @@
                                             <h3 class="product-name product_title">
                                                 <a href="#">English for SchoolAge (Offline Kota Madiun)</a>
                                             </h3>
-                                            <div class="rating-wapper nostar">
+                                            <p class="m-1"><i class="fa fa-calendar-o" aria-hidden="true"></i> 8x Pertemuan</p>
+                                            <p class="m-1"><i class="fa fa-clock-o" aria-hidden="true"></i> 75 Menit</p>
+                                            <p class="m-1"><i class="fa fa-map-marker" aria-hidden="true"></i> Online</p>
+                                            {{-- <div class="rating-wapper nostar">
                                                 <div class="star-rating"><span style="width:0%">Rated <strong
                                                         class="rating">0</strong> out of 5</span></div>
-                                                <span class="review">(0)</span></div>
+                                                <span class="review">(0)</span></div> --}}
                                             <span class="price"><del><span class="kodory-Price-amount amount"><span
                                                     class="kodory-Price-currencySymbol">$</span>125.00</span></del> <ins><span
                                                     class="kodory-Price-amount amount"><span
@@ -362,10 +377,13 @@
                                             <h3 class="product-name product_title">
                                                 <a href="">Class English Preschool & TK</a>
                                             </h3>
-                                            <div class="rating-wapper nostar">
+                                            <p class="m-1"><i class="fa fa-calendar-o" aria-hidden="true"></i> 4-8x Pertemuan</p>
+                                            <p class="m-1"><i class="fa fa-clock-o" aria-hidden="true"></i> 75 Menit</p>
+                                            <p class="m-1"><i class="fa fa-map-marker" aria-hidden="true"></i> Online</p>
+                                            {{-- <div class="rating-wapper nostar">
                                                 <div class="star-rating"><span style="width:0%">Rated <strong
                                                         class="rating">0</strong> out of 5</span></div>
-                                                <span class="review">(0)</span></div>
+                                                <span class="review">(0)</span></div> --}}
                                             <span class="price"><span class="kodory-Price-amount amount"><span
                                                     class="kodory-Price-currencySymbol">$</span>134.00</span></span>
                                         </div>
@@ -403,10 +421,13 @@
                                             <h3 class="product-name product_title">
                                                 <a href="">Trial Class Sakamoto Class</a>
                                             </h3>
-                                            <div class="rating-wapper nostar">
+                                            <p class="m-1"><i class="fa fa-calendar-o" aria-hidden="true"></i> 8x Pertemuan</p>
+                                            <p class="m-1"><i class="fa fa-clock-o" aria-hidden="true"></i> 30 - 60 Menit</p>
+                                            <p class="m-1"><i class="fa fa-map-marker" aria-hidden="true"></i> Online</p>
+                                            {{-- <div class="rating-wapper nostar">
                                                 <div class="star-rating"><span style="width:0%">Rated <strong
                                                         class="rating">0</strong> out of 5</span></div>
-                                                <span class="review">(0)</span></div>
+                                                <span class="review">(0)</span></div> --}}
                                             <span class="price"><span class="kodory-Price-amount amount"><span
                                                     class="kodory-Price-currencySymbol">$</span>79.00</span> – <span
                                                     class="kodory-Price-amount amount"><span
@@ -447,10 +468,13 @@
                                             <h3 class="product-name product_title">
                                                 <a href="">Eye Level Calistung</a>
                                             </h3>
-                                            <div class="rating-wapper nostar">
+                                            <p class="m-1"><i class="fa fa-calendar-o" aria-hidden="true"></i> 2x Seminggu</p>
+                                            <p class="m-1"><i class="fa fa-clock-o" aria-hidden="true"></i> 60 Menit</p>
+                                            <p class="m-1"><i class="fa fa-map-marker" aria-hidden="true"></i> Online</p>
+                                            {{-- <div class="rating-wapper nostar">
                                                 <div class="star-rating"><span style="width:0%">Rated <strong
                                                         class="rating">0</strong> out of 5</span></div>
-                                                <span class="review">(0)</span></div>
+                                                <span class="review">(0)</span></div> --}}
                                             <span class="price"><del><span class="kodory-Price-amount amount"><span
                                                     class="kodory-Price-currencySymbol">$</span>109.00</span></del> <ins><span
                                                     class="kodory-Price-amount amount"><span
@@ -542,10 +566,13 @@
                                             <h3 class="product-name product_title">
                                                 <a href="">Matematika Online</a>
                                             </h3>
-                                            <div class="rating-wapper nostar">
+                                            <p class="m-1"><i class="fa fa-calendar-o" aria-hidden="true"></i> Tentukan Tanggal</p>
+                                            <p class="m-1"><i class="fa fa-clock-o" aria-hidden="true"></i> 45 Menit</p>
+                                            <p class="m-1"><i class="fa fa-map-marker" aria-hidden="true"></i> Online</p>
+                                            {{-- <div class="rating-wapper nostar">
                                                 <div class="star-rating"><span style="width:0%">Rated <strong
                                                         class="rating">0</strong> out of 5</span></div>
-                                                <span class="review">(0)</span></div>
+                                                <span class="review">(0)</span></div> --}}
                                             <span class="price"><span class="kodory-Price-amount amount"><span
                                                     class="kodory-Price-currencySymbol">$</span>56.00</span> – <span
                                                     class="kodory-Price-amount amount"><span
@@ -592,10 +619,13 @@
                                             <h3 class="product-name product_title">
                                                 <a href="">FREE 1 Month Trial - English - P3</a>
                                             </h3>
-                                            <div class="rating-wapper ">
+                                            <p class="m-1"><i class="fa fa-calendar-o" aria-hidden="true"></i> 2x Seminggu </p>
+                                            <p class="m-1"><i class="fa fa-clock-o" aria-hidden="true"></i> 60 Menit</p>
+                                            <p class="m-1"><i class="fa fa-map-marker" aria-hidden="true"></i> Online</p>
+                                            {{-- <div class="rating-wapper ">
                                                 <div class="star-rating"><span style="width:100%">Rated <strong
                                                         class="rating">5.00</strong> out of 5</span></div>
-                                                <span class="review">(1)</span></div>
+                                                <span class="review">(1)</span></div> --}}
                                             <span class="price"><span class="kodory-Price-amount amount"><span
                                                     class="kodory-Price-currencySymbol">$</span>207.00</span></span>
                                         </div>
@@ -634,10 +664,13 @@
                                             <h3 class="product-name product_title">
                                                 <a href="">Superstar Package for 6 Months</a>
                                             </h3>
-                                            <div class="rating-wapper ">
+                                            <p class="m-1"><i class="fa fa-calendar-o" aria-hidden="true"></i> 6 Bulan</p>
+                                            <p class="m-1"><i class="fa fa-clock-o" aria-hidden="true"></i> 60 Menit</p>
+                                            <p class="m-1"><i class="fa fa-map-marker" aria-hidden="true"></i> Online</p>
+                                            {{-- <div class="rating-wapper ">
                                                 <div class="star-rating"><span style="width:100%">Rated <strong
                                                         class="rating">5.00</strong> out of 5</span></div>
-                                                <span class="review">(1)</span></div>
+                                                <span class="review">(1)</span></div> --}}
                                             <span class="price"><del><span class="kodory-Price-amount amount"><span
                                                     class="kodory-Price-currencySymbol">$</span>138.00</span></del> <ins><span
                                                     class="kodory-Price-amount amount"><span
@@ -678,10 +711,13 @@
                                             <h3 class="product-name product_title">
                                                 <a href="">Trial Coding Program for Children</a>
                                             </h3>
-                                            <div class="rating-wapper nostar">
+                                            <p class="m-1"><i class="fa fa-calendar-o" aria-hidden="true"></i> 1x Pertemuan</p>
+                                            <p class="m-1"><i class="fa fa-clock-o" aria-hidden="true"></i> 60 Menit</p>
+                                            <p class="m-1"><i class="fa fa-map-marker" aria-hidden="true"></i> Online</p>
+                                            {{-- <div class="rating-wapper nostar">
                                                 <div class="star-rating"><span style="width:0%">Rated <strong
                                                         class="rating">0</strong> out of 5</span></div>
-                                                <span class="review">(0)</span></div>
+                                                <span class="review">(0)</span></div> --}}
                                             <span class="price"><del><span class="kodory-Price-amount amount">
                                                 <span class="kodory-Price-currencySymbol">$</span>150.00</span></del> 
                                                 <ins>
@@ -775,10 +811,13 @@
                                             <h3 class="product-name product_title">
                                                 <a href="">Math Lessons for Elementary School</a>
                                             </h3>
-                                            <div class="rating-wapper nostar">
+                                            <p class="m-1"><i class="fa fa-calendar-o" aria-hidden="true"></i> 8x Sebulan</p>
+                                            <p class="m-1"><i class="fa fa-clock-o" aria-hidden="true"></i> 60 - 120 Menit</p>
+                                            <p class="m-1"><i class="fa fa-map-marker" aria-hidden="true"></i> Online</p>
+                                            {{-- <div class="rating-wapper nostar">
                                                 <div class="star-rating"><span style="width:0%">Rated <strong
                                                         class="rating">0</strong> out of 5</span></div>
-                                                <span class="review">(0)</span></div>
+                                                <span class="review">(0)</span></div> --}}
                                             <span class="price"><span class="kodory-Price-amount amount"><span
                                                     class="kodory-Price-currencySymbol">$</span>56.00</span> – <span
                                                     class="kodory-Price-amount amount"><span
@@ -796,9 +835,9 @@
                                                      src="{{asset('images/mp5.jpg')}}"
                                                      alt="" width="270" height="350">
                                             </a>
-                                            <div class="flash">
+                                            {{-- <div class="flash">
                                                 <span class="sold-out"><span>Sold out</span></span>
-                                            </div>
+                                            </div> --}}
                                             <div class="group-button">
                                                 <div class="yith-wcwl-add-to-wishlist">
                                                     <div class="yith-wcwl-add-button show">
@@ -819,10 +858,13 @@
                                             <h3 class="product-name product_title">
                                                 <a href="">Private English Course SD 1-3</a>
                                             </h3>
-                                            <div class="rating-wapper nostar">
+                                            <p class="m-1"><i class="fa fa-calendar-o" aria-hidden="true"></i> 4x Pertemuan</p>
+                                            <p class="m-1"><i class="fa fa-clock-o" aria-hidden="true"></i> 45 - 60 Menit</p>
+                                            <p class="m-1"><i class="fa fa-map-marker" aria-hidden="true"></i> Online</p>
+                                            {{-- <div class="rating-wapper nostar">
                                                 <div class="star-rating"><span style="width:0%">Rated <strong
                                                         class="rating">0</strong> out of 5</span></div>
-                                                <span class="review">(0)</span></div>
+                                                <span class="review">(0)</span></div> --}}
                                             <span class="price"><span class="kodory-Price-amount amount"><span
                                                     class="kodory-Price-currencySymbol">$</span>35.00</span></span>
                                         </div>
@@ -860,10 +902,13 @@
                                             <h3 class="product-name product_title">
                                                 <a href="">Private Painting Course</a>
                                             </h3>
-                                            <div class="rating-wapper nostar">
+                                            <p class="m-1"><i class="fa fa-calendar-o" aria-hidden="true"></i> 4x Sebulan</p>
+                                            <p class="m-1"><i class="fa fa-clock-o" aria-hidden="true"></i> 90 Menit</p>
+                                            <p class="m-1"><i class="fa fa-map-marker" aria-hidden="true"></i> Online</p>
+                                            {{-- <div class="rating-wapper nostar">
                                                 <div class="star-rating"><span style="width:0%">Rated <strong
                                                         class="rating">0</strong> out of 5</span></div>
-                                                <span class="review">(0)</span></div>
+                                                <span class="review">(0)</span></div> --}}
                                             <span class="price"><span class="kodory-Price-amount amount"><span
                                                     class="kodory-Price-currencySymbol">$</span>79.00</span> – <span
                                                     class="kodory-Price-amount amount"><span
@@ -904,10 +949,13 @@
                                             <h3 class="product-name product_title">
                                                 <a href="">Private English SD 4-6</a>
                                             </h3>
-                                            <div class="rating-wapper nostar">
+                                            <p class="m-1"><i class="fa fa-calendar-o" aria-hidden="true"></i> 4x Pertemuan</p>
+                                            <p class="m-1"><i class="fa fa-clock-o" aria-hidden="true"></i> 60 Menit</p>
+                                            <p class="m-1"><i class="fa fa-map-marker" aria-hidden="true"></i> Online</p>
+                                            {{-- <div class="rating-wapper nostar">
                                                 <div class="star-rating"><span style="width:0%">Rated <strong
                                                         class="rating">0</strong> out of 5</span></div>
-                                                <span class="review">(0)</span></div>
+                                                <span class="review">(0)</span></div> --}}
                                             <span class="price"><span class="kodory-Price-amount amount"><span
                                                     class="kodory-Price-currencySymbol">$</span>98.00</span></span>
                                         </div>
@@ -945,10 +993,13 @@
                                             <h3 class="product-name product_title">
                                                 <a href="#">Les Mengaji,PAI,dll(Offline)</a>
                                             </h3>
-                                            <div class="rating-wapper nostar">
+                                            <p class="m-1"><i class="fa fa-calendar-o" aria-hidden="true"></i> 1x Pertemuan</p>
+                                            <p class="m-1"><i class="fa fa-clock-o" aria-hidden="true"></i> 60 - 90 Menit</p>
+                                            <p class="m-1"><i class="fa fa-map-marker" aria-hidden="true"></i> Online</p>
+                                            {{-- <div class="rating-wapper nostar">
                                                 <div class="star-rating"><span style="width:0%">Rated <strong
                                                         class="rating">0</strong> out of 5</span></div>
-                                                <span class="review">(0)</span></div>
+                                                <span class="review">(0)</span></div> --}}
                                             <span class="price"><span class="kodory-Price-amount amount"><span
                                                     class="kodory-Price-currencySymbol">$</span>134.00</span></span>
                                         </div>
@@ -993,10 +1044,13 @@
                                             <h3 class="product-name product_title">
                                                 <a href="">Baby Massage </a>
                                             </h3>
-                                            <div class="rating-wapper nostar">
+                                            <p class="m-1"><i class="fa fa-calendar-o" aria-hidden="true"></i> Tentukan Tanggal</p>
+                                            <p class="m-1"><i class="fa fa-clock-o" aria-hidden="true"></i> 60 Menit</p>
+                                            <p class="m-1"><i class="fa fa-map-marker" aria-hidden="true"></i> Banyak Tempat</p>
+                                            {{-- <div class="rating-wapper nostar">
                                                 <div class="star-rating"><span style="width:0%">Rated <strong
                                                         class="rating">0</strong> out of 5</span></div>
-                                                <span class="review">(0)</span></div>
+                                                <span class="review">(0)</span></div> --}}
                                             <span class="price"><span class="kodory-Price-amount amount"><span
                                                     class="kodory-Price-currencySymbol">$</span>79.00</span> – <span
                                                     class="kodory-Price-amount amount"><span
@@ -1015,7 +1069,7 @@
                                                      alt="" width="270" height="350">
                                             </a>
                                             <div class="flash">
-                                                <span class="onsale"><span class="number">-18%</span></span>
+                                                {{-- <span class="onsale"><span class="number">-18%</span></span> --}}
                                                 <span class="onnew"><span class="text">New</span></span></div>
                                             <div class="group-button">
                                                 <div class="yith-wcwl-add-to-wishlist">
@@ -1037,10 +1091,13 @@
                                             <h3 class="product-name product_title">
                                                 <a href="">Paket New Born 5 Hari </a>
                                             </h3>
-                                            <div class="rating-wapper nostar">
+                                            <p class="m-1"><i class="fa fa-calendar-o" aria-hidden="true"></i> Tentukan Tanggal</p>
+                                            <p class="m-1"><i class="fa fa-clock-o" aria-hidden="true"></i> 3 Jam</p>
+                                            <p class="m-1"><i class="fa fa-map-marker" aria-hidden="true"></i>Banyak Tempat</p>
+                                            {{-- <div class="rating-wapper nostar">
                                                 <div class="star-rating"><span style="width:0%">Rated <strong
                                                         class="rating">0</strong> out of 5</span></div>
-                                                <span class="review">(0)</span></div>
+                                                <span class="review">(0)</span></div> --}}
                                             <span class="price"><del><span class="kodory-Price-amount amount"><span
                                                     class="kodory-Price-currencySymbol">$</span>109.00</span></del> <ins><span
                                                     class="kodory-Price-amount amount"><span
@@ -1080,10 +1137,13 @@
                                             <h3 class="product-name product_title">
                                                 <a href="">Pijat Pediatric Kids & Baby </a>
                                             </h3>
-                                            <div class="rating-wapper nostar">
+                                            <p class="m-1"><i class="fa fa-calendar-o" aria-hidden="true"></i>  Tentukan Tempat</p>
+                                            <p class="m-1"><i class="fa fa-clock-o" aria-hidden="true"></i> 60 Menit</p>
+                                            <p class="m-1"><i class="fa fa-map-marker" aria-hidden="true"></i> Banyak Tempat</p>
+                                            {{-- <div class="rating-wapper nostar">
                                                 <div class="star-rating"><span style="width:0%">Rated <strong
                                                         class="rating">0</strong> out of 5</span></div>
-                                                <span class="review">(0)</span></div>
+                                                <span class="review">(0)</span></div> --}}
                                             <span class="price"><span class="kodory-Price-amount amount"><span
                                                     class="kodory-Price-currencySymbol">$</span>60.00</span></span>
                                         </div>
@@ -1121,10 +1181,13 @@
                                             <h3 class="product-name product_title">
                                                 <a href="">Medimom Clinic</a>
                                             </h3>
-                                            <div class="rating-wapper nostar">
+                                            <p class="m-1"><i class="fa fa-calendar-o" aria-hidden="true"></i> Berlaku 30 Hari</p>
+                                            <p class="m-1"><i class="fa fa-clock-o" aria-hidden="true"></i> 60 Menit</p>
+                                            <p class="m-1"><i class="fa fa-map-marker" aria-hidden="true"></i> Banyak Tempat</p>
+                                            {{-- <div class="rating-wapper nostar">
                                                 <div class="star-rating"><span style="width:0%">Rated <strong
                                                         class="rating">0</strong> out of 5</span></div>
-                                                <span class="review">(0)</span></div>
+                                                <span class="review">(0)</span></div> --}}
                                             <span class="price"><span class="kodory-Price-amount amount"><span
                                                     class="kodory-Price-currencySymbol">$</span>89.00</span> – <span
                                                     class="kodory-Price-amount amount"><span
@@ -1164,10 +1227,13 @@
                                             <h3 class="product-name product_title">
                                                 <a href="">Tindik dan Sunat</a>
                                             </h3>
-                                            <div class="rating-wapper nostar">
+                                            <p class="m-1"><i class="fa fa-calendar-o" aria-hidden="true"></i> Tentukan Tanggal</p>
+                                            <p class="m-1"><i class="fa fa-clock-o" aria-hidden="true"></i> 45 Menit</p>
+                                            <p class="m-1"><i class="fa fa-map-marker" aria-hidden="true"></i> Banyak Tempat</p>
+                                            {{-- <div class="rating-wapper nostar">
                                                 <div class="star-rating"><span style="width:0%">Rated <strong
                                                         class="rating">0</strong> out of 5</span></div>
-                                                <span class="review">(0)</span></div>
+                                                <span class="review">(0)</span></div> --}}
                                             <span class="price"><span class="kodory-Price-amount amount"><span
                                                     class="kodory-Price-currencySymbol">$</span>129.00</span></span>
                                         </div>
@@ -1184,7 +1250,7 @@
                                                      alt="" width="270" height="350">
                                             </a>
                                             <div class="flash">
-                                                <span class="onsale"><span class="number">-14%</span></span>
+                                                {{-- <span class="onsale"><span class="number">-14%</span></span> --}}
                                                 <span class="onnew"><span class="text">New</span></span></div>
                                             <div class="group-button">
                                                 <div class="yith-wcwl-add-to-wishlist">
@@ -1206,10 +1272,13 @@
                                             <h3 class="product-name product_title">
                                                 <a href="">Hair Cut Baby</a>
                                             </h3>
-                                            <div class="rating-wapper ">
+                                            <p class="m-1"><i class="fa fa-calendar-o" aria-hidden="true"></i> Tentukan Tanggal</p>
+                                            <p class="m-1"><i class="fa fa-clock-o" aria-hidden="true"></i> 90 Menit</p>
+                                            <p class="m-1"><i class="fa fa-map-marker" aria-hidden="true"></i> Banyak Tempat</p>
+                                            {{-- <div class="rating-wapper ">
                                                 <div class="star-rating"><span style="width:100%">Rated <strong
                                                         class="rating">5.00</strong> out of 5</span></div>
-                                                <span class="review">(1)</span></div>
+                                                <span class="review">(1)</span></div> --}}
                                             <span class="price"><del><span class="kodory-Price-amount amount"><span
                                                     class="kodory-Price-currencySymbol">$</span>138.00</span></del> <ins><span
                                                     class="kodory-Price-amount amount"><span
@@ -1249,10 +1318,13 @@
                                             <h3 class="product-name product_title">
                                                 <a href="">Baby Spa</a>
                                             </h3>
-                                            <div class="rating-wapper ">
+                                            <p class="m-1"><i class="fa fa-calendar-o" aria-hidden="true"></i> Tentukan Tanggal</p>
+                                            <p class="m-1"><i class="fa fa-clock-o" aria-hidden="true"></i> 60 Menit</p>
+                                            <p class="m-1"><i class="fa fa-map-marker" aria-hidden="true"></i> Banyak Tempat</p>
+                                            {{-- <div class="rating-wapper ">
                                                 <div class="star-rating"><span style="width:100%">Rated <strong
                                                         class="rating">5.00</strong> out of 5</span></div>
-                                                <span class="review">(1)</span></div>
+                                                <span class="review">(1)</span></div> --}}
                                             <span class="price"><span class="kodory-Price-amount amount"><span
                                                     class="kodory-Price-currencySymbol">$</span>207.00</span></span>
                                         </div>
@@ -1269,7 +1341,7 @@
                                                      alt="" width="270" height="350">
                                             </a>
                                             <div class="flash">
-                                                <span class="onsale"><span class="number">-11%</span></span>
+                                                {{-- <span class="onsale"><span class="number">-11%</span></span> --}}
                                                 <span class="onnew"><span class="text">New</span></span></div>
                                             <div class="group-button">
                                                 <div class="yith-wcwl-add-to-wishlist">
@@ -1291,10 +1363,13 @@
                                             <h3 class="product-name product_title">
                                                 <a href="">Kids Massage</a>
                                             </h3>
-                                            <div class="rating-wapper nostar">
+                                            <p class="m-1"><i class="fa fa-calendar-o" aria-hidden="true"></i> Tentukan Tanggal</p>
+                                            <p class="m-1"><i class="fa fa-clock-o" aria-hidden="true"></i> 60 Menit</p>
+                                            <p class="m-1"><i class="fa fa-map-marker" aria-hidden="true"></i>  Banyak Tempat</p>
+                                            {{-- <div class="rating-wapper nostar">
                                                 <div class="star-rating"><span style="width:0%">Rated <strong
                                                         class="rating">0</strong> out of 5</span></div>
-                                                <span class="review">(0)</span></div>
+                                                <span class="review">(0)</span></div> --}}
                                             <span class="price"><del><span class="kodory-Price-amount amount"><span
                                                     class="kodory-Price-currencySymbol">$</span>89.00</span></del> <ins><span
                                                     class="kodory-Price-amount amount"><span
@@ -1335,7 +1410,7 @@
             <div class="kodory-heading style-01">
                 <div class="heading-inner">
                     <h3 class="title">
-                        Follow Us <span></span></h3>
+                        Follow<span></span></h3>
                 </div>
             </div>
             <div class="kodory-instagram style-01">
@@ -1343,108 +1418,108 @@
                      data-slick="{&quot;arrows&quot;:true,&quot;slidesMargin&quot;:10,&quot;dots&quot;:false,&quot;infinite&quot;:false,&quot;speed&quot;:300,&quot;slidesToShow&quot;:4,&quot;rows&quot;:1}"
                      data-responsive="[{&quot;breakpoint&quot;:480,&quot;settings&quot;:{&quot;slidesToShow&quot;:2,&quot;slidesMargin&quot;:&quot;10&quot;}},{&quot;breakpoint&quot;:768,&quot;settings&quot;:{&quot;slidesToShow&quot;:2,&quot;slidesMargin&quot;:&quot;10&quot;}},{&quot;breakpoint&quot;:992,&quot;settings&quot;:{&quot;slidesToShow&quot;:3,&quot;slidesMargin&quot;:&quot;10&quot;}},{&quot;breakpoint&quot;:1200,&quot;settings&quot;:{&quot;slidesToShow&quot;:3,&quot;slidesMargin&quot;:&quot;10&quot;}},{&quot;breakpoint&quot;:1500,&quot;settings&quot;:{&quot;slidesToShow&quot;:4,&quot;slidesMargin&quot;:&quot;10&quot;}}]">
                     <div class="rows-space-0">
-                        <a target="_blank" href="#" class="item" tabindex="0">
+                        <a target="_blank" href="https://www.instagram.com/?hl=id" class="item" tabindex="0">
                             <img class="img-responsive lazy" src="{{asset('images/poto 1.1.jpg')}}" alt="">
                             <span class="instagram-info">
-                                         <span class="social-wrap">
-                                            <span class="social-info">1
-                                                <i class="pe-7s-chat"></i>
-                                            </span>
-                                            <span class="social-info">0
-                                                <i class="pe-7s-like2"></i>
-                                            </span>
-                                        </span>
+                                <span class="social-wrap">
+                                    <span class="social-info">0
+                                        <i class="pe-7s-chat"></i>
                                     </span>
+                                    <span class="social-info">0
+                                        <i class="pe-7s-like2"></i>
+                                    </span>
+                                </span>
+                            </span>
                         </a>
                     </div>
                     <div class="rows-space-0">
-                        <a target="_blank" href="#" class="item" tabindex="0">
+                        <a target="_blank" href="https://www.instagram.com/?hl=id" class="item" tabindex="0">
                             <img class="img-responsive lazy" src="{{asset('images/poto 1.2.jpg')}}" alt="">
                             <span class="instagram-info">
-                                         <span class="social-wrap">
-                                            <span class="social-info">1
-                                                <i class="pe-7s-chat"></i>
-                                            </span>
-                                            <span class="social-info">0
-                                                <i class="pe-7s-like2"></i>
-                                            </span>
-                                        </span>
+                                <span class="social-wrap">
+                                    <span class="social-info">0
+                                        <i class="pe-7s-chat"></i>
                                     </span>
+                                    <span class="social-info">0
+                                        <i class="pe-7s-like2"></i>
+                                    </span>
+                                </span>
+                            </span>
                         </a>
                     </div>
                     <div class="rows-space-0">
-                        <a target="_blank" href="#" class="item" tabindex="0">
+                        <a target="_blank" href="https://www.instagram.com/?hl=id" class="item" tabindex="0">
                             <img class="img-responsive lazy" src="{{asset('images/poto 1.3.jpg')}}" alt="">
                             <span class="instagram-info">
-                                         <span class="social-wrap">
-                                            <span class="social-info">1
-                                                <i class="pe-7s-chat"></i>
-                                            </span>
-                                            <span class="social-info">0
-                                                <i class="pe-7s-like2"></i>
-                                            </span>
-                                        </span>
+                                <span class="social-wrap">
+                                    <span class="social-info">0
+                                        <i class="pe-7s-chat"></i>
                                     </span>
+                                    <span class="social-info">0
+                                        <i class="pe-7s-like2"></i>
+                                    </span>
+                                </span>
+                            </span>
                         </a>
                     </div>
                     <div class="rows-space-0">
-                        <a target="_blank" href="#" class="item" tabindex="0">
+                        <a target="_blank" href="https://www.instagram.com/?hl=id" class="item" tabindex="0">
                             <img class="img-responsive lazy" src="{{asset('images/poto 1.4.jpg')}}" alt="">
                             <span class="instagram-info">
-                                         <span class="social-wrap">
-                                            <span class="social-info">1
-                                                <i class="pe-7s-chat"></i>
-                                            </span>
-                                            <span class="social-info">0
-                                                <i class="pe-7s-like2"></i>
-                                            </span>
-                                        </span>
+                                <span class="social-wrap">
+                                    <span class="social-info">0
+                                        <i class="pe-7s-chat"></i>
                                     </span>
+                                    <span class="social-info">0
+                                        <i class="pe-7s-like2"></i>
+                                    </span>
+                                </span>
+                            </span>
                         </a>
                     </div>
                     <div class="rows-space-0">
-                        <a target="_blank" href="#" class="item" tabindex="0">
+                        <a target="_blank" href="https://www.instagram.com/?hl=id" class="item" tabindex="0">
                             <img class="img-responsive lazy" src="{{asset('images/poto 1.5.jpg')}}" alt="">
                             <span class="instagram-info">
-                                         <span class="social-wrap">
-                                            <span class="social-info">1
-                                                <i class="pe-7s-chat"></i>
-                                            </span>
-                                            <span class="social-info">0
-                                                <i class="pe-7s-like2"></i>
-                                            </span>
-                                        </span>
+                                <span class="social-wrap">
+                                    <span class="social-info">0
+                                        <i class="pe-7s-chat"></i>
                                     </span>
+                                    <span class="social-info">0
+                                        <i class="pe-7s-like2"></i>
+                                    </span>
+                                </span>
+                            </span>
                         </a>
                     </div>
                     <div class="rows-space-0">
-                        <a target="_blank" href="#" class="item" tabindex="0">
+                        <a target="_blank" href="https://www.instagram.com/?hl=id" class="item" tabindex="0">
                             <img class="img-responsive lazy" src="{{asset('images/poto 1.6.jpg')}}" alt="">
                             <span class="instagram-info">
-                                         <span class="social-wrap">
-                                            <span class="social-info">1
-                                                <i class="pe-7s-chat"></i>
-                                            </span>
-                                            <span class="social-info">0
-                                                <i class="pe-7s-like2"></i>
-                                            </span>
-                                        </span>
+                                <span class="social-wrap">
+                                    <span class="social-info">0
+                                        <i class="pe-7s-chat"></i>
                                     </span>
+                                    <span class="social-info">0
+                                        <i class="pe-7s-like2"></i>
+                                    </span>
+                                </span>
+                            </span>
                         </a>
                     </div>
                     <div class="rows-space-0">
-                        <a target="_blank" href="#" class="item" tabindex="0">
+                        <a target="_blank" href="https://www.instagram.com/?hl=id" class="item" tabindex="0">
                             <img class="img-responsive lazy" src="{{asset('images/poto 1.7.jpg')}}" alt="">
                             <span class="instagram-info">
-                                         <span class="social-wrap">
-                                            <span class="social-info">1
-                                                <i class="pe-7s-chat"></i>
-                                            </span>
-                                            <span class="social-info">0
-                                                <i class="pe-7s-like2"></i>
-                                            </span>
-                                        </span>
+                                <span class="social-wrap">
+                                    <span class="social-info">0
+                                        <i class="pe-7s-chat"></i>
                                     </span>
+                                    <span class="social-info">0
+                                        <i class="pe-7s-like2"></i>
+                                    </span>
+                                </span>
+                            </span>
                         </a>
                     </div>
                     {{-- <div class="rows-space-0">

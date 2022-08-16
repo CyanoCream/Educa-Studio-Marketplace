@@ -53,14 +53,26 @@
             </div>
         </div>
     </div>
-    <div class="card p-5 m-5" style="background-color: gray;border-radius: 20px;">
-        @include('top_up.bpjs_kesehatan')
-        @include('top_up.bpjs_ketenagakerjaan')
-        @include('top_up.listrik_pascabayar')
-        @include('top_up.paket_data')
-        @include('top_up.pulsa')
-        @include('top_up.token_listrik')
-        @include('top_up.pajak_tanah')
+    <div class="card p-5 m-5" style="border-radius: 20px; background: rgb(110,73,158);
+    background: linear-gradient(180deg, rgba(110,73,158,1) 0%, rgba(148,35,150,1) 53%, rgba(198,75,75,1) 100%);">
+        <div class="card m-2 text-center" style="border-radius: 20px">
+            <h2>Top Up</h2>
+        </div>
+        <div class="card p-5 m-5" style="background-color: gray;border-radius: 20px;">
+            <h3 class=" text-center">Isi Ulang</h3>
+            <hr>
+            @include('top_up.paket_data')
+            @include('top_up.pulsa')
+            @include('top_up.token_listrik')
+        </div>
+        <div class="card p-5 m-5" style="background-color: gray;border-radius: 20px;">
+            <h3 class=" text-center">Pembayaran</h3>
+            <hr>
+            @include('top_up.bpjs_kesehatan')
+            @include('top_up.bpjs_ketenagakerjaan')
+            @include('top_up.listrik_pascabayar')
+            @include('top_up.pajak_tanah')
+        </div>
     </div>
     <div class="site-main  main-container no-sidebar">
         <div class="section-006 section-001">
@@ -124,7 +136,7 @@
                     <h3 class="title">
                         Follow Us <span></span></h3>
                     <div class="subtitle">
-                        @kodorystore
+                        @childstore
                     </div>
                 </div>
             </div>

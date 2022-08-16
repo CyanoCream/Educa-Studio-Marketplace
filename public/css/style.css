@@ -1586,7 +1586,8 @@ textarea {
 }
 select {
     padding: 0 33px 0 15px;
-    background: url(../images/select-arrow.png) center right no-repeat;
+    background: url(../images/select-arrow.png) center right 12px no-repeat;
+    background-size: 12px;
 }
 button, input[type="submit"], input[type="button"], .dreaming-btn {
     font-family: 'Baloo 2', sans-serif;
