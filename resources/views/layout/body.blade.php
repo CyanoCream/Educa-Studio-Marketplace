@@ -14,8 +14,7 @@
                             <div class="slide-inner">
                                 <h2> Get Ready</h2>
                                 <h1>Panduan<br>Kegiatan Anak</h1>
-                                {{-- <h5>Price from:<strong>$100.00</strong></h5> --}}
-                                <a href="{{route('katalog.index')}}">Shop now</a>
+                                <a href="/api/katalog">Shop now</a>
                             </div>
                         </div>
                     </div>
@@ -27,8 +26,7 @@
                             <div class="slide-inner">
                                 <h2>Get Ready</h2>
                                 <h1>Rekomendasi<br>Aktivitas</h1>
-                                {{-- <h5>Price from:<strong>$100.00</strong></h5> --}}
-                                <a href="{{route('katalog.index')}}">Shop now</a>
+                                <a href="/api/katalog">Shop now</a>
                             </div>
                         </div>
                     </div>
@@ -40,8 +38,7 @@
                             <div class="slide-inner">
                                 <h2>Get Ready</h2>
                                 <h1>Jurnal<br>Anak</h1>
-                                {{-- <h5>Price from:<strong>$100.00</strong></h5> --}}
-                                <a href="{{route('katalog.index')}}">Shop now</a>
+                                <a href="/api/katalog">Shop now</a>
                             </div>
                         </div>
                     </div>
@@ -63,7 +60,7 @@
                                 <div class="banner-content">
                                     <div class="title-wrap">
                                         <h6 class="title">
-                                            <a target=" _blank" href="#">New Program</a>
+                                            <a target="_self" href="#1547652538969-4e9e849f-123a-5d80aefaa70e2">New Program</a>
                                         </h6>
                                     </div>
                                 </div>
@@ -82,7 +79,7 @@
                                 <div class="banner-content">
                                     <div class="title-wrap">
                                         <h6 class="title">
-                                            <a target=" _blank" href="#">Kursus</a>
+                                            <a target="_self" href="/api/premium">Kusus</a>
                                         </h6>
                                     </div>
                                 </div>
@@ -100,7 +97,7 @@
                                         <div class="banner-content">
                                             <div class="title-wrap">
                                                 <h6 class="title">
-                                                    <a target=" _blank" href="#">Aktivitas</a>
+                                                    <a target="_self" href="/api/katalog">Aktivitas</a>
                                                 </h6>
                                             </div>
                                             <div class="button-wrap">
@@ -120,7 +117,7 @@
                                         <div class="banner-content">
                                             <div class="title-wrap">
                                                 <h6 class="title">
-                                                    <a target=" _blank" href="#">Aktivitas</a>
+                                                    <a target="_self" href="/api/katalog">Aktivitas</a>
                                                 </h6>
                                             </div>
                                             <div class="button-wrap">
@@ -168,11 +165,10 @@
                                     <div class="product-inner tooltip-left" style="background: rgb(73,81,158);
                                     background: linear-gradient(180deg, rgba(73,81,158,1) 0%, rgba(148,35,150,1) 53%, rgba(198,75,175,1) 100%);">
                                         <div class="product-thumb">
-                                            <a class="thumb-link"
-                                               href="#">
+                                            <a class="thumb-link" href="/api/pesanan">
                                                 <img class="img-responsive"
-                                                     src="{{asset('images/np1.jpeg')}}"
-                                                     alt="" width="270" height="350">
+                                                    src="{{asset('images/np1.jpeg')}}"
+                                                    alt="img" width="270" height="350">
                                             </a>
                                             <div class="flash">
                                                 <span class="onnew"><span class="text">New</span></span></div>
@@ -187,26 +183,21 @@
                                                 </div>
                                                 <a href="#" class="button yith-wcqv-button">Quick View</a>
                                                 <div class="add-to-cart">
-                                                    <a href="#"
-                                                       class="button product_type_simple add_to_cart_button ajax_add_to_cart">Add to cart</a>
+                                                    <a href="#" class="button product_type_simple add_to_cart_button ajax_add_to_cart">Add to cart</a>
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="product-info equal-elem">
                                             <h3 class="product-name product_title">
-                                                <a href="#">Kindergarten English Course Power</a>
+                                                <a href="/api/pesanan">Kindergarten English Course Power</a>
                                             </h3>
                                             <p class="m-1"><i class="fa fa-calendar-o" aria-hidden="true"></i> 8x Pertemuan</p>
                                             <p class="m-1"><i class="fa fa-clock-o" aria-hidden="true"></i> 75 Menit</p>
                                             <p class="m-1"><i class="fa fa-map-marker" aria-hidden="true"></i> Online</p>
-                                            {{-- <div class="rating-wapper nostar">
-                                                <div class="star-rating">
-                                                    <span style="width:0%">Rated<strong class="rating">0</strong> out of 5</span>
-                                                </div>
-                                                <span class="review">(0)</span>
-                                            </div> --}}
-                                            <span class="price"><span class="kodory-Price-amount amount">
-                                                <span class="kodory-Price-currencySymbol">$</span>109.00</span>
+                                            <span class="price">
+                                                <span class="kodory-Price-amount amount">
+                                                <span class="kodory-Price-currencySymbol">$</span>100.00
+                                                </span>
                                             </span>
                                         </div>
                                     </div>
@@ -215,11 +206,10 @@
                                     <div class="product-inner tooltip-left" style="background: rgb(73,81,158);
                                     background: linear-gradient(180deg, rgba(73,81,158,1) 0%, rgba(148,35,150,1) 53%, rgba(198,75,175,1) 100%);">
                                         <div class="product-thumb">
-                                            <a class="thumb-link"
-                                               href="#">
+                                            <a class="thumb-link" href="/api/pesanan">
                                                 <img class="img-responsive"
                                                      src="{{asset('images/np2.jpeg')}}"
-                                                     alt="" width="270" height="350">
+                                                     alt="img" width="270" height="350">
                                             </a>
                                             <div class="flash">
                                                 <span class="onnew"><span class="text">New</span></span></div>
@@ -234,24 +224,22 @@
                                                 </div>
                                                 <a href="#" class="button yith-wcqv-button">Quick View</a>
                                                 <div class="add-to-cart">
-                                                    <a href="#"
-                                                       class="button product_type_simple add_to_cart_button ajax_add_to_cart">Add to cart</a>
+                                                    <a href="#" class="button product_type_simple add_to_cart_button ajax_add_to_cart">Add to cart</a>
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="product-info equal-elem">
                                             <h3 class="product-name product_title">
-                                                <a href="#">Private English Course Les Bahasa Inggris Privat</a>
+                                                <a href="/api/pesanan">Private English Course Les Bahasa Inggris Privat</a>
                                             </h3>
                                             <p class="m-1"><i class="fa fa-calendar-o" aria-hidden="true"></i> 8x Pertemuan</p>
                                             <p class="m-1"><i class="fa fa-clock-o" aria-hidden="true"></i> 75 Menit</p>
                                             <p class="m-1"><i class="fa fa-map-marker" aria-hidden="true"></i> Online</p>
-                                            {{-- <div class="rating-wapper nostar">
-                                                <div class="star-rating"><span style="width:0%">Rated <strong
-                                                        class="rating">0</strong> out of 5</span></div>
-                                                <span class="review">(0)</span></div> --}}
-                                            <span class="price"><span class="kodory-Price-amount amount"><span
-                                                    class="kodory-Price-currencySymbol">$</span>79.00</span></span>
+                                            <span class="price">
+                                                <span class="kodory-Price-amount amount">
+                                                <span class="kodory-Price-currencySymbol">$</span>79.00
+                                                </span>
+                                            </span>
                                         </div>
                                     </div>
                                 </div>
@@ -259,10 +247,10 @@
                                     <div class="product-inner tooltip-left" style="background: rgb(73,81,158);
                                     background: linear-gradient(180deg, rgba(73,81,158,1) 0%, rgba(148,35,150,1) 53%, rgba(198,75,175,1) 100%);">
                                         <div class="product-thumb">
-                                            <a class="thumb-link" href="#">
+                                            <a class="thumb-link" href="/api/pesanan">
                                                 <img class="img-responsive"
                                                      src="{{asset('images/np3.jpg')}}"
-                                                     alt="Cute Girl Shirt" width="270" height="350">
+                                                     alt="img" width="270" height="350">
                                             </a>
                                             <div class="flash">
                                                 <span class="onnew"><span class="text">New</span></span></div>
@@ -277,24 +265,22 @@
                                                 </div>
                                                 <a href="#" class="button yith-wcqv-button">Quick View</a>
                                                 <div class="add-to-cart">
-                                                    <a href="#"
-                                                       class="button product_type_simple add_to_cart_button ajax_add_to_cart">Add to cart</a>
+                                                    <a href="#" class="button product_type_simple add_to_cart_button ajax_add_to_cart">Add to cart</a>
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="product-info equal-elem">
                                             <h3 class="product-name product_title">
-                                                <a href="#">Praxis Fun English Online Course</a>
+                                                <a href="/api/pesanan">Praxis Fun English Online Course</a>
                                             </h3>
                                             <p class="m-1"><i class="fa fa-calendar-o" aria-hidden="true"></i> 8x Pertemuan Sebulan</p>
                                             <p class="m-1"><i class="fa fa-clock-o" aria-hidden="true"></i> 60 Menit</p>
                                             <p class="m-1"><i class="fa fa-map-marker" aria-hidden="true"></i> Online</p>
-                                            {{-- <div class="rating-wapper nostar">
-                                                <div class="star-rating"><span style="width:0%">Rated <strong
-                                                        class="rating">0</strong> out of 5</span></div>
-                                                <span class="review">(0)</span></div> --}}
-                                            <span class="price"><span class="kodory-Price-amount amount"><span
-                                                    class="kodory-Price-currencySymbol">$</span>120.00</span></span>
+                                            <span class="price">
+                                                <span class="kodory-Price-amount amount">
+                                                <span class="kodory-Price-currencySymbol">$</span>120.00
+                                                </span>
+                                            </span>
                                         </div>
                                     </div>
                                 </div>
@@ -302,14 +288,12 @@
                                     <div class="product-inner tooltip-left" style="background: rgb(73,81,158);
                                     background: linear-gradient(180deg, rgba(73,81,158,1) 0%, rgba(148,35,150,1) 53%, rgba(198,75,175,1) 100%);">
                                         <div class="product-thumb">
-                                            <a class="thumb-link"
-                                               href="#">
+                                            <a class="thumb-link" href="/api/pesanan">
                                                 <img class="img-responsive"
                                                     src="{{asset('images/np4.jpeg')}}"
-                                                     alt="" width="270" height="350">
+                                                     alt="img" width="270" height="350">
                                             </a>
                                             <div class="flash">
-                                                {{-- <span class="onsale"><span class="number">-21%</span></span> --}}
                                                 <span class="onnew"><span class="text">New</span></span></div>
                                             <div class="group-button">
                                                 <div class="yith-wcwl-add-to-wishlist">
@@ -329,19 +313,23 @@
                                         </div>
                                         <div class="product-info equal-elem">
                                             <h3 class="product-name product_title">
-                                                <a href="#">English for SchoolAge (Offline Kota Madiun)</a>
+                                                <a href="/api/pesanan">English for SchoolAge (Offline Kota Madiun)</a>
                                             </h3>
                                             <p class="m-1"><i class="fa fa-calendar-o" aria-hidden="true"></i> 8x Pertemuan</p>
                                             <p class="m-1"><i class="fa fa-clock-o" aria-hidden="true"></i> 75 Menit</p>
                                             <p class="m-1"><i class="fa fa-map-marker" aria-hidden="true"></i> Online</p>
-                                            {{-- <div class="rating-wapper nostar">
-                                                <div class="star-rating"><span style="width:0%">Rated <strong
-                                                        class="rating">0</strong> out of 5</span></div>
-                                                <span class="review">(0)</span></div> --}}
-                                            <span class="price"><del><span class="kodory-Price-amount amount"><span
-                                                    class="kodory-Price-currencySymbol">$</span>125.00</span></del> <ins><span
-                                                    class="kodory-Price-amount amount"><span
-                                                    class="kodory-Price-currencySymbol">$</span>99.00</span></ins></span>
+                                            <span class="price">
+                                                <del>
+                                                    <span class="kodory-Price-amount amount">
+                                                        <span class="kodory-Price-currencySymbol">$</span>125.00
+                                                    </span>
+                                                </del> 
+                                                <ins>
+                                                    <span class="kodory-Price-amount amount">
+                                                    <span class="kodory-Price-currencySymbol">$</span>99.00
+                                                    </span>
+                                                </ins>
+                                            </span>
                                         </div>
                                     </div>
                                 </div>
@@ -349,11 +337,10 @@
                                     <div class="product-inner tooltip-left" style="background: rgb(73,81,158);
                                     background: linear-gradient(180deg, rgba(73,81,158,1) 0%, rgba(148,35,150,1) 53%, rgba(198,75,175,1) 100%);">
                                         <div class="product-thumb">
-                                            <a class="thumb-link"
-                                               href="#">
+                                            <a class="thumb-link" href="/api/pesanan">
                                                 <img class="img-responsive"
                                                     src="{{asset('images/np5.jpeg')}}"
-                                                     alt="" width="270" height="350">
+                                                    alt="img" width="270" height="350">
                                             </a>
                                             <div class="flash">
                                                 <span class="onnew"><span class="text">New</span></span></div>
@@ -368,24 +355,22 @@
                                                 </div>
                                                 <a href="#" class="button yith-wcqv-button">Quick View</a>
                                                 <div class="add-to-cart">
-                                                    <a href="#"
-                                                       class="button product_type_simple add_to_cart_button ajax_add_to_cart">Add to cart</a>
+                                                    <a href="#" class="button product_type_simple add_to_cart_button ajax_add_to_cart">Add to cart</a>
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="product-info equal-elem">
                                             <h3 class="product-name product_title">
-                                                <a href="">Class English Preschool & TK</a>
+                                                <a href="/api/pesanan">Class English Preschool & TK</a>
                                             </h3>
                                             <p class="m-1"><i class="fa fa-calendar-o" aria-hidden="true"></i> 4-8x Pertemuan</p>
                                             <p class="m-1"><i class="fa fa-clock-o" aria-hidden="true"></i> 75 Menit</p>
                                             <p class="m-1"><i class="fa fa-map-marker" aria-hidden="true"></i> Online</p>
-                                            {{-- <div class="rating-wapper nostar">
-                                                <div class="star-rating"><span style="width:0%">Rated <strong
-                                                        class="rating">0</strong> out of 5</span></div>
-                                                <span class="review">(0)</span></div> --}}
-                                            <span class="price"><span class="kodory-Price-amount amount"><span
-                                                    class="kodory-Price-currencySymbol">$</span>134.00</span></span>
+                                            <span class="price">
+                                                <span class="kodory-Price-amount amount">
+                                                <span class="kodory-Price-currencySymbol">$</span>134.00
+                                                </span>
+                                            </span>
                                         </div>
                                     </div>
                                 </div>
@@ -393,11 +378,10 @@
                                     <div class="product-inner tooltip-left" style="background: rgb(73,81,158);
                                     background: linear-gradient(180deg, rgba(73,81,158,1) 0%, rgba(148,35,150,1) 53%, rgba(198,75,175,1) 100%);">
                                         <div class="product-thumb">
-                                            <a class="thumb-link"
-                                               href="single-product.html">
+                                            <a class="thumb-link" href="/api/pesanan">
                                                 <img class="img-responsive"
                                                     src="{{asset('images/np6.jpeg')}}"
-                                                     alt="" width="270" height="350">
+                                                     alt="img" width="270" height="350">
                                             </a>
                                             <div class="flash">
                                                 <span class="onnew"><span class="text">New</span></span></div>
@@ -412,26 +396,25 @@
                                                 </div>
                                                 <a href="#" class="button yith-wcqv-button">Quick View</a>
                                                 <div class="add-to-cart">
-                                                    <a href="#"
-                                                       class="button product_type_simple add_to_cart_button ajax_add_to_cart">Add to cart</a>
+                                                    <a href="#" class="button product_type_simple add_to_cart_button ajax_add_to_cart">Add to cart</a>
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="product-info equal-elem">
                                             <h3 class="product-name product_title">
-                                                <a href="">Trial Class Sakamoto Class</a>
+                                                <a href="/api/pesanan">Trial Class Sakamoto Class</a>
                                             </h3>
                                             <p class="m-1"><i class="fa fa-calendar-o" aria-hidden="true"></i> 8x Pertemuan</p>
                                             <p class="m-1"><i class="fa fa-clock-o" aria-hidden="true"></i> 30 - 60 Menit</p>
                                             <p class="m-1"><i class="fa fa-map-marker" aria-hidden="true"></i> Online</p>
-                                            {{-- <div class="rating-wapper nostar">
-                                                <div class="star-rating"><span style="width:0%">Rated <strong
-                                                        class="rating">0</strong> out of 5</span></div>
-                                                <span class="review">(0)</span></div> --}}
-                                            <span class="price"><span class="kodory-Price-amount amount"><span
-                                                    class="kodory-Price-currencySymbol">$</span>79.00</span> – <span
-                                                    class="kodory-Price-amount amount"><span
-                                                    class="kodory-Price-currencySymbol">$</span>139.00</span></span>
+                                            <span class="price">
+                                                <span class="kodory-Price-amount amount">
+                                                    <span class="kodory-Price-currencySymbol">$</span>79.00
+                                                </span>
+                                                 – 
+                                                <span class="kodory-Price-amount amount">
+                                                    <span class="kodory-Price-currencySymbol">$</span>139.00</span>
+                                                </span>
                                         </div>
                                     </div>
                                 </div>
@@ -439,14 +422,12 @@
                                     <div class="product-inner tooltip-left" style="background: rgb(73,81,158);
                                     background: linear-gradient(180deg, rgba(73,81,158,1) 0%, rgba(148,35,150,1) 53%, rgba(198,75,175,1) 100%);">
                                         <div class="product-thumb">
-                                            <a class="thumb-link"
-                                               href="#">
+                                            <a class="thumb-link" href="/api/pesanan">
                                                 <img class="img-responsive"
                                                     src="{{asset('images/np7.jpeg')}}"
-                                                     alt="" width="270" height="350">
+                                                    alt="img" width="270" height="350">
                                             </a>
                                             <div class="flash">
-                                                {{-- <span class="onsale"><span class="number">-18%</span></span> --}}
                                                 <span class="onnew"><span class="text">New</span></span></div>
                                             <div class="group-button">
                                                 <div class="yith-wcwl-add-to-wishlist">
@@ -459,26 +440,29 @@
                                                 </div>
                                                 <a href="#" class="button yith-wcqv-button">Quick View</a>
                                                 <div class="add-to-cart">
-                                                    <a href="#"
-                                                       class="button product_type_simple add_to_cart_button ajax_add_to_cart">Add to cart</a>
+                                                    <a href="#" class="button product_type_simple add_to_cart_button ajax_add_to_cart">Add to cart</a>
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="product-info equal-elem">
                                             <h3 class="product-name product_title">
-                                                <a href="">Eye Level Calistung</a>
+                                                <a href="/api/pesanan">Eye Level Calistung</a>
                                             </h3>
                                             <p class="m-1"><i class="fa fa-calendar-o" aria-hidden="true"></i> 2x Seminggu</p>
                                             <p class="m-1"><i class="fa fa-clock-o" aria-hidden="true"></i> 60 Menit</p>
                                             <p class="m-1"><i class="fa fa-map-marker" aria-hidden="true"></i> Online</p>
-                                            {{-- <div class="rating-wapper nostar">
-                                                <div class="star-rating"><span style="width:0%">Rated <strong
-                                                        class="rating">0</strong> out of 5</span></div>
-                                                <span class="review">(0)</span></div> --}}
-                                            <span class="price"><del><span class="kodory-Price-amount amount"><span
-                                                    class="kodory-Price-currencySymbol">$</span>109.00</span></del> <ins><span
-                                                    class="kodory-Price-amount amount"><span
-                                                    class="kodory-Price-currencySymbol">$</span>89.00</span></ins></span>
+                                            <span class="price">
+                                                <del>
+                                                    <span class="kodory-Price-amount amount">
+                                                        <span class="kodory-Price-currencySymbol">$</span>109.00
+                                                    </span>
+                                                </del>
+                                                <ins>
+                                                    <span class="kodory-Price-amount amount">
+                                                        <span class="kodory-Price-currencySymbol">$</span>89.00
+                                                    </span>
+                                                </ins>
+                                            </span>
                                         </div>
                                     </div>
                                 </div>
@@ -486,65 +470,14 @@
                                     <div class="product-inner tooltip-left" style="background: rgb(73,81,158);
                                     background: linear-gradient(180deg, rgba(73,81,158,1) 0%, rgba(148,35,150,1) 53%, rgba(198,75,175,1) 100%);">
                                         <div class="product-thumb">
-                                            <a class="thumb-link"
-                                               href="#">
+                                            <a class="thumb-link" href="/api/pesanan">
                                                 <img class="img-responsive"
                                                 src="{{asset('images/np8.jpeg')}}"
-                                                     alt="Glasses" width="270" height="350">
+                                                alt="Glasses" width="270" height="350">
                                             </a>
                                             <div class="flash">
                                                 <span class="onnew"><span class="text">New</span></span></div>
                                             <form class="variations_form cart">
-                                                {{-- <table class="variations">
-                                                    <tbody>
-                                                    <tr>
-                                                        <td class="value">
-                                                            <select title="box_style" data-attributetype="box_style"
-                                                                    data-id="pa_color"
-                                                                    class="attribute-select " name="attribute_pa_color"
-                                                                    data-attribute_name="attribute_pa_color"
-                                                                    data-show_option_none="yes">
-                                                                <option data-type="" data-pa_color="" value="">Choose an
-                                                                    option
-                                                                </option>
-                                                                <option data-width="30" data-height="30"
-                                                                        data-type="color" data-pa_color="#000000"
-                                                                        value="black" class="attached enabled">Black
-                                                                </option>
-                                                                <option data-width="30" data-height="30"
-                                                                        data-type="color" data-pa_color="#b6b8ba"
-                                                                        value="red" class="attached enabled">Red
-                                                                </option>
-                                                            </select>
-                                                            <div class="data-val attribute-pa_color"
-                                                                 data-attributetype="box_style">
-                                                                <label>
-                                                                    <input type="radio" name="color">
-                                                                    <span class="change-value color"
-                                                                          style="background: #3155e2;"
-                                                                          data-value="blue">
-                                                            </span>
-                                                                </label>
-                                                                <label>
-                                                                    <input type="radio" name="color">
-                                                                    <span class="change-value color"
-                                                                          style="background: #52b745;"
-                                                                          data-value="green">
-                                                            </span>
-                                                                </label>
-                                                                <label>
-                                                                    <input type="radio" name="color">
-                                                                    <span class="change-value color"
-                                                                          style="background: #ffe59e;"
-                                                                          data-value="pink">
-                                                            </span>
-                                                                </label>
-                                                            </div>
-                                                            <a class="reset_variations" href="#"
-                                                               style="visibility: hidden;">Clear</a></td>
-                                                    </tr>
-                                                    </tbody>
-                                                </table> --}}
                                             </form>
                                             <div class="group-button">
                                                 <div class="yith-wcwl-add-to-wishlist">
@@ -557,26 +490,26 @@
                                                 </div>
                                                 <a href="#" class="button yith-wcqv-button">Quick View</a>
                                                 <div class="add-to-cart">
-                                                    <a href="#"
-                                                       class="button product_type_simple add_to_cart_button ajax_add_to_cart">Select options</a>
+                                                    <a href="#" class="button product_type_simple add_to_cart_button ajax_add_to_cart">Select options</a>
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="product-info equal-elem">
                                             <h3 class="product-name product_title">
-                                                <a href="">Matematika Online</a>
+                                                <a href="/api/pesanan">Matematika Online</a>
                                             </h3>
                                             <p class="m-1"><i class="fa fa-calendar-o" aria-hidden="true"></i> Tentukan Tanggal</p>
                                             <p class="m-1"><i class="fa fa-clock-o" aria-hidden="true"></i> 45 Menit</p>
                                             <p class="m-1"><i class="fa fa-map-marker" aria-hidden="true"></i> Online</p>
-                                            {{-- <div class="rating-wapper nostar">
-                                                <div class="star-rating"><span style="width:0%">Rated <strong
-                                                        class="rating">0</strong> out of 5</span></div>
-                                                <span class="review">(0)</span></div> --}}
-                                            <span class="price"><span class="kodory-Price-amount amount"><span
-                                                    class="kodory-Price-currencySymbol">$</span>56.00</span> – <span
-                                                    class="kodory-Price-amount amount"><span
-                                                    class="kodory-Price-currencySymbol">$</span>60.00</span></span>
+                                            <span class="price">
+                                                <span class="kodory-Price-amount amount">
+                                                    <span class="kodory-Price-currencySymbol">$</span>56.00
+                                                </span>
+                                                 – 
+                                                <span class="kodory-Price-amount amount">
+                                                    <span class="kodory-Price-currencySymbol">$</span>60.00
+                                                </span>
+                                            </span>
                                         </div>
                                     </div>
                                 </div>
@@ -591,11 +524,10 @@
                                     <div class="product-inner tooltip-left" style="background: rgb(73,81,158);
                                     background: linear-gradient(180deg, rgba(73,81,158,1) 0%, rgba(148,35,150,1) 53%, rgba(198,75,175,1) 100%);">
                                         <div class="product-thumb">
-                                            <a class="thumb-link"
-                                               href="single-product.html">
+                                            <a class="thumb-link" href="/api/pesanan">
                                                 <img class="img-responsive"
-                                                     src="{{asset('images/mp1.jpg')}}"
-                                                     alt="" width="270" height="350">
+                                                    src="{{asset('images/mp1.jpg')}}"
+                                                    alt="" width="270" height="350">
                                             </a>
                                             <div class="flash">
                                                 <span class="onnew"><span class="text">New</span></span></div>
@@ -610,24 +542,22 @@
                                                 </div>
                                                 <a href="#" class="button yith-wcqv-button">Quick View</a>
                                                 <div class="add-to-cart">
-                                                    <a href="#"
-                                                       class="button product_type_simple add_to_cart_button ajax_add_to_cart">Buy it on Amazon</a>
+                                                    <a href="#" class="button product_type_simple add_to_cart_button ajax_add_to_cart">Buy it on Amazon</a>
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="product-info equal-elem">
                                             <h3 class="product-name product_title">
-                                                <a href="">FREE 1 Month Trial - English - P3</a>
+                                                <a href="/api/pesanan">FREE 1 Month Trial - English - P3</a>
                                             </h3>
                                             <p class="m-1"><i class="fa fa-calendar-o" aria-hidden="true"></i> 2x Seminggu </p>
                                             <p class="m-1"><i class="fa fa-clock-o" aria-hidden="true"></i> 60 Menit</p>
                                             <p class="m-1"><i class="fa fa-map-marker" aria-hidden="true"></i> Online</p>
-                                            {{-- <div class="rating-wapper ">
-                                                <div class="star-rating"><span style="width:100%">Rated <strong
-                                                        class="rating">5.00</strong> out of 5</span></div>
-                                                <span class="review">(1)</span></div> --}}
-                                            <span class="price"><span class="kodory-Price-amount amount"><span
-                                                    class="kodory-Price-currencySymbol">$</span>207.00</span></span>
+                                            <span class="price">
+                                                <span class="kodory-Price-amount amount">
+                                                <span class="kodory-Price-currencySymbol">$</span>207.00
+                                                </span>
+                                            </span>
                                         </div>
                                     </div>
                                 </div>
@@ -635,14 +565,12 @@
                                     <div class="product-inner tooltip-left" style="background: rgb(73,81,158);
                                     background: linear-gradient(180deg, rgba(73,81,158,1) 0%, rgba(148,35,150,1) 53%, rgba(198,75,175,1) 100%);">
                                         <div class="product-thumb">
-                                            <a class="thumb-link"
-                                               href="single-product.html">
+                                            <a class="thumb-link" href="/api/pesanan">
                                                 <img class="img-responsive"
-                                                     src="{{asset('images/mp2.jpeg')}}"
-                                                     alt="" width="270" height="350">
+                                                    src="{{asset('images/mp2.jpeg')}}"
+                                                    alt="" width="270" height="350">
                                             </a>
                                             <div class="flash">
-                                                {{-- <span class="onsale"><span class="number">-14%</span></span> --}}
                                                 <span class="onnew"><span class="text">New</span></span></div>
                                             <div class="group-button">
                                                 <div class="yith-wcwl-add-to-wishlist">
@@ -655,26 +583,29 @@
                                                 </div>
                                                 <a href="#" class="button yith-wcqv-button">Quick View</a>
                                                 <div class="add-to-cart">
-                                                    <a href="#"
-                                                       class="button product_type_simple add_to_cart_button ajax_add_to_cart">Add to cart</a>
+                                                    <a href="#" class="button product_type_simple add_to_cart_button ajax_add_to_cart">Add to cart</a>
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="product-info equal-elem">
                                             <h3 class="product-name product_title">
-                                                <a href="">Superstar Package for 6 Months</a>
+                                                <a href="/api/pesanan">Superstar Package for 6 Months</a>
                                             </h3>
                                             <p class="m-1"><i class="fa fa-calendar-o" aria-hidden="true"></i> 6 Bulan</p>
                                             <p class="m-1"><i class="fa fa-clock-o" aria-hidden="true"></i> 60 Menit</p>
                                             <p class="m-1"><i class="fa fa-map-marker" aria-hidden="true"></i> Online</p>
-                                            {{-- <div class="rating-wapper ">
-                                                <div class="star-rating"><span style="width:100%">Rated <strong
-                                                        class="rating">5.00</strong> out of 5</span></div>
-                                                <span class="review">(1)</span></div> --}}
-                                            <span class="price"><del><span class="kodory-Price-amount amount"><span
-                                                    class="kodory-Price-currencySymbol">$</span>138.00</span></del> <ins><span
-                                                    class="kodory-Price-amount amount"><span
-                                                    class="kodory-Price-currencySymbol">$</span>119.00</span></ins></span>
+                                            <span class="price">
+                                                <del>
+                                                    <span class="kodory-Price-amount amount">
+                                                        <span class="kodory-Price-currencySymbol">$</span>138.00
+                                                    </span>
+                                                </del>
+                                                <ins>
+                                                    <span class="kodory-Price-amount amount">
+                                                        <span class="kodory-Price-currencySymbol">$</span>119.00
+                                                    </span>
+                                                </ins>
+                                            </span>
                                         </div>
                                     </div>
                                 </div>
@@ -682,14 +613,12 @@
                                     <div class="product-inner tooltip-left" style="background: rgb(73,81,158);
                                     background: linear-gradient(180deg, rgba(73,81,158,1) 0%, rgba(148,35,150,1) 53%, rgba(198,75,175,1) 100%);">
                                         <div class="product-thumb">
-                                            <a class="thumb-link"
-                                               href="#">
+                                            <a class="thumb-link" href="/api/pesanan">
                                                 <img class="img-responsive"
-                                                     src="{{asset('images/mp3.jpg')}}"
-                                                     alt="" width="270" height="350">
+                                                    src="{{asset('images/mp3.jpg')}}"
+                                                    alt="img" width="270" height="350">
                                             </a>
                                             <div class="flash">
-                                                {{-- <span class="onsale"><span class="number">-7%</span></span> --}}
                                                 <span class="onnew"><span class="text">New</span></span></div>
                                             <div class="group-button">
                                                 <div class="yith-wcwl-add-to-wishlist">
@@ -702,26 +631,27 @@
                                                 </div>
                                                 <a href="#" class="button yith-wcqv-button">Quick View</a>
                                                 <div class="add-to-cart">
-                                                    <a href="#"
-                                                       class="button product_type_simple add_to_cart_button ajax_add_to_cart">Add to cart</a>
+                                                    <a href="#" class="button product_type_simple add_to_cart_button ajax_add_to_cart">Add to cart</a>
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="product-info equal-elem">
                                             <h3 class="product-name product_title">
-                                                <a href="">Trial Coding Program for Children</a>
+                                                <a href="/api/pesanan">Trial Coding Program for Children</a>
                                             </h3>
                                             <p class="m-1"><i class="fa fa-calendar-o" aria-hidden="true"></i> 1x Pertemuan</p>
                                             <p class="m-1"><i class="fa fa-clock-o" aria-hidden="true"></i> 60 Menit</p>
                                             <p class="m-1"><i class="fa fa-map-marker" aria-hidden="true"></i> Online</p>
-                                            {{-- <div class="rating-wapper nostar">
-                                                <div class="star-rating"><span style="width:0%">Rated <strong
-                                                        class="rating">0</strong> out of 5</span></div>
-                                                <span class="review">(0)</span></div> --}}
-                                            <span class="price"><del><span class="kodory-Price-amount amount">
-                                                <span class="kodory-Price-currencySymbol">$</span>150.00</span></del> 
+                                            <span class="price">
+                                                <del>
+                                                    <span class="kodory-Price-amount amount">
+                                                    <span class="kodory-Price-currencySymbol">$</span>150.00
+                                                    </span>
+                                                </del> 
                                                 <ins>
-                                                    <span class="kodory-Price-amount amount"><span class="kodory-Price-currencySymbol">$</span>139.00</span>
+                                                    <span class="kodory-Price-amount amount">
+                                                        <span class="kodory-Price-currencySymbol">$</span>139.00
+                                                    </span>
                                                 </ins>
                                             </span>
                                         </div>
@@ -731,65 +661,14 @@
                                     <div class="product-inner tooltip-left" style="background: rgb(73,81,158);
                                     background: linear-gradient(180deg, rgba(73,81,158,1) 0%, rgba(148,35,150,1) 53%, rgba(198,75,175,1) 100%);">
                                         <div class="product-thumb">
-                                            <a class="thumb-link"
-                                               href="single-product.html">
+                                            <a class="thumb-link" href="/api/pesanan">
                                                 <img class="img-responsive"
-                                                     src="{{asset('images/mp4.jpeg')}}"
-                                                     alt="" width="270" height="350">
+                                                    src="{{asset('images/mp4.jpeg')}}"
+                                                    alt="img" width="270" height="350">
                                             </a>
                                             <div class="flash">
                                                 <span class="onnew"><span class="text">New</span></span></div>
                                             <form class="variations_form cart">
-                                                {{-- <table class="variations">
-                                                    <tbody>
-                                                    <tr>
-                                                        <td class="value">
-                                                            <select title="box_style" data-attributetype="box_style"
-                                                                    data-id="pa_color"
-                                                                    class="attribute-select " name="attribute_pa_color"
-                                                                    data-attribute_name="attribute_pa_color"
-                                                                    data-show_option_none="yes">
-                                                                <option data-type="" data-pa_color="" value="">Choose an
-                                                                    option
-                                                                </option>
-                                                                <option data-width="30" data-height="30"
-                                                                        data-type="color" data-pa_color="#000000"
-                                                                        value="black" class="attached enabled">Black
-                                                                </option>
-                                                                <option data-width="30" data-height="30"
-                                                                        data-type="color" data-pa_color="#b6b8ba"
-                                                                        value="red" class="attached enabled">Red
-                                                                </option>
-                                                            </select>
-                                                            <div class="data-val attribute-pa_color"
-                                                                 data-attributetype="box_style">
-                                                                <label>
-                                                                    <input type="radio" name="color">
-                                                                    <span class="change-value color"
-                                                                          style="background: #3155e2;"
-                                                                          data-value="blue">
-                                                            </span>
-                                                                </label>
-                                                                <label>
-                                                                    <input type="radio" name="color">
-                                                                    <span class="change-value color"
-                                                                          style="background: #52b745;"
-                                                                          data-value="green">
-                                                            </span>
-                                                                </label>
-                                                                <label>
-                                                                    <input type="radio" name="color">
-                                                                    <span class="change-value color"
-                                                                          style="background: #ffe59e;"
-                                                                          data-value="pink">
-                                                            </span>
-                                                                </label>
-                                                            </div>
-                                                            <a class="reset_variations" href="#"
-                                                               style="visibility: hidden;">Clear</a></td>
-                                                    </tr>
-                                                    </tbody>
-                                                </table> --}}
                                             </form>
                                             <div class="group-button">
                                                 <div class="yith-wcwl-add-to-wishlist">
@@ -802,26 +681,26 @@
                                                 </div>
                                                 <a href="#" class="button yith-wcqv-button">Quick View</a>
                                                 <div class="add-to-cart">
-                                                    <a href="#"
-                                                       class="button product_type_simple add_to_cart_button ajax_add_to_cart">Select options</a>
+                                                    <a href="#" class="button product_type_simple add_to_cart_button ajax_add_to_cart">Select options</a>
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="product-info equal-elem">
                                             <h3 class="product-name product_title">
-                                                <a href="">Math Lessons for Elementary School</a>
+                                                <a href="/api/pesanan">Math Lessons for Elementary School</a>
                                             </h3>
                                             <p class="m-1"><i class="fa fa-calendar-o" aria-hidden="true"></i> 8x Sebulan</p>
                                             <p class="m-1"><i class="fa fa-clock-o" aria-hidden="true"></i> 60 - 120 Menit</p>
                                             <p class="m-1"><i class="fa fa-map-marker" aria-hidden="true"></i> Online</p>
-                                            {{-- <div class="rating-wapper nostar">
-                                                <div class="star-rating"><span style="width:0%">Rated <strong
-                                                        class="rating">0</strong> out of 5</span></div>
-                                                <span class="review">(0)</span></div> --}}
-                                            <span class="price"><span class="kodory-Price-amount amount"><span
-                                                    class="kodory-Price-currencySymbol">$</span>56.00</span> – <span
-                                                    class="kodory-Price-amount amount"><span
-                                                    class="kodory-Price-currencySymbol">$</span>60.00</span></span>
+                                            <span class="price">
+                                                <span class="kodory-Price-amount amount">
+                                                    <span class="kodory-Price-currencySymbol">$</span>56.00
+                                                </span>
+                                                 – 
+                                                <span class="kodory-Price-amount amount">
+                                                    <span class="kodory-Price-currencySymbol">$</span>60.00
+                                                </span>
+                                            </span>
                                         </div>
                                     </div>
                                 </div>
@@ -829,15 +708,11 @@
                                     <div class="product-inner tooltip-left" style="background: rgb(73,81,158);
                                     background: linear-gradient(180deg, rgba(73,81,158,1) 0%, rgba(148,35,150,1) 53%, rgba(198,75,175,1) 100%);">
                                         <div class="product-thumb">
-                                            <a class="thumb-link"
-                                               href="#">
+                                            <a class="thumb-link" href="/api/pesanan">
                                                 <img class="img-responsive"
-                                                     src="{{asset('images/mp5.jpg')}}"
-                                                     alt="" width="270" height="350">
+                                                    src="{{asset('images/mp5.jpg')}}"
+                                                    alt="img" width="270" height="350">
                                             </a>
-                                            {{-- <div class="flash">
-                                                <span class="sold-out"><span>Sold out</span></span>
-                                            </div> --}}
                                             <div class="group-button">
                                                 <div class="yith-wcwl-add-to-wishlist">
                                                     <div class="yith-wcwl-add-button show">
@@ -849,24 +724,22 @@
                                                 </div>
                                                 <a href="#" class="button yith-wcqv-button">Quick View</a>
                                                 <div class="add-to-cart">
-                                                    <a href="#"
-                                                       class="button product_type_simple add_to_cart_button ajax_add_to_cart">Read more</a>
+                                                    <a href="#" class="button product_type_simple add_to_cart_button ajax_add_to_cart">Read more</a>
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="product-info equal-elem">
                                             <h3 class="product-name product_title">
-                                                <a href="">Private English Course SD 1-3</a>
+                                                <a href="/api/pesanan">Private English Course SD 1-3</a>
                                             </h3>
                                             <p class="m-1"><i class="fa fa-calendar-o" aria-hidden="true"></i> 4x Pertemuan</p>
                                             <p class="m-1"><i class="fa fa-clock-o" aria-hidden="true"></i> 45 - 60 Menit</p>
                                             <p class="m-1"><i class="fa fa-map-marker" aria-hidden="true"></i> Online</p>
-                                            {{-- <div class="rating-wapper nostar">
-                                                <div class="star-rating"><span style="width:0%">Rated <strong
-                                                        class="rating">0</strong> out of 5</span></div>
-                                                <span class="review">(0)</span></div> --}}
-                                            <span class="price"><span class="kodory-Price-amount amount"><span
-                                                    class="kodory-Price-currencySymbol">$</span>35.00</span></span>
+                                            <span class="price">
+                                                <span class="kodory-Price-amount amount">
+                                                    <span class="kodory-Price-currencySymbol">$</span>35.00
+                                                </span>
+                                            </span>
                                         </div>
                                     </div>
                                 </div>
@@ -874,11 +747,10 @@
                                     <div class="product-inner tooltip-left" style="background: rgb(73,81,158);
                                     background: linear-gradient(180deg, rgba(73,81,158,1) 0%, rgba(148,35,150,1) 53%, rgba(198,75,175,1) 100%);">
                                         <div class="product-thumb">
-                                            <a class="thumb-link"
-                                               href="#">
+                                            <a class="thumb-link" href="/api/pesanan">
                                                 <img class="img-responsive"
                                                      src="{{asset('images/mp6.jpg')}}"
-                                                     alt="" width="270" height="350">
+                                                     alt="img" width="270" height="350">
                                             </a>
                                             <div class="flash">
                                                 <span class="onnew"><span class="text">New</span></span></div>
@@ -893,8 +765,7 @@
                                                 </div>
                                                 <a href="#" class="button yith-wcqv-button">Quick View</a>
                                                 <div class="add-to-cart">
-                                                    <a href="#"
-                                                       class="button product_type_simple add_to_cart_button ajax_add_to_cart">View products</a>
+                                                    <a href="#" class="button product_type_simple add_to_cart_button ajax_add_to_cart">View products</a>
                                                 </div>
                                             </div>
                                         </div>
@@ -905,14 +776,15 @@
                                             <p class="m-1"><i class="fa fa-calendar-o" aria-hidden="true"></i> 4x Sebulan</p>
                                             <p class="m-1"><i class="fa fa-clock-o" aria-hidden="true"></i> 90 Menit</p>
                                             <p class="m-1"><i class="fa fa-map-marker" aria-hidden="true"></i> Online</p>
-                                            {{-- <div class="rating-wapper nostar">
-                                                <div class="star-rating"><span style="width:0%">Rated <strong
-                                                        class="rating">0</strong> out of 5</span></div>
-                                                <span class="review">(0)</span></div> --}}
-                                            <span class="price"><span class="kodory-Price-amount amount"><span
-                                                    class="kodory-Price-currencySymbol">$</span>79.00</span> – <span
-                                                    class="kodory-Price-amount amount"><span
-                                                    class="kodory-Price-currencySymbol">$</span>139.00</span></span>
+                                            <span class="price">
+                                                <span class="kodory-Price-amount amount">
+                                                    <span class="kodory-Price-currencySymbol">$</span>79.00
+                                                </span>
+                                                 – 
+                                                <span class="kodory-Price-amount amount">
+                                                    <span class="kodory-Price-currencySymbol">$</span>139.00
+                                                </span>
+                                            </span>
                                         </div>
                                     </div>
                                 </div>
@@ -920,11 +792,10 @@
                                     <div class="product-inner tooltip-left" style="background: rgb(73,81,158);
                                     background: linear-gradient(180deg, rgba(73,81,158,1) 0%, rgba(148,35,150,1) 53%, rgba(198,75,175,1) 100%);">
                                         <div class="product-thumb">
-                                            <a class="thumb-link"
-                                               href="#">
+                                            <a class="thumb-link" href="/api/pesanan">
                                                 <img class="img-responsive"
                                                      src="{{asset('images/mp7.jpg')}}"
-                                                     alt="" width="270" height="350">
+                                                     alt="img" width="270" height="350">
                                             </a>
                                             <div class="flash">
                                                 <span class="onnew"><span class="text">New</span></span></div>
@@ -939,25 +810,22 @@
                                                 </div>
                                                 <a href="#" class="button yith-wcqv-button">Quick View</a>
                                                 <div class="add-to-cart">
-                                                    <a href="#"
-                                                       class="button product_type_simple add_to_cart_button ajax_add_to_cart">Add
-                                                        to cart</a>
+                                                    <a href="#" class="button product_type_simple add_to_cart_button ajax_add_to_cart">Add to cart</a>
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="product-info equal-elem">
                                             <h3 class="product-name product_title">
-                                                <a href="">Private English SD 4-6</a>
+                                                <a href="/api/pesanan">Private English SD 4-6</a>
                                             </h3>
                                             <p class="m-1"><i class="fa fa-calendar-o" aria-hidden="true"></i> 4x Pertemuan</p>
                                             <p class="m-1"><i class="fa fa-clock-o" aria-hidden="true"></i> 60 Menit</p>
                                             <p class="m-1"><i class="fa fa-map-marker" aria-hidden="true"></i> Online</p>
-                                            {{-- <div class="rating-wapper nostar">
-                                                <div class="star-rating"><span style="width:0%">Rated <strong
-                                                        class="rating">0</strong> out of 5</span></div>
-                                                <span class="review">(0)</span></div> --}}
-                                            <span class="price"><span class="kodory-Price-amount amount"><span
-                                                    class="kodory-Price-currencySymbol">$</span>98.00</span></span>
+                                            <span class="price">
+                                                <span class="kodory-Price-amount amount">
+                                                    <span class="kodory-Price-currencySymbol">$</span>98.00
+                                                </span>
+                                            </span>
                                         </div>
                                     </div>
                                 </div>
@@ -965,11 +833,10 @@
                                     <div class="product-inner tooltip-left" style="background: rgb(73,81,158);
                                     background: linear-gradient(180deg, rgba(73,81,158,1) 0%, rgba(148,35,150,1) 53%, rgba(198,75,175,1) 100%);">
                                         <div class="product-thumb">
-                                            <a class="thumb-link"
-                                               href="#">
+                                            <a class="thumb-link" href="/api/pesanan">
                                                 <img class="img-responsive"
-                                                     src="{{asset('images/mp8.jpg')}}"
-                                                     alt="Cute Shoes" width="270" height="350">
+                                                    src="{{asset('images/mp8.jpg')}}"
+                                                    alt="img" width="270" height="350">
                                             </a>
                                             <div class="flash">
                                                 <span class="onnew"><span class="text">New</span></span></div>
@@ -984,24 +851,22 @@
                                                 </div>
                                                 <a href="#" class="button yith-wcqv-button">Quick View</a>
                                                 <div class="add-to-cart">
-                                                    <a href="#"
-                                                       class="button product_type_simple add_to_cart_button ajax_add_to_cart">Add to cart</a>
+                                                    <a href="#" class="button product_type_simple add_to_cart_button ajax_add_to_cart">Add to cart</a>
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="product-info equal-elem">
                                             <h3 class="product-name product_title">
-                                                <a href="#">Les Mengaji,PAI,dll(Offline)</a>
+                                                <a href="/api/pesanan">Les Mengaji,PAI,dll(Offline)</a>
                                             </h3>
                                             <p class="m-1"><i class="fa fa-calendar-o" aria-hidden="true"></i> 1x Pertemuan</p>
                                             <p class="m-1"><i class="fa fa-clock-o" aria-hidden="true"></i> 60 - 90 Menit</p>
                                             <p class="m-1"><i class="fa fa-map-marker" aria-hidden="true"></i> Online</p>
-                                            {{-- <div class="rating-wapper nostar">
-                                                <div class="star-rating"><span style="width:0%">Rated <strong
-                                                        class="rating">0</strong> out of 5</span></div>
-                                                <span class="review">(0)</span></div> --}}
-                                            <span class="price"><span class="kodory-Price-amount amount"><span
-                                                    class="kodory-Price-currencySymbol">$</span>134.00</span></span>
+                                            <span class="price">
+                                                <span class="kodory-Price-amount amount">
+                                                <span class="kodory-Price-currencySymbol">$</span>134.00
+                                                </span>
+                                            </span>
                                         </div>
                                     </div>
                                 </div>
@@ -1016,11 +881,10 @@
                                     <div class="product-inner tooltip-left" style="background: rgb(73,81,158);
                                     background: linear-gradient(180deg, rgba(73,81,158,1) 0%, rgba(148,35,150,1) 53%, rgba(198,75,175,1) 100%);">
                                         <div class="product-thumb">
-                                            <a class="thumb-link"
-                                               href="#">
+                                            <a class="thumb-link" href="/api/pesanan">
                                                 <img class="img-responsive"
                                                      src="{{asset('images/le1.jpeg')}}"
-                                                     alt="" width="270" height="350">
+                                                     alt="img" width="270" height="350">
                                             </a>
                                             <div class="flash">
                                                 <span class="onnew"><span class="text">New</span></span></div>
@@ -1035,26 +899,26 @@
                                                 </div>
                                                 <a href="#" class="button yith-wcqv-button">Quick View</a>
                                                 <div class="add-to-cart">
-                                                    <a href="#"
-                                                       class="button product_type_simple add_to_cart_button ajax_add_to_cart">Add to cart</a>
+                                                    <a href="#" class="button product_type_simple add_to_cart_button ajax_add_to_cart">Add to cart</a>
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="product-info equal-elem">
                                             <h3 class="product-name product_title">
-                                                <a href="">Baby Massage </a>
+                                                <a href="/api/pesanan">Baby Massage </a>
                                             </h3>
                                             <p class="m-1"><i class="fa fa-calendar-o" aria-hidden="true"></i> Tentukan Tanggal</p>
                                             <p class="m-1"><i class="fa fa-clock-o" aria-hidden="true"></i> 60 Menit</p>
                                             <p class="m-1"><i class="fa fa-map-marker" aria-hidden="true"></i> Banyak Tempat</p>
-                                            {{-- <div class="rating-wapper nostar">
-                                                <div class="star-rating"><span style="width:0%">Rated <strong
-                                                        class="rating">0</strong> out of 5</span></div>
-                                                <span class="review">(0)</span></div> --}}
-                                            <span class="price"><span class="kodory-Price-amount amount"><span
-                                                    class="kodory-Price-currencySymbol">$</span>79.00</span> – <span
-                                                    class="kodory-Price-amount amount"><span
-                                                    class="kodory-Price-currencySymbol">$</span>139.00</span></span>
+                                            <span class="price">
+                                                <span class="kodory-Price-amount amount">
+                                                    <span class="kodory-Price-currencySymbol">$</span>79.00
+                                                </span>
+                                                 – 
+                                                <span class="kodory-Price-amount amount">
+                                                    <span class="kodory-Price-currencySymbol">$</span>139.00
+                                                </span>
+                                            </span>
                                         </div>
                                     </div>
                                 </div>
@@ -1062,14 +926,12 @@
                                     <div class="product-inner tooltip-left" style="background: rgb(73,81,158);
                                     background: linear-gradient(180deg, rgba(73,81,158,1) 0%, rgba(148,35,150,1) 53%, rgba(198,75,175,1) 100%);">
                                         <div class="product-thumb">
-                                            <a class="thumb-link"
-                                               href="#">
+                                            <a class="thumb-link" href="/api/pesanan">
                                                 <img class="img-responsive"
                                                      src="{{asset('images/le2.jpeg')}}"
-                                                     alt="" width="270" height="350">
+                                                     alt="img" width="270" height="350">
                                             </a>
                                             <div class="flash">
-                                                {{-- <span class="onsale"><span class="number">-18%</span></span> --}}
                                                 <span class="onnew"><span class="text">New</span></span></div>
                                             <div class="group-button">
                                                 <div class="yith-wcwl-add-to-wishlist">
@@ -1082,26 +944,29 @@
                                                 </div>
                                                 <a href="#" class="button yith-wcqv-button">Quick View</a>
                                                 <div class="add-to-cart">
-                                                    <a href="#"
-                                                       class="button product_type_simple add_to_cart_button ajax_add_to_cart">Add to cart</a>
+                                                    <a href="#" class="button product_type_simple add_to_cart_button ajax_add_to_cart">Add to cart</a>
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="product-info equal-elem">
                                             <h3 class="product-name product_title">
-                                                <a href="">Paket New Born 5 Hari </a>
+                                                <a href="/api/pesanan">Paket New Born 5 Hari </a>
                                             </h3>
                                             <p class="m-1"><i class="fa fa-calendar-o" aria-hidden="true"></i> Tentukan Tanggal</p>
                                             <p class="m-1"><i class="fa fa-clock-o" aria-hidden="true"></i> 3 Jam</p>
                                             <p class="m-1"><i class="fa fa-map-marker" aria-hidden="true"></i>Banyak Tempat</p>
-                                            {{-- <div class="rating-wapper nostar">
-                                                <div class="star-rating"><span style="width:0%">Rated <strong
-                                                        class="rating">0</strong> out of 5</span></div>
-                                                <span class="review">(0)</span></div> --}}
-                                            <span class="price"><del><span class="kodory-Price-amount amount"><span
-                                                    class="kodory-Price-currencySymbol">$</span>109.00</span></del> <ins><span
-                                                    class="kodory-Price-amount amount"><span
-                                                    class="kodory-Price-currencySymbol">$</span>89.00</span></ins></span>
+                                            <span class="price">
+                                                <del>
+                                                    <span class="kodory-Price-amount amount">
+                                                        <span class="kodory-Price-currencySymbol">$</span>109.00
+                                                    </span>
+                                                </del>
+                                                <ins>
+                                                    <span class="kodory-Price-amount amount">
+                                                        <span class="kodory-Price-currencySymbol">$</span>89.00
+                                                    </span>
+                                                </ins>
+                                            </span>
                                         </div>
                                     </div>
                                 </div>
@@ -1109,11 +974,10 @@
                                     <div class="product-inner tooltip-left" style="background: rgb(73,81,158);
                                     background: linear-gradient(180deg, rgba(73,81,158,1) 0%, rgba(148,35,150,1) 53%, rgba(198,75,175,1) 100%);">
                                         <div class="product-thumb">
-                                            <a class="thumb-link"
-                                               href="#">
+                                            <a class="thumb-link" href="/api/pesanan">
                                                 <img class="img-responsive"
                                                      src="{{asset('images/le3.jpeg')}}"
-                                                     alt="" width="270" height="350">
+                                                     alt="img" width="270" height="350">
                                             </a>
                                             <div class="flash">
                                                 <span class="onnew"><span class="text">New</span></span></div>
@@ -1128,24 +992,22 @@
                                                 </div>
                                                 <a href="#" class="button yith-wcqv-button">Quick View</a>
                                                 <div class="add-to-cart">
-                                                    <a href="#"
-                                                       class="button product_type_simple add_to_cart_button ajax_add_to_cart">Add to cart</a>
+                                                    <a href="#" class="button product_type_simple add_to_cart_button ajax_add_to_cart">Add to cart</a>
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="product-info equal-elem">
                                             <h3 class="product-name product_title">
-                                                <a href="">Pijat Pediatric Kids & Baby </a>
+                                                <a href="/api/pesanan">Pijat Pediatric Kids & Baby </a>
                                             </h3>
                                             <p class="m-1"><i class="fa fa-calendar-o" aria-hidden="true"></i>  Tentukan Tempat</p>
                                             <p class="m-1"><i class="fa fa-clock-o" aria-hidden="true"></i> 60 Menit</p>
                                             <p class="m-1"><i class="fa fa-map-marker" aria-hidden="true"></i> Banyak Tempat</p>
-                                            {{-- <div class="rating-wapper nostar">
-                                                <div class="star-rating"><span style="width:0%">Rated <strong
-                                                        class="rating">0</strong> out of 5</span></div>
-                                                <span class="review">(0)</span></div> --}}
-                                            <span class="price"><span class="kodory-Price-amount amount"><span
-                                                    class="kodory-Price-currencySymbol">$</span>60.00</span></span>
+                                            <span class="price">
+                                                <span class="kodory-Price-amount amount">
+                                                    <span class="kodory-Price-currencySymbol">$</span>60.00
+                                                </span>
+                                            </span>
                                         </div>
                                     </div>
                                 </div>
@@ -1153,11 +1015,10 @@
                                     <div class="product-inner tooltip-left" style="background: rgb(73,81,158);
                                     background: linear-gradient(180deg, rgba(73,81,158,1) 0%, rgba(148,35,150,1) 53%, rgba(198,75,175,1) 100%);">
                                         <div class="product-thumb">
-                                            <a class="thumb-link"
-                                               href="#">
+                                            <a class="thumb-link" href="/api/pesanan">
                                                 <img class="img-responsive"
                                                      src="{{asset('images/le4.jpeg')}}"
-                                                     alt="Elegant Diamond" width="270" height="350">
+                                                     alt="img" width="270" height="350">
                                             </a>
                                             <div class="flash">
                                                 <span class="onnew"><span class="text">New</span></span></div>
@@ -1172,26 +1033,26 @@
                                                 </div>
                                                 <a href="#" class="button yith-wcqv-button">Quick View</a>
                                                 <div class="add-to-cart">
-                                                    <a href="#"
-                                                       class="button product_type_simple add_to_cart_button ajax_add_to_cart">Add to cart</a>
+                                                    <a href="#" class="button product_type_simple add_to_cart_button ajax_add_to_cart">Add to cart</a>
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="product-info equal-elem">
                                             <h3 class="product-name product_title">
-                                                <a href="">Medimom Clinic</a>
+                                                <a href="/api/pesanan">Medimom Clinic</a>
                                             </h3>
                                             <p class="m-1"><i class="fa fa-calendar-o" aria-hidden="true"></i> Berlaku 30 Hari</p>
                                             <p class="m-1"><i class="fa fa-clock-o" aria-hidden="true"></i> 60 Menit</p>
                                             <p class="m-1"><i class="fa fa-map-marker" aria-hidden="true"></i> Banyak Tempat</p>
-                                            {{-- <div class="rating-wapper nostar">
-                                                <div class="star-rating"><span style="width:0%">Rated <strong
-                                                        class="rating">0</strong> out of 5</span></div>
-                                                <span class="review">(0)</span></div> --}}
-                                            <span class="price"><span class="kodory-Price-amount amount"><span
-                                                    class="kodory-Price-currencySymbol">$</span>89.00</span> – <span
-                                                    class="kodory-Price-amount amount"><span
-                                                    class="kodory-Price-currencySymbol">$</span>139.00</span></span>
+                                            <span class="price">
+                                                <span class="kodory-Price-amount amount">
+                                                    <span class="kodory-Price-currencySymbol">$</span>89.00
+                                                </span>
+                                                 – 
+                                                <span class="kodory-Price-amount amount">
+                                                    <span class="kodory-Price-currencySymbol">$</span>139.00
+                                                </span>
+                                            </span>
                                         </div>
                                     </div>
                                 </div>
@@ -1199,11 +1060,10 @@
                                     <div class="product-inner tooltip-left" style="background: rgb(73,81,158);
                                     background: linear-gradient(180deg, rgba(73,81,158,1) 0%, rgba(148,35,150,1) 53%, rgba(198,75,175,1) 100%);">
                                         <div class="product-thumb">
-                                            <a class="thumb-link"
-                                               href="#">
+                                            <a class="thumb-link" href="/api/pesanan">
                                                 <img class="img-responsive"
                                                      src="{{asset('images/le5.jpeg')}}"
-                                                     alt="" width="270" height="350">
+                                                     alt="img" width="270" height="350">
                                             </a>
                                             <div class="flash">
                                                 <span class="onnew"><span class="text">New</span></span></div>
@@ -1218,24 +1078,22 @@
                                                 </div>
                                                 <a href="#" class="button yith-wcqv-button">Quick View</a>
                                                 <div class="add-to-cart">
-                                                    <a href="#"
-                                                       class="button product_type_simple add_to_cart_button ajax_add_to_cart">Add to cart</a>
+                                                    <a href="#" class="button product_type_simple add_to_cart_button ajax_add_to_cart">Add to cart</a>
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="product-info equal-elem">
                                             <h3 class="product-name product_title">
-                                                <a href="">Tindik dan Sunat</a>
+                                                <a href="/api/pesanan">Tindik dan Sunat</a>
                                             </h3>
                                             <p class="m-1"><i class="fa fa-calendar-o" aria-hidden="true"></i> Tentukan Tanggal</p>
                                             <p class="m-1"><i class="fa fa-clock-o" aria-hidden="true"></i> 45 Menit</p>
                                             <p class="m-1"><i class="fa fa-map-marker" aria-hidden="true"></i> Banyak Tempat</p>
-                                            {{-- <div class="rating-wapper nostar">
-                                                <div class="star-rating"><span style="width:0%">Rated <strong
-                                                        class="rating">0</strong> out of 5</span></div>
-                                                <span class="review">(0)</span></div> --}}
-                                            <span class="price"><span class="kodory-Price-amount amount"><span
-                                                    class="kodory-Price-currencySymbol">$</span>129.00</span></span>
+                                            <span class="price">
+                                                <span class="kodory-Price-amount amount">
+                                                    <span class="kodory-Price-currencySymbol">$</span>129.00
+                                                </span>
+                                            </span>
                                         </div>
                                     </div>
                                 </div>
@@ -1243,14 +1101,12 @@
                                     <div class="product-inner tooltip-left" style="background: rgb(73,81,158);
                                     background: linear-gradient(180deg, rgba(73,81,158,1) 0%, rgba(148,35,150,1) 53%, rgba(198,75,175,1) 100%);">
                                         <div class="product-thumb">
-                                            <a class="thumb-link"
-                                               href="#">
+                                            <a class="thumb-link" href="/api/pesanan">
                                                 <img class="img-responsive"
                                                      src="{{asset('images/le6.jpeg')}}"
-                                                     alt="" width="270" height="350">
+                                                     alt="/api/pesanan" width="270" height="350">
                                             </a>
                                             <div class="flash">
-                                                {{-- <span class="onsale"><span class="number">-14%</span></span> --}}
                                                 <span class="onnew"><span class="text">New</span></span></div>
                                             <div class="group-button">
                                                 <div class="yith-wcwl-add-to-wishlist">
@@ -1263,26 +1119,29 @@
                                                 </div>
                                                 <a href="#" class="button yith-wcqv-button">Quick View</a>
                                                 <div class="add-to-cart">
-                                                    <a href="#"
-                                                       class="button product_type_simple add_to_cart_button ajax_add_to_cart">Add to cart</a>
+                                                    <a href="#" class="button product_type_simple add_to_cart_button ajax_add_to_cart">Add to cart</a>
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="product-info equal-elem">
                                             <h3 class="product-name product_title">
-                                                <a href="">Hair Cut Baby</a>
+                                                <a href="/api/pesanan">Hair Cut Baby</a>
                                             </h3>
                                             <p class="m-1"><i class="fa fa-calendar-o" aria-hidden="true"></i> Tentukan Tanggal</p>
                                             <p class="m-1"><i class="fa fa-clock-o" aria-hidden="true"></i> 90 Menit</p>
                                             <p class="m-1"><i class="fa fa-map-marker" aria-hidden="true"></i> Banyak Tempat</p>
-                                            {{-- <div class="rating-wapper ">
-                                                <div class="star-rating"><span style="width:100%">Rated <strong
-                                                        class="rating">5.00</strong> out of 5</span></div>
-                                                <span class="review">(1)</span></div> --}}
-                                            <span class="price"><del><span class="kodory-Price-amount amount"><span
-                                                    class="kodory-Price-currencySymbol">$</span>138.00</span></del> <ins><span
-                                                    class="kodory-Price-amount amount"><span
-                                                    class="kodory-Price-currencySymbol">$</span>119.00</span></ins></span>
+                                            <span class="price">
+                                                <del>
+                                                    <span class="kodory-Price-amount amount">
+                                                        <span class="kodory-Price-currencySymbol">$</span>138.00
+                                                    </span>
+                                                </del>
+                                                <ins>
+                                                    <span class="kodory-Price-amount amount">
+                                                        <span class="kodory-Price-currencySymbol">$</span>119.00
+                                                    </span>
+                                                </ins>
+                                            </span>
                                         </div>
                                     </div>
                                 </div>
@@ -1290,8 +1149,7 @@
                                     <div class="product-inner tooltip-left" style="background: rgb(73,81,158);
                                     background: linear-gradient(180deg, rgba(73,81,158,1) 0%, rgba(148,35,150,1) 53%, rgba(198,75,175,1) 100%);">
                                         <div class="product-thumb">
-                                            <a class="thumb-link"
-                                               href="#">
+                                            <a class="thumb-link" href="/api/pesanan">
                                                 <img class="img-responsive"
                                                      src="{{asset('images/le7.jpeg')}}"
                                                      alt="" width="270" height="350">
@@ -1309,24 +1167,22 @@
                                                 </div>
                                                 <a href="#" class="button yith-wcqv-button">Quick View</a>
                                                 <div class="add-to-cart">
-                                                    <a href="#"
-                                                       class="button product_type_simple add_to_cart_button ajax_add_to_cart">Add to cart</a>
+                                                    <a href="#" class="button product_type_simple add_to_cart_button ajax_add_to_cart">Add to cart</a>
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="product-info equal-elem">
                                             <h3 class="product-name product_title">
-                                                <a href="">Baby Spa</a>
+                                                <a href="/api/pesanan">Baby Spa</a>
                                             </h3>
                                             <p class="m-1"><i class="fa fa-calendar-o" aria-hidden="true"></i> Tentukan Tanggal</p>
                                             <p class="m-1"><i class="fa fa-clock-o" aria-hidden="true"></i> 60 Menit</p>
                                             <p class="m-1"><i class="fa fa-map-marker" aria-hidden="true"></i> Banyak Tempat</p>
-                                            {{-- <div class="rating-wapper ">
-                                                <div class="star-rating"><span style="width:100%">Rated <strong
-                                                        class="rating">5.00</strong> out of 5</span></div>
-                                                <span class="review">(1)</span></div> --}}
-                                            <span class="price"><span class="kodory-Price-amount amount"><span
-                                                    class="kodory-Price-currencySymbol">$</span>207.00</span></span>
+                                            <span class="price">
+                                                <span class="kodory-Price-amount amount">
+                                                    <span class="kodory-Price-currencySymbol">$</span>207.00
+                                                </span>
+                                            </span>
                                         </div>
                                     </div>
                                 </div>
@@ -1334,14 +1190,12 @@
                                     <div class="product-inner tooltip-left" style="background: rgb(73,81,158);
                                     background: linear-gradient(180deg, rgba(73,81,158,1) 0%, rgba(148,35,150,1) 53%, rgba(198,75,175,1) 100%);">
                                         <div class="product-thumb">
-                                            <a class="thumb-link"
-                                               href="#">
+                                            <a class="thumb-link" href="/api/pesanan">
                                                 <img class="img-responsive"
                                                      src="{{asset('images/le8.jpeg')}}"
                                                      alt="" width="270" height="350">
                                             </a>
                                             <div class="flash">
-                                                {{-- <span class="onsale"><span class="number">-11%</span></span> --}}
                                                 <span class="onnew"><span class="text">New</span></span></div>
                                             <div class="group-button">
                                                 <div class="yith-wcwl-add-to-wishlist">
@@ -1361,19 +1215,23 @@
                                         </div>
                                         <div class="product-info equal-elem">
                                             <h3 class="product-name product_title">
-                                                <a href="">Kids Massage</a>
+                                                <a href="/api/pesanan">Kids Massage</a>
                                             </h3>
                                             <p class="m-1"><i class="fa fa-calendar-o" aria-hidden="true"></i> Tentukan Tanggal</p>
                                             <p class="m-1"><i class="fa fa-clock-o" aria-hidden="true"></i> 60 Menit</p>
                                             <p class="m-1"><i class="fa fa-map-marker" aria-hidden="true"></i>  Banyak Tempat</p>
-                                            {{-- <div class="rating-wapper nostar">
-                                                <div class="star-rating"><span style="width:0%">Rated <strong
-                                                        class="rating">0</strong> out of 5</span></div>
-                                                <span class="review">(0)</span></div> --}}
-                                            <span class="price"><del><span class="kodory-Price-amount amount"><span
-                                                    class="kodory-Price-currencySymbol">$</span>89.00</span></del> <ins><span
-                                                    class="kodory-Price-amount amount"><span
-                                                    class="kodory-Price-currencySymbol">$</span>79.00</span></ins></span>
+                                            <span class="price">
+                                                <del>
+                                                    <span class="kodory-Price-amount amount">
+                                                        <span class="kodory-Price-currencySymbol">$</span>89.00
+                                                    </span>
+                                                </del>
+                                                <ins>
+                                                    <span class="kodory-Price-amount amount">
+                                                        <span class="kodory-Price-currencySymbol">$</span>79.00
+                                                    </span>
+                                                </ins>
+                                            </span>
                                         </div>
                                     </div>
                                 </div>
@@ -1398,7 +1256,7 @@
                             <h6 class="title">Dengan Mengikuti Program Kami</h6>
                         </div>
                         <div class="button-wrap">
-                            <a class="button" target=" _blank" href="{{route('katalog.index')}}"><span>Shop now</span></a>
+                            <a class="button" target="_self" href="/api/katalog"><span>Shop now</span></a>
                         </div>
                     </div>
                 </div>
@@ -1409,8 +1267,7 @@
         <div class="container">
             <div class="kodory-heading style-01">
                 <div class="heading-inner">
-                    <h3 class="title">
-                        Follow<span></span></h3>
+                    <h3 class="title"> Follow<span></span></h3>
                 </div>
             </div>
             <div class="kodory-instagram style-01">
@@ -1419,7 +1276,7 @@
                      data-responsive="[{&quot;breakpoint&quot;:480,&quot;settings&quot;:{&quot;slidesToShow&quot;:2,&quot;slidesMargin&quot;:&quot;10&quot;}},{&quot;breakpoint&quot;:768,&quot;settings&quot;:{&quot;slidesToShow&quot;:2,&quot;slidesMargin&quot;:&quot;10&quot;}},{&quot;breakpoint&quot;:992,&quot;settings&quot;:{&quot;slidesToShow&quot;:3,&quot;slidesMargin&quot;:&quot;10&quot;}},{&quot;breakpoint&quot;:1200,&quot;settings&quot;:{&quot;slidesToShow&quot;:3,&quot;slidesMargin&quot;:&quot;10&quot;}},{&quot;breakpoint&quot;:1500,&quot;settings&quot;:{&quot;slidesToShow&quot;:4,&quot;slidesMargin&quot;:&quot;10&quot;}}]">
                     <div class="rows-space-0">
                         <a target="_blank" href="https://www.instagram.com/?hl=id" class="item" tabindex="0">
-                            <img class="img-responsive lazy" src="{{asset('images/poto 1.1.jpg')}}" alt="">
+                            <img class="img-responsive lazy" src="{{asset('images/poto 1.1.jpg')}}" alt="img">
                             <span class="instagram-info">
                                 <span class="social-wrap">
                                     <span class="social-info">0
@@ -1434,7 +1291,7 @@
                     </div>
                     <div class="rows-space-0">
                         <a target="_blank" href="https://www.instagram.com/?hl=id" class="item" tabindex="0">
-                            <img class="img-responsive lazy" src="{{asset('images/poto 1.2.jpg')}}" alt="">
+                            <img class="img-responsive lazy" src="{{asset('images/poto 1.2.jpg')}}" alt="img">
                             <span class="instagram-info">
                                 <span class="social-wrap">
                                     <span class="social-info">0
@@ -1449,7 +1306,7 @@
                     </div>
                     <div class="rows-space-0">
                         <a target="_blank" href="https://www.instagram.com/?hl=id" class="item" tabindex="0">
-                            <img class="img-responsive lazy" src="{{asset('images/poto 1.3.jpg')}}" alt="">
+                            <img class="img-responsive lazy" src="{{asset('images/poto 1.3.jpg')}}" alt="img">
                             <span class="instagram-info">
                                 <span class="social-wrap">
                                     <span class="social-info">0
@@ -1464,7 +1321,7 @@
                     </div>
                     <div class="rows-space-0">
                         <a target="_blank" href="https://www.instagram.com/?hl=id" class="item" tabindex="0">
-                            <img class="img-responsive lazy" src="{{asset('images/poto 1.4.jpg')}}" alt="">
+                            <img class="img-responsive lazy" src="{{asset('images/poto 1.4.jpg')}}" alt="img">
                             <span class="instagram-info">
                                 <span class="social-wrap">
                                     <span class="social-info">0
@@ -1479,7 +1336,7 @@
                     </div>
                     <div class="rows-space-0">
                         <a target="_blank" href="https://www.instagram.com/?hl=id" class="item" tabindex="0">
-                            <img class="img-responsive lazy" src="{{asset('images/poto 1.5.jpg')}}" alt="">
+                            <img class="img-responsive lazy" src="{{asset('images/poto 1.5.jpg')}}" alt="img">
                             <span class="instagram-info">
                                 <span class="social-wrap">
                                     <span class="social-info">0
@@ -1494,7 +1351,7 @@
                     </div>
                     <div class="rows-space-0">
                         <a target="_blank" href="https://www.instagram.com/?hl=id" class="item" tabindex="0">
-                            <img class="img-responsive lazy" src="{{asset('images/poto 1.6.jpg')}}" alt="">
+                            <img class="img-responsive lazy" src="{{asset('images/poto 1.6.jpg')}}" alt="img">
                             <span class="instagram-info">
                                 <span class="social-wrap">
                                     <span class="social-info">0
@@ -1509,7 +1366,7 @@
                     </div>
                     <div class="rows-space-0">
                         <a target="_blank" href="https://www.instagram.com/?hl=id" class="item" tabindex="0">
-                            <img class="img-responsive lazy" src="{{asset('images/poto 1.7.jpg')}}" alt="">
+                            <img class="img-responsive lazy" src="{{asset('images/poto 1.7.jpg')}}" alt="img">
                             <span class="instagram-info">
                                 <span class="social-wrap">
                                     <span class="social-info">0
@@ -1522,21 +1379,6 @@
                             </span>
                         </a>
                     </div>
-                    {{-- <div class="rows-space-0">
-                        <a target="_blank" href="#" class="item" tabindex="0">
-                            <img class="img-responsive lazy" src="assets/images/insta8.jpg" alt="Home 04">
-                            <span class="instagram-info">
-                                 <span class="social-wrap">
-                                    <span class="social-info">1
-                                        <i class="pe-7s-chat"></i>
-                                    </span>
-                                    <span class="social-info">0
-                                        <i class="pe-7s-like2"></i>
-                                    </span>
-                                </span>
-                            </span>
-                        </a>
-                    </div> --}}
                 </div>
             </div>
         </div>
@@ -1558,18 +1400,15 @@
                             <div class="product-item best-selling style-06 rows-space-30 post-25 product type-product status-publish has-post-thumbnail product_cat-light product_cat-chair product_cat-specials product_tag-light product_tag-sock first instock sale featured shipping-taxable purchasable product-type-simple">
                                 <div class="product-inner">
                                     <div class="product-thumb">
-                                        <a class="thumb-link"
-                                           href="single-product.html"
-                                           tabindex="0">
+                                        <a class="thumb-link" href="/api/pesanan" tabindex="0">
                                             <img class="img-responsive"
                                                  src="{{asset('images/bs 1.1.jpg')}}"
-                                                 alt="Modern Platinum" width="90" height="90">
+                                                 alt="img" width="90" height="90">
                                         </a>
                                     </div>
                                     <div class="product-info">
-                                        <h3 class="product-name product_title">
-                                            <a href="single-product.html"
-                                               tabindex="0">Modern Platinum</a>
+                                        <h3 class="/api/pesanan">
+                                            <a href="/api/pesanan" tabindex="0">Modern Platinum</a>
                                         </h3>
                                         <div class="rating-wapper nostar">
                                             <div class="star-rating"><span
@@ -1587,18 +1426,15 @@
                             <div class="product-item best-selling style-06 rows-space-30 post-23 product type-product status-publish has-post-thumbnail product_cat-chair product_cat-lamp product_cat-sofas product_tag-hat  instock shipping-taxable purchasable product-type-variable has-default-attributes">
                                 <div class="product-inner">
                                     <div class="product-thumb">
-                                        <a class="thumb-link"
-                                           href="single-product.html"
-                                           tabindex="0">
+                                        <a class="thumb-link" href="/api/pesanan" tabindex="0">
                                             <img class="img-responsive"
                                                  src="{{asset('images/bs 1.2.jpg')}}"
-                                                 alt="Cute Girl Shirt" width="90" height="90">
+                                                 alt="img" width="90" height="90">
                                         </a>
                                     </div>
                                     <div class="product-info">
                                         <h3 class="product-name product_title">
-                                            <a href="single-product.html"
-                                               tabindex="0">Cute Girl Shirt</a>
+                                            <a href="/api/pesanan" tabindex="0">Cute Girl Shirt</a>
                                         </h3>
                                         <div class="rating-wapper nostar">
                                             <div class="star-rating"><span
@@ -1616,18 +1452,15 @@
                             <div class="product-item best-selling style-06 rows-space-30 post-32 product type-product status-publish has-post-thumbnail product_cat-light product_cat-chair product_cat-sofas product_tag-hat product_tag-sock last instock sale featured shipping-taxable purchasable product-type-simple">
                                 <div class="product-inner">
                                     <div class="product-thumb">
-                                        <a class="thumb-link"
-                                           href="single-product.html"
-                                           tabindex="0">
+                                        <a class="thumb-link" href="/api/pesanan" tabindex="0">
                                             <img class="img-responsive"
                                                  src="{{asset('images/bs 1.3.jpg')}}"
-                                                 alt="Kid Backpack" width="90" height="90">
+                                                 alt="img" width="90" height="90">
                                         </a>
                                     </div>
                                     <div class="product-info">
                                         <h3 class="product-name product_title">
-                                            <a href="single-product.html"
-                                               tabindex="0">Kid Backpack</a>
+                                            <a href="/api/pesanan" tabindex="0">Kid Backpack</a>
                                         </h3>
                                         <div class="rating-wapper nostar">
                                             <div class="star-rating"><span
@@ -1645,9 +1478,7 @@
                             <div class="product-item best-selling style-06 rows-space-30 post-20 product type-product status-publish has-post-thumbnail product_cat-light product_cat-new-arrivals product_cat-specials product_tag-table product_tag-hat product_tag-sock first instock sale featured shipping-taxable purchasable product-type-simple">
                                 <div class="product-inner">
                                     <div class="product-thumb">
-                                        <a class="thumb-link"
-                                           href="single-product.html"
-                                           tabindex="-1">
+                                        <a class="thumb-link" href="/api/pesanan" tabindex="-1">
                                             <img class="img-responsive"
                                                  src="{{asset('images/bs 1.4.jpg')}}"
                                                  alt="Red Car" width="90" height="90">
@@ -1655,8 +1486,7 @@
                                     </div>
                                     <div class="product-info">
                                         <h3 class="product-name product_title">
-                                            <a href="single-product.html"
-                                               tabindex="-1">Red Car</a>
+                                            <a href="/api/pesanan" tabindex="-1">Red Car</a>
                                         </h3>
                                         <div class="rating-wapper nostar">
                                             <div class="star-rating"><span
@@ -1674,18 +1504,15 @@
                             <div class="product-item best-selling style-06 rows-space-30 post-36 product type-product status-publish has-post-thumbnail product_cat-table product_cat-bed product_tag-light product_tag-table product_tag-sock  instock sale shipping-taxable purchasable product-type-simple">
                                 <div class="product-inner">
                                     <div class="product-thumb">
-                                        <a class="thumb-link"
-                                           href="single-product.html"
-                                           tabindex="-1">
+                                        <a class="thumb-link" href="/api/pesanan" tabindex="-1">
                                             <img class="img-responsive"
                                                  src="{{asset('images/bs 1.5.jpg')}}"
-                                                 alt="Dazzling Toys" width="90" height="90">
+                                                 alt="img" width="90" height="90">
                                         </a>
                                     </div>
                                     <div class="product-info">
                                         <h3 class="product-name product_title">
-                                            <a href="single-product.html"
-                                               tabindex="-1">Dazzling Toys</a>
+                                            <a href="/api/pesanan" tabindex="-1">Dazzling Toys</a>
                                         </h3>
                                         <div class="rating-wapper nostar">
                                             <div class="star-rating"><span
@@ -1703,18 +1530,15 @@
                             <div class="product-item best-selling style-06 rows-space-30 post-49 product type-product status-publish has-post-thumbnail product_cat-light product_cat-bed product_cat-sofas product_tag-multi product_tag-lamp last instock shipping-taxable purchasable product-type-simple">
                                 <div class="product-inner">
                                     <div class="product-thumb">
-                                        <a class="thumb-link"
-                                           href="single-product.html"
-                                           tabindex="-1">
+                                        <a class="thumb-link" href="/api/pesanan" tabindex="-1">
                                             <img class="img-responsive"
                                                  src="{{asset('images/bs 1.6.jpg')}}"
-                                                 alt="Cute Shoes" width="90" height="90">
+                                                 alt="img" width="90" height="90">
                                         </a>
                                     </div>
                                     <div class="product-info">
                                         <h3 class="product-name product_title">
-                                            <a href="single-product.html"
-                                               tabindex="-1">Cute Shoes</a>
+                                            <a href="/api/pesanan" tabindex="-1">Cute Shoes</a>
                                         </h3>
                                         <div class="rating-wapper nostar">
                                             <div class="star-rating"><span
@@ -1730,18 +1554,15 @@
                             <div class="product-item best-selling style-06 rows-space-30 post-93 product type-product status-publish has-post-thumbnail product_cat-light product_cat-table product_cat-new-arrivals product_tag-table product_tag-sock first instock shipping-taxable purchasable product-type-simple">
                                 <div class="product-inner">
                                     <div class="product-thumb">
-                                        <a class="thumb-link"
-                                           href="single-product.html"
-                                           tabindex="-1">
+                                        <a class="thumb-link" href="/api/pesanan" tabindex="-1">
                                             <img class="img-responsive"
                                                  src="{{asset('images/bs 1.7.jpg')}}"
-                                                 alt="Hello Shirt" width="90" height="90">
+                                                 alt="img" width="90" height="90">
                                         </a>
                                     </div>
                                     <div class="product-info">
                                         <h3 class="product-name product_title">
-                                            <a href="single-product.html"
-                                               tabindex="-1">Hello Shirt</a>
+                                            <a href="/api/pesanan" tabindex="-1">Hello Shirt</a>
                                         </h3>
                                         <div class="rating-wapper nostar">
                                             <div class="star-rating"><span
@@ -1757,18 +1578,15 @@
                             <div class="product-item best-selling style-06 rows-space-30 post-28 product type-product status-publish has-post-thumbnail product_cat-light product_cat-chair product_cat-sofas product_tag-light product_tag-sock  instock sale featured shipping-taxable purchasable product-type-simple">
                                 <div class="product-inner">
                                     <div class="product-thumb">
-                                        <a class="thumb-link"
-                                           href="single-product.html"
-                                           tabindex="-1">
+                                        <a class="thumb-link" href="/api/pesanan" tabindex="-1">
                                             <img class="img-responsive"
                                                  src="{{asset('images/bs 1.8.jpg')}}"
-                                                 alt="Blue Shoes" width="90" height="90">
+                                                 alt="img" width="90" height="90">
                                         </a>
                                     </div>
                                     <div class="product-info">
                                         <h3 class="product-name product_title">
-                                            <a href="single-product.html"
-                                               tabindex="-1">Blue Shoes</a>
+                                            <a href="/api/pesanan" tabindex="-1">Blue Shoes</a>
                                         </h3>
                                         <div class="rating-wapper ">
                                             <div class="star-rating"><span
@@ -1786,9 +1604,7 @@
                             <div class="product-item best-selling style-06 rows-space-30 post-22 product type-product status-publish has-post-thumbnail product_cat-table product_cat-bed product_cat-lamp product_tag-table product_tag-hat product_tag-sock last instock featured downloadable shipping-taxable purchasable product-type-simple">
                                 <div class="product-inner">
                                     <div class="product-thumb">
-                                        <a class="thumb-link"
-                                           href="single-product.html"
-                                           tabindex="-1">
+                                        <a class="thumb-link" href="/api/pesanan" tabindex="-1">
                                             <img class="img-responsive"
                                                  src="{{asset('images/bs 1.9.jpg')}}"
                                                  alt="Soccer Shoes" width="90" height="90">
@@ -1796,8 +1612,7 @@
                                     </div>
                                     <div class="product-info">
                                         <h3 class="product-name product_title">
-                                            <a href="single-product.html"
-                                               tabindex="-1">Soccer Shoes</a>
+                                            <a href="/api/pesanan" tabindex="-1">Soccer Shoes</a>
                                         </h3>
                                         <div class="rating-wapper nostar">
                                             <div class="star-rating"><span
@@ -1825,16 +1640,16 @@
                                 <div class="product-inner">
                                     <div class="product-thumb">
                                         <a class="thumb-link"
-                                           href="single-product.html"
+                                           href="/api/pesanan"
                                            tabindex="0">
                                             <img class="img-responsive"
                                                  src="{{asset('images/os 1.1.jpg')}}"
-                                                 alt="Dazzling Toys" width="90" height="90">
+                                                 alt="img" width="90" height="90">
                                         </a>
                                     </div>
                                     <div class="product-info">
                                         <h3 class="product-name product_title">
-                                            <a href="single-product.html"
+                                            <a href="/api/pesanan"
                                                tabindex="0">Dazzling Toys</a>
                                         </h3>
                                         <div class="rating-wapper nostar">
@@ -1854,16 +1669,16 @@
                                 <div class="product-inner">
                                     <div class="product-thumb">
                                         <a class="thumb-link"
-                                           href="single-product.html"
+                                           href="/api/pesanan"
                                            tabindex="0">
                                             <img class="img-responsive"
                                                  src="{{asset('images/os 1.2.jpg')}}"
-                                                 alt="Kid Backpack" width="90" height="90">
+                                                 alt="img" width="90" height="90">
                                         </a>
                                     </div>
                                     <div class="product-info">
                                         <h3 class="product-name product_title">
-                                            <a href="single-product.html"
+                                            <a href="/api/pesanan"
                                                tabindex="0">Kid Backpack</a>
                                         </h3>
                                         <div class="rating-wapper nostar">
@@ -1883,16 +1698,16 @@
                                 <div class="product-inner">
                                     <div class="product-thumb">
                                         <a class="thumb-link"
-                                           href="single-product.html"
+                                           href="/api/pesanan"
                                            tabindex="0">
                                             <img class="img-responsive"
                                                  src="{{asset('images/os 1.3.jpg')}}"
-                                                 alt="Blue Shoes" width="90" height="90">
+                                                 alt="img" width="90" height="90">
                                         </a>
                                     </div>
                                     <div class="product-info">
                                         <h3 class="product-name product_title">
-                                            <a href="single-product.html"
+                                            <a href="/api/pesanan"
                                                tabindex="0">Blue Shoes</a>
                                         </h3>
                                         <div class="rating-wapper ">
@@ -1912,16 +1727,16 @@
                                 <div class="product-inner">
                                     <div class="product-thumb">
                                         <a class="thumb-link"
-                                           href="single-product.html"
+                                           href="/api/pesanan"
                                            tabindex="-1">
                                             <img class="img-responsive"
                                                  src="{{asset('images/os 1.4.jpg')}}"
-                                                 alt="Modern Platinum" width="90" height="90">
+                                                 alt="img" width="90" height="90">
                                         </a>
                                     </div>
                                     <div class="product-info">
                                         <h3 class="product-name product_title">
-                                            <a href="single-product.html"
+                                            <a href="/api/pesanan"
                                                tabindex="-1">Modern Platinum</a>
                                         </h3>
                                         <div class="rating-wapper nostar">
@@ -1941,16 +1756,16 @@
                                 <div class="product-inner">
                                     <div class="product-thumb">
                                         <a class="thumb-link"
-                                           href="single-product.html"
+                                           href="/api/pesanan"
                                            tabindex="-1">
                                             <img class="img-responsive"
                                                  src="{{asset('images/os 1.5.jpg')}}"
-                                                 alt="Red Car" width="90" height="90">
+                                                 alt="img" width="90" height="90">
                                         </a>
                                     </div>
                                     <div class="product-info">
                                         <h3 class="product-name product_title">
-                                            <a href="single-product.html"
+                                            <a href="/api/pesanan"
                                                tabindex="-1">Red Car</a>
                                         </h3>
                                         <div class="rating-wapper nostar">
@@ -1984,8 +1799,8 @@
                                             </div>
                                             <div class="cate">Komunitas</div>
                                             <div class="button-wrap">
-                                                <a class="button" target="_self"
-                                                   href="#"><span>Read More</span></a>
+                                                <a class="button" target="_blank"
+                                                   href="https://www.instagram.com/babiesbogor/?hl=id"><span>Read More</span></a>
                                             </div>
                                         </div>
                                     </div>
@@ -2005,8 +1820,8 @@
                                             </div>
                                             <div class="cate">Komunitas</div>
                                             <div class="button-wrap">
-                                                <a class="button" target="_self"
-                                                   href="#"><span>Read More</span></a>
+                                                <a class="button" target="_blank"
+                                                   href="https://www.facebook.com/momandbabypandeglang/"><span>Read More</span></a>
                                             </div>
                                         </div>
                                     </div>
@@ -2075,7 +1890,7 @@
                     <h3 class="title">
                         From Our Blog<span></span></h3>
                     <div class="subtitle">
-                        Lore ipsum dolor sit amet consectetur
+                        Very Fun Activity
                     </div>
                 </div>
             </div>
@@ -2087,7 +1902,7 @@
                             class="post-item post-grid rows-space-0 post-195 post type-post status-publish format-standard has-post-thumbnail hentry category-light category-table category-life-style tag-light tag-life-style">
                         <div class="post-inner blog-grid">
                             <div class="post-thumb">
-                                <a href="single-post.html" tabindex="0">
+                                <a href="https://www.facebook.com/momandbabypandeglang/photos/a.108590627544646/493174692419569/" tabindex="0">
                                     <img src="{{asset('images/bp1.1.jpg')}}"
                                          class="img-responsive attachment-370x330 size-370x330" alt="img"
                                          width="370" height="330"> </a>
@@ -2095,18 +1910,24 @@
                             <div class="post-content">
                                 <div class="post-meta">
                                     <div class="post-author">
-                                        <a href="#"> admin </a>
+                                        {{-- <a href="#"> admin </a> --}}
+                                        <h5>Babies Bogor</h5>
                                     </div>
                                     <div class="date">
-                                        <a href="#">January 03, 2021</a>
+                                        {{-- <a href="#">January 03, 2021</a> --}}
+                                        <h6>March 13, 2022</h6>
                                     </div>
                                 </div>
                                 <div class="post-info equal-elem">
-                                    <h2 class="post-title"><a
-                                            href="single-post.html"
-                                            tabindex="0">Not your ordinary multi service.</a></h2>
-                                    Lore ipsum dolor sit amet, consectetur adipiscing elit. Malesuada sodales
-                                    quisque litora dapibus primis lacinia
+                                    <h2 class="post-title">
+                                        <a href="https://www.facebook.com/momandbabypandeglang/photos/a.108590627544646/493174692419569/" tabindex="0">Solusi si kecil yang susah makan!</a>
+                                    </h2>
+                                    <p>1. Menjadikan makan menjadi waktu yang menyenangkan <br>
+                                        2. Gunakan perlengkapan makan dengan warna gambar yang sisukai sikecil <br>
+                                        3. Membuat jadwal makan yang tepat <br>
+                                        4. Masak bersama anak <br>
+                                        — feeling loved.
+                                    </p>
                                 </div>
                             </div>
                         </div>
@@ -2115,8 +1936,7 @@
                             class="post-item post-grid rows-space-0 post-192 post type-post status-publish format-standard has-post-thumbnail hentry category-light category-fashion category-multi category-life-style tag-light tag-fashion tag-multi">
                         <div class="post-inner blog-grid">
                             <div class="post-thumb">
-                                <a href="single-post.html"
-                                   tabindex="0">
+                                <a href="#" tabindex="0">
                                     <img src="{{asset('images/bp1.2.jpg')}}"
                                          class="img-responsive attachment-370x330 size-370x330" alt="img"
                                          width="370" height="330"> </a>
@@ -2124,18 +1944,24 @@
                             <div class="post-content">
                                 <div class="post-meta">
                                     <div class="post-author">
-                                        <a href="#"> admin </a>
+                                        {{-- <a href="#"> admin </a> --}}
+                                        <h5>Babies Jakarta</h5>
                                     </div>
                                     <div class="date">
-                                        <a href="#">January 03, 2021</a>
+                                        {{-- <a href="#">January 03, 2021</a> --}}
+                                        <h6>July 23, 2018</h6>
                                     </div>
                                 </div>
                                 <div class="post-info equal-elem">
-                                    <h2 class="post-title"><a
-                                            href="single-post.html"
-                                            tabindex="0">We bring you the best by working</a></h2>
-                                    Lore ipsum dolor sit amet, consectetur adipiscing elit. Malesuada sodales
-                                    quisque litora dapibus primis lacinia
+                                    <h2 class="post-title">
+                                        <a href="#" tabindex="0">Selamat Hari Anak Nasional</a>
+                                    </h2>
+                                    <p>Semoga anaka-anak kita tumbuh menjadi anak-anak yang cerdas,
+                                    sehat,berakhlak baik,dan kelak dapat jadi penguat kehidupan kehidupan
+                                    berbangsa dan bernegara.Karena manusia berkualitas di besarkan di rumah
+                                    yang penuh kasih sayang. <br>
+                                    -Love
+                                </p>
                                 </div>
                             </div>
                         </div>
@@ -2144,7 +1970,7 @@
                             class="post-item post-grid rows-space-0 post-189 post type-post status-publish format-video has-post-thumbnail hentry category-table category-life-style tag-multi tag-life-style post_format-post-format-video">
                         <div class="post-inner blog-grid">
                             <div class="post-thumb">
-                                <a href="single-post.html"
+                                <a href="https://www.facebook.com/momandbabypandeglang/photos/a.115291040207938/132908238446218/"
                                    tabindex="0">
                                     <img src="{{asset('images/bp1.3.jpg')}}"
                                          class="img-responsive attachment-370x330 size-370x330" alt="img"
@@ -2153,18 +1979,26 @@
                             <div class="post-content">
                                 <div class="post-meta">
                                     <div class="post-author">
-                                        <a href="#"> admin </a>
+                                        {{-- <a href="#"> admin </a> --}}
+                                        <h5>The Babies Jakarta</h5>
                                     </div>
                                     <div class="date">
-                                        <a href="#">January 03, 2021</a>
+                                        {{-- <a href="#">January 03, 2021</a> --}}
+                                        <h6>July 9, 2020</h6>
                                     </div>
                                 </div>
                                 <div class="post-info equal-elem">
-                                    <h2 class="post-title"><a
-                                            href="single-post.html"
-                                            tabindex="0">We design functional best multi</a></h2>
-                                    Lore ipsum dolor sit amet, consectetur adipiscing elit. Malesuada sodales
-                                    quisque litora dapibus primis lacinia
+                                    <h2 class="post-title">
+                                        <a href="https://www.facebook.com/momandbabypandeglang/photos/a.115291040207938/132908238446218/" tabindex="0">Mencegah nyamuk mendekati baby</a>
+                                    </h2>
+                                    <p>1. Jaga kebersihan rumah dan lingkungan <br>
+                                       2. Gunakan kelambu <br>
+                                       3. Pasang kawat kasa <br>
+                                       4. Gunakan losion anti nyamuk <br>
+                                       5. Pakaikan baju dan celana panjang <br>
+                                       6. Berikan makanan sehat penguat imun tubuh <br>
+                                       — at Home
+                                    </p>
                                 </div>
                             </div>
                         </div>

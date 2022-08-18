@@ -46,7 +46,7 @@
             <h1 class="page-title">Akun</h1>
             <div role="navigation" aria-label="Breadcrumbs" class="breadcrumb-trail breadcrumbs">
                 <ul class="trail-items breadcrumb">
-                    <li class="trail-item trail-begin"><a href="{{ route('layout.master') }}"><span>Home</span></a></li>
+                    <li class="trail-item trail-begin"><a href="#"><span>Home</span></a></li>
                     <li class="trail-item trail-end active"><span>Akun</span>
                     </li>
                 </ul>
@@ -59,30 +59,30 @@
             <h2>Akun</h2>
         </div>
         <div class="card p-5 mt-2 mr-5 mb-2 ml-5" style="background-color: gray;border-radius: 20px;">
-            @include('akun.edit_profile')
-            @include('akun.daftar_peserta')
-            @include('akun.daftar_alamat')
+            @include('edit_profile.index')
+            @include('daftar_peserta.index')
+            @include('daftar_alamat.index')
         </div>
         <div class="card p-5 mt-2 mr-5 mb-2 ml-5" style="background-color: gray;border-radius: 20px;">
-            @include('akun.ubah_password')
+            @include('ubah_password.index')
         </div>
         <div class="card p-5 mt-2 mr-5 mb-2 ml-5" style="background-color: gray;border-radius: 20px;">
-            @include('akun.merchant')
-            @include('akun.product_detail')
-            @include('akun.status_order')
-            @include('akun.pengiriman')
+            @include('merchant.index')
+            @include('product_detail.index')
+            @include('status_order.index')
+            @include('pengiriman.index')
         </div>
         <div class="card p-5 mt-2 mr-5 mb-2 ml-5" style="background-color: gray;border-radius: 20px;">
-            @include('akun.kelas_online')
+            @include('kelas_online.index')
         </div>
         <div class="card p-5 mt-2 mr-5 mb-2 ml-5" style="background-color: gray;border-radius: 20px;">
-            @include('akun.ketentuan')
-            @include('akun.kebijakan_privasi')
-            @include('akun.hubungi_kami')
-            @include('akun.tentang_kami')
+            @include('ketentuan.index')
+            @include('kebijakan_privasi.index')
+            @include('hubungi_kami.index')
+            @include('tentang_kami.index')
         </div>
         <div class="card m-2 text-center" style="border-radius: 20px">
-            <h2><a href="{{ route('layout.master') }}">Logout</a></h2>
+            <h2><a href="#">Logout</a></h2>
         </div>
     </div>
     <div class="site-main  main-container no-sidebar">
@@ -147,7 +147,7 @@
                     <h3 class="title">
                         Follow Us <span></span></h3>
                     <div class="subtitle">
-                        @kodorystore
+                        @childstore
                     </div>
                 </div>
             </div>

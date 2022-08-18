@@ -16,3 +16,21 @@ use Illuminate\Http\Request;
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
+Route::get('/', function() {
+    return view('layout.master');
+});
+Route::get('/katalog', function() {
+    return view('katalog.index');
+});
+Route::get('/pesanan', function() {
+    return view('pesanan.index');
+});
+Route::get('/premium', function() {
+    return view('premium.index');
+});
+Route::get('/top_up', function() {
+    return view('top_up.index');
+});
+Route::get('/akun', function() {
+    return view('akun.index');
+});

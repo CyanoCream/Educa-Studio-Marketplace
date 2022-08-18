@@ -56,31 +56,6 @@
                         </div>
                     </div>
                 </div>
-                {{-- <div class="col-md-6 col-lg-3">
-                    <div class="kodory-listitem style-04">
-                        <div class="listitem-inner">
-                            <h4 class="title">Customer </h4>
-                            <ul class="listitem-list">
-                                <li>
-                                    <a href="#" target=" _blank">
-                                        Shipping &amp; Returns </a>
-                                </li>
-                                <li>
-                                    <a href="#" target="_self">
-                                        Secure Shopping </a>
-                                </li>
-                                <li>
-                                    <a href="#" target="_self">
-                                        Order Status </a>
-                                </li>
-                                <li>
-                                    <a href="#" target="_self">
-                                        International Shipping </a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div> --}}
                 <div class="col-lg-6 d-none d-lg-block">
                     <div class="logo-footer">
                         <img src="{{asset('images/logoo.png')}}"
@@ -111,32 +86,6 @@
                         </div>
                     </div>
                 </div>
-                {{-- <div class="col-md-6 col-lg-3">
-                    <div class="kodory-listitem style-04">
-                        <div class="listitem-inner">
-                            <h4 class="title">
-                                Information </h4>
-                            <ul class="listitem-list">
-                                <li>
-                                    <a href="#" target="_self">
-                                        Privacy Policy </a>
-                                </li>
-                                <li>
-                                    <a href="#" target="_self">
-                                        Customer Service </a>
-                                </li>
-                                <li>
-                                    <a href="#" target="_self">
-                                        Orders and Returns </a>
-                                </li>
-                                <li>
-                                    <a href="#" target="_self">
-                                        Contact </a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div> --}}
             </div>
         </div>
     </div>
@@ -144,14 +93,8 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-6">
-                    <p>© Copyright 2022 <a href="#">Child</a>. All Rights Reserved.</p>
+                    <p>© Copyright 2022 <a href="/api">Child</a>. All Rights Reserved.</p>
                 </div>
-                {{-- <div class="col-md-6">
-                    <div class="payment">
-                        <img src="assets/images/payment.png"
-                             class="az_single_image-img attachment-full" alt="img">
-                    </div>
-                </div> --}}
             </div>
         </div>
     </div>
@@ -159,7 +102,7 @@
 <div class="footer-device-mobile">
     <div class="wapper">
         <div class="footer-device-mobile-item device-home">
-            <a href="index.html">
+            <a href="/api">
 					<span class="icon">
 						<span class="fa fa-home"></span>
 					</span>
@@ -167,7 +110,7 @@
             </a>
         </div>
         <div class="footer-device-mobile-item device-home device-wishlist">
-            <a href="wishlist.html">
+            <a href="/api/katalog">
 					<span class="icon">
 						<span class="flaticon-heart"></span>
 					</span>
@@ -175,7 +118,7 @@
             </a>
         </div>
         <div class="footer-device-mobile-item device-home device-cart">
-            <a href="cart.html">
+            <a href="/api/pesanan">
 					<span class="icon">
 						<span class="flaticon-shopping-bag-1"></span>
 						<span class="count-icon">
@@ -186,7 +129,7 @@
             </a>
         </div>
         <div class="footer-device-mobile-item device-home device-user">
-            <a href="my-account.html">
+            <a href="/api/akun">
 					<span class="icon">
 						<span class="flaticon-profile"></span>
 					</span>

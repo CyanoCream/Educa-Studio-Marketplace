@@ -46,7 +46,7 @@
             <h1 class="page-title">Top Up</h1>
             <div role="navigation" aria-label="Breadcrumbs" class="breadcrumb-trail breadcrumbs">
                 <ul class="trail-items breadcrumb">
-                    <li class="trail-item trail-begin"><a href="{{ route('layout.master') }}"><span>Home</span></a></li>
+                    <li class="trail-item trail-begin"><a href="#"><span>Home</span></a></li>
                     <li class="trail-item trail-end active"><span>Top Up</span>
                     </li>
                 </ul>
