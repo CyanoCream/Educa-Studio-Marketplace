@@ -1936,7 +1936,7 @@
                             class="post-item post-grid rows-space-0 post-192 post type-post status-publish format-standard has-post-thumbnail hentry category-light category-fashion category-multi category-life-style tag-light tag-fashion tag-multi">
                         <div class="post-inner blog-grid">
                             <div class="post-thumb">
-                                <a href="#" tabindex="0">
+                                <a href="https://www.facebook.com/momandbabypandeglang" tabindex="0">
                                     <img src="{{asset('images/bp1.2.jpg')}}"
                                          class="img-responsive attachment-370x330 size-370x330" alt="img"
                                          width="370" height="330"> </a>
@@ -1954,9 +1954,9 @@
                                 </div>
                                 <div class="post-info equal-elem">
                                     <h2 class="post-title">
-                                        <a href="#" tabindex="0">Selamat Hari Anak Nasional</a>
+                                        <a href="https://www.facebook.com/momandbabypandeglang" tabindex="0">Selamat Hari Anak Nasional</a>
                                     </h2>
-                                    <p>Semoga anaka-anak kita tumbuh menjadi anak-anak yang cerdas,
+                                    <p>Semoga anak-anak kita tumbuh menjadi anak-anak yang cerdas,
                                     sehat,berakhlak baik,dan kelak dapat jadi penguat kehidupan kehidupan
                                     berbangsa dan bernegara.Karena manusia berkualitas di besarkan di rumah
                                     yang penuh kasih sayang. <br>
@@ -2016,18 +2016,25 @@
                             <div class="post-content">
                                 <div class="post-meta">
                                     <div class="post-author">
-                                        <a href="#"> admin </a>
+                                        {{-- <a href="#"> admin </a> --}}
+                                        <h5>The Babies Jakarta</h5>
                                     </div>
                                     <div class="date">
-                                        <a href="#">January 03, 2021</a>
+                                        {{-- <a href="#">January 03, 2021</a> --}}
+                                        <h6>March 15, 2022</h6>
                                     </div>
                                 </div>
                                 <div class="post-info equal-elem">
-                                    <h2 class="post-title"><a
-                                            href="single-post.html"
-                                            tabindex="-1">The child is swimming with a buoy</a></h2>
-                                    Lore ipsum dolor sit amet, consectetur adipiscing elit. Malesuada sodales
-                                    quisque litora dapibus primis lacinia
+                                    <h2 class="post-title">
+                                        <a href="https://www.facebook.com/momandbabypandeglang/photos/a.108590627544646/494387705631601/" tabindex="-1">Quotes of the day...</a>
+                                    </h2>
+                                    <p>Anak bagaikan cermin, <br>
+                                    apa yang ia lihat dan <br>
+                                    dengar ia akan menirunya. <br>
+                                    Jadilah cermin yang baik <br>
+                                    untuk mereka untuk <br>
+                                    kedepannya. <br>
+                                    - Mom And Baby</p>
                                 </div>
                             </div>
                         </div>

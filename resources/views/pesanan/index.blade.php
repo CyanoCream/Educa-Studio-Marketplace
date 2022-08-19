@@ -519,45 +519,6 @@
         </div>
     </div>
 </footer>
-<div class="footer-device-mobile">
-    <div class="wapper">
-        <div class="footer-device-mobile-item device-home">
-            <a href="index.html">
-					<span class="icon">
-						<span class="fa fa-home"></span>
-					</span>
-                Home
-            </a>
-        </div>
-        <div class="footer-device-mobile-item device-home device-wishlist">
-            <a href="wishlist.html">
-					<span class="icon">
-						<span class="flaticon-heart"></span>
-					</span>
-                Wishlist
-            </a>
-        </div>
-        <div class="footer-device-mobile-item device-home device-cart">
-            <a href="cart.html">
-					<span class="icon">
-						<span class="flaticon-shopping-bag-1"></span>
-						<span class="count-icon">
-							0
-						</span>
-					</span>
-                <span class="text">Cart</span>
-            </a>
-        </div>
-        <div class="footer-device-mobile-item device-home device-user">
-            <a href="my-account.html">
-					<span class="icon">
-						<span class="flaticon-profile"></span>
-					</span>
-                Account
-            </a>
-        </div>
-    </div>
-</div>
 <a href="#" class="backtotop active">
     <i class="fa fa-angle-double-up"></i>
 </a>

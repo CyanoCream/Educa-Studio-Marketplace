@@ -141,3 +141,6 @@
 <a href="#" class="backtotop active">
     <i class="fa fa-angle-double-up"></i>
 </a>
+
+@include('auth.register')
+@include('auth.login')

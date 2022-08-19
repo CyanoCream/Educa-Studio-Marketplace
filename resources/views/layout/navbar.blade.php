@@ -88,9 +88,17 @@
                                 </div>
                                 <div class="kodory-dropdown-close"></div>
                                 <div class="menu-item block-user block-dreaming kodory-dropdown">
-                                    <a class="block-link" href="/api/akun">
+                                    <a class="block-link" href="#">
                                         <span class="flaticon-profile"></span>
                                     </a>
+                                    <ul class="sub-menu">
+                                        <a href="#" data-toggle="modal" data-target="#login">
+                                            <h5>Login</h5>
+                                        </a>
+                                        <a href="#" data-toggle="modal" data-target="#register">
+                                            <h5>Register</h5>
+                                        </a>
+                                    </ul>
                                 </div>
                                 <div class="block-minicart block-dreaming kodory-mini-cart kodory-dropdown">
                                     <div class="shopcart-dropdown block-cart-link" data-kodory="kodory-dropdown">

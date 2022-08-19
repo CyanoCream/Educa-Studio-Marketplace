@@ -99,4 +99,8 @@
 //     return redirect(route('login'));
 // });
 
+Route::get('product_detail', function () {
+    return view('product_detail.index');
+})->name('product_detail.index');
+
 // Route::get('/dashboard', 'DashboardController@index')->name('dashboard')

@@ -29,7 +29,7 @@
                         </a>
                     </div>
                     <div class="header-logo">
-                        <a href="#"><img alt="img" src="{{asset('images/logoo.png')}}" width="100px" class="logo"></a>
+                        <a href="/api"><img alt="img" src="{{asset('images/logoo.png')}}" width="100px" class="logo"></a>
                     </div>
                 </div>
                 <div class="header-search-mid">
@@ -132,7 +132,7 @@
         <h1 class="page-title">Shop</h1>
         <div role="navigation" aria-label="Breadcrumbs" class="breadcrumb-trail breadcrumbs">
             <ul class="trail-items breadcrumb">
-                <li class="trail-item trail-begin"><a href="#"><span>Home</span></a></li>
+                <li class="trail-item trail-begin"><a href="/api"><span>Home</span></a></li>
                 <li class="trail-item trail-end active"><span>Shop</span>
                 </li>
             </ul>
@@ -173,9 +173,9 @@
                             data-wow-duration="1s" data-wow-delay="0ms" data-wow="fadeInUp">
                             <div class="product-inner tooltip-left">
                                 <div class="product-thumb">
-                                    <a class="thumb-link" href="single-product.html">
+                                    <a class="thumb-link" href="#">
                                         <img class="img-responsive" src="{{asset('images/np1.jpeg')}}"
-                                            alt="Kid Backpack" width="600" height="778">
+                                            alt="img" width="600" height="778">
                                     </a>
                                     <div class="flash">
                                         <span class="onnew"><span class="text">New</span></span>
@@ -235,7 +235,7 @@
                                 </div>
                                 <div class="product-info equal-elem">
                                     <h3 class="product-name product_title">
-                                        <a href="single-product.html">Kindergarten English Course Power</a>
+                                        <a href="#">Kindergarten English Course Power</a>
                                     </h3>
                                     <span class="price"><span class="kodory-Price-amount amount"><span
                                                 class="kodory-Price-currencySymbol">$</span>45.00</span> – <span
@@ -260,11 +260,11 @@
                                             </div>
                                         </div>
                                         <div class="kodory product compare-button">
-                                            <a href="compare.html" class="compare button">Compare</a>
+                                            <a href="#" class="compare button">Compare</a>
                                         </div>
                                         <a href="#" class="button yith-wcqv-button">Quick View</a>
                                         <div class="add-to-cart">
-                                            <a href="cart.html"
+                                            <a href="#"
                                                 class="button product_type_variable add_to_cart_button">Select
                                                 options</a>
                                         </div>
@@ -276,24 +276,24 @@
                             data-wow-duration="1s" data-wow-delay="0ms" data-wow="fadeInUp">
                             <div class="product-inner tooltip-left">
                                 <div class="product-thumb">
-                                    <a class="thumb-link" href="single-product.html">
+                                    <a class="thumb-link" href="#">
                                         <img class="img-responsive" src="{{asset('images/np2.jpeg')}}"
-                                            alt="Blue Shoes" width="600" height="778">
+                                            alt="img" width="600" height="778">
                                     </a>
                                     <a href="#" class="button yith-wcqv-button" data-product_id="24">Quick
                                         View</a>
                                     <div class="group-button">
                                         <div class="yith-wcwl-add-to-wishlist">
                                             <div class="yith-wcwl-add-button show">
-                                                <a href="wishlist.html" class="add_to_wishlist">Add to Wishlist</a>
+                                                <a href="3" class="add_to_wishlist">Add to Wishlist</a>
                                             </div>
                                         </div>
                                         <div class="kodory product compare-button">
-                                            <a href="compare.html" class="compare button">Compare</a>
+                                            <a href="#" class="compare button">Compare</a>
                                         </div>
                                         <a href="#" class="button yith-wcqv-button">Quick View</a>
                                         <div class="add-to-cart">
-                                            <a href="cart.html"
+                                            <a href="#"
                                                 class="button product_type_simple add_to_cart_button">Add to
                                                 cart</a>
                                         </div>
@@ -301,7 +301,7 @@
                                 </div>
                                 <div class="product-info equal-elem">
                                     <h3 class="product-name product_title">
-                                        <a href="single-product.html"> Private English Course Les Bahasa Inggris Privat</a>
+                                        <a href="#"> Private English Course Les Bahasa Inggris Privat</a>
                                     </h3>
                                     <span class="price"><del><span class="kodory-Price-amount amount"><span
                                                     class="kodory-Price-currencySymbol">$</span>138.00</span></del>
@@ -322,15 +322,15 @@
                                     <div class="group-button-inner">
                                         <div class="yith-wcwl-add-to-wishlist">
                                             <div class="yith-wcwl-add-button show">
-                                                <a href="wishlist.html" class="add_to_wishlist">Add to Wishlist</a>
+                                                <a href="#" class="add_to_wishlist">Add to Wishlist</a>
                                             </div>
                                         </div>
                                         <div class="kodory product compare-button">
-                                            <a href="compare.html" class="compare button">Compare</a>
+                                            <a href="#" class="compare button">Compare</a>
                                         </div>
                                         <a href="#" class="button yith-wcqv-button">Quick View</a>
                                         <div class="add-to-cart">
-                                            <a href="cart.html"
+                                            <a href="#"
                                                 class="button product_type_variable add_to_cart_button">Select
                                                 options</a>
                                         </div>
@@ -342,9 +342,9 @@
                             data-wow-duration="1s" data-wow-delay="0ms" data-wow="fadeInUp">
                             <div class="product-inner tooltip-left">
                                 <div class="product-thumb">
-                                    <a class="thumb-link" href="single-product.html">
+                                    <a class="thumb-link" href="#">
                                         <img class="img-responsive" src="{{asset('images/np3.jpg')}}"
-                                            alt="Penguin Hoodie" width="600" height="778">
+                                            alt="img" width="600" height="778">
                                     </a>
                                     <div class="flash">
                                         <span class="onnew"><span class="text">New</span></span>
@@ -354,15 +354,15 @@
                                     <div class="group-button">
                                         <div class="yith-wcwl-add-to-wishlist">
                                             <div class="yith-wcwl-add-button show">
-                                                <a href="wishlist.html" class="add_to_wishlist">Add to Wishlist</a>
+                                                <a href="#" class="add_to_wishlist">Add to Wishlist</a>
                                             </div>
                                         </div>
                                         <div class="kodory product compare-button">
-                                            <a href="compare.html" class="compare button">Compare</a>
+                                            <a href="#" class="compare button">Compare</a>
                                         </div>
                                         <a href="#" class="button yith-wcqv-button">Quick View</a>
                                         <div class="add-to-cart">
-                                            <a href="cart.html"
+                                            <a href="#"
                                                 class="button product_type_simple add_to_cart_button">Add to
                                                 cart</a>
                                         </div>
@@ -370,7 +370,7 @@
                                 </div>
                                 <div class="product-info equal-elem">
                                     <h3 class="product-name product_title">
-                                        <a href="single-product.html">Praxis Fun English Online Course</a>
+                                        <a href="#">Praxis Fun English Online Course</a>
                                     </h3>
                                     <span class="price"><span class="kodory-Price-amount amount"><span
                                                 class="kodory-Price-currencySymbol">$</span>60.00</span></span>
@@ -389,11 +389,11 @@
                                     <div class="group-button-inner">
                                         <div class="yith-wcwl-add-to-wishlist">
                                             <div class="yith-wcwl-add-button show">
-                                                <a href="wishlist.html" class="add_to_wishlist">Add to Wishlist</a>
+                                                <a href="#" class="add_to_wishlist">Add to Wishlist</a>
                                             </div>
                                         </div>
                                         <div class="kodory product compare-button">
-                                            <a href="compare.html" class="compare button">Compare</a>
+                                            <a href="#" class="compare button">Compare</a>
                                         </div>
                                         <a href="#" class="button yith-wcqv-button">Quick View</a>
                                         <div class="add-to-cart">
@@ -409,9 +409,9 @@
                             data-wow-duration="1s" data-wow-delay="0ms" data-wow="fadeInUp">
                             <div class="product-inner tooltip-left">
                                 <div class="product-thumb">
-                                    <a class="thumb-link" href="single-product.html">
+                                    <a class="thumb-link" href="#">
                                         <img class="img-responsive" src="{{asset('images/np4.jpeg')}}"
-                                            alt="Cute Girl Shirt" width="600" height="778">
+                                            alt="img" width="600" height="778">
                                     </a>
                                     <div class="flash">
                                         <span class="onnew"><span class="text">New</span></span>
@@ -455,15 +455,15 @@
                                     <div class="group-button">
                                         <div class="yith-wcwl-add-to-wishlist">
                                             <div class="yith-wcwl-add-button show">
-                                                <a href="wishlist.html" class="add_to_wishlist">Add to Wishlist</a>
+                                                <a href="#" class="add_to_wishlist">Add to Wishlist</a>
                                             </div>
                                         </div>
                                         <div class="kodory product compare-button">
-                                            <a href="compare.html" class="compare button">Compare</a>
+                                            <a href="#" class="compare button">Compare</a>
                                         </div>
                                         <a href="#" class="button yith-wcqv-button">Quick View</a>
                                         <div class="add-to-cart">
-                                            <a href="cart.html"
+                                            <a href="#"
                                                 class="button product_type_variable add_to_cart_button">Select
                                                 options</a>
                                         </div>
@@ -471,7 +471,7 @@
                                 </div>
                                 <div class="product-info equal-elem">
                                     <h3 class="product-name product_title">
-                                        <a href="single-product.html">English for SchoolAge (Offline Kota Madiun)</a>
+                                        <a href="#">English for SchoolAge (Offline Kota Madiun)</a>
                                     </h3>
                                     <span class="price"><span class="kodory-Price-amount amount"><span
                                                 class="kodory-Price-currencySymbol">$</span>105.00</span> – <span
@@ -492,7 +492,7 @@
                                     <div class="group-button-inner">
                                         <div class="yith-wcwl-add-to-wishlist">
                                             <div class="yith-wcwl-add-button show">
-                                                <a href="wishlist.html" class="add_to_wishlist">Add to Wishlist</a>
+                                                <a href="#" class="add_to_wishlist">Add to Wishlist</a>
                                             </div>
                                         </div>
                                         <div class="kodory product compare-button">

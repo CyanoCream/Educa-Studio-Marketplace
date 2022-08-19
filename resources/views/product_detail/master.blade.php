@@ -22,15 +22,7 @@
     <title>Child</title>
 </head>
 <body>
-@yield('content')
-
-@include('layout.navbar')
-
-{{-- body --}}
-@include('layout.body')
-
-{{-- footer --}}
-@include('layout.footer')
+@include('product_detail.index')
 
 
 
@@ -49,18 +41,5 @@
 <script src="{{asset('js/functions.js')}}"></script>
 <script src="{{asset('js/jquery.min.js')}}"></script>
 <script src="{{asset('js/bootstrap.bundle.min.js')}}"></script>
-<script>
-    $('.register').on('click', function() {
-        $('#login').modal('hide');
-        $('.modal-backdrop').remove();
-        // $('#register').modal('show');
-    })
-    $('.login').on('click', function() {
-        // $('#login').modal('show');
-        $('#register').modal('hide');
-        $('.modal-backdrop').remove();
-    })
-
-</script>
 </body>
 </html>
