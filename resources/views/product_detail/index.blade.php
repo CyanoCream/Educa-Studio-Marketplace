@@ -1,4 +1,6 @@
-@extends('layout.master')
+@extends('product_detail.master')
+
+@section('content')
 <div>
     <a href="#" target="_self">
         <h5 class="d-flex justify-content-between">
@@ -1038,3 +1040,4 @@
 <a href="#" class="backtotop active">
     <i class="fa fa-angle-double-up"></i>
 </a>
+@endsection

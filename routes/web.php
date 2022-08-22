@@ -11,9 +11,9 @@
 |
 */
 
-// Route::get('/', function () {
-//     return view('layout.master');
-// });
+Route::get('/', function () {
+    return view('admin.master');
+});
 
 // Route::get('layout', function () {
 //     return view('layout.master');
@@ -62,11 +62,6 @@
 // Route::get('akun', function () {
 //     return view('akun.index');
 // })->name('akun.index');
-
-
-
-
-
 // Route::prefix('akun')->group(function () {
 //     Route::get('orders', function () {
 //         return view('akun.orders');
@@ -82,9 +77,9 @@
 //     })->name('akun.logout');    
 // });
 
-// Route::get('top_up', function () {
-//     return view('top_up.index');
-// })->name('top_up.index');
+Route::get('top_up', function () {
+    return view('top_up.index');
+})->name('top_up.index');
 // Route::prefix('top_up')->group(function () {
 //     Route::get('top_up', function () {
 //     return view('top_up.paket_data');
@@ -99,8 +94,20 @@
 //     return redirect(route('login'));
 // });
 
-Route::get('product_detail', function () {
-    return view('product_detail.index');
-})->name('product_detail.index');
+// Route::get('product_detail', function () {
+//     return view('product_detail.index');
+// })->name('product_detail.index');
 
-// Route::get('/dashboard', 'DashboardController@index')->name('dashboard')
+Route::get('/home', 'HomeController@index')->name('dashboard');
+
+Route::get('/detail_order', 'DetailOrderController@index')->name('daftarDetail_Order');
+
+Route::get('/detail_order/create', 'DetailOrderController@create')->name('createDetail_Order');
+
+Route::post('/detail_order/create', 'DetailOrderController@store')->name('storeDetail_Order');
+
+Route::get('/detail_order/{detail_order}/edit', 'DetailOrderController@edit')->name('editDetail_Order');
+
+Route::post('/detail_order/{detail_order}/edit', 'DetailOrderController@update')->name('updateDetail_Order');
+
+Route::get('/detail_order/{detail_order}/delete', 'DetailOrderController@destroy')->name('deleteDetail_Order');
