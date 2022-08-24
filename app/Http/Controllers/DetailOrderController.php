@@ -21,7 +21,7 @@ class DetailOrderController extends Controller
 
     public function getDetailOrder()
     {
-        $detail_orders = Detail_order::all();
+        $detail_orders = detail_order::all();
 
         return $detail_orders;
     }
@@ -51,7 +51,7 @@ class DetailOrderController extends Controller
             'qty_order' => 'required|string|max:255' ,
         ])->validate();
 
-        $detail_order = new detail_order($validatedData);
+        $detail_order = new Detail_order($validatedData);
         $detail_order->save();
 
         return redirect(route('daftarDetail_Order'));

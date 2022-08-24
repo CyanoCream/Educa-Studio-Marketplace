@@ -53,19 +53,19 @@
             </div>
         </div>
     </div>
-    <div class="card p-5 m-5" style="border-radius: 20px; background: rgb(110,73,158);
-    background: linear-gradient(180deg, rgba(110,73,158,1) 0%, rgba(148,35,150,1) 53%, rgba(198,75,75,1) 100%);">
+    <div class="card p-5 m-5" style="border-radius: 20px; background: rgb(177, 130, 239);
+    background: linear-gradient(180deg, rgb(159, 141, 181) 0%, rgb(248, 158, 249) 53%, rgb(244, 159, 246) 100%);">
         <div class="card m-2 text-center" style="border-radius: 20px">
             <h2>Top Up</h2>
         </div>
-        <div class="card p-5 m-5" style="background-color: gray;border-radius: 20px;">
+        <div class="card p-5 m-5" style="background-color: rgb(255, 255, 255);border-radius: 20px;">
             <h3 class=" text-center">Isi Ulang</h3>
             <hr>
             @include('top_up.paket_data')
             @include('top_up.pulsa')
             @include('top_up.token_listrik')
         </div>
-        <div class="card p-5 m-5" style="background-color: gray;border-radius: 20px;">
+        <div class="card p-5 m-5" style="background-color: rgb(255, 255, 255);border-radius: 20px;">
             <h3 class=" text-center">Pembayaran</h3>
             <hr>
             @include('top_up.bpjs_kesehatan')

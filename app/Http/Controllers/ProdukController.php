@@ -17,68 +17,67 @@ class ProdukController extends Controller
      */
     public function index()
     {
-        $produks = Produk::all();
-
-        return view('produk.index', [
+        $produks = produk::all();
+        return view('admin.produk.index', [
             'produks' => $produks
         ]);
     }
 
     public function getProduk()
     {
-        $produks = Produk::all();
-        
+        $produks = produk::all();
         return $produks;
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
+    // /**
+    //  * Show the form for creating a new resource.
+    //  *
+    //  * @return \Illuminate\Http\Response
+    //  */
     public function create(Request $request)
     {
-        $data = $request->all();
+        return view('admin.produk.create');
+        // $data = $request->all();
 
-        $produk = new Produk($data);
-        $produk->save();
+        // $produk = new Produk($data);
+        // $produk->save();
 
-        $status = 400;
-        $message = "Gagal menyimpan product!";
+        // $status = 400;
+        // $message = "Gagal menyimpan product!";
 
-        if($produk){
-            $status = 200;
-            $message = "Berhasil menyimpan product!";
-        }
+        // if($produk){
+        //     $status = 200;
+        //     $message = "Berhasil menyimpan product!";
+        // }
 
-        return response()->json([
-            'status' => $status,
-            'message' => $message,
-            'data' => $data
-        ]);
+        // return response()->json([
+        //     'status' => $status,
+        //     'message' => $message,
+        //     'data' => $data
+        // ]);
     }
 
-    public function insertProduk(Request $request)
-    {
-        $data = $request->all();
+    // public function insertProduk(Request $request)
+    // {
+    //     $data = $request->all();
 
-        $produk = new Produk($data);
-        $produk->save();
+    //     $produk = new Produk($data);
+    //     $produk->save();
 
-        $status = 400;
-        $message = "Gagal menyimpan product!";
+    //     $status = 400;
+    //     $message = "Gagal menyimpan product!";
 
-        if($produk){
-            $status = 200;
-            $message = "Berhasil menyimpan product!";
-        }
+    //     if($produk){
+    //         $status = 200;
+    //         $message = "Berhasil menyimpan product!";
+    //     }
 
-        return response()->json([
-            'status' => $status,
-            'message' => $message,
-            'data' => $data
-        ]);
-    }
+    //     return response()->json([
+    //         'status' => $status,
+    //         'message' => $message,
+    //         'data' => $data
+    //     ]);
+    // }
 
     /**
      * Store a newly created resource in storage.
@@ -88,7 +87,22 @@ class ProdukController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $validatedData = $request->validate([
+            'id_kategori' => 'required|integer' ,
+            'nama_produk' => 'required|string|max:255' ,
+            'harga_produk' => 'required|integer' ,
+            'pertemuan' => 'required|string|max:255' ,
+            'waktu_temu' => 'required|integer' ,
+            'umur' => 'required|string|max:255' ,
+            'keterangan' => 'required|string' ,
+            'manfaat' => 'required|string' ,
+            'bundling' => 'required|string|max:255' ,
+        ]);
+
+        $produk = new produk($validatedData);
+        $produk->save();
+
+        return redirect(route('daftarProduk'));
     }
 
     /**
@@ -110,7 +124,10 @@ class ProdukController extends Controller
      */
     public function edit($id)
     {
-        //
+        $produk = produk::find($id);
+        return view('admin.produk.edit', [
+            'produk' => $produk
+        ]);
     }
 
     /**
@@ -120,9 +137,35 @@ class ProdukController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, $produk)
     {
-        //
+    
+        $validatedData = $request->validate([
+            'id_kategori' => 'required|integer' ,
+            'nama_produk' => 'required|string|max:255' ,
+            'harga_produk' => 'required|integer' ,
+            'pertemuan' => 'required|string|max:255' ,
+            'waktu_temu' => 'required|integer' ,
+            'umur' => 'required|string|max:255' ,
+            'keterangan' => 'required|string' ,
+            'manfaat' => 'required|string' ,
+            'bundling' => 'required|string|max:255' ,
+        ]);
+
+        $produk = produk::find($produk);
+
+        $produk->id_kategori = $request->id_kategori;
+        $produk->nama_produk = $request->nama_produk;
+        $produk->harga_produk = $request->harga_produk;
+        $produk->pertemuan = $request->pertemuan;
+        $produk->waktu_temu = $request->waktu_temu;
+        $produk->umur = $request->umur;
+        $produk->keterangan = $request->keterangan;
+        $produk->manfaat = $request->manfaat;
+        $produk->bundling = $request->bundling;
+        $produk->save();
+
+        return redirect(route('daftarProduk'));
     }
 
     /**
@@ -132,16 +175,18 @@ class ProdukController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function deleteProduk(Request $request)
+    public function destroy(produk $produk)
     {
-        if (request()->ajax()) {
-            $id = $request->data;
+        // if (request()->ajax()) {
+        //     $id = $request->data;
 
-            $produk = Produk::find($id);
+        //     $produk = Produk::find($id);
 
-            $produk->delete();
+        //     $produk->delete();
 
-            return "sukses";
-        }
+        //     return "sukses";
+        // }
+        $produk->delete();
+        return redirect(route('daftarProduk'));
     }
 }

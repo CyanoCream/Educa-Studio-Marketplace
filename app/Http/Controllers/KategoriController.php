@@ -14,13 +14,23 @@ class KategoriController extends Controller
      */
     public function index()
     {
-        $k = Kategori::all();
-        return $k;
+    //     $k = Kategori::all();
+    //     return $k;
+    // }
+    // public function getKategori()
+    // {
+    //     $kategoris = Kategori::all();
+
+    //     return $kategoris;
+    $kategoris = kategori::all();
+    return view('admin.kategori.index', [
+        'kategoris' => $kategoris
+    ]);
     }
+
     public function getKategori()
     {
-        $kategoris = Kategori::all();
-
+        $kategoris = kategori::all();
         return $kategoris;
     }
 
@@ -31,7 +41,7 @@ class KategoriController extends Controller
      */
     public function create()
     {
-        //
+        return view('admin.kategori.create');
     }
 
     /**
@@ -42,7 +52,14 @@ class KategoriController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $validatedData = validator($request->all(), [
+            'nama-kategori' => 'required|string|max:255' ,
+        ])->validate();
+
+        $kategori = new kategori($validatedData);
+        $kategori->save();
+
+        return redirect(route('daftarKategori'));
     }
 
     /**
@@ -64,7 +81,9 @@ class KategoriController extends Controller
      */
     public function edit($id)
     {
-        //
+        return view('admin.kategori.edit', [
+            'kategori' => $kategori
+        ]);
     }
 
     /**
@@ -74,9 +93,16 @@ class KategoriController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, Kategori $kategori)
     {
-        //
+        $validatedData = validator($request->all(), [
+            'nama-kategori' => 'required|string|max:255' ,
+        ])->validate();
+
+        $kategori = new kategori($validatedData);
+        $kategori->save();
+
+        return redirect(route('daftarKategori'));
     }
 
     /**
@@ -87,6 +113,7 @@ class KategoriController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $kategori->delete();
+        return redirect(route('daftarKategori'));
     }
 }

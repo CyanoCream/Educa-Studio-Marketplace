@@ -98,16 +98,50 @@ Route::get('top_up', function () {
 //     return view('product_detail.index');
 // })->name('product_detail.index');
 
+// home admin
 Route::get('/home', 'HomeController@index')->name('dashboard');
 
+// detail_order
 Route::get('/detail_order', 'DetailOrderController@index')->name('daftarDetail_Order');
-
 Route::get('/detail_order/create', 'DetailOrderController@create')->name('createDetail_Order');
-
 Route::post('/detail_order/create', 'DetailOrderController@store')->name('storeDetail_Order');
-
 Route::get('/detail_order/{detail_order}/edit', 'DetailOrderController@edit')->name('editDetail_Order');
-
 Route::post('/detail_order/{detail_order}/edit', 'DetailOrderController@update')->name('updateDetail_Order');
-
 Route::get('/detail_order/{detail_order}/delete', 'DetailOrderController@destroy')->name('deleteDetail_Order');
+
+// gambar
+
+
+// hubungi_kami
+Route::get('/hubungi_kami', 'HubungiKamiController@index')->name('daftarHubungi_Kami');
+Route::get('/hubungi_kami/create', 'HubungiKamiController@create')->name('createHubungi_Kami');
+Route::post('/hubungi_kami/create', 'HubungiKamiController@store')->name('storeHubungi_Kami');
+Route::get('/hubungi_kami/{hubungi_kami}/edit', 'HubungiKamiController@edit')->name('editHubungi_Kami');
+Route::post('/hubungi_kami/{hubungi_kami}/edit', 'HubungiKamiController@update')->name('updateHubungi_Kami');
+Route::get('/hubungi_kami/{hubungi_kami}/delete', 'HubungiKamiController@destroy')->name('deleteHubungi_Kami');
+
+// kategori
+Route::get('/kategori', 'KategoriController@index')->name('daftarKategori');
+Route::get('/kategori/create', 'KategoriController@create')->name('createKategori');
+Route::post('/kategori/create', 'KategoriController@store')->name('storeKategori');
+Route::get('/kategori/{kategori}/edit', 'KategoriController@edit')->name('editKategori');
+Route::post('/kategori/{kategori}/edit', 'KategoriController@update')->name('updateKategori');
+Route::get('/kategori/{kategori}/delete', 'KategoriController@destroy')->name('deleteKategori');
+
+// keranjang
+Route::get('/keranjang', 'KeranjangController@index')->name('daftarKeranjang');
+Route::get('/keranjang/create', 'KeranjangController@create')->name('createKeranjang');
+Route::post('/keranjang/create', 'KeranjangController@store')->name('storeKeranjang');
+Route::get('/keranjang/{keranjang}/edit', 'KeranjangController@edit')->name('editKeranjang');
+Route::post('/keranjang/{keranjang}/edit', 'KeranjangController@update')->name('updateKeranjang');
+Route::get('/keranjang/{keranjang}/delete', 'KeranjangController@destroy')->name('deleteKeranjang');
+
+// order
+
+// produk
+Route::get('/produk', 'ProdukController@index')->name('daftarProduk');
+Route::get('/produk/create', 'ProdukController@create')->name('createProduk');
+Route::post('/produk/create', 'ProdukController@store')->name('storeProduk');
+Route::get('/produk/{produk}/edit', 'ProdukController@edit')->name('editProduk');
+Route::post('/produk/{produk}/edit', 'ProdukController@update')->name('updateProduk');
+Route::get('/produk/{produk}/delete', 'ProdukController@destroy')->name('deleteProduk');
