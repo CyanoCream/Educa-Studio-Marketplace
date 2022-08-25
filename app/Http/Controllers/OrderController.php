@@ -13,16 +13,16 @@ class OrderController extends Controller
      */
     public function index()
     {
-        $orders = Order::all();
+        $orders = order::all();
 
-        return view('order.index', [
+        return view('admin.order.index', [
             'orders' => $orders
         ]);
     }
 
     public function getOrder()
     {
-        $orders = Order::all();
+        $orders = order::all();
 
         return $orders;
     }
@@ -34,7 +34,7 @@ class OrderController extends Controller
      */
     public function create()
     {
-        //
+        return view('admin.order.create');
     }
 
     /**
@@ -45,7 +45,23 @@ class OrderController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $validatedData = $request->validate([
+            'id_pelanggan' => 'required|integer' ,
+            'status_order' => 'required|string|max:255' ,
+            'id_produk' => 'required|integer' ,
+            'id_penyelenggara' => 'required|string|max:255' ,
+            'pengiriman' => 'required|string|max:255' ,
+            'kurir' => 'required|string|max:255' ,
+            'alamat_pen' => 'required|string|max:255' ,
+            'provinsi_pen' => 'required|string|max:255' ,
+            'kota_pen' => 'required|string|max:255' ,
+            'kecamatan_pen' => 'required|string|max:255' ,
+        ]);
+
+        $order = new order($validatedData);
+        $order->save();
+
+        return redirect(route('daftarOrder'));
     }
 
     /**
@@ -67,7 +83,10 @@ class OrderController extends Controller
      */
     public function edit($id)
     {
-        //
+        $order = order::find($id);
+        return view('admin.order.edit', [
+            'order' => $order
+        ]);
     }
 
     /**
@@ -77,9 +96,36 @@ class OrderController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, $order)
     {
-        //
+        $validatedData = $request->validate([
+            'id_pelanggan' => 'required|integer' ,
+            'status_order' => 'required|string|max:255' ,
+            'id_produk' => 'required|integer' ,
+            'id_penyelenggara' => 'required|string|max:255' ,
+            'pengiriman' => 'required|string|max:255' ,
+            'kurir' => 'required|string|max:255' ,
+            'alamat_pen' => 'required|string|max:255' ,
+            'provinsi_pen' => 'required|string|max:255' ,
+            'kota_pen' => 'required|string|max:255' ,
+            'kecamatan_pen' => 'required|string|max:255' ,
+        ]);
+
+        $order = order::find($order);
+
+        $order->id_pelanggan = $request->id_pelanggan;
+        $order->status_order = $request->status_order;
+        $order->id_produk = $request->id_produk;
+        $order->id_penyelenggara = $request->id_penyelenggara;
+        $order->pengiriman = $request->pengiriman;
+        $order->kurir = $request->kurir;
+        $order->alamat_pen = $request->alamat_pen;
+        $order->provinsi_pen = $request->provinsi_pen;
+        $order->kota_pen = $request->kota_pen;
+        $order->kecamatan_pen = $request->kecamatan_pen;
+        $order->save();
+
+        return redirect(route('daftarOrder'));
     }
 
     /**
@@ -88,8 +134,9 @@ class OrderController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy($order)
     {
-        //
+        $order->delete();
+        return redirect(route('daftarOrder'));
     }
 }

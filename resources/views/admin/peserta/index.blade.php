@@ -31,7 +31,7 @@
         <div class="container-fluid">
             <div class="card">
                 <div class="card-header text-right">
-                    <a href="{{ route('createKeranjang') }}" class="btn btn-primary" role="button">Tambah Keranjang</a>
+                    <a href="{{ route('createPeserta') }}" class="btn btn-primary" role="button">Tambah Peserta</a>
                 </div>
                 <div class="card-body p-0">
                     <table class="table-update" id="data-table">
@@ -39,25 +39,29 @@
                             <tr>
                                 <th>id</th>
                                 <th>id_produk</th>
-                                <th>qty_ker</th>
-                                <th>waktu</th>
-                                <th>harga_produk</th>
-                                <th>packing</th>
+                                <th>tgl_pembayaran</th>
+                                <th>jumlah_dana</th>
+                                <th>nama_peserta</th>
+                                <th>nama_panggilan</th>
+                                <th>jenis_kelamin</th>
+                                <th>hubungan</th>
                                 <th>aksi</th>
                             </tr>
                         </thead>
                         <tbody>
-                            @foreach ($keranjangs as $keranjang)
+                            @foreach ($pesertas as $peserta)
                                 <tr>
                                     <td>{{ $loop->index + 1 }}</td>
-                                    <td>{{ $keranjang->id_produk }}</td>
-                                    <td>{{ $keranjang->qty_ker }}</td>
-                                    <td>{{ $keranjang->waktu }}</td>
-                                    <td>{{ $keranjang->harga_produk }}</td>
-                                    <td>{{ $keranjang->packing }}</td>
+                                    <td>{{ $peserta->id_produk }}</td>
+                                    <td>{{ $peserta->tgl_pembayaran }}</td>
+                                    <td>{{ $peserta->jumlah_dana }}</td>
+                                    <td>{{ $peserta->nama_peserta }}</td>
+                                    <td>{{ $peserta->nama_panggilan }}</td>
+                                    <td>{{ $peserta->jenis_kelamin }}</td>
+                                    <td>{{ $peserta->hubungan }}</td>
                                     <td>
-                                        <a href="{{route('editKeranjang', ['id' => $keranjang->id])}}" class="btn btn-warning btn-sm" role="button">Edit</a>
-                                        <a onclick="confirmDelete(this)" data-url="{{route('deleteKeranjang', ['id' => $keranjang->id])}}" class="btn btn-danger btn-sm" role="button">Hapus</a>
+                                        <a href="{{route('editPeserta', ['id' => $peserta->id])}}" class="btn btn-warning btn-sm" role="button">Edit</a>
+                                        <a onclick="confirmDelete(this)" data-url="{{route('deletePeserta', ['id' => $peserta->id])}}" class="btn btn-danger btn-sm" role="button">Hapus</a>
                                     </td>
                                 </tr>
                             @endforeach

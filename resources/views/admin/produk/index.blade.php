@@ -26,19 +26,6 @@
   }
 </style>
 <div class="content-wrapper">
-    {{-- <div class="content-header">
-        <div class="content-fluit">
-            <div class="row m-0">
-                <div class="col-sm-12">
-                    <h1 class="m-0 text-dark pt-2">Produk</h1>
-                    <ol class="breadcrumb float-sm-right d-flex text-right pb-2">
-                        <li class="breadcrumb-item" style="align-items: center; display: flex;"><a href="{{route('dashboard')}}">Dashboard</a></li>
-                        <li class="breadcrumb-item active">Produk</li>
-                    </ol>
-                </div>
-            </div>
-        </div>
-    </div> --}}
     <div class="content">
         <div class="container-fluid">
             <div class="card">
@@ -99,7 +86,6 @@
     $(function() {
         $("#data-table").DataTable();
     })
-    // $('a.nav-link').attr('href','#').remove();
 
     confirmDelete = function(button) {
         var url = $(button).data('url');

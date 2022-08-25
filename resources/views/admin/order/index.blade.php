@@ -31,33 +31,43 @@
         <div class="container-fluid">
             <div class="card">
                 <div class="card-header text-right">
-                    <a href="{{ route('createKeranjang') }}" class="btn btn-primary" role="button">Tambah Keranjang</a>
+                    <a href="{{ route('createOrder') }}" class="btn btn-primary" role="button">Tambah Order</a>
                 </div>
                 <div class="card-body p-0">
                     <table class="table-update" id="data-table">
                         <thead>
                             <tr>
                                 <th>id</th>
+                                <th>id_pelanggan</th>
+                                <th>status_order</th>
                                 <th>id_produk</th>
-                                <th>qty_ker</th>
-                                <th>waktu</th>
-                                <th>harga_produk</th>
-                                <th>packing</th>
+                                <th>id_penyelenggara</th>
+                                <th>pengiriman</th>
+                                <th>kurir</th>
+                                <th>alamat_pen</th>
+                                <th>provinsi_pen</th>
+                                <th>kota_pen</th>
+                                <th>kecamatan_pen</th>
                                 <th>aksi</th>
                             </tr>
                         </thead>
                         <tbody>
-                            @foreach ($keranjangs as $keranjang)
+                            @foreach ($orders as $order)
                                 <tr>
                                     <td>{{ $loop->index + 1 }}</td>
-                                    <td>{{ $keranjang->id_produk }}</td>
-                                    <td>{{ $keranjang->qty_ker }}</td>
-                                    <td>{{ $keranjang->waktu }}</td>
-                                    <td>{{ $keranjang->harga_produk }}</td>
-                                    <td>{{ $keranjang->packing }}</td>
+                                    <td>{{ $order->id_pelanggan }}</td>
+                                    <td>{{ $order->status_order }}</td>
+                                    <td>{{ $order->id_produk }}</td>
+                                    <td>{{ $order->id_penyelenggara }}</td>
+                                    <td>{{ $order->pengiriman }}</td>
+                                    <td>{{ $order->kurir }}</td>
+                                    <td>{{ $order->alamat_pen }}</td>
+                                    <td>{{ $order->provinsi_pen }}</td>
+                                    <td>{{ $order->kota_pen }}</td>
+                                    <td>{{ $order->kecamatan_pen }}</td>
                                     <td>
-                                        <a href="{{route('editKeranjang', ['id' => $keranjang->id])}}" class="btn btn-warning btn-sm" role="button">Edit</a>
-                                        <a onclick="confirmDelete(this)" data-url="{{route('deleteKeranjang', ['id' => $keranjang->id])}}" class="btn btn-danger btn-sm" role="button">Hapus</a>
+                                        <a href="{{route('editOrder', ['id' => $order->id])}}" class="btn btn-warning btn-sm" role="button">Edit</a>
+                                        <a onclick="confirmDelete(this)" data-url="{{route('deleteOrder', ['id' => $order->id])}}" class="btn btn-danger btn-sm" role="button">Hapus</a>
                                     </td>
                                 </tr>
                             @endforeach

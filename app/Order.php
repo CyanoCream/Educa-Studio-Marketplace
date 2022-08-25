@@ -10,7 +10,6 @@ class Order extends Model
 
     protected $fillable = [
         'id_pelanggan',
-        'tgl_order',
         'status_order',
         'id_produk',
         'id_penyelenggara',

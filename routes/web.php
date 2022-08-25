@@ -113,12 +113,12 @@ Route::get('/detail_order/{detail_order}/delete', 'DetailOrderController@destroy
 
 
 // hubungi_kami
-Route::get('/hubungi_kami', 'HubungiKamiController@index')->name('daftarHubungi_Kami');
-Route::get('/hubungi_kami/create', 'HubungiKamiController@create')->name('createHubungi_Kami');
-Route::post('/hubungi_kami/create', 'HubungiKamiController@store')->name('storeHubungi_Kami');
-Route::get('/hubungi_kami/{hubungi_kami}/edit', 'HubungiKamiController@edit')->name('editHubungi_Kami');
-Route::post('/hubungi_kami/{hubungi_kami}/edit', 'HubungiKamiController@update')->name('updateHubungi_Kami');
-Route::get('/hubungi_kami/{hubungi_kami}/delete', 'HubungiKamiController@destroy')->name('deleteHubungi_Kami');
+Route::get('/hubungi_kami', 'HubungikamiController@index')->name('daftarHubungi_Kami');
+Route::get('/hubungi_kami/create', 'HubungikamiController@create')->name('createHubungi_Kami');
+Route::post('/hubungi_kami/create', 'HubungikamiController@store')->name('storeHubungi_Kami');
+Route::get('/hubungi_kami/{hubungi_kami}/edit', 'HubungikamiController@edit')->name('editHubungi_Kami');
+Route::post('/hubungi_kami/{hubungi_kami}/edit', 'HubungikamiController@update')->name('updateHubungi_Kami');
+Route::get('/hubungi_kami/{hubungi_kami}/delete', 'HubungikamiController@destroy')->name('deleteHubungi_Kami');
 
 // kategori
 Route::get('/kategori', 'KategoriController@index')->name('daftarKategori');
@@ -137,6 +137,38 @@ Route::post('/keranjang/{keranjang}/edit', 'KeranjangController@update')->name('
 Route::get('/keranjang/{keranjang}/delete', 'KeranjangController@destroy')->name('deleteKeranjang');
 
 // order
+Route::get('/order', 'OrderController@index')->name('daftarOrder');
+Route::get('/order/create', 'OrderController@create')->name('createOrder');
+Route::post('/order/create', 'OrderController@store')->name('storeOrder');
+Route::get('/order/{order}/edit', 'OrderController@edit')->name('editOrder');
+Route::post('/order/{order}/edit', 'OrderController@update')->name('updateOrder');
+Route::get('/order/{order}/delete', 'OrderController@destroy')->name('deleteOrder');
+
+// pelanggan
+Route::get('/pelanggan', 'PelangganController@index')->name('daftarPelanggan');
+Route::get('/pelanggan/create', 'PelangganController@create')->name('createPelanggan');
+Route::post('/pelanggan/create', 'PelangganController@store')->name('storePelanggan');
+Route::get('/pelanggan/{pelanggan}/edit', 'PelangganController@edit')->name('editPelanggan');
+Route::post('/pelanggan/{pelanggan}/edit', 'PelangganController@update')->name('updatePelanggan');
+Route::get('/pelanggan/{pelanggan}/delete', 'PelangganController@destroy')->name('deletePelanggan');
+
+// penyelenggara
+Route::get('/penyelenggara', 'PenyelenggaraController@index')->name('daftarPenyelenggara');
+Route::get('/penyelenggara/create', 'PenyelenggaraController@create')->name('createPenyelenggara');
+Route::post('/penyelenggara/create', 'PenyelenggaraController@store')->name('storePenyelenggara');
+Route::get('/penyelenggara/{penyelenggara}/edit', 'PenyelenggaraController@edit')->name('editPenyelenggara');
+Route::post('/penyelenggara/{penyelenggara}/edit', 'PenyelenggaraController@update')->name('updatePenyelenggara');
+Route::get('/penyelenggara/{penyelenggara}/delete', 'PenyelenggaraController@destroy')->name('deletePenyelenggara');
+
+
+//peserta
+Route::get('/peserta', 'PesertaController@index')->name('daftarPeserta');
+Route::get('/peserta/create', 'PesertaController@create')->name('createPeserta');
+Route::post('/peserta/create', 'PesertaController@store')->name('storePeserta');
+Route::get('/peserta/{peserta}/edit', 'PesertaController@edit')->name('editPeserta');
+Route::post('/peserta/{peserta}/edit', 'PesertaController@update')->name('updatePeserta');
+Route::get('/peserta/{peserta}/delete', 'PesertaController@destroy')->name('deletePeserta');
+
 
 // produk
 Route::get('/produk', 'ProdukController@index')->name('daftarProduk');
@@ -145,3 +177,11 @@ Route::post('/produk/create', 'ProdukController@store')->name('storeProduk');
 Route::get('/produk/{produk}/edit', 'ProdukController@edit')->name('editProduk');
 Route::post('/produk/{produk}/edit', 'ProdukController@update')->name('updateProduk');
 Route::get('/produk/{produk}/delete', 'ProdukController@destroy')->name('deleteProduk');
+
+//ulasan
+Route::get('/ulasan', 'UlasanController@index')->name('daftarUlasan');
+Route::get('/ulasan/create', 'UlasanController@create')->name('createUlasan');
+Route::post('/ulasan/create', 'UlasanController@store')->name('storeUlasan');
+Route::get('/ulasan/{ulasan}/edit', 'UlasanController@edit')->name('editUlasan');
+Route::post('/ulasan/{ulasan}/edit', 'UlasanController@update')->name('updateUlasan');
+Route::get('/ulasan/{ulasan}/delete', 'UlasanController@destroy')->name('deleteUlasan');

@@ -1,7 +1,6 @@
 @extends('admin.layout')
 
 @section('content')
-
 <style>
     .table-update {
     font-family: Arial, Helvetica, sans-serif;
@@ -31,33 +30,26 @@
         <div class="container-fluid">
             <div class="card">
                 <div class="card-header text-right">
-                    <a href="{{ route('createKeranjang') }}" class="btn btn-primary" role="button">Tambah Keranjang</a>
+                    <a href="{{ route('createUlasan') }}" class="btn btn-primary" role="button">Tambah Ulasan</a>
                 </div>
                 <div class="card-body p-0">
                     <table class="table-update" id="data-table">
                         <thead>
                             <tr>
                                 <th>id</th>
-                                <th>id_produk</th>
-                                <th>qty_ker</th>
-                                <th>waktu</th>
-                                <th>harga_produk</th>
-                                <th>packing</th>
+                                <th>penilaian</th>
                                 <th>aksi</th>
                             </tr>
                         </thead>
                         <tbody>
-                            @foreach ($keranjangs as $keranjang)
+                            @foreach ($ulasans as $ulasan)
                                 <tr>
                                     <td>{{ $loop->index + 1 }}</td>
-                                    <td>{{ $keranjang->id_produk }}</td>
-                                    <td>{{ $keranjang->qty_ker }}</td>
-                                    <td>{{ $keranjang->waktu }}</td>
-                                    <td>{{ $keranjang->harga_produk }}</td>
-                                    <td>{{ $keranjang->packing }}</td>
+                                    <td>{{ $ulasan->penilaian }}</td>
+
                                     <td>
-                                        <a href="{{route('editKeranjang', ['id' => $keranjang->id])}}" class="btn btn-warning btn-sm" role="button">Edit</a>
-                                        <a onclick="confirmDelete(this)" data-url="{{route('deleteKeranjang', ['id' => $keranjang->id])}}" class="btn btn-danger btn-sm" role="button">Hapus</a>
+                                        <a href="{{route('editUlasan', ['id' => $ulasan->id])}}" class="btn btn-warning btn-sm" role="button">Edit</a>
+                                        <a onclick="confirmDelete(this)" data-url="{{route('deleteUlasan', ['id' => $ulasan->id])}}" class="btn btn-danger btn-sm" role="button">Hapus</a>
                                     </td>
                                 </tr>
                             @endforeach
@@ -79,6 +71,7 @@
     $(function() {
         $("#data-table").DataTable();
     })
+    // $('a.nav-link').attr('href','#').remove();
 
     confirmDelete = function(button) {
         var url = $(button).data('url');
@@ -93,7 +86,5 @@
             }
         })
     }
-
-    
 </script>
 @endpush

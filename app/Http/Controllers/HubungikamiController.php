@@ -13,17 +13,17 @@ class HubungikamiController extends Controller
      */
     public function index()
     {
-        $hubungi_kamis = hubungi_kami::all();
-        return view('admin.hubungi_kami.index', [
-            'hubungi_kamis' => $hubungi_kamis
+        $hubungikamis = hubungikami::all();
+        return view('admin.hubungi_kami.index',[
+            'hubungikamis' => $hubungikamis
         ]);
     }
 
     public function getHubungiKami()
     {
-        $hubungi_kamis = hubungi_kami::all();
+        $hubungikamis = hubungikami::all();
 
-        return $hubungi_kamis;
+        return $hubungikamis;
     }
 
     /**
@@ -44,17 +44,17 @@ class HubungikamiController extends Controller
      */
     public function store(Request $request)
     {
-        $validatedData = validator($request->all(), [
-            'id_pelanggan' => 'required|string|max:255' ,
+        $validatedData = $request->validate([
+            'id_pelanggan' => 'required|integer' ,
             'nama' => 'required|string|max:255' ,
             'email' => 'required|string|max:255' ,
             'nomorponsel' => 'required|string|max:255' ,
             'topik' => 'required|string|max:255' ,
             'pesan' => 'required|string|max:255' ,
-        ])->validate();
+        ]);
 
-        $hubungi_kami = new hubungi_kami($validatedData);
-        $hubungi_kami->save();
+        $hubungikami = new hubungikami($validatedData);
+        $hubungikami->save();
 
         return redirect(route('daftarHubungi_Kami'));
     }
@@ -78,8 +78,9 @@ class HubungikamiController extends Controller
      */
     public function edit($id)
     {
+        $hubungikami = hubungikami::find($id);
         return view('admin.hubungi_kami.edit', [
-            'hubungi_kami' => $hubungi_kami
+            'hubungikami' => $hubungikami
         ]);
     }
 
@@ -90,19 +91,26 @@ class HubungikamiController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, HubungiKami $hubungi_kami)
+    public function update(Request $request, $hubungikami)
     {
-        $validatedData = validator($request->all(), [
-            'id_pelanggan' => 'required|string|max:255' ,
+        $validatedData = $request->validate([
+            'id_pelanggan' => 'required|integer' ,
             'nama' => 'required|string|max:255' ,
             'email' => 'required|string|max:255' ,
             'nomorponsel' => 'required|string|max:255' ,
             'topik' => 'required|string|max:255' ,
             'pesan' => 'required|string|max:255' ,
-        ])->validate();
+        ]);
 
-        $hubungi_kami = new hubungi_kami($validatedData);
-        $hubungi_kami->save();
+        $hubungikami = hubungikami::find($hubungikami);
+
+        $hubungikami->id_pelanggan = $request->id_pelanggan;
+        $hubungikami->nama = $request->nama;
+        $hubungikami->email = $request->email;
+        $hubungikami->nomorponsel = $request->nomorponsel;
+        $hubungikami->topik = $request->topik;
+        $hubungikami->pesan = $request->pesan;
+        $hubungikami->save();
 
         return redirect(route('daftarHubungi_Kami'));
     }
@@ -113,9 +121,9 @@ class HubungikamiController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy($hubungikami)
     {
-        $hubungi_kami->delete();
+        $hubungikami->delete();
         return redirect(route('daftarHubungi_Kami'));
     }
 }

@@ -31,7 +31,7 @@
         <div class="container-fluid">
             <div class="card">
                 <div class="card-header text-right">
-                    <a href="{{ route('createKeranjang') }}" class="btn btn-primary" role="button">Tambah Keranjang</a>
+                    <a href="{{ route('createPenyelenggara') }}" class="btn btn-primary" role="button">Tambah Penyelenggara</a>
                 </div>
                 <div class="card-body p-0">
                     <table class="table-update" id="data-table">
@@ -39,25 +39,27 @@
                             <tr>
                                 <th>id</th>
                                 <th>id_produk</th>
-                                <th>qty_ker</th>
-                                <th>waktu</th>
-                                <th>harga_produk</th>
-                                <th>packing</th>
+                                <th>nama_penyelenggara</th>
+                                <th>icon_penyelenggara</th>
+                                <th>kota_penyelenggara</th>
+                                <th>deskripsi</th>
+                                <th>jam_operasional</th>
                                 <th>aksi</th>
                             </tr>
                         </thead>
                         <tbody>
-                            @foreach ($keranjangs as $keranjang)
+                            @foreach ($penyelenggaras as $penyelenggara)
                                 <tr>
                                     <td>{{ $loop->index + 1 }}</td>
-                                    <td>{{ $keranjang->id_produk }}</td>
-                                    <td>{{ $keranjang->qty_ker }}</td>
-                                    <td>{{ $keranjang->waktu }}</td>
-                                    <td>{{ $keranjang->harga_produk }}</td>
-                                    <td>{{ $keranjang->packing }}</td>
+                                    <td>{{ $penyelenggara->id_produk }}</td>
+                                    <td>{{ $penyelenggara->nama_penyelenggara }}</td>
+                                    <td>{{ $penyelenggara->icon_penyelenggara }}</td>
+                                    <td>{{ $penyelenggara->kota_penyelenggara }}</td>
+                                    <td>{{ $penyelenggara->deskripsi }}</td>
+                                    <td>{{ $penyelenggara->jam_operasional }}</td>
                                     <td>
-                                        <a href="{{route('editKeranjang', ['id' => $keranjang->id])}}" class="btn btn-warning btn-sm" role="button">Edit</a>
-                                        <a onclick="confirmDelete(this)" data-url="{{route('deleteKeranjang', ['id' => $keranjang->id])}}" class="btn btn-danger btn-sm" role="button">Hapus</a>
+                                        <a href="{{route('editPenyelenggara', ['id' => $penyelenggara->id])}}" class="btn btn-warning btn-sm" role="button">Edit</a>
+                                        <a onclick="confirmDelete(this)" data-url="{{route('deletePenyelenggara', ['id' => $penyelenggara->id])}}" class="btn btn-danger btn-sm" role="button">Hapus</a>
                                     </td>
                                 </tr>
                             @endforeach

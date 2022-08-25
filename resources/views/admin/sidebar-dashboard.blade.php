@@ -50,7 +50,7 @@
                 </a>
               </li>
               <li class="nav-item">
-                <a href="#" class="nav-link">
+                <a href="{{route('daftarOrder')}}" class="nav-link">
                   <i class="nav-icon fas fa-table"></i>
                   <p>Order</p>
                 </a>
@@ -88,25 +88,25 @@
             </a>
           </li>
           <li class="nav-item">
-            <a href="" class="nav-link">
+            <a href="{{route('daftarPelanggan')}}" class="nav-link">
               <i class="nav-icon fas fa-copy"></i>
               <p>Pelanggan</p>
             </a>
           </li>
           <li class="nav-item">
-            <a href="" class="nav-link">
+            <a href="{{route('daftarPenyelenggara')}}" class="nav-link">
               <i class="nav-icon fas fa-columns"></i>
               <p>Penyelenggara</p>
             </a>
           </li>
           <li class="nav-item">
-            <a href="#" class="nav-link">
+            <a href="{{route('daftarPeserta')}}" class="nav-link">
               <i class="nav-icon far fa-envelope"></i>
               <p>Peserta</p>
             </a>
           </li>
           <li class="nav-item">
-            <a href="#" class="nav-link">
+            <a href="{{route('daftarUlasan')}}" class="nav-link">
               <i class="nav-icon far fa-plus-square"></i>
               <p>Ulasan</p>
             </a>

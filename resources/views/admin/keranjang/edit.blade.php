@@ -10,9 +10,9 @@
 					<h1 class="m-0 text-dark">Create</h1>
 				</div>
 				<div class="col-sm-6">
-					<ol class="breadcrumb float-sm-right">
-						<li class="breadcrumb-item"><a href="{{route('daftarKeranjang')}}">Dashboard</a></li>
-						<li class="breadcrumb-item active">Edit Keranjang</li>
+					<ol class="breadcrumb float-sm-right d-flex">
+						<li class="breadcrumb-item" style="align-items: center; display: flex;"><a href="{{route('daftarKeranjang')}}">Dashboard</a></li>
+						<li class="breadcrumb-item active" style="align-items: center; display: flex;">Edit Keranjang</li>
 					</ol>
 				</div>
 			</div>
@@ -24,19 +24,7 @@
 			<div class="card">
 				<div class="card-body">
 					<form action="{{ route('updateKeranjang',['id'=>$keranjang->id]) }}" method="post">
-						@csrf
-
-						{{-- <div class="form-group">
-							<label for="id_jurusan">Nama Jurusan</label>
-							<select class="form-control" name="id_jurusan" id="id_jurusan" required="required">
-								@foreach ($jurusans as $jurusan)
-								<option value="{{$jurusan->id}}"
-									{{$jurusan->id == $mata_pelajaran->id_jurusan ? 'selected' : ''}}>
-									{{$jurusan->nama}}
-								</option>
-								@endforeach
-							</select>
-						</div> --}}
+						{{ csrf_field() }}
 
 						<div class="form-group">
 							<label for="id_produk">id_produk</label>
@@ -57,7 +45,7 @@
 							<label for="harga_produk">harga_produk</label>
 							<input type="text" name="harga_produk" id="harga_produk" class="form-control" required="required" value="{{ $keranjang->harga_produk }}" placeholder="Masukkan harga_produk">
 						</div>
-
+						
 						<div class="form-group">
 							<label for="packing">packing</label>
 							<input type="text" name="packing" id="packing" class="form-control" required="required" value="{{ $keranjang->packing }}" placeholder="Masukkan packing">

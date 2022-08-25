@@ -175,7 +175,7 @@ class ProdukController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy(produk $produk)
+    public function destroy($produk)
     {
         // if (request()->ajax()) {
         //     $id = $request->data;

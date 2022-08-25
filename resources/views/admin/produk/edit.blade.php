@@ -26,18 +26,6 @@
 					<form action="{{ route('updateProduk',['id'=>$produk->id]) }}" method="post">
 						{{ csrf_field() }}
 
-						{{-- <div class="form-group">
-							<label for="id_jurusan">Nama Jurusan</label>
-							<select class="form-control" name="id_jurusan" id="id_jurusan" required="required">
-								@foreach ($jurusans as $jurusan)
-								<option value="{{$jurusan->id}}"
-									{{$jurusan->id == $mata_pelajaran->id_jurusan ? 'selected' : ''}}>
-									{{$jurusan->nama}}
-								</option>
-								@endforeach
-							</select>
-						</div> --}}
-
 						<div class="form-group">
 							<label for="id_kategori">id_kategori</label>
 							<input type="text" name="id_kategori" id="id_kategori" class="form-control" required="required" value="{{ $produk->id_kategori }}" placeholder="Masukkan id_kategori">

@@ -13,16 +13,16 @@ class PelangganController extends Controller
      */
     public function index()
     {
-        $pelanggans = Pelanggan::all();
+        $pelanggans = pelanggan::all();
 
-        return view('profile.index', [
+        return view('admin.pelanggan.index', [
             'pelanggans' => $pelanggans
         ]);
     }
 
     public function getPelanggan()
     {
-        $pelanggans = Pelanggan::all();
+        $pelanggans = pelanggan::all();
 
         return $pelanggans;
     }
@@ -34,7 +34,7 @@ class PelangganController extends Controller
      */
     public function create()
     {
-        //
+        return view('admin.pelanggan.create');
     }
 
     /**
@@ -45,7 +45,24 @@ class PelangganController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $validatedData = $request->validate([
+            'foto' => 'required|string|max:255' ,
+            'waktu_daftar' => 'required|string|max:255' ,
+            'nama_pelanggan' => 'required|string|max:255' ,
+            'email_pelanggan' => 'required|string|max:255' ,
+            'password' => 'required|string|max:255' ,
+            'no_telp' => 'required|string|max:255' ,
+            'alamat_pel' => 'required|string|max:255' ,
+            'provinsi_pel' => 'required|string|max:255' ,
+            'kota_pel' => 'required|string|max:255' ,
+            'kecamatan_pel' => 'required|string|max:255' ,
+            'level_user' => 'required|integer' ,
+        ]);
+
+        $pelanggan = new pelanggan($validatedData);
+        $pelanggan->save();
+
+        return redirect(route('daftarPelanggan'));
     }
 
     /**
@@ -67,7 +84,10 @@ class PelangganController extends Controller
      */
     public function edit($id)
     {
-        //
+        $pelanggan = pelanggan::find($id);
+        return view('admin.pelanggan.edit', [
+            'pelanggan' => $pelanggan
+        ]);
     }
 
     /**
@@ -77,9 +97,38 @@ class PelangganController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, $pelanggan)
     {
-        //
+        $validatedData = $request->validate([
+            'foto' => 'required|string|max:255' ,
+            'waktu_daftar' => 'required|string|max:255' ,
+            'nama_pelanggan' => 'required|string|max:255' ,
+            'email_pelanggan' => 'required|string|max:255' ,
+            'password' => 'required|string|max:255' ,
+            'no_telp' => 'required|string|max:255' ,
+            'alamat_pel' => 'required|string|max:255' ,
+            'provinsi_pel' => 'required|string|max:255' ,
+            'kota_pel' => 'required|string|max:255' ,
+            'kecamatan_pel' => 'required|string|max:255' ,
+            'level_user' => 'required|integer' ,
+        ]);
+
+        $pelanggan = pelanggan::find($pelanggan);
+
+        $pelanggan->foto = $request->foto;
+        $pelanggan->waktu_daftar = $request->waktu_daftar;
+        $pelanggan->nama_pelanggan = $request->nama_pelanggan;
+        $pelanggan->email_pelanggan = $request->email_pelanggan;
+        $pelanggan->password = $request->password;
+        $pelanggan->no_telp = $request->no_telp;
+        $pelanggan->alamat_pel = $request->alamat_pel;
+        $pelanggan->provinsi_pel = $request->provinsi_pel;
+        $pelanggan->kota_pel = $request->kota_pel;
+        $pelanggan->kecamatan_pel = $request->kecamatan_pel;
+        $pelanggan->level_user = $request->level_user;
+        $order->save();
+
+        return redirect(route('daftarPelanggan'));
     }
 
     /**
@@ -88,8 +137,9 @@ class PelangganController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy($pelanggan)
     {
-        //
+        $pelanggan->delete();
+        return redirect(route('daftarPelanggan'));
     }
 }

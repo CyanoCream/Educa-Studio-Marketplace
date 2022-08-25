@@ -13,16 +13,16 @@ class PesertaController extends Controller
      */
     public function index()
     {
-        $pesertas = Pelanggan::all();
+        $pesertas = peserta::all();
 
-        return view('peserta.index', [
+        return view('admin.peserta.index', [
             'pesertas' => $pesertas
         ]);
     }
 
     public function getPeserta()
     {
-        $pesertas = Peserta::all();
+        $pesertas = peserta::all();
 
         return $pesertas;
     }
@@ -34,7 +34,7 @@ class PesertaController extends Controller
      */
     public function create()
     {
-        //
+        return view('admin.peserta.create');
     }
 
     /**
@@ -45,7 +45,20 @@ class PesertaController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $validatedData = $request->validate([
+            'id_produk' => 'required|integer' ,
+            'tgl_pembayaran' => 'required|string|max:255' ,
+            'jumlah_dana' => 'required|integer' ,
+            'nama_peserta' => 'required|string|max:255' ,
+            'nama_panggilan' => 'required|string|max:255' ,
+            'jenis_kelamin' => 'required|string|max:255' ,
+            'hubungan' => 'required|string|max:255' ,
+        ]);
+
+        $peserta = new peserta($validatedData);
+        $peserta->save();
+
+        return redirect(route('daftarPeserta'));
     }
 
     /**
@@ -67,7 +80,10 @@ class PesertaController extends Controller
      */
     public function edit($id)
     {
-        //
+        $peserta = peserta::find($id);
+        return view('admin.peserta.edit', [
+            'peserta' => $peserta
+        ]);
     }
 
     /**
@@ -77,9 +93,30 @@ class PesertaController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, $peserta)
     {
-        //
+        $validatedData = $request->validate([
+            'id_produk' => 'required|integer' ,
+            'tgl_pembayaran' => 'required|string|max:255' ,
+            'jumlah_dana' => 'required|integer' ,
+            'nama_peserta' => 'required|string|max:255' ,
+            'nama_panggilan' => 'required|string|max:255' ,
+            'jenis_kelamin' => 'required|string|max:255' ,
+            'hubungan' => 'required|string|max:255' ,
+        ]);
+
+        $peserta = peserta::find($peserta);
+
+        $peserta->id_produk = $request->id_produk;
+        $peserta->tgl_pembayaran = $request->tgl_pembayaran;
+        $peserta->jumlah_dana = $request->jumlah_dana;
+        $peserta->nama_peserta = $request->nama_peserta;
+        $peserta->nama_panggilan = $request->nama_panggilan;
+        $peserta->jenis_kelamin = $request->jenis_kelamin;
+        $peserta->hubungan = $request->hubungan;
+        $order->save();
+
+        return redirect(route('daftarPeserta'));
     }
 
     /**
@@ -90,6 +127,7 @@ class PesertaController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $peserta = peserta::find($id)->delete();
+        return redirect()->back();
     }
 }

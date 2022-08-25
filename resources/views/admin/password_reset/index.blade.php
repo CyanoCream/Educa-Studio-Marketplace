@@ -31,33 +31,25 @@
         <div class="container-fluid">
             <div class="card">
                 <div class="card-header text-right">
-                    <a href="{{ route('createKeranjang') }}" class="btn btn-primary" role="button">Tambah Keranjang</a>
+                    <a href="{{ route('createPassword_Reset') }}" class="btn btn-primary" role="button">Tambah Order</a>
                 </div>
                 <div class="card-body p-0">
                     <table class="table-update" id="data-table">
                         <thead>
                             <tr>
-                                <th>id</th>
-                                <th>id_produk</th>
-                                <th>qty_ker</th>
-                                <th>waktu</th>
-                                <th>harga_produk</th>
-                                <th>packing</th>
+                                <th>email</th>
+                                <th>token</th>
                                 <th>aksi</th>
                             </tr>
                         </thead>
                         <tbody>
-                            @foreach ($keranjangs as $keranjang)
+                            @foreach ($password_resets as $password_reset)
                                 <tr>
-                                    <td>{{ $loop->index + 1 }}</td>
-                                    <td>{{ $keranjang->id_produk }}</td>
-                                    <td>{{ $keranjang->qty_ker }}</td>
-                                    <td>{{ $keranjang->waktu }}</td>
-                                    <td>{{ $keranjang->harga_produk }}</td>
-                                    <td>{{ $keranjang->packing }}</td>
+                                    <td>{{ $password_reset->emial }}</td>
+                                    <td>{{ $password_reset->token }}</td>
                                     <td>
-                                        <a href="{{route('editKeranjang', ['id' => $keranjang->id])}}" class="btn btn-warning btn-sm" role="button">Edit</a>
-                                        <a onclick="confirmDelete(this)" data-url="{{route('deleteKeranjang', ['id' => $keranjang->id])}}" class="btn btn-danger btn-sm" role="button">Hapus</a>
+                                        <a href="{{route('editPassword_Reset', ['id' => $password_reset->id])}}" class="btn btn-warning btn-sm" role="button">Edit</a>
+                                        <a onclick="confirmDelete(this)" data-url="{{route('deletePassword_Reset', ['id' => $password_reset->id])}}" class="btn btn-danger btn-sm" role="button">Hapus</a>
                                     </td>
                                 </tr>
                             @endforeach
