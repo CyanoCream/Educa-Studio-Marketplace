@@ -114,7 +114,7 @@ class PesertaController extends Controller
         $peserta->nama_panggilan = $request->nama_panggilan;
         $peserta->jenis_kelamin = $request->jenis_kelamin;
         $peserta->hubungan = $request->hubungan;
-        $order->save();
+        $peserta->save();
 
         return redirect(route('daftarPeserta'));
     }

@@ -121,9 +121,9 @@ class HubungikamiController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($hubungikami)
+    public function destroy($id)
     {
-        $hubungikami->delete();
-        return redirect(route('daftarHubungi_Kami'));
+        $hubungikami = hubungikami::find($id)->delete();
+        return redirect()->back();
     }
 }

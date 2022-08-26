@@ -119,9 +119,9 @@ class KeranjangController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($keranjang)
+    public function destroy($id)
     {
-        $keranjang->delete();
-        return redirect(route('daftarKeranjang'));
+        $keranjang = keranjang::find($id)->delete();
+        return redirect()->back();
     }
 }

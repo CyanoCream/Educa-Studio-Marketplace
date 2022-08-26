@@ -41,7 +41,7 @@
                                 <th>foto</th>
                                 <th>waktu_daftar</th>
                                 <th>nama_pelanggan</th>
-                                <th>email_pelanggan</th>
+                                <th>email</th>
                                 <th>password</th>
                                 <th>no_telp</th>
                                 <th>alamat_pel</th>
@@ -56,10 +56,10 @@
                             @foreach ($pelanggans as $pelanggan)
                                 <tr>
                                     <td>{{ $loop->index + 1 }}</td>
-                                    <td>{{ $pelanggan->foto }}</td>
+                                    <td><img src="/upload/{{ $pelanggan->foto}}" alt="" width="100px"></td>
                                     <td>{{ $pelanggan->waktu_daftar }}</td>
                                     <td>{{ $pelanggan->nama_pelanggan }}</td>
-                                    <td>{{ $pelanggan->email_pelanggan }}</td>
+                                    <td>{{ $pelanggan->email }}</td>
                                     <td>{{ $pelanggan->password }}</td>
                                     <td>{{ $pelanggan->no_telp }}</td>
                                     <td>{{ $pelanggan->alamat_pel }}</td>

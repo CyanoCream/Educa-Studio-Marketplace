@@ -76,7 +76,7 @@ class UlasanController extends Controller
     {
         $ulasan = ulasan::find($id);
         return view('admin.ulasan.edit', [
-            'produk' => $ulasan
+            'ulasan' => $ulasan
         ]);
     }
 

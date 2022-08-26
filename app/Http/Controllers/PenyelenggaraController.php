@@ -111,7 +111,7 @@ class PenyelenggaraController extends Controller
         $penyelenggara->kota_penyelenggara = $request->kota_penyelenggara;
         $penyelenggara->deskripsi = $request->deskripsi;
         $penyelenggara->jam_operasional = $request->jam_operasional;
-        $order->save();
+        $penyelenggara->save();
 
         return redirect(route('daftarPenyelenggara'));
     }

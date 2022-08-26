@@ -43,7 +43,7 @@
 
 						<div class="form-group">
 							<label for="nomor_ponsel">nomor_ponsel</label>
-							<input type="text" name="nomor_ponsel" id="nomor_ponsel" class="form-control" required="required" placeholder="Masukkan nomor_ponsel">
+							<input type="text" name="nomorponsel" id="nomor_ponsel" class="form-control" required="required" placeholder="Masukkan nomor_ponsel">
 						</div>
 
 						<div class="form-group">

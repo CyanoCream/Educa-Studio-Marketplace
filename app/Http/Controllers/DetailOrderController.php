@@ -13,7 +13,7 @@ class DetailOrderController extends Controller
      */
     public function index()
     {
-        $detail_orders = detail_order::all();
+        $detail_orders = Detail_order::all();
         return view('admin.detail_order.index', [
             'detail_orders' => $detail_orders
         ]);
@@ -21,7 +21,7 @@ class DetailOrderController extends Controller
 
     public function getDetailOrder()
     {
-        $detail_orders = detail_order::all();
+        $detail_orders = Detail_order::all();
 
         return $detail_orders;
     }
@@ -51,7 +51,7 @@ class DetailOrderController extends Controller
             'qty_order' => 'required|integer' ,
         ]);
 
-        $detail_order = new detail_order($validatedData);
+        $detail_order = new Detail_order($validatedData);
         $detail_order->save();
 
         return redirect(route('daftarDetail_Order'));
@@ -76,7 +76,7 @@ class DetailOrderController extends Controller
      */
     public function edit($id)
     {
-        $detail_order = detail_order::find($id);
+        $detail_order = Detail_order::find($id);
         return view('admin.detail_order.edit', [
             'detail_order' => $detail_order
         ]);
@@ -98,7 +98,7 @@ class DetailOrderController extends Controller
             'qty_order' => 'required|integer' ,
         ]);
 
-        $detail_order = detail_order::find($detail_order);
+        $detail_order = Detail_order::find($detail_order);
 
         $detail_order->id_order = $request->id_order;
         $detail_order->id_produk = $request->id_produk;
@@ -115,9 +115,9 @@ class DetailOrderController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($detail_order)
+    public function destroy($id)
     {
-        $detail_order->delete();
-        return redirect(route('daftarDetail_Order'));
+        $detail_order = Detail_order::find($id)->delete();
+        return redirect()->back();
     }
 }

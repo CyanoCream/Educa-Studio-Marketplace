@@ -110,7 +110,12 @@ Route::post('/detail_order/{detail_order}/edit', 'DetailOrderController@update')
 Route::get('/detail_order/{detail_order}/delete', 'DetailOrderController@destroy')->name('deleteDetail_Order');
 
 // gambar
-
+Route::get('/gambar', 'GambarController@index')->name('daftarGambar');
+Route::get('/gambar/create', 'GambarController@create')->name('createGambar');
+Route::post('/gambar/create', 'GambarController@store')->name('storeGambar');
+Route::get('/gambar/{gambar}/edit', 'GambarController@edit')->name('editGambar');
+Route::post('/gambar/{gambar}/edit', 'GambarController@update')->name('updateGambar');
+Route::get('/gambar/{gambar}/delete', 'GambarController@destroy')->name('deleteGambar');
 
 // hubungi_kami
 Route::get('/hubungi_kami', 'HubungikamiController@index')->name('daftarHubungi_Kami');

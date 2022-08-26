@@ -28,12 +28,12 @@
 
 						<div class="form-group">
 							<label for="foto">foto</label>
-							<input type="text" name="foto" id="foto" class="form-control" required="required" value="{{ $pelanggan->foto }}" placeholder="Masukkan foto">
+							<input type="file" name="foto" id="foto" class="form-control" required="required" value="{{ $pelanggan->foto }}" placeholder="Masukkan foto">
 						</div>
 
 						<div class="form-group">
 							<label for="waktu_daftar">waktu_daftar</label>
-							<input type="text" name="waktu_daftar" id="waktu_daftar" class="form-control" required="required" value="{{ $pelanggan->waktu_daftar }}" placeholder="Masukkan waktu_daftar">
+							<input type="date" name="waktu_daftar" id="waktu_daftar" class="form-control" required="required" value="{{ $pelanggan->waktu_daftar }}" placeholder="Masukkan waktu_daftar">
 						</div>
 
 						<div class="form-group">
@@ -42,13 +42,18 @@
 						</div>
 
 						<div class="form-group">
-							<label for="email_pelanggan">email_pelanggan</label>
-							<input type="text" name="email_pelanggan" id="email_pelanggan" class="form-control" required="required" value="{{ $pelanggan->email_pelanggan }}" placeholder="Masukkan email_pelanggan">
+							<label for="email">email</label>
+							<input type="email" name="email" id="email" class="form-control" required="required" value="{{ $pelanggan->email }}" placeholder="Masukkan email">
 						</div>
 
 						<div class="form-group">
 							<label for="password">password</label>
-							<input type="text" name="password" id="password" class="form-control" required="required" value="{{ $pelanggan->password }}" placeholder="Masukkan password">
+							<input type="password" name="password" id="password" class="form-control" required="required" value="{{ $pelanggan->password }}" placeholder="Masukkan password">
+						</div>
+
+						<div class="form-group">
+							<label for="remember_token">remember_token</label>
+							<input type="text" name="remember_token" id="remember_token" class="form-control" required="required" value="{{ $pelanggan->remember_token }}" placeholder="Masukkan remember_token">
 						</div>
 
                         <div class="form-group">
@@ -78,7 +83,7 @@
 
                         <div class="form-group">
 							<label for="level_user">level_user</label>
-							<input type="text" name="level_user" id="level_user" class="form-control" required="required" value="{{ $pelanggan->level_user }}" placeholder="Masukkan level_user">
+							<input type="number" name="level_user" id="level_user" class="form-control" required="required" value="{{ $pelanggan->level_user }}" placeholder="Masukkan level_user">
 						</div>
 
 						<div class="text-right">
