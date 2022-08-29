@@ -1,5 +1,5 @@
 <div>
-    <a href="#" target="_self">
+    <a href="{{route('katalog.index')}}" target="_self">
         <h5 class="d-flex justify-content-between">
             <i class="fa fa-graduation-cap" aria-hidden="true"></i>
             Kelas Online

@@ -40,7 +40,6 @@
                                 <th>id</th>
                                 <th>id_order</th>
                                 <th>id_produk</th>
-                                <th>id_varian_order</th>
                                 <th>qty_order</th>
                                 <th>aksi</th>
                             </tr>
@@ -51,7 +50,6 @@
                                     <td>{{ $loop->index + 1 }}</td>
                                     <td>{{ $detail_order->id_order }}</td>
                                     <td>{{ $detail_order->id_produk }}</td>
-                                    <td>{{ $detail_order->id_varian_order }}</td>
                                     <td>{{ $detail_order->qty_order }}</td>
                                     <td>
                                         <a href="{{route('editDetail_Order', ['id' => $detail_order->id])}}" class="btn btn-warning btn-sm" role="button">Edit</a>

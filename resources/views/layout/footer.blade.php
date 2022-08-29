@@ -142,5 +142,8 @@
     <i class="fa fa-angle-double-up"></i>
 </a>
 
+<a>
+</a>
+
 @include('auth.register')
 @include('auth.login')

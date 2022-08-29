@@ -28,17 +28,31 @@
 
 						<div class="form-group">
 							<label for="id_order">id_order</label>
-							<input type="text" name="id_order" id="id_order" class="form-control" required="required" placeholder="Masukkan id_order">
+							<select class="form-control" name="id_order" id="id_order">
+								<option>1</option>
+								<option>2</option>
+								<option>3</option>
+								<option>4</option>
+								<option>5</option>
+							</select>
 						</div>
 
 						<div class="form-group">
 							<label for="id_produk">id_produk</label>
-							<input type="text" name="id_produk" id="id_produk" class="form-control" required="required" placeholder="Masukkan id_produk">
-						</div>
-
-						<div class="form-group">
-							<label for="id_varian_order">id_varian_order</label>
-							<input type="text" name="id_varian_order" id="id_varian_order" class="form-control" required="required" placeholder="Masukkan id_varian_order">
+							<select class="form-control" name="id_produk" id="id_produk">
+								<option>1</option>
+								<option>2</option>
+								<option>3</option>
+								<option>4</option>
+								<option>5</option>
+								<option>6</option>
+								<option>7</option>
+								<option>8</option>
+								<option>9</option>
+								<option>10</option>
+								<option>11</option>
+								<option>12</option>
+							</select>
 						</div>
 
 						<div class="form-group">

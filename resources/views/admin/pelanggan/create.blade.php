@@ -50,11 +50,6 @@
 							<input type="password" name="password" id="password" class="form-control" required="required" placeholder="Masukkan password">
 						</div>
 
-						<div class="form-group">
-							<label for="remember_token">remember_token</label>
-							<input type="text" name="remember_token" id="remember_token" class="form-control" required="required" placeholder="Masukkan remember_token">
-						</div>
-
                         <div class="form-group">
 							<label for="no_telp">no_telp</label>
 							<input type="text" name="no_telp" id="no_telp" class="form-control" required="required" placeholder="Masukkan no_telp">

@@ -1,8 +1,8 @@
 <div>
-    <a href="{{route('pesanan.index')}}" target="_self">
+    <a href="#" target="_self">
         <h5 class="d-flex justify-content-between">
-            <i class="fa fa-first-order" aria-hidden="true"></i>
-            Status Order
+            <i class="fa fa-ravelry" aria-hidden="true"></i>
+            Ulasan
             <a href=""><i class="fa fa-arrow-right" aria-hidden="true"></i></a>
         </h5>
     </a>

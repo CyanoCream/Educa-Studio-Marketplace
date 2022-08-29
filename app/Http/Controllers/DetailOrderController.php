@@ -47,7 +47,6 @@ class DetailOrderController extends Controller
         $validatedData = $request->validate([
             'id_order' => 'required|integer' ,
             'id_produk' => 'required|integer' ,
-            'id_varian_order' => 'required|integer' ,
             'qty_order' => 'required|integer' ,
         ]);
 
@@ -94,7 +93,6 @@ class DetailOrderController extends Controller
         $validatedData = $request->validate([
             'id_order' => 'required|integer' ,
             'id_produk' => 'required|integer' ,
-            'id_varian_order' => 'required|integer' ,
             'qty_order' => 'required|integer' ,
         ]);
 

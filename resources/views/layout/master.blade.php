@@ -49,8 +49,102 @@
 <script src="{{asset('js/functions.js')}}"></script>
 <script src="{{asset('js/jquery.min.js')}}"></script>
 <script src="{{asset('js/bootstrap.bundle.min.js')}}"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/vue@2.7.8/dist/vue.js"></script>
+</body>
+</html>
+
 <script>
-    $('.register').on('click', function() {
+
+var appComponent = new Vue({
+        el: "#app",
+        data: {
+            gambars: [],
+            produks: [],
+            kategoris: [],
+            
+        },
+        mounted(){
+            $(document).ready(function () {
+                $.ajax({
+                url: "/api/get-produk",
+                success: function(rsp){
+                    appComponent.produks = rsp;
+                    // console.log(this.products);
+                }
+                });
+                $.ajax({
+                    url: "/api/get-kategori",
+                    success: function(rsp){
+                        appComponent.kategoris = rsp;
+                        // console.log(this.products);
+                }
+                });
+                
+                // $.ajax({
+                // url: "/api/get-gambar",
+                // success: function(rsp){
+                //     appComponent.gambars = rsp;
+                //     console.log(rsp);
+                // }
+                // });
+            });
+        },
+        
+        computed: {
+            
+        },
+        methods: {
+            deleteData(p){
+                if (confirm('yakin?????')) {
+                    $.get("/api/delete-produk",{data:p},
+                        function (data) {
+                            location.reload();
+                        },
+                    );
+                }
+            },
+            getData(p){
+                window.location.href = 'produk-detail/' + p ;
+                // alert(p);
+            },
+            getDataProduk(p){
+                window.location.href = 'api/get-pesanan//' + p ;
+                // alert(p);
+            },
+            // kategoriFilter(id) {
+            //     return this.produk.filter((produk)=> produk.id_kategori = id)
+            // }
+        }
+    });
+
+    $("#form-insert").submit(function(e) {
+        //prevent Default functionality
+        e.preventDefault();
+
+        var data = $(this).serialize();
+        //do your own request an handle the results
+        $.ajax({
+            url: '/api/insert-produk',
+            type: 'post',
+            dataType: 'application/json',
+            data: data,
+            success: function(rsp) {
+                console.log(data);
+                console.log(rsp);
+                if(rsp.status == 200){
+                    console.log("im here?");
+                    appComponent.produks.push(rsp.data);
+                    location.reload();
+                }
+                console.log(rsp);
+            }
+        });
+
+    });
+
+
+$('.register').on('click', function() {
         $('#login').modal('hide');
         $('.modal-backdrop').remove();
         // $('#register').modal('show');
@@ -62,5 +156,3 @@
     })
 
 </script>
-</body>
-</html>

@@ -14,7 +14,7 @@
                             <div class="slide-inner">
                                 <h2> Get Ready</h2>
                                 <h1>Panduan<br>Kegiatan Anak</h1>
-                                <a href="/api/katalog">Shop now</a>
+                                <a href="{{ route ('katalog.index')}}">Shop now</a>
                             </div>
                         </div>
                     </div>
@@ -26,7 +26,7 @@
                             <div class="slide-inner">
                                 <h2>Get Ready</h2>
                                 <h1>Rekomendasi<br>Aktivitas</h1>
-                                <a href="/api/katalog">Shop now</a>
+                                <a href="{{ route ('katalog.index')}}">Shop now</a>
                             </div>
                         </div>
                     </div>
@@ -38,7 +38,7 @@
                             <div class="slide-inner">
                                 <h2>Get Ready</h2>
                                 <h1>Jurnal<br>Anak</h1>
-                                <a href="/api/katalog">Shop now</a>
+                                <a href="{{ route ('katalog.index')}}">Shop now</a>
                             </div>
                         </div>
                     </div>
@@ -79,7 +79,7 @@
                                 <div class="banner-content">
                                     <div class="title-wrap">
                                         <h6 class="title">
-                                            <a target="_self" href="/api/premium">Kusus</a>
+                                            <a target="_self" href="{{ route ('premium.index')}}">Kusus</a>
                                         </h6>
                                     </div>
                                 </div>
@@ -97,7 +97,7 @@
                                         <div class="banner-content">
                                             <div class="title-wrap">
                                                 <h6 class="title">
-                                                    <a target="_self" href="/api/katalog">Aktivitas</a>
+                                                    <a target="_self" href="{{ route ('katalog.index')}}">Aktivitas</a>
                                                 </h6>
                                             </div>
                                             <div class="button-wrap">
@@ -117,7 +117,7 @@
                                         <div class="banner-content">
                                             <div class="title-wrap">
                                                 <h6 class="title">
-                                                    <a target="_self" href="/api/katalog">Aktivitas</a>
+                                                    <a target="_self" href="{{ route ('katalog.index')}}">Aktivitas</a>
                                                 </h6>
                                             </div>
                                             <div class="button-wrap">
@@ -157,19 +157,20 @@
                         </li>
                     </ul>
                 </div>
-                <div class="tab-container">
-                    <div class="tab-panel active" id="1547652538969-4e9e849f-123a-5d80aefaa70e2">
+            
+                <div id="app" class="tab-container row">
+
+                    <div v-for="p in produks" :key="p.id" class="tab-panel active col-6 col-md-4 col-lg-3" id="1547652538969-4e9e849f-123a-5d80aefaa70e2">
                         <div class="kodory-products style-01">
                             <div class="response-product product-list-grid row auto-clear equal-container better-height ">
                                 <div class="product-item recent-product style-01 rows-space-30 col-bg-3 col-xl-3 col-lg-4 col-md-4 col-sm-6 col-ts-6 post-93 product type-product status-publish has-post-thumbnail product_cat-light product_cat-table product_cat-new-arrivals product_tag-table product_tag-sock first instock shipping-taxable purchasable product-type-simple">
+                                    
                                     <div class="product-inner tooltip-left" style="background: rgb(73,81,158);
-                                    background: linear-gradient(180deg, rgba(73,81,158,1) 0%, rgba(148,35,150,1) 53%, rgba(198,75,175,1) 100%);">
+                                    background: linear-gradient(180deg, rgba(73,81,158,1) 0%, rgba(148,35,150,1) 53%, rgba(198,75,175,1) 100%); width:280px; height:480px; margin-right:2ex;">
                                         <div class="product-thumb">
-                                            <a class="thumb-link" href="/api/pesanan">
-                                                <img class="img-responsive"
-                                                    src="{{asset('images/np1.jpeg')}}"
-                                                    alt="img" width="270" height="350">
-                                            </a>
+                                            <a class="thumb-link" href="#" v-on:click="getData(p.id)">
+                                            <img class="img-responsive" width="270" height="350" :src="'/images/'+ p.gambar[0].gambar" alt="">   
+                                            </a> 
                                             <div class="flash">
                                                 <span class="onnew"><span class="text">New</span></span></div>
                                             <div class="group-button">
@@ -189,326 +190,15 @@
                                         </div>
                                         <div class="product-info equal-elem">
                                             <h3 class="product-name product_title">
-                                                <a href="/api/pesanan">Kindergarten English Course Power</a>
+                                                <a href="#" v-on:click="getData(p.id)">@{{ p.nama_produk }}</a>
                                             </h3>
-                                            <p class="m-1"><i class="fa fa-calendar-o" aria-hidden="true"></i> 8x Pertemuan</p>
-                                            <p class="m-1"><i class="fa fa-clock-o" aria-hidden="true"></i> 75 Menit</p>
-                                            <p class="m-1"><i class="fa fa-map-marker" aria-hidden="true"></i> Online</p>
+                                            <p class="m-1"><i class="fa fa-calendar-o" aria-hidden="true"></i>@{{ p.pertemuan }}</p>
+                                            <p class="m-1"><i class="fa fa-clock-o" aria-hidden="true"></i> @{{ p.waktu_temu }}.Menit</p>
+                                            <p class="m-1"><i class="fa fa-map-marker" aria-hidden="true"></i> @{{ p.status_pertemuan }}</p>
                                             <span class="price">
                                                 <span class="kodory-Price-amount amount">
-                                                <span class="kodory-Price-currencySymbol">$</span>100.00
-                                                </span>
-                                            </span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="product-item recent-product style-01 rows-space-30 col-bg-3 col-xl-3 col-lg-4 col-md-4 col-sm-6 col-ts-6 post-49 product type-product status-publish has-post-thumbnail product_cat-light product_cat-bed product_cat-sofas product_tag-multi product_tag-lamp  instock shipping-taxable purchasable product-type-simple">
-                                    <div class="product-inner tooltip-left" style="background: rgb(73,81,158);
-                                    background: linear-gradient(180deg, rgba(73,81,158,1) 0%, rgba(148,35,150,1) 53%, rgba(198,75,175,1) 100%);">
-                                        <div class="product-thumb">
-                                            <a class="thumb-link" href="/api/pesanan">
-                                                <img class="img-responsive"
-                                                     src="{{asset('images/np2.jpeg')}}"
-                                                     alt="img" width="270" height="350">
-                                            </a>
-                                            <div class="flash">
-                                                <span class="onnew"><span class="text">New</span></span></div>
-                                            <div class="group-button">
-                                                <div class="yith-wcwl-add-to-wishlist">
-                                                    <div class="yith-wcwl-add-button show">
-                                                        <a href="#" class="add_to_wishlist">Add to Wishlist</a>
-                                                    </div>
-                                                </div>
-                                                <div class="kodory product compare-button">
-                                                    <a href="#" class="compare button">Compare</a>
-                                                </div>
-                                                <a href="#" class="button yith-wcqv-button">Quick View</a>
-                                                <div class="add-to-cart">
-                                                    <a href="#" class="button product_type_simple add_to_cart_button ajax_add_to_cart">Add to cart</a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="product-info equal-elem">
-                                            <h3 class="product-name product_title">
-                                                <a href="/api/pesanan">Private English Course Les Bahasa Inggris Privat</a>
-                                            </h3>
-                                            <p class="m-1"><i class="fa fa-calendar-o" aria-hidden="true"></i> 8x Pertemuan</p>
-                                            <p class="m-1"><i class="fa fa-clock-o" aria-hidden="true"></i> 75 Menit</p>
-                                            <p class="m-1"><i class="fa fa-map-marker" aria-hidden="true"></i> Online</p>
-                                            <span class="price">
-                                                <span class="kodory-Price-amount amount">
-                                                <span class="kodory-Price-currencySymbol">$</span>79.00
-                                                </span>
-                                            </span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="product-item recent-product style-01 rows-space-30 col-bg-3 col-xl-3 col-lg-4 col-md-4 col-sm-6 col-ts-6 post-37 product type-product status-publish has-post-thumbnail product_cat-chair product_cat-bed product_tag-light product_tag-hat product_tag-sock last instock shipping-taxable purchasable product-type-simple">
-                                    <div class="product-inner tooltip-left" style="background: rgb(73,81,158);
-                                    background: linear-gradient(180deg, rgba(73,81,158,1) 0%, rgba(148,35,150,1) 53%, rgba(198,75,175,1) 100%);">
-                                        <div class="product-thumb">
-                                            <a class="thumb-link" href="/api/pesanan">
-                                                <img class="img-responsive"
-                                                     src="{{asset('images/np3.jpg')}}"
-                                                     alt="img" width="270" height="350">
-                                            </a>
-                                            <div class="flash">
-                                                <span class="onnew"><span class="text">New</span></span></div>
-                                            <div class="group-button">
-                                                <div class="yith-wcwl-add-to-wishlist">
-                                                    <div class="yith-wcwl-add-button show">
-                                                        <a href="#" class="add_to_wishlist">Add to Wishlist</a>
-                                                    </div>
-                                                </div>
-                                                <div class="kodory product compare-button">
-                                                    <a href="#" class="compare button">Compare</a>
-                                                </div>
-                                                <a href="#" class="button yith-wcqv-button">Quick View</a>
-                                                <div class="add-to-cart">
-                                                    <a href="#" class="button product_type_simple add_to_cart_button ajax_add_to_cart">Add to cart</a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="product-info equal-elem">
-                                            <h3 class="product-name product_title">
-                                                <a href="/api/pesanan">Praxis Fun English Online Course</a>
-                                            </h3>
-                                            <p class="m-1"><i class="fa fa-calendar-o" aria-hidden="true"></i> 8x Pertemuan Sebulan</p>
-                                            <p class="m-1"><i class="fa fa-clock-o" aria-hidden="true"></i> 60 Menit</p>
-                                            <p class="m-1"><i class="fa fa-map-marker" aria-hidden="true"></i> Online</p>
-                                            <span class="price">
-                                                <span class="kodory-Price-amount amount">
-                                                <span class="kodory-Price-currencySymbol">$</span>120.00
-                                                </span>
-                                            </span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="product-item recent-product style-01 rows-space-30 col-bg-3 col-xl-3 col-lg-4 col-md-4 col-sm-6 col-ts-6 post-36 product type-product status-publish has-post-thumbnail product_cat-table product_cat-bed product_tag-light product_tag-table product_tag-sock first instock sale shipping-taxable purchasable product-type-simple">
-                                    <div class="product-inner tooltip-left" style="background: rgb(73,81,158);
-                                    background: linear-gradient(180deg, rgba(73,81,158,1) 0%, rgba(148,35,150,1) 53%, rgba(198,75,175,1) 100%);">
-                                        <div class="product-thumb">
-                                            <a class="thumb-link" href="/api/pesanan">
-                                                <img class="img-responsive"
-                                                    src="{{asset('images/np4.jpeg')}}"
-                                                     alt="img" width="270" height="350">
-                                            </a>
-                                            <div class="flash">
-                                                <span class="onnew"><span class="text">New</span></span></div>
-                                            <div class="group-button">
-                                                <div class="yith-wcwl-add-to-wishlist">
-                                                    <div class="yith-wcwl-add-button show">
-                                                        <a href="#" class="add_to_wishlist">Add to Wishlist</a>
-                                                    </div>
-                                                </div>
-                                                <div class="kodory product compare-button">
-                                                    <a href="#" class="compare button">Compare</a>
-                                                </div>
-                                                <a href="#" class="button yith-wcqv-button">Quick View</a>
-                                                <div class="add-to-cart">
-                                                    <a href="#"
-                                                       class="button product_type_simple add_to_cart_button ajax_add_to_cart">Add to cart</a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="product-info equal-elem">
-                                            <h3 class="product-name product_title">
-                                                <a href="/api/pesanan">English for SchoolAge (Offline Kota Madiun)</a>
-                                            </h3>
-                                            <p class="m-1"><i class="fa fa-calendar-o" aria-hidden="true"></i> 8x Pertemuan</p>
-                                            <p class="m-1"><i class="fa fa-clock-o" aria-hidden="true"></i> 75 Menit</p>
-                                            <p class="m-1"><i class="fa fa-map-marker" aria-hidden="true"></i> Online</p>
-                                            <span class="price">
-                                                <del>
-                                                    <span class="kodory-Price-amount amount">
-                                                        <span class="kodory-Price-currencySymbol">$</span>125.00
-                                                    </span>
-                                                </del> 
-                                                <ins>
-                                                    <span class="kodory-Price-amount amount">
-                                                    <span class="kodory-Price-currencySymbol">$</span>99.00
-                                                    </span>
-                                                </ins>
-                                            </span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="product-item recent-product style-01 rows-space-30 col-bg-3 col-xl-3 col-lg-4 col-md-4 col-sm-6 col-ts-6 post-35 product type-product status-publish has-post-thumbnail product_cat-chair product_cat-new-arrivals product_cat-lamp product_tag-light product_tag-hat product_tag-sock  instock shipping-taxable purchasable product-type-simple">
-                                    <div class="product-inner tooltip-left" style="background: rgb(73,81,158);
-                                    background: linear-gradient(180deg, rgba(73,81,158,1) 0%, rgba(148,35,150,1) 53%, rgba(198,75,175,1) 100%);">
-                                        <div class="product-thumb">
-                                            <a class="thumb-link" href="/api/pesanan">
-                                                <img class="img-responsive"
-                                                    src="{{asset('images/np5.jpeg')}}"
-                                                    alt="img" width="270" height="350">
-                                            </a>
-                                            <div class="flash">
-                                                <span class="onnew"><span class="text">New</span></span></div>
-                                            <div class="group-button">
-                                                <div class="yith-wcwl-add-to-wishlist">
-                                                    <div class="yith-wcwl-add-button show">
-                                                        <a href="#" class="add_to_wishlist">Add to Wishlist</a>
-                                                    </div>
-                                                </div>
-                                                <div class="kodory product compare-button">
-                                                    <a href="#" class="compare button">Compare</a>
-                                                </div>
-                                                <a href="#" class="button yith-wcqv-button">Quick View</a>
-                                                <div class="add-to-cart">
-                                                    <a href="#" class="button product_type_simple add_to_cart_button ajax_add_to_cart">Add to cart</a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="product-info equal-elem">
-                                            <h3 class="product-name product_title">
-                                                <a href="/api/pesanan">Class English Preschool & TK</a>
-                                            </h3>
-                                            <p class="m-1"><i class="fa fa-calendar-o" aria-hidden="true"></i> 4-8x Pertemuan</p>
-                                            <p class="m-1"><i class="fa fa-clock-o" aria-hidden="true"></i> 75 Menit</p>
-                                            <p class="m-1"><i class="fa fa-map-marker" aria-hidden="true"></i> Online</p>
-                                            <span class="price">
-                                                <span class="kodory-Price-amount amount">
-                                                <span class="kodory-Price-currencySymbol">$</span>134.00
-                                                </span>
-                                            </span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="product-item recent-product style-01 rows-space-30 col-bg-3 col-xl-3 col-lg-4 col-md-4 col-sm-6 col-ts-6 post-34 product type-product status-publish has-post-thumbnail product_cat-light product_cat-new-arrivals product_tag-light product_tag-hat product_tag-sock last instock sale featured shipping-taxable product-type-grouped">
-                                    <div class="product-inner tooltip-left" style="background: rgb(73,81,158);
-                                    background: linear-gradient(180deg, rgba(73,81,158,1) 0%, rgba(148,35,150,1) 53%, rgba(198,75,175,1) 100%);">
-                                        <div class="product-thumb">
-                                            <a class="thumb-link" href="/api/pesanan">
-                                                <img class="img-responsive"
-                                                    src="{{asset('images/np6.jpeg')}}"
-                                                     alt="img" width="270" height="350">
-                                            </a>
-                                            <div class="flash">
-                                                <span class="onnew"><span class="text">New</span></span></div>
-                                            <div class="group-button">
-                                                <div class="yith-wcwl-add-to-wishlist">
-                                                    <div class="yith-wcwl-add-button show">
-                                                        <a href="#" class="add_to_wishlist">Add to Wishlist</a>
-                                                    </div>
-                                                </div>
-                                                <div class="kodory product compare-button">
-                                                    <a href="#" class="compare button">Compare</a>
-                                                </div>
-                                                <a href="#" class="button yith-wcqv-button">Quick View</a>
-                                                <div class="add-to-cart">
-                                                    <a href="#" class="button product_type_simple add_to_cart_button ajax_add_to_cart">Add to cart</a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="product-info equal-elem">
-                                            <h3 class="product-name product_title">
-                                                <a href="/api/pesanan">Trial Class Sakamoto Class</a>
-                                            </h3>
-                                            <p class="m-1"><i class="fa fa-calendar-o" aria-hidden="true"></i> 8x Pertemuan</p>
-                                            <p class="m-1"><i class="fa fa-clock-o" aria-hidden="true"></i> 30 - 60 Menit</p>
-                                            <p class="m-1"><i class="fa fa-map-marker" aria-hidden="true"></i> Online</p>
-                                            <span class="price">
-                                                <span class="kodory-Price-amount amount">
-                                                    <span class="kodory-Price-currencySymbol">$</span>79.00
-                                                </span>
-                                                 – 
-                                                <span class="kodory-Price-amount amount">
-                                                    <span class="kodory-Price-currencySymbol">$</span>139.00</span>
-                                                </span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="product-item recent-product style-01 rows-space-30 col-bg-3 col-xl-3 col-lg-4 col-md-4 col-sm-6 col-ts-6 post-32 product type-product status-publish has-post-thumbnail product_cat-light product_cat-chair product_cat-sofas product_tag-hat product_tag-sock first instock sale featured shipping-taxable purchasable product-type-simple">
-                                    <div class="product-inner tooltip-left" style="background: rgb(73,81,158);
-                                    background: linear-gradient(180deg, rgba(73,81,158,1) 0%, rgba(148,35,150,1) 53%, rgba(198,75,175,1) 100%);">
-                                        <div class="product-thumb">
-                                            <a class="thumb-link" href="/api/pesanan">
-                                                <img class="img-responsive"
-                                                    src="{{asset('images/np7.jpeg')}}"
-                                                    alt="img" width="270" height="350">
-                                            </a>
-                                            <div class="flash">
-                                                <span class="onnew"><span class="text">New</span></span></div>
-                                            <div class="group-button">
-                                                <div class="yith-wcwl-add-to-wishlist">
-                                                    <div class="yith-wcwl-add-button show">
-                                                        <a href="#" class="add_to_wishlist">Add to Wishlist</a>
-                                                    </div>
-                                                </div>
-                                                <div class="kodory product compare-button">
-                                                    <a href="3" class="compare button">Compare</a>
-                                                </div>
-                                                <a href="#" class="button yith-wcqv-button">Quick View</a>
-                                                <div class="add-to-cart">
-                                                    <a href="#" class="button product_type_simple add_to_cart_button ajax_add_to_cart">Add to cart</a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="product-info equal-elem">
-                                            <h3 class="product-name product_title">
-                                                <a href="/api/pesanan">Eye Level Calistung</a>
-                                            </h3>
-                                            <p class="m-1"><i class="fa fa-calendar-o" aria-hidden="true"></i> 2x Seminggu</p>
-                                            <p class="m-1"><i class="fa fa-clock-o" aria-hidden="true"></i> 60 Menit</p>
-                                            <p class="m-1"><i class="fa fa-map-marker" aria-hidden="true"></i> Online</p>
-                                            <span class="price">
-                                                <del>
-                                                    <span class="kodory-Price-amount amount">
-                                                        <span class="kodory-Price-currencySymbol">$</span>109.00
-                                                    </span>
-                                                </del>
-                                                <ins>
-                                                    <span class="kodory-Price-amount amount">
-                                                        <span class="kodory-Price-currencySymbol">$</span>89.00
-                                                    </span>
-                                                </ins>
-                                            </span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="product-item recent-product style-01 rows-space-30 col-bg-3 col-xl-3 col-lg-4 col-md-4 col-sm-6 col-ts-6 post-33 product type-product status-publish has-post-thumbnail product_cat-chair product_cat-table product_cat-lamp product_tag-light product_tag-table product_tag-hat  instock shipping-taxable purchasable product-type-variable has-default-attributes">
-                                    <div class="product-inner tooltip-left" style="background: rgb(73,81,158);
-                                    background: linear-gradient(180deg, rgba(73,81,158,1) 0%, rgba(148,35,150,1) 53%, rgba(198,75,175,1) 100%);">
-                                        <div class="product-thumb">
-                                            <a class="thumb-link" href="/api/pesanan">
-                                                <img class="img-responsive"
-                                                src="{{asset('images/np8.jpeg')}}"
-                                                alt="Glasses" width="270" height="350">
-                                            </a>
-                                            <div class="flash">
-                                                <span class="onnew"><span class="text">New</span></span></div>
-                                            <form class="variations_form cart">
-                                            </form>
-                                            <div class="group-button">
-                                                <div class="yith-wcwl-add-to-wishlist">
-                                                    <div class="yith-wcwl-add-button show">
-                                                        <a href="#" class="add_to_wishlist">Add to Wishlist</a>
-                                                    </div>
-                                                </div>
-                                                <div class="kodory product compare-button">
-                                                    <a href="#" class="compare button">Compare</a>
-                                                </div>
-                                                <a href="#" class="button yith-wcqv-button">Quick View</a>
-                                                <div class="add-to-cart">
-                                                    <a href="#" class="button product_type_simple add_to_cart_button ajax_add_to_cart">Select options</a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="product-info equal-elem">
-                                            <h3 class="product-name product_title">
-                                                <a href="/api/pesanan">Matematika Online</a>
-                                            </h3>
-                                            <p class="m-1"><i class="fa fa-calendar-o" aria-hidden="true"></i> Tentukan Tanggal</p>
-                                            <p class="m-1"><i class="fa fa-clock-o" aria-hidden="true"></i> 45 Menit</p>
-                                            <p class="m-1"><i class="fa fa-map-marker" aria-hidden="true"></i> Online</p>
-                                            <span class="price">
-                                                <span class="kodory-Price-amount amount">
-                                                    <span class="kodory-Price-currencySymbol">$</span>56.00
-                                                </span>
-                                                 – 
-                                                <span class="kodory-Price-amount amount">
-                                                    <span class="kodory-Price-currencySymbol">$</span>60.00
-                                                </span>
+                                                <span class="kodory-Price-currencySymbol">Rp.</span>@{{ p.harga_produk }}
+                                                </span> 
                                             </span>
                                         </div>
                                     </div>
@@ -524,7 +214,7 @@
                                     <div class="product-inner tooltip-left" style="background: rgb(73,81,158);
                                     background: linear-gradient(180deg, rgba(73,81,158,1) 0%, rgba(148,35,150,1) 53%, rgba(198,75,175,1) 100%);">
                                         <div class="product-thumb">
-                                            <a class="thumb-link" href="/api/pesanan">
+                                            <a class="thumb-link" href="{{ route ('premium.index')}}">
                                                 <img class="img-responsive"
                                                     src="{{asset('images/mp1.jpg')}}"
                                                     alt="" width="270" height="350">
@@ -548,7 +238,7 @@
                                         </div>
                                         <div class="product-info equal-elem">
                                             <h3 class="product-name product_title">
-                                                <a href="/api/pesanan">FREE 1 Month Trial - English - P3</a>
+                                                <a href="{{ route ('premium.index')}}">FREE 1 Month Trial - English - P3</a>
                                             </h3>
                                             <p class="m-1"><i class="fa fa-calendar-o" aria-hidden="true"></i> 2x Seminggu </p>
                                             <p class="m-1"><i class="fa fa-clock-o" aria-hidden="true"></i> 60 Menit</p>
@@ -561,315 +251,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="product-item top-rated style-01 rows-space-30 col-bg-3 col-xl-3 col-lg-4 col-md-4 col-sm-6 col-ts-6 post-28 product type-product status-publish has-post-thumbnail product_cat-light product_cat-chair product_cat-sofas product_tag-light product_tag-sock first instock sale featured shipping-taxable purchasable product-type-simple">
-                                    <div class="product-inner tooltip-left" style="background: rgb(73,81,158);
-                                    background: linear-gradient(180deg, rgba(73,81,158,1) 0%, rgba(148,35,150,1) 53%, rgba(198,75,175,1) 100%);">
-                                        <div class="product-thumb">
-                                            <a class="thumb-link" href="/api/pesanan">
-                                                <img class="img-responsive"
-                                                    src="{{asset('images/mp2.jpeg')}}"
-                                                    alt="" width="270" height="350">
-                                            </a>
-                                            <div class="flash">
-                                                <span class="onnew"><span class="text">New</span></span></div>
-                                            <div class="group-button">
-                                                <div class="yith-wcwl-add-to-wishlist">
-                                                    <div class="yith-wcwl-add-button show">
-                                                        <a href="#" class="add_to_wishlist">Add to Wishlist</a>
-                                                    </div>
-                                                </div>
-                                                <div class="kodory product compare-button">
-                                                    <a href="#" class="compare button">Compare</a>
-                                                </div>
-                                                <a href="#" class="button yith-wcqv-button">Quick View</a>
-                                                <div class="add-to-cart">
-                                                    <a href="#" class="button product_type_simple add_to_cart_button ajax_add_to_cart">Add to cart</a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="product-info equal-elem">
-                                            <h3 class="product-name product_title">
-                                                <a href="/api/pesanan">Superstar Package for 6 Months</a>
-                                            </h3>
-                                            <p class="m-1"><i class="fa fa-calendar-o" aria-hidden="true"></i> 6 Bulan</p>
-                                            <p class="m-1"><i class="fa fa-clock-o" aria-hidden="true"></i> 60 Menit</p>
-                                            <p class="m-1"><i class="fa fa-map-marker" aria-hidden="true"></i> Online</p>
-                                            <span class="price">
-                                                <del>
-                                                    <span class="kodory-Price-amount amount">
-                                                        <span class="kodory-Price-currencySymbol">$</span>138.00
-                                                    </span>
-                                                </del>
-                                                <ins>
-                                                    <span class="kodory-Price-amount amount">
-                                                        <span class="kodory-Price-currencySymbol">$</span>119.00
-                                                    </span>
-                                                </ins>
-                                            </span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="product-item top-rated style-01 rows-space-30 col-bg-3 col-xl-3 col-lg-4 col-md-4 col-sm-6 col-ts-6 post-20 product type-product status-publish has-post-thumbnail product_cat-light product_cat-new-arrivals product_cat-specials product_tag-table product_tag-hat product_tag-sock  instock sale featured shipping-taxable purchasable product-type-simple">
-                                    <div class="product-inner tooltip-left" style="background: rgb(73,81,158);
-                                    background: linear-gradient(180deg, rgba(73,81,158,1) 0%, rgba(148,35,150,1) 53%, rgba(198,75,175,1) 100%);">
-                                        <div class="product-thumb">
-                                            <a class="thumb-link" href="/api/pesanan">
-                                                <img class="img-responsive"
-                                                    src="{{asset('images/mp3.jpg')}}"
-                                                    alt="img" width="270" height="350">
-                                            </a>
-                                            <div class="flash">
-                                                <span class="onnew"><span class="text">New</span></span></div>
-                                            <div class="group-button">
-                                                <div class="yith-wcwl-add-to-wishlist">
-                                                    <div class="yith-wcwl-add-button show">
-                                                        <a href="#" class="add_to_wishlist">Add to Wishlist</a>
-                                                    </div>
-                                                </div>
-                                                <div class="kodory product compare-button">
-                                                    <a href="#" class="compare button">Compare</a>
-                                                </div>
-                                                <a href="#" class="button yith-wcqv-button">Quick View</a>
-                                                <div class="add-to-cart">
-                                                    <a href="#" class="button product_type_simple add_to_cart_button ajax_add_to_cart">Add to cart</a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="product-info equal-elem">
-                                            <h3 class="product-name product_title">
-                                                <a href="/api/pesanan">Trial Coding Program for Children</a>
-                                            </h3>
-                                            <p class="m-1"><i class="fa fa-calendar-o" aria-hidden="true"></i> 1x Pertemuan</p>
-                                            <p class="m-1"><i class="fa fa-clock-o" aria-hidden="true"></i> 60 Menit</p>
-                                            <p class="m-1"><i class="fa fa-map-marker" aria-hidden="true"></i> Online</p>
-                                            <span class="price">
-                                                <del>
-                                                    <span class="kodory-Price-amount amount">
-                                                    <span class="kodory-Price-currencySymbol">$</span>150.00
-                                                    </span>
-                                                </del> 
-                                                <ins>
-                                                    <span class="kodory-Price-amount amount">
-                                                        <span class="kodory-Price-currencySymbol">$</span>139.00
-                                                    </span>
-                                                </ins>
-                                            </span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="product-item top-rated style-01 rows-space-30 col-bg-3 col-xl-3 col-lg-4 col-md-4 col-sm-6 col-ts-6 post-33 product type-product status-publish has-post-thumbnail product_cat-chair product_cat-table product_cat-lamp product_tag-light product_tag-table product_tag-hat last instock shipping-taxable purchasable product-type-variable has-default-attributes">
-                                    <div class="product-inner tooltip-left" style="background: rgb(73,81,158);
-                                    background: linear-gradient(180deg, rgba(73,81,158,1) 0%, rgba(148,35,150,1) 53%, rgba(198,75,175,1) 100%);">
-                                        <div class="product-thumb">
-                                            <a class="thumb-link" href="/api/pesanan">
-                                                <img class="img-responsive"
-                                                    src="{{asset('images/mp4.jpeg')}}"
-                                                    alt="img" width="270" height="350">
-                                            </a>
-                                            <div class="flash">
-                                                <span class="onnew"><span class="text">New</span></span></div>
-                                            <form class="variations_form cart">
-                                            </form>
-                                            <div class="group-button">
-                                                <div class="yith-wcwl-add-to-wishlist">
-                                                    <div class="yith-wcwl-add-button show">
-                                                        <a href="#" class="add_to_wishlist">Add to Wishlist</a>
-                                                    </div>
-                                                </div>
-                                                <div class="kodory product compare-button">
-                                                    <a href="#" class="compare button">Compare</a>
-                                                </div>
-                                                <a href="#" class="button yith-wcqv-button">Quick View</a>
-                                                <div class="add-to-cart">
-                                                    <a href="#" class="button product_type_simple add_to_cart_button ajax_add_to_cart">Select options</a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="product-info equal-elem">
-                                            <h3 class="product-name product_title">
-                                                <a href="/api/pesanan">Math Lessons for Elementary School</a>
-                                            </h3>
-                                            <p class="m-1"><i class="fa fa-calendar-o" aria-hidden="true"></i> 8x Sebulan</p>
-                                            <p class="m-1"><i class="fa fa-clock-o" aria-hidden="true"></i> 60 - 120 Menit</p>
-                                            <p class="m-1"><i class="fa fa-map-marker" aria-hidden="true"></i> Online</p>
-                                            <span class="price">
-                                                <span class="kodory-Price-amount amount">
-                                                    <span class="kodory-Price-currencySymbol">$</span>56.00
-                                                </span>
-                                                 – 
-                                                <span class="kodory-Price-amount amount">
-                                                    <span class="kodory-Price-currencySymbol">$</span>60.00
-                                                </span>
-                                            </span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="product-item top-rated style-01 rows-space-30 col-bg-3 col-xl-3 col-lg-4 col-md-4 col-sm-6 col-ts-6 post-21 product type-product status-publish has-post-thumbnail product_cat-light product_cat-bed product_cat-lamp product_tag-light product_tag-sock first outofstock featured shipping-taxable purchasable product-type-simple">
-                                    <div class="product-inner tooltip-left" style="background: rgb(73,81,158);
-                                    background: linear-gradient(180deg, rgba(73,81,158,1) 0%, rgba(148,35,150,1) 53%, rgba(198,75,175,1) 100%);">
-                                        <div class="product-thumb">
-                                            <a class="thumb-link" href="/api/pesanan">
-                                                <img class="img-responsive"
-                                                    src="{{asset('images/mp5.jpg')}}"
-                                                    alt="img" width="270" height="350">
-                                            </a>
-                                            <div class="group-button">
-                                                <div class="yith-wcwl-add-to-wishlist">
-                                                    <div class="yith-wcwl-add-button show">
-                                                        <a href="#" class="add_to_wishlist">Add to Wishlist</a>
-                                                    </div>
-                                                </div>
-                                                <div class="kodory product compare-button">
-                                                    <a href="#" class="compare button">Compare</a>
-                                                </div>
-                                                <a href="#" class="button yith-wcqv-button">Quick View</a>
-                                                <div class="add-to-cart">
-                                                    <a href="#" class="button product_type_simple add_to_cart_button ajax_add_to_cart">Read more</a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="product-info equal-elem">
-                                            <h3 class="product-name product_title">
-                                                <a href="/api/pesanan">Private English Course SD 1-3</a>
-                                            </h3>
-                                            <p class="m-1"><i class="fa fa-calendar-o" aria-hidden="true"></i> 4x Pertemuan</p>
-                                            <p class="m-1"><i class="fa fa-clock-o" aria-hidden="true"></i> 45 - 60 Menit</p>
-                                            <p class="m-1"><i class="fa fa-map-marker" aria-hidden="true"></i> Online</p>
-                                            <span class="price">
-                                                <span class="kodory-Price-amount amount">
-                                                    <span class="kodory-Price-currencySymbol">$</span>35.00
-                                                </span>
-                                            </span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="product-item top-rated style-01 rows-space-30 col-bg-3 col-xl-3 col-lg-4 col-md-4 col-sm-6 col-ts-6 post-34 product type-product status-publish has-post-thumbnail product_cat-light product_cat-new-arrivals product_tag-light product_tag-hat product_tag-sock  instock sale featured shipping-taxable product-type-grouped">
-                                    <div class="product-inner tooltip-left" style="background: rgb(73,81,158);
-                                    background: linear-gradient(180deg, rgba(73,81,158,1) 0%, rgba(148,35,150,1) 53%, rgba(198,75,175,1) 100%);">
-                                        <div class="product-thumb">
-                                            <a class="thumb-link" href="/api/pesanan">
-                                                <img class="img-responsive"
-                                                     src="{{asset('images/mp6.jpg')}}"
-                                                     alt="img" width="270" height="350">
-                                            </a>
-                                            <div class="flash">
-                                                <span class="onnew"><span class="text">New</span></span></div>
-                                            <div class="group-button">
-                                                <div class="yith-wcwl-add-to-wishlist">
-                                                    <div class="yith-wcwl-add-button show">
-                                                        <a href="#" class="add_to_wishlist">Add to Wishlist</a>
-                                                    </div>
-                                                </div>
-                                                <div class="kodory product compare-button">
-                                                    <a href="#" class="compare button">Compare</a>
-                                                </div>
-                                                <a href="#" class="button yith-wcqv-button">Quick View</a>
-                                                <div class="add-to-cart">
-                                                    <a href="#" class="button product_type_simple add_to_cart_button ajax_add_to_cart">View products</a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="product-info equal-elem">
-                                            <h3 class="product-name product_title">
-                                                <a href="">Private Painting Course</a>
-                                            </h3>
-                                            <p class="m-1"><i class="fa fa-calendar-o" aria-hidden="true"></i> 4x Sebulan</p>
-                                            <p class="m-1"><i class="fa fa-clock-o" aria-hidden="true"></i> 90 Menit</p>
-                                            <p class="m-1"><i class="fa fa-map-marker" aria-hidden="true"></i> Online</p>
-                                            <span class="price">
-                                                <span class="kodory-Price-amount amount">
-                                                    <span class="kodory-Price-currencySymbol">$</span>79.00
-                                                </span>
-                                                 – 
-                                                <span class="kodory-Price-amount amount">
-                                                    <span class="kodory-Price-currencySymbol">$</span>139.00
-                                                </span>
-                                            </span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="product-item top-rated style-01 rows-space-30 col-bg-3 col-xl-3 col-lg-4 col-md-4 col-sm-6 col-ts-6 post-22 product type-product status-publish has-post-thumbnail product_cat-table product_cat-bed product_cat-lamp product_tag-table product_tag-hat product_tag-sock last instock featured downloadable shipping-taxable purchasable product-type-simple">
-                                    <div class="product-inner tooltip-left" style="background: rgb(73,81,158);
-                                    background: linear-gradient(180deg, rgba(73,81,158,1) 0%, rgba(148,35,150,1) 53%, rgba(198,75,175,1) 100%);">
-                                        <div class="product-thumb">
-                                            <a class="thumb-link" href="/api/pesanan">
-                                                <img class="img-responsive"
-                                                     src="{{asset('images/mp7.jpg')}}"
-                                                     alt="img" width="270" height="350">
-                                            </a>
-                                            <div class="flash">
-                                                <span class="onnew"><span class="text">New</span></span></div>
-                                            <div class="group-button">
-                                                <div class="yith-wcwl-add-to-wishlist">
-                                                    <div class="yith-wcwl-add-button show">
-                                                        <a href="#" class="add_to_wishlist">Add to Wishlist</a>
-                                                    </div>
-                                                </div>
-                                                <div class="kodory product compare-button">
-                                                    <a href="#" class="compare button">Compare</a>
-                                                </div>
-                                                <a href="#" class="button yith-wcqv-button">Quick View</a>
-                                                <div class="add-to-cart">
-                                                    <a href="#" class="button product_type_simple add_to_cart_button ajax_add_to_cart">Add to cart</a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="product-info equal-elem">
-                                            <h3 class="product-name product_title">
-                                                <a href="/api/pesanan">Private English SD 4-6</a>
-                                            </h3>
-                                            <p class="m-1"><i class="fa fa-calendar-o" aria-hidden="true"></i> 4x Pertemuan</p>
-                                            <p class="m-1"><i class="fa fa-clock-o" aria-hidden="true"></i> 60 Menit</p>
-                                            <p class="m-1"><i class="fa fa-map-marker" aria-hidden="true"></i> Online</p>
-                                            <span class="price">
-                                                <span class="kodory-Price-amount amount">
-                                                    <span class="kodory-Price-currencySymbol">$</span>98.00
-                                                </span>
-                                            </span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="product-item top-rated style-01 rows-space-30 col-bg-3 col-xl-3 col-lg-4 col-md-4 col-sm-6 col-ts-6 post-35 product type-product status-publish has-post-thumbnail product_cat-chair product_cat-new-arrivals product_cat-lamp product_tag-light product_tag-hat product_tag-sock first instock shipping-taxable purchasable product-type-simple">
-                                    <div class="product-inner tooltip-left" style="background: rgb(73,81,158);
-                                    background: linear-gradient(180deg, rgba(73,81,158,1) 0%, rgba(148,35,150,1) 53%, rgba(198,75,175,1) 100%);">
-                                        <div class="product-thumb">
-                                            <a class="thumb-link" href="/api/pesanan">
-                                                <img class="img-responsive"
-                                                    src="{{asset('images/mp8.jpg')}}"
-                                                    alt="img" width="270" height="350">
-                                            </a>
-                                            <div class="flash">
-                                                <span class="onnew"><span class="text">New</span></span></div>
-                                            <div class="group-button">
-                                                <div class="yith-wcwl-add-to-wishlist">
-                                                    <div class="yith-wcwl-add-button show">
-                                                        <a href="#" class="add_to_wishlist">Add to Wishlist</a>
-                                                    </div>
-                                                </div>
-                                                <div class="kodory product compare-button">
-                                                    <a href="#" class="compare button">Compare</a>
-                                                </div>
-                                                <a href="#" class="button yith-wcqv-button">Quick View</a>
-                                                <div class="add-to-cart">
-                                                    <a href="#" class="button product_type_simple add_to_cart_button ajax_add_to_cart">Add to cart</a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="product-info equal-elem">
-                                            <h3 class="product-name product_title">
-                                                <a href="/api/pesanan">Les Mengaji,PAI,dll(Offline)</a>
-                                            </h3>
-                                            <p class="m-1"><i class="fa fa-calendar-o" aria-hidden="true"></i> 1x Pertemuan</p>
-                                            <p class="m-1"><i class="fa fa-clock-o" aria-hidden="true"></i> 60 - 90 Menit</p>
-                                            <p class="m-1"><i class="fa fa-map-marker" aria-hidden="true"></i> Online</p>
-                                            <span class="price">
-                                                <span class="kodory-Price-amount amount">
-                                                <span class="kodory-Price-currencySymbol">$</span>134.00
-                                                </span>
-                                            </span>
-                                        </div>
-                                    </div>
-                                </div>
+                                
                             </div>
                             <!-- OWL Products -->
                         </div>
@@ -881,7 +263,7 @@
                                     <div class="product-inner tooltip-left" style="background: rgb(73,81,158);
                                     background: linear-gradient(180deg, rgba(73,81,158,1) 0%, rgba(148,35,150,1) 53%, rgba(198,75,175,1) 100%);">
                                         <div class="product-thumb">
-                                            <a class="thumb-link" href="/api/pesanan">
+                                            <a class="thumb-link" href="{{ route ('premium.index')}}">
                                                 <img class="img-responsive"
                                                      src="{{asset('images/le1.jpeg')}}"
                                                      alt="img" width="270" height="350">
@@ -905,7 +287,7 @@
                                         </div>
                                         <div class="product-info equal-elem">
                                             <h3 class="product-name product_title">
-                                                <a href="/api/pesanan">Baby Massage </a>
+                                                <a href="{{ route ('premium.index')}}">Baby Massage </a>
                                             </h3>
                                             <p class="m-1"><i class="fa fa-calendar-o" aria-hidden="true"></i> Tentukan Tanggal</p>
                                             <p class="m-1"><i class="fa fa-clock-o" aria-hidden="true"></i> 60 Menit</p>
@@ -922,320 +304,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="product-item featured_products style-01 rows-space-30 col-bg-3 col-xl-3 col-lg-4 col-md-4 col-sm-6 col-ts-6 post-32 product type-product status-publish has-post-thumbnail product_cat-light product_cat-chair product_cat-sofas product_tag-hat product_tag-sock last instock sale featured shipping-taxable purchasable product-type-simple">
-                                    <div class="product-inner tooltip-left" style="background: rgb(73,81,158);
-                                    background: linear-gradient(180deg, rgba(73,81,158,1) 0%, rgba(148,35,150,1) 53%, rgba(198,75,175,1) 100%);">
-                                        <div class="product-thumb">
-                                            <a class="thumb-link" href="/api/pesanan">
-                                                <img class="img-responsive"
-                                                     src="{{asset('images/le2.jpeg')}}"
-                                                     alt="img" width="270" height="350">
-                                            </a>
-                                            <div class="flash">
-                                                <span class="onnew"><span class="text">New</span></span></div>
-                                            <div class="group-button">
-                                                <div class="yith-wcwl-add-to-wishlist">
-                                                    <div class="yith-wcwl-add-button show">
-                                                        <a href="#" class="add_to_wishlist">Add to Wishlist</a>
-                                                    </div>
-                                                </div>
-                                                <div class="kodory product compare-button">
-                                                    <a href="#" class="compare button">Compare</a>
-                                                </div>
-                                                <a href="#" class="button yith-wcqv-button">Quick View</a>
-                                                <div class="add-to-cart">
-                                                    <a href="#" class="button product_type_simple add_to_cart_button ajax_add_to_cart">Add to cart</a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="product-info equal-elem">
-                                            <h3 class="product-name product_title">
-                                                <a href="/api/pesanan">Paket New Born 5 Hari </a>
-                                            </h3>
-                                            <p class="m-1"><i class="fa fa-calendar-o" aria-hidden="true"></i> Tentukan Tanggal</p>
-                                            <p class="m-1"><i class="fa fa-clock-o" aria-hidden="true"></i> 3 Jam</p>
-                                            <p class="m-1"><i class="fa fa-map-marker" aria-hidden="true"></i>Banyak Tempat</p>
-                                            <span class="price">
-                                                <del>
-                                                    <span class="kodory-Price-amount amount">
-                                                        <span class="kodory-Price-currencySymbol">$</span>109.00
-                                                    </span>
-                                                </del>
-                                                <ins>
-                                                    <span class="kodory-Price-amount amount">
-                                                        <span class="kodory-Price-currencySymbol">$</span>89.00
-                                                    </span>
-                                                </ins>
-                                            </span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="product-item featured_products style-01 rows-space-30 col-bg-3 col-xl-3 col-lg-4 col-md-4 col-sm-6 col-ts-6 post-30 product type-product status-publish has-post-thumbnail product_cat-light product_cat-bed product_cat-specials product_tag-light product_tag-table product_tag-sock first instock featured downloadable shipping-taxable purchasable product-type-simple">
-                                    <div class="product-inner tooltip-left" style="background: rgb(73,81,158);
-                                    background: linear-gradient(180deg, rgba(73,81,158,1) 0%, rgba(148,35,150,1) 53%, rgba(198,75,175,1) 100%);">
-                                        <div class="product-thumb">
-                                            <a class="thumb-link" href="/api/pesanan">
-                                                <img class="img-responsive"
-                                                     src="{{asset('images/le3.jpeg')}}"
-                                                     alt="img" width="270" height="350">
-                                            </a>
-                                            <div class="flash">
-                                                <span class="onnew"><span class="text">New</span></span></div>
-                                            <div class="group-button">
-                                                <div class="yith-wcwl-add-to-wishlist">
-                                                    <div class="yith-wcwl-add-button show">
-                                                        <a href="#" class="add_to_wishlist">Add to Wishlist</a>
-                                                    </div>
-                                                </div>
-                                                <div class="kodory product compare-button">
-                                                    <a href="#" class="compare button">Compare</a>
-                                                </div>
-                                                <a href="#" class="button yith-wcqv-button">Quick View</a>
-                                                <div class="add-to-cart">
-                                                    <a href="#" class="button product_type_simple add_to_cart_button ajax_add_to_cart">Add to cart</a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="product-info equal-elem">
-                                            <h3 class="product-name product_title">
-                                                <a href="/api/pesanan">Pijat Pediatric Kids & Baby </a>
-                                            </h3>
-                                            <p class="m-1"><i class="fa fa-calendar-o" aria-hidden="true"></i>  Tentukan Tempat</p>
-                                            <p class="m-1"><i class="fa fa-clock-o" aria-hidden="true"></i> 60 Menit</p>
-                                            <p class="m-1"><i class="fa fa-map-marker" aria-hidden="true"></i> Banyak Tempat</p>
-                                            <span class="price">
-                                                <span class="kodory-Price-amount amount">
-                                                    <span class="kodory-Price-currencySymbol">$</span>60.00
-                                                </span>
-                                            </span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="product-item featured_products style-01 rows-space-30 col-bg-3 col-xl-3 col-lg-4 col-md-4 col-sm-6 col-ts-6 post-31 product type-product status-publish has-post-thumbnail product_cat-light product_cat-sofas product_tag-hat  instock sale featured shipping-taxable product-type-grouped">
-                                    <div class="product-inner tooltip-left" style="background: rgb(73,81,158);
-                                    background: linear-gradient(180deg, rgba(73,81,158,1) 0%, rgba(148,35,150,1) 53%, rgba(198,75,175,1) 100%);">
-                                        <div class="product-thumb">
-                                            <a class="thumb-link" href="/api/pesanan">
-                                                <img class="img-responsive"
-                                                     src="{{asset('images/le4.jpeg')}}"
-                                                     alt="img" width="270" height="350">
-                                            </a>
-                                            <div class="flash">
-                                                <span class="onnew"><span class="text">New</span></span></div>
-                                            <div class="group-button">
-                                                <div class="yith-wcwl-add-to-wishlist">
-                                                    <div class="yith-wcwl-add-button show">
-                                                        <a href="#" class="add_to_wishlist">Add to Wishlist</a>
-                                                    </div>
-                                                </div>
-                                                <div class="kodory product compare-button">
-                                                    <a href="#" class="compare button">Compare</a>
-                                                </div>
-                                                <a href="#" class="button yith-wcqv-button">Quick View</a>
-                                                <div class="add-to-cart">
-                                                    <a href="#" class="button product_type_simple add_to_cart_button ajax_add_to_cart">Add to cart</a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="product-info equal-elem">
-                                            <h3 class="product-name product_title">
-                                                <a href="/api/pesanan">Medimom Clinic</a>
-                                            </h3>
-                                            <p class="m-1"><i class="fa fa-calendar-o" aria-hidden="true"></i> Berlaku 30 Hari</p>
-                                            <p class="m-1"><i class="fa fa-clock-o" aria-hidden="true"></i> 60 Menit</p>
-                                            <p class="m-1"><i class="fa fa-map-marker" aria-hidden="true"></i> Banyak Tempat</p>
-                                            <span class="price">
-                                                <span class="kodory-Price-amount amount">
-                                                    <span class="kodory-Price-currencySymbol">$</span>89.00
-                                                </span>
-                                                 – 
-                                                <span class="kodory-Price-amount amount">
-                                                    <span class="kodory-Price-currencySymbol">$</span>139.00
-                                                </span>
-                                            </span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="product-item featured_products style-01 rows-space-30 col-bg-3 col-xl-3 col-lg-4 col-md-4 col-sm-6 col-ts-6 post-29 product type-product status-publish has-post-thumbnail product_cat-new-arrivals product_cat-specials product_tag-light product_tag-sock last instock featured downloadable shipping-taxable purchasable product-type-simple">
-                                    <div class="product-inner tooltip-left" style="background: rgb(73,81,158);
-                                    background: linear-gradient(180deg, rgba(73,81,158,1) 0%, rgba(148,35,150,1) 53%, rgba(198,75,175,1) 100%);">
-                                        <div class="product-thumb">
-                                            <a class="thumb-link" href="/api/pesanan">
-                                                <img class="img-responsive"
-                                                     src="{{asset('images/le5.jpeg')}}"
-                                                     alt="img" width="270" height="350">
-                                            </a>
-                                            <div class="flash">
-                                                <span class="onnew"><span class="text">New</span></span></div>
-                                            <div class="group-button">
-                                                <div class="yith-wcwl-add-to-wishlist">
-                                                    <div class="yith-wcwl-add-button show">
-                                                        <a href="#" class="add_to_wishlist">Add to Wishlist</a>
-                                                    </div>
-                                                </div>
-                                                <div class="kodory product compare-button">
-                                                    <a href="#" class="compare button">Compare</a>
-                                                </div>
-                                                <a href="#" class="button yith-wcqv-button">Quick View</a>
-                                                <div class="add-to-cart">
-                                                    <a href="#" class="button product_type_simple add_to_cart_button ajax_add_to_cart">Add to cart</a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="product-info equal-elem">
-                                            <h3 class="product-name product_title">
-                                                <a href="/api/pesanan">Tindik dan Sunat</a>
-                                            </h3>
-                                            <p class="m-1"><i class="fa fa-calendar-o" aria-hidden="true"></i> Tentukan Tanggal</p>
-                                            <p class="m-1"><i class="fa fa-clock-o" aria-hidden="true"></i> 45 Menit</p>
-                                            <p class="m-1"><i class="fa fa-map-marker" aria-hidden="true"></i> Banyak Tempat</p>
-                                            <span class="price">
-                                                <span class="kodory-Price-amount amount">
-                                                    <span class="kodory-Price-currencySymbol">$</span>129.00
-                                                </span>
-                                            </span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="product-item featured_products style-01 rows-space-30 col-bg-3 col-xl-3 col-lg-4 col-md-4 col-sm-6 col-ts-6 post-28 product type-product status-publish has-post-thumbnail product_cat-light product_cat-chair product_cat-sofas product_tag-light product_tag-sock first instock sale featured shipping-taxable purchasable product-type-simple">
-                                    <div class="product-inner tooltip-left" style="background: rgb(73,81,158);
-                                    background: linear-gradient(180deg, rgba(73,81,158,1) 0%, rgba(148,35,150,1) 53%, rgba(198,75,175,1) 100%);">
-                                        <div class="product-thumb">
-                                            <a class="thumb-link" href="/api/pesanan">
-                                                <img class="img-responsive"
-                                                     src="{{asset('images/le6.jpeg')}}"
-                                                     alt="/api/pesanan" width="270" height="350">
-                                            </a>
-                                            <div class="flash">
-                                                <span class="onnew"><span class="text">New</span></span></div>
-                                            <div class="group-button">
-                                                <div class="yith-wcwl-add-to-wishlist">
-                                                    <div class="yith-wcwl-add-button show">
-                                                        <a href="#" class="add_to_wishlist">Add to Wishlist</a>
-                                                    </div>
-                                                </div>
-                                                <div class="kodory product compare-button">
-                                                    <a href="#" class="compare button">Compare</a>
-                                                </div>
-                                                <a href="#" class="button yith-wcqv-button">Quick View</a>
-                                                <div class="add-to-cart">
-                                                    <a href="#" class="button product_type_simple add_to_cart_button ajax_add_to_cart">Add to cart</a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="product-info equal-elem">
-                                            <h3 class="product-name product_title">
-                                                <a href="/api/pesanan">Hair Cut Baby</a>
-                                            </h3>
-                                            <p class="m-1"><i class="fa fa-calendar-o" aria-hidden="true"></i> Tentukan Tanggal</p>
-                                            <p class="m-1"><i class="fa fa-clock-o" aria-hidden="true"></i> 90 Menit</p>
-                                            <p class="m-1"><i class="fa fa-map-marker" aria-hidden="true"></i> Banyak Tempat</p>
-                                            <span class="price">
-                                                <del>
-                                                    <span class="kodory-Price-amount amount">
-                                                        <span class="kodory-Price-currencySymbol">$</span>138.00
-                                                    </span>
-                                                </del>
-                                                <ins>
-                                                    <span class="kodory-Price-amount amount">
-                                                        <span class="kodory-Price-currencySymbol">$</span>119.00
-                                                    </span>
-                                                </ins>
-                                            </span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="product-item featured_products style-01 rows-space-30 col-bg-3 col-xl-3 col-lg-4 col-md-4 col-sm-6 col-ts-6 post-26 product type-product status-publish has-post-thumbnail product_cat-light product_cat-chair product_cat-sofas product_tag-light product_tag-hat  instock featured shipping-taxable product-type-external">
-                                    <div class="product-inner tooltip-left" style="background: rgb(73,81,158);
-                                    background: linear-gradient(180deg, rgba(73,81,158,1) 0%, rgba(148,35,150,1) 53%, rgba(198,75,175,1) 100%);">
-                                        <div class="product-thumb">
-                                            <a class="thumb-link" href="/api/pesanan">
-                                                <img class="img-responsive"
-                                                     src="{{asset('images/le7.jpeg')}}"
-                                                     alt="" width="270" height="350">
-                                            </a>
-                                            <div class="flash">
-                                                <span class="onnew"><span class="text">New</span></span></div>
-                                            <div class="group-button">
-                                                <div class="yith-wcwl-add-to-wishlist">
-                                                    <div class="yith-wcwl-add-button show">
-                                                        <a href="#" class="add_to_wishlist">Add to Wishlist</a>
-                                                    </div>
-                                                </div>
-                                                <div class="kodory product compare-button">
-                                                    <a href="#" class="compare button">Compare</a>
-                                                </div>
-                                                <a href="#" class="button yith-wcqv-button">Quick View</a>
-                                                <div class="add-to-cart">
-                                                    <a href="#" class="button product_type_simple add_to_cart_button ajax_add_to_cart">Add to cart</a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="product-info equal-elem">
-                                            <h3 class="product-name product_title">
-                                                <a href="/api/pesanan">Baby Spa</a>
-                                            </h3>
-                                            <p class="m-1"><i class="fa fa-calendar-o" aria-hidden="true"></i> Tentukan Tanggal</p>
-                                            <p class="m-1"><i class="fa fa-clock-o" aria-hidden="true"></i> 60 Menit</p>
-                                            <p class="m-1"><i class="fa fa-map-marker" aria-hidden="true"></i> Banyak Tempat</p>
-                                            <span class="price">
-                                                <span class="kodory-Price-amount amount">
-                                                    <span class="kodory-Price-currencySymbol">$</span>207.00
-                                                </span>
-                                            </span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="product-item featured_products style-01 rows-space-30 col-bg-3 col-xl-3 col-lg-4 col-md-4 col-sm-6 col-ts-6 post-25 product type-product status-publish has-post-thumbnail product_cat-light product_cat-chair product_cat-specials product_tag-light product_tag-sock last instock sale featured shipping-taxable purchasable product-type-simple">
-                                    <div class="product-inner tooltip-left" style="background: rgb(73,81,158);
-                                    background: linear-gradient(180deg, rgba(73,81,158,1) 0%, rgba(148,35,150,1) 53%, rgba(198,75,175,1) 100%);">
-                                        <div class="product-thumb">
-                                            <a class="thumb-link" href="/api/pesanan">
-                                                <img class="img-responsive"
-                                                     src="{{asset('images/le8.jpeg')}}"
-                                                     alt="" width="270" height="350">
-                                            </a>
-                                            <div class="flash">
-                                                <span class="onnew"><span class="text">New</span></span></div>
-                                            <div class="group-button">
-                                                <div class="yith-wcwl-add-to-wishlist">
-                                                    <div class="yith-wcwl-add-button show">
-                                                        <a href="#" class="add_to_wishlist">Add to Wishlist</a>
-                                                    </div>
-                                                </div>
-                                                <div class="kodory product compare-button">
-                                                    <a href="#" class="compare button">Compare</a>
-                                                </div>
-                                                <a href="#" class="button yith-wcqv-button">Quick View</a>
-                                                <div class="add-to-cart">
-                                                    <a href="#"
-                                                       class="button product_type_simple add_to_cart_button ajax_add_to_cart">Add to cart</a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="product-info equal-elem">
-                                            <h3 class="product-name product_title">
-                                                <a href="/api/pesanan">Kids Massage</a>
-                                            </h3>
-                                            <p class="m-1"><i class="fa fa-calendar-o" aria-hidden="true"></i> Tentukan Tanggal</p>
-                                            <p class="m-1"><i class="fa fa-clock-o" aria-hidden="true"></i> 60 Menit</p>
-                                            <p class="m-1"><i class="fa fa-map-marker" aria-hidden="true"></i>  Banyak Tempat</p>
-                                            <span class="price">
-                                                <del>
-                                                    <span class="kodory-Price-amount amount">
-                                                        <span class="kodory-Price-currencySymbol">$</span>89.00
-                                                    </span>
-                                                </del>
-                                                <ins>
-                                                    <span class="kodory-Price-amount amount">
-                                                        <span class="kodory-Price-currencySymbol">$</span>79.00
-                                                    </span>
-                                                </ins>
-                                            </span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+
                             <!-- OWL Products -->
                         </div>
                     </div>
@@ -1256,7 +325,7 @@
                             <h6 class="title">Dengan Mengikuti Program Kami</h6>
                         </div>
                         <div class="button-wrap">
-                            <a class="button" target="_self" href="/api/katalog"><span>Shop now</span></a>
+                            <a class="button" target="_self" href="{{ route ('katalog.index')}}"><span>Shop now</span></a>
                         </div>
                     </div>
                 </div>
@@ -1400,15 +469,15 @@
                             <div class="product-item best-selling style-06 rows-space-30 post-25 product type-product status-publish has-post-thumbnail product_cat-light product_cat-chair product_cat-specials product_tag-light product_tag-sock first instock sale featured shipping-taxable purchasable product-type-simple">
                                 <div class="product-inner">
                                     <div class="product-thumb">
-                                        <a class="thumb-link" href="/api/pesanan" tabindex="0">
+                                        <a class="thumb-link" href="{{ route ('premium.index')}}" tabindex="0">
                                             <img class="img-responsive"
                                                  src="{{asset('images/bs 1.1.jpg')}}"
                                                  alt="img" width="90" height="90">
                                         </a>
                                     </div>
                                     <div class="product-info">
-                                        <h3 class="/api/pesanan">
-                                            <a href="/api/pesanan" tabindex="0">Modern Platinum</a>
+                                        <h3 class="{{ route ('premium.index')}}">
+                                            <a href="{{ route ('premium.index')}}" tabindex="0">Modern Platinum</a>
                                         </h3>
                                         <div class="rating-wapper nostar">
                                             <div class="star-rating"><span
@@ -1426,7 +495,7 @@
                             <div class="product-item best-selling style-06 rows-space-30 post-23 product type-product status-publish has-post-thumbnail product_cat-chair product_cat-lamp product_cat-sofas product_tag-hat  instock shipping-taxable purchasable product-type-variable has-default-attributes">
                                 <div class="product-inner">
                                     <div class="product-thumb">
-                                        <a class="thumb-link" href="/api/pesanan" tabindex="0">
+                                        <a class="thumb-link" href="{{ route ('premium.index')}}" tabindex="0">
                                             <img class="img-responsive"
                                                  src="{{asset('images/bs 1.2.jpg')}}"
                                                  alt="img" width="90" height="90">
@@ -1434,7 +503,7 @@
                                     </div>
                                     <div class="product-info">
                                         <h3 class="product-name product_title">
-                                            <a href="/api/pesanan" tabindex="0">Cute Girl Shirt</a>
+                                            <a href="{{ route ('premium.index')}}" tabindex="0">Cute Girl Shirt</a>
                                         </h3>
                                         <div class="rating-wapper nostar">
                                             <div class="star-rating"><span
@@ -1452,7 +521,7 @@
                             <div class="product-item best-selling style-06 rows-space-30 post-32 product type-product status-publish has-post-thumbnail product_cat-light product_cat-chair product_cat-sofas product_tag-hat product_tag-sock last instock sale featured shipping-taxable purchasable product-type-simple">
                                 <div class="product-inner">
                                     <div class="product-thumb">
-                                        <a class="thumb-link" href="/api/pesanan" tabindex="0">
+                                        <a class="thumb-link" href="{{ route ('premium.index')}}" tabindex="0">
                                             <img class="img-responsive"
                                                  src="{{asset('images/bs 1.3.jpg')}}"
                                                  alt="img" width="90" height="90">
@@ -1460,7 +529,7 @@
                                     </div>
                                     <div class="product-info">
                                         <h3 class="product-name product_title">
-                                            <a href="/api/pesanan" tabindex="0">Kid Backpack</a>
+                                            <a href="{{ route ('premium.index')}}" tabindex="0">Kid Backpack</a>
                                         </h3>
                                         <div class="rating-wapper nostar">
                                             <div class="star-rating"><span
@@ -1478,7 +547,7 @@
                             <div class="product-item best-selling style-06 rows-space-30 post-20 product type-product status-publish has-post-thumbnail product_cat-light product_cat-new-arrivals product_cat-specials product_tag-table product_tag-hat product_tag-sock first instock sale featured shipping-taxable purchasable product-type-simple">
                                 <div class="product-inner">
                                     <div class="product-thumb">
-                                        <a class="thumb-link" href="/api/pesanan" tabindex="-1">
+                                        <a class="thumb-link" href="{{ route ('premium.index')}}" tabindex="-1">
                                             <img class="img-responsive"
                                                  src="{{asset('images/bs 1.4.jpg')}}"
                                                  alt="Red Car" width="90" height="90">
@@ -1486,7 +555,7 @@
                                     </div>
                                     <div class="product-info">
                                         <h3 class="product-name product_title">
-                                            <a href="/api/pesanan" tabindex="-1">Red Car</a>
+                                            <a href="{{ route ('premium.index')}}" tabindex="-1">Red Car</a>
                                         </h3>
                                         <div class="rating-wapper nostar">
                                             <div class="star-rating"><span
@@ -1504,7 +573,7 @@
                             <div class="product-item best-selling style-06 rows-space-30 post-36 product type-product status-publish has-post-thumbnail product_cat-table product_cat-bed product_tag-light product_tag-table product_tag-sock  instock sale shipping-taxable purchasable product-type-simple">
                                 <div class="product-inner">
                                     <div class="product-thumb">
-                                        <a class="thumb-link" href="/api/pesanan" tabindex="-1">
+                                        <a class="thumb-link" href="{{ route ('premium.index')}}" tabindex="-1">
                                             <img class="img-responsive"
                                                  src="{{asset('images/bs 1.5.jpg')}}"
                                                  alt="img" width="90" height="90">
@@ -1512,7 +581,7 @@
                                     </div>
                                     <div class="product-info">
                                         <h3 class="product-name product_title">
-                                            <a href="/api/pesanan" tabindex="-1">Dazzling Toys</a>
+                                            <a href="{{ route ('premium.index')}}" tabindex="-1">Dazzling Toys</a>
                                         </h3>
                                         <div class="rating-wapper nostar">
                                             <div class="star-rating"><span
@@ -1530,7 +599,7 @@
                             <div class="product-item best-selling style-06 rows-space-30 post-49 product type-product status-publish has-post-thumbnail product_cat-light product_cat-bed product_cat-sofas product_tag-multi product_tag-lamp last instock shipping-taxable purchasable product-type-simple">
                                 <div class="product-inner">
                                     <div class="product-thumb">
-                                        <a class="thumb-link" href="/api/pesanan" tabindex="-1">
+                                        <a class="thumb-link" href="{{ route ('premium.index')}}" tabindex="-1">
                                             <img class="img-responsive"
                                                  src="{{asset('images/bs 1.6.jpg')}}"
                                                  alt="img" width="90" height="90">
@@ -1538,7 +607,7 @@
                                     </div>
                                     <div class="product-info">
                                         <h3 class="product-name product_title">
-                                            <a href="/api/pesanan" tabindex="-1">Cute Shoes</a>
+                                            <a href="{{ route ('premium.index')}}" tabindex="-1">Cute Shoes</a>
                                         </h3>
                                         <div class="rating-wapper nostar">
                                             <div class="star-rating"><span
@@ -1554,7 +623,7 @@
                             <div class="product-item best-selling style-06 rows-space-30 post-93 product type-product status-publish has-post-thumbnail product_cat-light product_cat-table product_cat-new-arrivals product_tag-table product_tag-sock first instock shipping-taxable purchasable product-type-simple">
                                 <div class="product-inner">
                                     <div class="product-thumb">
-                                        <a class="thumb-link" href="/api/pesanan" tabindex="-1">
+                                        <a class="thumb-link" href="{{ route ('premium.index')}}" tabindex="-1">
                                             <img class="img-responsive"
                                                  src="{{asset('images/bs 1.7.jpg')}}"
                                                  alt="img" width="90" height="90">
@@ -1562,7 +631,7 @@
                                     </div>
                                     <div class="product-info">
                                         <h3 class="product-name product_title">
-                                            <a href="/api/pesanan" tabindex="-1">Hello Shirt</a>
+                                            <a href="{{ route ('premium.index')}}" tabindex="-1">Hello Shirt</a>
                                         </h3>
                                         <div class="rating-wapper nostar">
                                             <div class="star-rating"><span
@@ -1578,7 +647,7 @@
                             <div class="product-item best-selling style-06 rows-space-30 post-28 product type-product status-publish has-post-thumbnail product_cat-light product_cat-chair product_cat-sofas product_tag-light product_tag-sock  instock sale featured shipping-taxable purchasable product-type-simple">
                                 <div class="product-inner">
                                     <div class="product-thumb">
-                                        <a class="thumb-link" href="/api/pesanan" tabindex="-1">
+                                        <a class="thumb-link" href="{{ route ('premium.index')}}" tabindex="-1">
                                             <img class="img-responsive"
                                                  src="{{asset('images/bs 1.8.jpg')}}"
                                                  alt="img" width="90" height="90">
@@ -1586,7 +655,7 @@
                                     </div>
                                     <div class="product-info">
                                         <h3 class="product-name product_title">
-                                            <a href="/api/pesanan" tabindex="-1">Blue Shoes</a>
+                                            <a href="{{ route ('premium.index')}}" tabindex="-1">Blue Shoes</a>
                                         </h3>
                                         <div class="rating-wapper ">
                                             <div class="star-rating"><span
@@ -1604,7 +673,7 @@
                             <div class="product-item best-selling style-06 rows-space-30 post-22 product type-product status-publish has-post-thumbnail product_cat-table product_cat-bed product_cat-lamp product_tag-table product_tag-hat product_tag-sock last instock featured downloadable shipping-taxable purchasable product-type-simple">
                                 <div class="product-inner">
                                     <div class="product-thumb">
-                                        <a class="thumb-link" href="/api/pesanan" tabindex="-1">
+                                        <a class="thumb-link" href="{{ route ('premium.index')}}" tabindex="-1">
                                             <img class="img-responsive"
                                                  src="{{asset('images/bs 1.9.jpg')}}"
                                                  alt="Soccer Shoes" width="90" height="90">
@@ -1612,7 +681,7 @@
                                     </div>
                                     <div class="product-info">
                                         <h3 class="product-name product_title">
-                                            <a href="/api/pesanan" tabindex="-1">Soccer Shoes</a>
+                                            <a href="{{ route ('premium.index')}}" tabindex="-1">Soccer Shoes</a>
                                         </h3>
                                         <div class="rating-wapper nostar">
                                             <div class="star-rating"><span
@@ -1640,7 +709,7 @@
                                 <div class="product-inner">
                                     <div class="product-thumb">
                                         <a class="thumb-link"
-                                           href="/api/pesanan"
+                                           href="{{ route ('premium.index')}}"
                                            tabindex="0">
                                             <img class="img-responsive"
                                                  src="{{asset('images/os 1.1.jpg')}}"
@@ -1649,7 +718,7 @@
                                     </div>
                                     <div class="product-info">
                                         <h3 class="product-name product_title">
-                                            <a href="/api/pesanan"
+                                            <a href="{{ route ('premium.index')}}"
                                                tabindex="0">Dazzling Toys</a>
                                         </h3>
                                         <div class="rating-wapper nostar">
@@ -1669,7 +738,7 @@
                                 <div class="product-inner">
                                     <div class="product-thumb">
                                         <a class="thumb-link"
-                                           href="/api/pesanan"
+                                           href="{{ route ('premium.index')}}"
                                            tabindex="0">
                                             <img class="img-responsive"
                                                  src="{{asset('images/os 1.2.jpg')}}"
@@ -1678,7 +747,7 @@
                                     </div>
                                     <div class="product-info">
                                         <h3 class="product-name product_title">
-                                            <a href="/api/pesanan"
+                                            <a href="{{ route ('premium.index')}}"
                                                tabindex="0">Kid Backpack</a>
                                         </h3>
                                         <div class="rating-wapper nostar">
@@ -1698,7 +767,7 @@
                                 <div class="product-inner">
                                     <div class="product-thumb">
                                         <a class="thumb-link"
-                                           href="/api/pesanan"
+                                           href="{{ route ('premium.index')}}"
                                            tabindex="0">
                                             <img class="img-responsive"
                                                  src="{{asset('images/os 1.3.jpg')}}"
@@ -1707,7 +776,7 @@
                                     </div>
                                     <div class="product-info">
                                         <h3 class="product-name product_title">
-                                            <a href="/api/pesanan"
+                                            <a href="{{ route ('premium.index')}}"
                                                tabindex="0">Blue Shoes</a>
                                         </h3>
                                         <div class="rating-wapper ">
@@ -1727,7 +796,7 @@
                                 <div class="product-inner">
                                     <div class="product-thumb">
                                         <a class="thumb-link"
-                                           href="/api/pesanan"
+                                           href="{{ route ('premium.index')}}"
                                            tabindex="-1">
                                             <img class="img-responsive"
                                                  src="{{asset('images/os 1.4.jpg')}}"
@@ -1736,7 +805,7 @@
                                     </div>
                                     <div class="product-info">
                                         <h3 class="product-name product_title">
-                                            <a href="/api/pesanan"
+                                            <a href="{{ route ('premium.index')}}"
                                                tabindex="-1">Modern Platinum</a>
                                         </h3>
                                         <div class="rating-wapper nostar">
@@ -1756,7 +825,7 @@
                                 <div class="product-inner">
                                     <div class="product-thumb">
                                         <a class="thumb-link"
-                                           href="/api/pesanan"
+                                           href="{{ route ('premium.index')}}"
                                            tabindex="-1">
                                             <img class="img-responsive"
                                                  src="{{asset('images/os 1.5.jpg')}}"
@@ -1765,7 +834,7 @@
                                     </div>
                                     <div class="product-info">
                                         <h3 class="product-name product_title">
-                                            <a href="/api/pesanan"
+                                            <a href="{{ route ('premium.index')}}"
                                                tabindex="-1">Red Car</a>
                                         </h3>
                                         <div class="rating-wapper nostar">
@@ -1936,7 +1005,7 @@
                             class="post-item post-grid rows-space-0 post-192 post type-post status-publish format-standard has-post-thumbnail hentry category-light category-fashion category-multi category-life-style tag-light tag-fashion tag-multi">
                         <div class="post-inner blog-grid">
                             <div class="post-thumb">
-                                <a href="https://www.facebook.com/momandbabypandeglang" tabindex="0">
+                                <a href="#" tabindex="0">
                                     <img src="{{asset('images/bp1.2.jpg')}}"
                                          class="img-responsive attachment-370x330 size-370x330" alt="img"
                                          width="370" height="330"> </a>
@@ -1954,9 +1023,9 @@
                                 </div>
                                 <div class="post-info equal-elem">
                                     <h2 class="post-title">
-                                        <a href="https://www.facebook.com/momandbabypandeglang" tabindex="0">Selamat Hari Anak Nasional</a>
+                                        <a href="#" tabindex="0">Selamat Hari Anak Nasional</a>
                                     </h2>
-                                    <p>Semoga anak-anak kita tumbuh menjadi anak-anak yang cerdas,
+                                    <p>Semoga anaka-anak kita tumbuh menjadi anak-anak yang cerdas,
                                     sehat,berakhlak baik,dan kelak dapat jadi penguat kehidupan kehidupan
                                     berbangsa dan bernegara.Karena manusia berkualitas di besarkan di rumah
                                     yang penuh kasih sayang. <br>
@@ -2016,25 +1085,18 @@
                             <div class="post-content">
                                 <div class="post-meta">
                                     <div class="post-author">
-                                        {{-- <a href="#"> admin </a> --}}
-                                        <h5>The Babies Jakarta</h5>
+                                        <a href="#"> admin </a>
                                     </div>
                                     <div class="date">
-                                        {{-- <a href="#">January 03, 2021</a> --}}
-                                        <h6>March 15, 2022</h6>
+                                        <a href="#">January 03, 2021</a>
                                     </div>
                                 </div>
                                 <div class="post-info equal-elem">
-                                    <h2 class="post-title">
-                                        <a href="https://www.facebook.com/momandbabypandeglang/photos/a.108590627544646/494387705631601/" tabindex="-1">Quotes of the day...</a>
-                                    </h2>
-                                    <p>Anak bagaikan cermin, <br>
-                                    apa yang ia lihat dan <br>
-                                    dengar ia akan menirunya. <br>
-                                    Jadilah cermin yang baik <br>
-                                    untuk mereka untuk <br>
-                                    kedepannya. <br>
-                                    - Mom And Baby</p>
+                                    <h2 class="post-title"><a
+                                            href="single-post.html"
+                                            tabindex="-1">The child is swimming with a buoy</a></h2>
+                                    Lore ipsum dolor sit amet, consectetur adipiscing elit. Malesuada sodales
+                                    quisque litora dapibus primis lacinia
                                 </div>
                             </div>
                         </div>

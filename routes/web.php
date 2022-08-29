@@ -10,96 +10,57 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
-
-Route::get('/', function () {
+Route::get('/dashboard', function () {
     return view('admin.master');
 });
 
-// Route::get('layout', function () {
-//     return view('layout.master');
-// })->name('layout.master');
+Route::get('/', function () {
+    return view('layout.master');
+});
 
-// Route::get('premium', function () {
-//     return view('premium.index');
-// })->name('premium.index');
+Route::get('/katalog', function () {
+    return view('katalog.index');
+})->name('katalog.index');
 
-// Route::get('katalog', function () {
-//     return view('katalog.index');
-// })->name('katalog.index');
-// Route::prefix('katalog')->group(function () {
-//     Route::get('aktivitas', function () {
-//         return view('katalog.aktivitas');
-//     })->name('katalog.aktivitas');
-//     Route::get('kursus', function () {
-//         return view('katalog.kursus');
-//     })->name('katalog.kursus');
-//     Route::get('experience', function () {
-//         return view('katalog.experience');
-//     })->name('katalog.experience');
-//     Route::get('activity_kit', function () {
-//         return view('katalog.activity_kit');
-//     })->name('katalog.activity_kit');
-//     Route::get('gratis', function () {
-//         return view('katalog.gratis');
-//     })->name('katalog.gratis');
-// });
 
-// Route::get('pesanan', function () {
-//     return view('pesanan.index');
-// })->name('pesanan.index');
-// Route::prefix('pesanan')->group(function () {
-//     Route::get('keranjang', function () {
-//         return view('pesanan.keranjang');
-//     })->name('pesanan.keranjang');  
-//     Route::get('tiket', function () {
-//         return view('pesanan.tiket');
-//     })->name('pesanan.tiket');    
-//     Route::get('riwayat_pemesanan', function () {
-//         return view('pesanan.riwayat_pemesanan');
-//     })->name('pesanan.riwayat_pemesanan');    
-// });
 
-// Route::get('akun', function () {
-//     return view('akun.index');
-// })->name('akun.index');
-// Route::prefix('akun')->group(function () {
-//     Route::get('orders', function () {
-//         return view('akun.orders');
-//     })->name('akun.orders');  
-//     Route::get('addresses', function () {
-//         return view('akun.addresses');
-//     })->name('akun.addresses');    
-//     Route::get('account_details', function () {
-//         return view('akun.account_details');
-//     })->name('akun.account_details'); 
-//     Route::get('logout', function () {
-//         return view('akun.logout');
-//     })->name('akun.logout');    
-// });
+Route::get('/premium', function () {
+    return view('premium.index');
+})->name('premium.index');
 
-Route::get('top_up', function () {
+Route::get('/topup', function () {
     return view('top_up.index');
-})->name('top_up.index');
-// Route::prefix('top_up')->group(function () {
-//     Route::get('top_up', function () {
-//     return view('top_up.paket_data');
-// })->name('top_up.paket_data');
-// });
+})->name('topup.index');
 
-// Route::get('pengiriman', function () {
-//     return view('pengiriman');
-// });
 
-// Route::get('/', function () {
-//     return redirect(route('login'));
-// });
+Route::get('/produk-detail/{id}','ProdukController@show')->name('produk-detail');
 
-// Route::get('product_detail', function () {
-//     return view('product_detail.index');
-// })->name('product_detail.index');
+Route::get('/akun', function () {
+    return view('akun.index');
+})->name('akun.index');
+
+Auth::routes();
 
 // home admin
 Route::get('/home', 'HomeController@index')->name('dashboard');
+
+Auth::routes();
+
+Route::post('/postlogin', 'LoginController@postlogin')->name('postlogin');
+Route::post('/logout', 'LoginController@logout')->name('logout');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
+
+Route::get('produk-detail/{id}', 'ProdukController@show');
+
+Route::post('peserta', 'PesertaController@getPeserta')->name('peserta');
+
+Route::get('/pesanan', 'OrderController@index')->name('pesanan.index');
+Route::get('/pesanan/invoice', 'OrderController@invoice')->middleware('auth')->name('pesanan.invoice');
+
+Route::post('checkout/{id}', 'ProdukController@addData')->name('checkout');
 
 // detail_order
 Route::get('/detail_order', 'DetailOrderController@index')->name('daftarDetail_Order');

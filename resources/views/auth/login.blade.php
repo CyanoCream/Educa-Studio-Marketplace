@@ -86,48 +86,83 @@
 		</style>
 	</head>
 	<body>
-		<!-- Main Content -->
-		<div class="modal fade" id="login" tabindex="-1" aria-labelledby="loginLabel" aria-hidden="true">
+        <div class="modal fade" id="login" tabindex="-1" aria-labelledby="loginLabel" aria-hidden="true">
 			<div class="modal-dialog">
-				<div class="modal-content" style="border-radius: 20px">
+				<div class="modal-content" style="border-radius: 20px; background-color:transparent;">
 				<div class="modal-body">
 					<div class="container-fluid">
-						<div class="row main-content bg-success text-center">
+						<div class="row main-content bg-success w-100">
 							<div class="col-md-4 company__info">
 								<span class="company__logo">
 									<h2>
 										<img src="{{asset('images/priv.jpeg')}}" class="size-full" style="border-radius: 20px" alt="img">
 									</h2>
 								</span>
-								<h4 class="company_title">Child</h4>
+								{{-- <h4 class="company_title">Child</h4> --}}
 							</div>
 							<div class="col-md-8 col-xs-12 col-sm-12 login_form ">
-								<div class="container-fluid">
+							<div class="container-fluid">
 									<div class="row justify-content-center">
-										<h2 class="text-center">Login</h2>
+										<h2 class="text-center">LOGIN</h2>
 									</div>
-									<div class="row">
-										<form control="" class="form-group">
-											<div class="row">
-												<input type="text" name="username" id="username" class="form__input" placeholder="Username">
-											</div>
-											<div class="row">
-												<input type="password" name="password" id="password" class="form__input" placeholder="Password">
-											</div>
-											<div class="row">
-												<input type="submit" value="Submit" class="btn btn-primary">
-											</div>
-										</form>
-									</div>
-									<div class="row">
-										<p>Don't have an account? <a class="register" href="#" data-toggle="modal" data-target="#register">Register Here</a></p>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</body>
+                            <form class="form-group" method="POST" action="{{ route('login') }}">
+                                {{ csrf_field() }}
+
+                                <div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">
+                                    <label for="email" class="col-md-4 control-label">E-Mail Address</label>
+
+                                        <input id="email" type="email" class="form-control" name="email" value="{{ old('email') }}" required autofocus placeholder="Masukkan Email">
+
+                                        @if ($errors->has('email'))
+                                            <span class="help-block">
+                                                <strong>{{ $errors->first('email') }}</strong>
+                                            </span>
+                                        @endif
+
+                                </div>
+
+                                <div class="form-group{{ $errors->has('password') ? ' has-error' : '' }}">
+                                    <label for="password" class="col-md-4 control-label">Password</label>
+
+                                        <input id="password" type="password" class="form-control" name="password" required placeholder="Masukkan Password">
+
+                                        @if ($errors->has('password'))
+                                            <span class="help-block">
+                                                <strong>{{ $errors->first('password') }}</strong>
+                                            </span>
+                                        @endif
+                                </div>
+
+                                <div class="form-group">
+                                    <div class="col-md-6 col-md-offset-4">
+                                        <div class="checkbox">
+                                            <label>
+                                                <input type="checkbox" name="remember" {{ old('remember') ? 'checked' : '' }}> Remember Me
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <div class="col-md-8 col-md-offset-4">
+                                        <button type="submit" class="btn btn-primary">
+                                            Login
+                                        </button>
+
+                                        <a class="btn btn-link" href="{{ route('password.request') }}">
+                                            Forgot Your Password?
+                                        </a>
+                                    </div>
+                                </div>
+                            </form>
+                        <div class="row">
+                            <p>Don't have an account? <a class="register" href="#" data-toggle="modal" data-target="#register">Register Here</a></p>
+                        </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
 </html>
+

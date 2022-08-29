@@ -34,25 +34,8 @@
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
-          <a onclick="confirmTerkirim(this)" class="btn btn-primary btn-lg text-light" role="button">Submit</a>
+          <button type="button" class="btn btn-primary">Submit</button>
         </div>
       </div>
     </div>
   </div>
-
-<script src="{{ asset('js2/sweetalert.min.js') }}"></script>
-<script>
-  confirmTerkirim = function(button) {
-        var url = $(button).data('url');
-        swal({
-            'title': 'Laporan Terkirim',
-            'text': 'Pembayaran anda telah sukses',
-            'dangerMode': true,
-            'buttons': true
-        }).then(function(value) {
-            if (value) {
-                window.location = url;
-            }
-        })
-    }
-</script>

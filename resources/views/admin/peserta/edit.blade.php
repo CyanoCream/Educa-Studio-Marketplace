@@ -28,12 +28,25 @@
 
 						<div class="form-group">
 							<label for="id_produk">id_produk</label>
-							<input type="text" name="id_produk" id="id_produk" class="form-control" required="required" value="{{ $peserta->id_produk }}" placeholder="Masukkan id_produk">
+							<select class="form-control" name="id_produk" id="id_produk">
+								<option>1</option>
+								<option>2</option>
+								<option>3</option>
+								<option>4</option>
+								<option>5</option>
+								<option>6</option>
+								<option>7</option>
+								<option>8</option>
+								<option>9</option>
+								<option>10</option>
+								<option>11</option>
+								<option>12</option>
+							</select>
 						</div>
 
 						<div class="form-group">
 							<label for="tgl_pembayaran">tgl_pembayaran</label>
-							<input type="text" name="tgl_pembayaran" id="tgl_pembayaran" class="form-control" required="required" value="{{ $peserta->tgl_pembayaran }}" placeholder="Masukkan tgl_pembayaran">
+							<input type="date" name="tgl_pembayaran" id="tgl_pembayaran" class="form-control" required="required" value="{{ $peserta->tgl_pembayaran }}" placeholder="Masukkan tgl_pembayaran">
 						</div>
 
 						<div class="form-group">
@@ -53,7 +66,10 @@
 
                         <div class="form-group">
 							<label for="jenis_kelamin">jenis_kelamin</label>
-							<input type="text" name="jenis_kelamin" id="jenis_kelamin" class="form-control" required="required" value="{{ $peserta->jenis_kelamin }}" placeholder="Masukkan jenis_kelamin">
+							<select class="form-control" name="jenis_kelamin" id="jenis_kelamin">
+								<option>Laki-Laki</option>
+								<option>Perempuan</option>
+							</select>
 						</div>
 
                         <div class="form-group">
