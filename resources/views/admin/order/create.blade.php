@@ -25,10 +25,10 @@
 					<form action="{{ route('storeOrder') }}" method="post">
 						{{csrf_field()}}
 
-						<div class="form-group">
+						{{-- <div class="form-group">
 							<label for="id_pelanggan">id_pelanggan</label>
 							<input type="text" name="id_pelanggan" id="id_pelanggan" class="form-control" required="required" placeholder="Masukkan id_pelanggan">
-						</div>
+						</div> --}}
 
 						<div class="form-group">
 							<label for="status_order">status_order</label>

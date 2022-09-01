@@ -60,7 +60,11 @@
 
 						<div class="form-group">
 							<label for="packing">packing</label>
-							<input type="text" name="packing" id="packing" class="form-control" required="required" placeholder="Masukkan packing">
+							<select class="form-control" name="packing" id="packing">
+								<option>Paket Sudah Siap</option>
+								<option>Paket Dalam Perjalan</option>
+								<option>Paket Sudah Sampai</option>
+							</select>
 						</div>
 
 						<div class="text-right">

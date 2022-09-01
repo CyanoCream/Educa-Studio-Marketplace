@@ -165,8 +165,8 @@
                             <div class="response-product product-list-grid row auto-clear equal-container better-height ">
                                 <div class="product-item recent-product style-01 rows-space-30 col-bg-3 col-xl-3 col-lg-4 col-md-4 col-sm-6 col-ts-6 post-93 product type-product status-publish has-post-thumbnail product_cat-light product_cat-table product_cat-new-arrivals product_tag-table product_tag-sock first instock shipping-taxable purchasable product-type-simple">
                                     
-                                    <div class="product-inner tooltip-left" style="background: rgb(73,81,158);
-                                    background: linear-gradient(180deg, rgba(73,81,158,1) 0%, rgba(148,35,150,1) 53%, rgba(198,75,175,1) 100%); width:280px; height:480px; margin-right:2ex;">
+                                    <div class="product-inner tooltip-left" style="background: rgb(133, 143, 240);
+                                    background: linear-gradient(180deg, rgb(187, 191, 239) 0%, rgb(225, 228, 254)  53%, rgb(251, 226, 246) 100%); width:280px; height:480px; margin-right:2ex;">
                                         <div class="product-thumb">
                                             <a class="thumb-link" href="#" v-on:click="getData(p.id)">
                                             <img class="img-responsive" width="270" height="350" :src="'/images/'+ p.gambar[0].gambar" alt="">   

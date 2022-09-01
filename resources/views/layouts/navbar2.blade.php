@@ -22,6 +22,8 @@
                             <ul id="menu-primary-menu"
                                 class="clone-main-menu kodory-clone-mobile-menu kodory-nav main-menu">
                                 @auth
+                                    
+                                @if (Auth::user()->role == 'penyelenggara')
                                                                      
                                 <li id="menu-item-230"
                                     class="menu-item menu-item-type-post_type menu-item-object-megamenu menu-item-230 parent parent-megamenu item-megamenu menu-item-has-children">
@@ -48,6 +50,39 @@
                                     <a class="kodory-menu-item-title" title=""
                                        href="{{ route ('topup.index')}}">Top Up</a>
                                 </li>
+                                
+                                <li id="menu-item-996"
+                                class="menu-item menu-item-type-post_type menu-item-object-megamenu menu-item-996 parent parent-megamenu item-megamenu menu-item-has-children">
+                                <a class="kodory-menu-item-title" title=""
+                                   href="{{ route ('penyelenggara')}}">Penyelenggara</a>
+                                </li>
+                                @elseif(Auth::user()->role == 'user')
+                                <li id="menu-item-230"
+                                    class="menu-item menu-item-type-post_type menu-item-object-megamenu menu-item-230 parent parent-megamenu item-megamenu menu-item-has-children">
+                                    <a class="kodory-menu-item-title" title="" href="/">Home</a>
+                                    <div class="submenu megamenu megamenu-home"></div>
+                                </li>
+                                <li id="menu-item-228"
+                                    class="menu-item menu-item-type-post_type menu-item-object-megamenu menu-item-228 parent parent-megamenu item-megamenu menu-item-has-children">
+                                    <a class="kodory-menu-item-title" title=""
+                                       href="{{ route ('katalog.index')}}">Katalog</a>
+                                </li>
+                                <li id="menu-item-229"
+                                    class="menu-item menu-item-type-post_type menu-item-object-megamenu menu-item-229 parent parent-megamenu item-megamenu menu-item-has-children">
+                                    <a class="kodory-menu-item-title" title="" href="{{ route ('pesanan.index')}}">Pesanan</a>
+                                </li>
+                                
+                                <li id="menu-item-996"
+                                    class="menu-item menu-item-type-post_type menu-item-object-megamenu menu-item-996 parent parent-megamenu item-megamenu menu-item-has-children">
+                                    <a class="kodory-menu-item-title" title=""
+                                       href="{{ route ('premium.index')}}">Premium</a>
+                                </li>
+                                <li id="menu-item-996"
+                                    class="menu-item menu-item-type-post_type menu-item-object-megamenu menu-item-996 parent parent-megamenu item-megamenu menu-item-has-children">
+                                    <a class="kodory-menu-item-title" title=""
+                                       href="{{ route ('topup.index')}}">Top Up</a>
+                                </li>
+                                @endif
                                 @endauth
                                 @guest
                                                                      
@@ -124,9 +159,19 @@
                                             <h5>Register</h5>
                                         </a>
                                         @else
+                                        @if (Auth::user()->role == 'user')
                                         <a href="{{ route ('akun.index') }}" >
                                             <h5> <i class="fa fa-user-circle"></i> {{ Auth::user()->name }}</h5>
                                         </a>
+                                        @elseif(Auth::user()->role == 'penyelenggara')
+                                        <a href="{{ route ('akun.index') }}" >
+                                            <h5> <i class="fa fa-user-circle"></i> {{ Auth::user()->name }}</h5>
+                                        </a>
+                                        @elseif(Auth::user()->role == 'admin')
+                                        <a href="{{ route ('akun.index') }}" >
+                                            <h5> <i class="fa fa-user-circle"></i> {{ Auth::user()->name }}</h5>
+                                        </a>
+                                        @endif
                                         <form action="{{ route ('logout')}}" method="post">
                                             {{ csrf_field() }}
                                         <button type="submit" class="btn btn-info">Logout</button>

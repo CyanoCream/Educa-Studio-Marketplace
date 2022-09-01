@@ -13,16 +13,16 @@ class UlasanController extends Controller
      */
     public function index()
     {
-        $ulasans = ulasan::all();
+        $ulasans = Ulasan::all();
 
-        return view('admin.ulasan.index', [
+        return view('Ulasan.index', [
             'ulasans' => $ulasans
         ]);
     }
 
     public function getUlasan()
     {
-        $ulasans = ulasan::all();
+        $ulasans = Ulasan::all();
 
         return $ulasans;
     }
@@ -32,9 +32,9 @@ class UlasanController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create(Request $request)
+    public function create()
     {
-        return view('admin.ulasan.create');
+        //
     }
 
     /**
@@ -45,14 +45,7 @@ class UlasanController extends Controller
      */
     public function store(Request $request)
     {
-        $validatedData = $request->validate([
-            'penilaian' => 'required|string|max:255' ,
-        ]);
-
-        $ulasan = new ulasan($validatedData);
-        $ulasan->save();
-
-        return redirect(route('daftarUlasan'));
+        //
     }
 
     /**
@@ -74,10 +67,7 @@ class UlasanController extends Controller
      */
     public function edit($id)
     {
-        $ulasan = ulasan::find($id);
-        return view('admin.ulasan.edit', [
-            'ulasan' => $ulasan
-        ]);
+        //
     }
 
     /**
@@ -87,18 +77,9 @@ class UlasanController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $ulasan)
+    public function update(Request $request, $id)
     {
-        $validatedData = $request->validate([
-            'penilaian' => 'required|string|max:255' ,
-        ]);
-
-        $ulasan = ulasan::find($ulasan);
-
-        $ulasan->penilaian = $request->penilaian;
-        $ulasan->save();
-
-        return redirect(route('daftarUlasan'));
+        //
     }
 
     /**
@@ -109,7 +90,6 @@ class UlasanController extends Controller
      */
     public function destroy($id)
     {
-        $ulasan = Ulasan::find($id)->delete();
-        return redirect()->back();
+        //
     }
 }

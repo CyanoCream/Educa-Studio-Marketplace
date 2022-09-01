@@ -13,17 +13,7 @@ class HubungikamiController extends Controller
      */
     public function index()
     {
-        $hubungikamis = hubungikami::all();
-        return view('admin.hubungi_kami.index',[
-            'hubungikamis' => $hubungikamis
-        ]);
-    }
-
-    public function getHubungiKami()
-    {
-        $hubungikamis = hubungikami::all();
-
-        return $hubungikamis;
+        //
     }
 
     /**
@@ -33,7 +23,24 @@ class HubungikamiController extends Controller
      */
     public function create()
     {
-        return view('admin.hubungi_kami.create');
+        $data = $request->all();
+
+        $hubungikami = new Hubungikami($data);
+        $hubungikami->save();
+
+        $status = 400;
+        $message = "Gagal menyimpan product!";
+
+        if($produk){
+            $status = 200;
+            $message = "Berhasil menyimpan product!";
+        }
+
+        return response()->json([
+            'status' => $status,
+            'message' => $message,
+            'data' => $data
+        ]);
     }
 
     /**
@@ -44,19 +51,7 @@ class HubungikamiController extends Controller
      */
     public function store(Request $request)
     {
-        $validatedData = $request->validate([
-            'id_pelanggan' => 'required|integer' ,
-            'nama' => 'required|string|max:255' ,
-            'email' => 'required|string|max:255' ,
-            'nomorponsel' => 'required|string|max:255' ,
-            'topik' => 'required|string|max:255' ,
-            'pesan' => 'required|string|max:255' ,
-        ]);
-
-        $hubungikami = new hubungikami($validatedData);
-        $hubungikami->save();
-
-        return redirect(route('daftarHubungi_Kami'));
+        //
     }
 
     /**
@@ -78,10 +73,7 @@ class HubungikamiController extends Controller
      */
     public function edit($id)
     {
-        $hubungikami = hubungikami::find($id);
-        return view('admin.hubungi_kami.edit', [
-            'hubungikami' => $hubungikami
-        ]);
+        //
     }
 
     /**
@@ -91,28 +83,9 @@ class HubungikamiController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $hubungikami)
+    public function update(Request $request, $id)
     {
-        $validatedData = $request->validate([
-            'id_pelanggan' => 'required|integer' ,
-            'nama' => 'required|string|max:255' ,
-            'email' => 'required|string|max:255' ,
-            'nomorponsel' => 'required|string|max:255' ,
-            'topik' => 'required|string|max:255' ,
-            'pesan' => 'required|string|max:255' ,
-        ]);
-
-        $hubungikami = hubungikami::find($hubungikami);
-
-        $hubungikami->id_pelanggan = $request->id_pelanggan;
-        $hubungikami->nama = $request->nama;
-        $hubungikami->email = $request->email;
-        $hubungikami->nomorponsel = $request->nomorponsel;
-        $hubungikami->topik = $request->topik;
-        $hubungikami->pesan = $request->pesan;
-        $hubungikami->save();
-
-        return redirect(route('daftarHubungi_Kami'));
+        //
     }
 
     /**
@@ -123,7 +96,6 @@ class HubungikamiController extends Controller
      */
     public function destroy($id)
     {
-        $hubungikami = hubungikami::find($id)->delete();
-        return redirect()->back();
+        //
     }
 }

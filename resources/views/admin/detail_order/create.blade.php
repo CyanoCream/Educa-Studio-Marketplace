@@ -26,7 +26,7 @@
 					<form action="{{ route('storeDetail_Order') }}" method="post">
 						{{csrf_field()}}
 
-						<div class="form-group">
+						{{-- <div class="form-group">
 							<label for="id_order">id_order</label>
 							<select class="form-control" name="id_order" id="id_order">
 								<option>1</option>
@@ -35,7 +35,7 @@
 								<option>4</option>
 								<option>5</option>
 							</select>
-						</div>
+						</div> --}}
 
 						<div class="form-group">
 							<label for="id_produk">id_produk</label>

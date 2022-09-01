@@ -35,6 +35,24 @@
 
                         </div>
 
+                        <div class="form-group{{ $errors->has('role') ? ' has-error' : '' }}">
+                            <label for="role" class="col-md-6 control-label" style="max-width: 100%">Register Sebagai</label>
+
+                                {{-- <input id="role" type="role" class="form-control" name="role" value="{{ old('role') }}" required autofocus placeholder="Pilih Role User"> --}}
+                                
+                                <select id="role" name="role">
+                                  <option value="user">Pengguna</option>
+                                  <option value="penyelenggara">Penyelenggara</option>
+                                  <option value="admin">Admin</option>
+                                </select>
+                                @if ($errors->has('role'))
+                                    <span class="help-block">
+                                        <strong>{{ $errors->first('role') }}</strong>
+                                    </span>
+                                @endif
+
+                        </div>
+
                         <div class="form-group{{ $errors->has('password') ? ' has-error' : '' }}">
                             <label for="password" class="col-md-6 control-label">Password</label>
 
@@ -57,7 +75,7 @@
 
                         <div class="form-group">
                             <div class="col-md-8 col-md-offset-4">
-                                <button type="submit" class="btn btn-primary">
+                                <button type="submit" onclick="alert('Anda Berhasil Register')" class="btn btn-primary">
                                     Register
                                 </button>
                             </div>

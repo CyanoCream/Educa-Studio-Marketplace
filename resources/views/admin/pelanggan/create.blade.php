@@ -27,7 +27,7 @@
 
 						<div class="form-group">
 							<label for="foto">foto</label>
-							<input type="file" name="foto" id="foto" class="form-control" required="required" placeholder="Masukkan foto">
+							<input type="file" name="foto" id="foto" class="form-control" required>
 						</div>
 
 						<div class="form-group">

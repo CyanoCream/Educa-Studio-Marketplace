@@ -28,13 +28,7 @@
 
 						<div class="form-group">
 							<label for="id_order">id_order</label>
-							<select class="form-control" name="id_order" id="id_order">
-								<option>1</option>
-								<option>2</option>
-								<option>3</option>
-								<option>4</option>
-								<option>5</option>
-							</select>
+							<input type="text" name="id_order" id="id_order" class="form-control" required="required" value="{{ $detail_order->id_order }}" placeholder="Masukkan id_order">
 						</div>
 
 						<div class="form-group">

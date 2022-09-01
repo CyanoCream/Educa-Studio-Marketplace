@@ -2,7 +2,10 @@
 
 namespace App\Http\Controllers;
 use App\Produk;
+use App\Order;
+use App\Peserta;
 use Illuminate\Http\Request;
+use Auth;
 
 class ProdukController extends Controller
 {
@@ -17,67 +20,77 @@ class ProdukController extends Controller
      */
     public function index()
     {
-        $produks = produk::all();
-        return view('admin.produk.index', [
+        $produks = Produk::all();
+
+        return view('produk.index', [
             'produks' => $produks
         ]);
     }
 
     public function getProduk()
     {
-        $produks = produk::all();
+       
+        $produks = Produk::with('gambar')->get();
+        // $gambars = Gambar::all();
         return $produks;
     }
 
-    // /**
-    //  * Show the form for creating a new resource.
-    //  *
-    //  * @return \Illuminate\Http\Response
-    //  */
-    public function create(Request $request)
+    public function getDetailProduk($id)
     {
-        return view('admin.produk.create');
-        // $data = $request->all();
+        $produks = Produk::with('gambar', 'kategori', 'penyelenggara')->where('id', $id)->first();
+        // $gambars = Gambar::all();
 
-        // $produk = new Produk($data);
-        // $produk->save();
-
-        // $status = 400;
-        // $message = "Gagal menyimpan product!";
-
-        // if($produk){
-        //     $status = 200;
-        //     $message = "Berhasil menyimpan product!";
-        // }
-
-        // return response()->json([
-        //     'status' => $status,
-        //     'message' => $message,
-        //     'data' => $data
-        // ]);
+        return $produks;
     }
 
-    // public function insertProduk(Request $request)
-    // {
-    //     $data = $request->all();
+    /**
+     * Show the form for creating a new resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function create(Request $request)
+    {
+        $data = $request->all();
 
-    //     $produk = new Produk($data);
-    //     $produk->save();
+        $produk = new Produk($data);
+        $produk->save();
 
-    //     $status = 400;
-    //     $message = "Gagal menyimpan product!";
+        $status = 400;
+        $message = "Gagal menyimpan product!";
 
-    //     if($produk){
-    //         $status = 200;
-    //         $message = "Berhasil menyimpan product!";
-    //     }
+        if($produk){
+            $status = 200;
+            $message = "Berhasil menyimpan product!";
+        }
 
-    //     return response()->json([
-    //         'status' => $status,
-    //         'message' => $message,
-    //         'data' => $data
-    //     ]);
-    // }
+        return response()->json([
+            'status' => $status,
+            'message' => $message,
+            'data' => $data
+        ]);
+    }
+
+    public function insertProduk(Request $request)
+    {
+        $data = $request->all();
+
+        $produk = new Produk($data);
+        $produk->save();
+
+        $status = 400;
+        $message = "Gagal menyimpan product!";
+
+        if($produk){
+            $status = 200;
+            $message = "Berhasil menyimpan product!";
+        }
+
+        return response()->json([
+            'status' => $status,
+            'message' => $message,
+            'data' => $data
+        ]);
+    }
 
     /**
      * Store a newly created resource in storage.
@@ -87,22 +100,7 @@ class ProdukController extends Controller
      */
     public function store(Request $request)
     {
-        $validatedData = $request->validate([
-            'id_kategori' => 'required|integer' ,
-            'nama_produk' => 'required|string|max:255' ,
-            'harga_produk' => 'required|integer' ,
-            'pertemuan' => 'required|string|max:255' ,
-            'waktu_temu' => 'required|integer' ,
-            'umur' => 'required|string|max:255' ,
-            'keterangan' => 'required|string' ,
-            'manfaat' => 'required|string' ,
-            'bundling' => 'required|string|max:255' ,
-        ]);
-
-        $produk = new produk($validatedData);
-        $produk->save();
-
-        return redirect(route('daftarProduk'));
+        //
     }
 
     /**
@@ -113,7 +111,10 @@ class ProdukController extends Controller
      */
     public function show($id)
     {
-        //
+        $produks = Produk::with('gambar', 'kategori', 'penyelenggara')->where('id', $id)->first();
+        
+        // return $produks;
+        return view('produk_detail.index', ['produk' => $produks]);
     }
 
     /**
@@ -124,10 +125,7 @@ class ProdukController extends Controller
      */
     public function edit($id)
     {
-        $produk = produk::find($id);
-        return view('admin.produk.edit', [
-            'produk' => $produk
-        ]);
+        //
     }
 
     /**
@@ -137,35 +135,9 @@ class ProdukController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $produk)
+    public function update(Request $request, $id)
     {
-    
-        $validatedData = $request->validate([
-            'id_kategori' => 'required|integer' ,
-            'nama_produk' => 'required|string|max:255' ,
-            'harga_produk' => 'required|integer' ,
-            'pertemuan' => 'required|string|max:255' ,
-            'waktu_temu' => 'required|integer' ,
-            'umur' => 'required|string|max:255' ,
-            'keterangan' => 'required|string' ,
-            'manfaat' => 'required|string' ,
-            'bundling' => 'required|string|max:255' ,
-        ]);
-
-        $produk = produk::find($produk);
-
-        $produk->id_kategori = $request->id_kategori;
-        $produk->nama_produk = $request->nama_produk;
-        $produk->harga_produk = $request->harga_produk;
-        $produk->pertemuan = $request->pertemuan;
-        $produk->waktu_temu = $request->waktu_temu;
-        $produk->umur = $request->umur;
-        $produk->keterangan = $request->keterangan;
-        $produk->manfaat = $request->manfaat;
-        $produk->bundling = $request->bundling;
-        $produk->save();
-
-        return redirect(route('daftarProduk'));
+        //
     }
 
     /**
@@ -175,18 +147,109 @@ class ProdukController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($produk)
+    public function deleteProduk(Request $request)
     {
-        // if (request()->ajax()) {
-        //     $id = $request->data;
+        if (request()->ajax()) {
+            $id = $request->data;
 
-        //     $produk = Produk::find($id);
+            $produk = Produk::find($id);
 
-        //     $produk->delete();
+            $produk->delete();
 
-        //     return "sukses";
-        // }
-        $produk->delete();
-        return redirect(route('daftarProduk'));
+            return "sukses";
+        }
     }
+
+    public function addData(Request $request, $id) {
+        
+        // $data = $request->all();
+
+        // $data_order = [
+        //     "id_users" => Auth::user()->id,
+        //     "status_order" => 0,
+        //     "id_produk" => $data['id_produk'],
+        //     "id_penyelenggara" => $data['id_penyelenggara'],
+        //     "kurir" => $data ['kurir'],
+        //     "alamat_pen" => ['alamat_pen'],
+        // ];
+
+        // $data_peserta = [
+        //     "id_produk" => $data ['id_produk'],
+        //     "tgl_lahir" => $data['tgl_lahir'],
+        //     "nama_peserta" => $data['nama_peserta'],
+        //     "nama_panggilan" => $data['nama_panggilan'],
+        //     "jenis_kelamin" => $data['jenis_kelamin'],
+        //     "hubungan" => $data['hubungan'],
+        // ];
+        //     $order = new Order($data_order);
+        //     $order->save();
+        //     $peserta = new Peserta($data_peserta);
+        //     $peserta-> save();
+        //     $produk = new Produk($data);
+        //     $produk->save();
+        
+
+        //     return view('pesanan.index');
+
+        $produks = Produk::where('id', $id)->first();
+
+    	//validasi apakah melebihi stok
+    	if($request->jumlah_pesan > $produks->stock)
+    	{
+    		return redirect('pesanan'.$id);
+    	}
+
+    	//cek validasi
+    	$cek_orders = Order::where('id_pelanggan', Auth::user()->id)->where('status_order',0)->first();
+    	//simpan ke database pesanan
+    	if(empty($cek_orders))
+    	{
+    		$orders = new Order;
+	    	$orders->id_pelanggan = Auth::user()->id;
+	    	$orders->id_produk =  $request->id_produk;
+            $orders->id_penyelenggara = $request->id_penyelenggara;
+            $orders->kurir = 'jnt';
+            $orders->alamat_pen = 'tidak tahu';
+	    	$orders->status_order = 0;
+            $orders->jumlah_pesanan = $request->jumlah_pesanan;
+	    	$orders->save();
+    	} 
+        return redirect()->back();
+
+
+    	// //simpan ke database pesanan detail
+    	// $pesanan_baru = Pesanan::where('user_id', Auth::user()->id)->where('status',0)->first();
+
+    	// //cek pesanan detail
+    	// $cek_pesanan_detail = PesananDetail::where('barang_id', $barang->id)->where('pesanan_id', $pesanan_baru->id)->first();
+    	// if(empty($cek_pesanan_detail))
+    	// {
+    	// 	$pesanan_detail = new PesananDetail;
+	    // 	$pesanan_detail->barang_id = $barang->id;
+	    // 	$pesanan_detail->pesanan_id = $pesanan_baru->id;
+	    // 	$pesanan_detail->jumlah = $request->jumlah_pesan;
+	    // 	$pesanan_detail->jumlah_harga = $barang->harga*$request->jumlah_pesan;
+	    // 	$pesanan_detail->save();
+    	// }else
+    	// {
+    	// 	$pesanan_detail = PesananDetail::where('barang_id', $barang->id)->where('pesanan_id', $pesanan_baru->id)->first();
+
+    	// 	$pesanan_detail->jumlah = $pesanan_detail->jumlah+$request->jumlah_pesan;
+
+    	// 	//harga sekarang
+    	// 	$harga_pesanan_detail_baru = $barang->harga*$request->jumlah_pesan;
+	    // 	$pesanan_detail->jumlah_harga = $pesanan_detail->jumlah_harga+$harga_pesanan_detail_baru;
+	    // 	$pesanan_detail->update();
+    	}
+
+    	//jumlah total
+    	// $pesanan = Pesanan::where('user_id', Auth::user()->id)->where('status',0)->first();
+    	// $pesanan->jumlah_harga = $pesanan->jumlah_harga+$barang->harga*$request->jumlah_pesan;
+    	// $pesanan->update();
+
+        // Alert::success('Thank You', 'Pesanan Anda Sedang Diproses');
+
+        // return redirect('home');
+
+    
 }

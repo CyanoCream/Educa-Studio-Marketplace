@@ -13,16 +13,16 @@ class KeranjangController extends Controller
      */
     public function index()
     {
-        $keranjangs = keranjang::all();
+        $keranjangs = Keranjang::all();
 
-        return view('admin.keranjang.index', [
+        return view('profile.index', [
             'keranjangs' => $keranjangs
         ]);
     }
 
     public function getKeranjang()
     {
-        $keranjangs = keranjang::all();
+        $keranjang = Keranjang::all();
 
         return $keranjangs;
     }
@@ -34,7 +34,7 @@ class KeranjangController extends Controller
      */
     public function create()
     {
-        return view('admin.keranjang.create');
+        //
     }
 
     /**
@@ -45,18 +45,7 @@ class KeranjangController extends Controller
      */
     public function store(Request $request)
     {
-        $validatedData = $request->validate([
-            'id_produk' => 'required|integer' ,
-            'qty_ker' => 'required|integer' ,
-            'waktu' => 'required|string|max:255' ,
-            'harga_produk' => 'required|integer' ,
-            'packing' => 'required|string|max:255' ,
-        ]);
-
-        $keranjang = new keranjang($validatedData);
-        $keranjang->save();
-
-        return redirect(route('daftarKeranjang'));
+        //
     }
 
     /**
@@ -78,10 +67,7 @@ class KeranjangController extends Controller
      */
     public function edit($id)
     {
-        $keranjang = keranjang::find($id);
-        return view('admin.keranjang.edit', [
-            'keranjang' => $keranjang
-        ]);
+        //
     }
 
     /**
@@ -91,26 +77,9 @@ class KeranjangController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $keranjang)
+    public function update(Request $request, $id)
     {
-        $validatedData = $request->validate([
-            'id_produk' => 'required|integer' ,
-            'qty_ker' => 'required|integer' ,
-            'waktu' => 'required|string|max:255' ,
-            'harga_produk' => 'required|integer' ,
-            'packing' => 'required|string|max:255' ,
-        ]);
-
-        $keranjang = keranjang::find($keranjang);
-
-        $keranjang->id_produk = $request->id_produk;
-        $keranjang->qty_ker = $request->qty_ker;
-        $keranjang->waktu = $request->waktu;
-        $keranjang->harga_produk = $request->harga_produk;
-        $keranjang->packing = $request->packing;
-        $keranjang->save();
-
-        return redirect(route('daftarKeranjang'));
+        //
     }
 
     /**
@@ -121,7 +90,6 @@ class KeranjangController extends Controller
      */
     public function destroy($id)
     {
-        $keranjang = keranjang::find($id)->delete();
-        return redirect()->back();
+        //
     }
 }

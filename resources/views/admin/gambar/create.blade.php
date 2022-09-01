@@ -91,7 +91,7 @@
 							<input type="file" name="gambar" id="gambar" class="form-control" required="required" placeholder="Masukkan gambar">
 						</div>
 
-						<div class="form-group">
+						{{-- <div class="form-group">
                             <label for="id_produk">id_produk</label>
                             <select class="form-control" name="id_produk" id="id_produk">
                                 <option>1</option>
@@ -107,7 +107,7 @@
                                 <option>11</option>
                                 <option>12</option>
                             </select>
-                        </div>
+                        </div> --}}
 
 						<div class="text-right">
 							<a href="{{ route('daftarGambar') }}" class="btn btn-outline-secondary mr-2"
