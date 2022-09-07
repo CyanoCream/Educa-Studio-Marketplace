@@ -19,7 +19,11 @@ class Pelanggan extends Model
         'provinsi_pel',
         'kota_pel',
         'kecamatan_pel',
+<<<<<<< HEAD
         'level_user',
+=======
+        'level_user' ,
+>>>>>>> 8a8b1e0d3fb23705eeedc5f741612dcae2a73a3c
     ];
 
     // protected $guarded = [];

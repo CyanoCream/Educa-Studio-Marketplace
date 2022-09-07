@@ -192,9 +192,15 @@
                                             <h3 class="product-name product_title">
                                                 <a href="#" v-on:click="getData(p.id)">@{{ p.nama_produk }}</a>
                                             </h3>
+<<<<<<< HEAD
                                             <p class="m-1"><i class="fa fa-calendar-o pr-2" aria-hidden="true"></i>@{{ p.pertemuan }}</p>
                                             <p class="m-1"><i class="fa fa-clock-o pr-1" aria-hidden="true"></i> @{{ p.waktu_temu }}.Menit</p>
                                             <p class="m-1"><i class="fa fa-map-marker pr-2" aria-hidden="true"></i> @{{ p.status_pertemuan }}</p>
+=======
+                                            <p class="m-1"><i class="fa fa-calendar-o" aria-hidden="true"></i>@{{ p.pertemuan }}</p>
+                                            <p class="m-1"><i class="fa fa-clock-o" aria-hidden="true"></i> @{{ p.waktu_temu }}.Menit</p>
+                                            <p class="m-1"><i class="fa fa-map-marker" aria-hidden="true"></i> @{{ p.status_pertemuan }}</p>
+>>>>>>> 8a8b1e0d3fb23705eeedc5f741612dcae2a73a3c
                                             <span class="price">
                                                 <span class="kodory-Price-amount amount">
                                                 <span class="kodory-Price-currencySymbol">Rp.</span>@{{ p.harga_produk }}
@@ -455,7 +461,457 @@
     <div class="container">
         <div class="border-top-1"></div>
     </div>
+<<<<<<< HEAD
 
+=======
+    <div class="section-001 section-024">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 col-lg-4">
+                    <div class="kodory-products style-06">
+                        <h3 class="title">
+                            <span>Best selling</span>
+                        </h3>
+                        <div class="response-product product-list-owl owl-slick equal-container better-height"
+                             data-slick="{&quot;arrows&quot;:true,&quot;slidesMargin&quot;:30,&quot;dots&quot;:false,&quot;infinite&quot;:false,&quot;speed&quot;:300,&quot;slidesToShow&quot;:1,&quot;rows&quot;:3}"
+                             data-responsive="[{&quot;breakpoint&quot;:480,&quot;settings&quot;:{&quot;slidesToShow&quot;:1,&quot;slidesMargin&quot;:&quot;10&quot;}},{&quot;breakpoint&quot;:768,&quot;settings&quot;:{&quot;slidesToShow&quot;:1,&quot;slidesMargin&quot;:&quot;10&quot;}},{&quot;breakpoint&quot;:992,&quot;settings&quot;:{&quot;slidesToShow&quot;:2,&quot;slidesMargin&quot;:&quot;20&quot;}},{&quot;breakpoint&quot;:1200,&quot;settings&quot;:{&quot;slidesToShow&quot;:1,&quot;slidesMargin&quot;:&quot;20&quot;}},{&quot;breakpoint&quot;:1500,&quot;settings&quot;:{&quot;slidesToShow&quot;:1,&quot;slidesMargin&quot;:&quot;30&quot;}}]">
+                            <div class="product-item best-selling style-06 rows-space-30 post-25 product type-product status-publish has-post-thumbnail product_cat-light product_cat-chair product_cat-specials product_tag-light product_tag-sock first instock sale featured shipping-taxable purchasable product-type-simple">
+                                <div class="product-inner">
+                                    <div class="product-thumb">
+                                        <a class="thumb-link" href="{{ route ('premium.index')}}" tabindex="0">
+                                            <img class="img-responsive"
+                                                 src="{{asset('images/bs 1.1.jpg')}}"
+                                                 alt="img" width="90" height="90">
+                                        </a>
+                                    </div>
+                                    <div class="product-info">
+                                        <h3 class="{{ route ('premium.index')}}">
+                                            <a href="{{ route ('premium.index')}}" tabindex="0">Modern Platinum</a>
+                                        </h3>
+                                        <div class="rating-wapper nostar">
+                                            <div class="star-rating"><span
+                                                    style="width:0%">Rated <strong
+                                                    class="rating">0</strong> out of 5</span></div>
+                                            <span class="review">(0)</span></div>
+                                        <span class="price"><del><span
+                                                class="kodory-Price-amount amount"><span
+                                                class="kodory-Price-currencySymbol">$</span>89.00</span></del> <ins><span
+                                                class="kodory-Price-amount amount"><span
+                                                class="kodory-Price-currencySymbol">$</span>79.00</span></ins></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="product-item best-selling style-06 rows-space-30 post-23 product type-product status-publish has-post-thumbnail product_cat-chair product_cat-lamp product_cat-sofas product_tag-hat  instock shipping-taxable purchasable product-type-variable has-default-attributes">
+                                <div class="product-inner">
+                                    <div class="product-thumb">
+                                        <a class="thumb-link" href="{{ route ('premium.index')}}" tabindex="0">
+                                            <img class="img-responsive"
+                                                 src="{{asset('images/bs 1.2.jpg')}}"
+                                                 alt="img" width="90" height="90">
+                                        </a>
+                                    </div>
+                                    <div class="product-info">
+                                        <h3 class="product-name product_title">
+                                            <a href="{{ route ('premium.index')}}" tabindex="0">Cute Girl Shirt</a>
+                                        </h3>
+                                        <div class="rating-wapper nostar">
+                                            <div class="star-rating"><span
+                                                    style="width:0%">Rated <strong
+                                                    class="rating">0</strong> out of 5</span></div>
+                                            <span class="review">(0)</span></div>
+                                        <span class="price"><span
+                                                class="kodory-Price-amount amount"><span
+                                                class="kodory-Price-currencySymbol">$</span>105.00</span> – <span
+                                                class="kodory-Price-amount amount"><span
+                                                class="kodory-Price-currencySymbol">$</span>110.00</span></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="product-item best-selling style-06 rows-space-30 post-32 product type-product status-publish has-post-thumbnail product_cat-light product_cat-chair product_cat-sofas product_tag-hat product_tag-sock last instock sale featured shipping-taxable purchasable product-type-simple">
+                                <div class="product-inner">
+                                    <div class="product-thumb">
+                                        <a class="thumb-link" href="{{ route ('premium.index')}}" tabindex="0">
+                                            <img class="img-responsive"
+                                                 src="{{asset('images/bs 1.3.jpg')}}"
+                                                 alt="img" width="90" height="90">
+                                        </a>
+                                    </div>
+                                    <div class="product-info">
+                                        <h3 class="product-name product_title">
+                                            <a href="{{ route ('premium.index')}}" tabindex="0">Kid Backpack</a>
+                                        </h3>
+                                        <div class="rating-wapper nostar">
+                                            <div class="star-rating"><span
+                                                    style="width:0%">Rated <strong
+                                                    class="rating">0</strong> out of 5</span></div>
+                                            <span class="review">(0)</span></div>
+                                        <span class="price"><del><span
+                                                class="kodory-Price-amount amount"><span
+                                                class="kodory-Price-currencySymbol">$</span>109.00</span></del> <ins><span
+                                                class="kodory-Price-amount amount"><span
+                                                class="kodory-Price-currencySymbol">$</span>89.00</span></ins></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="product-item best-selling style-06 rows-space-30 post-20 product type-product status-publish has-post-thumbnail product_cat-light product_cat-new-arrivals product_cat-specials product_tag-table product_tag-hat product_tag-sock first instock sale featured shipping-taxable purchasable product-type-simple">
+                                <div class="product-inner">
+                                    <div class="product-thumb">
+                                        <a class="thumb-link" href="{{ route ('premium.index')}}" tabindex="-1">
+                                            <img class="img-responsive"
+                                                 src="{{asset('images/bs 1.4.jpg')}}"
+                                                 alt="Red Car" width="90" height="90">
+                                        </a>
+                                    </div>
+                                    <div class="product-info">
+                                        <h3 class="product-name product_title">
+                                            <a href="{{ route ('premium.index')}}" tabindex="-1">Red Car</a>
+                                        </h3>
+                                        <div class="rating-wapper nostar">
+                                            <div class="star-rating"><span
+                                                    style="width:0%">Rated <strong
+                                                    class="rating">0</strong> out of 5</span></div>
+                                            <span class="review">(0)</span></div>
+                                        <span class="price"><del><span
+                                                class="kodory-Price-amount amount"><span
+                                                class="kodory-Price-currencySymbol">$</span></span></del> <ins><span
+                                                class="kodory-Price-amount amount"><span
+                                                class="kodory-Price-currencySymbol">$</span></span></ins></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="product-item best-selling style-06 rows-space-30 post-36 product type-product status-publish has-post-thumbnail product_cat-table product_cat-bed product_tag-light product_tag-table product_tag-sock  instock sale shipping-taxable purchasable product-type-simple">
+                                <div class="product-inner">
+                                    <div class="product-thumb">
+                                        <a class="thumb-link" href="{{ route ('premium.index')}}" tabindex="-1">
+                                            <img class="img-responsive"
+                                                 src="{{asset('images/bs 1.5.jpg')}}"
+                                                 alt="img" width="90" height="90">
+                                        </a>
+                                    </div>
+                                    <div class="product-info">
+                                        <h3 class="product-name product_title">
+                                            <a href="{{ route ('premium.index')}}" tabindex="-1">Dazzling Toys</a>
+                                        </h3>
+                                        <div class="rating-wapper nostar">
+                                            <div class="star-rating"><span
+                                                    style="width:0%">Rated <strong
+                                                    class="rating">0</strong> out of 5</span></div>
+                                            <span class="review">(0)</span></div>
+                                        <span class="price"><del><span
+                                                class="kodory-Price-amount amount"><span
+                                                class="kodory-Price-currencySymbol">$</span>125.00</span></del> <ins><span
+                                                class="kodory-Price-amount amount"><span
+                                                class="kodory-Price-currencySymbol">$</span>99.00</span></ins></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="product-item best-selling style-06 rows-space-30 post-49 product type-product status-publish has-post-thumbnail product_cat-light product_cat-bed product_cat-sofas product_tag-multi product_tag-lamp last instock shipping-taxable purchasable product-type-simple">
+                                <div class="product-inner">
+                                    <div class="product-thumb">
+                                        <a class="thumb-link" href="{{ route ('premium.index')}}" tabindex="-1">
+                                            <img class="img-responsive"
+                                                 src="{{asset('images/bs 1.6.jpg')}}"
+                                                 alt="img" width="90" height="90">
+                                        </a>
+                                    </div>
+                                    <div class="product-info">
+                                        <h3 class="product-name product_title">
+                                            <a href="{{ route ('premium.index')}}" tabindex="-1">Cute Shoes</a>
+                                        </h3>
+                                        <div class="rating-wapper nostar">
+                                            <div class="star-rating"><span
+                                                    style="width:0%">Rated <strong
+                                                    class="rating">0</strong> out of 5</span></div>
+                                            <span class="review">(0)</span></div>
+                                        <span class="price"><span
+                                                class="kodory-Price-amount amount"><span
+                                                class="kodory-Price-currencySymbol">$</span>79.00</span></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="product-item best-selling style-06 rows-space-30 post-93 product type-product status-publish has-post-thumbnail product_cat-light product_cat-table product_cat-new-arrivals product_tag-table product_tag-sock first instock shipping-taxable purchasable product-type-simple">
+                                <div class="product-inner">
+                                    <div class="product-thumb">
+                                        <a class="thumb-link" href="{{ route ('premium.index')}}" tabindex="-1">
+                                            <img class="img-responsive"
+                                                 src="{{asset('images/bs 1.7.jpg')}}"
+                                                 alt="img" width="90" height="90">
+                                        </a>
+                                    </div>
+                                    <div class="product-info">
+                                        <h3 class="product-name product_title">
+                                            <a href="{{ route ('premium.index')}}" tabindex="-1">Hello Shirt</a>
+                                        </h3>
+                                        <div class="rating-wapper nostar">
+                                            <div class="star-rating"><span
+                                                    style="width:0%">Rated <strong
+                                                    class="rating">0</strong> out of 5</span></div>
+                                            <span class="review">(0)</span></div>
+                                        <span class="price"><span
+                                                class="kodory-Price-amount amount"><span
+                                                class="kodory-Price-currencySymbol">$</span>109.00</span></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="product-item best-selling style-06 rows-space-30 post-28 product type-product status-publish has-post-thumbnail product_cat-light product_cat-chair product_cat-sofas product_tag-light product_tag-sock  instock sale featured shipping-taxable purchasable product-type-simple">
+                                <div class="product-inner">
+                                    <div class="product-thumb">
+                                        <a class="thumb-link" href="{{ route ('premium.index')}}" tabindex="-1">
+                                            <img class="img-responsive"
+                                                 src="{{asset('images/bs 1.8.jpg')}}"
+                                                 alt="img" width="90" height="90">
+                                        </a>
+                                    </div>
+                                    <div class="product-info">
+                                        <h3 class="product-name product_title">
+                                            <a href="{{ route ('premium.index')}}" tabindex="-1">Blue Shoes</a>
+                                        </h3>
+                                        <div class="rating-wapper ">
+                                            <div class="star-rating"><span
+                                                    style="width:100%">Rated <strong
+                                                    class="rating">5.00</strong> out of 5</span></div>
+                                            <span class="review">(1)</span></div>
+                                        <span class="price"><del><span
+                                                class="kodory-Price-amount amount"><span
+                                                class="kodory-Price-currencySymbol">$</span>138.00</span></del> <ins><span
+                                                class="kodory-Price-amount amount"><span
+                                                class="kodory-Price-currencySymbol">$</span>119.00</span></ins></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="product-item best-selling style-06 rows-space-30 post-22 product type-product status-publish has-post-thumbnail product_cat-table product_cat-bed product_cat-lamp product_tag-table product_tag-hat product_tag-sock last instock featured downloadable shipping-taxable purchasable product-type-simple">
+                                <div class="product-inner">
+                                    <div class="product-thumb">
+                                        <a class="thumb-link" href="{{ route ('premium.index')}}" tabindex="-1">
+                                            <img class="img-responsive"
+                                                 src="{{asset('images/bs 1.9.jpg')}}"
+                                                 alt="Soccer Shoes" width="90" height="90">
+                                        </a>
+                                    </div>
+                                    <div class="product-info">
+                                        <h3 class="product-name product_title">
+                                            <a href="{{ route ('premium.index')}}" tabindex="-1">Soccer Shoes</a>
+                                        </h3>
+                                        <div class="rating-wapper nostar">
+                                            <div class="star-rating"><span
+                                                    style="width:0%">Rated <strong
+                                                    class="rating">0</strong> out of 5</span></div>
+                                            <span class="review">(0)</span></div>
+                                        <span class="price"><span
+                                                class="kodory-Price-amount amount"><span
+                                                class="kodory-Price-currencySymbol">$</span>98.00</span></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-12 col-lg-4">
+                    <div class="kodory-products style-06">
+                        <h3 class="title">
+                            <span>On Sale</span>
+                        </h3>
+                        <div class="response-product product-list-owl owl-slick equal-container better-height"
+                             data-slick="{&quot;arrows&quot;:true,&quot;slidesMargin&quot;:30,&quot;dots&quot;:false,&quot;infinite&quot;:false,&quot;speed&quot;:300,&quot;slidesToShow&quot;:1,&quot;rows&quot;:3}"
+                             data-responsive="[{&quot;breakpoint&quot;:480,&quot;settings&quot;:{&quot;slidesToShow&quot;:1,&quot;slidesMargin&quot;:&quot;10&quot;}},{&quot;breakpoint&quot;:768,&quot;settings&quot;:{&quot;slidesToShow&quot;:1,&quot;slidesMargin&quot;:&quot;10&quot;}},{&quot;breakpoint&quot;:992,&quot;settings&quot;:{&quot;slidesToShow&quot;:2,&quot;slidesMargin&quot;:&quot;20&quot;}},{&quot;breakpoint&quot;:1200,&quot;settings&quot;:{&quot;slidesToShow&quot;:1,&quot;slidesMargin&quot;:&quot;20&quot;}},{&quot;breakpoint&quot;:1500,&quot;settings&quot;:{&quot;slidesToShow&quot;:1,&quot;slidesMargin&quot;:&quot;30&quot;}}]">
+                            <div class="product-item on_sale style-06 rows-space-30 post-36 product type-product status-publish has-post-thumbnail product_cat-table product_cat-bed product_tag-light product_tag-table product_tag-sock first instock sale shipping-taxable purchasable product-type-simple">
+                                <div class="product-inner">
+                                    <div class="product-thumb">
+                                        <a class="thumb-link"
+                                           href="{{ route ('premium.index')}}"
+                                           tabindex="0">
+                                            <img class="img-responsive"
+                                                 src="{{asset('images/os 1.1.jpg')}}"
+                                                 alt="img" width="90" height="90">
+                                        </a>
+                                    </div>
+                                    <div class="product-info">
+                                        <h3 class="product-name product_title">
+                                            <a href="{{ route ('premium.index')}}"
+                                               tabindex="0">Dazzling Toys</a>
+                                        </h3>
+                                        <div class="rating-wapper nostar">
+                                            <div class="star-rating"><span
+                                                    style="width:0%">Rated <strong
+                                                    class="rating">0</strong> out of 5</span></div>
+                                            <span class="review">(0)</span></div>
+                                        <span class="price"><del><span
+                                                class="kodory-Price-amount amount"><span
+                                                class="kodory-Price-currencySymbol">$</span>125.00</span></del> <ins><span
+                                                class="kodory-Price-amount amount"><span
+                                                class="kodory-Price-currencySymbol">$</span>99.00</span></ins></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="product-item on_sale style-06 rows-space-30 post-32 product type-product status-publish has-post-thumbnail product_cat-light product_cat-chair product_cat-sofas product_tag-hat product_tag-sock  instock sale featured shipping-taxable purchasable product-type-simple">
+                                <div class="product-inner">
+                                    <div class="product-thumb">
+                                        <a class="thumb-link"
+                                           href="{{ route ('premium.index')}}"
+                                           tabindex="0">
+                                            <img class="img-responsive"
+                                                 src="{{asset('images/os 1.2.jpg')}}"
+                                                 alt="img" width="90" height="90">
+                                        </a>
+                                    </div>
+                                    <div class="product-info">
+                                        <h3 class="product-name product_title">
+                                            <a href="{{ route ('premium.index')}}"
+                                               tabindex="0">Kid Backpack</a>
+                                        </h3>
+                                        <div class="rating-wapper nostar">
+                                            <div class="star-rating"><span
+                                                    style="width:0%">Rated <strong
+                                                    class="rating">0</strong> out of 5</span></div>
+                                            <span class="review">(0)</span></div>
+                                        <span class="price"><del><span
+                                                class="kodory-Price-amount amount"><span
+                                                class="kodory-Price-currencySymbol">$</span>109.00</span></del> <ins><span
+                                                class="kodory-Price-amount amount"><span
+                                                class="kodory-Price-currencySymbol">$</span>89.00</span></ins></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="product-item on_sale style-06 rows-space-30 post-28 product type-product status-publish has-post-thumbnail product_cat-light product_cat-chair product_cat-sofas product_tag-light product_tag-sock last instock sale featured shipping-taxable purchasable product-type-simple">
+                                <div class="product-inner">
+                                    <div class="product-thumb">
+                                        <a class="thumb-link"
+                                           href="{{ route ('premium.index')}}"
+                                           tabindex="0">
+                                            <img class="img-responsive"
+                                                 src="{{asset('images/os 1.3.jpg')}}"
+                                                 alt="img" width="90" height="90">
+                                        </a>
+                                    </div>
+                                    <div class="product-info">
+                                        <h3 class="product-name product_title">
+                                            <a href="{{ route ('premium.index')}}"
+                                               tabindex="0">Blue Shoes</a>
+                                        </h3>
+                                        <div class="rating-wapper ">
+                                            <div class="star-rating"><span
+                                                    style="width:100%">Rated <strong
+                                                    class="rating">5.00</strong> out of 5</span></div>
+                                            <span class="review">(1)</span></div>
+                                        <span class="price"><del><span
+                                                class="kodory-Price-amount amount"><span
+                                                class="kodory-Price-currencySymbol">$</span>138.00</span></del> <ins><span
+                                                class="kodory-Price-amount amount"><span
+                                                class="kodory-Price-currencySymbol">$</span>119.00</span></ins></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="product-item on_sale style-06 rows-space-30 post-25 product type-product status-publish has-post-thumbnail product_cat-light product_cat-chair product_cat-specials product_tag-light product_tag-sock first instock sale featured shipping-taxable purchasable product-type-simple">
+                                <div class="product-inner">
+                                    <div class="product-thumb">
+                                        <a class="thumb-link"
+                                           href="{{ route ('premium.index')}}"
+                                           tabindex="-1">
+                                            <img class="img-responsive"
+                                                 src="{{asset('images/os 1.4.jpg')}}"
+                                                 alt="img" width="90" height="90">
+                                        </a>
+                                    </div>
+                                    <div class="product-info">
+                                        <h3 class="product-name product_title">
+                                            <a href="{{ route ('premium.index')}}"
+                                               tabindex="-1">Modern Platinum</a>
+                                        </h3>
+                                        <div class="rating-wapper nostar">
+                                            <div class="star-rating"><span
+                                                    style="width:0%">Rated <strong
+                                                    class="rating">0</strong> out of 5</span></div>
+                                            <span class="review">(0)</span></div>
+                                        <span class="price"><del><span
+                                                class="kodory-Price-amount amount"><span
+                                                class="kodory-Price-currencySymbol">$</span>89.00</span></del> <ins><span
+                                                class="kodory-Price-amount amount"><span
+                                                class="kodory-Price-currencySymbol">$</span>79.00</span></ins></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="product-item on_sale style-06 rows-space-30 post-20 product type-product status-publish has-post-thumbnail product_cat-light product_cat-new-arrivals product_cat-specials product_tag-table product_tag-hat product_tag-sock  instock sale featured shipping-taxable purchasable product-type-simple">
+                                <div class="product-inner">
+                                    <div class="product-thumb">
+                                        <a class="thumb-link"
+                                           href="{{ route ('premium.index')}}"
+                                           tabindex="-1">
+                                            <img class="img-responsive"
+                                                 src="{{asset('images/os 1.5.jpg')}}"
+                                                 alt="img" width="90" height="90">
+                                        </a>
+                                    </div>
+                                    <div class="product-info">
+                                        <h3 class="product-name product_title">
+                                            <a href="{{ route ('premium.index')}}"
+                                               tabindex="-1">Red Car</a>
+                                        </h3>
+                                        <div class="rating-wapper nostar">
+                                            <div class="star-rating"><span
+                                                    style="width:0%">Rated <strong
+                                                    class="rating">0</strong> out of 5</span></div>
+                                            <span class="review">(0)</span></div>
+                                        <span class="price"><del><span
+                                                class="kodory-Price-amount amount"><span
+                                                class="kodory-Price-currencySymbol">$</span>150.00</span></del> <ins><span
+                                                class="kodory-Price-amount amount"><span
+                                                class="kodory-Price-currencySymbol">$</span>139.00</span></ins></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-12 col-lg-4">
+                    <div class="row">
+                        <div class="col-lg-12 col-md-6 col-sm-12">
+                            <div class="kodory-banner style-12 left-center">
+                                <div class="banner-inner">
+                                    <figure class="banner-thumb">
+                                        <img src="{{asset('images/kom1.jpeg')}}"
+                                             class="attachment-full size-full" alt="img"></figure>
+                                    <div class="banner-info ">
+                                        <div class="banner-content">
+                                            <div class="title-wrap">
+                                                <h6 class="title">Babies<br>Bagor</h6>
+                                            </div>
+                                            <div class="cate">Komunitas</div>
+                                            <div class="button-wrap">
+                                                <a class="button" target="_blank"
+                                                   href="https://www.instagram.com/babiesbogor/?hl=id"><span>Read More</span></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-12 col-md-6 col-sm-12">
+                            <div class="kodory-banner style-12 left-center">
+                                <div class="banner-inner">
+                                    <figure class="banner-thumb">
+                                        <img src="{{asset('images/kom2.jpeg')}}"
+                                             class="attachment-full size-full" alt="img"></figure>
+                                    <div class="banner-info ">
+                                        <div class="banner-content">
+                                            <div class="title-wrap">
+                                                <h6 class="title">Babies<br>Jakarta</h6>
+                                            </div>
+                                            <div class="cate">Komunitas</div>
+                                            <div class="button-wrap">
+                                                <a class="button" target="_blank"
+                                                   href="https://www.facebook.com/momandbabypandeglang/"><span>Read More</span></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+>>>>>>> 8a8b1e0d3fb23705eeedc5f741612dcae2a73a3c
     <div class="section-001 section-009">
         <div class="container">
             <div class="kodory-slide">

@@ -39,6 +39,7 @@ Route::get('/akun', function() {
 Route::get('/kategori', 'KategoriController@index');
 Route::get('/get-kategori', 'KategoriController@getKategori');
 
+<<<<<<< HEAD
 
 
 // Tabel-Produk
@@ -49,6 +50,13 @@ Route::get('delete-produk', 'ProdukController@deleteProduk');
 Route::get('/edit-produk/{id}', 'ProdukController@editProduk');
 Route::get('/produk-detail','ProdukController@show');
 
+=======
+// Tabel-Produk
+Route::get('/get-produk', 'ProdukController@getProduk');
+Route::post('/insert-produk', 'ProdukController@insertProduk');
+Route::get('delete-produk', 'ProdukController@deleteProduk');
+Route::get('/edit-produk{id}', 'ProdukController@editProduk');
+>>>>>>> 8a8b1e0d3fb23705eeedc5f741612dcae2a73a3c
 
 // Tabel-Pelanggan
 Route::get('/get-pelanggan', 'PelangganController@getPelanggan');
