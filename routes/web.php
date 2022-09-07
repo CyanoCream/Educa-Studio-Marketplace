@@ -87,7 +87,6 @@ Route::get('/pesanan/invoice', 'OrderController@invoice')->middleware('auth')->n
 Route::post('checkout/{id}', 'ProdukController@addData')->name('checkout');
 
 
-<<<<<<< HEAD
 Route::get('/Penyelenggara', function () {
     return view('Penyelenggara.penyelenggara');
 })->name('Penyelenggara');
@@ -151,8 +150,6 @@ Route::post('/order/create', 'AdminOrderController@store')->name('storeOrder');
 Route::get('/order/{order}/edit', 'AdminOrderController@edit')->name('editOrder');
 Route::post('/order/{order}/edit', 'AdminOrderController@update')->name('updateOrder');
 Route::get('/order/{order}/delete', 'AdminOrderController@destroy')->name('deleteOrder');
-=======
->>>>>>> d8b2103e5bf4d965826f46ab04e86cb42fa7af88
 
 // pelanggan
 Route::get('/pelanggan', 'PelangganController@index')->name('daftarPelanggan');
