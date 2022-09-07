@@ -147,10 +147,10 @@ var appComponent = new Vue({
 $('.register').on('click', function() {
         $('#login').modal('hide');
         $('.modal-backdrop').remove();
-        // $('#register').modal('show');
+        $('#register').modal('show');
     })
     $('.login').on('click', function() {
-        // $('#login').modal('show');
+        $('#login').modal('show');
         $('#register').modal('hide');
         $('.modal-backdrop').remove();
     })

@@ -154,19 +154,13 @@
                                 </div>
                                 <div class="kodory-dropdown-close"></div>
                                 <div class="menu-item block-user block-dreaming kodory-dropdown">
-                                    <a class="block-link" href="#">
+                                    <a class="block-link" href="#" data-toggle="modal" data-target="#login">
                                         <span class="flaticon-profile"></span>
                                     </a>
-                                    
-                                    <ul class="sub-menu">
+                                                                     
                                         @guest
-                                        <a href="#" data-toggle="modal" data-target="#login">
-                                            <h5>Login</h5>
-                                        </a>
-                                        <a href="#" data-toggle="modal" data-target="#register">
-                                            <h5>Register</h5>
-                                        </a>
                                         @else
+                                        <ul class="sub-menu">
                                         <a class="text-center" href="{{ route ('akun.index') }}" >
                                             <h5> <i class="fa fa-user-circle"></i> {{ Auth::user()->name }} </h5>
                                         </a>
@@ -174,8 +168,9 @@
                                             {{ csrf_field() }}
                                         <button style="background-color:#71c0ef; "type="submit">Logout</button>
                                         </form>
+                                        </ul>
                                         @endguest
-                                    </ul>
+                                    
                                 </div>
                                 <div class="block-minicart block-dreaming kodory-mini-cart kodory-dropdown">
                                     <div class="shopcart-dropdown block-cart-link" data-kodory="kodory-dropdown">
