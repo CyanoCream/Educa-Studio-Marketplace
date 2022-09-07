@@ -156,14 +156,12 @@
                                 </div>
                             </form>
                         <div class="row">
-							<div class="overlay" onclick="register">
                             <p>Don't have an account? <a class="register" href="#" data-toggle="modal" data-target="#register">Register Here</a></p>
                         </div>
                 </div>
             </div>
         </div>
-    </div>
-</div>
 </body>
 </html> 
+
 

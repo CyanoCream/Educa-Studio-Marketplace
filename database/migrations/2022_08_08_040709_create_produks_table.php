@@ -18,9 +18,9 @@ class CreateProduksTable extends Migration
             $table->timestamps();
             $table->string('kategori');
             $table->string('nama_produk',255);
-            $table->integer('harga_produk');
+            $table->char('harga_produk');
             $table->string('status_pertemuan');
-            $table->string('stock');
+            $table->integer('stock');
             $table->string('pertemuan');
             $table->integer('waktu_temu');
             $table->string('umur');
