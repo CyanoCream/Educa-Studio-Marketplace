@@ -31,6 +31,12 @@
 							<input type="file" name="gambar" id="gambar" class="form-control" required="required" value="{{ $gambar->gambar }}" placeholder="Masukkan gambar">
 						</div>
 
+<<<<<<< HEAD
+						<div class="form-group">
+							<label for="id_produk">id_produk</label>
+							<input type="text" name="id_produk" id="id_produk" class="form-control" required="required" value="{{ $gambar->id_produk }}" placeholder="Masukkan id_produk">
+						</div>
+=======
 						{{-- <div class="form-group">
 							<label for="id_produk">id_produk</label>
 							<select class="form-control" name="id_produk" id="id_produk">
@@ -48,6 +54,7 @@
 								<option>12</option>
 							</select>
 						</div> --}}
+>>>>>>> 8a8b1e0d3fb23705eeedc5f741612dcae2a73a3c
 
 						<div class="text-right">
 							<a href="{{ route('daftarGambar') }}" class="btn btn-outline-secondary mr-2" role="button">Batal</a>

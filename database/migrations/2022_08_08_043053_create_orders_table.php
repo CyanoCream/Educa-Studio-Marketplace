@@ -23,12 +23,9 @@ class CreateOrdersTable extends Migration
             $table->foreign('id_produk')->references('id')->on('produks');
             $table->integer('id_penyelenggara')->unsigned();
             $table->foreign('id_penyelenggara')->references('id')->on('penyelenggaras');
-            $table->string('pengiriman');
+            $table->integer('jumlah_pesanan');
             $table->string('kurir');
             $table->string('alamat_pen');
-            $table->string('provinsi_pen');
-            $table->string('kota_pen');
-            $table->string('kecamatan_pen');
 
         });
     }

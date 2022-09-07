@@ -13,9 +13,10 @@ class DetailOrderController extends Controller
      */
     public function index()
     {
-        $detail_orders = detail_order::all();
-        return view('Detail_order.index', [
 
+        $detail_orders = Detail_order::all();
+        return view('admin.detail_order.index', [
+            'detail_orders' => $detail_orders
         ]);
     }
 
@@ -33,7 +34,7 @@ class DetailOrderController extends Controller
      */
     public function create()
     {
-        //
+        return view('admin.detail_order.create');
     }
 
     /**
@@ -44,7 +45,17 @@ class DetailOrderController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $validatedData = $request->validate([
+            'id_order' => 'required|integer' ,
+            'id_produk' => 'required|integer' ,
+            'id_varian_order' => 'required|integer' ,
+            'qty_order' => 'required|integer' ,
+        ]);
+
+        $detail_order = new Detail_order($validatedData);
+        $detail_order->save();
+
+        return redirect(route('daftarDetail_Order'));
     }
 
     /**
@@ -66,7 +77,10 @@ class DetailOrderController extends Controller
      */
     public function edit($id)
     {
-        //
+        $detail_order = Detail_order::find($id);
+        return view('admin.detail_order.edit', [
+            'detail_order' => $detail_order
+        ]);
     }
 
     /**
@@ -78,7 +92,22 @@ class DetailOrderController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $validatedData = $request->validate([
+            'id_order' => 'required|integer' ,
+            'id_produk' => 'required|integer' ,
+            'id_varian_order' => 'required|integer' ,
+            'qty_order' => 'required|integer' ,
+        ]);
+
+        $detail_order = Detail_order::find($detail_order);
+
+        $detail_order->id_order = $request->id_order;
+        $detail_order->id_produk = $request->id_produk;
+        $detail_order->id_varian_order = $request->id_varian_order;
+        $detail_order->qty_order = $request->qty_order;
+        $detail_order->save();
+
+        return redirect(route('daftarDetail_Order'));
     }
 
     /**
@@ -89,6 +118,7 @@ class DetailOrderController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $detail_order = Detail_order::find($id)->delete();
+        return redirect()->back();
     }
 }

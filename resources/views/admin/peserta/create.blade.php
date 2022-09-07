@@ -27,6 +27,9 @@
 
                             <div class="form-group">
                                 <label for="id_produk">id_produk</label>
+<<<<<<< HEAD
+                                <input type="text" name="id_produk" id="id_produk" class="form-control" required="required" placeholder="Masukkan id_produk">
+=======
                                 <select class="form-control" name="id_produk" id="id_produk">
                                     <option>1</option>
                                     <option>2</option>
@@ -41,11 +44,16 @@
                                     <option>11</option>
                                     <option>12</option>
                                 </select>
+>>>>>>> 8a8b1e0d3fb23705eeedc5f741612dcae2a73a3c
                             </div>
     
                             <div class="form-group">
                                 <label for="tgl_pembayaran">tgl_pembayaran</label>
+<<<<<<< HEAD
+                                <input type="text" name="tgl_pembayaran" id="tgl_pembayaran" class="form-control" required="required" placeholder="Masukkan tgl_pembayaran">
+=======
                                 <input type="date" name="tgl_pembayaran" id="tgl_pembayaran" class="form-control" required="required" placeholder="Masukkan tgl_pembayaran">
+>>>>>>> 8a8b1e0d3fb23705eeedc5f741612dcae2a73a3c
                             </div>
     
                             <div class="form-group">
@@ -62,6 +70,12 @@
                                 <label for="nama_panggilan">nama_panggilan</label>
                                 <input type="text" name="nama_panggilan" id="nama_panggilan" class="form-control" required="required" placeholder="Masukkan nama_panggilan">
                             </div>
+<<<<<<< HEAD
+    
+                            <div class="form-group">
+                                <label for="jenis_kelamin">jenis_kelamin</label>
+                                <input type="text" name="jenis_kelamin" id="jenis_kelamin" class="form-control" required="required" placeholder="Masukkan jenis_kelamin">
+=======
                             
                             <div class="form-group">
                                 <label for="jenis_kelamin">jenis_kelamin</label>
@@ -69,6 +83,7 @@
                                     <option>Laki-Laki</option>
                                     <option>Perempuan</option>
                                 </select>
+>>>>>>> 8a8b1e0d3fb23705eeedc5f741612dcae2a73a3c
                             </div>
     
                             <div class="form-group">

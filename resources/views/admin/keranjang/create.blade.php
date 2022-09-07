@@ -27,6 +27,9 @@
 
 						<div class="form-group">
 							<label for="id_produk">id_produk</label>
+<<<<<<< HEAD
+							<input type="text" name="id_produk" id="id_produk" class="form-control" required="required" placeholder="Masukkan id_produk">
+=======
 							<select class="form-control" name="id_produk" id="id_produk">
 								<option>1</option>
 								<option>2</option>
@@ -41,6 +44,7 @@
 								<option>11</option>
 								<option>12</option>
 							</select>
+>>>>>>> 8a8b1e0d3fb23705eeedc5f741612dcae2a73a3c
 						</div>
 
 						<div class="form-group">
@@ -50,7 +54,11 @@
 
 						<div class="form-group">
 							<label for="waktu">waktu</label>
+<<<<<<< HEAD
+							<input type="text" name="waktu" id="waktu" class="form-control" required="required" placeholder="Masukkan waktu">
+=======
 							<input type="date" name="waktu" id="waktu" class="form-control" required="required" placeholder="Masukkan waktu">
+>>>>>>> 8a8b1e0d3fb23705eeedc5f741612dcae2a73a3c
 						</div>
 
 						<div class="form-group">
@@ -60,11 +68,15 @@
 
 						<div class="form-group">
 							<label for="packing">packing</label>
+<<<<<<< HEAD
+							<input type="text" name="packing" id="packing" class="form-control" required="required" placeholder="Masukkan packing">
+=======
 							<select class="form-control" name="packing" id="packing">
 								<option>Paket Sudah Siap</option>
 								<option>Paket Dalam Perjalan</option>
 								<option>Paket Sudah Sampai</option>
 							</select>
+>>>>>>> 8a8b1e0d3fb23705eeedc5f741612dcae2a73a3c
 						</div>
 
 						<div class="text-right">

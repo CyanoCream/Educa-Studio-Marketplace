@@ -16,16 +16,17 @@ class CreatePelanggansTable extends Migration
         Schema::create('pelanggans', function (Blueprint $table) {
             $table->increments('id');
             $table->timestamps();
+            $table->integer('id_user')->unsigned();
+            $table->foreign('id_user')->references('id')->on('users');
             $table->string('foto');
             $table->datetIme('waktu_daftar');
             $table->string('nama_pelanggan');
-            $table->string('email_pelanggan');
-            $table->string('password');
             $table->string('no_telp');
             $table->string('alamat_pel');
             $table->string('provinsi_pel');
             $table->string('kota_pel');
             $table->string('kecamatan_pel');
+            $table->integer('id_produk')->unsigned();
         });
     }
 

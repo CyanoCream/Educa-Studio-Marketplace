@@ -27,7 +27,11 @@
 
 						<div class="form-group">
 							<label for="foto">foto</label>
+<<<<<<< HEAD
+							<input type="file" name="foto" id="foto" class="form-control" required="required" placeholder="Masukkan foto">
+=======
 							<input type="file" name="foto" id="foto" class="form-control" required>
+>>>>>>> 8a8b1e0d3fb23705eeedc5f741612dcae2a73a3c
 						</div>
 
 						<div class="form-group">
@@ -50,6 +54,14 @@
 							<input type="password" name="password" id="password" class="form-control" required="required" placeholder="Masukkan password">
 						</div>
 
+<<<<<<< HEAD
+						<div class="form-group">
+							<label for="remember_token">remember_token</label>
+							<input type="text" name="remember_token" id="remember_token" class="form-control" required="required" placeholder="Masukkan remember_token">
+						</div>
+
+=======
+>>>>>>> 8a8b1e0d3fb23705eeedc5f741612dcae2a73a3c
                         <div class="form-group">
 							<label for="no_telp">no_telp</label>
 							<input type="text" name="no_telp" id="no_telp" class="form-control" required="required" placeholder="Masukkan no_telp">

@@ -192,9 +192,15 @@
                                             <h3 class="product-name product_title">
                                                 <a href="#" v-on:click="getData(p.id)">@{{ p.nama_produk }}</a>
                                             </h3>
+<<<<<<< HEAD
+                                            <p class="m-1"><i class="fa fa-calendar-o pr-2" aria-hidden="true"></i>@{{ p.pertemuan }}</p>
+                                            <p class="m-1"><i class="fa fa-clock-o pr-1" aria-hidden="true"></i> @{{ p.waktu_temu }}.Menit</p>
+                                            <p class="m-1"><i class="fa fa-map-marker pr-2" aria-hidden="true"></i> @{{ p.status_pertemuan }}</p>
+=======
                                             <p class="m-1"><i class="fa fa-calendar-o" aria-hidden="true"></i>@{{ p.pertemuan }}</p>
                                             <p class="m-1"><i class="fa fa-clock-o" aria-hidden="true"></i> @{{ p.waktu_temu }}.Menit</p>
                                             <p class="m-1"><i class="fa fa-map-marker" aria-hidden="true"></i> @{{ p.status_pertemuan }}</p>
+>>>>>>> 8a8b1e0d3fb23705eeedc5f741612dcae2a73a3c
                                             <span class="price">
                                                 <span class="kodory-Price-amount amount">
                                                 <span class="kodory-Price-currencySymbol">Rp.</span>@{{ p.harga_produk }}
@@ -211,8 +217,8 @@
                         <div class="kodory-products style-01   kodory_custom_5d67efefedff9 ">
                             <div class="response-product product-list-grid row auto-clear equal-container better-height ">
                                 <div class="product-item top-rated style-01 rows-space-30 col-bg-3 col-xl-3 col-lg-4 col-md-4 col-sm-6 col-ts-6 post-26 product type-product status-publish has-post-thumbnail product_cat-light product_cat-chair product_cat-sofas product_tag-light product_tag-hat last instock featured shipping-taxable product-type-external">
-                                    <div class="product-inner tooltip-left" style="background: rgb(73,81,158);
-                                    background: linear-gradient(180deg, rgba(73,81,158,1) 0%, rgba(148,35,150,1) 53%, rgba(198,75,175,1) 100%);">
+                                    <div class="product-inner tooltip-left" style="background: rgb(133, 143, 240);
+                                    background: linear-gradient(180deg, rgb(187, 191, 239)  0%, rgb(225, 228, 254)53%, rgb(251, 226, 246)  100%);">
                                         <div class="product-thumb">
                                             <a class="thumb-link" href="{{ route ('premium.index')}}">
                                                 <img class="img-responsive"
@@ -260,8 +266,8 @@
                         <div class="kodory-products style-01   kodory_custom_5d67efefee7c9 ">
                             <div class="response-product product-list-grid row auto-clear equal-container better-height">
                                 <div class="product-item featured_products style-01 rows-space-30 col-bg-3 col-xl-3 col-lg-4 col-md-4 col-sm-6 col-ts-6 post-34 product type-product status-publish has-post-thumbnail product_cat-light product_cat-new-arrivals product_tag-light product_tag-hat product_tag-sock  instock sale featured shipping-taxable product-type-grouped">
-                                    <div class="product-inner tooltip-left" style="background: rgb(73,81,158);
-                                    background: linear-gradient(180deg, rgba(73,81,158,1) 0%, rgba(148,35,150,1) 53%, rgba(198,75,175,1) 100%);">
+                                    <div class="product-inner tooltip-left" style="background: rgb(133, 143, 240);
+                                    background: linear-gradient(180deg, rgb(187, 191, 239)0%, rgb(225, 228, 254) 53%, rgb(251, 226, 246) 100%);">
                                         <div class="product-thumb">
                                             <a class="thumb-link" href="{{ route ('premium.index')}}">
                                                 <img class="img-responsive"
@@ -455,6 +461,9 @@
     <div class="container">
         <div class="border-top-1"></div>
     </div>
+<<<<<<< HEAD
+
+=======
     <div class="section-001 section-024">
         <div class="container">
             <div class="row">
@@ -902,6 +911,7 @@
             </div>
         </div>
     </div>
+>>>>>>> 8a8b1e0d3fb23705eeedc5f741612dcae2a73a3c
     <div class="section-001 section-009">
         <div class="container">
             <div class="kodory-slide">
@@ -948,187 +958,6 @@
                             </div>
                         </figure>
                     </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="section-001">
-        <div class="container">
-            <div class="kodory-heading style-01">
-                <div class="heading-inner">
-                    <h3 class="title">
-                        From Our Blog<span></span></h3>
-                    <div class="subtitle">
-                        Very Fun Activity
-                    </div>
-                </div>
-            </div>
-            <div class="kodory-blog style-01">
-                <div class="blog-list-owl owl-slick equal-container better-height"
-                     data-slick="{&quot;arrows&quot;:true,&quot;slidesMargin&quot;:30,&quot;dots&quot;:true,&quot;infinite&quot;:false,&quot;speed&quot;:300,&quot;slidesToShow&quot;:3,&quot;rows&quot;:1}"
-                     data-responsive="[{&quot;breakpoint&quot;:480,&quot;settings&quot;:{&quot;slidesToShow&quot;:1,&quot;slidesMargin&quot;:&quot;10&quot;}},{&quot;breakpoint&quot;:768,&quot;settings&quot;:{&quot;slidesToShow&quot;:1,&quot;slidesMargin&quot;:&quot;10&quot;}},{&quot;breakpoint&quot;:992,&quot;settings&quot;:{&quot;slidesToShow&quot;:2,&quot;slidesMargin&quot;:&quot;20&quot;}},{&quot;breakpoint&quot;:1200,&quot;settings&quot;:{&quot;slidesToShow&quot;:2,&quot;slidesMargin&quot;:&quot;20&quot;}},{&quot;breakpoint&quot;:1500,&quot;settings&quot;:{&quot;slidesToShow&quot;:3,&quot;slidesMargin&quot;:&quot;30&quot;}}]">
-                    <article
-                            class="post-item post-grid rows-space-0 post-195 post type-post status-publish format-standard has-post-thumbnail hentry category-light category-table category-life-style tag-light tag-life-style">
-                        <div class="post-inner blog-grid">
-                            <div class="post-thumb">
-                                <a href="https://www.facebook.com/momandbabypandeglang/photos/a.108590627544646/493174692419569/" tabindex="0">
-                                    <img src="{{asset('images/bp1.1.jpg')}}"
-                                         class="img-responsive attachment-370x330 size-370x330" alt="img"
-                                         width="370" height="330"> </a>
-                            </div>
-                            <div class="post-content">
-                                <div class="post-meta">
-                                    <div class="post-author">
-                                        {{-- <a href="#"> admin </a> --}}
-                                        <h5>Babies Bogor</h5>
-                                    </div>
-                                    <div class="date">
-                                        {{-- <a href="#">January 03, 2021</a> --}}
-                                        <h6>March 13, 2022</h6>
-                                    </div>
-                                </div>
-                                <div class="post-info equal-elem">
-                                    <h2 class="post-title">
-                                        <a href="https://www.facebook.com/momandbabypandeglang/photos/a.108590627544646/493174692419569/" tabindex="0">Solusi si kecil yang susah makan!</a>
-                                    </h2>
-                                    <p>1. Menjadikan makan menjadi waktu yang menyenangkan <br>
-                                        2. Gunakan perlengkapan makan dengan warna gambar yang sisukai sikecil <br>
-                                        3. Membuat jadwal makan yang tepat <br>
-                                        4. Masak bersama anak <br>
-                                        — feeling loved.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                    </article>
-                    <article
-                            class="post-item post-grid rows-space-0 post-192 post type-post status-publish format-standard has-post-thumbnail hentry category-light category-fashion category-multi category-life-style tag-light tag-fashion tag-multi">
-                        <div class="post-inner blog-grid">
-                            <div class="post-thumb">
-                                <a href="#" tabindex="0">
-                                    <img src="{{asset('images/bp1.2.jpg')}}"
-                                         class="img-responsive attachment-370x330 size-370x330" alt="img"
-                                         width="370" height="330"> </a>
-                            </div>
-                            <div class="post-content">
-                                <div class="post-meta">
-                                    <div class="post-author">
-                                        {{-- <a href="#"> admin </a> --}}
-                                        <h5>Babies Jakarta</h5>
-                                    </div>
-                                    <div class="date">
-                                        {{-- <a href="#">January 03, 2021</a> --}}
-                                        <h6>July 23, 2018</h6>
-                                    </div>
-                                </div>
-                                <div class="post-info equal-elem">
-                                    <h2 class="post-title">
-                                        <a href="#" tabindex="0">Selamat Hari Anak Nasional</a>
-                                    </h2>
-                                    <p>Semoga anaka-anak kita tumbuh menjadi anak-anak yang cerdas,
-                                    sehat,berakhlak baik,dan kelak dapat jadi penguat kehidupan kehidupan
-                                    berbangsa dan bernegara.Karena manusia berkualitas di besarkan di rumah
-                                    yang penuh kasih sayang. <br>
-                                    -Love
-                                </p>
-                                </div>
-                            </div>
-                        </div>
-                    </article>
-                    <article
-                            class="post-item post-grid rows-space-0 post-189 post type-post status-publish format-video has-post-thumbnail hentry category-table category-life-style tag-multi tag-life-style post_format-post-format-video">
-                        <div class="post-inner blog-grid">
-                            <div class="post-thumb">
-                                <a href="https://www.facebook.com/momandbabypandeglang/photos/a.115291040207938/132908238446218/"
-                                   tabindex="0">
-                                    <img src="{{asset('images/bp1.3.jpg')}}"
-                                         class="img-responsive attachment-370x330 size-370x330" alt="img"
-                                         width="370" height="330"> </a>
-                            </div>
-                            <div class="post-content">
-                                <div class="post-meta">
-                                    <div class="post-author">
-                                        {{-- <a href="#"> admin </a> --}}
-                                        <h5>The Babies Jakarta</h5>
-                                    </div>
-                                    <div class="date">
-                                        {{-- <a href="#">January 03, 2021</a> --}}
-                                        <h6>July 9, 2020</h6>
-                                    </div>
-                                </div>
-                                <div class="post-info equal-elem">
-                                    <h2 class="post-title">
-                                        <a href="https://www.facebook.com/momandbabypandeglang/photos/a.115291040207938/132908238446218/" tabindex="0">Mencegah nyamuk mendekati baby</a>
-                                    </h2>
-                                    <p>1. Jaga kebersihan rumah dan lingkungan <br>
-                                       2. Gunakan kelambu <br>
-                                       3. Pasang kawat kasa <br>
-                                       4. Gunakan losion anti nyamuk <br>
-                                       5. Pakaikan baju dan celana panjang <br>
-                                       6. Berikan makanan sehat penguat imun tubuh <br>
-                                       — at Home
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                    </article>
-                    <article
-                            class="post-item post-grid rows-space-0 post-186 post type-post status-publish format-standard has-post-thumbnail hentry category-light category-life-style tag-life-style">
-                        <div class="post-inner blog-grid">
-                            <div class="post-thumb">
-                                <a href="single-post.html"
-                                   tabindex="-1">
-                                    <img src="{{asset('images/bp1.4.jpg')}}"
-                                         class="img-responsive attachment-370x330 size-370x330" alt="img"
-                                         width="370" height="330"> </a>
-                            </div>
-                            <div class="post-content">
-                                <div class="post-meta">
-                                    <div class="post-author">
-                                        <a href="#"> admin </a>
-                                    </div>
-                                    <div class="date">
-                                        <a href="#">January 03, 2021</a>
-                                    </div>
-                                </div>
-                                <div class="post-info equal-elem">
-                                    <h2 class="post-title"><a
-                                            href="single-post.html"
-                                            tabindex="-1">The child is swimming with a buoy</a></h2>
-                                    Lore ipsum dolor sit amet, consectetur adipiscing elit. Malesuada sodales
-                                    quisque litora dapibus primis lacinia
-                                </div>
-                            </div>
-                        </div>
-                    </article>
-                    <article
-                            class="post-item post-grid rows-space-0 post-183 post type-post status-publish format-standard has-post-thumbnail hentry category-light category-fashion tag-light tag-multi">
-                        <div class="post-inner blog-grid">
-                            <div class="post-thumb">
-                                <a href="single-post.html" tabindex="-1">
-                                    <img src="{{asset('images/bp1.5.jpg')}}"
-                                         class="img-responsive attachment-370x330 size-370x330" alt="img"
-                                         width="370" height="330"> </a>
-                            </div>
-                            <div class="post-content">
-                                <div class="post-meta">
-                                    <div class="post-author">
-                                        <a href="#"> admin </a>
-                                    </div>
-                                    <div class="date">
-                                        <a href="#">January 03, 2021</a>
-                                    </div>
-                                </div>
-                                <div class="post-info equal-elem">
-                                    <h2 class="post-title"><a
-                                            href="single-post.html"
-                                            tabindex="-1">Collection hiding beside beige wall</a></h2>
-                                    Lore ipsum dolor sit amet, consectetur adipiscing elit. Malesuada sodales
-                                    quisque litora dapibus primis lacinia
-                                </div>
-                            </div>
-                        </div>
-                    </article>
                 </div>
             </div>
         </div>

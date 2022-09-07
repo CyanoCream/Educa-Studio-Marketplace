@@ -18,8 +18,7 @@ class CreatePesertasTable extends Migration
             $table->timestamps();
             $table->integer('id_produk')->unsigned();
             $table->foreign('id_produk')->references('id')->on('produks');
-            $table->dateTime('tgl_pembayaran');
-            $table->integer('jumlah_dana');
+            $table->string('tgl_lahir');
             $table->string('nama_peserta');
             $table->string('nama_panggilan');
             $table->enum('jenis_kelamin', ['Laki-laki', 'Perempuan']);
