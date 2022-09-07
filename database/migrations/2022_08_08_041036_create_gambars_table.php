@@ -13,12 +13,12 @@ class CreateGambarsTable extends Migration
      */
     public function up()
     {
-        Schema::create('gambars', function (Blueprint $table) {
+        Schema::create('tbl_gambars', function (Blueprint $table) {
             $table->increments('id');
             $table->timestamps();
             $table->string('gambar');
             $table->integer('id_produk')->unsigned();
-            $table->foreign('id_produk')->references('id')->on('produks');
+            $table->foreign('id_produk')->references('id')->on('tbl_produks');
 
         });
     }
@@ -30,7 +30,7 @@ class CreateGambarsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('gambars');
-        $table->dropForeign('gambars_id_produk_foreign');
+        Schema::dropIfExists('tbl_gambars');
+        $table->dropForeign('tbl_gambars_id_produk_foreign');
     }
 }

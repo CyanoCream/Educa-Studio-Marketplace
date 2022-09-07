@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Penyelenggara extends Model
 {
-    protected $table = 'penyelenggaras';
+    protected $table = 'tbl_penyelenggaras';
 
     protected $fillable = [
         'id_produk',
