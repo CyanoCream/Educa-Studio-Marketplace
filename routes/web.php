@@ -63,20 +63,20 @@ Route::get('/pesanan/invoice', 'OrderController@invoice')->middleware('auth')->n
 Route::post('checkout/{id}', 'ProdukController@addData')->name('checkout');
 
 
-Route::get('/penyelenggara', function () {
-    return view('penyelenggara.penyelenggara');
-})->name('penyelenggara');
+Route::get('/Penyelenggara', function () {
+    return view('Penyelenggara.penyelenggara');
+})->name('Penyelenggara');
 
-Route::get('/penyelenggara-gambar', function () {
-    return view('penyelenggara.gambar');
+Route::get('/Penyelenggara-gambar', function () {
+    return view('Penyelenggara.gambar');
 });
 
-Route::get('/penyelenggara-kategori', function () {
-    return view('penyelenggara.kategori');
+Route::get('/Penyelenggara-kategori', function () {
+    return view('Penyelenggara.kategori');
 });
 
-Route::get('/penyelenggara-produk', function () {
-    return view('penyelenggara.produk');
+Route::get('/Penyelenggara-produk', function () {
+    return view('Penyelenggara.produk');
 });
 
 // detail_order
