@@ -25,25 +25,25 @@
                         <form action="{{ route('storePenyelenggara') }}" method="post" id="tambahProduk" enctype="multipart/form-data">
                             {{ csrf_field() }}
                             <div class="form-group">
-                                <label for="id_produk">id_produk</label>
+                                <label for="id_produk">id produk</label>
                                 <input type="text" name="id_produk" id="id_produk" class="form-control"
                                     required="required" placeholder="Masukkan id_produk">
                             </div>
-
+                            
                             <div class="form-group">
-                                <label for="nama_penyelenggara">nama_penyelenggara</label>
-                                <input type="text" name="nama_penyelenggara" id="nama_penyelenggara" class="form-control"
-                                    required="required" placeholder="Masukkan nama_penyelenggara">
-                            </div>
-
-                            <div class="form-group">
-                                <label for="icon_penyelenggara">icon_penyelenggara</label>
+                                <label for="icon_penyelenggara">icon penyelenggara</label>
                                 <input type="file" name="icon_penyelenggara" id="icon_penyelenggara" class="form-control"
                                     required="required" placeholder="Masukkan icon_penyelenggara">
                             </div>
 
                             <div class="form-group">
-                                <label for="kota_penyelenggara">kota_penyelenggara</label>
+                                <label for="nama_penyelenggara">nama penyelenggara</label>
+                                <input type="text" name="nama_penyelenggara" id="nama_penyelenggara" class="form-control"
+                                    required="required" placeholder="Masukkan nama_penyelenggara">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="kota_penyelenggara">kota penyelenggara</label>
                                 <input type="text" name="kota_penyelenggara" id="kota_penyelenggara" class="form-control"
                                     required="required" placeholder="Masukkan kota_penyelenggara">
                             </div>
@@ -55,7 +55,7 @@
                             </div>
 
                             <div class="form-group">
-                                <label for="jam_operasional">jam_operasional</label>
+                                <label for="jam_operasional">jam operasional</label>
                                 <input type="time" name="jam_operasional" id="jam_operasional" class="form-control"
                                     required="required" placeholder="Masukkan jam_operasional">
                             </div>

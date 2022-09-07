@@ -39,16 +39,12 @@
                             <tr>
                                 <th>id</th>
                                 <th>foto</th>
-                                <th>waktu_daftar</th>
-                                <th>nama_pelanggan</th>
-                                <th>email</th>
-                                <th>password</th>
-                                <th>no_telp</th>
-                                <th>alamat_pel</th>
-                                <th>provinsi_pel</th>
-                                <th>kota_pel</th>
-                                <th>kecamatan_pel</th>
-                                <th>level_user</th>
+                                <th>nama pelanggan</th>
+                                <th>no.telp</th>
+                                <th>alamat pelanggan</th>
+                                <th>provinsi pelanggan</th>
+                                <th>kota pelanggan</th>
+                                <th>kecamatan pelanggan</th>
                                 <th>aksi</th>
                             </tr>
                         </thead>
@@ -56,17 +52,13 @@
                             @foreach ($pelanggans as $pelanggan)
                                 <tr>
                                     <td>{{ $loop->index + 1 }}</td>
-                                    <td><img src="/upload/{{ $pelanggan->foto}}" alt="" width="100px"></td>
-                                    <td>{{ $pelanggan->waktu_daftar }}</td>
+                                    <td><img src="/upload/{{ $pelanggan->foto}}" alt="img" width="100px"></td>
                                     <td>{{ $pelanggan->nama_pelanggan }}</td>
-                                    <td>{{ $pelanggan->email }}</td>
-                                    <td>{{ $pelanggan->password }}</td>
                                     <td>{{ $pelanggan->no_telp }}</td>
                                     <td>{{ $pelanggan->alamat_pel }}</td>
                                     <td>{{ $pelanggan->provinsi_pel }}</td>
                                     <td>{{ $pelanggan->kota_pel }}</td>
                                     <td>{{ $pelanggan->kecamatan_pel }}</td>
-                                    <td>{{ $pelanggan->level_user }}</td>
                                     <td>
                                         <a href="{{route('editPelanggan', ['id' => $pelanggan->id])}}" class="btn btn-warning btn-sm" role="button">Edit</a>
                                         <a onclick="confirmDelete(this)" data-url="{{route('deletePelanggan', ['id' => $pelanggan->id])}}" class="btn btn-danger btn-sm" role="button">Hapus</a>

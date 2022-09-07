@@ -38,16 +38,12 @@
                         <thead>
                             <tr>
                                 <th>id</th>
-                                <th>id_pelanggan</th>
-                                <th>status_order</th>
-                                <th>id_produk</th>
-                                <th>id_penyelenggara</th>
-                                <th>pengiriman</th>
+                                <th>status order</th>
+                                <th>id produk</th>
+                                <th>id penyelenggara</th>
+                                <th>jumlah pesanan</th>
                                 <th>kurir</th>
-                                <th>alamat_pen</th>
-                                <th>provinsi_pen</th>
-                                <th>kota_pen</th>
-                                <th>kecamatan_pen</th>
+                                <th>alamat penerima</th>
                                 <th>aksi</th>
                             </tr>
                         </thead>
@@ -55,16 +51,12 @@
                             @foreach ($orders as $order)
                                 <tr>
                                     <td>{{ $loop->index + 1 }}</td>
-                                    <td>{{ $order->id_pelanggan }}</td>
                                     <td>{{ $order->status_order }}</td>
                                     <td>{{ $order->id_produk }}</td>
                                     <td>{{ $order->id_penyelenggara }}</td>
-                                    <td>{{ $order->pengiriman }}</td>
+                                    <td>{{ $order->jumlah_pesanan }}</td>
                                     <td>{{ $order->kurir }}</td>
                                     <td>{{ $order->alamat_pen }}</td>
-                                    <td>{{ $order->provinsi_pen }}</td>
-                                    <td>{{ $order->kota_pen }}</td>
-                                    <td>{{ $order->kecamatan_pen }}</td>
                                     <td>
                                         <a href="{{route('editOrder', ['id' => $order->id])}}" class="btn btn-warning btn-sm" role="button">Edit</a>
                                         <a onclick="confirmDelete(this)" data-url="{{route('deleteOrder', ['id' => $order->id])}}" class="btn btn-danger btn-sm" role="button">Hapus</a>

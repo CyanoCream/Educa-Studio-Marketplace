@@ -27,18 +27,38 @@
 						{{ csrf_field() }}
 
 						<div class="form-group">
-							<label for="id_order">id_order</label>
+							<label for="id_order">id order</label>
 							<input type="text" name="id_order" id="id_order" class="form-control" required="required" value="{{ $detail_order->id_order }}" placeholder="Masukkan id_order">
 						</div>
 
 						<div class="form-group">
-							<label for="id_produk">id_produk</label>
+							<label for="id_produk">idproduk</label>
 							<input type="text" name="id_produk" id="id_produk" class="form-control" required="required" value="{{ $detail_order->id_produk }}" placeholder="Masukkan id_produk">
 						</div>
 
 						<div class="form-group">
-							<label for="qty_order">qty_order</label>
-							<input type="text" name="qty_order" id="qty_order" class="form-control" required="required" value="{{ $detail_order->qty_order }}" placeholder="Masukkan qty_order">
+							<label for="nama_produk">nama produk</label>
+							<input type="text" name="nama_produk" id="nama_produk" class="form-control" required="required" value="{{ $detail_order->nama_produk }}" placeholder="Masukkan nama_produk">
+						</div>
+
+						<div class="form-group">
+							<label for="harga">harga</label>
+							<input type="text" name="harga" id="harga" class="form-control" required="required" value="{{ $detail_order->harga }}" placeholder="Masukkan harga">
+						</div>
+
+						<div class="form-group">
+							<label for="kurir">kurir</label>
+							<input type="text" name="kurir" id="kurir" class="form-control" required="required" value="{{ $detail_order->kurir }}" placeholder="Masukkan kurir">
+						</div>
+
+						<div class="form-group">
+							<label for="jumlah">jumlah</label>
+							<input type="text" name="jumlah" id="jumlah" class="form-control" required="required" value="{{ $detail_order->jumlah }}" placeholder="Masukkan jumlah">
+						</div>
+
+						<div class="form-group">
+							<label for="total_harga">total harga</label>
+							<input type="text" name="total_harga" id="total_harga" class="form-control" required="required" value="{{ $detail_order->total_harga }}" placeholder="Masukkan total_harga">
 						</div>
 
 						<div class="text-right">

@@ -3,7 +3,6 @@
 namespace App\Http\Controllers;
 use App\Penyelenggara;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\DB;
 
 class AdminPenyelenggaraController extends Controller
 {
@@ -46,21 +45,16 @@ class AdminPenyelenggaraController extends Controller
      */
     public function store(Request $request)
     {
-        $validatedData = $request->validate([
-            'id_produk' => 'required|integer' ,
-            'nama_penyelenggara' => 'required|string|max:255' ,
-            'icon_penyelenggara' => 'required|string|max:255' ,
-            'kota_penyelenggara' => 'required|string|max:255' ,
-            'deskripsi' => 'required|string|max:255' ,
-            'jam_operasional' => 'required|string|max:255' ,
-        ]);
+        // $validatedData = $request->validate([
+        //     'id_produk' => 'required|integer' ,
+        //     'icon_penyelenggara' => 'required|string|max:255' ,
+        //     'nama_penyelenggara' => 'required|string|max:255' ,
+        //     'kota_penyelenggara' => 'required|string|max:255' ,
+        //     'deskripsi' => 'required|string|max:255' ,
+        //     'jam_operasional' => 'required|string|max:255' ,
+        // ]);
 
-        $ipk = DB::table('penyelenggaras')->latest()->limit(1)->pluck('id_produk');
-        foreach ($ipk as $ipk) {
-            # code...
-        }
-
-        $gambar = Gambar::find($gambar);
+        // $penyelenggara = penyelenggara::find($penyelenggara);
 
         if ($request->hasFile('icon')) {
             $icon = $request->file('icon');
@@ -73,9 +67,9 @@ class AdminPenyelenggaraController extends Controller
 
         $penyelenggara = new penyelenggara();
 
-        $penyelenggara->id_produk = $ipk + 1;
-        $penyelenggara->nama_penyelenggara = $request->nama_penyelenggara;
+        $penyelenggara->id_produk = $request->id_produk;
         $penyelenggara->icon_penyelenggara = $fileName;
+        $penyelenggara->nama_penyelenggara = $request->nama_penyelenggara;
         $penyelenggara->kota_penyelenggara = $request->kota_penyelenggara;
         $penyelenggara->deskripsi = $request->deskripsi;
         $penyelenggara->jam_operasional = $request->jam_operasional;
@@ -118,25 +112,29 @@ class AdminPenyelenggaraController extends Controller
      */
     public function update(Request $request, $penyelenggara)
     {
-        $validatedData = $request->validate([
-            'id_produk' => 'required|integer' ,
-            'nama_penyelenggara' => 'required|string|max:255' ,
-            'icon_penyelenggara' => 'required|string|max:255' ,
-            'kota_penyelenggara' => 'required|string|max:255' ,
-            'deskripsi' => 'required|string|max:255' ,
-            'jam_operasional' => 'required|string|max:255' ,
-        ]);
-
-        $ipk = DB::table('penyelenggaras')->latest()->limit(1)->pluck('id_produk');
-        foreach ($ipk as $ipk) {
-            # code...
-        }
+        // $validatedData = $request->validate([
+        //     'id_produk' => 'required|integer' ,
+        //     'nama_penyelenggara' => 'required|string|max:255' ,
+        //     'icon_penyelenggara' => 'required|string|max:255' ,
+        //     'kota_penyelenggara' => 'required|string|max:255' ,
+        //     'deskripsi' => 'required|string|max:255' ,
+        //     'jam_operasional' => 'required|string|max:255' ,
+        // ]);
 
         $penyelenggara = penyelenggara::find($penyelenggara);
 
-        $penyelenggara->id_produk = $ipk + 1;
+        if ($request->hasFile('icon')) {
+            $icon = $request->file('icon');
+            $fileName = str_random(30).'.'.$icon->getClientOriginalExtension();
+            $imageName = $fileName;
+            $icon->move('upload/', $fileName);
+        } else {
+            $fileName = 'noimage.png';
+        }
+
+        $penyelenggara->id_produk = $request->id_produk;
+        $penyelenggara->icon_penyelenggara = $fileName;
         $penyelenggara->nama_penyelenggara = $request->nama_penyelenggara;
-        $penyelenggara->icon_penyelenggara = $request->icon_penyelenggara;
         $penyelenggara->kota_penyelenggara = $request->kota_penyelenggara;
         $penyelenggara->deskripsi = $request->deskripsi;
         $penyelenggara->jam_operasional = $request->jam_operasional;
