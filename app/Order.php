@@ -9,11 +9,7 @@ class Order extends Model
     protected $table = 'orders';
 
     protected $fillable = [
-<<<<<<< HEAD
-        'id_user',
-=======
-        'id_pelanggan',
->>>>>>> 8a8b1e0d3fb23705eeedc5f741612dcae2a73a3c
+        // 'id_user',
         'status_order',
         'id_produk',
         'id_penyelenggara',
