@@ -17,7 +17,6 @@ class CreatePelanggansTable extends Migration
             $table->increments('id');
             $table->timestamps();
             $table->string('foto');
-            $table->datetIme('waktu_daftar');
             $table->string('nama_pelanggan');
             $table->string('no_telp');
             $table->string('alamat_pel');
