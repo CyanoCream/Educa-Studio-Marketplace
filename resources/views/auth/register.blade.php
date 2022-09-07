@@ -77,7 +77,7 @@
                             <div class="col-md-8 col-md-offset-4">
                                 <button type="submit" onclick="alert('Anda Berhasil Register')" class="btn btn-primary">
                                     Register
-                                </button>
+                                </button> 
                             </div>
                         </div>
                     </form>
