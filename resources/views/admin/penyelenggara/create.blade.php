@@ -24,7 +24,11 @@
                     <div class="card-body">
                         <form action="{{ route('storePenyelenggara') }}" method="post" id="tambahProduk">
                             {{ csrf_field() }}
+<<<<<<< HEAD
+
+=======
                             
+>>>>>>> 8a8b1e0d3fb23705eeedc5f741612dcae2a73a3c
                             <div class="form-group">
                                 <label for="id_produk">id_produk</label>
                                 <input type="text" name="id_produk" id="id_produk" class="form-control"

@@ -5,8 +5,6 @@
                 <div class="newsletter-inner">
                     <div class="newsletter-info">
                         <div class="newsletter-wrap">
-                            <h3 class="title">News<span></span></h3>
-                            <h4 class="subtitle">Get Discount 100%</h4>
                             <p class="desc">send your suggestions and criticism</p>
                         </div>
                     </div>

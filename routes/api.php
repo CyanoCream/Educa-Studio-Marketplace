@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Route;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,7 +17,7 @@ use Illuminate\Http\Request;
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
-Route::get('/', function() {
+Route::get('/home', function() {
     return view('layout.master');
 });
 Route::get('/katalog', function() {
@@ -38,11 +39,16 @@ Route::get('/akun', function() {
 Route::get('/kategori', 'KategoriController@index');
 Route::get('/get-kategori', 'KategoriController@getKategori');
 
+
+
 // Tabel-Produk
+Route::get('/get-detail-produk/{id}', 'ProdukController@getDetailProduk');
 Route::get('/get-produk', 'ProdukController@getProduk');
 Route::post('/insert-produk', 'ProdukController@insertProduk');
 Route::get('delete-produk', 'ProdukController@deleteProduk');
-Route::get('/edit-produk{id}', 'ProdukController@editProduk');
+Route::get('/edit-produk/{id}', 'ProdukController@editProduk');
+Route::get('/produk-detail','ProdukController@show');
+
 
 // Tabel-Pelanggan
 Route::get('/get-pelanggan', 'PelangganController@getPelanggan');

@@ -9,8 +9,7 @@ class Peserta extends Model
     protected $table = 'pesertas';
     protected $fillable = [
         'id_produk',
-        'tgl_pembayaran',
-        'jumlah_dana',
+        'tgl_lahir',
         'nama_peserta',
         'nama_panggilan',
         'jenis_kelamin',

@@ -29,9 +29,9 @@ class ProdukController extends Controller
 
     public function getProduk()
     {
-       
         $produks = Produk::with('gambar')->get();
         // $gambars = Gambar::all();
+
         return $produks;
     }
 

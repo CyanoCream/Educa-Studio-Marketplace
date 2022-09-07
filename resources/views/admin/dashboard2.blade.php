@@ -26,6 +26,10 @@
 @endsection
 
 @push('script')
+<<<<<<< HEAD
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+=======
+>>>>>>> 8a8b1e0d3fb23705eeedc5f741612dcae2a73a3c
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
         var myDate = new Date();

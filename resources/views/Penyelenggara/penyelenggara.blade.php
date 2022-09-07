@@ -64,69 +64,64 @@
                         <nav class="kodory-MyAccount-navigation">
                             <ul>
                                 <li class="kodory-MyAccount-navigation-link kodory-MyAccount-navigation-link--dashboard">
-                                    <a href="penyelenggara-kategori">Kategori</a>
+                                    <a href="{{route('daftarKategori')}}">Kategori</a>
                                 </li>
                                 <li class="kodory-MyAccount-navigation-link kodory-MyAccount-navigation-link--orders ">
-                                    <a href="/penyelenggara-produk">Produk</a>
+                                    <a href="{{route('daftarProduk')}}">Produk</a>
                                 </li>
                                 <li class="kodory-MyAccount-navigation-link kodory-MyAccount-navigation-link--downloads">
-                                    <a href="/penyelenggara-gambar">Gambar</a>
+                                    <a href="{{route('daftarGambar')}}">Gambar</a>
                                 </li>
                                 <li class="kodory-MyAccount-navigation-link kodory-MyAccount-navigation-link--edit-address">
-                                    <a href="/penyelenggara">Penyelenggara</a>
+                                    <a href="{{Route('daftarPenyelenggara')}}">Penyelenggara</a>
                                 </li>
                             </ul> 
                         </nav>
                         <div class="kodory-MyAccount-content">
                             <div class="kodory-notices-wrapper"></div>
                             <form class="kodory-EditAccountForm edit-account" method="post">
-                                <p class="kodory-form-row kodory-form-row--first form-row form-row-first">
+                                {{-- <p class="kodory-form-row kodory-form-row--first form-row form-row-first">
                                     <label for="account_first_name">Id&nbsp;<span
                                             class="required">*</span></label>
                                     <input type="text" class="kodory-Input kodory-Input--text input-text"
                                            name="account_first_name" id="account_first_name" autocomplete="given-name"
                                            value="Annie">
-                                </p>
-                                <p class="kodory-form-row kodory-form-row--last form-row form-row-last">
-                                    <label for="account_last_name">Id_Produk&nbsp;<span
+                                </p> --}}
+                                <p class="kodory-form-row kodory-form-row--last form-row form-row-wide">
+                                    <label for="id_produk">Id Produk&nbsp;<span
                                             class="required">*</span></label>
-                                    <input type="text" class="kodory-Input kodory-Input--text input-text"
-                                           name="account_last_name" id="account_last_name" autocomplete="family-name"
-                                           value="Taylor">
+                                            <input type="text" name="id_produk" id="id_produk" class="form-control"
+                                            required="required" placeholder="Masukkan id produk">
                                 </p>
                                 <div class="clear"></div>
                                 <p class="kodory-form-row kodory-form-row--wide form-row form-row-wide">
                                     <label for="account_display_name">Nama Penyelenggara&nbsp;<span class="required">*</span></label>
-                                    <input type="text" class="kodory-Input kodory-Input--text input-text"
-                                           name="account_display_name" id="account_display_name" value="admin">
+                                    <input type="text" name="nama_penyelenggara" id="nama_penyelenggara" class="form-control"
+                                    required="required" placeholder="Masukkan nama_penyelenggara">
                                     <span><em>This will be how your name will be displayed in the account section and in reviews</em></span>
                                 </p>
                                 <div class="clear"></div>
                                 <p class="kodory-form-row kodory-form-row--wide form-row form-row-wide">
                                     <label for="account_email">Icon Penyelenggara&nbsp;<span
                                             class="required">*</span></label>
-                                    <input type="email" class="kodory-Input kodory-Input--email input-text"
-                                           name="account_email" id="account_email" autocomplete="email"
-                                           value="masukkan icon">
+                                            <input type="file" name="icon_penyelenggara" id="icon_penyelenggara" class="form-control"
+                                            required="required">
                                 </p>
                                 <fieldset>
                                     <p class="kodory-form-row kodory-form-row--wide form-row form-row-wide">
                                         <label for="password_current">Kota Penyelenggara</label>
-                                        <input type="password"
-                                               class="kodory-Input kodory-Input--password input-text"
-                                               name="password_current" id="password_current" autocomplete="off">
+                                        <input type="text" name="kota_penyelenggara" id="kota_penyelenggara" class="form-control"
+                                    required="required" placeholder="Masukkan kota penyelenggara">
                                     </p>
                                     <p class="kodory-form-row kodory-form-row--wide form-row form-row-wide">
                                         <label for="password_1">Deskripsi</label>
-                                        <input type="password"
-                                               class="kodory-Input kodory-Input--password input-text"
-                                               name="password_1" id="password_1" autocomplete="off">
+                                        <textarea name="deskripsi" id="deskripsi" rows="3" class="form-control" required="required"
+                                    placeholder="Masukkan deskripsi"></textarea>
                                     </p>
                                     <p class="kodory-form-row kodory-form-row--wide form-row form-row-wide">
                                         <label for="password_2">Jam Operasional</label>
-                                        <input type="password"
-                                               class="kodory-Input kodory-Input--password input-text"
-                                               name="password_2" id="password_2" autocomplete="off">
+                                        <input type="time" name="jam_operasional" id="jam_operasional" class="form-control"
+                                    required="required">
                                     </p>
                                 </fieldset>
                                 <div class="clear"></div>
@@ -140,6 +135,39 @@
                                     <input type="hidden" name="action" value="save_account_details">
                                 </p>
                             </form>
+                        </div>
+                        <div class="card-body p-0">
+                            <table class="table-update text-center" id="data-table">
+                                <thead>
+                                    <tr>
+                                        <th>id</th>
+                                        <th>id produk</th>
+                                        <th>nama penyelenggara</th>
+                                        <th>icon penyelenggara</th>
+                                        <th>kota penyelenggara</th>
+                                        <th>deskripsi</th>
+                                        <th>jam operasional</th>
+                                        <th>aksi</th>
+                                    </tr>
+                                </thead>
+                                {{-- <tbody>
+                                    @foreach ($penyelenggaras as $penyelenggara)
+                                        <tr>
+                                            <td>{{ $loop->index + 1 }}</td>
+                                            <td>{{ $penyelenggara->id_produk }}</td>
+                                            <td>{{ $penyelenggara->nama_penyelenggara }}</td>
+                                            <td>{{ $penyelenggara->icon_penyelenggara }}</td>
+                                            <td>{{ $penyelenggara->kota_penyelenggara }}</td>
+                                            <td>{{ $penyelenggara->deskripsi }}</td>
+                                            <td>{{ $penyelenggara->jam_operasional }}</td>
+                                            <td>
+                                                <a href="{{route('editPenyelenggara', ['id' => $penyelenggara->id])}}" class="btn btn-warning btn-sm" role="button">Edit</a>
+                                                <a onclick="confirmDelete(this)" data-url="{{route('deletePenyelenggara', ['id' => $penyelenggara->id])}}" class="btn btn-danger btn-sm" role="button">Hapus</a>
+                                            </td>
+                                        </tr>
+                                    @endforeach
+                                </tbody> --}}
+                            </table>
                         </div>
                     </div>
                 </div>

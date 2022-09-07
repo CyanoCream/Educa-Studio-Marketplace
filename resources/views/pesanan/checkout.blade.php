@@ -11,6 +11,12 @@
         <div class="modal-body">
             <div class="form">
                 </div>
+<<<<<<< HEAD
+                <div class="css-4r2xna">
+                <p class="css-utaa48 mb-2"><strong>Pilih Metode Pembayaran</strong></p>
+                <div style="display: flex;">
+                <select required id="cars" class="w-50">
+=======
               <div class="css-4r2xna">
                 <p class="css-utaa48 mb-2">Nama</p>
                 <div style="display: flex;">
@@ -27,15 +33,22 @@
                 <p class="css-utaa48 mb-2">Pilih Metode Pembayaran</p>
                 <div style="display: flex;">
                 <select required id="cars">
+>>>>>>> 8a8b1e0d3fb23705eeedc5f741612dcae2a73a3c
                   <option value="BNI">BNI Virtual Account</option>
                   <option value="BRI">BRI Virtual Account</option>
                 </select>
                 </div>
                 </div>
                 <div class="css-4r2xna">
+<<<<<<< HEAD
+                  <p class="css-utaa48 mb-2"><strong>Pilih Jasa Pengiriman</strong></p>
+                  <div style="display: flex;">
+                  <select Required id="cars" class="w-50">
+=======
                   <p class="css-utaa48 mb-2">Pilih Jasa Pengiriman</p>
                   <div style="display: flex;">
                   <select Required id="cars">
+>>>>>>> 8a8b1e0d3fb23705eeedc5f741612dcae2a73a3c
                     <option value="JNE">JNE</option>
                     <option value="J&T">J&T</option>
                     <option value="Kantor pos">Kantor Pos</option>

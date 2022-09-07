@@ -11,8 +11,25 @@
 |
 */
 Route::get('/dashboard', function () {
-    return view('admin.master');
+    return view('admin.dashboard2');
+})->name('admin');
+
+Route::get('/penyelenggara', function () {
+    return view('penyelenggara.penyelenggara');
+})->name('penyelenggara');
+
+Route::get('/penyelenggara-gambar', function () {
+    return view('penyelenggara.gambar');
 });
+
+Route::get('/penyelenggara-kategori', function () {
+    return view('penyelenggara.kategori');
+});
+
+Route::get('/penyelenggara-produk', function () {
+    return view('penyelenggara.produk');
+});
+
 
 Route::get('/', function () {
     return view('layout.master');
@@ -33,16 +50,23 @@ Route::get('/topup', function () {
 })->name('topup.index');
 
 
+
+// Route::get('/produk-detail/{id}', function () {
+//     return view('produk_detail.index');
+//     console.log(id);
+// })->name('produk-detail');
+
 Route::get('/produk-detail/{id}','ProdukController@show')->name('produk-detail');
 
 Route::get('/akun', function () {
     return view('akun.index');
 })->name('akun.index');
 
+
+
 Auth::routes();
 
-// home admin
-Route::get('/home', 'AdminHomeController@index')->name('dashboard');
+Route::get('/home', 'HomeController@index')->name('home');
 
 Auth::routes();
 
@@ -51,7 +75,7 @@ Route::post('/logout', 'LoginController@logout')->name('logout');
 
 Auth::routes();
 
-Route::get('/home', 'AdminHomeController@index')->name('home');
+Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('produk-detail/{id}', 'ProdukController@show');
 
@@ -63,20 +87,21 @@ Route::get('/pesanan/invoice', 'OrderController@invoice')->middleware('auth')->n
 Route::post('checkout/{id}', 'ProdukController@addData')->name('checkout');
 
 
-Route::get('/penyelenggara', function () {
-    return view('penyelenggara.penyelenggara');
-})->name('penyelenggara');
+<<<<<<< HEAD
+Route::get('/Penyelenggara', function () {
+    return view('Penyelenggara.penyelenggara');
+})->name('Penyelenggara');
 
-Route::get('/penyelenggara-gambar', function () {
-    return view('penyelenggara.gambar');
+Route::get('/Penyelenggara-gambar', function () {
+    return view('Penyelenggara.gambar');
 });
 
-Route::get('/penyelenggara-kategori', function () {
-    return view('penyelenggara.kategori');
+Route::get('/Penyelenggara-kategori', function () {
+    return view('Penyelenggara.kategori');
 });
 
-Route::get('/penyelenggara-produk', function () {
-    return view('penyelenggara.produk');
+Route::get('/Penyelenggara-produk', function () {
+    return view('Penyelenggara.produk');
 });
 
 // detail_order
@@ -126,53 +151,30 @@ Route::post('/order/create', 'AdminOrderController@store')->name('storeOrder');
 Route::get('/order/{order}/edit', 'AdminOrderController@edit')->name('editOrder');
 Route::post('/order/{order}/edit', 'AdminOrderController@update')->name('updateOrder');
 Route::get('/order/{order}/delete', 'AdminOrderController@destroy')->name('deleteOrder');
+=======
+>>>>>>> d8b2103e5bf4d965826f46ab04e86cb42fa7af88
 
 // pelanggan
-Route::get('/pelanggan', 'AdminPelangganController@index')->name('daftarPelanggan');
-Route::get('/pelanggan/create', 'AdminPelangganController@create')->name('createPelanggan');
-Route::post('/pelanggan/create', 'AdminPelangganController@store')->name('storePelanggan');
-Route::get('/pelanggan/{id}/edit', 'AdminPelangganController@edit')->name('editPelanggan');
-Route::post('/pelanggan/{id}/edit', 'AdminPelangganController@update')->name('updatePelanggan');
-Route::get('/pelanggan/{id}/delete', 'AdminPelangganController@destroy')->name('deletePelanggan');
+Route::get('/pelanggan', 'PelangganController@index')->name('daftarPelanggan');
+Route::get('/pelanggan/create', 'PelangganController@create')->name('createPelanggan');
+Route::post('/pelanggan/create', 'PelangganController@store')->name('storePelanggan');
+Route::get('/pelanggan/{pelanggan}/edit', 'PelangganController@edit')->name('editPelanggan');
+Route::post('/pelanggan/{pelanggan}/edit', 'PelangganController@update')->name('updatePelanggan');
+Route::get('/pelanggan/{pelanggan}/delete', 'PelangganController@destroy')->name('deletePelanggan');
 
-// penyelenggara
-Route::get('/penyelenggara', 'AdminPenyelenggaraController@index')->name('daftarPenyelenggara');
-Route::get('/penyelenggara/create', 'AdminPenyelenggaraController@create')->name('createPenyelenggara');
-Route::post('/penyelenggara/create', 'AdminPenyelenggaraController@store')->name('storePenyelenggara');
-Route::get('/penyelenggara/{penyelenggara}/edit', 'AdminPenyelenggaraController@edit')->name('editPenyelenggara');
-Route::post('/penyelenggara/{penyelenggara}/edit', 'AdminPenyelenggaraController@update')->name('updatePenyelenggara');
-Route::get('/penyelenggara/{penyelenggara}/delete', 'AdminPenyelenggaraController@destroy')->name('deletePenyelenggara');
+// order
+// Route::get('/order', 'OrderController@index')->name('daftarOrder');
+// Route::get('/order/create', 'OrderController@create')->name('createOrder');
+// Route::post('/order/create', 'OrderController@store')->name('storeOrder');
+// Route::get('/order/{order}/edit', 'OrderController@edit')->name('editOrder');
+// Route::post('/order/{order}/edit', 'OrderController@update')->name('updateOrder');
+Route::get('/order/{order}/delete', 'OrderController@destroy')->name('deleteOrder');
 
 
 //peserta
-Route::get('/peserta', 'AdminPesertaController@index')->name('daftarPeserta');
-Route::get('/peserta/create', 'AdminPesertaController@create')->name('createPeserta');
-Route::post('/peserta/create', 'AdminPesertaController@store')->name('storePeserta');
-Route::get('/peserta/{peserta}/edit', 'AdminPesertaController@edit')->name('editPeserta');
-Route::post('/peserta/{peserta}/edit', 'AdminPesertaController@update')->name('updatePeserta');
-Route::get('/peserta/{peserta}/delete', 'AdminPesertaController@destroy')->name('deletePeserta');
-
-
-// produk
-Route::get('/produk', 'AdminProdukController@index')->name('daftarProduk');
-Route::get('/produk/create', 'AdminProdukController@create')->name('createProduk');
-Route::post('/produk/create', 'AdminProdukController@store')->name('storeProduk');
-Route::get('/produk/{produk}/edit', 'AdminProdukController@edit')->name('editProduk');
-Route::post('/produk/{produk}/edit', 'AdminProdukController@update')->name('updateProduk');
-Route::get('/produk/{produk}/delete', 'AdminProdukController@destroy')->name('deleteProduk');
-
-//ulasan
-Route::get('/ulasan', 'AdminUlasanController@index')->name('daftarUlasan');
-Route::get('/ulasan/create', 'AdminUlasanController@create')->name('createUlasan');
-Route::post('/ulasan/create', 'AdminUlasanController@store')->name('storeUlasan');
-Route::get('/ulasan/{ulasan}/edit', 'AdminUlasanController@edit')->name('editUlasan');
-Route::post('/ulasan/{ulasan}/edit', 'AdminUlasanController@update')->name('updateUlasan');
-Route::get('/ulasan/{ulasan}/delete', 'AdminUlasanController@destroy')->name('deleteUlasan');
-
-//user
-Route::get('/user', 'AdminUserController@index')->name('daftarUser');
-Route::get('/user/create', 'AdminUserController@create')->name('createUser');
-Route::post('/user/create', 'AdminUserController@store')->name('storeUser');
-Route::get('/user/{user}/edit', 'AdminUserController@edit')->name('editUser');
-Route::post('/user/{user}/edit', 'AdminUserController@update')->name('updateUser');
-Route::get('/user/{user}/delete', 'AdminUserController@destroy')->name('deleteUser');
+Route::get('/peserta', 'PesertaController@index')->name('daftarPeserta');
+Route::get('/peserta/create', 'PesertaController@create')->name('createPeserta');
+Route::post('/peserta/create', 'PesertaController@store')->name('storePeserta');
+Route::get('/peserta/{peserta}/edit', 'PesertaController@edit')->name('editPeserta');
+Route::post('/peserta/{peserta}/edit', 'PesertaController@update')->name('updatePeserta');
+Route::get('/peserta/{peserta}/delete', 'PesertaController@destroy')->name('deletePeserta');

@@ -9,27 +9,29 @@ class Order extends Model
     protected $table = 'orders';
 
     protected $fillable = [
-        'id_pelanggan',
+        // 'id_user',
         'status_order',
         'id_produk',
         'id_penyelenggara',
-        'nama_penyelenggara',
-        'pengiriman',
+        'id_pelanggan',
+        'status_order',
+        'jumlah_harga',
         'kurir',
         'alamat_pen',
-        'provinsi_pen',
-        'kota_pen',
-        'kecamatan_pen',
-
     ];
          /**
       * Get the produk that owns the Aktivitas
       *
       * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
       */
-      public function produk(): BelongsTo
+      public function produk()
       {
-          return $this->belongsTo('App\Produk','id_produk');
+          return $this->BelongsTo('App\Produk','id_produk','id');
+      }
+
+      public function gambar()
+      {
+          return $this->belongsTo('App\Produk','id_produk','id');
       }
 
            /**
@@ -37,10 +39,10 @@ class Order extends Model
       *
       * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
       */
-     public function pelanggan(): BelongsTo
-     {
-         return $this->belongsTo('App\Pelanggan','id_pelanggan');
-     }
+    //  public function pelanggan(): BelongsTo
+    //  {
+    //      return $this->belongsTo('App\Pelanggan','id_pelanggan');
+    //  }
 
      /**
       * Get the user that owns the Order
@@ -50,5 +52,10 @@ class Order extends Model
      public function penyelenggara(): BelongsTo
      {
          return $this->belongsTo('App\Penyelenggara','id_penyelenggara');
+     }
+
+          public function user(): BelongsTo
+     {
+         return $this->belongsTo('App\User','id_user');
      }
 }

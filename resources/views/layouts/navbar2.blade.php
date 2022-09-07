@@ -56,6 +56,15 @@
                                 <a class="kodory-menu-item-title" title=""
                                    href="{{ route ('penyelenggara')}}">Penyelenggara</a>
                                 </li>
+<<<<<<< HEAD
+                                @elseif(Auth::user()->role == 'admin')
+                                <li id="menu-item-996"
+                                class="menu-item menu-item-type-post_type menu-item-object-megamenu menu-item-996 parent parent-megamenu item-megamenu menu-item-has-children">
+                                <a class="kodory-menu-item-title" title=""
+                                   href="{{ route('home')}}">Menu Admin</a>
+                                </li>
+=======
+>>>>>>> 8a8b1e0d3fb23705eeedc5f741612dcae2a73a3c
                                 @elseif(Auth::user()->role == 'user')
                                 <li id="menu-item-230"
                                     class="menu-item menu-item-type-post_type menu-item-object-megamenu menu-item-230 parent parent-megamenu item-megamenu menu-item-has-children">
@@ -84,8 +93,14 @@
                                 </li>
                                 @endif
                                 @endauth
+<<<<<<< HEAD
+
+                                @guest
+                             
+=======
                                 @guest
                                                                      
+>>>>>>> 8a8b1e0d3fb23705eeedc5f741612dcae2a73a3c
                                 <li id="menu-item-230"
                                     class="menu-item menu-item-type-post_type menu-item-object-megamenu menu-item-230 parent parent-megamenu item-megamenu menu-item-has-children">
                                     <a class="kodory-menu-item-title" title="" href="/">Home</a>
