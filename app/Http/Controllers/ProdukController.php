@@ -3,7 +3,6 @@
 namespace App\Http\Controllers;
 use App\Produk;
 use App\Order;
-use App\Peserta;
 use Illuminate\Http\Request;
 use Auth;
 
@@ -20,6 +19,8 @@ class ProdukController extends Controller
      */
     public function index()
     {
+        // $produks = Produk :: where('stock','=',5)->get();
+    
         $produks = Produk::all();
 
         return view('produk.index', [
@@ -31,13 +32,71 @@ class ProdukController extends Controller
     {
         $produks = Produk::with('gambar')->get();
         // $gambars = Gambar::all();
+        // $produks = Produk::with('gambar')->where('stock','<=',10)->get();
 
         return $produks;
     }
 
+    public function getProdukLimited()
+    {
+
+        $limited = Produk::with('gambar')->where('stock','<=',10)->get();
+        return $limited;
+    }
+
+    public function getProdukNew()
+    {
+
+        $new = Produk::with('gambar')->orderByRaw('updated_at - created_at DESC')->get();
+        return $new;
+    }
+
+    public function getProdukPopular()
+    {
+
+        $popular = Produk::with('gambar')->where('kategori','Gratis')->get();
+        return $popular;
+    }
+
+    public function getProdukPilihan()
+    {
+
+        $pilihan = Produk::with('gambar')->where('kategori','Pilihan')->get();
+        return $pilihan;
+    }
+
+    public function getProdukAktivitas()
+    {
+
+        $aktivitas = Produk::with('gambar')->where('kategori','Aktivitas')->get();
+        return $aktivitas;
+    }
+
+    public function getProdukKursus()
+    {
+
+        $kursus = Produk::with('gambar')->where('kategori','Kursus')->get();
+        return $kursus;
+    }
+
+    public function getProdukExperience()
+    {
+
+        $experience = Produk::with('gambar')->where('kategori','Experience')->get();
+        return $experience;
+    }
+
+    public function getProdukKesehatan()
+    {
+
+        $kesehatan = Produk::with('gambar')->where('kategori','Kesehatan')->get();
+        return $kesehatan;
+    }
+
+
     public function getDetailProduk($id)
     {
-        $produks = Produk::with('gambar', 'kategori', 'penyelenggara')->where('id', $id)->first();
+        $produks = Produk::with('gambar', 'penyelenggara')->where('id', $id)->first();
         // $gambars = Gambar::all();
 
         return $produks;
