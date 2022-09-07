@@ -13,10 +13,10 @@ class CreateProduksTable extends Migration
      */
     public function up()
     {
-        Schema::create('produks', function (Blueprint $table) {
+        Schema::create('tbl_produks', function (Blueprint $table) {
             $table->increments('id');
             $table->timestamps();
-            $table->integer('id_kategori')->unsigned();
+            $table->string('kategori');
             $table->string('nama_produk',255);
             $table->integer('harga_produk');
             $table->string('status_pertemuan');
@@ -38,6 +38,6 @@ class CreateProduksTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('produks');
+        Schema::dropIfExists('tbl_produks');
     }
 }

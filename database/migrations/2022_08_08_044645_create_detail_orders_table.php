@@ -13,18 +13,19 @@ class CreateDetailOrdersTable extends Migration
      */
     public function up()
     {
-        Schema::create('detail_orders', function (Blueprint $table) {
+        Schema::create('tbl_detail_orders', function (Blueprint $table) {
             $table->increments('id');
             $table->timestamps();
             $table->integer('id_order')->unsigned();
-            $table->foreign('id_order')->references('id')->on('orders');
+            $table->foreign('id_order')->references('id')->on('tbl_orders');
             $table->integer('id_produk')->unsigned();
-            $table->foreign('id_produk')->references('id')->on('produks');
-            $table->integer('id_varian_order');
-            $table->integer('qty_order');
-            // $table->string('nama_produk_order');
-            // $table->string('harga_produk_order');
-            // $table->string('varian_produk_order');
+            $table->foreign('id_produk')->references('id')->on('tbl_produks');
+            $table->string('nama_produk');
+            $table->string('harga');
+            $table->string('kurir');
+            $table->integer('jumlah');
+            $table->integer('total_harga');
+
         });
     }
 
@@ -35,7 +36,7 @@ class CreateDetailOrdersTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('detail_orders');
+        Schema::dropIfExists('tbl_detail_orders');
         $table->dropForeign('detail_orders_id_produk_foreign');
         $table->dropForeign('detail_orders_id_order_foreign');
     }

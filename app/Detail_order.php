@@ -6,15 +6,16 @@ use Illuminate\Database\Eloquent\Model;
 
 class Detail_order extends Model
 {
-    protected $table ='detail_orders';
+    protected $table ='tbl_detail_orders';
     protected $fillable = [
         'id_order',
         'id_produk',
-        'id_varian_order',
-        'qty_order',
-        'nama_produk_order',
-        'harga_prdoduk_order',
-        'varian_produk_order',
+        'nama_produk',
+        'harga',
+        'kurir',
+        'jumlah',
+        'total_harga',
+       
     ];
          /**
       * Get the produk that owns the Aktivitas

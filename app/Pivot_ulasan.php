@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Pivot_ulasan extends Model
 {
-    protected $table = 'pivot_ulasan';
+    protected $table = 'tbl_pivot_ulasan';
     protected $fillable = [
         'id_ulasan',
         'id_produk',

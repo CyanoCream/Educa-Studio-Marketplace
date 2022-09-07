@@ -8,9 +8,9 @@ class Produk extends Model
 {
     protected $guard = [];
 
-    protected $table = 'produks';
+    protected $table = 'tbl_produks';
     protected $fillable = [
-        'id_kategori',
+        'kategori',
         'nama_produk',
         'harga_produk',
         'status_pertemuan',
@@ -21,10 +21,7 @@ class Produk extends Model
         'keterangan',
         'manfaat',
         'bundling',
-        // 'id_penyelenggara',
-        // 'tgl_produk_publish',
-        // 'nama_kategori',
-        // 'nama_penyelenggara',
+
     ];
 
     /**
