@@ -61,15 +61,12 @@
                   <p>Produk</p>
                 </a>
               </li>
-<<<<<<< HEAD
-              <li class="nav-item m-1">
+              {{-- <li class="nav-item m-1">
                 <a href="" class="nav-link">
                   <i class="fa fa-spinner" aria-hidden="true"></i>
                   <p class="m-2">Varian</p>
                 </a>
-              </li>
-=======
->>>>>>> 8a8b1e0d3fb23705eeedc5f741612dcae2a73a3c
+              </li> --}}
             </ul>
           </li>
           <li class="nav-item">
@@ -115,11 +112,7 @@
             </a>
           </li>
           <li class="nav-item">
-<<<<<<< HEAD
-            <a href="#" class="nav-link">
-=======
             <a href="{{route('daftarUser')}}" class="nav-link">
->>>>>>> 8a8b1e0d3fb23705eeedc5f741612dcae2a73a3c
               <i class="nav-icon fas fa-user"></i>
               <p>User</p>
           </li>

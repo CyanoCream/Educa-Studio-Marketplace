@@ -25,7 +25,6 @@
 					<form action="{{ route('storeOrder') }}" method="post">
 						{{csrf_field()}}
 
-<<<<<<< HEAD
 						<div class="form-group">
 							<label for="id_pelanggan">id_pelanggan</label>
 							<input type="text" name="id_pelanggan" id="id_pelanggan" class="form-control" required="required" placeholder="Masukkan id_pelanggan">
@@ -34,41 +33,11 @@
 						<div class="form-group">
 							<label for="status_order">status_order</label>
 							<input type="text" name="status_order" id="status_order" class="form-control" required="required" placeholder="Masukkan status_order">
-=======
-						{{-- <div class="form-group">
-							<label for="id_pelanggan">id_pelanggan</label>
-							<input type="text" name="id_pelanggan" id="id_pelanggan" class="form-control" required="required" placeholder="Masukkan id_pelanggan">
-						</div> --}}
-
-						<div class="form-group">
-							<label for="status_order">status_order</label>
-							<select class="form-control" name="status_order" id="status_order">
-								<option>0</option>
-								<option>1</option>
-							</select>
->>>>>>> 8a8b1e0d3fb23705eeedc5f741612dcae2a73a3c
 						</div>
 
 						<div class="form-group">
 							<label for="id_produk">id_produk</label>
-<<<<<<< HEAD
 							<input type="text" name="id_produk" id="id_produk" class="form-control" required="required" placeholder="Masukkan id_produk">
-=======
-							<select class="form-control" name="id_produk" id="id_produk">
-								<option>1</option>
-								<option>2</option>
-								<option>3</option>
-								<option>4</option>
-								<option>5</option>
-								<option>6</option>
-								<option>7</option>
-								<option>8</option>
-								<option>9</option>
-								<option>10</option>
-								<option>11</option>
-								<option>12</option>
-							</select>
->>>>>>> 8a8b1e0d3fb23705eeedc5f741612dcae2a73a3c
 						</div>
 
 						<div class="form-group">

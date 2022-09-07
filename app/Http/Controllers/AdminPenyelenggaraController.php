@@ -60,11 +60,22 @@ class AdminPenyelenggaraController extends Controller
             # code...
         }
 
+        $gambar = Gambar::find($gambar);
+
+        if ($request->hasFile('icon')) {
+            $icon = $request->file('icon');
+            $fileName = str_random(30).'.'.$icon->getClientOriginalExtension();
+            $imageName = $fileName;
+            $icon->move('upload/', $fileName);
+        } else {
+            $fileName = 'noimage.png';
+        }
+
         $penyelenggara = new penyelenggara();
 
         $penyelenggara->id_produk = $ipk + 1;
         $penyelenggara->nama_penyelenggara = $request->nama_penyelenggara;
-        $penyelenggara->icon_penyelenggara = $request->icon_penyelenggara;
+        $penyelenggara->icon_penyelenggara = $fileName;
         $penyelenggara->kota_penyelenggara = $request->kota_penyelenggara;
         $penyelenggara->deskripsi = $request->deskripsi;
         $penyelenggara->jam_operasional = $request->jam_operasional;

@@ -40,10 +40,7 @@
                                 <th>id</th>
                                 <th>id_order</th>
                                 <th>id_produk</th>
-<<<<<<< HEAD
-                                <th>id_varian_order</th>
-=======
->>>>>>> 8a8b1e0d3fb23705eeedc5f741612dcae2a73a3c
+                                {{-- <th>id_varian_order</th> --}}
                                 <th>qty_order</th>
                                 <th>aksi</th>
                             </tr>
@@ -54,10 +51,7 @@
                                     <td>{{ $loop->index + 1 }}</td>
                                     <td>{{ $detail_order->id_order }}</td>
                                     <td>{{ $detail_order->id_produk }}</td>
-<<<<<<< HEAD
-                                    <td>{{ $detail_order->id_varian_order }}</td>
-=======
->>>>>>> 8a8b1e0d3fb23705eeedc5f741612dcae2a73a3c
+                                    {{-- <td>{{ $detail_order->id_varian_order }}</td> --}}
                                     <td>{{ $detail_order->qty_order }}</td>
                                     <td>
                                         <a href="{{route('editDetail_Order', ['id' => $detail_order->id])}}" class="btn btn-warning btn-sm" role="button">Edit</a>

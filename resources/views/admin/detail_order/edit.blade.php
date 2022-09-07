@@ -33,29 +33,7 @@
 
 						<div class="form-group">
 							<label for="id_produk">id_produk</label>
-<<<<<<< HEAD
 							<input type="text" name="id_produk" id="id_produk" class="form-control" required="required" value="{{ $detail_order->id_produk }}" placeholder="Masukkan id_produk">
-						</div>
-
-						<div class="form-group">
-							<label for="id_varian_order">id_varian_order</label>
-							<input type="text" name="id_varian_order" id="id_varian_order" class="form-control" required="required" value="{{ $detail_order->id_varian_order }}" placeholder="Masukkan id_varian_order">
-=======
-							<select class="form-control" name="id_produk" id="id_produk">
-								<option>1</option>
-								<option>2</option>
-								<option>3</option>
-								<option>4</option>
-								<option>5</option>
-								<option>6</option>
-								<option>7</option>
-								<option>8</option>
-								<option>9</option>
-								<option>10</option>
-								<option>11</option>
-								<option>12</option>
-							</select>
->>>>>>> 8a8b1e0d3fb23705eeedc5f741612dcae2a73a3c
 						</div>
 
 						<div class="form-group">

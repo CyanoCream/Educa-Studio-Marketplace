@@ -49,7 +49,7 @@
         <div role="navigation" aria-label="Breadcrumbs" class="breadcrumb-trail breadcrumbs">
             <ul class="trail-items breadcrumb">
                 <li class="trail-item trail-begin"><a href="#"><span>Home</span></a></li>
-                <li class="trail-item trail-end active"><span>Edit Account</span>
+                <li class="trail-item trail-end active"><span>Penyelenggara</span>
                 </li>
             </ul>
         </div>
@@ -77,7 +77,7 @@
                                 </li>
                             </ul> 
                         </nav>
-                        <div class="kodory-MyAccount-content">
+                        <div class="kodory-MyAccount-content"  enctype="multipart/form-data">
                             <div class="kodory-notices-wrapper"></div>
                             <form class="kodory-EditAccountForm edit-account" method="post">
                                 {{-- <p class="kodory-form-row kodory-form-row--first form-row form-row-first">
@@ -97,7 +97,7 @@
                                 <p class="kodory-form-row kodory-form-row--wide form-row form-row-wide">
                                     <label for="account_display_name">Nama Penyelenggara&nbsp;<span class="required">*</span></label>
                                     <input type="text" name="nama_penyelenggara" id="nama_penyelenggara" class="form-control"
-                                    required="required" placeholder="Masukkan nama_penyelenggara">
+                                    required="required" placeholder="Masukkan nama penyelenggara">
                                     <span><em>This will be how your name will be displayed in the account section and in reviews</em></span>
                                 </p>
                                 <div class="clear"></div>
@@ -119,7 +119,7 @@
                                     placeholder="Masukkan deskripsi"></textarea>
                                     </p>
                                     <p class="kodory-form-row kodory-form-row--wide form-row form-row-wide">
-                                        <label for="password_2">Jam Operasional</label>
+                                        <label for="jam operasional">Jam Operasional</label>
                                         <input type="time" name="jam_operasional" id="jam_operasional" class="form-control"
                                     required="required">
                                     </p>

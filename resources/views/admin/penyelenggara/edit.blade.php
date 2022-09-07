@@ -23,7 +23,7 @@
 		<div class="container-fluid">
 			<div class="card">
 				<div class="card-body">
-					<form action="{{ route('updatePenyelenggara',['id'=>$penyelenggara->id]) }}" method="post">
+					<form action="{{ route('updatePenyelenggara',['id'=>$penyelenggara->id]) }}" method="post" enctype="multipart/form-data">
 						{{ csrf_field() }}
 
 						<div class="form-group">
@@ -38,7 +38,7 @@
 
 						<div class="form-group">
 							<label for="icon_penyelenggara">icon_penyelenggara</label>
-							<input type="text" name="icon_penyelenggara" id="icon_penyelenggara" class="form-control" required="required" value="{{ $penyelenggara->icon_penyelenggara }}" placeholder="Masukkan icon_penyelenggara">
+							<input type="file" name="icon_penyelenggara" id="icon_penyelenggara" class="form-control" required="required" value="{{ $penyelenggara->icon_penyelenggara }}" placeholder="Masukkan icon_penyelenggara">
 						</div>
 
 						<div class="form-group">
@@ -53,7 +53,7 @@
 
                         <div class="form-group">
 							<label for="jam_operasional">jam_operasional</label>
-							<input type="text" name="jam_operasional" id="jam_operasional" class="form-control" required="required" value="{{ $penyelenggara->jam_operasional }}" placeholder="Masukkan jam_operasional">
+							<input type="time" name="jam_operasional" id="jam_operasional" class="form-control" required="required" value="{{ $penyelenggara->jam_operasional }}" placeholder="Masukkan jam_operasional">
 						</div>
 
 						<div class="text-right">
