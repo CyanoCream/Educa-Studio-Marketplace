@@ -13,11 +13,11 @@ class CreatePenyelenggarasTable extends Migration
      */
     public function up()
     {
-        Schema::create('penyelenggaras', function (Blueprint $table) {
+        Schema::create('tbl_penyelenggaras', function (Blueprint $table) {
             $table->increments('id');
             $table->timestamps();
             $table->integer('id_produk')->unsigned();
-            $table->foreign('id_produk')->references('id')->on('produks');
+            $table->foreign('id_produk')->references('id')->on('tbl_produks');
             $table->string('icon_penyelenggara');
             $table->string('nama_penyelenggara');
             $table->string('kota_penyelenggara');
@@ -33,7 +33,7 @@ class CreatePenyelenggarasTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('penyelenggaras');
-        $table->dropForeign('penyelenggaras_id_produk_foreign');
+        Schema::dropIfExists('tbl_penyelenggaras');
+        $table->dropForeign('tbl_penyelenggaras_id_produk_foreign');
     }
 }

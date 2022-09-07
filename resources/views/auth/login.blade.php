@@ -145,11 +145,7 @@
 
                                 <div class="form-group">
                                     <div class="col-md-8 col-md-offset-4">
-<<<<<<< HEAD
                                         <button onclick="alert('Berhasil Login')" type="submit" class="btn btn-primary">
-=======
-                                        <button type="submit" class="btn btn-primary">
->>>>>>> 8a8b1e0d3fb23705eeedc5f741612dcae2a73a3c
                                             Login
                                         </button>
 

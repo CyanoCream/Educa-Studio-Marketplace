@@ -13,11 +13,9 @@ class CreateHubungikamisTable extends Migration
      */
     public function up()
     {
-        Schema::create('hubungikamis', function (Blueprint $table) {
+        Schema::create('tbl_hubungikamis', function (Blueprint $table) {
             $table->increments('id');
             $table->timestamps();
-            $table->integer('id_pelanggan')->unsigned();
-            $table->foreign('id_pelanggan')->references('id')->on('pelanggans');
             $table->string('nama');
             $table->string('email');
             $table->string('nomorponsel');
@@ -33,7 +31,7 @@ class CreateHubungikamisTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('hubungikamis');
-        $table->dropForeign('hubungikamis_id_pelanggan_foreign');
+        Schema::dropIfExists('tbl_hubungikamis');
+
     }
 }
