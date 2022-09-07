@@ -10,6 +10,7 @@ class Penyelenggara extends Model
 
     protected $fillable = [
         'id_produk',
+        'icon_penyelenggara',
         'nama_penyelenggara',
         'kota_penyelenggara',
         'deskripsi',
@@ -21,7 +22,7 @@ class Penyelenggara extends Model
      *
      * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
      */
-    public function produk(): BelongsTo
+    public function produk()
     {
         return $this->belongsTo('App\Produk','id_produk');
     }

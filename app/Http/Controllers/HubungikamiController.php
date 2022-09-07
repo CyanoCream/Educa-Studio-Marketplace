@@ -23,7 +23,24 @@ class HubungikamiController extends Controller
      */
     public function create()
     {
-        //
+        $data = $request->all();
+
+        $hubungikami = new Hubungikami($data);
+        $hubungikami->save();
+
+        $status = 400;
+        $message = "Gagal menyimpan product!";
+
+        if($produk){
+            $status = 200;
+            $message = "Berhasil menyimpan product!";
+        }
+
+        return response()->json([
+            'status' => $status,
+            'message' => $message,
+            'data' => $data
+        ]);
     }
 
     /**

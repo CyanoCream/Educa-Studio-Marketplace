@@ -13,6 +13,8 @@ class Produk extends Model
         'id_kategori',
         'nama_produk',
         'harga_produk',
+        'status_pertemuan',
+        'stock',
         'pertemuan',
         'waktu_temu',
         'umur',
@@ -30,9 +32,9 @@ class Produk extends Model
      *
      * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
      */
-    public function penyelenggara(): BelongsTo
+    public function penyelenggara()
     {
-        return $this->belongsTo('App\Penyelenggara','id_penyelenggara');
+        return $this->hasMany('App\Penyelenggara','id_produk');
     }
 
     /**
@@ -40,9 +42,18 @@ class Produk extends Model
      *
      * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
      */
-    public function kategori(): BelongsTo
+    public function kategori()
     {
         return $this->belongsTo('App\Kategori','id_kategori');
     }
-    
+
+    /**
+     * Get all of the gambar for the Produk
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     */
+    public function gambar()
+    {
+        return $this->hasMany('App\Gambar', 'id_produk');
+    }
 }

@@ -18,6 +18,7 @@ class CreatePenyelenggarasTable extends Migration
             $table->timestamps();
             $table->integer('id_produk')->unsigned();
             $table->foreign('id_produk')->references('id')->on('produks');
+            $table->string('icon_penyelenggara');
             $table->string('nama_penyelenggara');
             $table->string('kota_penyelenggara');
             $table->string('deskripsi');

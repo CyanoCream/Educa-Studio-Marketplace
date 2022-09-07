@@ -1,5 +1,5 @@
 <div>
-    <a href="#" target="_self">
+    <a href="{{route('pesanan.index')}}" target="_self">
         <h5 class="d-flex justify-content-between">
             <i class="fa fa-first-order" aria-hidden="true"></i>
             Status Order

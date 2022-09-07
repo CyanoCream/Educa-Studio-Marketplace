@@ -13,9 +13,10 @@ class OrderController extends Controller
      */
     public function index()
     {
-        $orders = Order::all();
+        $id = auth()->user()->id;
+        $orders = Order::where('id_pelanggan',$id)->get();
 
-        return view('order.index', [
+        return view('pesanan.index', [
             'orders' => $orders
         ]);
     }
@@ -24,7 +25,18 @@ class OrderController extends Controller
     {
         $orders = Order::all();
 
-        return $orders;
+        return view('layout.navbar', [
+            'orders' => $orders
+        ]);
+    }
+
+    public function getDataOrder()
+    {
+        $orders = Order::all();
+
+        return view('layouts.index', [
+            'orders' => $orders
+        ]);
     }
 
     /**
@@ -32,9 +44,14 @@ class OrderController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function invoice()
     {
-        //
+        $id = auth()->user()->id;
+        $orders = Order::where('id_pelanggan',$id)->get();
+        // dd($orders);
+        return view('pesanan.invoice', [
+            'orders' => $orders
+        ]);
     }
 
     /**
@@ -90,6 +107,7 @@ class OrderController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $orders= Order::find($id)->delete();
+        return redirect()->back();
     }
 }

@@ -46,7 +46,7 @@
             <h1 class="page-title">Akun</h1>
             <div role="navigation" aria-label="Breadcrumbs" class="breadcrumb-trail breadcrumbs">
                 <ul class="trail-items breadcrumb">
-                    <li class="trail-item trail-begin"><a href="#"><span>Home</span></a></li>
+                    <li class="trail-item trail-begin"><a href="/"><span>Home</span></a></li>
                     <li class="trail-item trail-end active"><span>Akun</span>
                     </li>
                 </ul>
@@ -56,34 +56,36 @@
     <div class="card p-5 m-5" style="border-radius: 20px; background: rgb(110,73,158);
     background: linear-gradient(180deg, rgba(110,73,158,1) 0%, rgba(148,35,150,1) 53%, rgba(198,75,75,1) 100%);">
         <div class="card m-2 text-center" style="border-radius: 20px">
-            <h2>Akun</h2>
+            <h2>{{ Auth::user()->name }}</h2>
         </div>
-        <div class="card p-5 mt-2 mr-5 mb-2 ml-5" style="background-color: gray;border-radius: 20px;">
-            @include('edit_profile.index')
+        <div class="card p-5 mt-2 mr-5 mb-2 ml-5" style="border-radius: 20px;">
+            @include('edit_profile.pelanggan')
             @include('daftar_peserta.index')
             @include('daftar_alamat.index')
         </div>
-        <div class="card p-5 mt-2 mr-5 mb-2 ml-5" style="background-color: gray;border-radius: 20px;">
-            @include('ubah_password.index')
-        </div>
-        <div class="card p-5 mt-2 mr-5 mb-2 ml-5" style="background-color: gray;border-radius: 20px;">
+    
+        <div class="card p-5 mt-2 mr-5 mb-2 ml-5" style="border-radius: 20px;">
             @include('merchant.index')
-            @include('product_detail.index')
+            
             @include('status_order.index')
             @include('pengiriman.index')
         </div>
-        <div class="card p-5 mt-2 mr-5 mb-2 ml-5" style="background-color: gray;border-radius: 20px;">
+        <div class="card p-5 mt-2 mr-5 mb-2 ml-5" style="border-radius: 20px;">
             @include('kelas_online.index')
         </div>
-        <div class="card p-5 mt-2 mr-5 mb-2 ml-5" style="background-color: gray;border-radius: 20px;">
+        <div class="card p-5 mt-2 mr-5 mb-2 ml-5" style="border-radius: 20px;">
             @include('ketentuan.index')
             @include('kebijakan_privasi.index')
             @include('hubungi_kami.index')
             @include('tentang_kami.index')
         </div>
-        <div class="card m-2 text-center" style="border-radius: 20px">
-            <h2><a href="#">Logout</a></h2>
-        </div>
+               <form action="{{ route ('logout')}}" method="post">
+                <div class="card m-2 text-center" style="border-radius: 20px">
+                {{ csrf_field() }}
+            <button style="background-color:#71c0ef; "type="submit">Logout</button>
+           
+        </div></form>
+        
     </div>
     <div class="site-main  main-container no-sidebar">
         <div class="section-006 section-001">
@@ -237,65 +239,7 @@
             </div>
         </div>
     </div>
-    <footer id="footer" class="footer style-01">
-        <div class="section-001 section-009">
-            <div class="container">
-                <div class="kodory-newsletter style-01">
-                    <div class="newsletter-inner">
-                        <div class="newsletter-info">
-                            <div class="newsletter-wrap">
-                                <h3 class="title">News</h3>
-                                <h4 class="subtitle">Get Discount 100%</h4>
-                                <p class="desc">send your suggestions and criticism</p>
-                            </div>
-                        </div>
-                        <div class="newsletter-form-wrap">
-                            <div class="newsletter-form-inner">
-                                <input class="email email-newsletter" name="email" placeholder="Enter your email ..."
-                                    type="email">
-                                <a href="#" class="button btn-submit submit-newsletter">
-                                    <span class="text">Subscribe</span>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="section-010">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-6">
-                        <p>© Copyright 2022 <a href="#">Child</a>. All Rights Reserved.</p>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="kodory-socials style-01">
-                            <div class="content-socials">
-                                <ul class="socials-list">
-                                    <li>
-                                        <a href="https://facebook.com" target="_blank">
-                                            <i class="fa fa-facebook"></i>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="https://www.instagram.com" target="_blank">
-                                            <i class="fa fa-instagram"></i>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="https://twitter.com" target="_blank">
-                                            <i class="fa fa-twitter"></i>
-                                        </a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </footer>
-    <a href="#" class="backtotop active">
-        <i class="fa fa-angle-double-up"></i>
-    </a>
+    
+@include('layouts.footer')
 @endsection
+

@@ -11,13 +11,15 @@ class Pelanggan extends Model
         'foto',
         'waktu_daftar',
         'nama_pelanggan',
-        'email_pelanggan',
+        'email',
         'password',
+        'remember_token',
         'no_telp',
         'alamat_pel',
         'provinsi_pel',
         'kota_pel',
         'kecamatan_pel',
+        'level_user',
     ];
 
     // protected $guarded = [];

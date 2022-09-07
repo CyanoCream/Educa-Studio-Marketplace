@@ -35,7 +35,19 @@ class PenyelenggaraController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $validatedData = $request->validate([
+            'id_produk' => 'required|integer' ,
+            'nama_penyelenggara' => 'required|string|max:255' ,
+            'icon_penyelenggara' => 'required|string|max:255' ,
+            'kota_penyelenggara' => 'required|string|max:255' ,
+            'deskripsi' => 'required|string|max:255' ,
+            'jam_operasional' => 'required|string|max:255' ,
+        ]);
+
+        $penyelenggara = new penyelenggara($validatedData);
+        $penyelenggara->save();
+
+        return redirect(route('daftarPenyelenggara'));
     }
 
     /**
@@ -57,7 +69,10 @@ class PenyelenggaraController extends Controller
      */
     public function edit($id)
     {
-        //
+        $penyelenggara = penyelenggara::find($id);
+        return view('admin.penyelenggara.edit', [
+            'penyelenggara' => $penyelenggara
+        ]);
     }
 
     /**
@@ -69,7 +84,26 @@ class PenyelenggaraController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $validatedData = $request->validate([
+            'id_produk' => 'required|integer' ,
+            'nama_penyelenggara' => 'required|string|max:255' ,
+            'icon_penyelenggara' => 'required|string|max:255' ,
+            'kota_penyelenggara' => 'required|string|max:255' ,
+            'deskripsi' => 'required|string|max:255' ,
+            'jam_operasional' => 'required|string|max:255' ,
+        ]);
+
+        $penyelenggara = penyelenggara::find($penyelenggara);
+
+        $penyelenggara->id_produk = $request->id_produk;
+        $penyelenggara->nama_penyelenggara = $request->nama_penyelenggara;
+        $penyelenggara->icon_penyelenggara = $request->icon_penyelenggara;
+        $penyelenggara->kota_penyelenggara = $request->kota_penyelenggara;
+        $penyelenggara->deskripsi = $request->deskripsi;
+        $penyelenggara->jam_operasional = $request->jam_operasional;
+        $penyelenggara->save();
+
+        return redirect(route('daftarPenyelenggara'));
     }
 
     /**
@@ -80,6 +114,7 @@ class PenyelenggaraController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $penyelenggara->delete();
+        return redirect(route('daftarPenyelenggara'));
     }
 }

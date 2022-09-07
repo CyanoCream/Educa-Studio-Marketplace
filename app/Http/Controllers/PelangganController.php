@@ -3,9 +3,23 @@
 namespace App\Http\Controllers;
 use App\Pelanggan;
 use Illuminate\Http\Request;
+use Auth;
 
 class PelangganController extends Controller
 {
+    public function postlogin()
+    {
+        if (Auth::attempt($request->only('email','password'))){
+            return redirect ('/katalog.index');
+        }
+        return redirect ('/akun');
+    }
+
+    public function logout()
+    {
+        Auth :: logout();
+        return redirect ('/');
+    }
     /**
      * Display a listing of the resource.
      *
@@ -15,7 +29,7 @@ class PelangganController extends Controller
     {
         $pelanggans = Pelanggan::all();
 
-        return view('profile.index', [
+        return view('akun.index', [
             'pelanggans' => $pelanggans
         ]);
     }
@@ -34,7 +48,10 @@ class PelangganController extends Controller
      */
     public function create()
     {
-        //
+
+        return view('admin.pelanggan.create');
+        
+    
     }
 
     /**
@@ -45,8 +62,28 @@ class PelangganController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        if ($request->hasFile('foto')) {
+            $foto = $request->file('foto');
+            $fileName = str_random(30).'.'.$foto->getClientOriginalExtension();
+            $imageName = $fileName;
+            $foto->move('upload/', $fileName);
+        } else {
+            $fileName = 'noimage.png';
+        }
+        
+        $pelanggan = new Pelanggan();
+        $pelanggan->foto = $fileName;
+        $pelanggan->nama_pelanggan = $request->nama_pelanggan;
+        $pelanggan->no_telp = $request->no_telp;
+        $pelanggan->alamat_pel = $request->alamat_pel;
+        $pelanggan->provinsi_pel = $request->provinsi_pel;
+        $pelanggan->kota_pel = $request->kota_pel;
+        $pelanggan->kecamatan_pel = $request->kecamatan_pel;
+        $pelanggan->save();
+
+        return redirect()->back();
     }
+    
 
     /**
      * Display the specified resource.
@@ -67,7 +104,10 @@ class PelangganController extends Controller
      */
     public function edit($id)
     {
-        //
+        $pelanggan = Pelanggan::find($id);
+        return view('admin.pelanggan.edit', [
+            'pelanggan' => $pelanggan
+        ]);
     }
 
     /**
@@ -79,7 +119,27 @@ class PelangganController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $pelanggan = Pelanggan::find($pelanggan);
+
+        if ($request->hasFile('foto')) {
+            $foto = $request->file('foto');
+            $fileName = str_random(30).'.'.$foto->getClientOriginalExtension();
+            $imageName = $fileName;
+            $foto->move('upload/', $fileName);
+        } else {
+            $fileName = 'noimage.png';
+        }
+
+        $pelanggan->foto = $request->foto;
+        $pelanggan->nama_pelanggan = $request->nama_pelanggan;
+        $pelanggan->no_telp = $request->no_telp;
+        $pelanggan->alamat_pel = $request->alamat_pel;
+        $pelanggan->provinsi_pel = $request->provinsi_pel;
+        $pelanggan->kota_pel = $request->kota_pel;
+        $pelanggan->kecamatan_pel = $request->kecamatan_pel;
+        $pelanggan->save();
+
+        return redirect()->back();
     }
 
     /**
@@ -90,6 +150,9 @@ class PelangganController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $ulasan = Pelanggan::find($id)->delete();
+        return redirect()->back();
     }
+
+
 }

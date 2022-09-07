@@ -16,35 +16,101 @@
                     </div>
                     <div class="header-logo-nav">
                         <div class="header-logo">
-                            <a href="/api"><img alt="" src="{{asset('images/logoo.png')}}" width="100px"
+                            <a href="/"><img alt="" src="{{asset('images/logoo.png')}}" width="100px"
                             class="logo"></a></div>
                         <div class="box-header-nav menu-nocenter">
                             <ul id="menu-primary-menu"
                                 class="clone-main-menu kodory-clone-mobile-menu kodory-nav main-menu">
+                                @auth
+                                    
+                                @if (Auth::user()->role == 'penyelenggara')
+                                                                     
                                 <li id="menu-item-230"
                                     class="menu-item menu-item-type-post_type menu-item-object-megamenu menu-item-230 parent parent-megamenu item-megamenu menu-item-has-children">
-                                    <a class="kodory-menu-item-title" title="" href="/api">Home</a>
+                                    <a class="kodory-menu-item-title" title="" href="/">Home</a>
                                     <div class="submenu megamenu megamenu-home"></div>
                                 </li>
                                 <li id="menu-item-228"
                                     class="menu-item menu-item-type-post_type menu-item-object-megamenu menu-item-228 parent parent-megamenu item-megamenu menu-item-has-children">
                                     <a class="kodory-menu-item-title" title=""
-                                       href="/api/katalog">Katalog</a>
+                                       href="{{ route ('katalog.index')}}">Katalog</a>
                                 </li>
                                 <li id="menu-item-229"
                                     class="menu-item menu-item-type-post_type menu-item-object-megamenu menu-item-229 parent parent-megamenu item-megamenu menu-item-has-children">
-                                    <a class="kodory-menu-item-title" title="" href="/api/pesanan">Pesanan</a>
+                                    <a class="kodory-menu-item-title" title="" href="{{ route ('pesanan.index')}}">Pesanan</a>
+                                </li>
+                                
+                                <li id="menu-item-996"
+                                    class="menu-item menu-item-type-post_type menu-item-object-megamenu menu-item-996 parent parent-megamenu item-megamenu menu-item-has-children">
+                                    <a class="kodory-menu-item-title" title=""
+                                       href="{{ route ('premium.index')}}">Premium</a>
                                 </li>
                                 <li id="menu-item-996"
                                     class="menu-item menu-item-type-post_type menu-item-object-megamenu menu-item-996 parent parent-megamenu item-megamenu menu-item-has-children">
                                     <a class="kodory-menu-item-title" title=""
-                                       href="/api/premium">Premium</a>
+                                       href="{{ route ('topup.index')}}">Top Up</a>
+                                </li>
+                                
+                                <li id="menu-item-996"
+                                class="menu-item menu-item-type-post_type menu-item-object-megamenu menu-item-996 parent parent-megamenu item-megamenu menu-item-has-children">
+                                <a class="kodory-menu-item-title" title=""
+                                   href="{{ route ('penyelenggara')}}">Penyelenggara</a>
+                                </li>
+                                @elseif(Auth::user()->role == 'admin')
+                                <li id="menu-item-996"
+                                class="menu-item menu-item-type-post_type menu-item-object-megamenu menu-item-996 parent parent-megamenu item-megamenu menu-item-has-children">
+                                <a class="kodory-menu-item-title" title=""
+                                   href="{{ route('home')}}">Menu Admin</a>
+                                </li>
+                                @elseif(Auth::user()->role == 'user')
+                                <li id="menu-item-230"
+                                    class="menu-item menu-item-type-post_type menu-item-object-megamenu menu-item-230 parent parent-megamenu item-megamenu menu-item-has-children">
+                                    <a class="kodory-menu-item-title" title="" href="/">Home</a>
+                                    <div class="submenu megamenu megamenu-home"></div>
+                                </li>
+                                <li id="menu-item-228"
+                                    class="menu-item menu-item-type-post_type menu-item-object-megamenu menu-item-228 parent parent-megamenu item-megamenu menu-item-has-children">
+                                    <a class="kodory-menu-item-title" title=""
+                                       href="{{ route ('katalog.index')}}">Katalog</a>
+                                </li>
+                                <li id="menu-item-229"
+                                    class="menu-item menu-item-type-post_type menu-item-object-megamenu menu-item-229 parent parent-megamenu item-megamenu menu-item-has-children">
+                                    <a class="kodory-menu-item-title" title="" href="{{ route ('pesanan.index')}}">Pesanan</a>
+                                </li>
+                                
+                                <li id="menu-item-996"
+                                    class="menu-item menu-item-type-post_type menu-item-object-megamenu menu-item-996 parent parent-megamenu item-megamenu menu-item-has-children">
+                                    <a class="kodory-menu-item-title" title=""
+                                       href="{{ route ('premium.index')}}">Premium</a>
                                 </li>
                                 <li id="menu-item-996"
                                     class="menu-item menu-item-type-post_type menu-item-object-megamenu menu-item-996 parent parent-megamenu item-megamenu menu-item-has-children">
                                     <a class="kodory-menu-item-title" title=""
-                                       href="/api/top_up">Top Up</a>
+                                       href="{{ route ('topup.index')}}">Top Up</a>
                                 </li>
+                                @endif
+                                @endauth
+
+                                @guest
+                             
+                                <li id="menu-item-230"
+                                    class="menu-item menu-item-type-post_type menu-item-object-megamenu menu-item-230 parent parent-megamenu item-megamenu menu-item-has-children">
+                                    <a class="kodory-menu-item-title" title="" href="/">Home</a>
+                                    <div class="submenu megamenu megamenu-home"></div>
+                                </li>
+                                <li id="menu-item-228"
+                                    class="menu-item menu-item-type-post_type menu-item-object-megamenu menu-item-228 parent parent-megamenu item-megamenu menu-item-has-children">
+                                    <a class="kodory-menu-item-title" title=""
+                                       href="{{ route ('katalog.index')}}">Katalog</a>
+                                </li>
+                                
+                                <li id="menu-item-996"
+                                    class="menu-item menu-item-type-post_type menu-item-object-megamenu menu-item-996 parent parent-megamenu item-megamenu menu-item-has-children">
+                                    <a class="kodory-menu-item-title" title=""
+                                       href="{{ route ('premium.index')}}">Premium</a>
+                                </li>
+
+                                @endguest
                             </ul>
                         </div>
                     </div>
@@ -88,9 +154,28 @@
                                 </div>
                                 <div class="kodory-dropdown-close"></div>
                                 <div class="menu-item block-user block-dreaming kodory-dropdown">
-                                    <a class="block-link" href="/api/akun">
+                                    <a class="block-link" href="#">
                                         <span class="flaticon-profile"></span>
                                     </a>
+                                    
+                                    <ul class="sub-menu">
+                                        @guest
+                                        <a href="#" data-toggle="modal" data-target="#login">
+                                            <h5>Login</h5>
+                                        </a>
+                                        <a href="#" data-toggle="modal" data-target="#register">
+                                            <h5>Register</h5>
+                                        </a>
+                                        @else
+                                        <a class="text-center" href="{{ route ('akun.index') }}" >
+                                            <h5> <i class="fa fa-user-circle"></i> {{ Auth::user()->name }} </h5>
+                                        </a>
+                                        <form action="{{ route ('logout')}}" method="post">
+                                            {{ csrf_field() }}
+                                        <button style="background-color:#71c0ef; "type="submit">Logout</button>
+                                        </form>
+                                        @endguest
+                                    </ul>
                                 </div>
                                 <div class="block-minicart block-dreaming kodory-mini-cart kodory-dropdown">
                                     <div class="shopcart-dropdown block-cart-link" data-kodory="kodory-dropdown">
@@ -109,7 +194,7 @@
                                                         class="kodory-Price-currencySymbol">$</span></span>
                                             </p>
                                             <p class="kodory-mini-cart__buttons buttons">
-                                                <a href="#" class="button kodory-forward">Viewcart</a>
+                                                <a href="{{ route ('pesanan.index')}}" class="button kodory-forward">Viewcart</a>
                                                 <a href="#"
                                                    class="button checkout kodory-forward">Checkout</a>
                                             </p>

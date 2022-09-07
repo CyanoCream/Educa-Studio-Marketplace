@@ -1,23 +1,8 @@
-@extends('premium.master')
+@extends('layouts.master2')
 
 @section('content')
 <header id="header" class="header style-04">
-    <div class="header-top">
-        <div class="container">
-            <div class="header-top-inner">
-                <ul id="menu-top-center-menu" class="kodory-nav top-bar-menu" style="text-align-last: center">
-                    <li id="menu-item-864" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-864">
-                        <a class="kodory-menu-item-title" title="" href="#"><span
-                                class="icon pe-7s-map-marker"></span>Store Direction</a></li>
-                    <li id="menu-item-865"
-                        class="menu-item menu-item-type-custom menu-item-object-custom menu-item-865"><a
-                            class="kodory-menu-item-title" title="" href="mailto:chlid6630@gmail.com"><span
-                                class="icon pe-7s-mail"></span>Info@child.com</a></li>
-                </ul>
-            </div>
-        </div>
-    </div>
-    <div class="header-middle">
+    <div class="header-middle" style="padding: 40px;">
         <div class="container">
             <div class="header-middle-inner">
                 <div class="header-logo-menu">
@@ -27,76 +12,6 @@
                             <span></span>
                             <span></span>
                         </a>
-                    </div>
-                    <div class="header-logo">
-                        <a href="#"><img alt="img" src="{{asset('images/logoo.png')}}" width="100px" class="logo"></a>
-                    </div>
-                </div>
-                <div class="header-search-mid">
-                    <div class="header-search">
-                        <div class="block-search">
-                            <form role="search" method="get"
-                                class="form-search block-search-form kodory-live-search-form">
-                                <div class="form-content search-box results-search">
-                                    <div class="inner">
-                                        <input autocomplete="off" class="searchfield txt-livesearch input"
-                                            name="s" value="" placeholder="Search here..." type="text">
-                                    </div>
-                                </div>
-                                <input name="post_type" value="product" type="hidden">
-                                <input name="taxonomy" value="product_cat" type="hidden">
-                                <div class="category">
-                                    <select title="product_cat" name="product_cat" id="1771262470"
-                                        class="category-search-option" tabindex="-1" style="display: none;">
-                                        <option value="0">All Categories</option>
-                                        <option class="level-0" value="aktivitas">Aktivitas</option>
-                                        <option class="level-0" value="kursus">Kursus</option>
-                                        <option class="level-0" value="experience">Experience</option>
-                                        <option class="level-0" value="aktivity_kit">Aktivity Kit</option>
-                                        <option class="level-0" value="gratis">Gratis</option>
-                                    </select>
-                                </div>
-                                <button type="submit" class="btn-submit">
-                                    <span class="flaticon-magnifying-glass-1"></span>
-                                </button>
-                            </form><!-- block search -->
-                        </div>
-                    </div>
-                </div>
-                <div class="header-control">
-                    <div class="header-control-inner">
-                        <div class="meta-dreaming">
-                            <div class="menu-item block-user block-dreaming kodory-dropdown">
-                                <a class="block-link" href="#">
-                                    <span class="flaticon-profile"></span>
-                                </a>
-                            </div>
-                            <div class="block-minicart block-dreaming kodory-mini-cart kodory-dropdown">
-                                <div class="shopcart-dropdown block-cart-link" data-kodory="kodory-dropdown">
-                                    <a class="block-link link-dropdown" href="#cart.html">
-                                        <span class="flaticon-shopping-bag-1"></span>
-                                        <span class="count">0</span>
-                                    </a>
-                                </div>
-                                <div class="widget kodory widget_shopping_cart">
-                                    <div class="widget_shopping_cart_content">
-                                        <h3 class="minicart-title">Your Cart<span
-                                                class="minicart-number-items">3</span></h3>
-                                        <ul class="kodory-mini-cart cart_list product_list_widget">
-                                        </ul>
-                                        <p class="kodory-mini-cart__total total"><strong>Subtotal:</strong>
-                                            <span class="kodory-Price-amount amount"><span
-                                                    class="kodory-Price-currencySymbol">$</span>00.00</span>
-                                        </p>
-                                        <p class="kodory-mini-cart__buttons buttons">
-                                            <a href="#l" class="button kodory-forward">Viewcart</a>
-                                            <a href="#"
-                                               class="button checkout kodory-forward">Checkout</a>
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
                     </div>
                 </div>
             </div>
@@ -108,7 +23,7 @@
                 <div class="container">
                     <div class="kodory-menu-wapper"></div>
                     <div class="header-nav-inner">
-                        <div class="phone-header">
+                        <div class="phone-header" style="top: 50px;">
                             <div class="phone-inner">
                                 <span class="phone-icon">
                                     <span class="pe-7s-call"></span>
@@ -139,7 +54,7 @@
         </div>
     </div>
 </div>
-<div class="site-main  main-container no-sidebar">
+<div class="site-main  main-container no-sidebar" style="padding-top:110px;">
     <div class="section-037">
         <div class="container">
             <div class="kodory-popupvideo style-01">
@@ -466,104 +381,5 @@
         </div>
     </div>
 </div>
-<footer id="footer" class="footer style-01">
-    <div class="section-001 section-009">
-        <div class="container">
-            <div class="kodory-newsletter style-01">
-                <div class="newsletter-inner">
-                    <div class="newsletter-info">
-                        <div class="newsletter-wrap">
-                            <h3 class="title">News</h3>
-                            <h4 class="subtitle">Get Discount 100%</h4>
-                            <p class="desc">send your suggestions and criticism</p>
-                        </div>
-                    </div>
-                    <div class="newsletter-form-wrap">
-                        <div class="newsletter-form-inner">
-                            <input class="email email-newsletter" name="email" placeholder="Enter your email ..."
-                                   type="email">
-                            <a href="#" class="button btn-submit submit-newsletter">
-                                <span class="text">Subscribe</span>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="section-010">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-6">
-                    <p>© Copyright 2022 <a href="#">Child</a>. All Rights Reserved.</p>
-                </div>
-                <div class="col-md-6">
-                    <div class="kodory-socials style-01">
-                        <div class="content-socials">
-                            <ul class="socials-list">
-                                <li>
-                                    <a href="https://facebook.com" target="_blank">
-                                        <i class="fa fa-facebook"></i>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="https://www.instagram.com" target="_blank">
-                                        <i class="fa fa-instagram"></i>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="https://twitter.com" target="_blank">
-                                        <i class="fa fa-twitter"></i>
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</footer>
-<div class="footer-device-mobile">
-    <div class="wapper">
-        <div class="footer-device-mobile-item device-home">
-            <a href="index.html">
-					<span class="icon">
-						<span class="fa fa-home"></span>
-					</span>
-                Home
-            </a>
-        </div>
-        <div class="footer-device-mobile-item device-home device-wishlist">
-            <a href="wishlist.html">
-					<span class="icon">
-						<span class="flaticon-heart"></span>
-					</span>
-                Wishlist
-            </a>
-        </div>
-        <div class="footer-device-mobile-item device-home device-cart">
-            <a href="cart.html">
-					<span class="icon">
-						<span class="flaticon-shopping-bag-1"></span>
-						<span class="count-icon">
-							0
-						</span>
-					</span>
-                <span class="text">Cart</span>
-            </a>
-        </div>
-        <div class="footer-device-mobile-item device-home device-user">
-            <a href="my-account.html">
-					<span class="icon">
-						<span class="flaticon-profile"></span>
-					</span>
-                Account
-            </a>
-        </div>
-    </div>
-</div>
-<a href="#" class="backtotop active">
-    <i class="fa fa-angle-double-up"></i>
-</a>
+
 @endsection

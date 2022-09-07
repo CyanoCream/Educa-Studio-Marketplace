@@ -8,6 +8,8 @@ class Ulasan extends Model
 {
     protected $table ='ulasan';
     protected $fillable = [
+        'nama',
+        'email',
         'penilaian',
     ];
 }
