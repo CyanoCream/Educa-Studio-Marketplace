@@ -152,19 +152,19 @@ var appComponent = new Vue({
         });
 
     });
-
-
-$('.register').on('click', function() {
-        $('#login').modal('hide');
-        $('.modal-backdrop').remove();
-        $('#register').modal('show');
-        $result = mysqli_query($conn, $sql);
-    })
-    $('.login').on('click', function() {
+    $('#login').on('click', function() {
         $('#login').modal('show');
         $('#register').modal('hide');
-        $('.modal-backdrop').remove();
-        $result = mysqli_query($conn, $sql);
+        $('.modal').remove();
+
     })
+  $('.register').on('click', function() {   
+        $('#login').modal('hide');
+        $('.modal').remove();
+        $('#register').modal('show');
+
+    })
+
+
 
 </script>

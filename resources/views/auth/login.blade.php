@@ -156,12 +156,12 @@
                                 </div>
                             </form>
                         <div class="row">
-                            <p>Don't have an account? <a class="register" href="#" data-toggle="modal" data-target="#register">Register Here</a></p>
+                            <p>Don't have an account? <a href="#" id="tes" data-toggle="modal" data-target="#register">Register Here</a></p>
                         </div>
                 </div>
             </div>
         </div>
-</body>
+</body>      
 </html> 
 
 
