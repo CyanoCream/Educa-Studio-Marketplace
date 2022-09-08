@@ -148,11 +148,13 @@ $('.register').on('click', function() {
         $('#login').modal('hide');
         $('.modal-backdrop').remove();
         $('#register').modal('show');
+        $result = mysqli_query($conn, $sql);
     })
     $('.login').on('click', function() {
         $('#login').modal('show');
         $('#register').modal('hide');
         $('.modal-backdrop').remove();
+        $result = mysqli_query($conn, $sql);
     })
 
 </script>
