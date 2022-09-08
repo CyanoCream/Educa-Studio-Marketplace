@@ -16,8 +16,8 @@ class CreateProduksTable extends Migration
         Schema::create('tbl_produks', function (Blueprint $table) {
             $table->increments('id');
             $table->timestamps();
-            $table->string('kategori');
             $table->string('nama_produk',255);
+            $table->string('kategori');
             $table->char('harga_produk');
             $table->string('status_pertemuan');
             $table->integer('stock');

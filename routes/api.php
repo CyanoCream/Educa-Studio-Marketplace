@@ -36,14 +36,20 @@ Route::get('/akun', function() {
     return view('akun.index');
 });
 
-Route::get('/kategori', 'KategoriController@index');
-Route::get('/get-kategori', 'KategoriController@getKategori');
 
 
 
 // Tabel-Produk
 Route::get('/get-detail-produk/{id}', 'ProdukController@getDetailProduk');
 Route::get('/get-produk', 'ProdukController@getProduk');
+Route::get('/get-produk-limited', 'ProdukController@getProdukLimited');
+Route::get('/get-produk-new', 'ProdukController@getProdukNew');
+Route::get('/get-produk-popular', 'ProdukController@getProdukPopular');
+Route::get('/get-produk-pilihan', 'ProdukController@getProdukPilihan');
+Route::get('/get-produk-aktivitas', 'ProdukController@getProdukAktivitas');
+Route::get('/get-produk-kursus', 'ProdukController@getProdukKursus');
+Route::get('/get-produk-Experience', 'ProdukController@getProdukExperience');
+Route::get('/get-produk-kesehatan', 'ProdukController@getProdukKesehatan');
 Route::post('/insert-produk', 'ProdukController@insertProduk');
 Route::get('delete-produk', 'ProdukController@deleteProduk');
 Route::get('/edit-produk/{id}', 'ProdukController@editProduk');
