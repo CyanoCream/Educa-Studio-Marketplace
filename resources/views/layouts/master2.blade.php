@@ -23,7 +23,9 @@
 </head>
 <body>
 @include('layouts.navbar2')
+
 @yield('content')
+
 @include('layouts.footer')
 
 <script src="{{asset('js/jquery-1.12.4.min.js')}}"></script>
@@ -58,8 +60,7 @@
         data: {
             gambars: [],
             produks: [],
-            kategoris: [],
-            pesertas: [],
+
             
         },
         mounted(){
@@ -71,12 +72,7 @@
                     // console.log(this.products);
                 }
                 });
-                $.ajax({
-                    url: "/api/get-kategori",
-                    success: function(rsp){
-                        appComponent.kategoris = rsp;
-                        // console.log(this.products);
-                }});
+
                 // $.ajax({
                 // url: "/api/get-gambar",
                 // success: function(rsp){

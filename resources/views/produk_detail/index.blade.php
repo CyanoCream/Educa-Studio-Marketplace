@@ -77,61 +77,6 @@
                                 </div>
                                     <form action="{{ route ('checkout', [$id = $produk->id]) }}" class="variations_form cart" method="post">
                                         {{csrf_field()}}
-                                    <table class="variations">
-                                        <tbody>
-                                        <tr>
-                                            <td class="label"><label>Color</label></td>
-                                            <td class="value">
-                                                <select title="box_style" data-attributetype="box_style"
-                                                        data-id="pa_color"
-                                                        class="attribute-select " name="attribute_pa_color"
-                                                        data-attribute_name="attribute_pa_color"
-                                                        data-show_option_none="yes">
-                                                    <option data-type="" data-pa_color="" value="">Choose an option
-                                                    </option>
-                                                    <option data-width="30" data-height="30" data-type="color"
-                                                            data-pa_color="#3155e2" value="blue"
-                                                            class="attached enabled">Blue
-                                                    </option>
-                                                    <option data-width="30" data-height="30" data-type="color"
-                                                            data-pa_color="#ffe59e" value="pink"
-                                                            class="attached enabled">Pink
-                                                    </option>
-                                                    <option data-width="30" data-height="30" data-type="color"
-                                                            data-pa_color="#b6b8ba" value="red"
-                                                            class="attached enabled">Red
-                                                    </option>
-                                                    <option data-width="30" data-height="30" data-type="color"
-                                                            data-pa_color="#e8e120" value="yellow"
-                                                            class="attached enabled">Yellow
-                                                    </option>
-                                                </select>
-                                                <div class="data-val attribute-pa_color"
-                                                     data-attributetype="box_style">
-                                                    <label>
-                                                        <input type="radio" name="color">
-                                                        <span class="change-value color"
-                                                              style="background: #3155e2;" data-value="blue">
-                                                            </span>
-                                                    </label>
-                                                    <label>
-                                                        <input type="radio" name="color">
-                                                        <span class="change-value color"
-                                                              style="background: #52b745;" data-value="green">
-                                                            </span>
-                                                    </label>
-                                                    <label>
-                                                        <input type="radio" name="color">
-                                                        <span class="change-value color"
-                                                              style="background: #ffe59e;" data-value="pink">
-                                                            </span>
-                                                    </label>
-                                                </div>
-                                                <a class="reset_variations" href="#"
-                                                   style="visibility: hidden;">Clear</a></td>
-                                        </tr>
-                                        </tbody>
-                                    </table>
                                         <input type="hidden" name="id_produk" value="{{$produk->id}}">
                                         <input type="hidden" name="id_penyelenggara" value="{{$produk->penyelenggara[0]->id}}">
                                     <div class="single_variation_wrap">
@@ -180,19 +125,19 @@
                                         </ul>
                                     </div>
                                     <span class="posted_in">Categories: 
-                                        <a href="#"rel="tag">{{ $produk->kategori->nama_kategori }}</a>
+                                        <a href="#"rel="tag">{{ $produk->kategori }}</a>
                                     </span>
                                 </div>
                                 <div class="kodory-share-socials">
                                     <h5 class="social-heading">Share: </h5>
-                                    <a target="_blank" class="facebook" href="www.facebook.com">
+                                    <a target="_blank" class="facebook" href="#">
                                         <i class="fa fa-facebook-f"></i>
                                     </a>
                                     <a target="_blank" class="twitter"
-                                       href="www.twitter.com"><i class="fa fa-twitter"></i>
+                                       href="#"><i class="fa fa-twitter"></i>
                                     </a>
                                     <a target="_blank" class="googleplus"
-                                       href="www.google.com"><i class="fa fa-google-plus"></i>
+                                       href="#"><i class="fa fa-google-plus"></i>
                                     </a>
                                 </div>
                             </div>
@@ -209,7 +154,7 @@
                                 <a href="#tab-description">Penyelenggara</a>
                             </li>
                             <li class="reviews_tab" id="tab-title-reviews" role="tab" aria-controls="tab-reviews">
-                                <a href="#tab-reviews">Reviews (0)</a>
+                                <a href="#tab-reviews">Reviews</a>
                             </li>
                         </ul>
                         <div class="kodory-Tabs-panel kodory-Tabs-panel--description panel entry-content kodory-tab justify-content-conter"
@@ -275,12 +220,12 @@
                                 <div id="review_form_wrapper">
                                     <div id="review_form">
                                         <div id="respond" class="comment-respond">
-                                            <span id="reply-title" class="comment-reply-title">Be the first to review “{{ $produk->nama_produk }}”</span>
+                                            <span id="reply-title" class="comment-reply-title">Be the first to review “T-shirt with skirt”</span>
                                             <form id="commentform" class="comment-form">
-                                                <p class="comment-notes"><span id="email-notes">Alamat email Anda tidak akan dipublikasikan. Ruas yang wajib ditandai </span>
+                                                <p class="comment-notes"><span id="email-notes">Your email address will not be published.</span>
                                                     Required fields are marked <span class="required">*</span></p>
                                                 <p class="comment-form-author">
-                                                    <label for="author">Nama&nbsp;<span
+                                                    <label for="author">Name&nbsp;<span
                                                             class="required">*</span></label>
                                                     <input id="author" name="author" value="" size="30" required=""
                                                            type="text"></p>
@@ -288,8 +233,9 @@
                                                     <span class="required">*</span></label>
                                                     <input id="email" name="email" value="" size="30" required=""
                                                            type="email"></p>
-                                                 <p class="comment-form-comment"><label for="comment">Ulasanmu
-                                                    &nbsp;<span class="required">*</span></label><textarea
+                                               
+                                                <p class="comment-form-comment"><label for="comment">Your
+                                                    review&nbsp;<span class="required">*</span></label><textarea
                                                         id="comment" name="comment" cols="45" rows="8"
                                                         required=""></textarea></p><input name="wpml_language_code"
                                                                                           value="en" type="hidden">
@@ -309,6 +255,8 @@
                     </div>
                 </div>
             </div>
+
+
         </div>
     </div>
 </div>

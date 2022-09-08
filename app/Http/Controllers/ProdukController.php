@@ -30,7 +30,7 @@ class ProdukController extends Controller
 
     public function getProduk()
     {
-        $produks = Produk::with('gambar')->get();
+        $produks = Produk::with('gambar','penyelenggara')->get();
         // $gambars = Gambar::all();
         // $produks = Produk::with('gambar')->where('stock','<=',10)->get();
 
@@ -98,7 +98,7 @@ class ProdukController extends Controller
     {
         $produks = Produk::with('gambar', 'penyelenggara')->where('id', $id)->first();
         // $gambars = Gambar::all();
-
+        
         return $produks;
     }
 
@@ -170,7 +170,7 @@ class ProdukController extends Controller
      */
     public function show($id)
     {
-        $produks = Produk::with('gambar', 'kategori', 'penyelenggara')->where('id', $id)->first();
+        $produks = Produk::with('gambar', 'penyelenggara')->where('id', $id)->first();
         
         // return $produks;
         return view('produk_detail.index', ['produk' => $produks]);

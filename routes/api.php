@@ -36,8 +36,6 @@ Route::get('/akun', function() {
     return view('akun.index');
 });
 
-Route::get('/kategori', 'KategoriController@index');
-Route::get('/get-kategori', 'KategoriController@getKategori');
 
 
 
