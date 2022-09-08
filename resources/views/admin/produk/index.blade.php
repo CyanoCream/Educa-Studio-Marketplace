@@ -37,11 +37,13 @@
                         <thead>
                             <tr>
                                 <th>id</th>
-                                <th>id_kategori</th>
-                                <th>nama_produk</th>
-                                <th>harga_produk</th>
+                                <th>kategori</th>
+                                <th>nama produk</th>
+                                <th>harga produk</th>
+                                <th>status pertemuan</th>
+                                <th>stock</th>
                                 <th>pertemuan</th>
-                                <th>waktu_temu</th>
+                                <th>waktu temu</th>
                                 <th>umur</th>
                                 <th>keterangan</th>
                                 <th>manfaat</th>
@@ -53,9 +55,11 @@
                             @foreach ($produks as $produk)
                                 <tr>
                                     <td>{{ $loop->index + 1 }}</td>
-                                    <td>{{ $produk->id_kategori }}</td>
+                                    <td>{{ $produk->kategori }}</td>
                                     <td>{{ $produk->nama_produk }}</td>
                                     <td>{{ $produk->harga_produk }}</td>
+                                    <td>{{ $produk->status_pertemuan }}</td>
+                                    <td>{{ $produk->stock }}</td>
                                     <td>{{ $produk->pertemuan }}</td>
                                     <td>{{ $produk->waktu_temu }}</td>
                                     <td>{{ $produk->umur }}</td>

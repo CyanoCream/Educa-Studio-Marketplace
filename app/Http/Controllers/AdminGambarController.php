@@ -76,7 +76,7 @@ class AdminGambarController extends Controller
             $gambar = $request->file('gambar');
             $fileName = str_random(30).'.'.$gambar->getClientOriginalExtension();
             $imageName = $fileName;
-            $gambar->move('upload/', $fileName);
+            $gambar->move('images/', $fileName);
         } else {
             $fileName = 'noimage.png';
         }
@@ -155,7 +155,7 @@ class AdminGambarController extends Controller
             $gambar = $request->file('gambar');
             $fileName = str_random(30).'.'.$gambar->getClientOriginalExtension();
             $imageName = $fileName;
-            $gambar->move('upload/', $fileName);
+            $gambar->move('images/', $fileName);
         } else {
             $fileName = 'noimage.png';
         }

@@ -31,37 +31,28 @@
         <div class="container-fluid">
             <div class="card">
                 <div class="card-header text-right">
-                    <a href="{{ route('createPeserta') }}" class="btn btn-primary" role="button">Tambah Peserta</a>
+                    <a href="{{ route('createGambar') }}" class="btn btn-primary" role="button">Tambah Gambar</a>
                 </div>
                 <div class="card-body p-0">
                     <table class="table-update" id="data-table">
                         <thead>
                             <tr>
                                 <th>id</th>
-                                <th>id_produk</th>
-                                <th>tgl_pembayaran</th>
-                                <th>jumlah_dana</th>
-                                <th>nama_peserta</th>
-                                <th>nama_panggilan</th>
-                                <th>jenis_kelamin</th>
-                                <th>hubungan</th>
+                                <th>gambar</th>
+                                <th>id produk</th>
                                 <th>aksi</th>
                             </tr>
                         </thead>
                         <tbody>
-                            @foreach ($pesertas as $peserta)
+                            @foreach ($gambars as $gambar)
                                 <tr>
                                     <td>{{ $loop->index + 1 }}</td>
-                                    <td>{{ $peserta->id_produk }}</td>
-                                    <td>{{ $peserta->tgl_pembayaran }}</td>
-                                    <td>{{ $peserta->jumlah_dana }}</td>
-                                    <td>{{ $peserta->nama_peserta }}</td>
-                                    <td>{{ $peserta->nama_panggilan }}</td>
-                                    <td>{{ $peserta->jenis_kelamin }}</td>
-                                    <td>{{ $peserta->hubungan }}</td>
+                                    <td><img src="/images/{{ $gambar->gambar }}" alt="" width="100px"></td>
+                                    {{-- <td>{{ $gambar->gambar }}</td> --}}
+                                    <td>{{ $gambar->id_produk }}</td>
                                     <td>
-                                        <a href="{{route('editPeserta', ['id' => $peserta->id])}}" class="btn btn-warning btn-sm" role="button">Edit</a>
-                                        <a onclick="confirmDelete(this)" data-url="{{route('deletePeserta', ['id' => $peserta->id])}}" class="btn btn-danger btn-sm" role="button">Hapus</a>
+                                        <a href="{{route('editGambar', ['id' => $gambar->id])}}" class="btn btn-warning btn-sm" role="button">Edit</a>
+                                        <a onclick="confirmDelete(this)" data-url="{{route('deleteGambar', ['id' => $gambar->id])}}" class="btn btn-danger btn-sm" role="button">Hapus</a>
                                     </td>
                                 </tr>
                             @endforeach

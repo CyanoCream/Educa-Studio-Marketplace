@@ -48,6 +48,7 @@ class AdminUserController extends Controller
         $validatedData = $request->validate([
             'name' => 'required|string|max:255' ,
             'email' => 'required|string|max:255' ,
+            'role' => 'required|string|max:255' ,
             'password' => 'required|string|max:255' ,
         ]);
 
@@ -94,6 +95,7 @@ class AdminUserController extends Controller
         $validatedData = $request->validate([
             'name' => 'required|string|max:255' ,
             'email' => 'required|string|max:255' ,
+            'role' => 'required|string|max:255' ,
             'password' => 'required|string|max:255' ,
         ]);
 
@@ -101,6 +103,7 @@ class AdminUserController extends Controller
 
         $user->name = $request->name;
         $user->email = $request->email;
+        $user->role = $request->role;
         $user->password = $request->password;
         $user->save();
 

@@ -49,6 +49,12 @@
                   <p>Produk</p>
                 </a>
               </li>
+              <li class="nav-item m-1">
+                <a href="{{route('daftarGambar')}}" class="nav-link">
+                  <i class="fas fa-image"></i>
+                  <p class="m-2">Gambar</p>
+                </a>
+              </li>
             </ul>
           </li>
           <li class="nav-item">
@@ -67,12 +73,6 @@
             <a href="{{route('daftarPenyelenggara')}}" class="nav-link">
               <i class="nav-icon fas fa-columns"></i>
               <p>Penyelenggara</p>
-            </a>
-          </li>
-          <li class="nav-item">
-            <a href="{{route('daftarPeserta')}}" class="nav-link">
-              <i class="nav-icon far fa-envelope"></i>
-              <p>Peserta</p>
             </a>
           </li>
           <li class="nav-item">

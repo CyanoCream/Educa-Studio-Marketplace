@@ -52,7 +52,7 @@
                             @foreach ($pelanggans as $pelanggan)
                                 <tr>
                                     <td>{{ $loop->index + 1 }}</td>
-                                    <td><img src="/upload/{{ $pelanggan->foto}}" alt="img" width="100px"></td>
+                                    <td><img src="/images/{{ $pelanggan->foto}}" alt="" width="100px"></td>
                                     <td>{{ $pelanggan->nama_pelanggan }}</td>
                                     <td>{{ $pelanggan->no_telp }}</td>
                                     <td>{{ $pelanggan->alamat_pel }}</td>

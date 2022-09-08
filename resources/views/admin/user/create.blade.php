@@ -36,6 +36,12 @@
                                 <input type="email" name="email" id="email" class="form-control"
                                     required="required" placeholder="Masukkan email">
                             </div>
+                            
+                            <div class="form-group">
+                                <label for="role">role</label>
+                                <input type="text" name="role" id="role" class="form-control"
+                                    required="required" placeholder="Masukkan role">
+                            </div>
 
                             <div class="form-group">
                                 <label for="password">password</label>
