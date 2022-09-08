@@ -88,9 +88,11 @@ class AdminProdukController extends Controller
     public function store(Request $request)
     {
         $validatedData = $request->validate([
-            'id_kategori' => 'required|integer' ,
+            'kategori' => 'required|string|max:255' ,
             'nama_produk' => 'required|string|max:255' ,
             'harga_produk' => 'required|integer' ,
+            'status_produk' => 'required|string|max:255' ,
+            'stock' => 'required|integer' ,
             'pertemuan' => 'required|string|max:255' ,
             'waktu_temu' => 'required|integer' ,
             'umur' => 'required|string|max:255' ,
@@ -141,9 +143,11 @@ class AdminProdukController extends Controller
     {
     
         $validatedData = $request->validate([
-            'id_kategori' => 'required|integer' ,
+            'kategori' => 'required|string|max:255' ,
             'nama_produk' => 'required|string|max:255' ,
             'harga_produk' => 'required|integer' ,
+            'status_produk' => 'required|string|max:255' ,
+            'stock' => 'required|integer' ,
             'pertemuan' => 'required|string|max:255' ,
             'waktu_temu' => 'required|integer' ,
             'umur' => 'required|string|max:255' ,
@@ -154,9 +158,11 @@ class AdminProdukController extends Controller
 
         $produk = produk::find($produk);
 
-        $produk->id_kategori = $request->id_kategori;
+        $produk->kategori = $request->kategori;
         $produk->nama_produk = $request->nama_produk;
         $produk->harga_produk = $request->harga_produk;
+        $produk->status_pertemuan = $request->status_pertemuan;
+        $produk->stock = $request->stock;
         $produk->pertemuan = $request->pertemuan;
         $produk->waktu_temu = $request->waktu_temu;
         $produk->umur = $request->umur;

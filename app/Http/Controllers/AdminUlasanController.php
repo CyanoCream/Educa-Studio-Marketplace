@@ -46,6 +46,8 @@ class AdminUlasanController extends Controller
     public function store(Request $request)
     {
         $validatedData = $request->validate([
+            'nama' => 'required|string|max:255' ,
+            'email' => 'required|string|max:255' ,
             'penilaian' => 'required|string|max:255' ,
         ]);
 
@@ -90,11 +92,15 @@ class AdminUlasanController extends Controller
     public function update(Request $request, $ulasan)
     {
         $validatedData = $request->validate([
-            'penilaian' => 'required|string|max:255' ,
+            'nama' => 'required|string|max:255' ,
+            'email' => 'required|string|max:255' ,
+            'penilaian' => 'required|string' ,
         ]);
 
         $ulasan = ulasan::find($ulasan);
 
+        $ulasan->nama = $request->nama;
+        $ulasan->email = $request->email;
         $ulasan->penilaian = $request->penilaian;
         $ulasan->save();
 

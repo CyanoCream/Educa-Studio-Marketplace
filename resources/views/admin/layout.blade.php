@@ -46,6 +46,10 @@
 <script src="{{asset('dashboard/bootstrap.bundle.min.js')}}"></script>
 <!-- AdminLTE App -->
 <script src="{{asset('dashboard/adminlte.min.js')}}"></script>
+<!-- Sweetalert -->
+<script src="{{asset('js2/sweetalert.min.js')}}"></script>
+<!--- dataTables -->
+<script src="{{asset('js2/dataTables.bootsrap4.min.js')}}"></script>
 <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 
 <script>
