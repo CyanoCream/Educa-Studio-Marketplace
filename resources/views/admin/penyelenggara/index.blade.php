@@ -39,8 +39,8 @@
                             <tr>
                                 <th>id</th>
                                 <th>id produk</th>
-                                <th>nama penyelenggara</th>
                                 <th>icon penyelenggara</th>
+                                <th>nama penyelenggara</th>
                                 <th>kota penyelenggara</th>
                                 <th>deskripsi</th>
                                 <th>jam operasional</th>
@@ -52,8 +52,8 @@
                                 <tr>
                                     <td>{{ $loop->index + 1 }}</td>
                                     <td>{{ $penyelenggara->id_produk }}</td>
+                                    <td><img src="/images/{{ $penyelenggara->icon_penyelenggara}}" alt="" width="100px"></td>
                                     <td>{{ $penyelenggara->nama_penyelenggara }}</td>
-                                    <td>{{ $penyelenggara->icon_penyelenggara }}</td>
                                     <td>{{ $penyelenggara->kota_penyelenggara }}</td>
                                     <td>{{ $penyelenggara->deskripsi }}</td>
                                     <td>{{ $penyelenggara->jam_operasional }}</td>

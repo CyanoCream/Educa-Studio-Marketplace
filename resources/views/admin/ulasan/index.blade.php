@@ -37,6 +37,8 @@
                         <thead>
                             <tr>
                                 <th>id</th>
+                                <th>nama</th>
+                                <th>email</th>
                                 <th>penilaian</th>
                                 <th>aksi</th>
                             </tr>
@@ -45,8 +47,9 @@
                             @foreach ($ulasans as $ulasan)
                                 <tr>
                                     <td>{{ $loop->index + 1 }}</td>
+                                    <td>{{ $ulasan->nama }}</td>
+                                    <td>{{ $ulasan->email }}</td>
                                     <td>{{ $ulasan->penilaian }}</td>
-
                                     <td>
                                         <a href="{{route('editUlasan', ['id' => $ulasan->id])}}" class="btn btn-warning btn-sm" role="button">Edit</a>
                                         <a onclick="confirmDelete(this)" data-url="{{route('deleteUlasan', ['id' => $ulasan->id])}}" class="btn btn-danger btn-sm" role="button">Hapus</a>

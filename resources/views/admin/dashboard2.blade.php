@@ -14,11 +14,11 @@
                     style="border-radius: 20px;height: 460px;background: rgb(0,0,36);
             background: linear-gradient(180deg, rgba(0,0,36,1) 0%, rgba(162,169,213,1) 0%, rgba(41,134,153,1) 100%);">
                     <h3 id="lblGreetings2"></h3>
-                    {{-- <h1>Hallo.. {{Auth::user()->name}}, Apa Kabar?</h1> --}}
-                    <p>Kamu bisa saja mengalami pahit getirnya perjalanan hidup,tetapi kamu <br>
-                        tidak boleh berhenti dan tidak boleh kehilangan impianmu.</p>
+                    <h1>Hallo.. {{Auth::user()->name}}, Apa Kabar?</h1>
+                    <p>Kamu bisa saja mengalami pahit getirnya perjalanan hidup,<br>
+                        tetapi kamu tidak boleh berhenti dan tidak boleh kehilangan impianmu.</p>
                     <br>
-                    <p>Sedikit kemajuan setiap hari menambah hasil yang besar!</p>
+                    <p>Sedikit kemajuan setiap hari akan menambah hasil yang besar!</p>
                 </div>
             </div>
         </div>
@@ -26,10 +26,7 @@
 @endsection
 
 @push('script')
-<<<<<<< HEAD
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-=======
->>>>>>> 8a8b1e0d3fb23705eeedc5f741612dcae2a73a3c
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
         var myDate = new Date();

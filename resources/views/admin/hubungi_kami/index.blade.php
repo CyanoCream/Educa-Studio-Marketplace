@@ -40,7 +40,7 @@
                                 <th>id</th>
                                 <th>nama</th>
                                 <th>email</th>
-                                <th>nomor_ponsel</th>
+                                <th>nomor ponsel</th>
                                 <th>topik</th>
                                 <th>pesan</th>
                                 <th>aksi</th>
@@ -52,7 +52,7 @@
                                     <td>{{ $loop->index + 1 }}</td>
                                     <td>{{ $hubungikami->nama }}</td>
                                     <td>{{ $hubungikami->email }}</td>
-                                    <td>{{ $hubungikami->nomor_ponsel }}</td>
+                                    <td>{{ $hubungikami->nomorponsel }}</td>
                                     <td>{{ $hubungikami->topik }}</td>
                                     <td>{{ $hubungikami->pesan }}</td>
                                     <td>

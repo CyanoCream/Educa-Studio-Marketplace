@@ -77,7 +77,7 @@
                                 </li>
                             </ul> 
                         </nav>
-                        <div class="kodory-MyAccount-content"  enctype="multipart/form-data">
+                        <div class="kodory-MyAccount-content">
                             <div class="kodory-notices-wrapper"></div>
                             <form class="kodory-EditAccountForm edit-account" method="post">
                                 {{-- <p class="kodory-form-row kodory-form-row--first form-row form-row-first">
@@ -137,13 +137,13 @@
                             </form>
                         </div>
                         <div class="card-body p-0">
-                            <table class="table-update text-center" id="data-table">
+                            <table class="table-update text-center" id="data-table" enctype="multipart/form-data">
                                 <thead>
                                     <tr>
                                         <th>id</th>
                                         <th>id produk</th>
-                                        <th>nama penyelenggara</th>
                                         <th>icon penyelenggara</th>
+                                        <th>nama penyelenggara</th>
                                         <th>kota penyelenggara</th>
                                         <th>deskripsi</th>
                                         <th>jam operasional</th>

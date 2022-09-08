@@ -10,7 +10,7 @@
     </ul>
 
     <!-- Right navbar links -->
-    <ul class="navbar-nav ml-auto">
+    {{-- <ul class="navbar-nav ml-auto">
       <!-- Navbar Search -->
       <li class="nav-item">
         <a class="nav-link" data-widget="navbar-search" href="#" role="button">
@@ -32,5 +32,5 @@
           </form>
         </div>
       </li>
-    </ul>
+    </ul> --}}
 </nav>

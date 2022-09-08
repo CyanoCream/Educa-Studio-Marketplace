@@ -40,6 +40,7 @@
                                 <th>id</th>
                                 <th>name</th>
                                 <th>email</th>
+                                <th>role</th>
                                 <th>password</th>
                                 <th>aksi</th>
                             </tr>
@@ -50,6 +51,7 @@
                                     <td>{{ $loop->index + 1 }}</td>
                                     <td>{{ $user->name }}</td>
                                     <td>{{ $user->email }}</td>
+                                    <td>{{ $user->role }}</td>
                                     <td>{{ $user->password }}</td>
                                     <td>
                                         <a href="{{route('editUser', ['id' => $user->id])}}" class="btn btn-warning btn-sm" role="button">Edit</a>

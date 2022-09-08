@@ -64,7 +64,7 @@ class AdminPelangganController extends Controller
             $foto = $request->file('foto');
             $fileName = str_random(30).'.'.$foto->getClientOriginalExtension();
             $imageName = $fileName;
-            $foto->move('upload/', $fileName);
+            $foto->move('images/', $fileName);
         } else {
             $fileName = 'noimage.png';
         }
@@ -136,7 +136,7 @@ class AdminPelangganController extends Controller
             $foto = $request->file('foto');
             $fileName = str_random(30).'.'.$foto->getClientOriginalExtension();
             $imageName = $fileName;
-            $foto->move('upload/', $fileName);
+            $foto->move('images/', $fileName);
         } else {
             $fileName = 'noimage.png';
         }

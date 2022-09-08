@@ -56,11 +56,11 @@ class AdminPenyelenggaraController extends Controller
 
         // $penyelenggara = penyelenggara::find($penyelenggara);
 
-        if ($request->hasFile('icon')) {
-            $icon = $request->file('icon');
-            $fileName = str_random(30).'.'.$icon->getClientOriginalExtension();
+        if ($request->hasFile('icon_penyelenggara')) {
+            $icon_penyelenggara = $request->file('icon_penyelenggara');
+            $fileName = str_random(30).'.'.$icon_penyelenggara->getClientOriginalExtension();
             $imageName = $fileName;
-            $icon->move('upload/', $fileName);
+            $icon_penyelenggara->move('images/', $fileName);
         } else {
             $fileName = 'noimage.png';
         }
@@ -123,11 +123,11 @@ class AdminPenyelenggaraController extends Controller
 
         $penyelenggara = penyelenggara::find($penyelenggara);
 
-        if ($request->hasFile('icon')) {
-            $icon = $request->file('icon');
-            $fileName = str_random(30).'.'.$icon->getClientOriginalExtension();
+        if ($request->hasFile('icon_penyelenggara')) {
+            $icon_penyelenggara = $request->file('icon_penyelenggara');
+            $fileName = str_random(30).'.'.$icon_penyelenggara->getClientOriginalExtension();
             $imageName = $fileName;
-            $icon->move('upload/', $fileName);
+            $icon_penyelenggara->move('images/', $fileName);
         } else {
             $fileName = 'noimage.png';
         }
