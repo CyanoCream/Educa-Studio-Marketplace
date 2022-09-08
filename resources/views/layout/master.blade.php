@@ -71,6 +71,7 @@ var appComponent = new Vue({
                 $.ajax({
                 url: "/api/get-produk",
                 success: function(rsp){
+                    console.log(rsp);
                     appComponent.produks = rsp;
                     // console.log(this.products);
                 }
@@ -78,21 +79,24 @@ var appComponent = new Vue({
                 $.ajax({
                     url: "/api/get-produk-limited",
                     success: function(rsp){
-                        appComponent.kategoris = rsp;
+                        console.log(rsp);
+                        appComponent.limited = rsp;
                         // console.log(this.products);
                 }
                 });
                 $.ajax({
                     url: "/api/get-produk-new",
                     success: function(rsp){
-                        appComponent.kategoris = rsp;
+                        console.log(rsp);
+                        appComponent.new = rsp;
                         // console.log(this.products);
                 }
                 });
                 $.ajax({
                     url: "/api/get-produk-popular",
                     success: function(rsp){
-                        appComponent.kategoris = rsp;
+                        console.log(rsp);
+                        appComponent.popular = rsp;
                         // console.log(this.products);
                 }
                 });
@@ -152,17 +156,19 @@ var appComponent = new Vue({
         });
 
     });
-
-
-$('.register').on('click', function() {
-        $('#login').modal('hide');
-        $('.modal-backdrop').remove();
-        $('#register').modal('show');
-    })
-    $('.login').on('click', function() {
+    $('#login').on('click', function() {
         $('#login').modal('show');
         $('#register').modal('hide');
-        $('.modal-backdrop').remove();
+        $('.modal').remove();
+
     })
+  $('.register').on('click', function() {   
+        $('#login').modal('hide');
+        $('.modal').remove();
+        $('#register').modal('show');
+
+    })
+
+
 
 </script>

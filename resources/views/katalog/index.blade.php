@@ -77,14 +77,16 @@
                         </form>
                     </div>
                 </div>
-                <div id="app" class=" auto-clear kodory-products">
+                <div id="app" class=" auto-clear kodory-products ">
                     <ul  class="row products columns-3">
-                        <li v-for="p in produks" :key="p.id" class="product-item wow fadeInUp product-item rows-space-30 col-bg-4 col-xl-4 col-lg-6 col-md-6 col-sm-6 col-ts-6 style-01 post-24 product type-product status-publish has-post-thumbnail product_cat-chair product_cat-table product_cat-new-arrivals product_tag-light product_tag-hat product_tag-sock first instock featured shipping-taxable purchasable product-type-variable has-default-attributes"
+                        <li v-for="p in produks" :key="p.id" class="product-item wow fadeInUp product-item rows-space-30 col-lg-4 col-lg-4 col-lg-4 col-lg-
+                        style-01 post-24 product type-product status-publish has-post-thumbnail product_cat-chair product_cat-table product_cat-new-arrivals product_tag-light 
+                        product_tag-hat product_tag-sock first instock featured shipping-taxable purchasable product-type-variable has-default-attributes"
                             data-wow-duration="1s" data-wow-delay="0ms" data-wow="fadeInUp">
-                            <div class="product-inner tooltip-left">
+                            <div class="product-inner tooltip-left"  style="left: 150px;">
                                 <div class="product-thumb">
                                     <a class="thumb-link" href="#" v-on:click="getData(p.id)">
-                                        <img class="img-responsive" width="600" height="778" :src="'/images/'+ p.gambar[0].gambar" alt="">
+                                        <img class="img-responsive" width="600px" height="778" :src="'/images/'+ p.gambar[0].gambar" alt="">
                                     </a>
                                     <div class="flash">
                                         <span class="onnew"><span class="text">New</span></span>
@@ -126,17 +128,14 @@
                                     <a href="#" class="button yith-wcqv-button" data-product_id="24">Quick
                                         View</a>
                                     <div class="group-button">
-                                        <div class="yith-wcwl-add-to-wishlist">
+                                        {{-- <div class="yith-wcwl-add-to-wishlist">
                                             <div class="yith-wcwl-add-button show">
                                                 <a href="wishlist.html" class="add_to_wishlist">Add to Wishlist</a>
                                             </div>
-                                        </div>
-                                        <div class="kodory product compare-button">
-                                            <a href="compare.html" class="compare button">Compare</a>
-                                        </div>
+                                        </div> --}}
                                         <a href="#" class="button yith-wcqv-button">Quick View</a>
                                         <div class="add-to-cart">
-                                            <a href="cart.html"
+                                            <a href="#" v-on:click="getData(p.id)"
                                                 class="button product_type_variable add_to_cart_button">Select
                                                 options</a>
                                         </div>
@@ -164,9 +163,7 @@
                                                 <a href="wishlist.html" class="add_to_wishlist">Add to Wishlist</a>
                                             </div>
                                         </div>
-                                        <div class="kodory product compare-button">
-                                            <a href="compare.html" class="compare button">Compare</a>
-                                        </div>
+
                                         <a href="#" class="button yith-wcqv-button">Quick View</a>
                                         <div class="add-to-cart">
                                             <a href="single-product.html"
@@ -182,7 +179,7 @@
                 <div class="shop-control shop-after-control">
                 </div>
             </div>
-            <div class="sidebar col-xl-3 col-lg-4 col-md-4 col-sm-12">
+            {{-- <div class="sidebar col-xl-3 col-lg-4 col-md-4 col-sm-12">
                 <div id="widget-area" class="widget-area shop-sidebar">
                     <div id="kodory_product_search-2" class="widget kodory widget_product_search">
                         <form class="kodory-product-search">
@@ -260,7 +257,7 @@
                         </ul>
                     </div>
                 </div><!-- .widget-area -->
-            </div>
+            </div> --}}
         </div>
     </div>
 </div>
