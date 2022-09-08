@@ -38,7 +38,6 @@
                         <thead>
                             <tr>
                                 <th>id</th>
-                                <th>id_pelanggan</th>
                                 <th>nama</th>
                                 <th>email</th>
                                 <th>nomor_ponsel</th>
@@ -51,7 +50,6 @@
                             @foreach ($hubungikamis as $hubungikami)
                                 <tr>
                                     <td>{{ $loop->index + 1 }}</td>
-                                    <td>{{ $hubungikami->id_pelanggan }}</td>
                                     <td>{{ $hubungikami->nama }}</td>
                                     <td>{{ $hubungikami->email }}</td>
                                     <td>{{ $hubungikami->nomor_ponsel }}</td>

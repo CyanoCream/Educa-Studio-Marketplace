@@ -38,12 +38,12 @@
                         <thead>
                             <tr>
                                 <th>id</th>
-                                <th>id_produk</th>
-                                <th>nama_penyelenggara</th>
-                                <th>icon_penyelenggara</th>
-                                <th>kota_penyelenggara</th>
+                                <th>id produk</th>
+                                <th>nama penyelenggara</th>
+                                <th>icon penyelenggara</th>
+                                <th>kota penyelenggara</th>
                                 <th>deskripsi</th>
-                                <th>jam_operasional</th>
+                                <th>jam operasional</th>
                                 <th>aksi</th>
                             </tr>
                         </thead>

@@ -3,8 +3,6 @@
 namespace App\Http\Controllers;
 use App\Order;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\DB;
-
 class AdminOrderController extends Controller
 {
     /**
@@ -47,32 +45,14 @@ class AdminOrderController extends Controller
     public function store(Request $request)
     {
         $validatedData = $request->validate([
-            // 'id_pelanggan' => DB::table(''),
             'status_order' => 'required|string|max:255' ,
             'id_produk' => 'required|integer' ,
             'id_penyelenggara' => 'required|integer' ,
-            'pengiriman' => 'required|string|max:255' ,
+            'jumlah_pesanan' => 'required|integer' ,
             'kurir' => 'required|string|max:255' ,
             'alamat_pen' => 'required|string|max:255' ,
-            'provinsi_pen' => 'required|string|max:255' ,
-            'kota_pen' => 'required|string|max:255' ,
-            'kecamatan_pen' => 'required|string|max:255' ,
         ]);
-        $id = DB::table('orders')->latest()->limit(1)->pluck('id_pelanggan');
-        foreach ($id as $id) {
-            # code...
-        }
-        $order = new order();
-        $order->id_pelanggan = $id + 1;
-        $order->status_order = $request->status_order;
-        $order->id_produk = $request->id_produk;
-        $order->id_penyelenggara = $request->id_penyelenggara;
-        $order->pengiriman = $request->pengiriman;
-        $order->kurir = $request->kurir;
-        $order->alamat_pen = $request->alamat_pen;
-        $order->provinsi_pen = $request->provinsi_pen;
-        $order->kota_pen = $request->kota_pen;
-        $order->kecamatan_pen = $request->kecamatan_pen;
+        $order = new order($validatedData);
         $order->save();
 
         return redirect(route('daftarOrder'));
@@ -113,30 +93,22 @@ class AdminOrderController extends Controller
     public function update(Request $request, $order)
     {
         $validatedData = $request->validate([
-            'id_pelanggan' => 'required|integer' ,
             'status_order' => 'required|string|max:255' ,
             'id_produk' => 'required|integer' ,
             'id_penyelenggara' => 'required|integer' ,
-            'pengiriman' => 'required|string|max:255' ,
+            'jumlah_pesanan' => 'required|integer' ,
             'kurir' => 'required|string|max:255' ,
             'alamat_pen' => 'required|string|max:255' ,
-            'provinsi_pen' => 'required|string|max:255' ,
-            'kota_pen' => 'required|string|max:255' ,
-            'kecamatan_pen' => 'required|string|max:255' ,
         ]);
 
         $order = order::find($order);
 
-        $order->id_pelanggan = $request->id_pelanggan;
         $order->status_order = $request->status_order;
         $order->id_produk = $request->id_produk;
         $order->id_penyelenggara = $request->id_penyelenggara;
-        $order->pengiriman = $request->pengiriman;
+        $order->jumlah_pesanan = $request->jumlah_pesanan;
         $order->kurir = $request->kurir;
         $order->alamat_pen = $request->alamat_pen;
-        $order->provinsi_pen = $request->provinsi_pen;
-        $order->kota_pen = $request->kota_pen;
-        $order->kecamatan_pen = $request->kecamatan_pen;
         $order->save();
 
         return redirect(route('daftarOrder'));

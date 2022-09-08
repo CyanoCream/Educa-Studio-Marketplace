@@ -27,11 +27,6 @@
 						{{ csrf_field() }}
 
 						<div class="form-group">
-							<label for="id_pelanggan">id_pelanggan</label>
-							<input type="text" name="id_pelanggan" id="id_pelanggan" class="form-control" required="required" value="{{ $hubungikami->id_pelanggan }}" placeholder="Masukkan id_pelanggan">
-						</div>
-
-						<div class="form-group">
 							<label for="nama">nama</label>
 							<input type="text" name="nama" id="nama" class="form-control" required="required" value="{{ $hubungikami->nama }}" placeholder="Masukkan nama">
 						</div>
@@ -42,7 +37,7 @@
 						</div>
 
 						<div class="form-group">
-							<label for="nomor_ponsel">nomor_ponsel</label>
+							<label for="nomor_ponsel">nomor ponsel</label>
 							<input type="text" name="nomorponsel" id="nomor_ponsel" class="form-control" required="required" value="{{ $hubungikami->nomor_ponsel }}" placeholder="Masukkan nomor_ponsel">
 						</div>
 
@@ -53,7 +48,7 @@
 
 						<div class="form-group">
 							<label for="pesan">pesan</label>
-							<input type="text" name="pesan" id="pesan" class="form-control" required="required" value="{{ $hubungikami->pesan }}" placeholder="Masukkan pesan">
+							<textarea type="text" name="pesan" id="pesan" rows="3" class="form-control" required="required" placeholder="Masukkan pesan"></textarea>
 						</div>
 
 						<div class="text-right">

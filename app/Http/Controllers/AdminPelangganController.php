@@ -71,16 +71,12 @@ class AdminPelangganController extends Controller
         
         $pelanggan = new Pelanggan();
         $pelanggan->foto = $fileName;
-        $pelanggan->waktu_daftar = $request->waktu_daftar;
         $pelanggan->nama_pelanggan = $request->nama_pelanggan;
-        $pelanggan->email = $request->email;
-        $pelanggan->password = $request->password;
         $pelanggan->no_telp = $request->no_telp;
         $pelanggan->alamat_pel = $request->alamat_pel;
         $pelanggan->provinsi_pel = $request->provinsi_pel;
         $pelanggan->kota_pel = $request->kota_pel;
         $pelanggan->kecamatan_pel = $request->kecamatan_pel;
-        $pelanggan->level_user = $request->level_user;
         $pelanggan->save();
 
         return redirect(route('daftarPelanggan'));
@@ -146,17 +142,12 @@ class AdminPelangganController extends Controller
         }
 
         $pelanggan->foto = $fileName;
-        $pelanggan->waktu_daftar = $request->waktu_daftar;
         $pelanggan->nama_pelanggan = $request->nama_pelanggan;
-        $pelanggan->email = $request->email;
-        $pelanggan->password = $request->password;
-        // $pelanggan->remember_token = '';
         $pelanggan->no_telp = $request->no_telp;
         $pelanggan->alamat_pel = $request->alamat_pel; 
         $pelanggan->provinsi_pel = $request->provinsi_pel;
         $pelanggan->kota_pel = $request->kota_pel;
         $pelanggan->kecamatan_pel = $request->kecamatan_pel;
-        $pelanggan->level_user = $request->level_user;
         $pelanggan->update();
 
         return redirect(route('daftarPelanggan'));

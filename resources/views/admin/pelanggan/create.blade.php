@@ -27,69 +27,37 @@
 
 						<div class="form-group">
 							<label for="foto">foto</label>
-<<<<<<< HEAD
 							<input type="file" name="foto" id="foto" class="form-control" required="required" placeholder="Masukkan foto">
-=======
-							<input type="file" name="foto" id="foto" class="form-control" required>
->>>>>>> 8a8b1e0d3fb23705eeedc5f741612dcae2a73a3c
 						</div>
 
 						<div class="form-group">
-							<label for="waktu_daftar">waktu_daftar</label>
-							<input type="date" name="waktu_daftar" id="waktu_daftar" class="form-control" required="required" placeholder="Masukkan waktu_daftar">
-						</div>
-
-						<div class="form-group">
-							<label for="nama_pelanggan">nama_pelanggan</label>
+							<label for="nama_pelanggan">nama pelanggan</label>
 							<input type="text" name="nama_pelanggan" id="nama_pelanggan" class="form-control" required="required" placeholder="Masukkan nama_pelanggan">
 						</div>
 
-						<div class="form-group">
-							<label for="email">email</label>
-							<input type="email" name="email" id="email" class="form-control" required="required" placeholder="Masukkan email">
-						</div>
-
-						<div class="form-group">
-							<label for="password">password</label>
-							<input type="password" name="password" id="password" class="form-control" required="required" placeholder="Masukkan password">
-						</div>
-
-<<<<<<< HEAD
-						<div class="form-group">
-							<label for="remember_token">remember_token</label>
-							<input type="text" name="remember_token" id="remember_token" class="form-control" required="required" placeholder="Masukkan remember_token">
-						</div>
-
-=======
->>>>>>> 8a8b1e0d3fb23705eeedc5f741612dcae2a73a3c
                         <div class="form-group">
-							<label for="no_telp">no_telp</label>
+							<label for="no_telp">no.telp</label>
 							<input type="text" name="no_telp" id="no_telp" class="form-control" required="required" placeholder="Masukkan no_telp">
 						</div>
 
                         <div class="form-group">
-							<label for="alamat_pel">alamat_pel</label>
+							<label for="alamat_pel">alamat pelanggan</label>
 							<input type="text" name="alamat_pel" id="alamat_pel" class="form-control" required="required" placeholder="Masukkan alamat_pel">
 						</div>
 
                         <div class="form-group">
-							<label for="provinsi_pel">provinsi_pel</label>
+							<label for="provinsi_pel">provinsi pelanggan</label>
 							<input type="text" name="provinsi_pel" id="provinsi_pel" class="form-control" required="required" placeholder="Masukkan provinsi_pel">
 						</div>
 
                         <div class="form-group">
-							<label for="kota_pel">kota_pel</label>
+							<label for="kota_pel">kota pelanggan</label>
 							<input type="text" name="kota_pel" id="kota_pel" class="form-control" required="required" placeholder="Masukkan kota_pel">
 						</div>
 
                         <div class="form-group">
-							<label for="kecamatan_pel">kecamatan_pel</label>
+							<label for="kecamatan_pel">kecamatan pelanggan</label>
 							<input type="text" name="kecamatan_pel" id="kecamatan_pel" class="form-control" required="required" placeholder="Masukkan kecamatan_pel">
-						</div>
-
-                        <div class="form-group">
-							<label for="level_user">level_user</label>
-							<input type="number" name="level_user" id="level_user" class="form-control" required="required" placeholder="Masukkan level_user">
 						</div>
 
 						<div class="text-right">

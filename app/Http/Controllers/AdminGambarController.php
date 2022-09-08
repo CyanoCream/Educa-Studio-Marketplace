@@ -81,14 +81,10 @@ class AdminGambarController extends Controller
             $fileName = 'noimage.png';
         }
         
-        $gb = DB::table('gambars')->orderBy('id_produk', 'desc')->limit(1)->pluck('id_produk');
-        foreach ($gb as $gb) {
-            # code...
-        }
 
         $gambar = new Gambar();
         $gambar->gambar = $fileName;
-        $gambar->id_produk = $gb + 1;
+        $gambar->id_produk =  $request->id_produk;
         $gambar->save();
 
         return redirect(route('daftarGambar'));
@@ -162,11 +158,6 @@ class AdminGambarController extends Controller
             $gambar->move('upload/', $fileName);
         } else {
             $fileName = 'noimage.png';
-        }
-
-        $id = DB::table('orders')->latest()->limit(1)->pluck('id_pelanggan');
-        foreach ($id as $id) {
-            # code...
         }
 
         $gambar->gambar = $request->gambar;

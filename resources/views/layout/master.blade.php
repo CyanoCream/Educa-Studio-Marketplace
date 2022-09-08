@@ -61,7 +61,9 @@ var appComponent = new Vue({
         data: {
             gambars: [],
             produks: [],
-            kategoris: [],
+            limited: [],
+            popular: [],
+            new: [],
             
         },
         mounted(){
@@ -74,20 +76,28 @@ var appComponent = new Vue({
                 }
                 });
                 $.ajax({
-                    url: "/api/get-kategori",
+                    url: "/api/get-produk-limited",
+                    success: function(rsp){
+                        appComponent.kategoris = rsp;
+                        // console.log(this.products);
+                }
+                });
+                $.ajax({
+                    url: "/api/get-produk-new",
+                    success: function(rsp){
+                        appComponent.kategoris = rsp;
+                        // console.log(this.products);
+                }
+                });
+                $.ajax({
+                    url: "/api/get-produk-popular",
                     success: function(rsp){
                         appComponent.kategoris = rsp;
                         // console.log(this.products);
                 }
                 });
                 
-                // $.ajax({
-                // url: "/api/get-gambar",
-                // success: function(rsp){
-                //     appComponent.gambars = rsp;
-                //     console.log(rsp);
-                // }
-                // });
+
             });
         },
         

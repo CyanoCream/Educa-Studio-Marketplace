@@ -27,22 +27,17 @@
 						{{csrf_field()}}
 
 						<div class="form-group">
-							<label for="id_pelanggan">id_pelanggan</label>
-							<input type="text" name="id_pelanggan" id="id_pelanggan" class="form-control" required="required" placeholder="Masukkan id_pelanggan">
-						</div>
-
-						<div class="form-group">
 							<label for="nama">nama</label>
 							<input type="text" name="nama" id="nama" class="form-control" required="required" placeholder="Masukkan nama">
 						</div>
 
 						<div class="form-group">
 							<label for="email">email</label>
-							<input type="text" name="email" id="email" class="form-control" required="required" placeholder="Masukkan email">
+							<input type="email" name="email" id="email" class="form-control" required="required" placeholder="Masukkan email">
 						</div>
 
 						<div class="form-group">
-							<label for="nomor_ponsel">nomor_ponsel</label>
+							<label for="nomor_ponsel">nomor ponsel</label>
 							<input type="text" name="nomorponsel" id="nomor_ponsel" class="form-control" required="required" placeholder="Masukkan nomor_ponsel">
 						</div>
 
@@ -53,7 +48,7 @@
 
 						<div class="form-group">
 							<label for="pesan">pesan</label>
-							<input type="text" name="pesan" id="pesan" class="form-control" required="required" placeholder="Masukkan pesan">
+							<textarea type="text" name="pesan" id="pesan" rows="3" class="form-control" required="required" placeholder="Masukkan pesan"></textarea>
 						</div>
 
 						<div class="text-right">

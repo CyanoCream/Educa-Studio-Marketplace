@@ -38,13 +38,13 @@
                         <thead>
                             <tr>
                                 <th>id</th>
-                                <th>id_order</th>
-                                <th>id_produk</th>
-<<<<<<< HEAD
-                                <th>id_varian_order</th>
-=======
->>>>>>> 8a8b1e0d3fb23705eeedc5f741612dcae2a73a3c
-                                <th>qty_order</th>
+                                <th>id order</th>
+                                <th>id produk</th>
+                                <th>nama produk</th>
+                                <th>harga</th>
+                                <th>kurir</th>
+                                <th>jumlah</th>
+                                <th>total harga</th>
                                 <th>aksi</th>
                             </tr>
                         </thead>
@@ -54,11 +54,11 @@
                                     <td>{{ $loop->index + 1 }}</td>
                                     <td>{{ $detail_order->id_order }}</td>
                                     <td>{{ $detail_order->id_produk }}</td>
-<<<<<<< HEAD
-                                    <td>{{ $detail_order->id_varian_order }}</td>
-=======
->>>>>>> 8a8b1e0d3fb23705eeedc5f741612dcae2a73a3c
-                                    <td>{{ $detail_order->qty_order }}</td>
+                                    <td>{{ $detail_order->nama_produk }}</td>
+                                    <td>{{ $detail_order->harga }}</td>
+                                    <td>{{ $detail_order->kurir }}</td>
+                                    <td>{{ $detail_order->jumlah }}</td>
+                                    <td>{{ $detail_order->total_harga }}</td>
                                     <td>
                                         <a href="{{route('editDetail_Order', ['id' => $detail_order->id])}}" class="btn btn-warning btn-sm" role="button">Edit</a>
                                         <a onclick="confirmDelete(this)" data-url="{{route('deleteDetail_Order', ['id' => $detail_order->id])}}" class="btn btn-danger btn-sm" role="button">Hapus</a>

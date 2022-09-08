@@ -26,54 +26,39 @@
 					<form action="{{ route('storeDetail_Order') }}" method="post">
 						{{csrf_field()}}
 
-<<<<<<< HEAD
 						<div class="form-group">
-							<label for="id_order">id_order</label>
+							<label for="id_order">id order</label>
 							<input type="text" name="id_order" id="id_order" class="form-control" required="required" placeholder="Masukkan id_order">
 						</div>
 
 						<div class="form-group">
-							<label for="id_produk">id_produk</label>
+							<label for="id_produk">id produk</label>
 							<input type="text" name="id_produk" id="id_produk" class="form-control" required="required" placeholder="Masukkan id_produk">
 						</div>
 
 						<div class="form-group">
-							<label for="id_varian_order">id_varian_order</label>
-							<input type="text" name="id_varian_order" id="id_varian_order" class="form-control" required="required" placeholder="Masukkan id_varian_order">
-=======
-						{{-- <div class="form-group">
-							<label for="id_order">id_order</label>
-							<select class="form-control" name="id_order" id="id_order">
-								<option>1</option>
-								<option>2</option>
-								<option>3</option>
-								<option>4</option>
-								<option>5</option>
-							</select>
-						</div> --}}
-
-						<div class="form-group">
-							<label for="id_produk">id_produk</label>
-							<select class="form-control" name="id_produk" id="id_produk">
-								<option>1</option>
-								<option>2</option>
-								<option>3</option>
-								<option>4</option>
-								<option>5</option>
-								<option>6</option>
-								<option>7</option>
-								<option>8</option>
-								<option>9</option>
-								<option>10</option>
-								<option>11</option>
-								<option>12</option>
-							</select>
->>>>>>> 8a8b1e0d3fb23705eeedc5f741612dcae2a73a3c
+							<label for="nama_produk">nama produk</label>
+							<input type="text" name="nama_produk" id="nama_produk" class="form-control" required="required" placeholder="Masukkan nama_produk">
 						</div>
 
 						<div class="form-group">
-							<label for="qty_order">qty_order</label>
-							<input type="text" name="qty_order" id="qty_order" class="form-control" required="required" placeholder="Masukkan qty_order">
+							<label for="harga">harga</label>
+							<input type="text" name="harga" id="harga" class="form-control" required="required" placeholder="Masukkan harga">
+						</div>
+
+						<div class="form-group">
+							<label for="kurir">kurir</label>
+							<input type="text" name="kurir" id="kurir" class="form-control" required="required" placeholder="Masukkan kurir">
+						</div>
+
+						<div class="form-group">
+							<label for="jumlah">jumlah</label>
+							<input type="text" name="jumlah" id="jumlah" class="form-control" required="required" placeholder="Masukkan jumlah">
+						</div>
+
+						<div class="form-group">
+							<label for="jumlah_harga">jumlah harga</label>
+							<input type="text" name="jumlah_harga" id="jumlah_harga" class="form-control" required="required" placeholder="Masukkan jumlah_harga">
 						</div>
 
 						<div class="text-right">

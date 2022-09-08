@@ -10,8 +10,8 @@ class Produk extends Model
 
     protected $table = 'tbl_produks';
     protected $fillable = [
-        'kategori',
         'nama_produk',
+        'kategori',
         'harga_produk',
         'status_pertemuan',
         'stock',
@@ -34,15 +34,6 @@ class Produk extends Model
         return $this->hasMany('App\Penyelenggara','id_produk');
     }
 
-    /**
-     * Get the kategori that owns the Produk
-     *
-     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
-     */
-    public function kategori()
-    {
-        return $this->belongsTo('App\Kategori','id_kategori');
-    }
 
     /**
      * Get all of the gambar for the Produk

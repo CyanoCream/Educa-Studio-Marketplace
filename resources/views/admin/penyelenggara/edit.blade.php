@@ -23,26 +23,26 @@
 		<div class="container-fluid">
 			<div class="card">
 				<div class="card-body">
-					<form action="{{ route('updatePenyelenggara',['id'=>$penyelenggara->id]) }}" method="post">
+					<form action="{{ route('updatePenyelenggara',['id'=>$penyelenggara->id]) }}" method="post" enctype="multipart/form-data">
 						{{ csrf_field() }}
 
 						<div class="form-group">
-							<label for="id_produk">id_produk</label>
+							<label for="id_produk">id produk</label>
 							<input type="text" name="id_produk" id="id_produk" class="form-control" required="required" value="{{ $penyelenggara->id_produk }}" placeholder="Masukkan id_produk">
+						</div>
+						
+						<div class="form-group">
+							<label for="icon_penyelenggara">icon penyelenggara</label>
+							<input type="file" name="icon_penyelenggara" id="icon_penyelenggara" class="form-control" required="required" value="{{ $penyelenggara->icon_penyelenggara }}" placeholder="Masukkan icon_penyelenggara">
 						</div>
 
 						<div class="form-group">
-							<label for="nama_penyelenggara">nama_penyelenggara</label>
+							<label for="nama_penyelenggara">nama penyelenggara</label>
 							<input type="text" name="nama_penyelenggara" id="nama_penyelenggara" class="form-control" required="required" value="{{ $penyelenggara->nama_penyelenggara }}" placeholder="Masukkan nama_penyelenggara">
 						</div>
 
 						<div class="form-group">
-							<label for="icon_penyelenggara">icon_penyelenggara</label>
-							<input type="text" name="icon_penyelenggara" id="icon_penyelenggara" class="form-control" required="required" value="{{ $penyelenggara->icon_penyelenggara }}" placeholder="Masukkan icon_penyelenggara">
-						</div>
-
-						<div class="form-group">
-							<label for="kota_penyelenggara">kota_penyelenggara</label>
+							<label for="kota_penyelenggara">kota penyelenggara</label>
 							<input type="text" name="kota_penyelenggara" id="kota_penyelenggara" class="form-control" required="required" value="{{ $penyelenggara->kota_penyelenggara }}" placeholder="Masukkan kota_penyelenggara">
 						</div>
 
@@ -52,8 +52,8 @@
 						</div>
 
                         <div class="form-group">
-							<label for="jam_operasional">jam_operasional</label>
-							<input type="text" name="jam_operasional" id="jam_operasional" class="form-control" required="required" value="{{ $penyelenggara->jam_operasional }}" placeholder="Masukkan jam_operasional">
+							<label for="jam_operasional">jam operasional</label>
+							<input type="time" name="jam_operasional" id="jam_operasional" class="form-control" required="required" value="{{ $penyelenggara->jam_operasional }}" placeholder="Masukkan jam_operasional">
 						</div>
 
 						<div class="text-right">

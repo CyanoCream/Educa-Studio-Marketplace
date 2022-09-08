@@ -38,18 +38,6 @@
                 </a>
               </li>
               <li class="nav-item">
-                <a href="{{route('daftarKategori')}}" class="nav-link">
-                  <i class="nav-icon fas fa-tree"></i>
-                  <p>Kategori</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="{{route('daftarKeranjang')}}" class="nav-link">
-                  <i class="nav-icon fas fa-edit"></i>
-                  <p>Keranjang</p>
-                </a>
-              </li>
-              <li class="nav-item">
                 <a href="{{route('daftarOrder')}}" class="nav-link">
                   <i class="nav-icon fas fa-table"></i>
                   <p>Order</p>
@@ -61,33 +49,12 @@
                   <p>Produk</p>
                 </a>
               </li>
-<<<<<<< HEAD
-              <li class="nav-item m-1">
-                <a href="" class="nav-link">
-                  <i class="fa fa-spinner" aria-hidden="true"></i>
-                  <p class="m-2">Varian</p>
-                </a>
-              </li>
-=======
->>>>>>> 8a8b1e0d3fb23705eeedc5f741612dcae2a73a3c
             </ul>
-          </li>
-          <li class="nav-item">
-            <a href="{{route('daftarGambar')}}" class="nav-link">
-              <i class="nav-icon far fa-image"></i>
-              <p>Gambar</p>
-            </a>
           </li>
           <li class="nav-item">
             <a href="{{route('daftarHubungi_Kami')}}" class="nav-link">
               <i class="nav-icon fas fa-chart-pie"></i>
               <p>Hubungi Kami</p>
-            </a>
-          </li>
-          <li class="nav-item">
-            <a href="" class="nav-link">
-              <i class="nav-icon far fa-calendar-alt"></i>
-              <p>Password Reset</p>
             </a>
           </li>
           <li class="nav-item">
@@ -115,11 +82,7 @@
             </a>
           </li>
           <li class="nav-item">
-<<<<<<< HEAD
-            <a href="#" class="nav-link">
-=======
             <a href="{{route('daftarUser')}}" class="nav-link">
->>>>>>> 8a8b1e0d3fb23705eeedc5f741612dcae2a73a3c
               <i class="nav-icon fas fa-user"></i>
               <p>User</p>
           </li>

@@ -45,7 +45,6 @@ class AdminHubungikamiController extends Controller
     public function store(Request $request)
     {
         $validatedData = $request->validate([
-            'id_pelanggan' => 'required|integer' ,
             'nama' => 'required|string|max:255' ,
             'email' => 'required|string|max:255' ,
             'nomorponsel' => 'required|string|max:255' ,
@@ -94,7 +93,6 @@ class AdminHubungikamiController extends Controller
     public function update(Request $request, $hubungikami)
     {
         $validatedData = $request->validate([
-            'id_pelanggan' => 'required|integer' ,
             'nama' => 'required|string|max:255' ,
             'email' => 'required|string|max:255' ,
             'nomorponsel' => 'required|string|max:255' ,
@@ -104,7 +102,6 @@ class AdminHubungikamiController extends Controller
 
         $hubungikami = hubungikami::find($hubungikami);
 
-        $hubungikami->id_pelanggan = $request->id_pelanggan;
         $hubungikami->nama = $request->nama;
         $hubungikami->email = $request->email;
         $hubungikami->nomorponsel = $request->nomorponsel;

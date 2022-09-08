@@ -4,6 +4,7 @@
             <div class="kodory-newsletter style-01">
                 <div class="newsletter-inner">
                     <div class="newsletter-info">
+                        <div class="newsletter-wrap">
                             <p class="desc">send your suggestions and criticism</p>
                         </div>
                     </div>
@@ -26,7 +27,7 @@
                 <ul id="menu-top-center-menu" class="kodory-nav top-bar-menu" style="text-align: center">
                     <li id="menu-item-864" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-864">
                         <a class="kodory-menu-item-title" title="" href="#"><span
-                                class="icon pe-7s-map-marker"></span>Jl. Kalisombo Salatiga</a></li>
+                                class="icon pe-7s-map-marker"></span>Jl Kalisombo Salatiga</a></li>
                     <li id="menu-item-865"
                         class="menu-item menu-item-type-custom menu-item-object-custom menu-item-865"><a
                             class="kodory-menu-item-title" title="" href="mailto:chlid6630@gmail.com"><span
