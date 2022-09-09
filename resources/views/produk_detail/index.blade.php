@@ -103,14 +103,14 @@
                                 </form>
                                 <div class="yith-wcwl-add-to-wishlist">
                                     <div class="yith-wcwl-add-button show">
-                                        <a href="#" rel="nofollow"
+                                        {{-- <a href="#" rel="nofollow"
                                            data-product-id="27" data-product-type="variable" class="add_to_wishlist">
-                                            Add to Wishlist</a>
+                                            Add to Wishlist</a> --}}
                                     </div>
                                 </div>
                                 <div class="clear"></div>
-                                <a href="#"
-                                   class="compare button" data-product_id="27" rel="nofollow">Compare</a>
+                                {{-- <a href="#"
+                                   class="compare button" data-product_id="27" rel="nofollow">Compare</a> --}}
                                 <div class="product_meta">
                                     <div class="wcml-dropdown product wcml_currency_switcher">
                                         <ul>
