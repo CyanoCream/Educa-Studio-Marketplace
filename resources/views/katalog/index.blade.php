@@ -35,6 +35,7 @@
         </div>
     </div>
 </header>
+
 <div class="banner-wrapper has_background">
     <img src="{{asset('images/home 1.jpg')}}" class="img-responsive attachment-1920x447 size-1920x447"
         alt="img">
@@ -49,6 +50,7 @@
         </div>
     </div>
 </div>
+
 <div class="main-container shop-page left-sidebar" style="padding-top:100px;">
     <div class="container">
         <div class="row">
@@ -177,9 +179,10 @@
                     </ul>
                 </div>
                 <div class="shop-control shop-after-control">
+                    
                 </div>
-            </div>
-            {{-- <div class="sidebar col-xl-3 col-lg-4 col-md-4 col-sm-12">
+            {{-- </div>
+            <div class="sidebar col-xl-3 col-lg-4 col-md-4 col-sm-12">
                 <div id="widget-area" class="widget-area shop-sidebar">
                     <div id="kodory_product_search-2" class="widget kodory widget_product_search">
                         <form class="kodory-product-search">
@@ -187,74 +190,6 @@
                                 placeholder="Search products…" value="" name="s" type="search">
                             <button type="submit" value="Search">Search</button>
                         </form>
-                    </div>
-                    <div id="kodory_price_filter-2" class="widget kodory widget_price_filter">
-                        <h2 class="widgettitle">Filter By Price<span class="arrow"></span></h2>
-                        <form method="get" action="#">
-                            <div class="price_slider_wrapper">
-                                <div data-label-reasult="Range:" data-min="0" data-max="1000" data-unit="$"
-                                    class="price_slider" data-value-min="100" data-value-max="800">
-                                </div>
-                                <div class="price_slider_amount">
-                                    <button type="submit" class="button">Filter</button>
-                                    <div class="price_label">
-                                        Price: <span class="from">$1.00</span> — <span class="to">$100.00</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </form>
-                    </div>
-                    <div id="kodory_kodory_layered_nav-4"
-                        class="widget kodory_widget_layered_nav widget_layered_nav">
-                        <h2 class="widgettitle">Filter By Katalog<span class="arrow"></span></h2>
-                        <ul class="nav flex-column">
-                            <li class="nav-item">
-                              <a class="nav-link" href="#">Aktivitas</a>
-                            </li>
-                            <li class="nav-item">
-                              <a class="nav-link" href="#">Kursus</a>
-                            </li>
-                            <li class="nav-item">
-                              <a class="nav-link" href="#">Experience</a>
-                            </li>
-                            <li class="nav-item">
-                              <a class="nav-link" href="#">Activity Kit</a>
-                            </li>
-                            <li class="nav-item">
-                              <a class="nav-link" href="#">Gratis</a>
-                            </li>
-                          </ul>
-                    </div>
-                    <div id="kodory_layered_nav-6"
-                        class="widget kodory widget_layered_nav kodory-widget-layered-nav">
-                        <h2 class="widgettitle">Price<span class="arrow"></span></h2>
-                        <ul class="kodory-widget-layered-nav-list">
-                            <li class="kodory-widget-layered-nav-list__item kodory-layered-nav-term ">
-                                <label><input type="checkbox" name="size">
-                                    <span>$1.00 - $10.00</span>
-                                </label>
-                            </li>
-                            <li class="kodory-widget-layered-nav-list__item kodory-layered-nav-term ">
-                                <label><input type="checkbox" name="size">
-                                    <span>$10.00 - $30.00</span>
-                                </label>
-                            </li>
-                            <li class="kodory-widget-layered-nav-list__item kodory-layered-nav-term ">
-                                <label><input type="checkbox" name="size">
-                                    <span>$30.00 - $40.00</span>
-                                </label>
-                            </li>
-                            <li class="kodory-widget-layered-nav-list__item kodory-layered-nav-term ">
-                                <label><input type="checkbox" name="size">
-                                    <span>$40.00 - $50.00</span>
-                                </label>
-                            </li>
-                            <li class="kodory-widget-layered-nav-list__item kodory-layered-nav-term ">
-                                <label><input type="checkbox" name="size">
-                                    <span>$50.00 - $100.00</span>
-                                </label>
-                            </li>
-                        </ul>
                     </div>
                 </div><!-- .widget-area -->
             </div> --}}

@@ -17,6 +17,8 @@ class CreateProduksTable extends Migration
             $table->increments('id');
             $table->timestamps();
             $table->string('nama_produk',255);
+            $table->integer('id_penyelenggara')->unsigned();
+            $table->foreign('id_penyelenggara')->references('id')->on('tbl_penyelenggara');
             $table->string('kategori');
             $table->char('harga_produk');
             $table->string('status_pertemuan');

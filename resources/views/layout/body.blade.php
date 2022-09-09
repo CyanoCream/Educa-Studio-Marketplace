@@ -134,7 +134,6 @@
     </div>
 
     <div id="app" class="section-022">
-        
         <div class="container">
             <div class="kodory-tabs style-01">
                 <div class="tab-head">
@@ -157,7 +156,7 @@
                          id="tab-description" role="tabpanel" aria-labelledby="tab-title-description">
                         <h2>Popular</h2>
                         <div class="tab-container row">
-                            @{{popular}}
+                           
                             <div v-for="po in popular" :key="po.id" class="tab-panel active col-6 col-md-4 col-lg-3" id="1547652538969-4e9e849f-123a-5d80aefaa70e2">
                                 <div class="kodory-products style-01">
                                     <div class="response-product product-list-grid row auto-clear equal-container better-height ">
@@ -207,7 +206,7 @@
                          aria-labelledby="tab-title-additional_information">
                         <h2>Product</h2>
                         <div class="tab-container row">
-                            @{{produks}}
+                           
                             <div v-for="pr in produks" :key="pr.id" class="tab-panel active col-6 col-md-4 col-lg-3" id="1547652538969-4e9e849f-123a-5d80aefaa70e2">
                                 <div class="kodory-products style-01">
                                     <div class="response-product product-list-grid row auto-clear equal-container better-height ">
@@ -259,7 +258,7 @@
                                 
                             </div>
                             <div class="tab-container row">
-                                @{{limited}}
+                               
                                 <div v-for="l in limited" :key="l.id"  class="tab-panel active col-6 col-md-4 col-lg-3" id="1547652538969-4e9e849f-123a-5d80aefaa70e2">
                                     <div class="kodory-products style-01">
                                         <div class="response-product product-list-grid row auto-clear equal-container better-height ">

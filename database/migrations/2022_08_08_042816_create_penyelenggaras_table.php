@@ -16,8 +16,6 @@ class CreatePenyelenggarasTable extends Migration
         Schema::create('tbl_penyelenggaras', function (Blueprint $table) {
             $table->increments('id');
             $table->timestamps();
-            $table->integer('id_produk')->unsigned();
-            $table->foreign('id_produk')->references('id')->on('tbl_produks');
             $table->string('icon_penyelenggara');
             $table->string('nama_penyelenggara');
             $table->string('kota_penyelenggara');
