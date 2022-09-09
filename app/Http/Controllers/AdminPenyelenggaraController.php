@@ -18,7 +18,6 @@ class AdminPenyelenggaraController extends Controller
         
         foreach ($penyelenggaras as &$p) {
             $produk = Produk::find($p['id_produk']);
-            
             if($produk){
                 $p['produk'] = $produk->nama_produk;
             }else{

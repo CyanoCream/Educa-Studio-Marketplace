@@ -32,7 +32,7 @@
             <div class="col-sm-12">
                 <ol class="breadcrumb float-sm-right">
                     <li class="breadcrumb-item"><a href="{{route('daftarOrder')}}">Home</a></li>
-                    <li class="breadcrumb-item active">Dashboard User</li>
+                    <li class="breadcrumb-item active">Dashboard Order</li>
                 </ol>
             </div><!-- /.col -->
         </div><!-- /.row -->
