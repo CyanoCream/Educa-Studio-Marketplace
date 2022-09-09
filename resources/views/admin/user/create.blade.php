@@ -1,4 +1,4 @@
-@extends('admin.layout')
+@extends('admin.master')
 
 @section('content')
     <div class="content-wrapper">
@@ -9,9 +9,9 @@
                         <h1 class="m-0 text-dark">Create</h1>
                     </div>
                     <div class="col-sm-6">
-                        <ol class="breadcrumb float-sm-right ml-0 d-flex">
-                            <li class="breadcrumb-item" style="align-items: center; display: flex;"><a href="{{ route('daftarUser') }}">Dashboard</a></li>
-                            <li class="breadcrumb-item active" style="align-items: center; display: flex;">Tambah User</li>
+                        <ol class="breadcrumb float-sm-right ml-0">
+                            <li class="breadcrumb-item"><a href="{{ route('daftarUser') }}">Dashboard</a></li>
+                            <li class="breadcrumb-item active">Tambah User</li>
                         </ol>
                     </div>
                 </div>

@@ -1,4 +1,4 @@
-@extends('admin.layout')
+@extends('admin.master')
 
 @section('content')
 
@@ -10,9 +10,9 @@
 					<h1 class="m-0 text-dark">Edit</h1>
 				</div>
 				<div class="col-sm-6">
-					<ol class="breadcrumb float-sm-right d-flex">
-						<li class="breadcrumb-item" style="align-items: center; display: flex;"><a href="{{route('daftarProduk')}}">Dashboard</a></li>
-						<li class="breadcrumb-item active" style="align-items: center; display: flex;">Edit Produk</li>
+					<ol class="breadcrumb float-sm-right">
+						<li class="breadcrumb-item"><a href="{{route('daftarProduk')}}">Dashboard</a></li>
+						<li class="breadcrumb-item active">Edit Produk</li>
 					</ol>
 				</div>
 			</div>
