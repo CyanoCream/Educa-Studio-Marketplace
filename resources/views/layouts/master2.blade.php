@@ -60,6 +60,11 @@
         data: {
             gambars: [],
             produks: [],
+            aktivitas: [],
+            kursus: [],
+            experience: [],
+            gratis: [],
+
 
             
         },
@@ -69,6 +74,37 @@
                 url: "/api/get-produk",
                 success: function(rsp){
                     appComponent.produks = rsp;
+                    // console.log(this.products);
+                }
+                });
+                $.ajax({
+                url: "/api/get-produk-aktivitas",
+                success: function(rsp){
+                    appComponent.aktivitas = rsp;
+                    // console.log(this.products);
+                }
+                });
+
+                $.ajax({
+                url: "/api/get-produk-kursus",
+                success: function(rsp){
+                    appComponent.kursus = rsp;
+                    // console.log(this.products);
+                }
+                });
+
+                $.ajax({
+                url: "/api/get-produk-Experience",
+                success: function(rsp){
+                    appComponent.experience = rsp;
+                    // console.log(this.products);
+                }
+                });
+
+                $.ajax({
+                url: "/api/get-produk-gratis",
+                success: function(rsp){
+                    appComponent.gratis = rsp;
                     // console.log(this.products);
                 }
                 });

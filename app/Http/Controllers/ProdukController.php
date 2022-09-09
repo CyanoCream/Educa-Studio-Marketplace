@@ -92,7 +92,13 @@ class ProdukController extends Controller
         $kesehatan = Produk::with('gambar')->where('kategori','Kesehatan')->get();
         return $kesehatan;
     }
+    
+    public function getProdukGratis()
+    {
 
+        $gratis = Produk::with('gambar')->where('kategori','gratis')->get();
+        return $gratis;
+    }
 
     public function getDetailProduk($id)
     {
