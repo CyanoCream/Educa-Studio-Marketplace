@@ -79,7 +79,7 @@
                 </div>
                 <div id="app" class=" auto-clear kodory-products">
                     <ul  class="row products columns-3">
-                        <li v-for="p in produks" :key="p.id" class="product-item wow fadeInUp product-item rows-space-30 col-bg-4 col-xl-4 col-lg-6 col-md-6 col-sm-6 col-ts-6 style-01 post-24 product type-product status-publish has-post-thumbnail product_cat-chair product_cat-table product_cat-new-arrivals product_tag-light product_tag-hat product_tag-sock first instock featured shipping-taxable purchasable product-type-variable has-default-attributes"
+                        <li v-for="p in experience" :key="p.id" class="product-item wow fadeInUp product-item rows-space-30 col-bg-4 col-xl-4 col-lg-6 col-md-6 col-sm-6 col-ts-6 style-01 post-24 product type-product status-publish has-post-thumbnail product_cat-chair product_cat-table product_cat-new-arrivals product_tag-light product_tag-hat product_tag-sock first instock featured shipping-taxable purchasable product-type-variable has-default-attributes"
                             data-wow-duration="1s" data-wow-delay="0ms" data-wow="fadeInUp">
                             <div class="product-inner tooltip-left">
                                 <div class="product-thumb">
@@ -193,26 +193,26 @@
                     </div>
 
                     <div id="kodory_kodory_layered_nav-4"
-                        class="widget kodory_widget_layered_nav widget_layered_nav">
-                        <h2 class="widgettitle">Filter By Katalog<span class="arrow"></span></h2>
-                        <ul class="nav flex-column">
-                            <li class="nav-item" ">
-                                <a class="nav-link" style="color: rgb(0, 140, 255); href="{{route ('katalog.index')}}">Semua</a>
-                            </li>
-                            <li class="nav-item">
-                              <a class="nav-link" href="{{route ('aktivitas')}}">Aktivitas</a>
-                            </li>
-                            <li class="nav-item">
-                              <a class="nav-link" href="{{route ('kursus')}}">Kursus</a>
-                            </li>
-                            <li class="nav-item">
-                              <a class="nav-link" href="{{route ('experience')}}">Experience</a>
-                            </li>
-                            <li class="nav-item">
-                              <a class="nav-link" href="{{route ('gratis')}}">Gratis</a>
-                            </li>
-                          </ul>
-                    </div>
+                    class="widget kodory_widget_layered_nav widget_layered_nav">
+                    <h2 class="widgettitle">Filter By Katalog<span class="arrow"></span></h2>
+                    <ul class="nav flex-column">
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{route ('katalog.index')}}">Semua</a>
+                          </li>
+                        <li class="nav-item">
+                          <a class="nav-link" href="{{route ('aktivitas')}}">Aktivitas</a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link" href="{{route ('kursus')}}">Kursus</a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link" style="color: rgb(0, 140, 255); href="{{route ('experience')}}">Experience</a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link" href="{{route ('gratis')}}">Gratis</a>
+                        </li>
+                      </ul>
+                </div>
                     {{-- <div id="kodory_layered_nav-6"
                         class="widget kodory widget_layered_nav kodory-widget-layered-nav">
                         <h2 class="widgettitle">Price<span class="arrow"></span></h2>

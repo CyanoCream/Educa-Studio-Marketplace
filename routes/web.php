@@ -21,6 +21,22 @@ Route::get('/', function () {
 Route::get('/katalog', function () {
     return view('katalog.index');
 })->name('katalog.index');
+Route::get('/katalog/aktivitas', function () {
+    return view('katalog.aktivitas');
+})->name('aktivitas');
+Route::get('/kursus', function () {
+    return view('katalog.kursus');
+})->name('kursus');
+Route::get('/gratis', function () {
+    return view('katalog.gratis');
+})->name('gratis');
+Route::get('/experience', function () {
+    return view('katalog.experience');
+})->name('experience');
+Route::get('/pilihan', function () {
+    return view('katalog.pilihan');
+})->name('pilihan');
+
 
 
 

@@ -50,6 +50,7 @@ Route::get('/get-produk-aktivitas', 'ProdukController@getProdukAktivitas');
 Route::get('/get-produk-kursus', 'ProdukController@getProdukKursus');
 Route::get('/get-produk-Experience', 'ProdukController@getProdukExperience');
 Route::get('/get-produk-kesehatan', 'ProdukController@getProdukKesehatan');
+Route::get('/get-produk-gratis', 'ProdukController@getProdukGratis');
 Route::post('/insert-produk', 'ProdukController@insertProduk');
 Route::get('delete-produk', 'ProdukController@deleteProduk');
 Route::get('/edit-produk/{id}', 'ProdukController@editProduk');
