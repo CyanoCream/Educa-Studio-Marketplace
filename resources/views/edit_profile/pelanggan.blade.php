@@ -26,45 +26,52 @@
 
                     <div class="form-group">
                         <label for="foto">foto</label>
-                        <input type="file" name="foto" id="foto" class="form-control" required="required" placeholder="Masukkan foto">
+                        <input type="file" name="foto" id="foto" class="form-control" required="required"
+                            placeholder="Masukkan foto">
                     </div>
 
                     <div class="form-group">
                         <label for="nama_pelanggan">Nama</label>
-                        <input type="text" name="nama_pelanggan" id="nama_pelanggan" class="form-control" required="required" placeholder="Masukkan nama_pelanggan">
+                        <input type="text" name="nama_pelanggan" id="nama_pelanggan" class="form-control"
+                            required="required" placeholder="Masukkan nama_pelanggan">
                     </div>
 
                     <div class="form-group">
                         <label for="no_telp">No Telp</label>
-                        <input type="text" name="no_telp" id="no_telp" class="form-control" required="required" placeholder="Masukkan no_telp">
+                        <input type="text" name="no_telp" id="no_telp" class="form-control" required="required"
+                            placeholder="Masukkan no_telp">
                     </div>
 
                     <div class="form-group">
                         <label for="alamat_pel">Alamat</label>
-                        <input type="text" name="alamat_pel" id="alamat_pel" class="form-control" required="required" placeholder="Masukkan alamat_pel">
+                        <input type="text" name="alamat_pel" id="alamat_pel" class="form-control" required="required"
+                            placeholder="Masukkan alamat_pel">
                     </div>
 
                     <div class="form-group">
                         <label for="provinsi_pel">Provinsi</label>
-                        <input type="text" name="provinsi_pel" id="provinsi_pel" class="form-control" required="required" placeholder="Masukkan provinsi_pel">
+                        <input type="text" name="provinsi_pel" id="provinsi_pel" class="form-control"
+                            required="required" placeholder="Masukkan provinsi_pel">
                     </div>
 
                     <div class="form-group">
                         <label for="kota_pel">Kota</label>
-                        <input type="text" name="kota_pel" id="kota_pel" class="form-control" required="required" placeholder="Masukkan kota_pel">
+                        <input type="text" name="kota_pel" id="kota_pel" class="form-control" required="required"
+                            placeholder="Masukkan kota_pel">
                     </div>
 
                     <div class="form-group">
                         <label for="kecamatan_pel">Kecamatan</label>
-                        <input type="text" name="kecamatan_pel" id="kecamatan_pel" class="form-control" required="required" placeholder="Masukkan kecamatan_pel">
+                        <input type="text" name="kecamatan_pel" id="kecamatan_pel" class="form-control"
+                            required="required" placeholder="Masukkan kecamatan_pel">
                     </div>
 
                     <div class="text-right">
                         <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
                         <button type="submit" class="btn btn-primary">Simpan</button>
                     </div>
-                   
-        </div>
+                </form>
+            </div>
         </div>
     </div>
 </div>

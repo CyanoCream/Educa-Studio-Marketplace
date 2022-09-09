@@ -22,7 +22,7 @@
             <div class="container-fluid">
                 <div class="card">
                     <div class="card-body">
-                        <form action="{{ route('storeUser') }}" method="post" id="tambahUlasan">
+                        <form action="{{ route('storeUser') }}" method="post">
                             {{ csrf_field() }}
 
                             <div class="form-group">
@@ -39,8 +39,18 @@
                             
                             <div class="form-group">
                                 <label for="role">role</label>
-                                <input type="text" name="role" id="role" class="form-control"
-                                    required="required" placeholder="Masukkan role">
+                                <div class="dropdown">
+                                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                      Dropdown button
+                                    </button>
+                                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                      <a class="dropdown-item" href="#">Action</a>
+                                      <a class="dropdown-item" href="#">Another action</a>
+                                      <a class="dropdown-item" href="#">Something else here</a>
+                                    </div>
+                                </div>
+                                {{-- <input type="text" name="role" id="role" class="form-control"
+                                    required="required" placeholder="Masukkan role"> --}}
                             </div>
 
                             <div class="form-group">
