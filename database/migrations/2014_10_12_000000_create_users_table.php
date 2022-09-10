@@ -19,6 +19,13 @@ class CreateUsersTable extends Migration
             $table->string('email', 128)->unique();
             $table->string('password');
             $table->string('role')->default('user');
+            $table->string('foto')->nullable();
+            $table->string('panggilan')->nullable();
+            $table->string('alamat')->nullable();
+            $table->string('provinsi')->nullable();
+            $table->string('kota')->nullable();
+            $table->string('kecamatan')->nullable();
+            $table->string('notelp')->nullable();
             $table->rememberToken();
             $table->timestamps();
         });

@@ -73,6 +73,7 @@ Route::post('/logout', 'LoginController@logout')->name('logout');
 Auth::routes();
 
 Route::get('/home', 'AdminHomeController@index')->name('home');
+Route::get('/countproduk', 'AdminHomeController@CountProduk')->name('countProduk');
 
 Route::get('produk-detail/{id}', 'ProdukController@show');
 
