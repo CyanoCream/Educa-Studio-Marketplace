@@ -55,6 +55,11 @@ Route::get('/akun', function () {
     return view('akun.index');
 })->name('akun.index');
 
+
+Route::get('/daftar', function () {
+    return view('akun.daftar');
+})->name('daftar');
+
 Auth::routes();
 
 // home admin
