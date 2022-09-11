@@ -21,7 +21,8 @@
             </div>
             <div class="modal-body">
 
-                <form class="form">
+                <form class="form" action="{{ route('userUpdate',['id'=>Auth::user()->id])}}" method="post">
+                    {{ csrf_field() }}
                     <div class="form-field">
                         <div class="css-1k4vibs text-center">
                             
@@ -33,7 +34,7 @@
                                             alt="" width="150px">
                                     </div>
                                     <div class="container-btn-ubah">
-                                        <input type="file" accept="image/png, image/jpeg, image/jpg" class="css-17jnaqn">
+                                        <input type="file" name="foto" accept="image/png, image/jpeg, image/jpg" class="css-17jnaqn">
                                         {{-- <button color="white" type="button" class="css-1ynihft">Ubah Foto
                                             Profile</button> --}}
                                     </div>
@@ -49,6 +50,14 @@
                         <div class="css-4r2xna">
                             <div class="css-utaa48"><strong>Nama Panggilan </strong></div>
                             <input label="Nama Panggilan" placeholder="Nama Panggilan" name="panggilan" type="text" rows="1" class="css-13f9adq w-100" value="{{ Auth::user()->panggilan }}">
+                        </div>
+                        <div class="css-4r2xna">
+                            <div class="css-utaa48"><strong>Email </strong></div>
+                            <input label="Email" placeholder="Email" name="email" type="email" rows="1" class="css-13f9adq w-100" value="{{ Auth::user()->email }}">
+                        </div>
+                        <div class="css-4r2xna">
+                            <div class="css-utaa48"><strong>Password </strong></div>
+                            <input label="Password" placeholder="**********" name="password" type="password" rows="1" class="css-13f9adq w-100" value="{{ Auth::user()->password }}">
                         </div>
                         <div class="css-4r2xna">
                             <div class="css-utaa48"><strong>Alamat </strong></div>
@@ -78,25 +87,17 @@
                                 <input placeholder="+62" label="Nomor Ponsel" name="notelp" type="text" rows="1" class="css-1e8e7rv w-100" value="">
                             </div>
                         </div>
-                        <div class="css-1b8mmk5">
-                            <div class="css-4r2xna">
-                                <div class="css-utaa48"><strong>Email</strong></div>
-                                <div class="d-flex">
-                                    <input label="Alamat Email" placeholder="" name="email" type="text"
-                                    rows="1" class="css-12i3ll2 w-100" value="anindasulistya@gmail.com">
-                              </div>
-                            </div>
-                        </div>
 
 
-
+                        <input type="hidden" name="role" value="{{ Auth::user()->role }}">
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                        <button type="submit" class="btn btn-primary">Submit</button>
                     </div>
                 </form>
             </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
-                <button type="button" class="btn btn-primary">Submit</button>
-            </div>
+
         </div>
     </div>
 </div>

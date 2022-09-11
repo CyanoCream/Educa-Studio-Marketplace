@@ -121,6 +121,7 @@ Route::get('/gambar/{gambar}/delete', 'AdminGambarController@destroy')->name('de
 Route::get('/hubungi_kami', 'AdminHubungikamiController@index')->name('daftarHubungi_Kami');
 Route::get('/hubungi_kami/create', 'AdminHubungikamiController@create')->name('createHubungi_Kami');
 Route::post('/hubungi_kami/create', 'AdminHubungikamiController@store')->name('storeHubungi_Kami');
+Route::post('/hubungi_kami/create/user', 'AdminHubungikamiController@userstore')->name('userHubungi_Kami');
 Route::get('/hubungi_kami/{hubungi_kami}/edit', 'AdminHubungikamiController@edit')->name('editHubungi_Kami');
 Route::post('/hubungi_kami/{hubungi_kami}/edit', 'AdminHubungikamiController@update')->name('updateHubungi_Kami');
 Route::get('/hubungi_kami/{hubungi_kami}/delete', 'AdminHubungikamiController@destroy')->name('deleteHubungi_Kami');
@@ -197,4 +198,5 @@ Route::get('/user/create', 'AdminUserController@create')->name('createUser');
 Route::post('/user/create', 'AdminUserController@store')->name('storeUser');
 Route::get('/user/{user}/edit', 'AdminUserController@edit')->name('editUser');
 Route::post('/user/{user}/edit', 'AdminUserController@update')->name('updateUser');
+Route::post('/user/{user}/update', 'AdminUserController@userupdate')->name('userUpdate');
 Route::get('/user/{user}/delete', 'AdminUserController@destroy')->name('deleteUser');

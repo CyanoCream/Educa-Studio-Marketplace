@@ -67,6 +67,12 @@
                     <h5 class="d-flex justify-content-between">
                     Nama Panggilan :<a>{{ Auth::user()->panggilan }}</a>
                      </h5>
+                     <h5 class="d-flex justify-content-between">
+                        Email :<a>{{ Auth::user()->email }}</a>
+                    </h5>
+                    <h5 class="d-flex justify-content-between">
+                        Password :<a>**********</a>
+                    </h5>
                     <h5 class="d-flex justify-content-between">
                         Alamat :<a>{{ Auth::user()->alamat }}</a>
                     </h5>

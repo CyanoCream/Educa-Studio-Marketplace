@@ -58,6 +58,21 @@ class AdminHubungikamiController extends Controller
         return redirect(route('daftarHubungi_Kami'));
     }
 
+    public function userstore(Request $request)
+    {
+        $validatedData = $request->validate([
+            'nama' => 'required|string|max:255' ,
+            'email' => 'required|string|max:255' ,
+            'nomorponsel' => 'required|string|max:255' ,
+            'topik' => 'required|string|max:255' ,
+            'pesan' => 'required|string|max:255' ,
+        ]);
+
+        $hubungikami = new hubungikami($validatedData);
+        $hubungikami->save();
+
+        return redirect()->back();
+    }
     /**
      * Display the specified resource.
      *
