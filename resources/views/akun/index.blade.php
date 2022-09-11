@@ -71,6 +71,9 @@
                         Alamat :<a>{{ Auth::user()->alamat }}</a>
                     </h5>
                     <h5 class="d-flex justify-content-between">
+                        Tanggal Lahir :<a>{{ Auth::user()->tgl_lahir }}</a>
+                    </h5>
+                    <h5 class="d-flex justify-content-between">
                         Provinsi :<a>{{ Auth::user()->provinsi }}</a>
                     </h5>
                     <h5 class="d-flex justify-content-between">
@@ -110,9 +113,9 @@
             @include('tentang_kami.index')
         </div>
                <form action="{{ route ('logout')}}" method="post">
-                <div class="card m-2 text-center" style="border-radius: 20px">
+                <div style="border-radius: 20px; padding-left: 25%; padding-right:5%;">
                 {{ csrf_field() }}
-            <button style="background-color:#71c0ef; "type="submit">Logout</button>
+            <button class="btn btn-primary" type="submit">Logout</button>
            
         </div></form>
         

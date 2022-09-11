@@ -21,6 +21,7 @@ class CreateUsersTable extends Migration
             $table->string('role')->default('user');
             $table->string('foto')->nullable();
             $table->string('panggilan')->nullable();
+            $table->date('tgl_lahir')->nullable();
             $table->string('alamat')->nullable();
             $table->string('provinsi')->nullable();
             $table->string('kota')->nullable();
