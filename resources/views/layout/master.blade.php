@@ -51,11 +51,10 @@
 <script src="{{asset('js/bootstrap.bundle.min.js')}}"></script>
 <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/vue@2.7.8/dist/vue.js"></script>
-</body>
+</body> 
 </html>
 
 <script>
-
 var appComponent = new Vue({
         el: "#app",
         data: {
@@ -64,6 +63,7 @@ var appComponent = new Vue({
             limited: [],
             popular: [],
             new: [],
+            search: ''
             
         },
         mounted(){
@@ -106,7 +106,11 @@ var appComponent = new Vue({
         },
         
         computed: {
-            
+            filteredProduk: function() {
+                return this.produks.filter((produks) => {
+                    return produks.nama_prlduk.match(this.search);
+                })
+            }        
         },
         methods: {
             deleteData(p){
@@ -168,6 +172,32 @@ var appComponent = new Vue({
         $('#register').modal('show');
 
     })
+
+    $(document).ready(function(){
+    readData()
+    $("#input").keyup(function(){
+        var strcari = $("#input").val();
+        if (strcari != ""){
+            $("#read").html('<center><p class="text-muted">Waiting for Search Product</p></center>');
+            $.get("{{ url('ajax')}}", "name=" + strcari,
+                function (data) {
+
+                    $("#read").html(data);
+                },
+                
+            );
+        }else{
+            readData()
+        }
+    });
+});
+    function readData(){
+        $.get("{{ url('read')}}",{},
+        function(data){
+            // alert(data);
+            $("#read").html(data);
+        })
+    }
 
 
 

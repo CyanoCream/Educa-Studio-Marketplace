@@ -21,7 +21,7 @@
             </div>
             <div class="modal-body">
 
-                <form class="form" action="{{ route('userUpdate',['id'=>Auth::user()->id])}}" method="post">
+                <form class="form" action="{{ route('userUpdate',['id'=>Auth::user()->id])}}" method="post" enctype="multipart/form-data">
                     {{ csrf_field() }}
                     <div class="form-field">
                         <div class="css-1k4vibs text-center">
