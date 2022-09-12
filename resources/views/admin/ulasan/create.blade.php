@@ -46,6 +46,8 @@
                                 <a href="{{ route('daftarUlasan') }}" class="btn btn-outline-secondary mr-2"
                                     role="button">Batal</a>
                                 <button type="submit" class="btn btn-primary">Simpan</button>
+                                {{-- <a onclick="save(this)" data-url="{{route('storeUlasan', ['id' => $ulasan->id])}}"
+                                    class="btn btn-primary btn-sm" role="button">Simpan</a> --}}
                             </div>
                         </form>
                     </div>
@@ -55,38 +57,18 @@
     </div>
 @endsection
 
-{{-- @push('script')
-    <script>
-        $(document).ready(function() {
-            $.ajaxSetup({
-                headers: {
-                    'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
-                }
-            });
-        });
-
-        var app = new Vue({
-            el: '#app',
-            data: {
-                kategoris: []
-            },
-            mounted() {
-
-            },
+{{-- <script>
+    save = function (button) {
+        // var url = $(button).data('url');
+        swal({
+            'title': 'Konfirmasi Simpan',
+            'text': 'Apakah kamu yakin ingin menyimpan data ini?',
+            'primaryMode': true,
+            'buttons': true
+        }).then(function (value) {
+            if (value) {
+                window.location = url;
+            }
         })
-
-        $('#tambahProduk').on('submit', function(e) {
-			e.preventDefault();
-            var data = $(this).serialize;
-            $.ajax(
-                url: 'api/insert-produk',
-                dataType: 'json',
-				method: 'post',
-                data: data,
-                success: function(response){
-					alert(response.message)
-				}
-            )
-        })
-    </script>
-@endpush --}}
+    }
+</script> --}}
