@@ -11,7 +11,8 @@
 				</div>
 				<div class="col-sm-6">
 					<ol class="breadcrumb float-sm-right d-flex">
-						<li class="breadcrumb-item" style="align-items: center; display: flex;"><a href="{{route('daftarGambar')}}">Dashboard</a></li>
+						<li class="breadcrumb-item" style="align-items: center; display: flex;"><a
+								href="{{route('daftarGambar')}}">Dashboard</a></li>
 						<li class="breadcrumb-item active" style="align-items: center; display: flex;">Edit Gambar</li>
 					</ol>
 				</div>
@@ -28,16 +29,19 @@
 
 						<div class="form-group">
 							<label for="gambar">gambar</label>
-							<input type="file" name="gambar" id="gambar" class="form-control" required="required" value="{{ $gambar->gambar }}" placeholder="Masukkan gambar">
+							<input type="file" name="gambar" id="gambar" class="form-control" required="required"
+								value="{{ $gambar->gambar }}" placeholder="Masukkan gambar">
 						</div>
 
 						<div class="form-group">
 							<label for="id_produk">id produk</label>
-							<input type="text" name="id_produk" id="id_produk" class="form-control" required="required" value="{{ $gambar->id_produk }}" placeholder="Masukkan id_produk">
+							<input type="text" name="id_produk" id="id_produk" class="form-control" required="required"
+								value="{{ $gambar->id_produk }}" placeholder="Masukkan id_produk">
 						</div>
 
 						<div class="text-right">
-							<a href="{{ route('daftarGambar') }}" class="btn btn-outline-secondary mr-2" role="button">Batal</a>
+							<a href="{{ route('daftarGambar') }}" class="btn btn-outline-secondary mr-2"
+								role="button">Batal</a>
 							<button type="submit" class="btn btn-primary">Simpan</button>
 						</div>
 					</form>

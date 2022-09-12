@@ -3,37 +3,60 @@
 @section('content')
 <style>
     .table-update {
-    font-family: Arial, Helvetica, sans-serif;
-    border-collapse: collapse;
-    width: 100%;
-  }
-  
-  .table-update td, .table-update th {
-    border: 1px solid #ddd;
-    padding: 5px;
-  }
-  
-  .table-update tr:nth-child(even){background-color: #f2f2f2;}
-  
-  .table-update tr:hover {background-color: #ddd;}
-  
-  .table-update th {
-    padding-top: 10px;
-    padding-bottom: 10px;
-    text-align: left;
-    background-color: #04AA6D;
-    color: white;
-  }
+        font-family: Arial, Helvetica, sans-serif;
+        border-collapse: collapse;
+        width: 100%;
+    }
+
+    .table-update td,
+    .table-update th {
+        border: 1px solid #ddd;
+        padding: 5px;
+    }
+
+    .table-update tr:nth-child(even) {
+        background-color: #f2f2f2;
+    }
+
+    .table-update tr:hover {
+        background-color: #ddd;
+    }
+
+    .table-update th {
+        padding-top: 10px;
+        padding-bottom: 10px;
+        text-align: left;
+        background-color: #04AA6D;
+        color: white;
+    }
 </style>
 
 <div class="content-wrapper">
+    <div class="content-header">
+        <div class="container-fluid">
+            <div class="row mb-2">
+                <div class="col-sm-6">
+                    <h1 class="text-left">Detail Order</h1>
+                </div>
+                <div class="col-sm-6">
+                    <ol class="breadcrumb float-sm-right">
+                        <li class="breadcrumb-item"><a href="{{route('daftarDetail_Order')}}">Home</a></li>
+                        <li class="breadcrumb-item active">Dashboard Detail Order</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
     <div class="content">
         <div class="container-fluid">
             <div class="card">
                 <div class="card-header text-right">
-                    <a href="{{ route('createDetail_Order') }}" class="btn btn-primary" role="button">Tambah Detail Orders</a>
+                    <a href="{{ route('createDetail_Order') }}" class="btn btn-primary" role="button">Tambah Detail
+                        Orders</a>
                 </div>
-                <div class="card-body p-0">
+                <div class="card-body p-2">
                     <table class="table-update" id="data-table">
                         <thead>
                             <tr>
@@ -50,20 +73,23 @@
                         </thead>
                         <tbody>
                             @foreach ($detail_orders as $detail_order)
-                                <tr>
-                                    <td>{{ $loop->index + 1 }}</td>
-                                    <td>{{ $detail_order->id_order }}</td>
-                                    <td>{{ $detail_order->id_produk }}</td>
-                                    <td>{{ $detail_order->nama_produk }}</td>
-                                    <td>{{ $detail_order->harga }}</td>
-                                    <td>{{ $detail_order->kurir }}</td>
-                                    <td>{{ $detail_order->jumlah }}</td>
-                                    <td>{{ $detail_order->total_harga }}</td>
-                                    <td>
-                                        <a href="{{route('editDetail_Order', ['id' => $detail_order->id])}}" class="btn btn-warning btn-sm" role="button">Edit</a>
-                                        <a onclick="confirmDelete(this)" data-url="{{route('deleteDetail_Order', ['id' => $detail_order->id])}}" class="btn btn-danger btn-sm" role="button">Hapus</a>
-                                    </td>
-                                </tr>
+                            <tr>
+                                <td>{{ $loop->index + 1 }}</td>
+                                <td>{{ $detail_order->id_order }}</td>
+                                <td>{{ $detail_order->id_produk }}</td>
+                                <td>{{ $detail_order->nama_produk }}</td>
+                                <td>{{ $detail_order->harga }}</td>
+                                <td>{{ $detail_order->kurir }}</td>
+                                <td>{{ $detail_order->jumlah }}</td>
+                                <td>{{ $detail_order->total_harga }}</td>
+                                <td>
+                                    <a href="{{route('editDetail_Order', ['id' => $detail_order->id])}}"
+                                        class="btn btn-warning btn-sm" role="button">Edit</a>
+                                    <a onclick="confirmDelete(this)"
+                                        data-url="{{route('deleteDetail_Order', ['id' => $detail_order->id])}}"
+                                        class="btn btn-danger btn-sm" role="button">Hapus</a>
+                                </td>
+                            </tr>
                             @endforeach
                         </tbody>
                     </table>
@@ -74,30 +100,30 @@
 </div>
 @endsection
 @section('addCss')
+<link rel="stylesheet" href="https://cdn.datatables.net/1.12.1/css/jquery.dataTables.min.css">
 <link rel="stylesheet" href="{{ asset('css/dataTables.bootstrap4.min.css') }}">
 @endsection
 
 @push('script')
+<script src="https://cdn.datatables.net/1.12.1/js/jquery.dataTables.min.js"></script>
 <script src="{{ asset('js2/sweetalert.min.js') }}"></script>
 <script>
-    $(function() {
+    $(function () {
         $("#data-table").DataTable();
     })
 
-    confirmDelete = function(button) {
+    confirmDelete = function (button) {
         var url = $(button).data('url');
         swal({
             'title': 'Konfirmasi Hapus',
             'text': 'Apakah kamu yakin ingin menghapus data ini?',
             'dangerMode': true,
             'buttons': true
-        }).then(function(value) {
+        }).then(function (value) {
             if (value) {
                 window.location = url;
             }
         })
     }
-
-    
 </script>
 @endpush

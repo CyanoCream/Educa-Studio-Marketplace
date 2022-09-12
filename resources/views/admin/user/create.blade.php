@@ -40,17 +40,8 @@
                             <div class="form-group">
                                 <label for="role">role</label>
                                 <div class="dropdown">
-                                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                      Dropdown button
-                                    </button>
-                                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                      <a class="dropdown-item" href="#">Action</a>
-                                      <a class="dropdown-item" href="#">Another action</a>
-                                      <a class="dropdown-item" href="#">Something else here</a>
-                                    </div>
-                                </div>
-                                {{-- <input type="text" name="role" id="role" class="form-control"
-                                    required="required" placeholder="Masukkan role"> --}}
+                                <input type="text" name="role" id="role" class="form-control"
+                                    required="required" placeholder="Masukkan role">
                             </div>
 
                             <div class="form-group">
