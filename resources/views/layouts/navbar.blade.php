@@ -154,27 +154,27 @@
                                 </div>
                                 <div class="kodory-dropdown-close"></div>
                                 <div class="menu-item block-user block-dreaming kodory-dropdown">
-                                    <a class="block-link" href="#">
-                                        <span class="flaticon-profile"></span>
-                                    </a>
-                                    <ul class="sub-menu">
-                                        @guest
-                                        <a href="#" data-toggle="modal" data-target="#login">
-                                            <h5>Login</h5>
+                                     @guest
+                                        <a class="block-link" href="#" data-toggle="modal" data-target="#login">
+                                            <span class="flaticon-profile"></span>
                                         </a>
-                                        <a href="#" data-toggle="modal" data-target="#register">
-                                            <h5>Register</h5>
-                                        </a>
+                                        @include('auth.login')
+                                            </div> </div> </div> </div> </div>    
                                         @else
-                                        <a href="{{ route ('akun.index') }}" >
-                                            <h5> <i class="fa fa-user-circle"></i> {{ Auth::user()->name }}</h5>
+                                        <a class="block-link" href="{{ route ('akun.index') }}">
+                                            <span class="flaticon-profile"></span>
                                         </a>
-                                        <form action="{{ route ('logout')}}" method="post">
-                                            {{ csrf_field() }}
-                                        <button type="submit" class="btn btn-info">Logout</button>
-                                        </form>
-                                        @endguest
-                                    </ul>
+                                        <ul class="sub-menu">
+                                            <li class=" menu-item kodory-MyAccount-navigation-link kodory-MyAccount-navigation-link--orders">
+                                                <a href="{{ route ('akun.index') }}">{{ Auth::user()->name }}</a>
+                                            </li>
+                                            <li class=" menu-item kodory-MyAccount-navigation-link kodory-MyAccount-navigation-link--orders">
+                                            <a href="#" data-toggle="modal" data-target="#exampleModal">Logout</a>
+                                            </li> 
+                                        </ul>
+                                        @include('auth.logout')
+                                       @endguest
+                                    
                                 </div>
                                 @foreach ($orders as $order)
                                 <div class="block-minicart block-dreaming kodory-mini-cart kodory-dropdown">

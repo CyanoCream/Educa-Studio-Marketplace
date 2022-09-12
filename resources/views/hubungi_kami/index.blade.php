@@ -21,7 +21,7 @@
             </div>
             <div class="modal-body">
                 <div class="css-6c9knn">
-                    <form action="{{ route('storeHubungi_Kami') }}" method="post">
+                    <form action="{{ route('userHubungi_Kami') }}" method="post">
 						{{csrf_field()}}
 
 						<div class="form-group">
@@ -56,7 +56,7 @@
 						</div> --}}
                         <div class="modal-footer">
                             <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
-                            <button type="submit" class="btn btn-primary">Submit</button>
+                            <button type="submit"  class="btn btn-primary">Submit</button>
                         </div>
 					</form>
                 </div>

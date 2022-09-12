@@ -37,6 +37,7 @@
         </div><!-- /.row -->
     </div><!-- /.container-fluid -->
 </div>
+
 <div class="content-wrapper">
     <div class="content">
         <div class="container-fluid">

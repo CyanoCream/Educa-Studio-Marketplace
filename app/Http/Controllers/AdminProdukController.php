@@ -2,8 +2,6 @@
 
 namespace App\Http\Controllers;
 use App\Produk;
-use App\Order;
-use App\Penyelenggara;
 use Illuminate\Http\Request;
 
 class AdminProdukController extends Controller
@@ -31,16 +29,6 @@ class AdminProdukController extends Controller
         return $produks;
     }
 
-    public function countProduk()
-    {
-        $produks = Produk::all()->count();
-        $order = Order::all()->count();
-        $penyelenggara = Penyelenggara::all()->count();
-        
-        return view{{route ('home')}};
-    
-    }
-
     // /**
     //  * Show the form for creating a new resource.
     //  *
@@ -49,7 +37,7 @@ class AdminProdukController extends Controller
     public function create(Request $request)
     {
         return view('admin.produk.create');
-        // $data = $request->all();
+      
 
         // $produk = new Produk($data);
         // $produk->save();

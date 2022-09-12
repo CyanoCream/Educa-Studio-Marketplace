@@ -68,7 +68,7 @@
                                         <td>{{ $user->name }}</td>
                                         <td>{{ $user->email }}</td>
                                         <td>{{ $user->role }}</td>
-                                        <td>{{ $user->password }}</td>
+                                        <td>********</td>
                                         <td>
                                             <a href="{{route('editUser', ['id' => $user->id])}}"
                                                 class="btn btn-warning btn-sm" role="button">Edit</a>
