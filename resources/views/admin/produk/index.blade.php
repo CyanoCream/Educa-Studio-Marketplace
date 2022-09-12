@@ -28,7 +28,10 @@
 <div class="content-header">
     <div class="container-fluid">
         <div class="row mb-2">
-            <div class="col-sm-12">
+            <div class="col-sm-6">
+                <h1 class="text-center">Produk</h1>
+            </div>
+            <div class="col-sm-6">
                 <ol class="breadcrumb float-sm-right">
                     <li class="breadcrumb-item"><a href="{{route('daftarProduk')}}">Home</a></li>
                     <li class="breadcrumb-item active">Dashboard Produk</li>
@@ -44,7 +47,7 @@
                 <div class="card-header text-right">
                     <a href="{{ route('createProduk') }}" class="btn btn-primary" role="button">Tambah Produk</a>
                 </div>
-                <div class="card-body p-0">
+                <div class="card-body p-2">
                     <table class="table-update" id="data-table">
                         <thead>
                             <tr>

@@ -33,7 +33,7 @@
                 <div class="card-header text-right">
                     <a href="{{ route('createDetail_Order') }}" class="btn btn-primary" role="button">Tambah Detail Orders</a>
                 </div>
-                <div class="card-body p-0">
+                <div class="card-body p-2">
                     <table class="table-update" id="data-table">
                         <thead>
                             <tr>

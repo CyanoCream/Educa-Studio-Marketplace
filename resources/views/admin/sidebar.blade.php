@@ -50,7 +50,7 @@
                     </a>
                     <ul class="nav nav-treeview">
                         <li class="nav-item">
-                            <a href="{{route('daftarDetail_Order')}}" class="nav-link active">
+                            <a href="{{route('daftarDetail_Order')}}" class="nav-link">
                                 <i class="nav-icon fas fa-th"></i>
                                 <p>Detail Order</p>
                             </a>
