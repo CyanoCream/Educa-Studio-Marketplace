@@ -127,6 +127,22 @@ class AdminUserController extends Controller
      */
     public function userupdate(Request $request, $user)
     {
+        // dd($request);
+    // condition save gambar upload
+    if ($request->hasFile('foto')) {
+        // get filename with extension
+        $fileNameWithExt = $request->file('foto')->getClientOriginalName();
+        // get just filename
+        $fileName = pathinfo($fileNameWithExt, PATHINFO_FILENAME);
+        // get just extension
+        $extension = $request->file('foto')->getClientOriginalExtension();
+        // filename to store
+        $fileNameToStore = $fileName . '_' . time() . '.' . $extension;
+        // upload image
+        $path = $request->file('foto')->storeAs('images', $fileNameToStore);
+    } else {
+        $fileNameToStore = 'noimage.jpg';
+    }
 
 
         $user = user::find($user);
@@ -142,7 +158,7 @@ class AdminUserController extends Controller
         $user->kota =$request->kota;
         $user->kecamatan = $request->kecamatan;
         $user->notelp = $request->notelp;
-        $user->foto = $request->foto;
+        $user->foto = $fileNameToStore;
         $user->save();
 
         return redirect()->back();

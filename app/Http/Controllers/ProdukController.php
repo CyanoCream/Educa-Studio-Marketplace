@@ -315,6 +315,34 @@ class ProdukController extends Controller
         // Alert::success('Thank You', 'Pesanan Anda Sedang Diproses');
 
         // return redirect('home');
+        public function ajax(Request $request)
+        {
+            $name = $request->name;
+            $results = Produk::where('nama_produk', 'like','%'.$name.'%')->get();
+            // return $results;
 
+
+
+            $c = count($results);
+
+            if ($c == 0){
+                return '<p class="text-center"> Sorry data not found </p>';
+            }else{
+                return view('ajaxpage')->with([
+                    'data' => $results
+                ]);
+                // return $results;
+            }
+
+        }
+        public function read()
+        {
+            return '<p class="text-center">please input data search: Promo, Private, Keteraampilan</p>';
+        }
+
+        public function search()
+        {
+            return view ('search');
+         }
     
 }
