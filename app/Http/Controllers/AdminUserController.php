@@ -110,6 +110,44 @@ class AdminUserController extends Controller
         return redirect(route('daftarUser'));
     }
 
+    public function useredit($id)
+    {
+        $user = user::find($id);
+        return view('admin.user.edit', [
+            'user' => $user
+        ]);
+    }
+
+    /**
+     * Update the specified resource in storage.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function userupdate(Request $request, $user)
+    {
+
+
+        $user = user::find($user);
+
+        $user->name = $request->name;
+        $user->email = $request->email;
+        $user->role = $request->role;
+        $user->password = $request->password;
+        $user->panggilan = $request->panggilan;
+        $user->tgl_lahir = $request->tgl_lahir;
+        $user->alamat = $request->alamat;
+        $user->provinsi = $request->provinsi;
+        $user->kota =$request->kota;
+        $user->kecamatan = $request->kecamatan;
+        $user->notelp = $request->notelp;
+        $user->foto = $request->foto;
+        $user->save();
+
+        return redirect()->back();
+    }
+
     /**
      * Remove the specified resource from storage.
      *

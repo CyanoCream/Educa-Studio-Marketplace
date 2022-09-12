@@ -24,14 +24,14 @@
 
     <!-- Main content -->
     <section class="content">
-        <div class="container-fluid">
+        <div id="app" class="container-fluid">
             <!-- Small boxes (Stat box) -->
             <div class="row">
                 <div class="col-lg-3 col-6">
 
                     <div class="small-box bg-info">
                         <div class="inner">
-                            <h3>15</h3>
+                            <h3>@{{ pesanan.length }}</h3>
                             <p>Order</p>
                         </div>
                         <div class="icon">
@@ -45,7 +45,7 @@
 
                     <div class="small-box bg-success">
                         <div class="inner">
-                            <h3>16</h3>
+                            <h3>@{{ produks.length }}</h3>
                             <p>Produk</p>
                         </div>
                         <div class="icon">
@@ -59,7 +59,7 @@
 
                     <div class="small-box bg-warning">
                         <div class="inner">
-                            <h3>1</h3>
+                            <h3>@{{ users.length }}</h3>
                             <p>User</p>
                         </div>
                         <div class="icon">
@@ -73,7 +73,7 @@
 
                     <div class="small-box bg-danger">
                         <div class="inner">
-                            <h3>16</h3>
+                            <h3>@{{ penyelenggara.length }}</h3>
                             <p>Penyelenggara</p>
                         </div>
                         <div class="icon">
@@ -626,3 +626,4 @@
     <!-- Control sidebar content goes here -->
 </aside>
 @endsection
+

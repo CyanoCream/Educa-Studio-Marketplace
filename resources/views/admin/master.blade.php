@@ -78,13 +78,111 @@
 {{-- <script src="{{asset('dist/js/demo.js')}}"></script> --}}
 <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
 <script src="{{asset('dist/js/pages/dashboard.js')}}"></script>
+<script src="{{asset('js/jquery-1.12.4.min.js')}}"></script>
+<script src="{{asset('js/bootstrap.min.js')}}"></script>
+<script src="{{asset('js/chosen.min.js')}}"></script>
+<script src="{{asset('js/countdown.min.js')}}"></script>
+<script src="{{asset('js/jquery.scrollbar.min.js')}}"></script>
+<script src="{{asset('js/lightbox.min.js')}}"></script>
+<script src="{{asset('js/magnific-popup.min.js')}}"></script>
+<script src="{{asset('js/slick.min.js')}}"></script>
+<script src="{{asset('js/jquery.zoom.min.js')}}"></script>
+<script src="{{asset('js/threesixty.min.js')}}"></script>
+<script src="{{asset('js/jquery-ui.min.js')}}"></script>
+<script src="{{asset('js/mobilemenu.js')}}"></script>
+<script src="{{asset('js/functions.js')}}"></script>
+<script src="{{asset('js/jquery.min.js')}}"></script>
+<script src="{{asset('js/bootstrap.bundle.min.js')}}"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/vue@2.7.8/dist/vue.js"></script>
 
-<script>
-  $(function () {
-      bsCustomFileInput.init();
-  });
+
 </script>
 
 @stack('script')
 </body>
 </html>
+<script>
+  
+var appComponent = new Vue({
+        el: "#app",
+        data: {
+
+            produks: [],
+            pesanan: [],
+            users: [],
+            penyelenggara: [],
+            
+        },
+        mounted(){
+            $(document).ready(function () {
+                $.ajax({
+                url: "/api/get-produk",
+                success: function(rsp){
+                    console.log(rsp);
+                    appComponent.produks = rsp;
+                    // console.log(this.products);
+                }
+                });
+                $.ajax({
+                    url: "/api/get-order",
+                    success: function(rsp){
+                        console.log(rsp);
+                        appComponent.pesanan = rsp;
+                        // console.log(this.products);
+                }
+                });
+                $.ajax({
+                    url: "/api/get-users",
+                    success: function(rsp){
+                        console.log(rsp);
+                        appComponent.users = rsp;
+                        // console.log(this.products);
+                }
+                });
+                $.ajax({
+                    url: "/api/get-penyelenggara",
+                    success: function(rsp){
+                        console.log(rsp);
+                        appComponent.penyelenggara = rsp;
+                        // console.log(this.products);
+                }
+                });
+                
+
+            });
+        },
+        
+        computed: {
+            
+        },
+        methods: {
+            deleteData(p){
+                if (confirm('yakin?????')) {
+                    $.get("/api/delete-produk",{data:p},
+                        function (data) {
+                            location.reload();
+                        },
+                    );
+                }
+            },
+            getData(p){
+                window.location.href = 'produk-detail/' + p ;
+                // alert(p);
+            },
+            getDataProduk(p){
+                window.location.href = 'api/get-pesanan//' + p ;
+                // alert(p);
+            },
+            // kategoriFilter(id) {
+            //     return this.produk.filter((produk)=> produk.id_kategori = id)
+            // }
+        }
+    });
+
+    $(function () {
+      bsCustomFileInput.init();
+    });
+   
+
+</script>
