@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 use App\Produk;
+use App\Order;
+use App\Penyelenggara;
 use Illuminate\Http\Request;
 
 class AdminProdukController extends Controller
@@ -27,6 +29,16 @@ class AdminProdukController extends Controller
     {
         $produks = produk::all();
         return $produks;
+    }
+
+    public function countProduk()
+    {
+        $produks = Produk::all()->count();
+        $order = Order::all()->count();
+        $penyelenggara = Penyelenggara::all()->count();
+        
+        return view{{route ('home')}};
+    
     }
 
     // /**

@@ -2,6 +2,8 @@
 
 
 @section('content')
+
+
 <!-- Content Wrapper. Contains page content -->
 <div class="content-wrapper">
     <!-- Content Header (Page header) -->
@@ -45,7 +47,7 @@
 
                     <div class="small-box bg-success">
                         <div class="inner">
-                            <h3>16</h3>
+                            <h3>{{ $produks }}</h3>
                             <p>Produk</p>
                         </div>
                         <div class="icon">

@@ -40,6 +40,7 @@ Route::get('/pilihan', function () {
 
 
 
+
 Route::get('/premium', function () {
     return view('premium.index');
 })->name('premium.index');
@@ -50,6 +51,8 @@ Route::get('/topup', function () {
 
 
 Route::get('/produk-detail/{id}','ProdukController@show')->name('produk-detail');
+
+Route::get('/count','AdminProdukController@countProduk')->name('count');
 
 Route::get('/akun', function () {
     return view('akun.index');
