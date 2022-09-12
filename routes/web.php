@@ -37,10 +37,6 @@ Route::get('/pilihan', function () {
     return view('katalog.pilihan');
 })->name('pilihan');
 
-
-
-
-
 Route::get('/premium', function () {
     return view('premium.index');
 })->name('premium.index');

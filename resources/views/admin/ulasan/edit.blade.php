@@ -23,7 +23,7 @@
 		<div class="container-fluid">
 			<div class="card">
 				<div class="card-body">
-					<form action="{{ route('updateUlasan',['id'=>$ulasan->id]) }}" method="post">
+					<form action="{{ route('updateUlasan',['id'=>$ulasan->id]) }}" method="post" id="form-edit">
 						{{ csrf_field() }}
 
 						<div class="form-group">
