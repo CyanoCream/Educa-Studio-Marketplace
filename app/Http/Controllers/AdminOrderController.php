@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 use App\Order;
+use App\Produk;
+use App\Penyelenggara;
 use Illuminate\Http\Request;
 class AdminOrderController extends Controller
 {
@@ -13,6 +15,22 @@ class AdminOrderController extends Controller
     public function index()
     {
         $orders = order::all();
+
+        // foreach ($orders as &$o) {
+        //     $produk = Produk::find($o['id_produk']);
+        //     // $penyelenggara = Penyelenggara::find($o['id_penyelenggara'])
+        //     if($produk){
+        //         $o['produk'] = $produk->nama_produk;
+        //     }else{
+        //         $o['produk'] = '-';
+            // }
+            
+        //     if($penyelenggara){
+        //         $o['id_penyelenggara'] = $penyelenggara->nama_penyelenggara;
+        //     }else{
+        //         $o['id_penyelenggara'] = '-';
+        //     }
+        // }
 
         return view('admin.order.index', [
             'orders' => $orders

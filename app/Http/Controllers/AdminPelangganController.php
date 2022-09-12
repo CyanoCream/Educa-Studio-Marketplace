@@ -140,7 +140,7 @@ class AdminPelangganController extends Controller
         } else {
             $fileName = 'noimage.png';
         }
-
+        
         $pelanggan->foto = $fileName;
         $pelanggan->nama_pelanggan = $request->nama_pelanggan;
         $pelanggan->no_telp = $request->no_telp;

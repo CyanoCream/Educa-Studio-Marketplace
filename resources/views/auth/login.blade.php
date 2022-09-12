@@ -156,7 +156,7 @@
                                 </div>
                             </form>
                         <div class="row">
-                            <p>Don't have an account? <a href="#" id="tes" data-toggle="modal" data-target="#register">Register Here</a></p>
+                            <p>Don't have an account? <a href="{{ route('daftar') }}">Register Here</a></p>
                         </div>
                 </div>
             </div>

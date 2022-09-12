@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Produk;
+use App\User;
 
 class AdminHomeController extends Controller
 {
@@ -23,6 +25,14 @@ class AdminHomeController extends Controller
      */
     public function index()
     {
-        return view('admin.dashboard2');
+        $produks = Produk::all();
+        return view('admin.dashboard');
     }
+    public function getUser()
+    {
+        $users = User::all();
+
+        return $users;
+    }
+
 }

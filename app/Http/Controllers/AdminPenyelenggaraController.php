@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 use App\Penyelenggara;
+use App\Produk;
 use Illuminate\Http\Request;
 
 class AdminPenyelenggaraController extends Controller
@@ -14,6 +15,18 @@ class AdminPenyelenggaraController extends Controller
     public function index()
     {
         $penyelenggaras = penyelenggara::all();
+        
+        foreach ($penyelenggaras as &$p) {
+            $produk = Produk::find($p['id_produk']);
+            if($produk){
+                $p['produk'] = $produk->nama_produk;
+            }else{
+                $p['produk'] = '-';
+            }
+
+        }
+        
+        
 
         return view('admin.penyelenggara.index', [
             'penyelenggaras' => $penyelenggaras

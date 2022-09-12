@@ -21,6 +21,23 @@ Route::get('/', function () {
 Route::get('/katalog', function () {
     return view('katalog.index');
 })->name('katalog.index');
+Route::get('/katalog/aktivitas', function () {
+    return view('katalog.aktivitas');
+})->name('aktivitas');
+Route::get('/kursus', function () {
+    return view('katalog.kursus');
+})->name('kursus');
+Route::get('/gratis', function () {
+    return view('katalog.gratis');
+})->name('gratis');
+Route::get('/experience', function () {
+    return view('katalog.experience');
+})->name('experience');
+Route::get('/pilihan', function () {
+    return view('katalog.pilihan');
+})->name('pilihan');
+
+
 
 
 
@@ -35,9 +52,16 @@ Route::get('/topup', function () {
 
 Route::get('/produk-detail/{id}','ProdukController@show')->name('produk-detail');
 
+Route::get('/count','AdminProdukController@countProduk')->name('count');
+
 Route::get('/akun', function () {
     return view('akun.index');
 })->name('akun.index');
+
+
+Route::get('/daftar', function () {
+    return view('akun.daftar');
+})->name('daftar');
 
 Auth::routes();
 
@@ -52,6 +76,7 @@ Route::post('/logout', 'LoginController@logout')->name('logout');
 Auth::routes();
 
 Route::get('/home', 'AdminHomeController@index')->name('home');
+Route::get('/countproduk', 'AdminHomeController@CountProduk')->name('countProduk');
 
 Route::get('produk-detail/{id}', 'ProdukController@show');
 
@@ -99,6 +124,7 @@ Route::get('/gambar/{gambar}/delete', 'AdminGambarController@destroy')->name('de
 Route::get('/hubungi_kami', 'AdminHubungikamiController@index')->name('daftarHubungi_Kami');
 Route::get('/hubungi_kami/create', 'AdminHubungikamiController@create')->name('createHubungi_Kami');
 Route::post('/hubungi_kami/create', 'AdminHubungikamiController@store')->name('storeHubungi_Kami');
+Route::post('/hubungi_kami/create/user', 'AdminHubungikamiController@userstore')->name('userHubungi_Kami');
 Route::get('/hubungi_kami/{hubungi_kami}/edit', 'AdminHubungikamiController@edit')->name('editHubungi_Kami');
 Route::post('/hubungi_kami/{hubungi_kami}/edit', 'AdminHubungikamiController@update')->name('updateHubungi_Kami');
 Route::get('/hubungi_kami/{hubungi_kami}/delete', 'AdminHubungikamiController@destroy')->name('deleteHubungi_Kami');
@@ -175,4 +201,5 @@ Route::get('/user/create', 'AdminUserController@create')->name('createUser');
 Route::post('/user/create', 'AdminUserController@store')->name('storeUser');
 Route::get('/user/{user}/edit', 'AdminUserController@edit')->name('editUser');
 Route::post('/user/{user}/edit', 'AdminUserController@update')->name('updateUser');
+Route::post('/user/{user}/update', 'AdminUserController@userupdate')->name('userUpdate');
 Route::get('/user/{user}/delete', 'AdminUserController@destroy')->name('deleteUser');

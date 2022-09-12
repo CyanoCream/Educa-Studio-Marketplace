@@ -50,6 +50,7 @@ Route::get('/get-produk-aktivitas', 'ProdukController@getProdukAktivitas');
 Route::get('/get-produk-kursus', 'ProdukController@getProdukKursus');
 Route::get('/get-produk-Experience', 'ProdukController@getProdukExperience');
 Route::get('/get-produk-kesehatan', 'ProdukController@getProdukKesehatan');
+Route::get('/get-produk-gratis', 'ProdukController@getProdukGratis');
 Route::post('/insert-produk', 'ProdukController@insertProduk');
 Route::get('delete-produk', 'ProdukController@deleteProduk');
 Route::get('/edit-produk/{id}', 'ProdukController@editProduk');
@@ -67,6 +68,10 @@ Route::get('/get-pesanan', 'KeranjangController@getKeranjang');
 Route::post('/insert-pesanan', 'KeranjangController@insertKeranjang');
 Route::get('/delete-pesanan/{id}', 'KeranjangController@deleteKeranjang');
 Route::get('/edit-pesanan{id}', 'KeranjangController@editKeranjang');
+
+// Dasboard-admin
+Route::get('/get-users', 'AdminHomeController@getUser');
+Route::get('/get-order', 'AdminOrderController@getOrder');
 
 // Tabel-Order
 Route::get('/get-pesanan', 'OrderController@getOrder');

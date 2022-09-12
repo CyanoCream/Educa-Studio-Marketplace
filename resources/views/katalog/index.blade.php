@@ -75,16 +75,14 @@
                         </form>
                     </div>
                 </div>
-                <div id="app" class=" auto-clear kodory-products ">
+                <div id="app" class=" auto-clear kodory-products">
                     <ul  class="row products columns-3">
-                        <li v-for="p in produks" :key="p.id" class="product-item wow fadeInUp product-item rows-space-30 col-lg-4 col-lg-4 col-lg-4 col-lg-
-                        style-01 post-24 product type-product status-publish has-post-thumbnail product_cat-chair product_cat-table product_cat-new-arrivals product_tag-light 
-                        product_tag-hat product_tag-sock first instock featured shipping-taxable purchasable product-type-variable has-default-attributes"
+                        <li v-for="p in produks" :key="p.id" class="product-item wow fadeInUp product-item rows-space-30 col-bg-4 col-xl-4 col-lg-6 col-md-6 col-sm-6 col-ts-6 style-01 post-24 product type-product status-publish has-post-thumbnail product_cat-chair product_cat-table product_cat-new-arrivals product_tag-light product_tag-hat product_tag-sock first instock featured shipping-taxable purchasable product-type-variable has-default-attributes"
                             data-wow-duration="1s" data-wow-delay="0ms" data-wow="fadeInUp">
-                            <div class="product-inner tooltip-left"  style="left: 150px;">
+                            <div class="product-inner tooltip-left">
                                 <div class="product-thumb">
                                     <a class="thumb-link" href="#" v-on:click="getData(p.id)">
-                                        <img class="img-responsive" width="600px" height="778" :src="'/images/'+ p.gambar[0].gambar" alt="">
+                                        <img class="img-responsive" width="600" height="778" :src="'/images/'+ p.gambar[0].gambar" alt="">
                                     </a>
                                     <div class="flash">
                                         <span class="onnew"><span class="text">New</span></span>
@@ -126,14 +124,17 @@
                                     <a href="#" class="button yith-wcqv-button" data-product_id="24">Quick
                                         View</a>
                                     <div class="group-button">
-                                        {{-- <div class="yith-wcwl-add-to-wishlist">
+                                        <div class="yith-wcwl-add-to-wishlist">
                                             <div class="yith-wcwl-add-button show">
                                                 <a href="wishlist.html" class="add_to_wishlist">Add to Wishlist</a>
                                             </div>
-                                        </div> --}}
+                                        </div>
+                                        <div class="kodory product compare-button">
+                                            <a href="compare.html" class="compare button">Compare</a>
+                                        </div>
                                         <a href="#" class="button yith-wcqv-button">Quick View</a>
                                         <div class="add-to-cart">
-                                            <a href="#" v-on:click="getData(p.id)"
+                                            <a href="cart.html"
                                                 class="button product_type_variable add_to_cart_button">Select
                                                 options</a>
                                         </div>
@@ -144,7 +145,7 @@
                                         <a href="#"  v-on:click="getData(p.id)">@{{ p.nama_produk }} </a>
                                     </h3>
                                     <span class="price"><span class="kodory-Price-amount amount"><span
-                                                class="kodory-Price-currencySymbol">$</span>@{{ p.harga_produk }}</span>
+                                                class="kodory-Price-currencySymbol">Rp.</span>@{{ p.harga_produk }}</span>
                                     <div class="kodory-product-details__short-description">
                                         <p>@{{ p.keterangan }}</p>
                                         <ul>
@@ -161,7 +162,9 @@
                                                 <a href="wishlist.html" class="add_to_wishlist">Add to Wishlist</a>
                                             </div>
                                         </div>
-
+                                        <div class="kodory product compare-button">
+                                            <a href="compare.html" class="compare button">Compare</a>
+                                        </div>
                                         <a href="#" class="button yith-wcqv-button">Quick View</a>
                                         <div class="add-to-cart">
                                             <a href="single-product.html"
@@ -177,7 +180,7 @@
                 <div class="shop-control shop-after-control">
                 </div>
             </div>
-            {{-- <div class="sidebar col-xl-3 col-lg-4 col-md-4 col-sm-12">
+            <div class="sidebar col-xl-3 col-lg-4 col-md-4 col-sm-12">
                 <div id="widget-area" class="widget-area shop-sidebar">
                     <div id="kodory_product_search-2" class="widget kodory widget_product_search">
                         <form class="kodory-product-search">
@@ -186,44 +189,29 @@
                             <button type="submit" value="Search">Search</button>
                         </form>
                     </div>
-                    <div id="kodory_price_filter-2" class="widget kodory widget_price_filter">
-                        <h2 class="widgettitle">Filter By Price<span class="arrow"></span></h2>
-                        <form method="get" action="#">
-                            <div class="price_slider_wrapper">
-                                <div data-label-reasult="Range:" data-min="0" data-max="1000" data-unit="$"
-                                    class="price_slider" data-value-min="100" data-value-max="800">
-                                </div>
-                                <div class="price_slider_amount">
-                                    <button type="submit" class="button">Filter</button>
-                                    <div class="price_label">
-                                        Price: <span class="from">$1.00</span> — <span class="to">$100.00</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </form>
-                    </div>
+
                     <div id="kodory_kodory_layered_nav-4"
                         class="widget kodory_widget_layered_nav widget_layered_nav">
                         <h2 class="widgettitle">Filter By Katalog<span class="arrow"></span></h2>
                         <ul class="nav flex-column">
-                            <li class="nav-item">
-                              <a class="nav-link" href="#">Aktivitas</a>
+                            <li class="nav-item" ">
+                                <a class="nav-link" style="color: rgb(0, 140, 255); href="{{route ('katalog.index')}}">Semua</a>
                             </li>
                             <li class="nav-item">
-                              <a class="nav-link" href="#">Kursus</a>
+                              <a class="nav-link" href="{{route ('aktivitas')}}">Aktivitas</a>
                             </li>
                             <li class="nav-item">
-                              <a class="nav-link" href="#">Experience</a>
+                              <a class="nav-link" href="{{route ('kursus')}}">Kursus</a>
                             </li>
                             <li class="nav-item">
-                              <a class="nav-link" href="#">Activity Kit</a>
+                              <a class="nav-link" href="{{route ('experience')}}">Experience</a>
                             </li>
                             <li class="nav-item">
-                              <a class="nav-link" href="#">Gratis</a>
+                              <a class="nav-link" href="{{route ('gratis')}}">Gratis</a>
                             </li>
                           </ul>
                     </div>
-                    <div id="kodory_layered_nav-6"
+                    {{-- <div id="kodory_layered_nav-6"
                         class="widget kodory widget_layered_nav kodory-widget-layered-nav">
                         <h2 class="widgettitle">Price<span class="arrow"></span></h2>
                         <ul class="kodory-widget-layered-nav-list">
@@ -253,9 +241,9 @@
                                 </label>
                             </li>
                         </ul>
-                    </div>
+                    </div> --}}
                 </div><!-- .widget-area -->
-            </div> --}}
+            </div>
         </div>
     </div>
 </div>

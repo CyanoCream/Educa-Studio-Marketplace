@@ -21,50 +21,50 @@
             </div>
             <div class="modal-body">
 
-                <form action="{{ route('storePelanggan') }}" method="post" class="form">
-                    {{csrf_field()}}
+                <form action="{{ route('updatePelanggan',['id'=>$pelanggan->id]) }}" method="post" enctype="multipart/form-data">
+                    {{ csrf_field() }}
 
                     <div class="form-group">
                         <label for="foto">foto</label>
-                        <input type="file" name="foto" id="foto" class="form-control" required="required" placeholder="Masukkan foto">
+                        <input type="file" name="foto" id="foto" class="form-control" required="required" value="{{ $pelanggan->foto }}" placeholder="Masukkan foto">
                     </div>
 
                     <div class="form-group">
-                        <label for="nama_pelanggan">Nama</label>
-                        <input type="text" name="nama_pelanggan" id="nama_pelanggan" class="form-control" required="required" placeholder="Masukkan nama_pelanggan">
+                        <label for="nama_pelanggan">nama pelanggan</label>
+                        <input type="text" name="nama_pelanggan" id="nama_pelanggan" class="form-control" required="required" value="{{ $pelanggan->nama_pelanggan }}" placeholder="Masukkan nama_pelanggan">
                     </div>
 
                     <div class="form-group">
-                        <label for="no_telp">No Telp</label>
-                        <input type="text" name="no_telp" id="no_telp" class="form-control" required="required" placeholder="Masukkan no_telp">
+                        <label for="no_telp">no.telp</label>
+                        <input type="text" name="no_telp" id="no_telp" class="form-control" required="required" value="{{ $pelanggan->no_telp }}" placeholder="Masukkan no_telp">
                     </div>
 
                     <div class="form-group">
-                        <label for="alamat_pel">Alamat</label>
-                        <input type="text" name="alamat_pel" id="alamat_pel" class="form-control" required="required" placeholder="Masukkan alamat_pel">
+                        <label for="alamat_pel">alamat pelanggan</label>
+                        <input type="text" name="alamat_pel" id="alamat_pel" class="form-control" required="required" value="{{ $pelanggan->alamat_pel }}" placeholder="Masukkan alamat_pel">
                     </div>
 
                     <div class="form-group">
-                        <label for="provinsi_pel">Provinsi</label>
-                        <input type="text" name="provinsi_pel" id="provinsi_pel" class="form-control" required="required" placeholder="Masukkan provinsi_pel">
+                        <label for="provinsi_pel">provinsi pelanggan</label>
+                        <input type="text" name="provinsi_pel" id="provinsi_pel" class="form-control" required="required" value="{{ $pelanggan->provinsi_pel }}" placeholder="Masukkan provinsi_pel">
                     </div>
 
                     <div class="form-group">
-                        <label for="kota_pel">Kota</label>
-                        <input type="text" name="kota_pel" id="kota_pel" class="form-control" required="required" placeholder="Masukkan kota_pel">
+                        <label for="kota_pel">kota pelanggan</label>
+                        <input type="text" name="kota_pel" id="kota_pel" class="form-control" required="required" value="{{ $pelanggan->kota_pel }}" placeholder="Masukkan kota_pel">
                     </div>
 
                     <div class="form-group">
-                        <label for="kecamatan_pel">Kecamatan</label>
-                        <input type="text" name="kecamatan_pel" id="kecamatan_pel" class="form-control" required="required" placeholder="Masukkan kecamatan_pel">
+                        <label for="kecamatan_pel">kecamatan pelanggan</label>
+                        <input type="text" name="kecamatan_pel" id="kecamatan_pel" class="form-control" required="required" value="{{ $pelanggan->kecamatan_pel }}" placeholder="Masukkan kecamatan_pel">
                     </div>
 
                     <div class="text-right">
                         <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
                         <button type="submit" class="btn btn-primary">Simpan</button>
                     </div>
-                   
-        </div>
+                </form>
+            </div>
         </div>
     </div>
 </div>

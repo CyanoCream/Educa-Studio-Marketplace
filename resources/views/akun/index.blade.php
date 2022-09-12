@@ -8,7 +8,7 @@
                     <ul id="menu-top-center-menu" class="kodory-nav top-bar-menu" style="text-align-last: center">
                         <li id="menu-item-864" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-864">
                             <a class="kodory-menu-item-title" title="" href="#"><span
-                                    class="icon pe-7s-map-marker"></span>Store Direction</a>
+                                    class="icon pe-7s-map-marker"></span>Jl Kalisombo Salatiga</a>
                         </li>
                         <li id="menu-item-865"
                             class="menu-item menu-item-type-custom menu-item-object-custom menu-item-865"><a
@@ -55,24 +55,63 @@
     </div>
     <div class="card p-5 m-5" style="border-radius: 20px; background: rgb(110,73,158);
     background: linear-gradient(180deg, rgba(110,73,158,1) 0%, rgba(148,35,150,1) 53%, rgba(198,75,75,1) 100%);">
-        <div class="card m-2 text-center" style="border-radius: 20px">
+           <img src="/images/{{Auth::user()->foto}}" class="rounded mx-auto d-block" style="border: 4px solid #71c0ef; border-radius:50% !important;" width="13%" alt="Profile Picture">
+       <div class="card m-2 text-center" style="border-radius: 20px">
             <h2>{{ Auth::user()->name }}</h2>
+            @if (Auth::user()->role == 'penyelenggara')
+            <h6>Sebagai : <a>{{ Auth::user()->role }}</a></h6>
+            @endif
         </div>
         <div class="card p-5 mt-2 mr-5 mb-2 ml-5" style="border-radius: 20px;">
-            @include('edit_profile.pelanggan')
-            @include('daftar_peserta.index')
-            @include('daftar_alamat.index')
+            <div>
+                    <h5 class="d-flex justify-content-between">
+                    Nama Panggilan :<a>{{ Auth::user()->panggilan }}</a>
+                     </h5>
+                     <h5 class="d-flex justify-content-between">
+                        Email :<a>{{ Auth::user()->email }}</a>
+                    </h5>
+                    <h5 class="d-flex justify-content-between">
+                        Password :<a>**********</a>
+                    </h5>
+                    <h5 class="d-flex justify-content-between">
+                        Alamat :<a>{{ Auth::user()->alamat }}</a>
+                    </h5>
+                    <h5 class="d-flex justify-content-between">
+                        Tanggal Lahir :<a>{{ Auth::user()->tgl_lahir }}</a>
+                    </h5>
+                    <h5 class="d-flex justify-content-between">
+                        Provinsi :<a>{{ Auth::user()->provinsi }}</a>
+                    </h5>
+                    <h5 class="d-flex justify-content-between">
+                        Kota :<a>{{ Auth::user()->kota }}</a>
+                    </h5>
+                    <h5 class="d-flex justify-content-between">
+                        Kecamatan :<a>{{ Auth::user()->kecamatan }}</a>
+                    </h5>
+                    <h5 class="d-flex justify-content-between">
+                        Nomor Telephone :<a>{{ Auth::user()->notelp }}</a>
+                    </h5>
+
+                <hr>
+                @include('edit_profile.edit_profile')
+            </div>     
         </div>
-    
         <div class="card p-5 mt-2 mr-5 mb-2 ml-5" style="border-radius: 20px;">
+            
             @include('merchant.index')
+            @include('kelas_online.index')
+            {{-- @include('daftar_peserta.index')
+            @include('daftar_alamat.index') --}}
+        </div>
+
+{{--     
+        <div class="card p-5 mt-2 mr-5 mb-2 ml-5" style="border-radius: 20px;">
             
             @include('status_order.index')
             @include('pengiriman.index')
-        </div>
-        <div class="card p-5 mt-2 mr-5 mb-2 ml-5" style="border-radius: 20px;">
-            @include('kelas_online.index')
-        </div>
+        </div> --}}
+        {{-- <div class="card p-5 mt-2 mr-5 mb-2 ml-5" style="border-radius: 20px;">
+        </div> --}}
         <div class="card p-5 mt-2 mr-5 mb-2 ml-5" style="border-radius: 20px;">
             @include('ketentuan.index')
             @include('kebijakan_privasi.index')
@@ -80,9 +119,9 @@
             @include('tentang_kami.index')
         </div>
                <form action="{{ route ('logout')}}" method="post">
-                <div class="card m-2 text-center" style="border-radius: 20px">
+                <div style="border-radius: 20px; padding-left: 25%; padding-right:5%;">
                 {{ csrf_field() }}
-            <button style="background-color:#71c0ef; "type="submit">Logout</button>
+            <button class="btn btn-primary" type="submit">Logout</button>
            
         </div></form>
         
