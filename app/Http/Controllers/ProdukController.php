@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 use App\Produk;
 use App\Order;
+use App\Gambar;
 use Illuminate\Http\Request;
 use Auth;
 
@@ -318,7 +319,7 @@ class ProdukController extends Controller
         public function ajax(Request $request)
         {
             $name = $request->name;
-            $results = Produk::where('nama_produk', 'like','%'.$name.'%')->get();
+            $results = Produk::where('nama_produk', 'like','%'.$name.'%')->with('gambar')->get();
             // return $results;
 
 
