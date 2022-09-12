@@ -54,7 +54,11 @@
                                 <li id="menu-item-996"
                                 class="menu-item menu-item-type-post_type menu-item-object-megamenu menu-item-996 parent parent-megamenu item-megamenu menu-item-has-children">
                                 <a class="kodory-menu-item-title" title=""
+<<<<<<< HEAD
                                    href="{{ route ('Penyelenggara')}}">Penyelenggara</a>
+=======
+                                   href="{{ route ('penyelenggaras')}}">Penyelenggara</a>
+>>>>>>> 33c7bf63f3777bb2dfe2f1eccec5f9f948f053d7
                                 </li>
                                 @elseif(Auth::user()->role == 'admin')
                                 <li id="menu-item-996"
@@ -123,12 +127,13 @@
                                             <span class="flaticon-magnifying-glass-1"></span>
                                         </a>
                                     </div>
+                                    <div>
                                     <div class="block-search">
                                         <form role="search" method="get"
-                                              class="form-search block-search-form kodory-live-search-form">
+                                              class="form-search block-search-form kodory-live-search-form" style="padding-right: 2px;">
                                             <div class="form-content search-box results-search">
                                                 <div class="inner">
-                                                    <input autocomplete="off" class="searchfield txt-livesearch input"
+                                                    <input v-model="search" autocomplete="off" id="input" class="searchfield txt-livesearch input"
                                                            name="s" value="" placeholder="Search here..." type="text">
                                                 </div>
                                             </div>
@@ -149,9 +154,15 @@
                                             <button type="submit" class="btn-submit">
                                                 <span class="flaticon-magnifying-glass-1"></span>
                                             </button>
-                                        </form><!-- block search -->
+                                            </form><!-- block search -->
+                                          
+                                            <div id="read" class="m-5">
+            
+                                            </div>
+                                        
                                     </div>
                                 </div>
+                            </div>
                                 <div class="kodory-dropdown-close"></div>
                                 <div class="menu-item block-user block-dreaming kodory-dropdown">                                                                   
                                         @guest

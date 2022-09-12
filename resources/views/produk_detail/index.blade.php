@@ -78,7 +78,7 @@
                                     <form action="{{ route ('checkout', [$id = $produk->id]) }}" class="variations_form cart" method="post">
                                         {{csrf_field()}}
                                         <input type="hidden" name="id_produk" value="{{$produk->id}}">
-                                        <input type="hidden" name="id_penyelenggara" value="{{$produk->penyelenggara[0]->id}}">
+                                        {{-- <input type="hidden" name="id_penyelenggara" value="{{$produk->penyelenggara[0]->id}}"> --}}
                                     <div class="single_variation_wrap">
                                         <div class="kodory-variation single_variation"></div>
                                         <div class="kodory-variation-add-to-cart variations_button ">
@@ -261,11 +261,6 @@
     </div>
 </div>
 
-{{-- Modal tambahkan Peserta --}}
-<div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-lg">
-      <div class="modal-content">
-        ...
       </div>
     </div>
   </div>
