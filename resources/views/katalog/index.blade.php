@@ -15,8 +15,6 @@
     <div class="header-wrap-stick">
         <div class="header-position">
             <div class="header-nav">
-                <div class="container">
-                    <div class="kodory-menu-wapper"></div>
                     <div class="header-nav-inner">
                         <div class="phone-header" style=" top : 50px;">
                             <div class="phone-inner">

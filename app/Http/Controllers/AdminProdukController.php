@@ -37,7 +37,7 @@ class AdminProdukController extends Controller
     public function create(Request $request)
     {
         return view('admin.produk.create');
-        // $data = $request->all();
+      
 
         // $produk = new Produk($data);
         // $produk->save();
