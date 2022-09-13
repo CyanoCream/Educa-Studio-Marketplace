@@ -18,7 +18,7 @@ class CreateProduksTable extends Migration
             $table->timestamps();
             $table->string('nama_produk',255);
             $table->integer('id_penyelenggara')->unsigned();
-            $table->foreign('id_penyelenggara')->references('id')->on('tbl_penyelenggara');
+            $table->foreign('id_penyelenggara')->references('id')->on('tbl_penyelenggaras');
             $table->string('kategori');
             $table->char('harga_produk');
             $table->string('status_pertemuan');
@@ -29,6 +29,8 @@ class CreateProduksTable extends Migration
             $table->string('keterangan');
             $table->string('manfaat');
             $table->string('bundling');
+            $table->integer('id_ulasan')->unsigned();
+            $table->foreign('id_ulasan')->references('id')->on('tbl_ulasans');
 
         });
     }
@@ -41,5 +43,7 @@ class CreateProduksTable extends Migration
     public function down()
     {
         Schema::dropIfExists('tbl_produks');
+        $table->dropForeign('tbl_produks_id_penyelenggara_foreign');
+        $table->dropForeign('tbl_produks_id_ulasan_foreign');
     }
 }
