@@ -46,20 +46,7 @@ class AdminPelangganController extends Controller
      */
     public function store(Request $request)
     {
-        // $validatedData = $request->validate([
-        //     'foto' => 'image|mimes:png,jpg',
-        //     'waktu_daftar' => 'date',
-        //     'nama_pelanggan' => 'string|max:255' ,
-        //     'email' => 'string|max:255' ,
-        //     'password' => 'string|max:255' ,
-        //     'no_telp' => 'string|max:255' ,
-        //     'alamat_pel' => 'string|max:255' ,
-        //     'provinsi_pel' => 'string|max:255' ,
-        //     'kota_pel' => 'string|max:255' ,
-        //     'kecamatan_pel' => 'string|max:255' ,
-        //     'level_user' => 'integer',
-        // ]);
-
+        
         if ($request->hasFile('foto')) {
             $foto = $request->file('foto');
             $fileName = str_random(30).'.'.$foto->getClientOriginalExtension();
@@ -116,19 +103,6 @@ class AdminPelangganController extends Controller
      */
     public function update(Request $request, $id)
     {
-        // $validatedData = $request->validate([
-        //     'foto' => 'required|string|max:255' ,
-        //     'waktu_daftar' => 'required|string|max:255' ,
-        //     'nama_pelanggan' => 'required|string|max:255' ,
-        //     'email_pelanggan' => 'required|string|max:255' ,
-        //     'password' => 'required|string|max:255' ,
-        //     'no_telp' => 'required|string|max:255' ,
-        //     'alamat_pel' => 'required|string|max:255' ,
-        //     'provinsi_pel' => 'required|string|max:255' ,
-        //     'kota_pel' => 'required|string|max:255' ,
-        //     'kecamatan_pel' => 'required|string|max:255' ,
-        //     'level_user' => 'required|integer' ,
-        // ]);
 
         $pelanggan = Pelanggan::find($id);
 
