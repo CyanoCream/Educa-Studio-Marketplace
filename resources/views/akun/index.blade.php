@@ -247,7 +247,7 @@
                                 </span>
                             </span>
                         </a>
-                    </div>
+                    </div> 
                     <div class="rows-space-0">
                         <a href="#" class="item">
                             <img class="img-responsive" src="{{ asset('images/poto 1.5.jpg') }}" alt="About">

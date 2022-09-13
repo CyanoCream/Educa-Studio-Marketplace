@@ -83,7 +83,8 @@
                                 <td>{{ $detail_order->jumlah }}</td>
                                 <td>{{ $detail_order->total_harga }}</td>
                                 <td>
-                                    <a href="{{route('editDetail_Order', ['id' => $detail_order->id])}}"
+                                    <a onclick="edit(this)"
+                                        data-url="{{route('editDetail_Order', ['id' => $detail_order->id])}}"
                                         class="btn btn-warning btn-sm" role="button">Edit</a>
                                     <a onclick="confirmDelete(this)"
                                         data-url="{{route('deleteDetail_Order', ['id' => $detail_order->id])}}"
@@ -118,6 +119,20 @@
             'title': 'Konfirmasi Hapus',
             'text': 'Apakah kamu yakin ingin menghapus data ini?',
             'dangerMode': true,
+            'buttons': true
+        }).then(function (value) {
+            if (value) {
+                window.location = url;
+            }
+        })
+    }
+
+    edit = function (button) {
+        var url = $(button).data('url');
+        swal({
+            'title': 'Konfirmasi Edit',
+            'text': 'Apakah kamu yakin ingin mengedit data ini?',
+            'primaryMode': true,
             'buttons': true
         }).then(function (value) {
             if (value) {

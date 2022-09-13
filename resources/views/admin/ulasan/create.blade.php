@@ -45,7 +45,7 @@
                             <div class="text-right">
                                 <a href="{{ route('daftarUlasan') }}" class="btn btn-outline-secondary mr-2"
                                     role="button">Batal</a>
-                                <button type="submit" class="btn btn-primary">Simpan</button>
+                                <button type="submit" onclick="alert('Anda Berhasil Simpan')" class="btn btn-primary">Simpan</button>
                                 {{-- <a onclick="save(this)" data-url="{{route('storeUlasan', ['id' => $ulasan->id])}}"
                                     class="btn btn-primary btn-sm" role="button">Simpan</a> --}}
                             </div>
@@ -56,19 +56,3 @@
         </div>
     </div>
 @endsection
-
-{{-- <script>
-    save = function (button) {
-        // var url = $(button).data('url');
-        swal({
-            'title': 'Konfirmasi Simpan',
-            'text': 'Apakah kamu yakin ingin menyimpan data ini?',
-            'primaryMode': true,
-            'buttons': true
-        }).then(function (value) {
-            if (value) {
-                window.location = url;
-            }
-        })
-    }
-</script> --}}

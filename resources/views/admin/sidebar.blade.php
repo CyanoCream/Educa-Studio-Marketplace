@@ -105,11 +105,15 @@
                         <p>User</p>
                 </li>
                 <li class="nav-item">
-                    <a href="{{route('logout')}}" class="nav-link">
-                        <i class="nav-icon far fa-circle text-info"></i>
-                        <p>Logout</p>
-                    </a>
+                   
+                    <a></a>
                 </li>
+                <form action="{{ route ('logout')}}" method="post">
+                    <div>
+                    {{ csrf_field() }}
+                <button class="btn btn-lg btn-info btn-block btn-sm" type="submit"><i class="fa fa-reply" aria-hidden="true"></i></button>
+               
+            </div></form>
             </ul>
         </nav>
         <!-- /.sidebar-menu -->

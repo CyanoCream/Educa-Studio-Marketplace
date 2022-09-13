@@ -72,7 +72,8 @@
                                 <td><img src="/images/{{ $gambar->gambar }}" alt="" width="100px"></td>
                                 <td>{{ $gambar->id_produk }}</td>
                                 <td>
-                                    <a href="{{route('editGambar', ['id' => $gambar->id])}}"
+                                    <a onclick="edit(this)"
+                                        data-url="{{route('editGambar', ['id' => $gambar->id])}}"
                                         class="btn btn-warning btn-sm" role="button">Edit</a>
                                     <a onclick="confirmDelete(this)"
                                         data-url="{{route('deleteGambar', ['id' => $gambar->id])}}"
@@ -107,6 +108,20 @@
             'title': 'Konfirmasi Hapus',
             'text': 'Apakah kamu yakin ingin menghapus data ini?',
             'dangerMode': true,
+            'buttons': true
+        }).then(function (value) {
+            if (value) {
+                window.location = url;
+            }
+        })
+    }
+
+    edit = function (button) {
+        var url = $(button).data('url');
+        swal({
+            'title': 'Konfirmasi Edit',
+            'text': 'Apakah kamu yakin ingin mengedit data ini?',
+            'primaryMode': true,
             'buttons': true
         }).then(function (value) {
             if (value) {
