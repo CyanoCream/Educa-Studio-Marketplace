@@ -100,7 +100,7 @@
     </div>
 </div>
 @endsection
-@section('addCss')
+@section('style')
 <link rel="stylesheet" href="https://cdn.datatables.net/1.12.1/css/jquery.dataTables.min.css">
 <link rel="stylesheet" href="{{ asset('css/dataTables.bootstrap4.min.css') }}">
 @endsection

@@ -45,9 +45,8 @@
                             <div class="text-right">
                                 <a href="{{ route('daftarUlasan') }}" class="btn btn-outline-secondary mr-2"
                                     role="button">Batal</a>
-                                <button type="submit" onclick="alert('Anda Berhasil Simpan')" class="btn btn-primary">Simpan</button>
-                                {{-- <a onclick="save(this)" data-url="{{route('storeUlasan', ['id' => $ulasan->id])}}"
-                                    class="btn btn-primary btn-sm" role="button">Simpan</a> --}}
+                                <button type="submit" onclick="save(this)" class="btn btn-primary">Simpan</button>
+                                {{-- <a onclick="save(this)" class="btn btn-primary" type="submit" role="button">Simpan</a> --}}
                             </div>
                         </form>
                     </div>
@@ -55,4 +54,11 @@
             </div>
         </div>
     </div>
+
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+<script>
+    save = function (button){
+        swal("Sukses", "You clicked the button!", "success")
+    }
+</script>
 @endsection
