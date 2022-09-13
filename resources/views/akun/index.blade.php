@@ -53,8 +53,8 @@
             </div>
         </div>
     </div>
-    <div class="card p-5 m-5" style="border-radius: 20px; background: rgb(110,73,158);
-    background: linear-gradient(180deg, rgba(110,73,158,1) 0%, rgba(148,35,150,1) 53%, rgba(198,75,75,1) 100%);">
+    <div class="card p-5 m-5" style="border-radius: 20px; background: rgb(217, 193, 247);
+    background: linear-gradient(180deg, rgb(234, 219, 255) 0%, rgb(254, 203, 255) 53%, rgb(242, 218, 218) 100%);">
            <img src="/storage/images/{{Auth::user()->foto}}" class="rounded mx-auto d-block" style="border: 4px solid #71c0ef; border-radius:50% !important;" width="13%" alt="Profile Picture">
        <div class="card m-2 text-center" style="border-radius: 20px">
             <h2>{{ Auth::user()->name }}</h2>

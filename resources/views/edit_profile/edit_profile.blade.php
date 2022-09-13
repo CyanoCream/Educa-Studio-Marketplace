@@ -75,7 +75,7 @@
                         </div>
                         <div class="css-4r2xna">
                             <div class="css-utaa48"><strong>Kota </strong></div>
-                            <input label="kota" placeholder="Kota" name=kota" type="text" rows="1" class="css-13f9adq w-100" value="{{ Auth::user()->kota }}">
+                            <input label="kota" placeholder="Kota" name="kota" type="text" rows="1" class="css-13f9adq w-100" value="{{ Auth::user()->kota }}">
                         </div>
                         <div class="css-4r2xna">
                             <div class="css-utaa48"><strong>Kecamatan </strong></div>
