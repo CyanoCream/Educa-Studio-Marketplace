@@ -65,14 +65,14 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="btn-middle">
+                                {{-- <div class="btn-middle">
                                     <button color="primary" type="button" class="css-1yzajj0">Daftar Sekarang</button>
-                                </div>
+                                </div> --}}
                             </div>
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
-          <button type="button" class="btn btn-primary">Submit</button>
+          <button type="button" class="btn btn-primary" data-dismiss="modal">Submit</button>
         </div>
       </div>
     </div>

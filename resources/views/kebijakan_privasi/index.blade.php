@@ -41,11 +41,9 @@
               <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
                 <div class="card-body">
                   <ul>
-                    <li>Kiddo.id adalah merek dagang dari PT Kebaikan Anak Indonesia.</li>
-                    <li>Platform adalah tempat berlangsungnya aktivitas antara Kiddo.id dan penggunanya, seperti namun tidak terbatas pada situs web, aplikasi, dan lainnya.</li>
-                    <li>KiddoPoint adalah poin loyalitas dari Kiddo.id yang diberikan kepada para pengguna dengan syarat dan ketentuan yang berlaku.</li>
-                    <li>Produk dan Layanan adalah semua barang dan aktivitas yang dijual di dalam platform Kiddo.id.</li>
-                    <li>Penyedia Aktivitas adalah mitra Kiddo.id dalam menghadirkan Produk dan Layanan untuk pada pengguna.</li>
+                    <li>Informasi yang kami ambil dari pengguna kami terbagi dalam dua kategori:</li>
+                    <li>1. data pribadi yang secara suka rela Anda berikan ketika Anda mendaftar, memesan produk atau layanan tertentu, mengikuti diskusi/survei, atau menggunakan fitur dalam platform kami.</li>
+                    <li>2. penelusuran informasi yang dikumpulkan ketika Anda menggunakan fitur di dalam platform kami.</li>
                   </ul>
                 </div>
               </div>
@@ -54,28 +52,27 @@
               <div class="card-header" id="headingTwo">
                 <h2 class="mb-0">
                   <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                    Collapsible Group Item #2
+                    BERBAGI INFORMASI DENGAN PIHAK KETIGA
                   </button>
                 </h2>
               </div>
               <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
                 <div class="card-body">
-                  Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
-                </div>
+                  Jika Anda telah terdaftar dalam salah satu layanan situs kami, Kiddo.id tidak akan menjual, menyewakan, menukar, atau memberikan wewenang kepada pihak ketiga untuk menggunakan alamat e-mail Anda atau informasi lainnya yang secara pribadi bisa mengidentifikasi diri Anda tanpa izin. Namun kami memang berbagi informasi tentang pengguna kami dalam bentuk keseluruhan (agregat).</div>
               </div>
             </div>
             <div class="card">
               <div class="card-header" id="headingThree">
                 <h2 class="mb-0">
                   <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                    Collapsible Group Item #3
+                    PERLINDUNGAN DAN KEAMANAN INFORMASI
                   </button>
                 </h2>
               </div>
               <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
                 <div class="card-body">
-                  Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
-                </div>
+                  Keamanan Data :
+                  Untuk mencegah akses data oleh pihak yang tidak memiliki wewenang, menjaga keakuratan data dan memastikan penggunaan informasi yang semestinya, kami menggunakan prosedur fisik, elektronik dan manajerial untuk melindungi informasi yang kami kumpulkan secara online.</div>
               </div>
             </div>
           </div>
@@ -83,7 +80,7 @@
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
-        <button type="button" class="btn btn-primary">Submit</button>
+        <button type="button" class="btn btn-primary" data-dismiss="modal">Submit</button>
       </div>
     </div>
   </div>
