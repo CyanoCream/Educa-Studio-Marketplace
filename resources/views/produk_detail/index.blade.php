@@ -28,7 +28,7 @@
 <div class="single-thumb-vertical main-container shop-page no-sidebar">
     <div class="container">
         <div class="row">
-            <div class="main-content col-md-12">
+            <div class="main-content col-md-12" style="box-shadow: none;">
                 <div class="kodory-notices-wrapper"></div>
                 <div id="product-27"
                      class="post-27 product type-product status-publish has-post-thumbnail product_cat-table product_cat-new-arrivals product_cat-lamp product_tag-table product_tag-sock first instock shipping-taxable purchasable product-type-variable has-default-attributes">
