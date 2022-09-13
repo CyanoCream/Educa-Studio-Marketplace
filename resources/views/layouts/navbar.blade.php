@@ -128,7 +128,7 @@
                                               class="form-search block-search-form kodory-live-search-form" style="padding-right: 2px;">
                                             <div class="form-content search-box results-search">
                                                 <div class="inner">
-                                                    <input autocomplete="off" class="searchfield txt-livesearch input"
+                                                    <input v-model="search" autocomplete="off" id="input" class="searchfield txt-livesearch input"
                                                            name="s" value="" placeholder="Search here..." type="text">
                                                 </div>
                                             </div>
@@ -149,7 +149,12 @@
                                             <button type="submit" class="btn-submit">
                                                 <span class="flaticon-magnifying-glass-1"></span>
                                             </button>
-                                        </form><!-- block search -->
+                                            </form><!-- block search -->
+                                          
+                                            <div id="read" class="m-5 pl-3">
+            
+                                            </div>
+                                        
                                     </div>
                                 </div>
                                 <div class="kodory-dropdown-close"></div>

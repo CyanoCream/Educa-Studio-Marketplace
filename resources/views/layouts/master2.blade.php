@@ -250,6 +250,31 @@ function PesanSekarang()
     }
 
 
+    $(document).ready(function(){
+    readData()
+    $("#input").keyup(function(){
+        var strcari = $("#input").val();
+        if (strcari != ""){
+            $("#read").html('<center><p class="text-muted">Waiting for Search Product</p></center>');
+            $.get("{{ url('ajax')}}", "name=" + strcari,
+                function (data) {
+
+                    $("#read").html(data);
+                },
+                
+            );
+        }else{
+            readData()
+        }
+    });
+});
+    function readData(){
+        $.get("{{ url('read')}}",{},
+        function(data){
+            // alert(data);
+            $("#read").html(data);
+        })
+    }
 
 
 </script>
