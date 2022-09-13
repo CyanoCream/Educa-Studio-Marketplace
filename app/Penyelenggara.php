@@ -9,7 +9,6 @@ class Penyelenggara extends Model
     protected $table = 'tbl_penyelenggaras';
 
     protected $fillable = [
-        'id_produk',
         'icon_penyelenggara',
         'nama_penyelenggara',
         'kota_penyelenggara',

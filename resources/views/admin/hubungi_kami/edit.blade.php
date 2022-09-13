@@ -53,7 +53,7 @@
 
 						<div class="text-right">
 							<a href="{{ route('daftarHubungi_Kami') }}" class="btn btn-outline-secondary mr-2" role="button">Batal</a>
-							<button type="submit" class="btn btn-primary">Simpan</button>
+							<button type="submit" onclick="save(this)" class="btn btn-primary">Simpan</button>
 						</div>
 					</form>
 				</div>
@@ -61,4 +61,15 @@
 		</div>
 	</div>
 </div>
+
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+<script>
+    save = function (button) {
+        swal({
+			title: "Sukses",
+			icon: "success",
+			button: false,
+		});
+    }
+</script>
 @endsection

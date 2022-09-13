@@ -11,6 +11,7 @@ class Produk extends Model
     protected $table = 'tbl_produks';
     protected $fillable = [
         'nama_produk',
+        'id_penyelenggara',
         'kategori',
         'harga_produk',
         'status_pertemuan',
@@ -21,6 +22,7 @@ class Produk extends Model
         'keterangan',
         'manfaat',
         'bundling',
+        'ulasan',
 
     ];
 
@@ -43,5 +45,15 @@ class Produk extends Model
     public function gambar()
     {
         return $this->hasMany('App\Gambar', 'id_produk');
+    }
+
+    /**
+     * Get the user that owns the Produk
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
+     */
+    public function penyelenggaras()
+    {
+        return $this->belongsTo('App\Penyelenggara', 'id_penyelenggara');
     }
 }

@@ -23,18 +23,18 @@
                 <div class="page-main-content">
                     <div class="kodory">
                         <div class="kodory-notices-wrapper"></div>
-                        <div class="u-columns col2-set" id="customer_login">
+                        <div class="u-columns col2-set" id="customer_login" >
                             <div class="u-column1 col-1">
                                 <div class="col-md-10 col-lg-6 col-xl-7 d-flex align-items-center order-1 order-lg-2">
 
                                     <img src="{{asset('images/daftar.svg')}}"
-                                       alt="Sample image" style="max-width:200%; height:380px;">
+                                       alt="Sample image" style="max-width:200%; height:380px; margin-right:200px;">
                     
                                   </div>
                             </div>
-                            <div class="u-column2 col-2">
+                            <div class="u-column2 col-2 " >
                                 <h2>Register</h2>
-                                <form class="kodory-form kodory-form-register register" method="POST" action="{{ route('register') }}">
+                                <form class="kodory-form kodory-form-register register" method="POST" action="{{ route('register') }}" >
                                     {{ csrf_field() }}
             
                                     <div class="form-group{{ $errors->has('name') ? ' has-error' : '' }}">
@@ -67,7 +67,7 @@
                                         <label for="role" class="col-md-6 control-label" style="max-width: 100%">Register Sebagai</label>
             
                                             {{-- <input id="role" type="role" class="form-control" name="role"  required autofocus placeholder="Pilih Role User"> --}}
-                                            <select class="col-md-6 control-label" id="role" value="{{ old('role') }}" name="role">
+                                            <select class="col-md-6 control-label " id="role" value="{{ old('role') }}" name="role">
                                               <option value="user">Pengguna</option>
                                               <option value="penyelenggara">Penyelenggara</option>
                                               <option value="admin">Admin</option>

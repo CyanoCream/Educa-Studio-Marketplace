@@ -3,7 +3,6 @@
 
 @section('content')
 
-
 <!-- Content Wrapper. Contains page content -->
 <div class="content-wrapper">
     <!-- Content Header (Page header) -->
@@ -28,6 +27,15 @@
     <section class="content">
         <div id="app" class="container-fluid">
             <!-- Small boxes (Stat box) -->
+                <div class="card text-left justify-content-center pl-5" style="border-radius: 20px;height: 460px;background: rgb(0,0,36);
+                    background: linear-gradient(180deg, rgba(0,0,36,1) 0%, rgba(162,169,213,1) 0%, rgba(41,134,153,1) 100%);">
+                    <h3 id="lblGreetings2"></h3>
+                    <h1>Hallo.. {{Auth::user()->name}}, apa kabar?</h1>
+                    <p>Kamu bisa saja mengalami pahit getirnya perjalanan hidup,tetapi kamu <br>
+                        tidak boleh berhenti dan tidak boleh kehilangan impianmu.</p>
+                    <br>
+                    <p>Sedikit kemajuan setiap hari menambah hasil yang besar!</p>
+                </div>
             <div class="row">
                 <div class="col-lg-3 col-6">
 
@@ -39,7 +47,8 @@
                         <div class="icon">
                             <i class="ion ion-bag"></i>
                         </div>
-                        <a href="{{route('daftarOrder')}}" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+                        <a href="{{route('daftarOrder')}}" class="small-box-footer">More info <i
+                                class="fas fa-arrow-circle-right"></i></a>
                     </div>
                 </div>
 
@@ -54,7 +63,8 @@
                         <div class="icon">
                             <i class="ion ion-stats-bars"></i>
                         </div>
-                        <a href="{{route('daftarProduk')}}" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+                        <a href="{{route('daftarProduk')}}" class="small-box-footer">More info <i
+                                class="fas fa-arrow-circle-right"></i></a>
                     </div>
                 </div>
 
@@ -68,7 +78,8 @@
                         <div class="icon">
                             <i class="ion ion-person-add"></i>
                         </div>
-                        <a href="{{route('daftarUser')}}" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+                        <a href="{{route('daftarUser')}}" class="small-box-footer">More info <i
+                                class="fas fa-arrow-circle-right"></i></a>
                     </div>
                 </div>
 
@@ -82,7 +93,8 @@
                         <div class="icon">
                             <i class="nav-icon fas fa-columns"></i>
                         </div>
-                        <a href="{{route('daftarPenyelenggara')}}" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+                        <a href="{{route('daftarPenyelenggara')}}" class="small-box-footer">More info <i
+                                class="fas fa-arrow-circle-right"></i></a>
                     </div>
                 </div>
 
@@ -628,5 +640,22 @@
 <aside class="control-sidebar control-sidebar-dark">
     <!-- Control sidebar content goes here -->
 </aside>
-@endsection
 
+<script>
+    var myDate = new Date();
+    var hrs = myDate.getHours();
+
+    var greet;
+
+        if (hrs < 11)
+        greet='Selamat Pagi!';
+        else if(hrs >= 11 && hrs <= 15)
+        greet='Selamat Siang!';
+        else if(hrs >= 15 && hrs <= 18)
+        greet='Selamat Sore!';
+        else if(hrs >= 18 && hrs <= 24)
+        greet='Selamat malam!'
+
+    document.getElementById('lblGreetings2').innerHTML = '<br>' + greet;
+</script>
+@endsection
