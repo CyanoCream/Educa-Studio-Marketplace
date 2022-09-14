@@ -105,7 +105,7 @@
                                     </td>
                                     <td class="product-subtotal" data-title="Total">
                                         <span class="kodory-Price-amount amount"><span
-                                                class="kodory-Price-currencySymbol">Rp.</span>{{ $order->produk->harga_produk  *  $order->jumlah_pesanan }}.000</span></td>
+                                                class="kodory-Price-currencySymbol">Rp.</span>{{ $order->total_harga}}.000</span></td>
                                 </tr>
                                 @endforeach
                                 <tr>
@@ -130,15 +130,13 @@
                                 <h2>Cart totals</h2>
                                 <table class="shop_table shop_table_responsive">
                                     <tbody>
-                                        @foreach ( $orders as $order )
-                                    <tr class="order-total">
+                                        <tr class="order-total">
                                         <th>Total</th>
                                         <td data-title="Total"><strong><span
                                                 class="kodory-Price-amount amount"><span
-                                                class="kodory-Price-currencySymbol">Rp.</span>{{ $order->produk->harga_produk  *  $order->jumlah_pesanan }}.000 </span></strong>
+                                                class="kodory-Price-currencySymbol">Rp.</span>{{DB::table('tbl_orders')->sum('total_harga')}}.000 </span></strong>
                                         </td>
                                     </tr>
-                                    @endforeach
                                     </tbody>
                                 </table>
                                 <div class="kodory-proceed-to-checkout">

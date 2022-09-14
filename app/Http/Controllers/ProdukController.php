@@ -229,7 +229,7 @@ class ProdukController extends Controller
     public function addData(Request $request, $id) {
         
         // $data = $request->all();
-
+        // dd($request);
         // $data_order = [
         //     "id_users" => Auth::user()->id,
         //     "status_order" => 0,
@@ -258,7 +258,6 @@ class ProdukController extends Controller
         //     return view('pesanan.index');
 
         $produks = Produk::where('id', $id)->first();
-
     	//validasi apakah melebihi stok
     	if($request->jumlah_pesan > $produks->stock)
     	{
@@ -276,7 +275,9 @@ class ProdukController extends Controller
         $orders->kurir = 'jnt';
         $orders->alamat_pen = 'tidak tahu';
         $orders->status_order = 0;
+
         $orders->jumlah_pesanan = $request->jumlah_pesanan;
+        $orders->total_harga = $produks->harga_produk * $request->jumlah_pesanan;
         $orders->save();
 
     	if(empty($cek_orders))
