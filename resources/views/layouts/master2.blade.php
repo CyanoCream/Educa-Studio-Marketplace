@@ -19,6 +19,11 @@
     <link rel="stylesheet" type="text/css" href="{{asset('css/megamenu.css')}}"/>
     <link rel="stylesheet" type="text/css" href="{{asset('css/dreaming-attribute.css')}}"/>
     <link rel="stylesheet" type="text/css" href="{{asset('css/style.css')}}"/>
+    <style>
+        .main-content{
+            box-shadow: none !important;
+        }
+    </style>
     <title>Child</title>
 </head>
 <body>

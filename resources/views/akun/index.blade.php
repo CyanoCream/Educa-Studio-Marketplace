@@ -100,18 +100,7 @@
             
             @include('merchant.index')
             @include('kelas_online.index')
-            {{-- @include('daftar_peserta.index')
-            @include('daftar_alamat.index') --}}
         </div>
-
-{{--     
-        <div class="card p-5 mt-2 mr-5 mb-2 ml-5" style="border-radius: 20px;">
-            
-            @include('status_order.index')
-            @include('pengiriman.index')
-        </div> --}}
-        {{-- <div class="card p-5 mt-2 mr-5 mb-2 ml-5" style="border-radius: 20px;">
-        </div> --}}
         <div class="card p-5 mt-2 mr-5 mb-2 ml-5" style="border-radius: 20px;">
             @include('ketentuan.index')
             @include('kebijakan_privasi.index')

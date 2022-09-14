@@ -9540,7 +9540,7 @@ form.kodory-checkout::after {
 }
 .form-row {
     margin-bottom: 30px;
-    display: block;
+    /* display: block; */
     margin-left: 0;
     margin-right: 0;
 }

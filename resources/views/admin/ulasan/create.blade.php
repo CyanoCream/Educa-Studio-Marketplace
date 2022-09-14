@@ -22,7 +22,7 @@
         <div class="container-fluid">
             <div class="card">
                 <div class="card-body">
-                    <form action="{{ route('storeUlasan') }}" method="post" id="tambahUlasan">
+                    <form action="{{ route('storeUlasan') }}" method="post">
                         {{ csrf_field() }}
 
                         <div class="form-group">
