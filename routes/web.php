@@ -100,13 +100,29 @@ Route::get('/Penyelenggara-produk', function () {
     return view('Penyelenggara.produk');
 });
 
-//penyelenggara admin
+//penyelenggara penyelenggara
 Route::get('/penyelenggara_penyelenggara', 'AdminPenyelenggaraController@index')->name('daftarPenyelenggara_penyelenggara');
 Route::get('/penyelenggara_penyelenggara/create', 'AdminPenyelenggaraController@create')->name('createPenyelenggara_penyelenggara');
 Route::post('/penyelenggara_penyelenggara/create', 'AdminPenyelenggaraController@store')->name('storePenyelenggara_penyelenggara');
 Route::get('/penyelenggara_penyelenggara/{penyelenggara_penyelenggara}/edit', 'AdminPenyelenggaraController@edit')->name('editPenyelenggara_penyelenggara');
 Route::post('/penyelenggara_penyelenggara/{penyelenggara_penyelenggara}/edit', 'AdminPenyelenggaraController@update')->name('updatePenyelenggara_penyelenggara');
 Route::get('/penyelenggara_penyelenggara/{penyelenggara_penyelenggara}/delete', 'AdminPenyelenggaraController@destroy')->name('deletePenyelenggara_penyelenggara');
+
+//penyelenggara produk
+Route::get('/penyelenggara_produk', 'AdminPenyelenggaraController@index')->name('daftarPenyelenggara_produk');
+Route::get('/penyelenggara_produk/create', 'AdminPenyelenggaraController@create')->name('createPenyelenggara_produk');
+Route::post('/penyelenggara_produk/create', 'AdminPenyelenggaraController@store')->name('storePenyelenggara_produk');
+Route::get('/penyelenggara_produk/{penyelenggara_produk}/edit', 'AdminPenyelenggaraController@edit')->name('editPenyelenggara_produk');
+Route::post('/penyelenggara_produk/{penyelenggara_produk}/edit', 'AdminPenyelenggaraController@update')->name('updatePenyelenggara_produk');
+Route::get('/penyelenggara_produk/{penyelenggara_produk}/delete', 'AdminPenyelenggaraController@destroy')->name('deletePenyelenggara_produk');
+
+//penyelenggara gambar
+Route::get('/penyelenggara_gambar', 'AdminPenyelenggaraController@index')->name('daftarPenyelenggara_gambar');
+Route::get('/penyelenggara_gambar/create', 'AdminPenyelenggaraController@create')->name('createPenyelenggara_gambar');
+Route::post('/penyelenggara_gambar/create', 'AdminPenyelenggaraController@store')->name('storePenyelenggara_gambar');
+Route::get('/penyelenggara_gambar/{penyelenggara_gambar}/edit', 'AdminPenyelenggaraController@edit')->name('editPenyelenggara_gambar');
+Route::post('/penyelenggara_gambar/{penyelenggara_gambar}/edit', 'AdminPenyelenggaraController@update')->name('updatePenyelenggara_gambar');
+Route::get('/penyelenggara_gambar/{penyelenggara_gambar}/delete', 'AdminPenyelenggaraController@destroy')->name('deletePenyelenggara_gambar');
 
 
 

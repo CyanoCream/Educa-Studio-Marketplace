@@ -119,15 +119,43 @@
                         <!--penyelenggara-->
                         <div class="modal fade" id="penyelenggara" tabindex="-1" aria-labelledby="penyelenggaraLabel" aria-hidden="true">
                             <div class="modal-dialog">
-                                <div class="modal-content" style="border-radius: 20px">
+                                <div class="modal-content p-5" style="border-radius: 20px;">
                                     <div class="modal-header">
-                                        <h4 class="modal-title m-3" id="penyelenggaraLabel">Penyelenggara</h4>
+                                        <h4 class="modal-title" id="penyelenggaraLabel">Penyelenggara</h4>
                                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                             <span aria-hidden="true">&times;</span>
                                         </button>
                                     </div>
                                     <div class="modal-body">
+                                        <div class="form-group">
+                                            <label for="id_produk">id produk</label>
+                                            <input type="text" name="id_produk" id="id_produk" class="form-control" required="required" placeholder="Masukkan id produk">
+                                        </div>
                                         
+                                        <div class="form-group">
+                                            <label for="icon_penyelenggara">icon penyelenggara</label>
+                                            <input type="file" name="icon_penyelenggara" id="icon_penyelenggara" class="form-control" required="required" placeholder="Masukkan icon penyelenggara">
+                                        </div>
+                
+                                        <div class="form-group">
+                                            <label for="nama_penyelenggara">nama penyelenggara</label>
+                                            <input type="text" name="nama_penyelenggara" id="nama_penyelenggara" class="form-control" required="required" placeholder="Masukkan nama penyelenggara">
+                                        </div>
+                
+                                        <div class="form-group">
+                                            <label for="kota_penyelenggara">kota penyelenggara</label>
+                                            <input type="text" name="kota_penyelenggara" id="kota_penyelenggara" class="form-control" required="required" placeholder="Masukkan kota penyelenggara">
+                                        </div>
+                
+                                        <div class="form-group">
+                                            <label for="deskripsi">deskripsi</label>
+                                            <textarea name="deskripsi" id="deskripsi" rows="3" class="form-control" required="required" placeholder="Masukkan deskripsi"></textarea>
+                                        </div>
+                
+                                        <div class="form-group">
+                                            <label for="jam_operasional">jam operasional</label>
+                                            <input type="text" name="jam_operasional" id="jam_operasional" class="form-control" required="required" placeholder="Masukkan jam operasional">
+                                        </div>
                                     </div>
                                     <div class="modal-footer">
                                         <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
@@ -148,7 +176,69 @@
                                         </button>
                                     </div>
                                     <div class="modal-body">
-                                        
+                                        <div class="form-group">
+                                            <label for="kategori">kategori</label>
+                                            <input type="text" name="kategori" id="kategori" class="form-control" required="required"
+                                                placeholder="Masukkan kategori">
+                                        </div>
+                
+                                        <div class="form-group">
+                                            <label for="nama_produk">nama produk</label>
+                                            <input type="text" name="nama_produk" id="nama_produk" class="form-control"
+                                                required="required" placeholder="Masukkan nama_produk">
+                                        </div>
+                
+                                        <div class="form-group">
+                                            <label for="harga_produk">harga produk</label>
+                                            <input type="text" name="harga_produk" id="harga_produk" class="form-control"
+                                                required="required" placeholder="Masukkan harga_produk">
+                                        </div>
+                
+                                        <div class="form-group">
+                                            <label for="status_pertemuan">status pertemuan</label>
+                                            <input type="text" name="status_pertemuan" id="status_pertemuan" class="form-control"
+                                                required="required" placeholder="Masukkan status_pertemuan">
+                                        </div>
+                
+                                        <div class="form-group">
+                                            <label for="stock">stock</label>
+                                            <input type="text" name="stock" id="stock" class="form-control" required="required"
+                                                placeholder="Masukkan stock">
+                                        </div>
+                
+                                        <div class="form-group">
+                                            <label for="pertemuan">pertemuan</label>
+                                            <input type="text" name="pertemuan" id="pertemuan" class="form-control" required="required"
+                                                placeholder="Masukkan pertemuan">
+                                        </div>
+                
+                                        <div class="form-group">
+                                            <label for="waktu_temu">waktu temu</label>
+                                            <input type="text" name="waktu_temu" id="waktu_temu" class="form-control"
+                                                required="required" placeholder="Masukkan waktu_temu">
+                                        </div>
+                
+                                        <div class="form-group">
+                                            <label for="umur">umur</label>
+                                            <input type="text" name="umur" id="umur" class="form-control" required="required"
+                                                placeholder="Masukkan umur">
+                                        </div>
+                
+                                        <div class="form-group">
+                                            <label for="keterangan">keterangan</label>
+                                            <textarea name="keterangan" id="keterangan" rows="3" class="form-control"
+                                                required="required" placeholder="Masukkan keterangan"></textarea>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="manfaat">manfaat</label>
+                                            <textarea name="manfaat" id="manfaat" rows="3" class="form-control" required="required"
+                                                placeholder="Masukkan manfaat"></textarea>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="bundling">bundling</label>
+                                            <input type="text" name="bundling" id="bundling" class="form-control" required="required"
+                                                placeholder="Masukkan bundling">
+                                        </div>
                                     </div>
                                     <div class="modal-footer">
                                         <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
@@ -169,11 +259,20 @@
                                         </button>
                                     </div>
                                     <div class="modal-body">
-                                        
+                                        <div class="form-group">
+                                            <label for="gambar">gambar</label>
+                                            <input type="file" name="gambar" id="gambar" class="form-control" required="required" placeholder="Masukkan gambar">
+                                        </div>
+                
+                                        <div class="form-group">
+                                            <label for="id_produk">id produk</label>
+                                            <input type="text" name="id_produk" id="id_produk" class="form-control" required="required" placeholder="Masukkan id_produk">
+                                        </div>
                                     </div>
                                     <div class="modal-footer">
                                         <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
-                                        <button type="button" class="btn btn-primary" data-dismiss="modal">Submit</button>
+                                        {{-- <button type="button" class="btn btn-primary" data-dismiss="modal">Submit</button> --}}
+                                        <button type="submit" onclick="save(this)" class="btn btn-primary" data-dismiss="modal">Simpan</button>
                                     </div>
                                 </div>
                             </div>

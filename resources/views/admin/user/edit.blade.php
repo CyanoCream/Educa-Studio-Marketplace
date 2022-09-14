@@ -37,9 +37,14 @@
 						</div>
 						
 						<div class="form-group">
-							<label for="role">role</label>
-							<input type="text" name="role" id="role" class="form-control" required="required" value="{{ $user->role }}" placeholder="Masukkan role">
-						</div>
+                            <label for="role">role</label>
+                                <select id="role" name="role" class="form-control">
+                                <option selected>pilih role</option>
+                                <option>Admin</option>
+                                <option>Penyelenggara</option>
+                                <option>User</option>
+                            </select>
+                        </div>
 
                         <div class="form-group">
 							<label for="password">password</label>
