@@ -43,7 +43,7 @@
     <div class="banner-wrapper has_background">
         <img src="{{ asset('images/home 1.jpg') }}" class="img-responsive attachment-1920x447 size-1920x447" alt="img">
         <div class="banner-wrapper-inner container">
-            <h1 class="page-title">Top Up</h1>
+            <h1 class="page-title">TOP UP</h1>
             <div role="navigation" aria-label="Breadcrumbs" class="breadcrumb-trail breadcrumbs">
                 <ul class="trail-items breadcrumb">
                     <li class="trail-item trail-begin"><a href="#"><span>Home</span></a></li>
@@ -56,17 +56,17 @@
     <div class="card p-5 m-5" style="border-radius: 20px; background: rgb(182, 141, 235);
     background: linear-gradient(180deg, rgb(214, 191, 244) 0%, rgb(244, 177, 245) 53%, rgb(243, 133, 133) 100%);">
         <div class="card m-2 text-center" style="border-radius: 20px">
-            <h2>Top Up</h2>
+            <h2><strong> TOP UP </strong></h2>
         </div>
         <div class="card p-5 m-5" style="border-radius: 20px;">
-            <h3 class=" text-center">Isi Ulang</h3>
+            <h3 class=" text-center"><strong> ISI ULANG </strong></h3>
             <hr>
             @include('top_up.paket_data')
             @include('top_up.pulsa')
             @include('top_up.token_listrik')
         </div>
         <div class="card p-5 m-5" style="border-radius: 20px;">
-            <h3 class=" text-center">Pembayaran</h3>
+            <h3 class=" text-center"><strong> PEMBAYARAN </strong></h3>
             <hr>
             @include('top_up.bpjs_kesehatan')
             @include('top_up.bpjs_ketenagakerjaan')
