@@ -21,7 +21,9 @@ class CreateOrdersTable extends Migration
             $table->foreign('id_produk')->references('id')->on('tbl_produks');
             $table->integer('id_penyelenggara')->unsigned();
             $table->foreign('id_penyelenggara')->references('id')->on('tbl_penyelenggaras');
+            $table->integer('id_user');
             $table->integer('jumlah_pesanan');
+            $table->char('total_harga');
             $table->string('kurir');
             $table->string('alamat_pen');
 

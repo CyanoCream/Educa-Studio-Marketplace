@@ -20,6 +20,7 @@ class CreateDetailOrdersTable extends Migration
             $table->foreign('id_order')->references('id')->on('tbl_orders');
             $table->integer('id_produk')->unsigned();
             $table->foreign('id_produk')->references('id')->on('tbl_produks');
+            $table->integer('id_user');
             $table->integer('status_order');
             $table->string('nama_produk');
             $table->integer('harga');

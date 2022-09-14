@@ -229,7 +229,7 @@ class ProdukController extends Controller
     public function addData(Request $request, $id) {
         
         // $data = $request->all();
-
+        // dd($request);
         // $data_order = [
         //     "id_users" => Auth::user()->id,
         //     "status_order" => 0,
@@ -258,7 +258,6 @@ class ProdukController extends Controller
         //     return view('pesanan.index');
 
         $produks = Produk::where('id', $id)->first();
-
     	//validasi apakah melebihi stok
     	if($request->jumlah_pesan > $produks->stock)
     	{
@@ -266,19 +265,24 @@ class ProdukController extends Controller
     	}
 
     	//cek validasi
-    	$cek_orders = Order::where('id_pelanggan', Auth::user()->id)->where('status_order',0)->first();
+    	$cek_orders = Order::where('id', Auth::user()->id)->where('status_order',0)->first();
     	//simpan ke database pesanan
+
+        $orders = new Order;
+        $orders->id_user = Auth::user()->id;
+        $orders->id_produk =  $request->id_produk;
+        // $orders->id_penyelenggara = $request->id_penyelenggara;
+        $orders->kurir = 'jnt';
+        $orders->alamat_pen = 'tidak tahu';
+        $orders->status_order = 0;
+
+        $orders->jumlah_pesanan = $request->jumlah_pesanan;
+        $orders->total_harga = $produks->harga_produk * $request->jumlah_pesanan;
+        $orders->save();
+
     	if(empty($cek_orders))
     	{
-    		$orders = new Order;
-	    	$orders->id_pelanggan = Auth::user()->id;
-	    	$orders->id_produk =  $request->id_produk;
-            $orders->id_penyelenggara = $request->id_penyelenggara;
-            $orders->kurir = 'jnt';
-            $orders->alamat_pen = 'tidak tahu';
-	    	$orders->status_order = 0;
-            $orders->jumlah_pesanan = $request->jumlah_pesanan;
-	    	$orders->save();
+    		
     	} 
         return redirect()->back();
 
