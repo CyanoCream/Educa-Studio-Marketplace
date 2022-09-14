@@ -134,7 +134,7 @@
                                         <th>Total</th>
                                         <td data-title="Total"><strong><span
                                                 class="kodory-Price-amount amount"><span
-                                                class="kodory-Price-currencySymbol">Rp.</span>{{DB::table('tbl_orders')->sum('total_harga')}}.000 </span></strong>
+                                                class="kodory-Price-currencySymbol">Rp.</span>{{$sumorders}}.000 </span></strong>
                                         </td>
                                     </tr>
                                     </tbody>

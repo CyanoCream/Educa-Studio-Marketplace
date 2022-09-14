@@ -15,9 +15,50 @@ class OrderController extends Controller
     {
         $id = auth()->user()->id;
         $orders = Order::where('id_user', $id)->get();
+        $sumorders = Order::where('id_user', $id)->sum('total_harga');
+        
 
         return view('pesanan.index', [
-            'orders' => $orders
+            'orders' => $orders,
+            'sumorders' => $sumorders
+        ]);
+    }
+    public function navindex()
+    {
+        
+        $id = auth()->user()->id;
+        $orders = Order::where('id_user', $id)->get();
+        $sumorders = Order::where('id_user', $id)->sum('total_harga');
+        $totalpesan = Order::where('id_user', $id)->count();
+        return view('layout.master', [
+            'orders' => $orders,
+            'sumorders' => $sumorders,
+            'totalpesan' => $totalpesan
+        ]);
+    }
+    public function nav2index()
+    {
+        
+        $id = auth()->user()->id;
+        $orders = Order::where('id_user', $id)->get();
+        $sumorders = Order::where('id_user', $id)->sum('total_harga');
+
+        return view('layouts.master', [
+            'orders' => $orders,
+            'sumorders' => $sumorders
+        ]);
+    }
+
+    public function nav3index()
+    {
+        
+        $id = auth()->user()->id;
+        $orders = Order::where('id_user', $id)->get();
+        $sumorders = Order::where('id_user', $id)->sum('total_harga');
+
+        return view('layouts.master', [
+            'orders' => $orders,
+            'sumorders' => $sumorders
         ]);
     }
 

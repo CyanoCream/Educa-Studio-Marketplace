@@ -63,7 +63,7 @@ var appComponent = new Vue({
             limited: [],
             popular: [],
             new: [],
-            search: ''
+            
             
         },
         mounted(){

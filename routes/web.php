@@ -14,9 +14,12 @@ Route::get('/dashboard', function () {
     return view('admin.master');
 });
 
-Route::get('/', function () {
+Route::get('/pesanan/cek', function () {
     return view('layout.master');
 });
+Route::get('/', 'OrderController@navindex')->name('pesanan.cek');
+Route::get('/nav', 'OrderController@nav2index');
+Route::get('/navbar', 'OrderController@nav3index');
 
 Route::get('/katalog', function () {
     return view('katalog.index');
@@ -80,7 +83,7 @@ Route::post('peserta', 'PesertaController@getPeserta')->name('peserta');
 
 Route::get('/pesanan', 'OrderController@index')->name('pesanan.index');
 Route::get('/pesanan/invoice', 'OrderController@invoice')->middleware('auth')->name('pesanan.invoice');
-
+Route::get('/pesanan/cek', 'OrderController@navindex')->name('pesanan.cek');
 Route::post('checkout/{id}', 'ProdukController@addData')->name('checkout');
 
 
@@ -115,6 +118,14 @@ Route::post('/gambar/create', 'AdminGambarController@store')->name('storeGambar'
 Route::get('/gambar/{gambar}/edit', 'AdminGambarController@edit')->name('editGambar');
 Route::post('/gambar/{gambar}/edit', 'AdminGambarController@update')->name('updateGambar');
 Route::get('/gambar/{gambar}/delete', 'AdminGambarController@destroy')->name('deleteGambar');
+
+// gambar penyelenggara
+Route::get('/penyelenggara/gambar', 'AdminGambarController@penyelenggaraindex')->name('penyelenggara.daftarGambar');
+Route::get('/penyelenggara/gambar/create', 'AdminGambarController@penyelenggaracreate')->name('penyelenggara.createGambar');
+Route::post('/penyelenggara/gambar/create', 'AdminGambarController@penyelenggarastore')->name('penyelenggara.storeGambar');
+Route::get('/penyelenggara/gambar/{gambar}/edit', 'AdminGambarController@penyelenggaraedit')->name('penyelenggara.editGambar');
+Route::post('/penyelenggara/gambar/{gambar}/edit', 'AdminGambarController@penyelenggaraupdate')->name('penyelenggara.updateGambar');
+Route::get('/penyelenggara/gambar/{gambar}/delete', 'AdminGambarController@penyelenggaradestroy')->name('penyelenggara.deleteGambar');
 
 // hubungi_kami
 Route::get('/hubungi_kami', 'AdminHubungikamiController@index')->name('daftarHubungi_Kami');
@@ -158,6 +169,14 @@ Route::post('/pelanggan/{id}/edit', 'AdminPelangganController@update')->name('up
 Route::get('/pelanggan/{id}/delete', 'AdminPelangganController@destroy')->name('deletePelanggan');
 
 // penyelenggara
+Route::get('/admin/penyelenggara', 'AdminPenyelenggaraController@index')->name('penyelenggara.daftarPenyelenggara');
+Route::get('/admin/penyelenggara/create', 'AdminPenyelenggaraController@create')->name('penyelenggara.createPenyelenggara');
+Route::post('/admin/penyelenggara/create', 'AdminPenyelenggaraController@store')->name('penyelenggara.storePenyelenggara');
+Route::get('/admin/penyelenggara/{penyelenggara}/edit', 'AdminPenyelenggaraController@edit')->name('penyelenggara.editPenyelenggara');
+Route::post('/admin/penyelenggara/{penyelenggara}/edit', 'AdminPenyelenggaraController@update')->name('penyelenggara.updatePenyelenggara');
+Route::get('/admin/penyelenggara/{penyelenggara}/delete', 'AdminPenyelenggaraController@destroy')->name('penyelenggara.deletePenyelenggara');
+
+// Admin penyelenggara
 Route::get('/penyelenggara', 'AdminPenyelenggaraController@index')->name('daftarPenyelenggara');
 Route::get('/penyelenggara/create', 'AdminPenyelenggaraController@create')->name('createPenyelenggara');
 Route::post('/penyelenggara/create', 'AdminPenyelenggaraController@store')->name('storePenyelenggara');
@@ -182,6 +201,14 @@ Route::post('/produk/create', 'AdminProdukController@store')->name('storeProduk'
 Route::get('/produk/{produk}/edit', 'AdminProdukController@edit')->name('editProduk');
 Route::post('/produk/{produk}/edit', 'AdminProdukController@update')->name('updateProduk');
 Route::get('/produk/{produk}/delete', 'AdminProdukController@destroy')->name('deleteProduk');
+
+// produk penyelenggara
+Route::get('/penyelenggara/produk', 'AdminProdukController@penyelenggaraindex')->name('penyelenggara.daftarProduk');
+Route::get('/penyelenggara/produk/create', 'AdminProdukController@penyelenggaracreate')->name('cpenyelenggara.reateProduk');
+Route::post('/penyelenggara/produk/create', 'AdminProdukController@penyelenggarastore')->name('penyelenggara.storeProduk');
+Route::get('/penyelenggara/produk/{produk}/edit', 'AdminProdukController@penyelenggaraedit')->name('penyelenggara.editProduk');
+Route::post('/penyelenggara/produk/{produk}/edit', 'AdminProdukController@penyelenggaraupdate')->name('penyelenggara.updateProduk');
+Route::get('/penyelenggara/produk/{produk}/delete', 'AdminProdukController@penyelenggaradestroy')->name('penyelenggara.deleteProduk');
 
 //ulasan
 Route::get('/ulasan', 'AdminUlasanController@index')->name('daftarUlasan');
