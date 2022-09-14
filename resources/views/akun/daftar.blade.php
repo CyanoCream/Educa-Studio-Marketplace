@@ -19,7 +19,7 @@
 <main class="site-main  main-container no-sidebar">
     <div class="container">
         <div class="row">
-            <div class="main-content col-md-12" style="box-shadow: none">
+            <div class="main-content col-md-12">
                 <div class="page-main-content">
                     <div class="kodory">
                         <div class="kodory-notices-wrapper"></div>
