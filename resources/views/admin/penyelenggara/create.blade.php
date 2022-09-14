@@ -22,8 +22,7 @@
         <div class="container-fluid">
             <div class="card">
                 <div class="card-body">
-                    <form action="{{ route('storePenyelenggara') }}" method="post" id="tambahProduk"
-                        enctype="multipart/form-data">
+                    <form action="{{ route('storePenyelenggara') }}" method="post" enctype="multipart/form-data">
                         {{ csrf_field() }}
                         <div class="form-group">
                             <label for="id_produk">id produk</label>

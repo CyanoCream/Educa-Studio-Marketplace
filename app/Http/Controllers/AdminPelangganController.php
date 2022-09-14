@@ -135,7 +135,7 @@ class AdminPelangganController extends Controller
      */
     public function destroy($id)
     {
-        $ulasan = Pelanggan::find($id)->delete();
+        $pelanggan = Pelanggan::find($id)->delete();
         return redirect()->back();
     }
 }

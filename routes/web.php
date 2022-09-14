@@ -103,6 +103,16 @@ Route::get('/Penyelenggara-produk', function () {
     return view('Penyelenggara.produk');
 });
 
+//penyelenggara admin
+Route::get('/penyelenggara_penyelenggara', 'AdminPenyelenggaraController@index')->name('daftarPenyelenggara_penyelenggara');
+Route::get('/penyelenggara_penyelenggara/create', 'AdminPenyelenggaraController@create')->name('createPenyelenggara_penyelenggara');
+Route::post('/penyelenggara_penyelenggara/create', 'AdminPenyelenggaraController@store')->name('storePenyelenggara_penyelenggara');
+Route::get('/penyelenggara_penyelenggara/{penyelenggara_penyelenggara}/edit', 'AdminPenyelenggaraController@edit')->name('editPenyelenggara_penyelenggara');
+Route::post('/penyelenggara_penyelenggara/{penyelenggara_penyelenggara}/edit', 'AdminPenyelenggaraController@update')->name('updatePenyelenggara_penyelenggara');
+Route::get('/penyelenggara_penyelenggara/{penyelenggara_penyelenggara}/delete', 'AdminPenyelenggaraController@destroy')->name('deletePenyelenggara_penyelenggara');
+
+
+
 // detail_order
 Route::get('/detail_order', 'AdminDetailOrderController@index')->name('daftarDetail_Order');
 Route::get('/detail_order/create', 'AdminDetailOrderController@create')->name('createDetail_Order');

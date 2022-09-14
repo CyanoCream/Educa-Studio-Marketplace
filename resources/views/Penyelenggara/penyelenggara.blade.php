@@ -45,7 +45,7 @@
     <img src="{{asset('images/home 1.jpg')}}"
          class="img-responsive attachment-1920x447 size-1920x447" alt="img">
     <div class="banner-wrapper-inner container">
-        <h1 class="page-title">Edit Account</h1>
+        <h1 class="page-title">Penyelenggara</h1>
         <div role="navigation" aria-label="Breadcrumbs" class="breadcrumb-trail breadcrumbs">
             <ul class="trail-items breadcrumb">
                 <li class="trail-item trail-begin"><a href="#"><span>Home</span></a></li>
@@ -59,115 +59,124 @@
     <div class="container">
         <div class="row">
             <div class="main-content col-md-12">
-                <div class="page-main-content">
-                    <div class="kodory">
+                <div class="page-main-content" style="box-shadow: none;">
+                    <div class="kodory p-5">
                         <nav class="kodory-MyAccount-navigation">
                             <ul>
-                                <li class="kodory-MyAccount-navigation-link kodory-MyAccount-navigation-link--dashboard">
-                                    <a href="{{route('daftarKategori')}}">Kategori</a>
+                                <li class="kodory-MyAccount-navigation-link kodory-MyAccount-navigation-link--edit-address">
+                                    <a href="" data-toggle="modal" data-target="#penyelenggara">Penyelenggara</a>
                                 </li>
                                 <li class="kodory-MyAccount-navigation-link kodory-MyAccount-navigation-link--orders ">
-                                    <a href="{{route('daftarProduk')}}">Produk</a>
+                                    <a href="" data-toggle="modal" data-target="#produk">Produk</a>
                                 </li>
                                 <li class="kodory-MyAccount-navigation-link kodory-MyAccount-navigation-link--downloads">
-                                    <a href="{{route('daftarGambar')}}">Gambar</a>
-                                </li>
-                                <li class="kodory-MyAccount-navigation-link kodory-MyAccount-navigation-link--edit-address">
-                                    <a href="{{Route('daftarPenyelenggara')}}">Penyelenggara</a>
+                                    <a href="" data-toggle="modal" data-target="#gambar">Gambar</a>
                                 </li>
                             </ul> 
                         </nav>
                         <div class="kodory-MyAccount-content">
                             <div class="kodory-notices-wrapper"></div>
                             <form class="kodory-EditAccountForm edit-account" method="post">
-                                {{-- <p class="kodory-form-row kodory-form-row--first form-row form-row-first">
-                                    <label for="account_first_name">Id&nbsp;<span
-                                            class="required">*</span></label>
-                                    <input type="text" class="kodory-Input kodory-Input--text input-text"
-                                           name="account_first_name" id="account_first_name" autocomplete="given-name"
-                                           value="Annie">
-                                </p> --}}
-                                <p class="kodory-form-row kodory-form-row--last form-row form-row-wide">
-                                    <label for="id_produk">Id Produk&nbsp;<span
-                                            class="required">*</span></label>
-                                            <input type="text" name="id_produk" id="id_produk" class="form-control"
-                                            required="required" placeholder="Masukkan id produk">
-                                </p>
                                 <div class="clear"></div>
                                 <p class="kodory-form-row kodory-form-row--wide form-row form-row-wide">
-                                    <label for="account_display_name">Nama Penyelenggara&nbsp;<span class="required">*</span></label>
-                                    <input type="text" name="nama_penyelenggara" id="nama_penyelenggara" class="form-control"
-                                    required="required" placeholder="Masukkan nama penyelenggara">
-                                    <span><em>This will be how your name will be displayed in the account section and in reviews</em></span>
-                                </p>
-                                <div class="clear"></div>
-                                <p class="kodory-form-row kodory-form-row--wide form-row form-row-wide">
-                                    <label for="account_email">Icon Penyelenggara&nbsp;<span
+                                    <label for="icon_penyelenggara">Icon Penyelenggara&nbsp;<span
                                             class="required">*</span></label>
                                             <input type="file" name="icon_penyelenggara" id="icon_penyelenggara" class="form-control"
                                             required="required">
                                 </p>
+                                <div class="clear"></div>
+                                <p class="kodory-form-row kodory-form-row--wide form-row form-row-wide">
+                                    <label for="nama_penyelenggara">Nama Penyelenggara&nbsp;<span class="required">*</span>
+                                    </label>
+                                    <input type="text" name="nama_penyelenggara" id="nama_penyelenggara" class="form-control"
+                                    required="required" placeholder="Masukkan nama penyelenggara">
+                                    <span><em>This will be how your name will be displayed in the account section and in reviews</em></span>
+                                </p>
                                 <fieldset>
                                     <p class="kodory-form-row kodory-form-row--wide form-row form-row-wide">
-                                        <label for="password_current">Kota Penyelenggara</label>
+                                        <label for="kota_penyelenggara">Kota Penyelenggara</label>
                                         <input type="text" name="kota_penyelenggara" id="kota_penyelenggara" class="form-control"
                                     required="required" placeholder="Masukkan kota penyelenggara">
                                     </p>
                                     <p class="kodory-form-row kodory-form-row--wide form-row form-row-wide">
-                                        <label for="password_1">Deskripsi</label>
+                                        <label for="deskripsi">Deskripsi</label>
                                         <textarea name="deskripsi" id="deskripsi" rows="3" class="form-control" required="required"
                                     placeholder="Masukkan deskripsi"></textarea>
                                     </p>
                                     <p class="kodory-form-row kodory-form-row--wide form-row form-row-wide">
                                         <label for="jam operasional">Jam Operasional</label>
-                                        <input type="time" name="jam_operasional" id="jam_operasional" class="form-control"
+                                        <input type="text" name="jam_operasional" id="jam_operasional" class="form-control"
                                     required="required">
                                     </p>
                                 </fieldset>
                                 <div class="clear"></div>
                                 <p>
-                                    <input type="hidden" id="save-account-details-nonce"
-                                           name="save-account-details-nonce" value="">
-                                    <input type="hidden" name="_wp_http_referer" value="">
-                                    <button type="submit" class="kodory-Button button" name="save_account_details"
-                                            value="Save changes">Save changes
-                                    </button>
-                                    <input type="hidden" name="action" value="save_account_details">
+                                    <button type="submit" onclick="save(this)" class="btn btn-primary">Simpan</button>
                                 </p>
                             </form>
                         </div>
-                        <div class="card-body p-0">
-                            <table class="table-update text-center" id="data-table" enctype="multipart/form-data">
-                                <thead>
-                                    <tr>
-                                        <th>id</th>
-                                        <th>id produk</th>
-                                        <th>icon penyelenggara</th>
-                                        <th>nama penyelenggara</th>
-                                        <th>kota penyelenggara</th>
-                                        <th>deskripsi</th>
-                                        <th>jam operasional</th>
-                                        <th>aksi</th>
-                                    </tr>
-                                </thead>
-                                {{-- <tbody>
-                                    @foreach ($penyelenggaras as $penyelenggara)
-                                        <tr>
-                                            <td>{{ $loop->index + 1 }}</td>
-                                            <td>{{ $penyelenggara->id_produk }}</td>
-                                            <td>{{ $penyelenggara->nama_penyelenggara }}</td>
-                                            <td>{{ $penyelenggara->icon_penyelenggara }}</td>
-                                            <td>{{ $penyelenggara->kota_penyelenggara }}</td>
-                                            <td>{{ $penyelenggara->deskripsi }}</td>
-                                            <td>{{ $penyelenggara->jam_operasional }}</td>
-                                            <td>
-                                                <a href="{{route('editPenyelenggara', ['id' => $penyelenggara->id])}}" class="btn btn-warning btn-sm" role="button">Edit</a>
-                                                <a onclick="confirmDelete(this)" data-url="{{route('deletePenyelenggara', ['id' => $penyelenggara->id])}}" class="btn btn-danger btn-sm" role="button">Hapus</a>
-                                            </td>
-                                        </tr>
-                                    @endforeach
-                                </tbody> --}}
-                            </table>
+
+                        <!--penyelenggara-->
+                        <div class="modal fade" id="penyelenggara" tabindex="-1" aria-labelledby="penyelenggaraLabel" aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content" style="border-radius: 20px">
+                                    <div class="modal-header">
+                                        <h4 class="modal-title m-3" id="penyelenggaraLabel">Penyelenggara</h4>
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                    </div>
+                                    <div class="modal-body">
+                                        
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                                        <button type="button" class="btn btn-primary" data-dismiss="modal">Submit</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!--produk-->
+                        <div class="modal fade" id="produk" tabindex="-1" aria-labelledby="produkLabel" aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content" style="border-radius: 20px">
+                                    <div class="modal-header">
+                                        <h4 class="modal-title m-3" id="produkLabel">Produk</h4>
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                    </div>
+                                    <div class="modal-body">
+                                        
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                                        <button type="button" class="btn btn-primary" data-dismiss="modal">Submit</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!--gambar-->
+                        <div class="modal fade" id="gambar" tabindex="-1" aria-labelledby="gambarLabel" aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content" style="border-radius: 20px">
+                                    <div class="modal-header">
+                                        <h4 class="modal-title m-3" id="gambarLabel">Gambar</h4>
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                    </div>
+                                    <div class="modal-body">
+                                        
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                                        <button type="button" class="btn btn-primary" data-dismiss="modal">Submit</button>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -175,4 +184,15 @@
         </div>
     </div>
 </main>
+
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+<script>
+    save = function (button) {
+        swal({
+			title: "Sukses",
+			icon: "success",
+			button: false,
+		});
+    }
+</script>
 @endsection
