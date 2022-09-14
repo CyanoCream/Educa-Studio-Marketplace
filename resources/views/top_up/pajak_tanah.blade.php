@@ -57,15 +57,25 @@
                         </div>
                     </div>
                 </div>
-                <div class="history">
-                    <p>Pembelian Sebelumnya</p>
-                </div>
             </form>
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
-          <button type="button" class="btn btn-primary">Submit</button>
+          <button type="submit" onclick="save(this)" class="btn btn-primary" data-dismiss="modal">Submit</button>        
         </div>
       </div>
     </div>
   </div>  
+
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+<script>
+    save = function (button) {
+        swal({
+        title: "Sukses",
+        text: "Pembayaran telah berhasil!",
+        icon: "success",
+        button: false,
+        timer: 1500,
+		});
+    }
+</script>

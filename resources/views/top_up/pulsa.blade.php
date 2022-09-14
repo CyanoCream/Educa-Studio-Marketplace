@@ -27,15 +27,25 @@
                   <input label="Nomor Handphone" placeholder="08xxx" type="text" name="phone" class="css-13f9adq" value=""></div>
                 </div>
               </div>
-              <div class="history">
-                <p class="card-subtitle mt-2 text-muted">Pembelian Sebelumnya</p>
-              </div>
             </form>
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
-          <button type="button" class="btn btn-primary" data-dismiss="modal">Submit</button>
+          <button type="submit" onclick="submit(this)" class="btn btn-primary" data-dismiss="modal">Submit</button>        
         </div>
       </div>
     </div>
   </div>
+
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+<script>
+    submit = function (button) {
+        swal({
+        title: "Sukses",
+        text: "Pembelian telah berhasil!",
+        icon: "success",
+        button: false,
+        timer: 1500,
+		});
+    }
+</script>
