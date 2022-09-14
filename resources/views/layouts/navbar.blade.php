@@ -124,7 +124,7 @@
                                         </a>
                                     </div>
                                     <div class="block-search">
-                                        <form role="search" method="get"
+                                        <form role="search" method="get" action="{{ route ('katalog.index')}}"
                                               class="form-search block-search-form kodory-live-search-form" style="padding-right: 2px;">
                                             <div class="form-content search-box results-search">
                                                 <div class="inner">
@@ -135,16 +135,6 @@
                                             <input name="post_type" value="product" type="hidden">
                                             <input name="taxonomy" value="product_cat" type="hidden">
                                             <div class="category">
-                                                <select title="product_cat" name="product_cat" id="64788262"
-                                                        class="category-search-option"
-                                                        tabindex="-1" style="display: none;">
-                                                    <option value="0">All Categories</option>
-                                                    <option class="level-0" value="aktivitas">Aktivitas</option>
-                                                    <option class="level-0" value="kursus">Kursus</option>
-                                                    <option class="level-0" value="experience">Experience</option>
-                                                    <option class="level-0" value="aktivity_kit">Aktivity Kit</option>
-                                                    <option class="level-0" value="gratis">Gratis</option>
-                                                </select>
                                             </div>
                                             <button type="submit" class="btn-submit">
                                                 <span class="flaticon-magnifying-glass-1"></span>

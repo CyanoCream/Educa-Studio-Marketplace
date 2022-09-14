@@ -52,7 +52,7 @@
 <div class="main-container shop-page left-sidebar" style="padding-top:100px;">
     <div class="container">
         <div class="row">
-            <div class="main-content col-xl-9 col-lg-8 col-md-8 col-sm-12 has-sidebar">
+            <div class=" col-xl-9 col-lg-8 col-md-8 col-sm-12 has-sidebar">
                 <div class="shop-control shop-before-control">
                     <div class="grid-view-mode">
                         <form>

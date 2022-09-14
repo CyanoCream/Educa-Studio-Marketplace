@@ -78,6 +78,7 @@ Route::get('/get-pesanan', 'OrderController@getOrder');
 Route::post('/insert-pesanan', 'OrderController@insertOrder');
 Route::get('/delete-pesanan/{id}', 'OrderController@deleteOrder');
 Route::get('/edit-pesanan{id}', 'OrderController@editOrder');
+// Route::get('/pesanan/cek', 'OrderController@navindex');
 
 // Tabel-Penyelenggara
 Route::get('/get-penyelenggara', 'PenyelenggaraController@getPenyelenggara');
