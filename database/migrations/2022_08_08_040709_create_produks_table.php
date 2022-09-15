@@ -29,8 +29,8 @@ class CreateProduksTable extends Migration
             $table->string('keterangan');
             $table->string('manfaat');
             $table->string('bundling');
-            $table->integer('id_ulasan')->unsigned();
-            $table->foreign('id_ulasan')->references('id')->on('tbl_ulasans');
+            // $table->integer('id_ulasan')->unsigned();
+            // $table->foreign('id_ulasan')->references('id')->on('tbl_ulasans');
 
         });
     }
@@ -44,6 +44,6 @@ class CreateProduksTable extends Migration
     {
         Schema::dropIfExists('tbl_produks');
         $table->dropForeign('tbl_produks_id_penyelenggara_foreign');
-        $table->dropForeign('tbl_produks_id_ulasan_foreign');
+        // $table->dropForeign('tbl_produks_id_ulasan_foreign');
     }
 }

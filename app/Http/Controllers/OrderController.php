@@ -26,10 +26,17 @@ class OrderController extends Controller
     public function navindex()
     {
         
-        $id = auth()->user()->id;
-        $orders = Order::where('id_user', $id)->get();
-        $sumorders = Order::where('id_user', $id)->sum('total_harga');
-        $totalpesan = Order::where('id_user', $id)->count();
+        if(auth()->user()){
+            $id = auth()->user()->id;
+            $orders = Order::where('id_user', $id)->get();
+            $sumorders = Order::where('id_user', $id)->sum('total_harga');
+            $totalpesan = Order::where('id_user', $id)->count();
+        }else{
+            $orders = [];
+            $sumorders = 0;
+            $totalpesan = 0;
+        }
+       
         return view('layout.master', [
             'orders' => $orders,
             'sumorders' => $sumorders,

@@ -1,13 +1,14 @@
 -- phpMyAdmin SQL Dump
--- version 5.2.0
+-- version 4.8.3
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Sep 11, 2022 at 11:45 AM
--- Server version: 10.4.24-MariaDB
--- PHP Version: 7.4.29
+-- Generation Time: Sep 14, 2022 at 10:33 AM
+-- Server version: 10.1.36-MariaDB
+-- PHP Version: 7.0.32
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET AUTOCOMMIT = 0;
 START TRANSACTION;
 SET time_zone = "+00:00";
 
@@ -149,15 +150,23 @@ INSERT INTO `tbl_hubungikamis` (`id`, `created_at`, `updated_at`, `nama`, `email
 
 CREATE TABLE `tbl_orders` (
   `id` int(10) UNSIGNED NOT NULL,
+  `id_user` int(11) NOT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL,
-  `status_order` tinyint(1) NOT NULL DEFAULT 0,
+  `status_order` tinyint(1) NOT NULL DEFAULT '0',
   `id_produk` int(10) UNSIGNED NOT NULL,
-  `id_penyelenggara` int(10) UNSIGNED NOT NULL,
   `jumlah_pesanan` int(11) NOT NULL,
+  `total_harga` char(25) COLLATE utf8mb4_unicode_ci NOT NULL,
   `kurir` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `alamat_pen` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `tbl_orders`
+--
+
+INSERT INTO `tbl_orders` (`id`, `id_user`, `created_at`, `updated_at`, `status_order`, `id_produk`, `jumlah_pesanan`, `total_harga`, `kurir`, `alamat_pen`) VALUES
+(30, 6, '2022-09-14 01:03:50', '2022-09-14 01:03:50', 0, 6, 6, '450', 'jnt', 'tidak tahu');
 
 -- --------------------------------------------------------
 
@@ -288,7 +297,7 @@ CREATE TABLE `users` (
   `updated_at` timestamp NULL DEFAULT NULL,
   `panggilan` varchar(11) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `tgl_lahir` date DEFAULT NULL,
-  `alamat` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `alamat` text COLLATE utf8mb4_unicode_ci,
   `provinsi` varchar(11) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `kota` varchar(11) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `kecamatan` varchar(11) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
@@ -301,7 +310,7 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `name`, `email`, `password`, `role`, `remember_token`, `created_at`, `updated_at`, `panggilan`, `tgl_lahir`, `alamat`, `provinsi`, `kota`, `kecamatan`, `notelp`, `foto`) VALUES
-(6, 'Anang Eko Fitriyanto', 'anangeko9@gmail.com', '$2y$10$OkXB8pHIISUdzSe7mIGvme45CiXoj0We.X4tK1E43eLq.DEEm5KfO', 'user', '1Z1u0DHW9JaLNIAVa3TVLxZpqqxwRI6q77mFfZ5RfFWNuNPdoNtVXqxOiOWH', '2022-09-10 02:19:49', '2022-09-10 02:19:49', 'Cak Anang', '1999-01-16', 'Karanggawang', 'Jawa tengah', 'Semarang', 'Ungaran Tim', '08132974940', 'ab 1.jpg');
+(6, 'Anang Eko Fitriyanto', 'anangeko9@gmail.com', '$2y$10$OkXB8pHIISUdzSe7mIGvme45CiXoj0We.X4tK1E43eLq.DEEm5KfO', 'user', 'RAL8U0n1WLOfeMNFhRIdzEWOp90E2E0N8c47FbgwMgcGewa9zWE9MKs462yN', '2022-09-10 02:19:49', '2022-09-10 02:19:49', 'Cak Anang', '1999-01-16', 'Karanggawang', 'Jawa tengah', 'Semarang', 'Ungaran Tim', '08132974940', 'ab 1.jpg');
 
 --
 -- Indexes for dumped tables
@@ -345,8 +354,7 @@ ALTER TABLE `tbl_hubungikamis`
 --
 ALTER TABLE `tbl_orders`
   ADD PRIMARY KEY (`id`),
-  ADD KEY `tbl_orders_id_produk_foreign` (`id_produk`),
-  ADD KEY `tbl_orders_id_penyelenggara_foreign` (`id_penyelenggara`);
+  ADD KEY `tbl_orders_id_produk_foreign` (`id_produk`);
 
 --
 -- Indexes for table `tbl_pelanggans`
@@ -421,7 +429,7 @@ ALTER TABLE `tbl_hubungikamis`
 -- AUTO_INCREMENT for table `tbl_orders`
 --
 ALTER TABLE `tbl_orders`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=32;
 
 --
 -- AUTO_INCREMENT for table `tbl_pelanggans`
@@ -480,7 +488,6 @@ ALTER TABLE `tbl_gambars`
 -- Constraints for table `tbl_orders`
 --
 ALTER TABLE `tbl_orders`
-  ADD CONSTRAINT `tbl_orders_id_penyelenggara_foreign` FOREIGN KEY (`id_penyelenggara`) REFERENCES `tbl_penyelenggaras` (`id`),
   ADD CONSTRAINT `tbl_orders_id_produk_foreign` FOREIGN KEY (`id_produk`) REFERENCES `tbl_produks` (`id`);
 
 --
