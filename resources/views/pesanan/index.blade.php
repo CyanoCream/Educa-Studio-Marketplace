@@ -75,7 +75,11 @@
                                 </tr>
                                 </thead>
                                 <tbody>
-                        
+                                    
+                                    @if (count($orders) == 0)
+                                        <div class="alert alert-warning">Cart is empty</div>
+                                        
+                                   @else
                                     @foreach ( $orders as $order )
                                 <tr class="kodory-cart-form__cart-item cart_item">
                                     <td class="product-remove">
@@ -108,6 +112,7 @@
                                                 class="kodory-Price-currencySymbol">Rp.</span>{{ $order->total_harga}}.000</span></td>
                                 </tr>
                                 @endforeach
+                                @endif
                                 <tr>
                                     <td colspan="6" class="actions">
                                         <div class="coupon">

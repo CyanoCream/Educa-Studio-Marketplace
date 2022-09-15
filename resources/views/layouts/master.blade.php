@@ -163,11 +163,11 @@
 
     });
 
-    function PesanSekarang()
+    function PesanSekarang1()
     {   
         let timerInterval
         Swal.fire({
-        position: 'top-end',
+        position: 'top-center',
         title: 'Brang berhasil Memasukan ke Keranjang!',
         html: 'I will close in  milliseconds.',
         timer: 2000,
