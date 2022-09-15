@@ -79,32 +79,40 @@
                             <form class="kodory-EditAccountForm edit-account" method="post">
                                 <div class="clear"></div>
                                 <p class="kodory-form-row kodory-form-row--wide form-row form-row-wide">
-                                    <label for="icon_penyelenggara">Icon Penyelenggara&nbsp;<span
-                                            class="required">*</span></label>
-                                            <input type="file" name="icon_penyelenggara" id="icon_penyelenggara" class="form-control"
-                                            required="required">
+                                    <h5 class="d-flex justify-content-between">
+                                        Icon Penyelenggara : <a>{{ Auth::user()->icon_penyelenggara }}</a>
+                                    </h5>
+                                    <input type="file" name="icon_penyelenggara" id="icon_penyelenggara" class="form-control"
+                                    required="required">
                                 </p>
                                 <div class="clear"></div>
                                 <p class="kodory-form-row kodory-form-row--wide form-row form-row-wide">
-                                    <label for="nama_penyelenggara">Nama Penyelenggara&nbsp;<span class="required">*</span>
-                                    </label>
+                                    <h5 class="d-flex justify-content-between">
+                                        Nama Penyelenggara : <a>{{ Auth::user()->nama_penyelenggara }}</a>
+                                    </h5>
                                     <input type="text" name="nama_penyelenggara" id="nama_penyelenggara" class="form-control"
                                     required="required" placeholder="Masukkan nama penyelenggara">
                                     <span><em>This will be how your name will be displayed in the account section and in reviews</em></span>
                                 </p>
                                 <fieldset>
                                     <p class="kodory-form-row kodory-form-row--wide form-row form-row-wide">
-                                        <label for="kota_penyelenggara">Kota Penyelenggara</label>
+                                        <h5 class="d-flex justify-content-between">
+                                            Kota Penyelenggara : <a>{{ Auth::user()->kota_penyelenggara }}</a>
+                                        </h5>
                                         <input type="text" name="kota_penyelenggara" id="kota_penyelenggara" class="form-control"
                                     required="required" placeholder="Masukkan kota penyelenggara">
                                     </p>
                                     <p class="kodory-form-row kodory-form-row--wide form-row form-row-wide">
-                                        <label for="deskripsi">Deskripsi</label>
+                                        <h5 class="d-flex justify-content-between">
+                                            Deskripsi :<a>{{ Auth::user()->deskripsi }}</a>
+                                        </h5>
                                         <textarea name="deskripsi" id="deskripsi" rows="3" class="form-control" required="required"
                                     placeholder="Masukkan deskripsi"></textarea>
                                     </p>
                                     <p class="kodory-form-row kodory-form-row--wide form-row form-row-wide">
-                                        <label for="jam operasional">Jam Operasional</label>
+                                        <h5 class="d-flex justify-content-between">
+                                            Jam Operasional :<a>{{ Auth::user()->jam_operasional }}</a>
+                                        </h5>
                                         <input type="text" name="jam_operasional" id="jam_operasional" class="form-control"
                                     required="required">
                                     </p>

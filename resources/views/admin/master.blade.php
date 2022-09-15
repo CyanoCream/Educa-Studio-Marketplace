@@ -27,6 +27,8 @@
     <link rel="stylesheet" href="{{asset('plugins/daterangepicker/daterangepicker.css')}}">
     <!-- summernote -->
     <link rel="stylesheet" href="{{asset('plugins/summernote/summernote-bs4.min.css')}}">
+    <!--responsive-->
+    <link rel="stylesheet" href="{{asset('plugins/datatables-responsive/css/responsive.boostrap4.min.css')}}">
     @yield('style')
 </head>
 
@@ -40,6 +42,9 @@
 
         <!--content-->
         @yield('content')
+
+        <!--calender-->
+        {{-- @include('admin.calender') --}}
 
         <!--footer-->
         @include('admin.footer')
@@ -73,6 +78,9 @@
     <script src="{{asset('plugins/summernote/summernote-bs4.min.js')}}"></script>
     <!-- overlayScrollbars -->
     <script src="{{asset('plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js')}}"></script>
+    <!--responsive-->
+    <script src="{{asset('plugins/datatables-responsive/js/dataTables.responsive.min.js')}}"></script>
+    <script src="{{asset('plugins/datatables-responsive/js/responsive.bootstrap4.min.js')}}"></script>
     <!-- AdminLTE App -->
     <script src="{{asset('dist/js/adminlte.js')}}"></script>
     <!-- AdminLTE for demo purposes -->
