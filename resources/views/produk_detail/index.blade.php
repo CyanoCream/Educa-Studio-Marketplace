@@ -14,10 +14,10 @@
                             <span></span>
                         </a>
                     </div>
+                </div>
             </div>
         </div>
-    </div>
-</header>
+    </header>
 
 <div class="banner-wrapper no_background">
     <div class="banner-wrapper-inner container">
@@ -146,21 +146,17 @@
                     </div>
                     <div class="kodory-tabs kodory-tabs-wrapper">
                         <ul class="tabs dreaming-tabs" role="tablist">
-                            <li class="additional_information_tab" id="tab-title-additional_information" role="tab"
-                            aria-controls="tab-additional_information">
+                            <li class="additional_information_tab" id="tab-title-additional_information" role="tab" aria-controls="tab-additional_information">
                             <a href="#tab-additional_information">Additional information</a>
                         </li>
-                            <li class="description_tab active" id="tab-title-description" role="tab"
-                                aria-controls="tab-description">
+                            <li class="description_tab active" id="tab-title-description" role="tab" aria-controls="tab-description">
                                 <a href="#tab-description">Penyelenggara</a>
                             </li>
                             <li class="reviews_tab" id="tab-title-reviews" role="tab" aria-controls="tab-reviews">
                                 <a href="#tab-reviews">Reviews (0)</a>
                             </li>
                         </ul>
-                             <div class="kodory-Tabs-panel kodory-Tabs-panel--additional_information panel entry-content kodory-tab"
-                             id="tab-additional_information" role="tabpanel"
-                             aria-labelledby="tab-title-additional_information">
+                             <div class="kodory-Tabs-panel kodory-Tabs-panel--additional_information panel entry-content kodory-tab" id="tab-additional_information" role="tabpanel" aria-labelledby="tab-title-additional_information">
                             <h2>Additional information</h2>
                                 <table class="shop_attributes">
                                     <tbody>
@@ -180,8 +176,7 @@
                             </table>
                         </div>
         
-                        <div class="kodory-Tabs-panel kodory-Tabs-panel--description panel entry-content kodory-tab"
-                             id="tab-description" role="tabpanel" aria-labelledby="tab-title-description">
+                        <div class="kodory-Tabs-panel kodory-Tabs-panel--description panel entry-content kodory-tab" id="tab-description" role="tabpanel" aria-labelledby="tab-title-description">
                             <h2>Penyelenggara</h2>
                             <div class="container-table">
                                 <div class="container-cell">
@@ -197,29 +192,28 @@
                             </div>
                         </div>
                        
-                        <div class="kodory-Tabs-panel kodory-Tabs-panel--reviews panel entry-content kodory-tab"
-                             id="tab-reviews" role="tabpanel" aria-labelledby="tab-title-reviews">
+                        <div class="kodory-Tabs-panel kodory-Tabs-panel--reviews panel entry-content kodory-tab" id="tab-reviews" role="tabpanel" aria-labelledby="tab-title-reviews">
                             <div id="reviews" class="kodory-Reviews">
                                 <div id="comments">
-                                    <h2 class="kodory-Reviews-title">Reviews</h2>
+                                    <h2 class="kodory-Reviews-title">Reviews</h2> 
                                     <p class="kodory-noreviews">There are no reviews yet.</p>
                                 </div>
                                 <div id="review_form_wrapper">
                                     <div id="review_form">
                                         <div id="respond" class="comment-respond">
-                                            <span id="reply-title" class="comment-reply-title">Be the first to review “T-shirt with skirt”</span>
-                                            <form id="commentform" class="comment-form">
+                                            <span id="reply-title" class="comment-reply-title">Be the first to review this product</span>
+                                            <form id="commentform" class="comment-form">  
                                                 <p class="comment-notes"><span id="email-notes">Your email address will not be published.</span>
                                                     Required fields are marked <span class="required">*</span></p>
+
                                                 <p class="comment-form-author">
-                                                    <label for="author">Name&nbsp;<span
-                                                            class="required">*</span></label>
-                                                    <input id="author" name="author" value="" size="30" required=""
-                                                           type="text"></p>
+                                                    <label for="author">Name&nbsp;<span class="required">*</span></label>
+                                                    <input id="author" name="author" value="" size="30" required="" type="text"></p>
+
                                                 <p class="comment-form-email"><label for="email">Email&nbsp;
                                                     <span class="required">*</span></label>
-                                                    <input id="email" name="email" value="" size="30" required=""
-                                                           type="email"></p>
+                                                    <input id="email" name="email" value="" size="30" required="" type="email"></p>
+                                                    
                                                 <div class="comment-form-rating"><label for="rating">Your rating</label>
                                                     <p class="stars">
                                                         <span>
@@ -230,8 +224,7 @@
                                                         <a class="star-5" href="#">5</a>
                                                         </span>
                                                     </p>
-                                                    <select title="product_cat" name="rating" id="rating" required=""
-                                                            style="display: none;">
+                                                    <select title="product_cat" name="rating" id="rating" required="" style="display: none;">
                                                         <option value="">Rate…</option>
                                                         <option value="5">Perfect</option>
                                                         <option value="4">Good</option>
@@ -239,17 +232,12 @@
                                                         <option value="2">Not that bad</option>
                                                         <option value="1">Very poor</option>
                                                     </select></div>
-                                                <p class="comment-form-comment"><label for="comment">Your
-                                                    review&nbsp;<span class="required">*</span></label><textarea
-                                                        id="comment" name="comment" cols="45" rows="8"
-                                                        required=""></textarea></p><input name="wpml_language_code"
-                                                                                          value="en" type="hidden">
-                                                <p class="form-submit"><input name="submit" id="submit" class="submit"
-                                                                              value="Submit" type="submit"> <input
-                                                        name="comment_post_ID" value="27" id="comment_post_ID"
-                                                        type="hidden">
-                                                    <input name="comment_parent" id="comment_parent" value="0"
-                                                           type="hidden">
+                                                <p class="comment-form-comment"><label for="comment">Your review&nbsp;<span class="required">*</span></label>
+                                                    <textarea id="comment" name="comment" cols="45" rows="8" required=""></textarea></p>
+                                                    <input name="wpml_language_code" value="en" type="hidden">
+                                                <p class="form-submit"><input name="submit" id="submit" class="submit" value="Submit" type="submit"> 
+                                                    <input name="comment_post_ID" value="27" id="comment_post_ID" type="hidden">
+                                                    <input name="comment_parent" id="comment_parent" value="0" type="hidden">
                                                 </p></form>
                                         </div><!-- #respond -->
                                     </div>
