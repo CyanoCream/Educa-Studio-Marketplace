@@ -55,6 +55,24 @@
                     <a href="{{ route('createUlasan') }}" class="btn btn-primary" role="button">Tambah Ulasan</a>
                 </div>
                 <div class="card-body p-2">
+                    <div class="row">
+                        <div class="col-md-4 mb-2">
+                            <select id="filter-data" class="form-control">
+                                <option selected>Cari Disini</option>
+                                {{-- @foreach ($ulasans as $ulasan)
+                                    <option value="{{$ulasan->id}}">{{$ulasan->id}}</option>
+                                    <option value="{{$ulasan->id}}">{{$ulasan->nama}}</option>
+                                    <option value="{{$ulasan->id}}">{{$ulasan->email}}</option>
+                                    <option value="{{$ulasan->id}}">{{$ulasan->penilaian}}</option>
+                                    <option value="{{$ulasan->id}}">{{$ulasan->aksi}}</option> --}}
+                                    <option value="">nama</option>
+                                    <option value="">email</option>
+                                    <option value="">penilaian</option>
+                                    <option value="">aksi</option>
+                                {{-- @endforeach --}}
+                            </select>
+                        </div>
+                    </div>
                     <table class="table-update" id="data-table">
                         <thead>
                             <tr>
@@ -100,6 +118,22 @@
 <script>
     $(function () {
         $("#data-table").DataTable();
+    })
+
+    $(function () {
+        $("#data-table").DataTable({
+            "responsive": true, "lengthChange": false, "autoWidth": false,
+            "buttons": ["id", "nama", "email", "penilaian", "aksi"]
+        }).buttons().container().appendTo('#example1_wrapper .col-md-6:eq(0)');
+        $('#data-table').DataTable({
+            "paging": true,
+            "lengthChange": false,
+            "searching": false,
+            "ordering": true,
+            "info": true,
+            "autoWidth": false,
+            "responsive": true,
+        });
     })
 
     confirmDelete = function (button) {
