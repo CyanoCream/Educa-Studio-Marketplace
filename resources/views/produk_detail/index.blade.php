@@ -2,7 +2,7 @@
 
 @section('content')
 <header id="header" class="header style-04">
-
+  
     <div class="header-middle">
         <div class="container">
             <div class="header-middle-inner">
@@ -18,6 +18,7 @@
         </div>
     </div>
 </header>
+
 <div class="banner-wrapper no_background">
     <div class="banner-wrapper-inner container">
         <nav class="kodory-breadcrumb"><a href="index.html">Home</a><i class="fa fa-angle-right"></i><a href="#">Shop</a>
@@ -151,124 +152,152 @@
                             </li>
                             <li class="description_tab active" id="tab-title-description" role="tab"
                                 aria-controls="tab-description">
-                                <a href="#tab-description">Penyelenggara</a>
+                                <a href="#tab-description" id="penyelenggara">Penyelenggara</a>
                             </li>
-                            <li class="reviews_tab" id="tab-title-reviews" role="tab" aria-controls="tab-reviews">
-                                <a href="#tab-reviews">Reviews</a>
+                            <li id="tab-title-reviews">
+                                <a  href="#respond"  role="tab" aria-controls="tab-reviews">Reviews</a>
                             </li>
                         </ul>
-                        <div class="kodory-Tabs-panel kodory-Tabs-panel--description panel entry-content kodory-tab justify-content-conter"
-                             id="tab-description" role="tabpanel" aria-labelledby="tab-title-description">
-                            <h2>Penyelenggara</h2>
-                            <div class="card text-center">
-                                <div class="container">
-                                    @foreach ( $produk->penyelenggara as $peny )
-                                        
-                                    <div class="container">
-                                        <div class="az_single_image-wrapper az_box_border_grey">
-                                            <img src="{{ $peny->icon_penyelenggara}}"
-                                                class="az_single_image-img attachment-full m-5" alt="img" width="200px"></div>
-                                    </div>
-                                        <div class="container">
-                                            <h3 class="az_custom_heading m-0">{{ $peny->nama_penyelenggara}} </h3>
-                                            <p><i class="fa fa-map-marker" style="padding-right:10px;margin-bottom: 5px;"></i>{{ $peny->kota_penyelenggara}}</p>
-                                        </div>
 
-                                </div>
-                                <div class="container-table mx-auto">
-
-                                    <div class="container-cell">
-                                        <h4 class="az_custom_heading m-0">
-                                            Deskripsi</h4>
-                                        <p>{{ $peny->deskripsi }}</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div> 
-                        @endforeach
-                        <div class="kodory-Tabs-panel kodory-Tabs-panel--additional_information panel entry-content kodory-tab"
-                             id="tab-additional_information" role="tabpanel"
-                             aria-labelledby="tab-title-additional_information">
-                            <h2>Additional information</h2>
-                            <table class="shop_attributes">
-                                <tbody>
-                                <tr>
-                                    <th>Manfaat:</th>
-                                    <td><p>{{ $produk->manfaat }}</p>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <th>Metode Pembelajaran:</th>
-                                    <td><p>{{ $produk->status_pertemuan }}</p>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <th>Harga Termasuk:</th>
-                                    <td><p>{{ $produk->bundling }}</p>
-                                    </td>
-                                </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                        <div class="kodory-Tabs-panel kodory-Tabs-panel--reviews panel entry-content kodory-tab"
-                             id="tab-reviews" role="tabpanel" aria-labelledby="tab-title-reviews">
-                            <div id="reviews" class="kodory-Reviews">
-                                <div id="comments">
-                                    <h2 class="kodory-Reviews-title">Reviews</h2>
-                                    <p class="kodory-noreviews">There are no reviews yet.</p>
-                                </div>
-                                <div id="review_form_wrapper">
-                                    <div id="review_form">
-                                        <div id="respond" class="comment-respond">
-                                            <span id="reply-title" class="comment-reply-title">Be the first to review “T-shirt with skirt”</span>
-                                            <form id="commentform" class="comment-form">
-                                                <p class="comment-notes"><span id="email-notes">Your email address will not be published.</span>
-                                                    Required fields are marked <span class="required">*</span></p>
-                                                <p class="comment-form-author">
-                                                    <label for="author">Name&nbsp;<span
-                                                            class="required">*</span></label>
-                                                    <input id="author" name="author" value="" size="30" required=""
-                                                           type="text"></p>
-                                                <p class="comment-form-email"><label for="email">Email&nbsp;
-                                                    <span class="required">*</span></label>
-                                                    <input id="email" name="email" value="" size="30" required=""
-                                                           type="email"></p>
-                                               
-                                                <p class="comment-form-comment"><label for="comment">Your
-                                                    review&nbsp;<span class="required">*</span></label><textarea
-                                                        id="comment" name="comment" cols="45" rows="8"
-                                                        required=""></textarea></p><input name="wpml_language_code"
-                                                                                          value="en" type="hidden">
-                                                <p class="form-submit"><input name="submit" id="submit" class="submit"
-                                                                              value="Submit" type="submit"> <input
-                                                        name="comment_post_ID" value="27" id="comment_post_ID"
-                                                        type="hidden">
-                                                    <input name="comment_parent" id="comment_parent" value="0"
-                                                           type="hidden">
-                                                </p></form>
-                                        </div><!-- #respond -->
-                                    </div>
-                                </div>
-                                <div class="clear"></div>
-                            </div>
-                        </div>
                     </div>
+
                 </div>
             </div>
 
 
         </div>
+        {{-- start row --}}
+        <div class="row" >
+                                    
+        <div class="mx-auto"
+            id="tab-description" role="tabpanel" aria-labelledby="tab-title-description">
+           <h2>Penyelenggara</h2>
+           <div class="card text-center">
+               <div class="container">
+                   @foreach ( $produk->penyelenggara as $peny )
+                       
+                   <div class="container">
+                       <div class="az_single_image-wrapper az_box_border_grey">
+                           <img src="{{ $peny->icon_penyelenggara}}"
+                               class="az_single_image-img attachment-full m-5" alt="img" width="200px"></div>
+                   </div>
+                       <div class="container">
+                           <h3 class="az_custom_heading m-0">{{ $peny->nama_penyelenggara}} </h3>
+                           <p><i class="fa fa-map-marker" style="padding-right:10px;margin-bottom: 5px;"></i>{{ $peny->kota_penyelenggara}}</p>
+                       </div>
+
+               </div>
+               <div class="container-table mx-auto">
+
+                   <div class="container-cell">
+                       <h4 class="az_custom_heading m-0">
+                           Deskripsi</h4>
+                       <p>{{ $peny->deskripsi }}</p>
+                   </div>
+                   @endforeach
+               </div>
+           </div>
+       </div> 
+    </div>
+    <div class="row">
+
+        <div class="ml-3 mx-auto"
+             id="tab-additional_information" role="tabpanel"
+             aria-labelledby="tab-title-additional_information">
+            <h2>Additional information</h2>
+            <table class="shop_attributes">
+                <tbody>
+                <tr>
+                    <th>Manfaat:</th>
+                    <td><p>{{ $produk->manfaat }}</p>
+                    </td>
+                </tr>
+                <tr>
+                    <th>Metode Pembelajaran:</th>
+                    <td><p>{{ $produk->status_pertemuan }}</p>
+                    </td>
+                </tr>
+                <tr>
+                    <th>Harga Termasuk:</th>
+                    <td><p>{{ $produk->bundling }}</p>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+       <div class=""
+            id="tab-reviews" role="tabpanel" aria-labelledby="tab-title-reviews">
+           <div id="reviews" class="kodory-Reviews">
+               <div id="comments">
+                   <h2 class="kodory-Reviews-title">Reviews</h2>
+                   <p class="kodory-noreviews">There are no reviews yet.</p>
+               </div>
+    
+               <div id="review_form_wrapper">
+                   <div id="review_form">
+                       <div id="respond" class="comment-respond">
+                           <span id="reply-title" class="comment-reply-title">Be the first to review “T-shirt with skirt”</span>
+                           <form id="commentform" class="comment-form">
+                               <p class="comment-notes"><span id="email-notes">Your email address will not be published.</span>
+                                   Required fields are marked <span class="required">*</span></p>
+                               <p class="comment-form-author">
+                                   <label for="author">Name&nbsp;<span
+                                           class="required">*</span></label>
+                                   <input id="author" name="author" value="" size="30" required=""
+                                          type="text"></p>
+                               <p class="comment-form-email"><label for="email">Email&nbsp;
+                                   <span class="required">*</span></label>
+                                   <input id="email" name="email" value="" size="30" required=""
+                                          type="email"></p>
+                              
+                               <p class="comment-form-comment"><label for="comment">Your
+                                   review&nbsp;<span class="required">*</span></label><textarea
+                                       id="comment" name="comment" cols="45" rows="8"
+                                       required=""></textarea></p><input name="wpml_language_code"
+                                                                         value="en" type="hidden">
+                               <p class="form-submit"><input name="submit" id="submit" class="submit"
+                                                             value="Submit" type="submit"> <input
+                                       name="comment_post_ID" value="27" id="comment_post_ID"
+                                       type="hidden">
+                                   <input name="comment_parent" id="comment_parent" value="0"
+                                          type="hidden">
+                               </p></form>
+                       </div><!-- #respond -->
+                   </div>
+               </div>
+               <div class="clear"></div>
+           </div>
+       </div>
+
+
+        </div>
+        {{-- end row --}}
+       
+
+        
     </div>
 </div>
 
-      </div>
-    </div>
-  </div>
+</div>
+</div>
+</div>
 
-@endsection
-
-@section('script')
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <script>
+$(document).ready(function(){
+  $("#tes").click(function(){
+    // var pr = document.getElementById("#pr");
+    // if(pr.style.display == "none") {
+    //     pr.style.display = "block"
+    // }else {
+    //     pr.style.display = "none"
+    // }
+    $("#pr").toggle();
+  });
 
+});
 </script>
+
 @endsection
+

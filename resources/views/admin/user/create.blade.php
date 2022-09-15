@@ -39,21 +39,24 @@
 
                         <div class="form-group">
                             <label for="role">role</label>
-                            <div class="dropdown">
-                                <input type="text" name="role" id="role" class="form-control" required="required"
-                                    placeholder="Masukkan role">
-                            </div>
+                                <select id="role" name="role" class="form-control">
+                                <option selected>pilih role</option>
+                                <option>Admin</option>
+                                <option>Penyelenggara</option>
+                                <option>User</option>
+                            </select>
+                        </div>
 
-                            <div class="form-group">
-                                <label for="password">password</label>
-                                <input type="password" name="password" id="password" class="form-control"
-                                    required="required" placeholder="Masukkan password">
-                            </div>
+                        <div class="form-group">
+                            <label for="password">password</label>
+                            <input type="password" name="password" id="password" class="form-control"
+                                required="required" placeholder="Masukkan password">
+                        </div>
 
-                            <div class="text-right">
-                                <a href="{{ route('daftarUser') }}" class="btn btn-outline-secondary mr-2" role="button">Batal</a>
-                                <button type="submit" onclick="save(this)" class="btn btn-primary">Simpan</button>
-                            </div>
+                        <div class="text-right">
+                            <a href="{{ route('daftarUser') }}" class="btn btn-outline-secondary mr-2"
+                                role="button">Batal</a>
+                            <button type="submit" onclick="save(this)" class="btn btn-primary">Simpan</button>
                         </div>
                     </form>
                 </div>
