@@ -36,4 +36,5 @@
 
 
 <link rel="stylesheet" href="{{ asset('calendar/app.css') }}">
+
 <script src="{{ asset('calendar/app.js') }}"></script>

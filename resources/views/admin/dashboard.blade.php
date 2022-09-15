@@ -101,7 +101,7 @@
             </div>
         </div>
     </section>
-    <div class="card m-4" style="border-radius: 20px; background: rgb(232,233,22);
+    {{-- <div class="card m-4" style="border-radius: 20px; background: rgb(232,233,22);
     background: linear-gradient(180deg, rgba(232,233,22,1) 0%, rgba(9,121,23,1) 50%, rgba(0,255,221,1) 100%);">
         <h3 class="text-center pt-4"><strong>Tabel Order</strong></h3>
         <div class="row justify-content-center pb-4">
@@ -109,7 +109,7 @@
                 <canvas id="myChart"></canvas>
             </div>
         </div>
-    </div>
+    </div> --}}
     {{-- @include('admin.calender') --}}
 </div>
 
