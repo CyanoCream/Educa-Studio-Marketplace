@@ -149,138 +149,119 @@
                             <li class="additional_information_tab" id="tab-title-additional_information" role="tab"
                             aria-controls="tab-additional_information">
                             <a href="#tab-additional_information">Additional information</a>
-                            </li>
+                        </li>
                             <li class="description_tab active" id="tab-title-description" role="tab"
                                 aria-controls="tab-description">
-                                <a href="#tab-description" id="penyelenggara">Penyelenggara</a>
+                                <a href="#tab-description">Penyelenggara</a>
                             </li>
-                            <li id="tab-title-reviews">
-                                <a  href="#respond"  role="tab" aria-controls="tab-reviews">Reviews</a>
+                            <li class="reviews_tab" id="tab-title-reviews" role="tab" aria-controls="tab-reviews">
+                                <a href="#tab-reviews">Reviews (0)</a>
                             </li>
                         </ul>
-
+                             <div class="kodory-Tabs-panel kodory-Tabs-panel--additional_information panel entry-content kodory-tab"
+                             id="tab-additional_information" role="tabpanel"
+                             aria-labelledby="tab-title-additional_information">
+                            <h2>Additional information</h2>
+                                <table class="shop_attributes">
+                                    <tbody>
+                                    <tr>
+                                        <th>Manfaat:</th>
+                                        <td><p>{{ $produk->manfaat }}</p></td>
+                                    </tr>
+                                    <tr>
+                                        <th>Metode Pembelajaran:</th>
+                                        <td><p>{{ $produk->status_pertemuan }}</p></td>
+                                    </tr>
+                                    <tr>
+                                        <th>Harga Termasuk:</th>
+                                        <td><p>{{ $produk->bundling }}</p></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+        
+                        <div class="kodory-Tabs-panel kodory-Tabs-panel--description panel entry-content kodory-tab"
+                             id="tab-description" role="tabpanel" aria-labelledby="tab-title-description">
+                            <h2>Penyelenggara</h2>
+                            <div class="container-table">
+                                <div class="container-cell">
+                                </div>
+                                <div class="container-cell">
+                                </div>
+                            </div>
+                            <div class="container-table">
+                                <div class="container-cell">
+                                </div>
+                                <div class="container-cell">
+                                </div>
+                            </div>
+                        </div>
+                       
+                        <div class="kodory-Tabs-panel kodory-Tabs-panel--reviews panel entry-content kodory-tab"
+                             id="tab-reviews" role="tabpanel" aria-labelledby="tab-title-reviews">
+                            <div id="reviews" class="kodory-Reviews">
+                                <div id="comments">
+                                    <h2 class="kodory-Reviews-title">Reviews</h2>
+                                    <p class="kodory-noreviews">There are no reviews yet.</p>
+                                </div>
+                                <div id="review_form_wrapper">
+                                    <div id="review_form">
+                                        <div id="respond" class="comment-respond">
+                                            <span id="reply-title" class="comment-reply-title">Be the first to review “T-shirt with skirt”</span>
+                                            <form id="commentform" class="comment-form">
+                                                <p class="comment-notes"><span id="email-notes">Your email address will not be published.</span>
+                                                    Required fields are marked <span class="required">*</span></p>
+                                                <p class="comment-form-author">
+                                                    <label for="author">Name&nbsp;<span
+                                                            class="required">*</span></label>
+                                                    <input id="author" name="author" value="" size="30" required=""
+                                                           type="text"></p>
+                                                <p class="comment-form-email"><label for="email">Email&nbsp;
+                                                    <span class="required">*</span></label>
+                                                    <input id="email" name="email" value="" size="30" required=""
+                                                           type="email"></p>
+                                                <div class="comment-form-rating"><label for="rating">Your rating</label>
+                                                    <p class="stars">
+                                                        <span>
+                                                        <a class="star-1" href="#">1</a>
+                                                        <a class="star-2" href="#">2</a>
+                                                        <a class="star-3" href="#">3</a>
+                                                        <a class="star-4" href="#">4</a>
+                                                        <a class="star-5" href="#">5</a>
+                                                        </span>
+                                                    </p>
+                                                    <select title="product_cat" name="rating" id="rating" required=""
+                                                            style="display: none;">
+                                                        <option value="">Rate…</option>
+                                                        <option value="5">Perfect</option>
+                                                        <option value="4">Good</option>
+                                                        <option value="3">Average</option>
+                                                        <option value="2">Not that bad</option>
+                                                        <option value="1">Very poor</option>
+                                                    </select></div>
+                                                <p class="comment-form-comment"><label for="comment">Your
+                                                    review&nbsp;<span class="required">*</span></label><textarea
+                                                        id="comment" name="comment" cols="45" rows="8"
+                                                        required=""></textarea></p><input name="wpml_language_code"
+                                                                                          value="en" type="hidden">
+                                                <p class="form-submit"><input name="submit" id="submit" class="submit"
+                                                                              value="Submit" type="submit"> <input
+                                                        name="comment_post_ID" value="27" id="comment_post_ID"
+                                                        type="hidden">
+                                                    <input name="comment_parent" id="comment_parent" value="0"
+                                                           type="hidden">
+                                                </p></form>
+                                        </div><!-- #respond -->
+                                    </div>
+                                </div>
+                                <div class="clear"></div>
+                            </div>
+                        </div>
                     </div>
-
                 </div>
             </div>
-
-
-        </div>
-        {{-- start row --}}
-        <div class="row" >
-                                    
-        <div class="mx-auto"
-            id="tab-description" role="tabpanel" aria-labelledby="tab-title-description">
-           <h2>Penyelenggara</h2>
-           <div class="card text-center">
-               <div class="container">
-                   @foreach ( $produk->penyelenggara as $peny )
-                       
-                   <div class="container">
-                       <div class="az_single_image-wrapper az_box_border_grey">
-                           <img src="{{ $peny->icon_penyelenggara}}"
-                               class="az_single_image-img attachment-full m-5" alt="img" width="200px"></div>
-                   </div>
-                       <div class="container">
-                           <h3 class="az_custom_heading m-0">{{ $peny->nama_penyelenggara}} </h3>
-                           <p><i class="fa fa-map-marker" style="padding-right:10px;margin-bottom: 5px;"></i>{{ $peny->kota_penyelenggara}}</p>
-                       </div>
-
-               </div>
-               <div class="container-table mx-auto">
-
-                   <div class="container-cell">
-                       <h4 class="az_custom_heading m-0">
-                           Deskripsi</h4>
-                       <p>{{ $peny->deskripsi }}</p>
-                   </div>
-                   @endforeach
-               </div>
-           </div>
-       </div> 
-    </div>
-    <div class="row">
-
-        <div class="ml-3 mx-auto"
-             id="tab-additional_information" role="tabpanel"
-             aria-labelledby="tab-title-additional_information">
-            <h2>Additional information</h2>
-            <table class="shop_attributes">
-                <tbody>
-                <tr>
-                    <th>Manfaat:</th>
-                    <td><p>{{ $produk->manfaat }}</p>
-                    </td>
-                </tr>
-                <tr>
-                    <th>Metode Pembelajaran:</th>
-                    <td><p>{{ $produk->status_pertemuan }}</p>
-                    </td>
-                </tr>
-                <tr>
-                    <th>Harga Termasuk:</th>
-                    <td><p>{{ $produk->bundling }}</p>
-                    </td>
-                </tr>
-                </tbody>
-            </table>
         </div>
     </div>
-       <div class=""
-            id="tab-reviews" role="tabpanel" aria-labelledby="tab-title-reviews">
-           <div id="reviews" class="kodory-Reviews">
-               <div id="comments">
-                   <h2 class="kodory-Reviews-title">Reviews</h2>
-                   <p class="kodory-noreviews">There are no reviews yet.</p>
-               </div>
-    
-               <div id="review_form_wrapper">
-                   <div id="review_form">
-                       <div id="respond" class="comment-respond">
-                           <span id="reply-title" class="comment-reply-title">Be the first to review “T-shirt with skirt”</span>
-                           <form id="commentform" class="comment-form">
-                               <p class="comment-notes"><span id="email-notes">Your email address will not be published.</span>
-                                   Required fields are marked <span class="required">*</span></p>
-                               <p class="comment-form-author">
-                                   <label for="author">Name&nbsp;<span
-                                           class="required">*</span></label>
-                                   <input id="author" name="author" value="" size="30" required=""
-                                          type="text"></p>
-                               <p class="comment-form-email"><label for="email">Email&nbsp;
-                                   <span class="required">*</span></label>
-                                   <input id="email" name="email" value="" size="30" required=""
-                                          type="email"></p>
-                              
-                               <p class="comment-form-comment"><label for="comment">Your
-                                   review&nbsp;<span class="required">*</span></label><textarea
-                                       id="comment" name="comment" cols="45" rows="8"
-                                       required=""></textarea></p><input name="wpml_language_code"
-                                                                         value="en" type="hidden">
-                               <p class="form-submit"><input name="submit" id="submit" class="submit"
-                                                             value="Submit" type="submit"> <input
-                                       name="comment_post_ID" value="27" id="comment_post_ID"
-                                       type="hidden">
-                                   <input name="comment_parent" id="comment_parent" value="0"
-                                          type="hidden">
-                               </p></form>
-                       </div><!-- #respond -->
-                   </div>
-               </div>
-               <div class="clear"></div>
-           </div>
-       </div>
-
-
-        </div>
-        {{-- end row --}}
-       
-
-        
-    </div>
-</div>
-
-</div>
-</div>
 </div>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>

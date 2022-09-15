@@ -171,6 +171,7 @@
                                        @endguest
                                     
                                 </div>
+
                                 <div class="block-minicart block-dreaming kodory-mini-cart kodory-dropdown">
                                     <div class="shopcart-dropdown block-cart-link" data-kodory="kodory-dropdown">
                                         <a class="block-link link-dropdown" href="">
@@ -219,6 +220,7 @@
                                         </div>
                                     </div>
                                 </div>
+                                
                             </div>
                         </div>
                     </div>

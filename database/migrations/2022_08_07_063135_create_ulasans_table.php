@@ -16,6 +16,7 @@ class CreateUlasansTable extends Migration
         Schema::create('tbl_ulasans', function (Blueprint $table) {
             $table->increments('id');
             $table->timestamps();
+            $table->integer('id_user');
             $table->string('nama');
             $table->string('email');
             $table->string('penilaian');
