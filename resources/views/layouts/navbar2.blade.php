@@ -174,21 +174,45 @@
                                     
                                 </div>
                                  
-                                <div class="block-minicart block-dreaming kodory-mini-cart kodory-dropdown">
+                                {{-- <div class="block-minicart block-dreaming kodory-mini-cart kodory-dropdown">
                                     <div class="shopcart-dropdown block-cart-link" data-kodory="kodory-dropdown">
                                         <a class="block-link link-dropdown" href="">
                                             <span class="flaticon-shopping-bag-1"></span>
-                                            <span class="count">0</span>
+                                            <span class="count">{{$totalpesan}}</span>
                                         </a>
                                     </div>
                                     <div class="widget kodory widget_shopping_cart">
                                         <div class="widget_shopping_cart_content">
                                             <h3 class="minicart-title">Your Cart<span
-                                                    class="minicart-number-items">0</span></h3>
-                                            <ul class="kodory-mini-cart cart_list product_list_widget"></ul>
+                                                    class="minicart-number-items">{{$totalpesan}}</span></h3>
+                                           
+                                                                                         
+                                           <ul class="kodory-mini-cart cart_list product_list_widget">
+                                            @foreach ($orders as $order )
+                                          
+                                               <li class="kodory-mini-cart-item mini_cart_item">
+                                                   
+                                                   <a>
+                                                    @foreach ( $order->gambar['gambar'] as $gambar)
+                                                       <img src="/images/{{$gambar->gambar}}""
+                                                       class="attachment-kodory_thumbnail size-kodory_thumbnail"
+                                                       alt="img" width="600" height="778">
+                                                       <p>{{ $order->produk->nama_produk }}</p>
+                                                       @endforeach
+                                                    </a>
+                                                    <span class="quantity">{{ $order->jumlah_pesanan }} × <span
+                                                        class="kodory-Price-amount amount"><span
+                                                        class="kodory-Price-currencySymbol"></span>Rp.{{ $order->produk->harga_produk }}</span></span>
+                                                        <div> 
+                                                            <a style="margin:20px;" href="{{route('deleteOrder', ['id' => $order->id])}}" class="remove remove_from_cart_button">×</a>
+                                                        </div>
+                                                    @endforeach
+                                                    </li>
+                                                </ul>
+                                            
                                             <p class="kodory-mini-cart__total total"><strong>Subtotal:</strong>
                                                 <span class="kodory-Price-amount amount"><span
-                                                        class="kodory-Price-currencySymbol">$</span></span>
+                                                        class="kodory-Price-currencySymbol">Rp.{{$sumorders}}.000</span></span>
                                             </p>
                                             <p class="kodory-mini-cart__buttons buttons">
                                                 <a href="{{ route ('pesanan.index')}}" class="button kodory-forward">Viewcart</a>
@@ -197,7 +221,7 @@
                                             </p>
                                         </div>
                                     </div>
-                                </div>
+                                </div> --}}
                             </div>
                         </div>
                     </div>

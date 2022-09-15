@@ -18,12 +18,12 @@ Route::get('/pesanan/cek', function () {
     return view('layout.master');
 });
 Route::get('/', 'OrderController@navindex')->name('pesanan.cek');
-Route::get('/nav', 'OrderController@nav2index');
-Route::get('/navbar', 'OrderController@nav3index');
+Route::get('/katalog', 'OrderController@nav2index')->name('katalog.index');
+Route::get('/pesanan', 'OrderController@navpesanan')->name('pesanan.index');
 
-Route::get('/katalog', function () {
+Route::get('nav', function () {
     return view('katalog.index');
-})->name('katalog.index');
+});
 Route::get('/katalog/aktivitas', function () {
     return view('katalog.aktivitas');
 })->name('aktivitas');
@@ -81,7 +81,7 @@ Route::get('produk-detail/{id}', 'ProdukController@show');
 
 Route::post('peserta', 'PesertaController@getPeserta')->name('peserta');
 
-Route::get('/pesanan', 'OrderController@index')->name('pesanan.index');
+Route::get('/navbar', 'OrderController@index');
 Route::get('/pesanan/invoice', 'OrderController@invoice')->middleware('auth')->name('pesanan.invoice');
 Route::get('/pesanan/cek', 'OrderController@navindex')->name('pesanan.cek');
 Route::post('checkout/{id}', 'ProdukController@addData')->name('checkout');
