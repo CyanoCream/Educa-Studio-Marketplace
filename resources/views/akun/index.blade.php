@@ -31,7 +31,7 @@
                                 </span>
                                 <div class="phone-number">
                                     <p>Support & Order</p>
-                                    <p>085743736401</p>
+                                    <a href="">085743736401</a>
                                 </div>
                             </div>
                         </div>

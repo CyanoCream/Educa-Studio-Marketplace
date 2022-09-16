@@ -23,7 +23,7 @@
                                 </span>
                                 <div class="phone-number">
                                     <p>Support & Order</p>
-                                    <p>085743736401</p>
+                                    <p><a href="wa.me/6285743736401" class="text-light">085743736401</a></p>
                                 </div>
                             </div>
                         </div>
@@ -124,14 +124,14 @@
                                     <a href="#" class="button yith-wcqv-button" data-product_id="24">Quick
                                         View</a>
                                     <div class="group-button">
-                                        <div class="yith-wcwl-add-to-wishlist">
+                                        {{-- <div class="yith-wcwl-add-to-wishlist">
                                             <div class="yith-wcwl-add-button show">
                                                 <a href="wishlist.html" class="add_to_wishlist">Add to Wishlist</a>
                                             </div>
                                         </div>
                                         <div class="kodory product compare-button">
                                             <a href="compare.html" class="compare button">Compare</a>
-                                        </div>
+                                        </div> --}}
                                         <a href="#" class="button yith-wcqv-button">Quick View</a>
                                         <div class="add-to-cart">
                                             <a href="cart.html"
@@ -157,14 +157,14 @@
                                 </div>
                                 <div class="group-button">
                                     <div class="group-button-inner">
-                                        <div class="yith-wcwl-add-to-wishlist">
+                                        {{-- <div class="yith-wcwl-add-to-wishlist">
                                             <div class="yith-wcwl-add-button show">
                                                 <a href="wishlist.html" class="add_to_wishlist">Add to Wishlist</a>
                                             </div>
                                         </div>
                                         <div class="kodory product compare-button">
                                             <a href="compare.html" class="compare button">Compare</a>
-                                        </div>
+                                        </div> --}}
                                         <a href="#" class="button yith-wcqv-button">Quick View</a>
                                         <div class="add-to-cart">
                                             <a href="single-product.html"
@@ -182,13 +182,13 @@
             </div>
             <div class="sidebar col-xl-3 col-lg-4 col-md-4 col-sm-12">
                 <div id="widget-area" class="widget-area shop-sidebar">
-                    <div id="kodory_product_search-2" class="widget kodory widget_product_search">
+                    {{-- <div id="kodory_product_search-2" class="widget kodory widget_product_search">
                         <form class="kodory-product-search">
                             <input id="kodory-product-search-field-0" class="search-field"
                                 placeholder="Search products…" value="" name="s" type="search">
                             <button type="submit" value="Search">Search</button>
                         </form>
-                    </div>
+                    </div> --}}
 
                     <div id="kodory_kodory_layered_nav-4"
                         class="widget kodory_widget_layered_nav widget_layered_nav">

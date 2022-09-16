@@ -31,7 +31,7 @@
                                 </span>
                                 <div class="phone-number">
                                     <p>Support & Order</p>
-                                    <p>085743736401</p>
+                                    <p><a href="wa.me/6285743736401" class="text-light">085743736401</a></p>
                                 </div>
                             </div>
                         </div>
@@ -128,9 +128,12 @@
                                     <td colspan="6" class="actions">
                                         <div class="coupon">
                                         </div>
-                                        <button type="button" class="button" name="" value=""
-                                        data-toggle="modal" data-target="#pulsa" >Checkout
-                                        </button>
+                                        <form action="" method="post">
+                                            
+                                            <button type="submit" class="button" name="" value=""
+                                            data-toggle="modal" data-target="#pulsa" >Checkout
+                                            </button>
+                                        </form>
                                         <input type="hidden" id="kodory-cart-nonce" name="kodory-cart-nonce"
                                                value="f41b5bf554"><input type="hidden" name="_wp_http_referer"
                                                                          value="/kodory/cart/"></td>

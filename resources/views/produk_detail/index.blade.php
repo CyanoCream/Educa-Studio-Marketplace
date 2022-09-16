@@ -126,18 +126,6 @@
                                         <a href="#"rel="tag">{{ $produk->kategori }}</a>
                                     </span>
                                 </div>
-                                <div class="kodory-share-socials">
-                                    <h5 class="social-heading">Share: </h5>
-                                    <a target="_blank" class="facebook" href="#">
-                                        <i class="fa fa-facebook-f"></i>
-                                    </a>
-                                    <a target="_blank" class="twitter"
-                                       href="#"><i class="fa fa-twitter"></i>
-                                    </a>
-                                    <a target="_blank" class="googleplus"
-                                       href="#"><i class="fa fa-google-plus"></i>
-                                    </a>
-                                </div>
                             </div>
                         </div>
                     </div>
