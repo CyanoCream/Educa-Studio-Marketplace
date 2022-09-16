@@ -23,14 +23,14 @@
         </div>
         <div class="calendar-days"></div>
     </div>
-    {{-- <div class="calendar-footer">
+    <div class="calendar-footer">
         <div class="toggle">
             <span>Dark Mode</span>
             <div class="dark-mode-switch">
                 <div class="dark-mode-switch-ident"></div>
             </div>
         </div>
-    </div> --}}
+    </div>
     <div class="month-list"></div>
 </div>
 

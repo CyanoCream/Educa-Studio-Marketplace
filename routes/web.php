@@ -52,6 +52,11 @@ Route::get('/topup', function () {
     return view('top_up.index');
 })->name('topup.index');
 
+//home penyelenggara
+// Route::get('/dashboard/penyelenggara', function () {
+//     return view('Penyelenggara.dashboard');
+// })->name('admin.penyelenggara');
+
 
 Route::get('/produk-detail/{id}','ProdukController@show')->name('produk-detail');
 
@@ -66,10 +71,6 @@ Route::get('/daftar', function () {
     return view('akun.daftar');
 })->name('daftar');
 
-Auth::routes();
-
-// home admin
-Route::get('/home', 'AdminHomeController@index')->name('dashboard');
 
 Auth::routes();
 
@@ -77,7 +78,7 @@ Route::post('/postlogin', 'LoginController@postlogin')->name('postlogin');
 Route::post('/logout', 'LoginController@logout')->name('logout');
 
 Auth::routes();
-
+// home admin
 Route::get('/home', 'AdminHomeController@index')->name('home');
 Route::get('/countproduk', 'AdminHomeController@CountProduk')->name('countProduk');
 
@@ -90,9 +91,10 @@ Route::get('/pesanan/invoice', 'OrderController@invoice')->middleware('auth')->n
 Route::get('/pesanan/cek', 'OrderController@navindex')->name('pesanan.cek');
 Route::post('checkout/{id}', 'ProdukController@addData')->name('checkout');
 
-
+Auth::routes();
+//home penyelenggara
 Route::get('/penyelenggara/admin', function () {
-    return view('Penyelenggara.dashboard_penyelenggara');
+    return view('Penyelenggara.dashboard');
 })->name('penyelenggaras');
 
 Route::get('/Penyelenggara-gambar', function () {
