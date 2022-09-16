@@ -65,8 +65,7 @@
                             <table class="shop_table shop_table_responsive cart kodory-cart-form__contents">
                                 <thead>
                                 <tr>
-                                    <th class="product-remove">&nbsp;</th>
-                                    <th class="product-thumbnail">&nbsp;</th>
+                                    <th class="product-thumbnail">Images</th>
                                     <th class="product-name">Product</th>
                                     <th class="product-price">Price</th>
                                     <th class="product-quantity">Quantity</th>
@@ -75,8 +74,6 @@
                                 </thead>
                                 <tbody>
                                 <tr class="kodory-cart-form__cart-item cart_item">
-                                    <td class="product-remove">
-                                        <a href="#" class="remove" aria-label="Remove this item" data-product_id="27" data-product_sku="885B712">×</a>
                                     </td>
                                     <td class="product-thumbnail">
                                         <a href="single-product.html">
@@ -105,8 +102,6 @@
                                     </td>
                                 </tr>
                                 <tr class="kodory-cart-form__cart-item cart_item">
-                                    <td class="product-remove">
-                                        <a href="#" class="remove" aria-label="Remove this item" data-product_id="29" data-product_sku="003D754">×</a>
                                     </td>
                                     <td class="product-thumbnail">
                                         <a href="single-product.html">
@@ -136,8 +131,6 @@
                                     </td>
                                 </tr>
                                 <tr class="kodory-cart-form__cart-item cart_item">
-                                    <td class="product-remove">
-                                        <a href="#" class="remove" aria-label="Remove this item" data-product_id="20" data-product_sku="775E109">×</a>
                                     </td>
                                     <td class="product-thumbnail">
                                         <a href="single-product.html">
