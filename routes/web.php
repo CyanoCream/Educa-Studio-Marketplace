@@ -10,6 +10,10 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
+Route::get('/history', function () {
+    return view('history.index');
+});
+
 Route::get('/dashboard', function () {
     return view('admin.master');
 });
