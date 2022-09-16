@@ -40,7 +40,7 @@
         <h1 class="page-title">Shop</h1>
         <div role="navigation" aria-label="Breadcrumbs" class="breadcrumb-trail breadcrumbs">
             <ul class="trail-items breadcrumb">
-                <li class="trail-item trail-begin"><a href="#"><span>Home</span></a></li>
+                <li class="trail-item trail-begin"><a href="/"><span>Home</span></a></li>
                 <li class="trail-item trail-end active"><span>Shop</span>
                 </li>
             </ul>

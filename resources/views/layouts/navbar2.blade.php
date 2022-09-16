@@ -54,7 +54,7 @@
                                 <li id="menu-item-996"
                                 class="menu-item menu-item-type-post_type menu-item-object-megamenu menu-item-996 parent parent-megamenu item-megamenu menu-item-has-children">
                                 <a class="kodory-menu-item-title" title=""
-                                   href="{{ route ('Penyelenggaras')}}">Penyelenggara</a>
+                                   href="{{ route ('penyelenggaras')}}">Penyelenggara</a>
                                 </li>
                                 @elseif(Auth::user()->role == 'admin')
                                 <li id="menu-item-996"
