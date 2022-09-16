@@ -1,26 +1,4 @@
 <footer id="footer" class="footer style-01">
-    <div class="section-001 section-009">
-        <div class="container">
-            <div class="kodory-newsletter style-01">
-                <div class="newsletter-inner">
-                    <div class="newsletter-info">
-                        <div class="newsletter-wrap">
-                            <p class="desc">send your suggestions and criticism</p>
-                        </div>
-                    </div>
-                    <div class="newsletter-form-wrap">
-                        <div class="newsletter-form-inner">
-                            <input class="email email-newsletter" name="email"
-                                placeholder="Enter your email ..." type="email">
-                            <a href="#" class="button btn-submit submit-newsletter">
-                                <span class="text">Subscribe</span>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
     <div class="header-top">
         <div class="container">
             <div class="header-top-inner">
@@ -44,25 +22,6 @@
                 </div>
                 <div class="col-md-6">
                     <div class="kodory-socials style-01">
-                        <div class="content-socials">
-                            <ul class="socials-list">
-                                <li>
-                                    <a href="https://facebook.com" target="_blank">
-                                        <i class="fa fa-facebook"></i>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="https://www.instagram.com" target="_blank">
-                                        <i class="fa fa-instagram"></i>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="https://twitter.com" target="_blank">
-                                        <i class="fa fa-twitter"></i>
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
                     </div>
                 </div>
             </div>

@@ -66,6 +66,7 @@
                             </tr>
                         </thead>
                         <tbody>
+                            
                             @foreach ($ulasans as $ulasan)
                             <tr>
                                 <td>{{ $loop->index + 1 }}</td>

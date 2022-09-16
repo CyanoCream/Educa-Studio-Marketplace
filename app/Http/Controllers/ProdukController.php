@@ -5,7 +5,7 @@ use App\Produk;
 use App\Order;
 use App\Gambar;
 use Illuminate\Http\Request;
-use Auth;
+use Illuminate\Support\Facades\Auth;
 
 class ProdukController extends Controller
 {
@@ -271,7 +271,6 @@ class ProdukController extends Controller
         $orders = new Order;
         $orders->id_user = Auth::user()->id;
         $orders->id_produk =  $request->id_produk;
-        // $orders->id_penyelenggara = $request->id_penyelenggara;
         $orders->kurir = 'jnt';
         $orders->alamat_pen = 'tidak tahu';
         $orders->status_order = 0;

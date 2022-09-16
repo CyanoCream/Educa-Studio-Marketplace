@@ -8,15 +8,6 @@
                             <p class="desc">send your suggestions and criticism</p>
                         </div>
                     </div>
-                    <div class="newsletter-form-wrap">
-                        <div class="newsletter-form-inner">
-                            <input class="email email-newsletter" name="email" placeholder="Enter your email ..."
-                                   type="email">
-                            <a href="#" class="button btn-submit submit-newsletter">
-                                <span class="text">Submit</span>
-                            </a>
-                        </div>
-                    </div>
                 </div>
             </div>
         </div>
@@ -63,7 +54,7 @@
                         The best choice for parents who want to advance their child's development
                     </div>
                     <div class="kodory-socials style-01">
-                        <div class="content-socials">
+                        {{-- <div class="content-socials">
                             <ul class="socials-list">
                                 <li>
                                     <a href="https://facebook.com" target="_blank">
@@ -81,7 +72,7 @@
                                     </a>
                                 </li>
                             </ul>
-                        </div>
+                        </div> --}}
                     </div>
                 </div>
             </div>

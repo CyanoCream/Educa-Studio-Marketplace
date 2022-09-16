@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 use App\Produk;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class AdminProdukController extends Controller
 {
@@ -14,6 +15,10 @@ class AdminProdukController extends Controller
      */
     public function index()
     {
+        if(auth::user()->role != 'admin')
+        {
+            return redirect()->back();
+        }
         $produks = produk::all();
         return view('admin.produk.index', [
             'produks' => $produks

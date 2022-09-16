@@ -99,7 +99,7 @@ class DetailOrderController extends Controller
             'qty_order' => 'required|integer' ,
         ]);
 
-        $detail_order = Detail_order::find($detail_order);
+        $detail_order = Detail_order::find($id);
 
         $detail_order->id_order = $request->id_order;
         $detail_order->id_produk = $request->id_produk;

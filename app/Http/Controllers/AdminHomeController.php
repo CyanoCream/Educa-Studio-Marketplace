@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Produk;
 use App\User;
+use Illuminate\Support\Facades\Auth;
 
 class AdminHomeController extends Controller
 {
@@ -25,8 +26,13 @@ class AdminHomeController extends Controller
      */
     public function index()
     {
+       if(auth::user()->role != 'admin'){
         $produks = Produk::all();
-        return view('admin.dashboard');
+        return view ('layout.master');
+        
+       }
+       return view('admin.dashboard');
+
     }
     public function getUser()
     {
