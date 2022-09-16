@@ -1,4 +1,4 @@
-@extends('layouts.master2')
+@extends('Penyelenggara.master_penyelenggara')
 
 @section('content')
 <header id="header" class="header style-04">
@@ -48,7 +48,7 @@
         <h1 class="page-title">Penyelenggara</h1>
         <div role="navigation" aria-label="Breadcrumbs" class="breadcrumb-trail breadcrumbs">
             <ul class="trail-items breadcrumb">
-                <li class="trail-item trail-begin"><a href="#"><span>Home</span></a></li>
+                <li class="trail-item trail-begin"><a href="/"><span>Home</span></a></li>
                 <li class="trail-item trail-end active"><span>Penyelenggara</span>
                 </li>
             </ul>
@@ -76,52 +76,91 @@
                         </nav>
                         <div class="kodory-MyAccount-content">
                             <div class="kodory-notices-wrapper"></div>
-                            <form class="kodory-EditAccountForm edit-account" method="post">
-                                <div class="clear"></div>
-                                <p class="kodory-form-row kodory-form-row--wide form-row form-row-wide">
-                                    <h5 class="d-flex justify-content-between">
-                                        Icon Penyelenggara : <a>{{ Auth::user()->icon_penyelenggara }}</a>
-                                    </h5>
-                                    <input type="file" name="icon_penyelenggara" id="icon_penyelenggara" class="form-control"
-                                    required="required">
-                                </p>
-                                <div class="clear"></div>
-                                <p class="kodory-form-row kodory-form-row--wide form-row form-row-wide">
-                                    <h5 class="d-flex justify-content-between">
-                                        Nama Penyelenggara : <a>{{ Auth::user()->nama_penyelenggara }}</a>
-                                    </h5>
-                                    <input type="text" name="nama_penyelenggara" id="nama_penyelenggara" class="form-control"
-                                    required="required" placeholder="Masukkan nama penyelenggara">
-                                    <span><em>This will be how your name will be displayed in the account section and in reviews</em></span>
-                                </p>
-                                <fieldset>
-                                    <p class="kodory-form-row kodory-form-row--wide form-row form-row-wide">
-                                        <h5 class="d-flex justify-content-between">
-                                            Kota Penyelenggara : <a>{{ Auth::user()->kota_penyelenggara }}</a>
-                                        </h5>
-                                        <input type="text" name="kota_penyelenggara" id="kota_penyelenggara" class="form-control"
-                                    required="required" placeholder="Masukkan kota penyelenggara">
-                                    </p>
-                                    <p class="kodory-form-row kodory-form-row--wide form-row form-row-wide">
-                                        <h5 class="d-flex justify-content-between">
-                                            Deskripsi :<a>{{ Auth::user()->deskripsi }}</a>
-                                        </h5>
-                                        <textarea name="deskripsi" id="deskripsi" rows="3" class="form-control" required="required"
-                                    placeholder="Masukkan deskripsi"></textarea>
-                                    </p>
-                                    <p class="kodory-form-row kodory-form-row--wide form-row form-row-wide">
-                                        <h5 class="d-flex justify-content-between">
-                                            Jam Operasional :<a>{{ Auth::user()->jam_operasional }}</a>
-                                        </h5>
-                                        <input type="text" name="jam_operasional" id="jam_operasional" class="form-control"
-                                    required="required">
-                                    </p>
-                                </fieldset>
-                                <div class="clear"></div>
-                                <p>
-                                    <button type="submit" onclick="save(this)" class="btn btn-primary">Simpan</button>
-                                </p>
-                            </form>
+                            <div class="card-body p-2">
+                                <table class="table-update" id="data-table">
+                                    <thead>
+                                        <tr>
+                                            <th>id</th>
+                                            <th>id produk</th>
+                                            <th>icon penyelenggara</th>
+                                            <th>nama penyelenggara</th>
+                                            <th>kota penyelenggara</th>
+                                            <th>deskripsi</th>
+                                            <th>jam operasional</th>
+                                            <th>aksi</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        {{-- @foreach ($penyelenggaras as $penyelenggara)
+                                        <tr>
+                                            <td>{{ $loop->index + 1 }}</td>
+                                            <td>{{ $penyelenggara->produk }}</td>
+                                            <td><img src="/images/{{ $penyelenggara->icon_penyelenggara}}" alt="" width="100px">
+                                            </td>
+                                            <td>{{ $penyelenggara->nama_penyelenggara }}</td>
+                                            <td>{{ $penyelenggara->kota_penyelenggara }}</td>
+                                            <td>{{ $penyelenggara->deskripsi }}</td>
+                                            <td>{{ $penyelenggara->jam_operasional }}</td>
+                                            <td>
+                                                <a onclick="edit(this)"
+                                                    data-url="{{route('editPenyelenggara', ['id' => $penyelenggara->id])}}"
+                                                    class="btn btn-warning btn-sm" role="button">Edit</a>
+                                                <a onclick="confirmDelete(this)"
+                                                    data-url="{{route('deletePenyelenggara', ['id' => $penyelenggara->id])}}"
+                                                    class="btn btn-danger btn-sm" role="button">Hapus</a>
+                                            </td>
+                                        </tr>
+                                        @endforeach --}}
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="card-body p-2">
+                                <table class="table-update" id="data-table">
+                                    <thead>
+                                        <tr>
+                                            <th>id</th>
+                                            <th>kategori</th>
+                                            <th>nama produk</th>
+                                            <th>harga produk</th>
+                                            <th>status pertemuan</th>
+                                            <th>stock</th>
+                                            <th>pertemuan</th>
+                                            <th>waktu temu</th>
+                                            <th>umur</th>
+                                            <th>keterangan</th>
+                                            <th>manfaat</th>
+                                            <th>bundling</th>
+                                            <th>aksi</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        {{-- @foreach ($produks as $produk)
+                                        <tr>
+                                            <td>{{ $loop->index + 1 }}</td>
+                                            <td>{{ $produk->kategori }}</td>
+                                            <td>{{ $produk->nama_produk }}</td>
+                                            <td>{{ $produk->harga_produk }}</td>
+                                            <td>{{ $produk->status_pertemuan }}</td>
+                                            <td>{{ $produk->stock }}</td>
+                                            <td>{{ $produk->pertemuan }}</td>
+                                            <td>{{ $produk->waktu_temu }}</td>
+                                            <td>{{ $produk->umur }}</td>
+                                            <td>{{ $produk->keterangan }}</td>
+                                            <td>{{ $produk->manfaat }}</td>
+                                            <td>{{ $produk->bundling }}</td>
+                                            <td>
+                                                <a onclick="edit(this)"
+                                                    data-url="{{route('editProduk', ['id' => $produk->id])}}"
+                                                    class="btn btn-warning btn-sm" role="button">Edit</a>
+                                                <a onclick="confirmDelete(this)"
+                                                    data-url="{{route('deleteProduk', ['id' => $produk->id])}}"
+                                                    class="btn btn-danger btn-sm" role="button">Hapus</a>
+                                            </td>
+                                        </tr>
+                                        @endforeach --}}
+                                    </tbody>
+                                </table>
+                            </div>
                         </div>
 
                         <!--penyelenggara-->

@@ -223,7 +223,8 @@
                                                 <p class="form-submit"><input name="submit" id="submit" class="submit" value="Submit" type="submit"> 
                                                     <input name="comment_post_ID" value="27" id="comment_post_ID" type="hidden">
                                                     <input name="comment_parent" id="comment_parent" value="0" type="hidden">
-                                                </p></form>
+                                                </p>
+                                            </form>
                                         </div><!-- #respond -->
                                     </div>
                                 </div>

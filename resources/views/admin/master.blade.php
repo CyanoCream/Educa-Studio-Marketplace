@@ -29,7 +29,7 @@
     <!--responsive-->
     <link rel="stylesheet" href="{{asset('plugins/datatables-responsive/css/responsive.boostrap4.min.css')}}">
     <!--data-->
-    <link rel="stylesheet" href="{{asset('plugins/datatables-bs4/css/dataTables.bootstrap4.min.css')}}">
+    {{-- <link rel="stylesheet" href="{{asset('plugins/datatables-bs4/css/dataTables.bootstrap4.min.css')}}"> --}}
     @yield('style')
 </head>
 
