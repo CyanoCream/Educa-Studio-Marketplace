@@ -11,6 +11,8 @@
 |
 */
 Route::get('/history', 'DetailOrderController@show')->name('history');
+Route::get('/history/desc', 'DetailOrderController@filterhistorydown')->name('desc');
+Route::get('/history/asc', 'DetailOrderController@filterhistoryup')->name('asc');
 
 Route::get('/dashboard', function () {
     return view('admin.master');

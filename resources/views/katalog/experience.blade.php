@@ -126,7 +126,7 @@
                                     <a href="#" class="button yith-wcqv-button" data-product_id="24">Quick
                                         View</a>
                                     <div class="group-button">
-                                        <div class="yith-wcwl-add-to-wishlist">
+                                        {{-- <div class="yith-wcwl-add-to-wishlist">
                                             <div class="yith-wcwl-add-button show">
                                                 <a href="wishlist.html" class="add_to_wishlist">Add to Wishlist</a>
                                             </div>
@@ -139,7 +139,7 @@
                                             <a href="cart.html"
                                                 class="button product_type_variable add_to_cart_button">Select
                                                 options</a>
-                                        </div>
+                                        </div> --}}
                                     </div>
                                 </div>
                                 <div class="product-info equal-elem">
