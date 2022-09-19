@@ -7,6 +7,13 @@
             <div class="panel panel-default">
                 <div class="panel-heading">Reset Password</div>
 
+                <div class="card-body">
+                    @if (session('status'))
+                    <div class="alert alert-success" role="alert">
+                        {{ session('status') }}
+                    </div>
+                    @endif
+
                 <div class="panel-body">
                     <form class="form-horizontal" method="POST" action="{{ route('password.request') }}">
                         {{ csrf_field() }}
