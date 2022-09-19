@@ -90,8 +90,8 @@
                                             <th>aksi</th>
                                         </tr>
                                     </thead>
-                                    <tbody>
-                                        {{-- @foreach ($penyelenggaras as $penyelenggara)
+                                    {{-- <tbody>
+                                        @foreach ($penyelenggaras as $penyelenggara)
                                         <tr>
                                             <td>{{ $loop->index + 1 }}</td>
                                             <td>{{ $penyelenggara->produk }}</td>
@@ -110,8 +110,8 @@
                                                     class="btn btn-danger btn-sm" role="button">Hapus</a>
                                             </td>
                                         </tr>
-                                        @endforeach --}}
-                                    </tbody>
+                                        @endforeach
+                                    </tbody> --}}
                                 </table>
                             </div>
                             <div class="card-body p-2">
