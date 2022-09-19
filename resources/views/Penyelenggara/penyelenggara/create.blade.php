@@ -1,4 +1,4 @@
-@extends('admin.master')
+@extends('Penyelenggara.master')
 
 @section('content')
 <div class="content-wrapper">
@@ -10,7 +10,7 @@
                 </div>
                 <div class="col-sm-6">
                     <ol class="breadcrumb float-sm-right ml-0">
-                        <li class="breadcrumb-item"><a href="{{-- {{ route('daftarPenyelenggara_penyelenggara') }} --}}">Dashboard</a></li>
+                        <li class="breadcrumb-item"><a href="{{ route('daftarPenyelenggara_penyelenggara') }}">Dashboard</a></li>
                         <li class="breadcrumb-item active">Tambah Penyelenggara</li>
                     </ol>
                 </div>
@@ -22,7 +22,7 @@
         <div class="container-fluid">
             <div class="card">
                 <div class="card-body">
-                    <form action="{{-- {{ route('storePenyelenggara_penyelenggara') }} --}}" method="post" enctype="multipart/form-data">
+                    <form action="{{ route('storePenyelenggara_penyelenggara') }}" method="post" enctype="multipart/form-data">
                         {{ csrf_field() }}
                         <div class="form-group">
                             <label for="id_produk">id produk</label>
@@ -61,7 +61,7 @@
                         </div>
 
                         <div class="text-right">
-                            <a href="{{-- {{ route('daftarPenyelenggara_penyelenggara') }} --}}" class="btn btn-outline-secondary mr-2" role="button">Batal</a>
+                            <a href="{{ route('daftarPenyelenggara_penyelenggara') }}" class="btn btn-outline-secondary mr-2" role="button">Batal</a>
                             <button type="submit" onclick="save(this)" class="btn btn-primary">Simpan</button>
                         </div>
                     </form>

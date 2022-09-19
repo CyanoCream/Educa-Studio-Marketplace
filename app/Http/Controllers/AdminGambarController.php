@@ -22,6 +22,16 @@ class AdminGambarController extends Controller
         ]);
     }
 
+    //admin penyelenggara
+    public function index_p()
+    {
+        $gambars = Gambar::all();
+
+        return view('Penyelenggara.gambar.index', [
+            'gambars' => $gambars
+        ]);
+    }
+
     public function getGambar()
     {
         $gambars = Gambar::all();
@@ -37,6 +47,12 @@ class AdminGambarController extends Controller
     public function create()
     {
         return view('admin.gambar.create');
+    }
+
+    //admin penyelenggara
+    public function create_p()
+    {
+        return view('Penyelenggara.gambar.create');
     }
 
     /**
@@ -66,6 +82,29 @@ class AdminGambarController extends Controller
         return redirect(route('daftarGambar'));
     }
 
+
+    //admin penyelenggara
+    public function store_p(Request $request)
+    {
+        
+        if ($request->hasFile('gambar')) {
+            $gambar = $request->file('gambar');
+            $fileName = str_random(30).'.'.$gambar->getClientOriginalExtension();
+            $imageName = $fileName;
+            $gambar->move('images/', $fileName);
+        } else {
+            $fileName = 'noimage.png';
+        }
+        
+
+        $gambar = new Gambar();
+        $gambar->gambar = $fileName;
+        $gambar->id_produk =  $request->id_produk;
+        $gambar->save();
+
+        return redirect(route('daftarPenyelenggara_gambar'));
+    }
+
     /**
      * Display the specified resource.
      *
@@ -87,6 +126,15 @@ class AdminGambarController extends Controller
     {
         $gambar = Gambar::find($id);
         return view('admin.gambar.edit', [
+            'gambar' => $gambar
+        ]);
+    }
+
+    //admin penyelenggara
+    public function edit_p($id)
+    {
+        $gambar = Gambar::find($id);
+        return view('Penyelenggara.gambar.edit', [
             'gambar' => $gambar
         ]);
     }
@@ -119,106 +167,8 @@ class AdminGambarController extends Controller
         return redirect(route('daftarGambar'));
     }
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy($id)
-    {
-   
-
-    $gambar = Gambar::find($id)->delete();
-        return redirect()->back();
-    }
-
-    public function penyelenggaraindex()
-    {
-        $gambars = Gambar::all();
-
-        return view('admin.gambar.index', [
-            'gambars' => $gambars
-        ]);
-    }
-
-    public function penyelenggaragetGambar()
-    {
-        $gambars = Gambar::all();
-
-        return $gambars;
-    }
-
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function penyelenggaracreate()
-    {
-        return view('admin.gambar.create');
-    }
-
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
-    public function penyelenggarastore(Request $request)
-    {
-        
-        if ($request->hasFile('gambar')) {
-            $gambar = $request->file('gambar');
-            $fileName = str_random(30).'.'.$gambar->getClientOriginalExtension();
-            $imageName = $fileName;
-            $gambar->move('images/', $fileName);
-        } else {
-            $fileName = 'noimage.png';
-        }
-        
-
-        $gambar = new Gambar();
-        $gambar->gambar = $fileName;
-        $gambar->id_produk =  $request->id_produk;
-        $gambar->save();
-
-        return redirect(route('daftarGambar'));
-    }
-
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function penyelenggarashow($id)
-    {
-        //
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function penyelenggaraedit($id)
-    {
-        $gambar = Gambar::find($id);
-        return view('admin.gambar.edit', [
-            'gambar' => $gambar
-        ]);
-    }
-
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function penyelenggaraupdate(Request $request, $gambar)
+    //admin penyelenggara
+    public function update_p(Request $request, $gambar)
     {
                 
         $gambar = Gambar::find($gambar);
@@ -236,7 +186,7 @@ class AdminGambarController extends Controller
         $gambar->id_produk = $request->id_produk;
         $gambar->save();
 
-        return redirect(route('daftarGambar'));
+        return redirect(route('daftarPenyelenggara'));
     }
 
     /**
@@ -245,11 +195,17 @@ class AdminGambarController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function penyelenggaradestroy($id)
+    public function destroy($id)
     {
-   
+        $gambar = Gambar::find($id)->delete();
+        return redirect()->back();
+    }
 
-    $gambar = Gambar::find($id)->delete();
+
+
+    public function destroy_p($id)
+    {
+        $gambar = Gambar::find($id)->delete();
         return redirect()->back();
     }
 }

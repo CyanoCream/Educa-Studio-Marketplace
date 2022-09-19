@@ -95,7 +95,8 @@
                             <i class="nav-icon fas fa-columns"></i>
                         </div>
                         <a href="{{route('daftarPenyelenggara')}}" class="small-box-footer">More info <i
-                                class="fas fa-arrow-circle-right"></i></a>
+                            class="fas fa-arrow-circle-right"></i>
+                        </a>
                     </div>
                 </div>
             </div>

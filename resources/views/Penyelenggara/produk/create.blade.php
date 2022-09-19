@@ -1,4 +1,4 @@
-{{-- @extends('admin.master') --}}
+@extends('Penyelenggara.master')
 
 @section('content')
 <div class="content-wrapper">
@@ -10,7 +10,7 @@
                 </div>
                 <div class="col-sm-6">
                     <ol class="breadcrumb float-sm-right ml-0">
-                        <li class="breadcrumb-item"><a href="{{-- {{ route('daftarProduk') }} --}}">Dashboard</a></li>
+                        <li class="breadcrumb-item"><a href="{{ route('daftarPenyelenggara_produk') }}">Dashboard</a></li>
                         <li class="breadcrumb-item active">Tambah Produk</li>
                     </ol>
                 </div>
@@ -22,13 +22,13 @@
         <div class="container-fluid">
             <div class="card">
                 <div class="card-body">
-                    <form action="{{-- {{ route('storeProduk') }} --}}" method="post">
+                    <form action="{{ route('storePenyelenggara_produk') }}" method="post">
                         {{ csrf_field() }}
 
                         <div class="form-group">
                             <label for="kategori">kategori</label>
-                            <input type="text" name="kategori" id="kategori" class="form-control" required="required"
-                                placeholder="Masukkan kategori">
+                            <input type="text" name="kategori" id="kategori" class="form-control" 
+                                required="required" placeholder="Masukkan kategori">
                         </div>
 
                         <div class="form-group">
@@ -90,7 +90,7 @@
                         </div>
 
                         <div class="text-right">
-                            <a href="{{-- {{ route('daftarProduk') }} --}}" class="btn btn-outline-secondary mr-2" role="button">Batal</a>
+                            <a href="{{ route('daftarPenyelenggara_produk') }}" class="btn btn-outline-secondary mr-2" role="button">Batal</a>
                             <button type="submit" onclick="save(this)" class="btn btn-primary">Simpan</button>
                         </div>
                     </form>

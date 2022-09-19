@@ -356,7 +356,7 @@
 </div>
 <div class="section-001">
     <div class="container">
-        <div class="kodory-heading style-01">
+        {{-- <div class="kodory-heading style-01">
             <div class="heading-inner">
                 <h3 class="title"> Follow<span></span></h3>
             </div>
@@ -471,7 +471,7 @@
                     </a>
                 </div>
             </div>
-        </div>
+        </div> --}}
     </div>
 </div>
 <div class="container">

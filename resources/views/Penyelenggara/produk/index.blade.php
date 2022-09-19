@@ -1,4 +1,4 @@
-{{-- @extends('admin.master') --}}
+@extends('Penyelenggara.master')
 
 @section('content')
 <style>
@@ -40,7 +40,7 @@
                 </div>
                 <div class="col-sm-6">
                     <ol class="breadcrumb float-sm-right">
-                        <li class="breadcrumb-item"><a href="{{-- {{route('daftarProduk')}} --}}">Home</a></li>
+                        <li class="breadcrumb-item"><a href="{{route('daftarPenyelenggara_produk')}}">Home</a></li>
                         <li class="breadcrumb-item active">Dashboard Produk</li>
                     </ol>
                 </div>
@@ -52,7 +52,7 @@
         <div class="container-fluid">
             <div class="card">
                 <div class="card-header text-right">
-                    <a href="{{-- {{ route('createProduk') }} --}}" class="btn btn-primary" role="button">Tambah Produk</a>
+                    <a href="{{ route('createPenyelenggara_produk') }}" class="btn btn-primary" role="button">Tambah Produk</a>
                 </div>
                 <div class="card-body p-2">
                     <table class="table-update" id="data-table">
@@ -74,7 +74,7 @@
                             </tr>
                         </thead>
                         <tbody>
-                            {{-- @foreach ($produks as $produk)
+                            @foreach ($produks as $produk)
                             <tr>
                                 <td>{{ $loop->index + 1 }}</td>
                                 <td>{{ $produk->kategori }}</td>
@@ -90,14 +90,14 @@
                                 <td>{{ $produk->bundling }}</td>
                                 <td>
                                     <a onclick="edit(this)"
-                                        data-url="{{route('editProduk', ['id' => $produk->id])}}"
+                                        data-url="{{route('editPenyelenggara_produk', ['id' => $produk->id])}}"
                                         class="btn btn-warning btn-sm" role="button">Edit</a>
                                     <a onclick="confirmDelete(this)"
-                                        data-url="{{route('deleteProduk', ['id' => $produk->id])}}"
+                                        data-url="{{route('deletePenyelenggara_produk', ['id' => $produk->id])}}"
                                         class="btn btn-danger btn-sm" role="button">Hapus</a>
                                 </td>
                             </tr>
-                            @endforeach --}}
+                            @endforeach
                         </tbody>
                     </table>
                 </div>

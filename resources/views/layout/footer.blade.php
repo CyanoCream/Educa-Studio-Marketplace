@@ -1,17 +1,4 @@
 <footer id="footer" class="footer style-04">
-    <div class="section-001 section-006">
-        <div class="container">
-            <div class="kodory-newsletter style-01">
-                <div class="newsletter-inner">
-                    <div class="newsletter-info">
-                        <div class="newsletter-wrap">
-                            <p class="desc">send your suggestions and criticism</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
     <div class="section-025">
         <div class="container">
             <div class="row justify-content-center">

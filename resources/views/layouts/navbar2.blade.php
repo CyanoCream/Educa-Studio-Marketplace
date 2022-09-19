@@ -128,7 +128,7 @@
                                             </li>
                                             @if (Auth::user()->role == 'penyelenggara')
                                             <li class=" menu-item kodory-MyAccount-navigation-link kodory-MyAccount-navigation-link--orders">
-                                                <a href="{{ route ('Penyelenggaras')}}">Dashboard Penyelenggara</a>
+                                                <a href="{{ route ('penyelenggaras')}}">Dashboard Penyelenggara</a>
                                             </li>
                                             @elseif(Auth::user()->role == 'admin')
                                             <li class=" menu-item kodory-MyAccount-navigation-link kodory-MyAccount-navigation-link--orders">

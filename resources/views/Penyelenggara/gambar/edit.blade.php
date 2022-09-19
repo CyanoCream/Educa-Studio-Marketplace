@@ -1,4 +1,4 @@
-{{-- @extends('admin.master') --}}
+@extends('Penyelenggara.master')
 
 @section('content')
 
@@ -12,7 +12,7 @@
 				<div class="col-sm-6">
 					<ol class="breadcrumb float-sm-right d-flex">
 						<li class="breadcrumb-item" style="align-items: center; display: flex;"><a
-								href="{{-- {{route('daftarGambar')}} --}}">Dashboard</a></li>
+								href="{{route('daftarPenyelenggara_gambar')}}">Dashboard</a></li>
 						<li class="breadcrumb-item active" style="align-items: center; display: flex;">Edit Gambar</li>
 					</ol>
 				</div>
@@ -24,23 +24,23 @@
 		<div class="container-fluid">
 			<div class="card">
 				<div class="card-body">
-					<form action="{{-- {{ route('updateGambar',['id'=>$gambar->id]) }} --}}" method="post">
+					<form action="{{ route('updatePenyelenggara_gambar',['id'=>$gambar->id]) }}" method="post">
 						{{ csrf_field() }}
 
 						<div class="form-group">
 							<label for="gambar">gambar</label>
 							<input type="file" name="gambar" id="gambar" class="form-control" required="required"
-								value="{{-- {{ $gambar->gambar }} --}}" placeholder="Masukkan gambar">
+								value="{{ $gambar->gambar }}" placeholder="Masukkan gambar">
 						</div>
 
 						<div class="form-group">
 							<label for="id_produk">id produk</label>
 							<input type="text" name="id_produk" id="id_produk" class="form-control" required="required"
-								value="{{-- {{ $gambar->id_produk }} --}}" placeholder="Masukkan id_produk">
+								value="{{ $gambar->id_produk }}" placeholder="Masukkan id_produk">
 						</div>
 
 						<div class="text-right">
-							<a href="{{-- {{ route('daftarGambar') }} --}}" class="btn btn-outline-secondary mr-2" role="button">Batal</a>
+							<a href="{{ route('daftarPenyelenggara_gambar') }}" class="btn btn-outline-secondary mr-2" role="button">Batal</a>
 							<button type="submit" onclick="save(this)" class="btn btn-primary">Simpan</button>
 						</div>
 					</form>

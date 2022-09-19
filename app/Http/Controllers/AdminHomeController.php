@@ -41,4 +41,9 @@ class AdminHomeController extends Controller
         return $users;
     }
 
+    public function index_p()
+    {
+        return view('Penyelenggara.dashboard');
+    }
+
 }

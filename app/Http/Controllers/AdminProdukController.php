@@ -25,6 +25,16 @@ class AdminProdukController extends Controller
         ]);
     }
 
+    //admin penyelenggara
+    public function index_p()
+    {
+        $produks =produk::all();
+
+        return view('Penyelenggara.produk.index', [
+            'produks' => $produks
+        ]);
+    }
+
     public function getProduk()
     {
         $produks = produk::all();
@@ -39,9 +49,13 @@ class AdminProdukController extends Controller
     public function create(Request $request)
     {
         return view('admin.produk.create');
-
     }
 
+    //admin penyelenggara
+    public function create_p(Request $request)
+    {
+        return view('Penyelenggara.produk.create');
+    }
 
 
     /**
@@ -72,6 +86,29 @@ class AdminProdukController extends Controller
         return redirect(route('daftarProduk'));
     }
 
+    //admin penyelenggara
+    public function store_p(Request $request)
+    {
+        $validatedData = $request->validate([
+            'kategori' => 'required|string|max:255' ,
+            'nama_produk' => 'required|string|max:255' ,
+            'harga_produk' => 'required|integer' ,
+            'status_produk' => 'required|string|max:255' ,
+            'stock' => 'required|integer' ,
+            'pertemuan' => 'required|string|max:255' ,
+            'waktu_temu' => 'required|integer' ,
+            'umur' => 'required|string|max:255' ,
+            'keterangan' => 'required|string' ,
+            'manfaat' => 'required|string' ,
+            'bundling' => 'required|string|max:255' ,
+        ]);
+
+        $produk = new produk($validatedData);
+        $produk->save();
+
+        return redirect(route('daftarPenyelenggara_produk'));
+    }
+
     /**
      * Display the specified resource.
      *
@@ -93,6 +130,15 @@ class AdminProdukController extends Controller
     {
         $produk = produk::find($id);
         return view('admin.produk.edit', [
+            'produk' => $produk
+        ]);
+    }
+
+    //admin penyelenggara
+    public function edit_p($id)
+    {
+        $produk = produk::find($id);
+        return view('Penyelenggara.produk.edit', [
             'produk' => $produk
         ]);
     }
@@ -139,112 +185,8 @@ class AdminProdukController extends Controller
         return redirect(route('daftarProduk'));
     }
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy($produk)
-    {
-        $produk->delete();
-        return redirect(route('daftarProduk'));
-    }
-    
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function penyelenggaraindex()
-    {
-        $produks = produk::all();
-        return view('admin.produk.index', [
-            'produks' => $produks
-        ]);
-    }
-
-    public function penyelenggaragetProduk()
-    {
-        $produks = produk::all();
-        return $produks;
-    }
-
-    // /**
-    //  * Show the form for creating a new resource.
-    //  *
-    //  * @return \Illuminate\Http\Response
-    //  */
-    public function penyelenggaracreate(Request $request)
-    {
-        return view('admin.produk.create');
-
-    }
-
-
-
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
-    public function penyelenggarastore(Request $request)
-    {
-        $validatedData = $request->validate([
-            'kategori' => 'required|string|max:255' ,
-            'nama_produk' => 'required|string|max:255' ,
-            'harga_produk' => 'required|integer' ,
-            'status_produk' => 'required|string|max:255' ,
-            'stock' => 'required|integer' ,
-            'pertemuan' => 'required|string|max:255' ,
-            'waktu_temu' => 'required|integer' ,
-            'umur' => 'required|string|max:255' ,
-            'keterangan' => 'required|string' ,
-            'manfaat' => 'required|string' ,
-            'bundling' => 'required|string|max:255' ,
-        ]);
-
-        $produk = new produk($validatedData);
-        $produk->save();
-
-        return redirect(route('daftarProduk'));
-    }
-
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function penyelenggarashow($id)
-    {
-        //
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function penyelenggaraedit($id)
-    {
-        $produk = produk::find($id);
-        return view('admin.produk.edit', [
-            'produk' => $produk
-        ]);
-    }
-
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function penyelenggaraupdate(Request $request, $produk)
+    //admin penyelenggara
+    public function update_p(Request $request, $produk)
     {
     
         $validatedData = $request->validate([
@@ -276,7 +218,7 @@ class AdminProdukController extends Controller
         $produk->bundling = $request->bundling;
         $produk->save();
 
-        return redirect(route('daftarProduk'));
+        return redirect(route('daftarPenyelenggara_produk'));
     }
 
     /**
@@ -286,9 +228,16 @@ class AdminProdukController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function penyelenggaradestroy($produk)
+    public function destroy($produk)
     {
         $produk->delete();
         return redirect(route('daftarProduk'));
+    }
+
+    //admin penyelenggara
+    public function destroy_p($produk)
+    {
+        $produk->delete();
+        return redirect(route('daftarPenyelenggara_produk'));
     }
 }

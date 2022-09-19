@@ -1,4 +1,4 @@
-@extends('Penyelenggara.master_penyelenggara')
+@extends('Penyelenggara.master')
 
 @section('content')
 
@@ -41,7 +41,7 @@
                 </div>
                 <div class="col-sm-6">
                     <ol class="breadcrumb float-sm-right">
-                        <li class="breadcrumb-item"><a href="{{-- {{route('daftarPenyelenggara_penyelenggara')}} --}}">Home</a></li>
+                        <li class="breadcrumb-item"><a href="{{route('daftarPenyelenggara_penyelenggara')}}">Home</a></li>
                         <li class="breadcrumb-item active">Dashboard Penyelenggara</li>
                     </ol>
                 </div>
@@ -53,7 +53,7 @@
         <div class="container-fluid">
             <div class="card">
                 <div class="card-header text-right">
-                    <a href="{{-- {{ route('createPenyelenggara_penyelenggara') }} --}}" class="btn btn-primary" role="button">Tambah
+                    <a href="{{ route('createPenyelenggara_penyelenggara') }}" class="btn btn-primary" role="button">Tambah
                         Penyelenggara</a>
                 </div>
                 <div class="card-body p-2">
@@ -71,7 +71,7 @@
                             </tr>
                         </thead>
                         <tbody>
-                            {{-- @foreach ($penyelenggaras as $penyelenggara)
+                            @foreach ($penyelenggaras as $penyelenggara)
                             <tr>
                                 <td>{{ $loop->index + 1 }}</td>
                                 <td>{{ $penyelenggara->produk }}</td>
@@ -90,7 +90,7 @@
                                         class="btn btn-danger btn-sm" role="button">Hapus</a>
                                 </td>
                             </tr>
-                            @endforeach --}}
+                            @endforeach
                         </tbody>
                     </table>
                 </div>

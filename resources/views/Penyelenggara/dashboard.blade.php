@@ -38,63 +38,33 @@
                 <p>Sedikit kemajuan setiap hari menambah hasil yang besar!</p>
             </div>
             <div class="row">
-                <div class="col-lg-3 col-6">
-
-                    <div class="small-box bg-info">
-                        <div class="inner">
-                            <h3>@{{ pesanan.length }}</h3>
-                            <p>Order</p>
-                        </div>
-                        <div class="icon">
-                            <i class="ion ion-bag"></i>
-                        </div>
-                        <a href="{{route('daftarOrder')}}" class="small-box-footer">More info <i
-                                class="fas fa-arrow-circle-right"></i></a>
-                    </div>
-                </div>
-
-                <div class="col-lg-3 col-6">
+                <div class="col-lg-6">
 
                     <div class="small-box bg-success">
                         <div class="inner">
 
-                            <h3>@{{ produks.length }}</h3>
+                            {{-- <h3>@{{ produks.length }}</h3> --}}
                             <p>Produk</p>
                         </div>
                         <div class="icon">
                             <i class="ion ion-stats-bars"></i>
                         </div>
-                        <a href="{{route('daftarProduk')}}" class="small-box-footer">More info <i
+                        <a href="{{route('daftarPenyelenggara_produk')}}" class="small-box-footer">More info <i
                                 class="fas fa-arrow-circle-right"></i></a>
                     </div>
                 </div>
 
-                <div class="col-lg-3 col-6">
+                <div class="col-lg-6">
 
                     <div class="small-box bg-warning">
                         <div class="inner">
-                            <h3>@{{ users.length }}</h3>
-                            <p>User</p>
+                            {{-- <h3>@{{ gambars.length }}</h3> --}}
+                            <p>Gambar</p>
                         </div>
                         <div class="icon">
                             <i class="ion ion-person-add"></i>
                         </div>
-                        <a href="{{route('daftarUser')}}" class="small-box-footer">More info <i
-                                class="fas fa-arrow-circle-right"></i></a>
-                    </div>
-                </div>
-
-                <div class="col-lg-3 col-6">
-
-                    <div class="small-box bg-danger">
-                        <div class="inner">
-                            <h3>@{{ penyelenggara.length }}</h3>
-                            <p>Penyelenggara</p>
-                        </div>
-                        <div class="icon">
-                            <i class="nav-icon fas fa-columns"></i>
-                        </div>
-                        <a href="{{route('daftarPenyelenggara')}}" class="small-box-footer">More info <i
+                        <a href="{{route('daftarPenyelenggara_gambar')}}" class="small-box-footer">More info <i
                                 class="fas fa-arrow-circle-right"></i></a>
                     </div>
                 </div>

@@ -25,19 +25,19 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a href="{{route('pp')}}" class="nav-link">
+                    <a href="{{route('daftarPenyelenggara_penyelenggara')}}" class="nav-link">
                         <i class="nav-icon fas fa-columns"></i>
                         <p>Penyelenggara</p>
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a href="{{route('daftarProduk')}}" class="nav-link">
+                    <a href="{{route('daftarPenyelenggara_produk')}}" class="nav-link">
                         <i class="nav-icon fas fa-book"></i>
                         <p>Produk</p>
                     </a>
                 </li>
                 <li class="nav-item m-1">
-                    <a href="{{route('daftarGambar')}}" class="nav-link">
+                    <a href="{{route('daftarPenyelenggara_gambar')}}" class="nav-link">
                         <i class="fas fa-image"></i>
                         <p class="m-2">Gambar</p>
                     </a>
