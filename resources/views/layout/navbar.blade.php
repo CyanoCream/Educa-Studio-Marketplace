@@ -123,7 +123,7 @@
                                         <ul class="sub-menu">
                                             @if (Auth::user()->role == 'penyelenggara')
                                             <li class=" menu-item kodory-MyAccount-navigation-link kodory-MyAccount-navigation-link--orders">
-                                                <a href="{{ route ('Penyelenggaras')}}">Dashboard Penyelenggara</a>
+                                                <a href="{{ route ('penyelenggaras')}}">Dashboard Penyelenggara</a>
                                             </li>
                                             @elseif(Auth::user()->role == 'admin')
                                             <li class=" menu-item kodory-MyAccount-navigation-link kodory-MyAccount-navigation-link--orders">
@@ -164,7 +164,7 @@
                                                    
                                                    <a>
                                                     @foreach ( $order->gambar['gambar'] as $gambar)
-                                                       <img src="/images/{{$gambar->gambar}}""
+                                                       <img src="/images/{{$gambar->gambar}}"
                                                        class="attachment-kodory_thumbnail size-kodory_thumbnail"
                                                        alt="img" width="600" height="778">
                                                        <p>{{ $order->produk->nama_produk }}</p>

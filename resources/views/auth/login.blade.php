@@ -145,7 +145,7 @@
 
                                 <div class="form-group">
                                     <div class="col-md-8 col-md-offset-4">
-                                        <button onclick="alert('Berhasil Login')" type="submit" class="btn btn-primary">
+                                        <button onclick="save('this')" type="submit" class="btn btn-primary">
                                             Login
                                         </button>
 
@@ -158,10 +158,22 @@
                         <div class="row">
                             <p>Don't have an account? <a href="{{ route('daftar') }}">Register Here</a></p>
                         </div>
-                </div>
-            </div>
-        </div>
-</body>      
+             		</div>
+            	</div>
+        	</div>
+			<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+			<script>
+				save = function (button) {
+					swal({
+					title: "Sukses",
+					text: "Anda telah berhasil login!",
+					icon: "success",
+					button: false,
+					timer: 2000,
+					});
+				}
+			</script>
+	</body>      
 </html> 
 
 

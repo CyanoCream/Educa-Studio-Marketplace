@@ -33,6 +33,9 @@ class AdminPenyelenggaraController extends Controller
         ]);
     }
 
+
+
+
     public function getPenyelenggara()
     {
         $penyelenggaras = penyelenggara::all();
@@ -285,5 +288,14 @@ class AdminPenyelenggaraController extends Controller
     {
         $penyelenggara = penyelenggara::find($id)->delete();
         return redirect()->back();
+    }
+
+    //admin-penyelenggara
+
+    public function admin_p() {
+        return view('Penyelenggara.dashboard');
+    }
+    public function admin_penyelenggara() {
+        return view('Penyelenggara.penyelenggara.index');
     }
 }

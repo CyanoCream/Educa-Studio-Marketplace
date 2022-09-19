@@ -52,11 +52,6 @@ Route::get('/topup', function () {
     return view('top_up.index');
 })->name('topup.index');
 
-//home penyelenggara
-// Route::get('/dashboard/penyelenggara', function () {
-//     return view('Penyelenggara.dashboard');
-// })->name('admin.penyelenggara');
-
 
 Route::get('/produk-detail/{id}','ProdukController@show')->name('produk-detail');
 
@@ -93,17 +88,21 @@ Route::post('checkout/{id}', 'ProdukController@addData')->name('checkout');
 
 Auth::routes();
 //home penyelenggara
-Route::get('/penyelenggara/admin', function () {
-    return view('Penyelenggara.dashboard');
-})->name('penyelenggaras');
+// Route::get('/penyelenggara/admin', function () {
+//     return view('Penyelenggara.dashboard');
+// })->name('penyelenggaras');
 
-Route::get('/Penyelenggara-gambar', function () {
-    return view('Penyelenggara.gambar');
-});
+// Route::get('/Penyelenggara-gambar', function () {
+//     return view('Penyelenggara.gambar');
+// });
 
-Route::get('/Penyelenggara-produk', function () {
-    return view('Penyelenggara.produk');
-});
+// Route::get('/Penyelenggara-produk', function () {
+//     return view('Penyelenggara.produk');
+// });
+
+//penyelenggara admin
+Route::get('/penyelenggara/admin', 'AdminPenyelenggaraController@admin_p')->name('penyelenggaras');
+Route::get('/penyelenggara/admin/penyelenggara', 'AdminPenyelenggaraController@admin_penyelenggara')->name('pp');
 
 //penyelenggara penyelenggara
 Route::get('/penyelenggara_penyelenggara', 'AdminPenyelenggaraController@index')->name('daftarPenyelenggara_penyelenggara');

@@ -11,7 +11,7 @@
 				</div>
 				<div class="col-sm-6">
 					<ol class="breadcrumb float-sm-right">
-						<li class="breadcrumb-item"><a href="{{-- {{route('daftarPenyelenggara')}} --}}">Dashboard</a></li>
+						<li class="breadcrumb-item"><a href="{{-- {{route('daftarPenyelenggara_penyelenggara')}} --}}">Dashboard</a></li>
 						<li class="breadcrumb-item active">Edit Penyelenggara</li>
 					</ol>
 				</div>
@@ -23,7 +23,7 @@
 		<div class="container-fluid">
 			<div class="card">
 				<div class="card-body">
-					<form action="{{-- {{ route('updatePenyelenggara',['id'=>$penyelenggara->id]) }} --}}" method="post" enctype="multipart/form-data">
+					<form action="{{-- {{ route('updatePenyelenggara_penyelenggara',['id'=>$penyelenggara->id]) }} --}}" method="post" enctype="multipart/form-data">
 						{{ csrf_field() }}
 
 						<div class="form-group">
@@ -57,7 +57,7 @@
 						</div>
 
 						<div class="text-right">
-							<a href="{{-- {{ route('daftarPenyelenggara') }} --}}" class="btn btn-outline-secondary mr-2" role="button">Batal</a>
+							<a href="{{-- {{ route('daftarPenyelenggara_penyelenggara') }} --}}" class="btn btn-outline-secondary mr-2" role="button">Batal</a>
 							<button type="submit" onclick="save(this)" class="btn btn-primary">Simpan</button>
 						</div>
 					</form>

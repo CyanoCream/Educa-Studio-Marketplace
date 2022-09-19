@@ -53,27 +53,6 @@
                     <div class="footer-desc">Child can develop your child's abilities.<br/>
                         The best choice for parents who want to advance their child's development
                     </div>
-                    <div class="kodory-socials style-01">
-                        {{-- <div class="content-socials">
-                            <ul class="socials-list">
-                                <li>
-                                    <a href="https://facebook.com" target="_blank">
-                                        <i class="fa fa-facebook"></i>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="https://www.instagram.com" target="_blank">
-                                        <i class="fa fa-instagram"></i>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="https://twitter.com" target="_blank">
-                                        <i class="fa fa-twitter"></i>
-                                    </a>
-                                </li>
-                            </ul>
-                        </div> --}}
-                    </div>
                 </div>
             </div>
         </div>

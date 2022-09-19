@@ -41,7 +41,7 @@
                 </div>
                 <div class="col-sm-6">
                     <ol class="breadcrumb float-sm-right">
-                        <li class="breadcrumb-item"><a href="{{-- {{route('daftarPenyelenggara')}} --}}">Home</a></li>
+                        <li class="breadcrumb-item"><a href="{{-- {{route('daftarPenyelenggara_penyelenggara')}} --}}">Home</a></li>
                         <li class="breadcrumb-item active">Dashboard Penyelenggara</li>
                     </ol>
                 </div>
@@ -53,7 +53,7 @@
         <div class="container-fluid">
             <div class="card">
                 <div class="card-header text-right">
-                    <a href="{{-- {{ route('createPenyelenggara') }} --}}" class="btn btn-primary" role="button">Tambah
+                    <a href="{{-- {{ route('createPenyelenggara_penyelenggara') }} --}}" class="btn btn-primary" role="button">Tambah
                         Penyelenggara</a>
                 </div>
                 <div class="card-body p-2">
@@ -83,10 +83,10 @@
                                 <td>{{ $penyelenggara->jam_operasional }}</td>
                                 <td>
                                     <a onclick="edit(this)"
-                                        data-url="{{route('editPenyelenggara', ['id' => $penyelenggara->id])}}"
+                                        data-url="{{route('editPenyelenggara_penyelenggara', ['id' => $penyelenggara->id])}}"
                                         class="btn btn-warning btn-sm" role="button">Edit</a>
                                     <a onclick="confirmDelete(this)"
-                                        data-url="{{route('deletePenyelenggara', ['id' => $penyelenggara->id])}}"
+                                        data-url="{{route('deletePenyelenggara_penyelenggara', ['id' => $penyelenggara->id])}}"
                                         class="btn btn-danger btn-sm" role="button">Hapus</a>
                                 </td>
                             </tr>
