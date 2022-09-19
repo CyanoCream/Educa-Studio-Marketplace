@@ -177,7 +177,7 @@
                                                         class="kodory-Price-amount amount"><span
                                                         class="kodory-Price-currencySymbol"></span>Rp.{{ $order->produk->harga_produk }}</span></span>
                                                         <div> 
-                                                            <a style="margin:20px;" href="{{route('deleteOrder', ['id' => $order->id])}}" class="remove remove_from_cart_button">×</a>
+                                                            <a style="margin:20px;" href="{{route('deleteOrder', ['id' => $order->id])}}" onclick="save('this')" class="remove remove_from_cart_button">×</a>
                                                         </div>
                                                     @endforeach
                                                     </li>
@@ -189,9 +189,13 @@
                                             </p>
                                             <p class="kodory-mini-cart__buttons buttons">
                                                 <a href="{{ route ('pesanan.index')}}" class="button kodory-forward">Viewcart</a>
-                                                <a href="#"
+                                                <a href="#" data-toggle="modal" data-target="#pulsa"
                                                    class="button checkout kodory-forward">Checkout</a>
                                             </p>
+                                            <div>
+
+                                                @include('pesanan.checkout')
+                                            </div>
                                         </div>
                                     </div>
                                 </div>

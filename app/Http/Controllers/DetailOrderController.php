@@ -72,16 +72,10 @@ class DetailOrderController extends Controller
         if(auth()->user()){
             $id = auth()->user()->id;
             $orders = Order::where('id_user', $id)->where('status_order', 1)->get();
-            $sumorders = Order::where('id_user', $id)->sum('total_harga');
-            $totalpesan = Order::where('id_user', $id)->count();
+            $sumorders = Order::where('id_user', $id)->where('status_order', 1)->sum('total_harga');
+            $totalpesan = Order::where('id_user', $id)->where('status_order', 1)->count();
         }
-        // elseif($request){
-        //     $id = auth()->user()->id;
-        //     $orders = Order::where('id_user', $id)->where('status_order', 1)->where('nama_produk', 'like', '%'.$request->cari.'%')->get();
-        //     $sumorders = Order::where('id_user', $id)->sum('total_harga');
-        //     $totalpesan = Order::where('id_user', $id)->count();
-        // }
-        // dd($request);
+
 
         else{
             $orders = [];

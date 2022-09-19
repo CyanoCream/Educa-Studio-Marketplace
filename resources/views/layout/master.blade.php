@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" type="image/x-icon" href="assets/images/favicon.png"/>
+    <link rel="shortcut icon" type="image/x-icon" href="{{asset('images/logoo.png')}}"/>
     <link href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;500;600;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="{{asset('css/bootstrap.min.css')}}"/>
@@ -51,6 +51,7 @@
 <script src="{{asset('js/bootstrap.bundle.min.js')}}"></script>
 <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/vue@2.7.8/dist/vue.js"></script>
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 </body> 
 </html>
 
@@ -199,6 +200,14 @@ var appComponent = new Vue({
         })
     }
 
-
+    save = function (button) {
+					swal({
+					title: "Sukses",
+					text: "Anda telah berhasil Menghapus barang!",
+					icon: "error",
+					button: false,
+					timer: 2000,
+					});
+				}
 
 </script>
