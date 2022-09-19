@@ -335,7 +335,6 @@
     </div>
 </div>
 
-<<<<<<< HEAD
 <div class="section-023">
     <div class="kodory-banner style-11 left-center">
         <div class="banner-inner">
@@ -349,38 +348,13 @@
                     </div>
                     <div class="button-wrap">
                         <a class="button" target="_self" href="{{ route ('katalog.index')}}"><span>Shop now</span></a>
-=======
-            </div>
-        </div>
-    </div>
-
-    <div class="section-023">
-        <div class="kodory-banner style-11 left-center">
-            <div class="banner-inner">
-                <figure class="banner-thumb">
-                    <img src="{{asset('images/home 1.jpg')}}"
-                         class="attachment-full size-full" alt="img"></figure>
-                <div class="banner-info container">
-                    <div class="banner-content">
-                        <div class="title-wrap">
-                            <div class="banner-label">Ikuti Perkembangan Anak</div>
-                            <h6 class="title">Dengan Mengikuti Program Kami</h6>
-                        </div>
-                        <div class="button-wrap">
-                            <a class="button" target="_self" href="{{ route ('katalog.index')}}"><span>Shop now</span></a>
-                        </div>
->>>>>>> 8cbcb829f5c768cedd22893c4e13b21af3a85ef5
                     </div>
                 </div>
             </div>
         </div>
     </div>
-<<<<<<< HEAD
 </div>
 <div class="section-001">
-=======
-
->>>>>>> 8cbcb829f5c768cedd22893c4e13b21af3a85ef5
     <div class="container">
         <div class="kodory-heading style-01">
             <div class="heading-inner">

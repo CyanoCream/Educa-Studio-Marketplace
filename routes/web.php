@@ -10,9 +10,9 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
-Route::get('/history', function () {
-    return view('history.index');
-});
+Route::get('/history', 'DetailOrderController@show')->name('history');
+Route::get('/history/desc', 'DetailOrderController@filterhistorydown')->name('desc');
+Route::get('/history/asc', 'DetailOrderController@filterhistoryup')->name('asc');
 
 Route::get('/dashboard', function () {
     return view('admin.master');
@@ -139,6 +139,7 @@ Route::post('/detail_order/create', 'AdminDetailOrderController@store')->name('s
 Route::get('/detail_order/{detail_order}/edit', 'AdminDetailOrderController@edit')->name('editDetail_Order');
 Route::post('/detail_order/{detail_order}/edit', 'AdminDetailOrderController@update')->name('updateDetail_Order');
 Route::get('/detail_order/{detail_order}/delete', 'AdminDetailOrderController@destroy')->name('deleteDetail_Order');
+Route::post('/pembayaran/{id}', 'DetailOrderController@pembayaran')->name('pembayaran');
 
 // gambar
 Route::get('/gambar', 'AdminGambarController@index')->name('daftarGambar');

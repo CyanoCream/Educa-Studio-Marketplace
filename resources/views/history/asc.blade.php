@@ -59,13 +59,12 @@
     <div class="col-xl-3" style="margin-left:900px; padding-bottom:15px;">
         <div id="" class="">
             <div id="kodory_product_search-2" class="widget kodory widget_product_search">
-                <form class="kodory-product-search" acton="{{route('history')}}" methode="get">
+                <form class="kodory-product-search">
                   <input id="kodory-product-search-field-0" class="search-field"
-                   placeholder="Search products…" value="" name="cari" type="search">
+                   placeholder="Search products…" value="" name="s" type="search">
                 <button type="submit" value="Search">Search</button>
                 </form>
-
-           </div>
+            </div>
          </div>
     </div>
     <div class="container">
@@ -78,7 +77,6 @@
                             <table class="shop_table shop_table_responsive cart kodory-cart-form__contents">
                                 <thead>
                                 <tr>
-                                    
                                     <th class="product-remove">date Checkout</th>
                                     <th class="product-thumbnail">Views</th>
                                     <th class="product-name">Nama Produk</th>
@@ -133,11 +131,11 @@
                                                 <td class="product-price" data-title="Price">
                                                     <span class="kodory-Price-amount amount"><span
                                                             class="kodory-Price-currencySymbol "></span> SUCCESS </span></td>
-                                        <td style="border-right:none;" class="product-price" data-title="Price">
-                                            <span class="kodory-Price-amount amount"><span
-                                            class="kodory-Price-currencySymbol "></span>{{Auth::user()->id * $order->id_produk * $order->id }}/INVOICE/{{$order->id_produk}}/{{Auth::user()->id}}{{$order->id}}</span></td>
-                                <td style="border-left:none;"></td>
-                                        </tr>
+                                                            <td style="border-right:none;" class="product-price" data-title="Price">
+                                                                <span class="kodory-Price-amount amount"><span
+                                                                class="kodory-Price-currencySymbol "></span>{{Auth::user()->id * $order->id_produk * $order->id }}/INVOICE/{{$order->id_produk}}/{{Auth::user()->id}}{{$order->id}}</span></td>
+                                                    <td style="border-left:none;"></td>
+                                                 </tr>
                                 @endforeach
                                 @endif
                                 <tr>

@@ -27,6 +27,7 @@ class CreateDetailOrdersTable extends Migration
             $table->string('kurir');
             $table->integer('jumlah');
             $table->integer('total_harga');
+            $table->string('pembayaran');
 
         });
     }

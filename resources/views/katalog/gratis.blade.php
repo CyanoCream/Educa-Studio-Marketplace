@@ -126,15 +126,7 @@
                                     <a href="#" class="button yith-wcqv-button" data-product_id="24">Quick
                                         View</a>
                                     <div class="group-button">
-                                        <div class="yith-wcwl-add-to-wishlist">
-                                            <div class="yith-wcwl-add-button show">
-                                                <a href="wishlist.html" class="add_to_wishlist">Add to Wishlist</a>
-                                            </div>
-                                        </div>
-                                        <div class="kodory product compare-button">
-                                            <a href="compare.html" class="compare button">Compare</a>
-                                        </div>
-                                        <a href="#" class="button yith-wcqv-button">Quick View</a>
+                                            <a href="#" class="button yith-wcqv-button">Quick View</a>
                                         <div class="add-to-cart">
                                             <a href="cart.html"
                                                 class="button product_type_variable add_to_cart_button">Select

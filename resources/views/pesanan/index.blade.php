@@ -56,7 +56,7 @@
     </div>
 </div>
 <main class="site-main main-container no-sidebar">
-    <div class="col-xl-3" style="margin-left:900px; padding-bottom:15px;">
+    {{-- <div class="col-xl-3" style="margin-left:900px; padding-bottom:15px;">
         <div id="" class="">
             <div id="kodory_product_search-2" class="widget kodory widget_product_search">
                 <form class="kodory-product-search">
@@ -66,7 +66,7 @@
                 </form>
             </div>
          </div>
-    </div>
+    </div> --}}
     <div class="container">
         <div class="row">
             <div class="col-md-12">
@@ -87,6 +87,7 @@
                                 </thead>
                                 <tbody>
                                     
+                                    
                                     @if (count($orders) == 0)
                                         <div class="alert alert-warning">Cart is empty</div>
                                         
@@ -98,7 +99,7 @@
                                            class="remove" aria-label="Remove this item" data-product_id="27"
                                            data-product_sku="885B712">×</a></td>
                                     <td class="product-thumbnail">
-                                        <a href="single-product.html">
+                                        <a href="{{ $order->produk->nama_produk }}">
                                             @foreach ( $order->gambar['gambar'] as $gambar)
                                             <img
                                                 src="/images/{{$gambar->gambar}}"
@@ -106,7 +107,7 @@
                                                 alt="img" width="600" height="778"></a></td>
                                             @endforeach
                                     <td class="product-name" data-title="Product">
-                                        <a href="single-product.html"></a>{{ $order->produk->nama_produk }}</td>
+                                        <a href="{{ $order->produk->nama_produk }}">{{ $order->produk->nama_produk }}</a></td>
                                     <td class="product-price" data-title="Price">
                                         <span class="kodory-Price-amount amount"><span
                                                 class="kodory-Price-currencySymbol">Rp.</span>{{ $order->produk->harga_produk }}</span></td>
@@ -128,12 +129,11 @@
                                     <td colspan="6" class="actions">
                                         <div class="coupon">
                                         </div>
-                                        <form action="" method="post">
-                                            
-                                            <button type="submit" class="button" name="" value=""
+
+                                            <button type="button" class="button" name="" value=""
                                             data-toggle="modal" data-target="#pulsa" >Checkout
                                             </button>
-                                        </form>
+                                      
                                         <input type="hidden" id="kodory-cart-nonce" name="kodory-cart-nonce"
                                                value="f41b5bf554"><input type="hidden" name="_wp_http_referer"
                                                                          value="/kodory/cart/"></td>
@@ -143,7 +143,7 @@
                             </table>
                             
                         </form>
-                        {{-- @include('pesanan.checkout') --}}
+                        @include('pesanan.checkout')
                         <div class="cart-collaterals">
                             <div class="cart_totals ">
                                 <h2>Cart totals</h2>

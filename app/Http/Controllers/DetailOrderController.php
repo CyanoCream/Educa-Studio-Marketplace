@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 use App\Detail_order;
+use Illuminate\Support\Facades\Auth;
+use App\Order;
 use Illuminate\Http\Request;
 
 class DetailOrderController extends Controller
@@ -64,9 +66,78 @@ class DetailOrderController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(Request $request)
     {
-        //
+                
+        if(auth()->user()){
+            $id = auth()->user()->id;
+            $orders = Order::where('id_user', $id)->where('status_order', 1)->get();
+            $sumorders = Order::where('id_user', $id)->sum('total_harga');
+            $totalpesan = Order::where('id_user', $id)->count();
+        }
+        // elseif($request){
+        //     $id = auth()->user()->id;
+        //     $orders = Order::where('id_user', $id)->where('status_order', 1)->where('nama_produk', 'like', '%'.$request->cari.'%')->get();
+        //     $sumorders = Order::where('id_user', $id)->sum('total_harga');
+        //     $totalpesan = Order::where('id_user', $id)->count();
+        // }
+        // dd($request);
+
+        else{
+            $orders = [];
+            $sumorders = 0;
+            $totalpesan = 0;
+        }
+        // dd ($orders);
+       
+        return view('history.index', [
+            'orders' => $orders,
+            'sumorders' => $sumorders,
+            'totalpesan' => $totalpesan,
+            // 'request'
+        ]);
+    }
+
+    public function filterhistoryup()
+    {
+                
+        if(auth()->user()){
+            $id = auth()->user()->id;
+            $orders = Order::where('id_user', $id)->where('status_order', 1)->orderByRaw('updated_at - created_at DESC')->get();
+            $sumorders = Order::where('id_user', $id)->where('status_order', 1)->sum('total_harga');
+            $totalpesan = Order::where('id_user', $id)->where('status_order', 1)->count();
+        }else{
+            $orders = [];
+            $sumorders = 0;
+            $totalpesan = 0;
+        }
+       
+        return view('history.desc', [
+            'orders' => $orders,
+            'sumorders' => $sumorders,
+            'totalpesan' => $totalpesan
+        ]);
+    }
+
+    public function filterhistorydown()
+    {
+                
+        if(auth()->user()){
+            $id = auth()->user()->id;
+            $orders = Order::where('id_user', $id)->where('status_order', 1)->orderByRaw('updated_at - created_at ASC')->get();
+            $sumorders = Order::where('id_user', $id)->where('status_order', 1)->sum('total_harga');
+            $totalpesan = Order::where('id_user', $id)->where('status_order', 1)->count();
+        }else{
+            $orders = [];
+            $sumorders = 0;
+            $totalpesan = 0;
+        }
+       
+        return view('history.asc', [
+            'orders' => $orders,
+            'sumorders' => $sumorders,
+            'totalpesan' => $totalpesan
+        ]);
     }
 
     /**

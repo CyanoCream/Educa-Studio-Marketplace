@@ -72,12 +72,13 @@ class OrderController extends Controller
             $orders = Order::where('id_user', $id)->get();
             $sumorders = Order::where('id_user', $id)->sum('total_harga');
             $totalpesan = Order::where('id_user', $id)->count();
+         
         }else{
             $orders = [];
             $sumorders = 0;
             $totalpesan = 0;
         }
-       
+    //    dd($orders);
         return view('pesanan.index', [
             'orders' => $orders,
             'sumorders' => $sumorders,
@@ -160,7 +161,13 @@ class OrderController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $checkout = Order::where('user_id', Auth::user()->id)->where('status_order',0)->first();
+        
+        // for(i=1, i == where('status_order',0),i++)
+       
+    //    $detail_order = Order::insert();
+
+        return redirect()->back();
     }
 
     /**
