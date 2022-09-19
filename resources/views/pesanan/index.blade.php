@@ -83,6 +83,11 @@
                                     <th class="product-price">Harga</th>
                                     <th class="product-quantity">Jumlah</th>
                                     <th class="product-subtotal">Total</th>
+                                    <th class="product-subtotal">
+                                        <a href="{{route ('desc.order')}}"><i class="fa fa-chevron-up text-info" aria-hidden="true"></i></a><br>
+                                        <a href="{{route ('asc.order')}}"><i class="fa fa-chevron-down text-info" aria-hidden="true"></i></a>
+
+                                    </th>
                                 </tr>
                                 </thead>
                                 <tbody>
@@ -119,17 +124,19 @@
                                             
                                         </div>
                                     </td>
-                                    <td class="product-subtotal" data-title="Total">
+                                    <td class="product-subtotal" data-title="Total" style="border-right:none;">
                                         <span class="kodory-Price-amount amount"><span
                                                 class="kodory-Price-currencySymbol">Rp.</span>{{ $order->total_harga}}.000</span></td>
+                                
+                                <td style="border-left: none;"></td>
                                 </tr>
                                 @endforeach
                                 @endif
                                 <tr>
-                                    <td colspan="6" class="actions">
+                                    <td colspan="7" class="actions">
                                         <div class="coupon">
                                         </div>
-
+                                           
                                             <button type="button" class="button" name="" value=""
                                             data-toggle="modal" data-target="#pulsa" >Checkout
                                             </button>
