@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers;
 use App\Order;
+use App\Produk;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class OrderController extends Controller
 {
@@ -16,6 +18,7 @@ class OrderController extends Controller
         $id = auth()->user()->id;
         $orders = Order::where('id_user', $id)->get();
         $sumorders = Order::where('id_user', $id)->sum('total_harga');
+        
         
 
         return view('pesanan.index', [
@@ -69,10 +72,10 @@ class OrderController extends Controller
         
         if(auth()->user()){
             $id = auth()->user()->id;
-            $orders = Order::where('id_user', $id)->get();
+            $orders = Order::where('id_user', $id)->where('status_order', 0)->get();
             $sumorders = Order::where('id_user', $id)->sum('total_harga');
             $totalpesan = Order::where('id_user', $id)->count();
-         
+            
         }else{
             $orders = [];
             $sumorders = 0;
@@ -119,6 +122,48 @@ class OrderController extends Controller
         ]);
     }
 
+    public function orderup()
+    {
+        if(auth()->user()){
+            $id = auth()->user()->id;
+            $orders = Order::where('id_user', $id)->orderByRaw('updated_at - created_at DESC')->get();
+            $sumorders = Order::where('id_user', $id)->sum('total_harga');
+            $totalpesan = Order::where('id_user', $id)->count();
+         
+        }else{
+            $orders = [];
+            $sumorders = 0;
+            $totalpesan = 0;
+        }
+    //    dd($orders);
+        return view('pesanan.indexdesc', [
+            'orders' => $orders,
+            'sumorders' => $sumorders,
+            'totalpesan' => $totalpesan
+        ]);
+    }
+
+    public function orderdown()
+    {
+        if(auth()->user()){
+            $id = auth()->user()->id;
+            $orders = Order::where('id_user', $id)->orderByRaw('updated_at - created_at ASC')->get();
+            $sumorders = Order::where('id_user', $id)->sum('total_harga');
+            $totalpesan = Order::where('id_user', $id)->count();
+         
+        }else{
+            $orders = [];
+            $sumorders = 0;
+            $totalpesan = 0;
+        }
+    //    dd($orders);
+        return view('pesanan.indexasc', [
+            'orders' => $orders,
+            'sumorders' => $sumorders,
+            'totalpesan' => $totalpesan
+        ]);
+    }
+
     /**
      * Store a newly created resource in storage.
      *
@@ -127,7 +172,24 @@ class OrderController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $orders = Order::where('id_user', Auth::id())->where('status_order',0)->get();
+        foreach ($orders as $pesanan) {
+            
+            $barang = Produk::where('id', $pesanan->id_produk)->first();
+            $barang->stock = $barang->stock-$pesanan->jumlah_pesanan;
+            $pesanan->status_order = 1;
+            $pesanan->alamat_pen = auth()->user()->alamat;
+            $pesanan->provinsi = auth()->user()->provinsi;
+            $pesanan->kota = auth()->user()->kota;
+            $pesanan->kecamatan = auth()->user()->kecamatan;
+            $pesanan->kurir = $request->kurir;
+            $pesanan->metode_pembayaran = $request->metode_pembayaran;
+            $pesanan->update(); 
+
+        }
+        
+        
+        return redirect()->back();
     }
 
     /**

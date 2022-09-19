@@ -1,6 +1,6 @@
 <div class="modal fade" id="pulsa" tabindex="-1" aria-labelledby="pulsaLabel" aria-hidden="true">
     <div class="modal-dialog">
-    <form action="{{route('pesanan.invoice')}}" method="post">
+    <form action="{{route('sOrder')}}" method="get">
       <div class="modal-content" style="border-radius: 20px">
         <div class="modal-header">
           <h3 class="modal-title m-3" id="pulsaLabel">Checkout</h3>
@@ -14,7 +14,7 @@
                 <div class="css-4r2xna">
                 <p class="css-utaa48 mb-2"><strong>Pilih Metode Pembayaran</strong></p>
                 <div style="display: flex;">
-                <select required id="cars" class="w-50">
+                <select required id="cars" class="w-50 " name="metode_pembayaran">
 
                   <option value="BNI">BNI Virtual Account</option>
                   <option value="BRI">BRI Virtual Account</option>
@@ -24,7 +24,7 @@
                 <div class="css-4r2xna">
                   <p class="css-utaa48 mb-2"><strong>Pilih Jasa Pengiriman</strong></p>
                   <div style="display: flex;">
-                  <select Required id="cars" class="w-50">
+                  <select Required id="cars" class="w-50" name="kurir">
 
                     <option value="JNE">JNE</option>
                     <option value="J&T">J&T</option>

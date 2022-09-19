@@ -56,18 +56,17 @@
     </div>
 </div>
 <main class="site-main main-container no-sidebar">
-    <div class="col-xl-3" style="margin-left:900px; padding-bottom:15px;">
+    {{-- <div class="col-xl-3" style="margin-left:900px; padding-bottom:15px;">
         <div id="" class="">
             <div id="kodory_product_search-2" class="widget kodory widget_product_search">
-                <form class="kodory-product-search" acton="{{route('history')}}" methode="get">
+                <form class="kodory-product-search">
                   <input id="kodory-product-search-field-0" class="search-field"
-                   placeholder="Search products…" value="" name="cari" type="search">
+                   placeholder="Search products…" value="" name="s" type="search">
                 <button type="submit" value="Search">Search</button>
                 </form>
-
-           </div>
+            </div>
          </div>
-    </div>
+    </div> --}}
     <div class="container">
         <div class="row">
             <div class="col-md-12">
@@ -78,21 +77,17 @@
                             <table class="shop_table shop_table_responsive cart kodory-cart-form__contents">
                                 <thead>
                                 <tr>
-                                    
-                                    <th class="product-remove">date Checkout</th>
+                                    <th class="product-remove">Hapus</th>
                                     <th class="product-thumbnail">Views</th>
                                     <th class="product-name">Nama Produk</th>
                                     <th class="product-price">Harga</th>
                                     <th class="product-quantity">Jumlah</th>
                                     <th class="product-subtotal">Total</th>
-                                    <th class="product-subtotal">Status Order</th>
-                                    <th class="product-subtotal">No Invoice</th>
                                     <th class="product-subtotal">
-                                        <a href="{{route ('desc')}}"><i class="fa fa-chevron-up text-info" aria-hidden="true"></i></a><br>
-                                        <a href="{{route ('asc')}}"><i class="fa fa-chevron-down text-info" aria-hidden="true"></i></a>
+                                        <a href="{{route ('desc.order')}}"><i class="fa fa-chevron-up text-info" aria-hidden="true"></i></a><br>
+                                        <a href="{{route ('asc.order')}}"><i class="fa fa-chevron-down text-info" aria-hidden="true"></i></a>
 
                                     </th>
-
                                 </tr>
                                 </thead>
                                 <tbody>
@@ -105,9 +100,11 @@
                                     @foreach ( $orders as $order )
                                 <tr class="kodory-cart-form__cart-item cart_item">
                                     <td class="product-remove">
-                                        {{$order->updated_at}}</td>
+                                        <a href="{{route('deleteOrder', ['id' => $order->id])}}" onclick="alert('Barang Berhasil dihapus');" data-url=""
+                                           class="remove" aria-label="Remove this item" data-product_id="27"
+                                           data-product_sku="885B712">×</a></td>
                                     <td class="product-thumbnail">
-                                        <a href="produk-detail/{{ $order->id_produk}}">
+                                        <a href="{{ $order->produk->nama_produk }}">
                                             @foreach ( $order->gambar['gambar'] as $gambar)
                                             <img
                                                 src="/images/{{$gambar->gambar}}"
@@ -115,7 +112,7 @@
                                                 alt="img" width="600" height="778"></a></td>
                                             @endforeach
                                     <td class="product-name" data-title="Product">
-                                        <a href="produk-detail/{{ $order->id_produk}}">{{ $order->produk->nama_produk }}</a></td>
+                                        <a href="{{ $order->produk->nama_produk }}">{{ $order->produk->nama_produk }}</a></td>
                                     <td class="product-price" data-title="Price">
                                         <span class="kodory-Price-amount amount"><span
                                                 class="kodory-Price-currencySymbol">Rp.</span>{{ $order->produk->harga_produk }}</span></td>
@@ -127,21 +124,16 @@
                                             
                                         </div>
                                     </td>
-                                    <td class="product-subtotal" data-title="Total">
+                                    <td class="product-subtotal" data-title="Total" style="border-right:none;">
                                         <span class="kodory-Price-amount amount"><span
                                                 class="kodory-Price-currencySymbol">Rp.</span>{{ $order->total_harga}}.000</span></td>
-                                                <td class="product-price" data-title="Price">
-                                                    <span class="kodory-Price-amount amount"><span
-                                                            class="kodory-Price-currencySymbol "></span> SUCCESS </span></td>
-                                        <td style="border-right:none;" class="product-price" data-title="Price">
-                                            <span class="kodory-Price-amount amount"><span
-                                            class="kodory-Price-currencySymbol "></span>{{Auth::user()->id * $order->id_produk * $order->id }}/INVOICE/{{$order->id_produk}}/{{Auth::user()->id}}{{$order->id}}</span></td>
-                                <td style="border-left:none;"></td>
-                                        </tr>
+                                
+                                <td style="border-left: none;"></td>
+                                </tr>
                                 @endforeach
                                 @endif
                                 <tr>
-                                    <td colspan="9" class="actions">
+                                    <td colspan="7" class="actions">
                                         <div class="coupon">
                                         </div>
 
@@ -158,6 +150,28 @@
                             </table>
                             
                         </form>
+                        @include('pesanan.checkout')
+                        <div class="cart-collaterals">
+                            <div class="cart_totals ">
+                                <h2>Cart totals</h2>
+                                <table class="shop_table shop_table_responsive">
+                                    <tbody>
+                                        <tr class="order-total">
+                                        <th>Total</th>
+                                        <td data-title="Total"><strong><span
+                                                class="kodory-Price-amount amount"><span
+                                                class="kodory-Price-currencySymbol">Rp.</span>{{$sumorders}}.000 </span></strong>
+                                        </td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                                <div class="kodory-proceed-to-checkout">
+                                    <a href="#"
+                                       class="checkout-button button alt kodory-forward">
+                                        Proceed to checkout</a>
+                                </div>
+                            </div>
+                        </div>
                         
                     </div>
                 </div>
