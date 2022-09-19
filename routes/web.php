@@ -84,7 +84,7 @@ Route::get('produk-detail/{id}', 'ProdukController@show');
 Route::post('peserta', 'PesertaController@getPeserta')->name('peserta');
 
 Route::get('/navbar', 'OrderController@index');
-Route::get('/pesanan/invoice', 'OrderController@invoice')->middleware('auth')->name('pesanan.invoice');
+Route::get('/history/invoice/{invoice}', 'OrderController@invoice')->middleware('auth')->name('pesanan.invoice');
 Route::get('/pesanan/cek', 'OrderController@navindex')->name('pesanan.cek');
 Route::post('checkout/{id}', 'ProdukController@addData')->name('checkout');
 

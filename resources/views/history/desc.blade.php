@@ -134,7 +134,9 @@
                                                             <td style="border-right:none;" class="product-price" data-title="Price">
                                                                 <span class="kodory-Price-amount amount"><span
                                                                 class="kodory-Price-currencySymbol "></span>{{Auth::user()->id * $order->id_produk * $order->id }}/INVOICE/{{$order->id_produk}}/{{Auth::user()->id}}{{$order->id}}</span></td>
-                                                    <td style="border-left:none;"></td>
+                                                                <td><a style=" display: inline-block;min-width: 80px;height: 50px;line-height: 52px;
+                                                                    padding: 0 15px;text-align: center;font-size: 14px;border-radius: 30px; color:aliceblue;
+                                                                    background-color: #71c0ef;position: relative;" href="/history/invoice/{{$order->id}}"><b>Print</b></a></td>
                                                     </tr>
                                 @endforeach
                                 @endif
