@@ -31,9 +31,9 @@ class OrderController extends Controller
         
         if(auth()->user()){
             $id = auth()->user()->id;
-            $orders = Order::where('id_user', $id)->get();
-            $sumorders = Order::where('id_user', $id)->sum('total_harga');
-            $totalpesan = Order::where('id_user', $id)->count();
+            $orders = Order::where('id_user', $id)->where('status_order', 0)->get();
+            $sumorders = Order::where('id_user', $id)->where('status_order', 0)->sum('total_harga');
+            $totalpesan = Order::where('id_user', $id)->where('status_order', 0)->count();
         }else{
             $orders = [];
             $sumorders = 0;
@@ -51,9 +51,9 @@ class OrderController extends Controller
         
         if(auth()->user()){
             $id = auth()->user()->id;
-            $orders = Order::where('id_user', $id)->get();
-            $sumorders = Order::where('id_user', $id)->sum('total_harga');
-            $totalpesan = Order::where('id_user', $id)->count();
+            $orders = Order::where('id_user', $id)->where('status_order', 0)->get();
+            $sumorders = Order::where('id_user', $id)->where('status_order', 0)->sum('total_harga');
+            $totalpesan = Order::where('id_user', $id)->where('status_order', 0)->count();
         }else{
             $orders = [];
             $sumorders = 0;
@@ -73,8 +73,8 @@ class OrderController extends Controller
         if(auth()->user()){
             $id = auth()->user()->id;
             $orders = Order::where('id_user', $id)->where('status_order', 0)->get();
-            $sumorders = Order::where('id_user', $id)->sum('total_harga');
-            $totalpesan = Order::where('id_user', $id)->count();
+            $sumorders = Order::where('id_user', $id)->where('status_order', 0)->sum('total_harga');
+            $totalpesan = Order::where('id_user', $id)->where('status_order', 0)->count();
             
         }else{
             $orders = [];
@@ -112,13 +112,28 @@ class OrderController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function invoice()
+    public function invoice($invoice)
     {
-        $id = auth()->user()->id;
-        $orders = Order::where('id_pelanggan',$id)->get();
-        // dd($orders);
-        return view('pesanan.invoice', [
-            'orders' => $orders
+        if(auth()->user()){
+            $id = auth()->user()->id;
+            $orders = Order::where('id_user', $id)->where('status_order', 1)->where('id', $invoice)->first();
+            // $sumorders = Order::where('id_user', $id)->sum('total_harga');
+            // $totalpesan = Order::where('id_user', $id)->count();
+        }
+
+
+        else{
+            $orders = [];
+            // $sumorders = 0;
+            // $totalpesan = 0;
+        }
+        // dd ($orders);
+       
+        return view('history.invoice', [
+            'orders' => $orders,
+            // 'sumorders' => $sumorders,
+            // 'totalpesan' => $totalpesan,
+            // 'request'
         ]);
     }
 
@@ -126,9 +141,9 @@ class OrderController extends Controller
     {
         if(auth()->user()){
             $id = auth()->user()->id;
-            $orders = Order::where('id_user', $id)->orderByRaw('updated_at - created_at DESC')->get();
-            $sumorders = Order::where('id_user', $id)->sum('total_harga');
-            $totalpesan = Order::where('id_user', $id)->count();
+            $orders = Order::where('id_user', $id)->where('status_order', 0)->orderByRaw('updated_at - created_at DESC')->get();
+            $sumorders = Order::where('id_user', $id)->where('status_order', 0)->sum('total_harga');
+            $totalpesan = Order::where('id_user', $id)->where('status_order', 0)->count();
          
         }else{
             $orders = [];
@@ -147,9 +162,9 @@ class OrderController extends Controller
     {
         if(auth()->user()){
             $id = auth()->user()->id;
-            $orders = Order::where('id_user', $id)->orderByRaw('updated_at - created_at ASC')->get();
-            $sumorders = Order::where('id_user', $id)->sum('total_harga');
-            $totalpesan = Order::where('id_user', $id)->count();
+            $orders = Order::where('id_user', $id)->where('status_order', 0)->orderByRaw('updated_at - created_at ASC')->get();
+            $sumorders = Order::where('id_user', $id)->where('status_order', 0)->sum('total_harga');
+            $totalpesan = Order::where('id_user', $id)->where('status_order', 0)->count();
          
         }else{
             $orders = [];

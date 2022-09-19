@@ -51,6 +51,7 @@
 <script src="{{asset('js/bootstrap.bundle.min.js')}}"></script>
 <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/vue@2.7.8/dist/vue.js"></script>
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 </body> 
 </html>
 
@@ -199,6 +200,14 @@ var appComponent = new Vue({
         })
     }
 
-
+    save = function (button) {
+					swal({
+					title: "Sukses",
+					text: "Anda telah berhasil Menghapus barang!",
+					icon: "error",
+					button: false,
+					timer: 2000,
+					});
+				}
 
 </script>

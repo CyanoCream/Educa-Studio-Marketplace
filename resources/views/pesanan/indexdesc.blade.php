@@ -166,7 +166,7 @@
                                     </tbody>
                                 </table>
                                 <div class="kodory-proceed-to-checkout">
-                                    <a href="#"
+                                    <a href="#" 
                                        class="checkout-button button alt kodory-forward">
                                         Proceed to checkout</a>
                                 </div>

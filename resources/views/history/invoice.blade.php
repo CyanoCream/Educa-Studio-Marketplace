@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Invoice</title>
     <style>
         /* -------------------------------------
     GLOBAL
@@ -273,6 +273,7 @@ a {
     </style>
 </head>
 <body>
+    
     <table class="body-wrap">
         <tbody><tr>
             <td></td>
@@ -287,34 +288,34 @@ a {
                                             <h2>Terimakasih sudah menggunakan layanan dari kami</h2>
                                         </td>
                                     </tr>
-                                    @foreach ( $orders as $order )
+                                    
                                     <tr>
                                         <td class="content-block">
                                             <table class="invoice">
                                                 <tbody><tr>
-                                                    <td>{{ Auth::user()->name }}<br> invoice : {{ $loop->iteration * $order->produk->harga_produk + $order->jumlah_pesanan * $loop->iteration * $order->produk->harga_produk  }}<br></td>
+                                                    <td>{{ Auth::user()->name }}<br> invoice :{{Auth::user()->id * $orders->id_produk * $orders->id }}/INVOICE/{{$orders->id_produk}}/{{Auth::user()->id}}{{$orders->id}} <br></td>
                                                     <p>Date: <span id="tanggalwaktu"></span></p>
                                                 </tr>
-                                                @foreach ( $order->gambar['gambar'] as $gambar)
+                                                
                                                 <img
-                                                    src="/images/{{$gambar->gambar}}"
+                                                    src="/images/{{$orders->gambar->gambar[0]->gambar}}"
                                                     class="attachment-kodory_thumbnail size-kodory_thumbnail"
                                                     alt="img" width="200" style="border-radius:18px;"></a></td>
-                                                @endforeach
+                                               
                                                 <tr>
                                                     <td>
                                                         <table class="invoice-items" cellpadding="0" cellspacing="0">
                                                             <tbody><tr>
-                                                                <td>{{ $order->produk->nama_produk }}</td>
-                                                                <td class="alignright">Rp. {{ $order->produk->harga_produk }}</td>
+                                                                <td>{{ $orders->produk->nama_produk }}</td>
+                                                                <td class="alignright">Rp. {{ $orders->produk->harga_produk }}</td>
                                                             </tr>
                                                             <tr>
                                                                 <td>Jumlah</td>
-                                                                <td class="alignright">X {{ $order->jumlah_pesanan }}</td>
+                                                                <td class="alignright">X {{ $orders->jumlah_pesanan }}</td>
                                                             </tr>
                                                             <tr class="total">
                                                                 <td class="alignright" width="80%">Total</td>
-                                                                <td class="alignright">Rp. {{ $order->produk->harga_produk  *  $order->jumlah_pesanan }}</td>
+                                                                <td class="alignright">Rp. {{ $orders->produk->harga_produk  *  $orders->jumlah_pesanan }}.000</td>
                                                             </tr>
                                                         </tbody></table>
                                                     </td>
@@ -322,7 +323,7 @@ a {
                                             </tbody></table>
                                         </td>
                                     </tr>
-                                    @endforeach
+                                   
                                     <tr>
                                         <td class="content-block">
                                             <a href="#">View in browser</a>
@@ -355,3 +356,5 @@ a {
     var dt = new Date();
     document.getElementById("tanggalwaktu").innerHTML = dt.toLocaleDateString();
 </script>
+
+{{-- random {{ $loop->iteration * $order->produk->harga_produk + $order->jumlah_pesanan * $loop->iteration * $order->produk->harga_produk  }} --}}

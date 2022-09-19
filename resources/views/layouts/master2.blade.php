@@ -53,6 +53,7 @@
 <script src="https://cdn.jsdelivr.net/npm/vue@2.7.8/dist/vue.js"></script>
 <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 @yield('script')
 </body>
 </html>
@@ -255,5 +256,15 @@ function PesanSekarang()
         })
     }
 
+
+			save = function (button) {
+					swal({
+					title: "Sukses",
+					text: "Anda telah berhasil login!",
+					icon: "success",
+					button: false,
+					timer: 2000,
+					});
+				}
 
 </script>

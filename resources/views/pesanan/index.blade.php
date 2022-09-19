@@ -100,7 +100,7 @@
                                     @foreach ( $orders as $order )
                                 <tr class="kodory-cart-form__cart-item cart_item">
                                     <td class="product-remove">
-                                        <a href="{{route('deleteOrder', ['id' => $order->id])}}" onclick="alert('Barang Berhasil dihapus');" data-url=""
+                                        <a href="{{route('deleteOrder', ['id' => $order->id])}}" onclick="save('this')" data-url=""
                                            class="remove" aria-label="Remove this item" data-product_id="27"
                                            data-product_sku="885B712">×</a></td>
                                     <td class="product-thumbnail">
@@ -166,7 +166,7 @@
                                     </tbody>
                                 </table>
                                 <div class="kodory-proceed-to-checkout">
-                                    <a href="#"
+                                    <a href="#" data-toggle="modal" data-target="#pulsa"
                                        class="checkout-button button alt kodory-forward">
                                         Proceed to checkout</a>
                                 </div>
