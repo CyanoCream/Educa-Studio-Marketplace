@@ -271,8 +271,12 @@ class ProdukController extends Controller
         $orders = new Order;
         $orders->id_user = Auth::user()->id;
         $orders->id_produk =  $request->id_produk;
-        $orders->kurir = 'jnt';
-        $orders->alamat_pen = 'tidak tahu';
+        $orders->kurir = 'null';
+        $orders->alamat_pen = 'null';
+        $orders->provinsi ='null';
+        $orders->kota = 'null';
+        $orders->kecamatan = 'null';
+        $orders->metode_pembayaran = 'null';
         $orders->status_order = 0;
 
         $orders->jumlah_pesanan = $request->jumlah_pesanan;

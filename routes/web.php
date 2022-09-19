@@ -13,6 +13,8 @@
 Route::get('/history', 'DetailOrderController@show')->name('history');
 Route::get('/history/desc', 'DetailOrderController@filterhistorydown')->name('desc');
 Route::get('/history/asc', 'DetailOrderController@filterhistoryup')->name('asc');
+Route::get('/pesanan/desc', 'OrderController@orderup')->name('desc.order');
+Route::get('/pesanan/asc', 'OrderController@orderdown')->name('asc.order');
 
 Route::get('/dashboard', function () {
     return view('admin.master');
@@ -184,10 +186,11 @@ Route::get('/keranjang/{keranjang}/delete', 'AdminKeranjangController@destroy')-
 // order
 Route::get('/order', 'AdminOrderController@index')->name('daftarOrder');
 Route::get('/order/create', 'AdminOrderController@create')->name('createOrder');
-Route::post('/order/create', 'AdminOrderController@store')->name('storeOrder');
+Route::get('/order/checkout', 'AdminOrderController@store')->name('storeOrder');
 Route::get('/order/{order}/edit', 'AdminOrderController@edit')->name('editOrder');
 Route::post('/order/{order}/edit', 'AdminOrderController@update')->name('updateOrder');
 Route::get('/order/{order}/delete', 'AdminOrderController@destroy')->name('deleteOrder');
+Route::get('/pesanan/checkout', 'OrderController@store')->name('sOrder');
 
 // pelanggan
 Route::get('/pelanggan', 'AdminPelangganController@index')->name('daftarPelanggan');

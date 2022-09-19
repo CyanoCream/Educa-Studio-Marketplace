@@ -26,6 +26,10 @@ class CreateOrdersTable extends Migration
             $table->char('total_harga');
             $table->string('kurir');
             $table->string('alamat_pen');
+            $table->string('provinsi')->nullable();
+            $table->string('kota')->nullable();
+            $table->string('kecamatan')->nullable();
+            $table->string('metode_pembayaran')->nullable();
 
         });
     }

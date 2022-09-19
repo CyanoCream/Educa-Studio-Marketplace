@@ -121,6 +121,9 @@
                                             <span class="flaticon-profile"></span>
                                         </a>
                                         <ul class="sub-menu">
+                                            <li class=" menu-item kodory-MyAccount-navigation-link kodory-MyAccount-navigation-link--orders">
+                                                <a href="{{ route ('akun.index') }}">{{ Auth::user()->name }}</a>
+                                            </li>
                                             @if (Auth::user()->role == 'penyelenggara')
                                             <li class=" menu-item kodory-MyAccount-navigation-link kodory-MyAccount-navigation-link--orders">
                                                 <a href="{{ route ('penyelenggaras')}}">Dashboard Penyelenggara</a>
@@ -131,7 +134,7 @@
                                             </li>
                                             @endif
                                             <li class=" menu-item kodory-MyAccount-navigation-link kodory-MyAccount-navigation-link--orders">
-                                                <a href="{{ route ('akun.index') }}">{{ Auth::user()->name }}</a>
+                                                <a href="{{ route ('history') }}">History Pembelian</a>
                                             </li>
                                            
                                             <li class=" menu-item kodory-MyAccount-navigation-link kodory-MyAccount-navigation-link--orders">
