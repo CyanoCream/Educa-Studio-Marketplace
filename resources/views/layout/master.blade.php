@@ -204,7 +204,7 @@ var appComponent = new Vue({
 					swal({
 					title: "Sukses",
 					text: "Anda telah berhasil Menghapus barang!",
-					icon: "error",
+					icon: "success",
 					button: false,
 					timer: 2000,
 					});
