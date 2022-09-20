@@ -31,11 +31,11 @@ class AdminGambarController extends Controller
         
         $produk = Produk::where('id_penyelenggara',Auth::id())->pluck('id');
         // dd($produk);
-        $gambars = Gambar::where('id_produk', $produk)->get();
+        // $gambars = Gambar::where('id_produk', $produk)->get();
         // dd($gambars);
         foreach ($produk as $produks) {
-        $gambars = Gambar::where('id_produk', $produks->id)->get();
-            // dd($gambars);
+        $gambars = Gambar::where('id_produk', $produks)->get();
+            dd($gambars);
         }
         return view('Penyelenggara.gambar.index', [
             'gambars' => $gambars
