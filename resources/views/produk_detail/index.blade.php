@@ -240,15 +240,12 @@
                                                     </label>
                                                     <textarea id="penilaian" name="penilaian" rows="3" cols="50" required=""></textarea>
                                                 </p>
-                                                <button type="submit" onclick="save(this)" class="btn btn-primary">Submit</button>
+                                                <button type="submit" class="btn btn-primary">Submit</button>
                                             </form>
                                             <div class="card">
                                                 <div class="body">
                                                     <div class="row">
                                                         <div class="col-md-12">
-                                                            {{-- <h3 class="text-center mb-5">
-                                                                Nested comment section
-                                                            </h3> --}}
                                                             <div class="row">
                                                                 <div class="col-md-12">
                                                                     <div class="media">
