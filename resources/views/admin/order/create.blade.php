@@ -27,22 +27,22 @@
 
 						<div class="form-group">
 							<label for="status_order">status order</label>
-							<input type="text" name="status_order" id="status_order" class="form-control" required="required" placeholder="Masukkan status_order">
+							<input type="text" name="status_order" id="status_order" class="form-control" required="required" placeholder="Masukkan status order">
 						</div>
 
 						<div class="form-group">
 							<label for="id_produk">id produk</label>
-							<input type="text" name="id_produk" id="id_produk" class="form-control" required="required" placeholder="Masukkan id_produk">
+							<input type="text" name="id_produk" id="id_produk" class="form-control" required="required" placeholder="Masukkan id produk">
 						</div>
 
 						<div class="form-group">
 							<label for="id_penyelenggara">id penyelenggara</label>
-							<input type="text" name="id_penyelenggara" id="id_penyelenggara" class="form-control" required="required" placeholder="Masukkan id_penyelenggara">
+							<input type="text" name="id_penyelenggara" id="id_penyelenggara" class="form-control" required="required" placeholder="Masukkan id penyelenggara">
 						</div>
 
 						<div class="form-group">
 							<label for="jumlah_pesanan">jumlah pesanan</label>
-							<input type="text" name="jumlah_pesanan" id="jumlah_pesanan" class="form-control" required="required" placeholder="Masukkan jumlah_pesanan">
+							<input type="text" name="jumlah_pesanan" id="jumlah_pesanan" class="form-control" required="required" placeholder="Masukkan jumlah pesanan">
 						</div>
 
                         <div class="form-group">
@@ -52,7 +52,7 @@
 
                         <div class="form-group">
 							<label for="alamat_pen">alamat penerima</label>
-							<input type="text" name="alamat_pen" id="alamat_pen" class="form-control" required="required" placeholder="Masukkan alamat_pen">
+							<input type="text" name="alamat_pen" id="alamat_pen" class="form-control" required="required" placeholder="Masukkan alamat pen">
 						</div>
 
 						<div class="text-right">

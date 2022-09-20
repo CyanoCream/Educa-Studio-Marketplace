@@ -38,7 +38,7 @@
 
 						<div class="form-group">
 							<label for="nomor_ponsel">nomor ponsel</label>
-							<input type="text" name="nomorponsel" id="nomor_ponsel" class="form-control" required="required" placeholder="Masukkan nomor_ponsel">
+							<input type="text" name="nomorponsel" id="nomor_ponsel" class="form-control" required="required" placeholder="Masukkan nomor ponsel">
 						</div>
 
 						<div class="form-group">

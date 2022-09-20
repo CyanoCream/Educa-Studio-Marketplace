@@ -34,7 +34,7 @@
 						<div class="form-group">
 							<label for="nama_pelanggan">nama pelanggan</label>
 							<input type="text" name="nama_pelanggan" id="nama_pelanggan" class="form-control"
-								required="required" placeholder="Masukkan namapelanggan">
+								required="required" placeholder="Masukkan nama pelanggan">
 						</div>
 
 						<div class="form-group">

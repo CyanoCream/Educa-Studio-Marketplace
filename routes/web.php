@@ -209,7 +209,6 @@ Auth::routes();
     Route::post('/user/{user}/edit', 'AdminUserController@update')->name('updateUser');
     Route::post('/user/{user}/update', 'AdminUserController@userupdate')->name('userUpdate');
     Route::get('/user/{user}/delete', 'AdminUserController@destroy')->name('deleteUser');
-
 // Pencarian
 Route::get('/read', 'ProdukController@read');
 Route::get('/ajax', 'ProdukController@ajax');

@@ -33,32 +33,32 @@
 
 						<div class="form-group">
 							<label for="nama_pelanggan">nama pelanggan</label>
-							<input type="text" name="nama_pelanggan" id="nama_pelanggan" class="form-control" required="required" value="{{ $pelanggan->nama_pelanggan }}" placeholder="Masukkan nama_pelanggan">
+							<input type="text" name="nama_pelanggan" id="nama_pelanggan" class="form-control" required="required" value="{{ $pelanggan->nama_pelanggan }}" placeholder="Masukkan nama pelanggan">
 						</div>
 
                         <div class="form-group">
 							<label for="no_telp">no.telp</label>
-							<input type="text" name="no_telp" id="no_telp" class="form-control" required="required" value="{{ $pelanggan->no_telp }}" placeholder="Masukkan no_telp">
+							<input type="text" name="no_telp" id="no_telp" class="form-control" required="required" value="{{ $pelanggan->no_telp }}" placeholder="Masukkan no.telp">
 						</div>
 
                         <div class="form-group">
 							<label for="alamat_pel">alamat pelanggan</label>
-							<input type="text" name="alamat_pel" id="alamat_pel" class="form-control" required="required" value="{{ $pelanggan->alamat_pel }}" placeholder="Masukkan alamat_pel">
+							<input type="text" name="alamat_pel" id="alamat_pel" class="form-control" required="required" value="{{ $pelanggan->alamat_pel }}" placeholder="Masukkan alamat pel">
 						</div>
 
                         <div class="form-group">
 							<label for="provinsi_pel">provinsi pelanggan</label>
-							<input type="text" name="provinsi_pel" id="provinsi_pel" class="form-control" required="required" value="{{ $pelanggan->provinsi_pel }}" placeholder="Masukkan provinsi_pel">
+							<input type="text" name="provinsi_pel" id="provinsi_pel" class="form-control" required="required" value="{{ $pelanggan->provinsi_pel }}" placeholder="Masukkan provinsi pel">
 						</div>
 
                         <div class="form-group">
 							<label for="kota_pel">kota pelanggan</label>
-							<input type="text" name="kota_pel" id="kota_pel" class="form-control" required="required" value="{{ $pelanggan->kota_pel }}" placeholder="Masukkan kota_pel">
+							<input type="text" name="kota_pel" id="kota_pel" class="form-control" required="required" value="{{ $pelanggan->kota_pel }}" placeholder="Masukkan kota pel">
 						</div>
 
                         <div class="form-group">
 							<label for="kecamatan_pel">kecamatan pelanggan</label>
-							<input type="text" name="kecamatan_pel" id="kecamatan_pel" class="form-control" required="required" value="{{ $pelanggan->kecamatan_pel }}" placeholder="Masukkan kecamatan_pel">
+							<input type="text" name="kecamatan_pel" id="kecamatan_pel" class="form-control" required="required" value="{{ $pelanggan->kecamatan_pel }}" placeholder="Masukkan kecamatan pel">
 						</div>
 
 						<div class="text-right">

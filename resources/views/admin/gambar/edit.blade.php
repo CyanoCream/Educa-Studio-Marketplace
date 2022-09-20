@@ -36,7 +36,7 @@
 						<div class="form-group">
 							<label for="id_produk">id produk</label>
 							<input type="text" name="id_produk" id="id_produk" class="form-control" required="required"
-								value="{{ $gambar->id_produk }}" placeholder="Masukkan id_produk">
+								value="{{ $gambar->id_produk }}" placeholder="Masukkan id produk">
 						</div>
 
 						<div class="text-right">

@@ -26,9 +26,14 @@
                         {{ csrf_field() }}
 
                         <div class="form-group">
-                            <label for="kategori">kategori</label>
-                            <input type="text" name="kategori" id="kategori" class="form-control" 
-                                required="required" placeholder="Masukkan kategori">
+                            <label for="kategori">Kategori</label>
+                                <select id="kategori" name="kategori" class="form-control">
+                                    <option selected>pilih kategori</option>
+                                    <option value="aktivitas">Aktivitas</option>
+                                    <option value="kursus">Kursus</option>
+                                    <option value="experience">Experience</option>
+                                    <option value="gratis">Gratis</option>
+                            </select>
                         </div>
 
                         <div class="form-group">

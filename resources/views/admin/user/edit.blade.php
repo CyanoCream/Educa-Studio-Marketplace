@@ -40,9 +40,9 @@
                             <label for="role">role</label>
                                 <select id="role" name="role" class="form-control">
                                 <option selected>pilih role</option>
-                                <option>Admin</option>
-                                <option>Penyelenggara</option>
-                                <option>User</option>
+                                <option value="admin">Admin</option>
+                                <option value="penyelenggara">Penyelenggara</option>
+                                <option value="user">User</option>
                             </select>
                         </div>
 
