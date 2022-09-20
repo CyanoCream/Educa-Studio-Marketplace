@@ -192,6 +192,7 @@ class OrderController extends Controller
             
             $barang = Produk::where('id', $pesanan->id_produk)->first();
             $barang->stock = $barang->stock-$pesanan->jumlah_pesanan;
+            $barang->update();
             $pesanan->status_order = 1;
             $pesanan->alamat_pen = auth()->user()->alamat;
             $pesanan->provinsi = auth()->user()->provinsi;

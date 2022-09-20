@@ -17,6 +17,7 @@ class CreateUlasansTable extends Migration
             $table->increments('id');
             $table->timestamps();
             $table->integer('id_user');
+            $table->integer('id_produk');
             $table->string('nama');
             $table->string('email');
             $table->string('penilaian');

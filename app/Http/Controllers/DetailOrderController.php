@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 use App\Detail_order;
 use Illuminate\Support\Facades\Auth;
 use App\Order;
+use App\Produk;
 use Illuminate\Http\Request;
 
 class DetailOrderController extends Controller
@@ -71,18 +72,27 @@ class DetailOrderController extends Controller
                 
         if(auth()->user()){
             $id = auth()->user()->id;
-            $orders = Order::where('id_user', $id)->where('status_order', 1)->get();
+            $produks = Produk::all();
+            $orders = Order::where('id_user', $id)->where('status_order', 1)->where('id', 'like','%'.$request->cari.'%')->get();
             $sumorders = Order::where('id_user', $id)->where('status_order', 1)->sum('total_harga');
             $totalpesan = Order::where('id_user', $id)->where('status_order', 1)->count();
         }
 
-
+        elseif(auth()->user()){
+            $id = auth()->user()->id;
+            $orders = Order::where('id_user', $id)->where('status_order', 1)->get();
+            $sumorders = Order::where('id_user', $id)->where('status_order', 1)->sum('total_harga');
+            $totalpesan = Order::where('id_user', $id)->where('status_order', 1)->count();
+        }
         else{
             $orders = [];
             $sumorders = 0;
             $totalpesan = 0;
         }
+
+        
         // dd ($orders);
+        dump($orders);
        
         return view('history.index', [
             'orders' => $orders,
@@ -157,22 +167,22 @@ class DetailOrderController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $validatedData = $request->validate([
-            'id_order' => 'required|integer' ,
-            'id_produk' => 'required|integer' ,
-            'id_varian_order' => 'required|integer' ,
-            'qty_order' => 'required|integer' ,
-        ]);
+        // $validatedData = $request->validate([
+        //     'id_order' => 'required|integer' ,
+        //     'id_produk' => 'required|integer' ,
+        //     'id_varian_order' => 'required|integer' ,
+        //     'qty_order' => 'required|integer' ,
+        // ]);
 
-        $detail_order = Detail_order::find($id);
+        // $detail_order = Detail_order::find($id);
 
-        $detail_order->id_order = $request->id_order;
-        $detail_order->id_produk = $request->id_produk;
-        $detail_order->id_varian_order = $request->id_varian_order;
-        $detail_order->qty_order = $request->qty_order;
-        $detail_order->save();
+        // $detail_order->id_order = $request->id_order;
+        // $detail_order->id_produk = $request->id_produk;
+        // $detail_order->id_varian_order = $request->id_varian_order;
+        // $detail_order->qty_order = $request->qty_order;
+        // $detail_order->save();
 
-        return redirect(route('daftarDetail_Order'));
+        // return redirect(route('daftarDetail_Order'));
     }
 
     /**
