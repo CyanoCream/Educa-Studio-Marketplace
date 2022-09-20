@@ -2,9 +2,12 @@
 
 namespace App\Http\Controllers;
 use App\Gambar;
+use App\Produk;
 use Validator;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use App\User;
+use Illuminate\Support\Facades\Auth;
 
 class AdminGambarController extends Controller
 {
@@ -25,11 +28,19 @@ class AdminGambarController extends Controller
     //admin penyelenggara
     public function index_p()
     {
-        $gambars = Gambar::all();
-
+        
+        $produk = Produk::where('id_penyelenggara',Auth::id())->pluck('id');
+        // dd($produk);
+        // $gambars = Gambar::where('id_produk', $produk)->get();
+        // dd($gambars);
+        foreach ($produk as $produks) {
+        $gambars = Gambar::where('id_produk', $produks)->get();
+            dd($gambars);
+        }
         return view('Penyelenggara.gambar.index', [
             'gambars' => $gambars
         ]);
+        
     }
 
     public function getGambar()

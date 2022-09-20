@@ -10,9 +10,9 @@
         <!-- Sidebar user panel (optional) -->
         <div class="user-panel mt-3 pb-3 mb-3 d-flex">
             <div class="image">
-                <img src="dist/img/user2-160x160.jpg" class="img-circle elevation-2" alt="User Image">
+                <img src="/images/{{Auth::user()->icon_penyelenggara}}" class="img-circle elevation-2" alt="User Image">
             </div>
-            {{-- <h4 class="text-light pl-2">{{Auth::user()->name}}</h4> --}}
+            <h4 class="text-light pl-2">{{Auth::user()->nama_penyelenggara}}</h4>
         </div>
 
         <!-- Sidebar Menu -->
@@ -25,7 +25,7 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a href="{{route('daftarPenyelenggara_penyelenggara')}}" class="nav-link">
+                    <a href="/penyelenggara_penyelenggara/{{Auth::user()->id}}/edit" class="nav-link">
                         <i class="nav-icon fas fa-columns"></i>
                         <p>Penyelenggara</p>
                     </a>

@@ -113,7 +113,7 @@ Auth::routes();
     Route::get('/penyelenggara_penyelenggara/{penyelenggara_penyelenggara}/edit', 'AdminPenyelenggaraController@edit_p')->name('editPenyelenggara_penyelenggara');
     Route::post('/penyelenggara_penyelenggara/{penyelenggara_penyelenggara}/edit', 'AdminPenyelenggaraController@update_p')->name('updatePenyelenggara_penyelenggara');
     Route::get('/penyelenggara_penyelenggara/{penyelenggara_penyelenggara}/delete', 'AdminPenyelenggaraController@destroy_p')->name('deletePenyelenggara_penyelenggara');
-
+  
     //penyelenggara gambar
     Route::get('/penyelenggara_gambar', 'AdminGambarController@index_p')->name('daftarPenyelenggara_gambar');
     Route::get('/penyelenggara_gambar/create', 'AdminGambarController@create_p')->name('createPenyelenggara_gambar');
@@ -209,7 +209,6 @@ Auth::routes();
     Route::post('/user/{user}/edit', 'AdminUserController@update')->name('updateUser');
     Route::post('/user/{user}/update', 'AdminUserController@userupdate')->name('userUpdate');
     Route::get('/user/{user}/delete', 'AdminUserController@destroy')->name('deleteUser');
-// });
 // Pencarian
 Route::get('/read', 'ProdukController@read');
 Route::get('/ajax', 'ProdukController@ajax');

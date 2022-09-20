@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 use App\Produk;
+use App\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
@@ -28,12 +29,15 @@ class AdminProdukController extends Controller
     //admin penyelenggara
     public function index_p()
     {
-        $produks =produk::all();
 
+        $id = auth()->user()->id;
+        $produks = Produk::where('id_penyelenggara', $id)->get();
+        // dd($produks);
         return view('Penyelenggara.produk.index', [
             'produks' => $produks
         ]);
     }
+    
 
     public function getProduk()
     {
