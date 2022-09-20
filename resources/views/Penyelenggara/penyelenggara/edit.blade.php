@@ -23,42 +23,50 @@
 		<div class="container-fluid">
 			<div class="card">
 				<div class="card-body">
-					<form action="{{ route('updatePenyelenggara_penyelenggara',['id'=>$penyelenggara->id]) }}" method="post" enctype="multipart/form-data">
+					<form class="form" action="{{ route('updatePenyelenggara_penyelenggara',['id'=>Auth::user()->id])}}" method="post" enctype="multipart/form-data">
 						{{ csrf_field() }}
-
-						<div class="form-group">
-							<label for="id_produk">id produk</label>
-							<input type="text" name="id_produk" id="id_produk" class="form-control" required="required" value="{{ $penyelenggara->id_produk }}" placeholder="Masukkan id produk">
+						<div class="form-field">
+							<div class="css-1k4vibs text-center">
+								
+								<canvas style="width: 50px; height: 25px;"></canvas>
+								<div class="css-4r2xna">
+									<div class="container-body">
+										<div class="body">
+											<img src="https://kiddo.id/wp-content/uploads/2020/02/icon-kiddo.png"
+												alt="" width="150px">
+										</div>
+										<div class="container-btn-ubah">
+											<input type="file" name="icon_penyelenggara" accept="image/png, image/jpeg, image/jpg" class="css-17jnaqn">
+											{{-- <button color="white" type="button" class="css-1ynihft">Ubah Foto
+												Profile</button> --}}
+										</div>
+									</div>
+								</div>
+								<div class="css-1y5cgar">
+								</div>
+							</div>
+							<div class="css-4r2xna">
+								<div class="css-utaa48"><strong>Nama Penyelenggara </strong></div>
+								<input label="Nama Lengkap" placeholder="" name="nama_penyelenggara" type="text" rows="1" class="css-13f9adq w-100" value="">
+							</div>
+							<div class="css-4r2xna">
+								<div class="css-utaa48"><strong>kota Penyelenggara </strong></div>
+								<input label="Nama Lengkap" placeholder="" name="kota_penyelenggara" type="text" rows="1" class="css-13f9adq w-100" value="">
+							</div>
+							<div class="css-4r2xna">
+								<div class="css-utaa48"><strong>Deskripsi </strong></div>
+								<input label="Nama Lengkap" placeholder="" name="deskripsi" type="text" rows="1" class="css-13f9adq w-100" value="">
+							</div>
+							<div class="css-4r2xna">
+								<div class="css-utaa48"><strong>Jam Operasional </strong></div>
+								<input label="Nama Lengkap" placeholder="" name="jam_operasional" type="text" rows="1" class="css-13f9adq w-100" value="">
+							</div>
+	
+							<input type="hidden" name="role" value="{{ Auth::user()->role }}">
 						</div>
-						
-						<div class="form-group">
-							<label for="icon_penyelenggara">icon penyelenggara</label>
-							<input type="file" name="icon_penyelenggara" id="icon_penyelenggara" class="form-control" required="required" value="{{ $penyelenggara->icon_penyelenggara }}" placeholder="Masukkan icon penyelenggara">
-						</div>
-
-						<div class="form-group">
-							<label for="nama_penyelenggara">nama penyelenggara</label>
-							<input type="text" name="nama_penyelenggara" id="nama_penyelenggara" class="form-control" required="required" value="{{ $penyelenggara->nama_penyelenggara }}" placeholder="Masukkan nama penyelenggara">
-						</div>
-
-						<div class="form-group">
-							<label for="kota_penyelenggara">kota penyelenggara</label>
-							<input type="text" name="kota_penyelenggara" id="kota_penyelenggara" class="form-control" required="required" value="{{ $penyelenggara->kota_penyelenggara }}" placeholder="Masukkan kota penyelenggara">
-						</div>
-
-						<div class="form-group">
-							<label for="deskripsi">deskripsi</label>
-							<textarea name="deskripsi" id="deskripsi" rows="3" class="form-control" required="required" placeholder="Masukkan deskripsi"></textarea>
-						</div>
-
-                        <div class="form-group">
-							<label for="jam_operasional">jam operasional</label>
-							<input type="text" name="jam_operasional" id="jam_operasional" class="form-control" required="required" value="{{ $penyelenggara->jam_operasional }}" placeholder="Masukkan jam operasional">
-						</div>
-
-						<div class="text-right">
-							<a href="{{ route('daftarPenyelenggara_penyelenggara') }}" class="btn btn-outline-secondary mr-2" role="button">Batal</a>
-							<button type="submit" onclick="save(this)" class="btn btn-primary">Simpan</button>
+						<div class="modal-footer">
+							<button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+							<button type="submit" class="btn btn-primary" data-dismiss="modal">Submit</button>
 						</div>
 					</form>
 				</div>

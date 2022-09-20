@@ -27,6 +27,11 @@ class CreateUsersTable extends Migration
             $table->string('kota')->nullable();
             $table->string('kecamatan')->nullable();
             $table->string('notelp')->nullable();
+            $table->string('icon_penyelenggara');
+            $table->string('nama_penyelenggara');
+            $table->string('kota_penyelenggara');
+            $table->string('deskripsi');
+            $table->string('jam_operasional');
             $table->rememberToken();
             $table->timestamps();
         });

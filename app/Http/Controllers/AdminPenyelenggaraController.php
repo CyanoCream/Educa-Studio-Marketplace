@@ -3,7 +3,9 @@
 namespace App\Http\Controllers;
 use App\Penyelenggara;
 use App\Produk;
+use App\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class AdminPenyelenggaraController extends Controller
 {
@@ -34,7 +36,8 @@ class AdminPenyelenggaraController extends Controller
     //admin penyelenggara
     public function index_p()
     {
-        $penyelenggaras = penyelenggara::all();
+        $ide = auth()->user()->id;
+        $penyelenggaras = penyelenggara::where('id_user', $ide)->get();
         
         foreach ($penyelenggaras as &$p) {
             $produk = Produk::find($p['id_produk']);
@@ -45,6 +48,8 @@ class AdminPenyelenggaraController extends Controller
             }
 
         }
+
+        // dump($penyelenggaras);
 
         return view('Penyelenggara.penyelenggara.index', [
             'penyelenggaras' => $penyelenggaras
@@ -159,7 +164,7 @@ class AdminPenyelenggaraController extends Controller
     //admin penyelenggara
     public function edit_p($id)
     {
-        $penyelenggara = penyelenggara::find($id);
+        $penyelenggara = user::find($id);
         return view('Penyelenggara.penyelenggara.edit', [
             'penyelenggara' => $penyelenggara
         ]);
@@ -203,7 +208,7 @@ class AdminPenyelenggaraController extends Controller
     {
 
 
-        $penyelenggara = penyelenggara::find($penyelenggara);
+        $penyelenggara = user::find($penyelenggara);
 
         if ($request->hasFile('icon_penyelenggara')) {
             $icon_penyelenggara = $request->file('icon_penyelenggara');
@@ -213,18 +218,20 @@ class AdminPenyelenggaraController extends Controller
         } else {
             $fileName = 'noimage.png';
         }
+        
 
-        $penyelenggara->id_produk = $request->id_produk;
         $penyelenggara->icon_penyelenggara = $fileName;
+
         $penyelenggara->nama_penyelenggara = $request->nama_penyelenggara;
         $penyelenggara->kota_penyelenggara = $request->kota_penyelenggara;
         $penyelenggara->deskripsi = $request->deskripsi;
         $penyelenggara->jam_operasional = $request->jam_operasional;
-        $penyelenggara->save();
+        $penyelenggara->update();
 
-        return redirect(route('daftarPenyelenggara_penyelenggara'));
+        return redirect()->back();
     }
 
+    
     /**
      * Remove the specified resource from storage.
      *
