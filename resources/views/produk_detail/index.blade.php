@@ -143,7 +143,7 @@
                                 <a href="#tab-description">Penyelenggara</a>
                             </li>
                             <li class="reviews_tab" id="tab-title-reviews" role="tab" aria-controls="tab-reviews">
-                                <a href="#tab-reviews">Reviews (0)</a>
+                                <a href="#tab-reviews">Reviews</a>
                             </li>
                         </ul>
                         <div class="kodory-Tabs-panel kodory-Tabs-panel--additional_information panel entry-content kodory-tab"
@@ -177,21 +177,44 @@
                         <div class="kodory-Tabs-panel kodory-Tabs-panel--description panel entry-content kodory-tab"
                             id="tab-description" role="tabpanel" aria-labelledby="tab-title-description">
                             <h2>Penyelenggara</h2>
-                            <div class="container-table">
-                                <div class="container-cell">
-                                </div>
-                                <div class="container-cell">
-                                </div>
-                            </div>
-                            <div class="container-table">
-                                <div class="container-cell">
-                            </div>
-                            <div class="container-cell">
-                                </div>
-                            </div>
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>id produk</th>
+                                        <th>icon penyelenggara</th>
+                                        <th>nama penyelenggara</th>
+                                        <th>kota penyelenggara</th>
+                                        <th>deskripsi</th>
+                                        <th>jam operasional</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    {{-- @foreach ($penyelenggaras as $penyelenggara)
+                                    <tr>
+                                        <td>{{ $loop->index + 1 }}</td>
+                                    <td>{{ $penyelenggara->produk }}</td>
+                                    <td><img src="/images/{{ $penyelenggara->icon_penyelenggara}}" alt="" width="100px">
+                                    </td>
+                                    <td>{{ $penyelenggara->nama_penyelenggara }}</td>
+                                    <td>{{ $penyelenggara->kota_penyelenggara }}</td>
+                                    <td>{{ $penyelenggara->deskripsi }}</td>
+                                    <td>{{ $penyelenggara->jam_operasional }}</td>
+                                    <td>
+                                        <a onclick="edit(this)"
+                                            data-url="{{route('editPenyelenggara_penyelenggara', ['id' => $penyelenggara->id])}}"
+                                            class="btn btn-warning btn-sm" role="button">Edit</a>
+                                        <a onclick="confirmDelete(this)"
+                                            data-url="{{route('deletePenyelenggara_penyelenggara', ['id' => $penyelenggara->id])}}"
+                                            class="btn btn-danger btn-sm" role="button">Hapus</a>
+                                    </td>
+                                    </tr>
+                                    @endforeach --}}
+                                </tbody>
+                            </table>
                         </div>
 
-                        <div class="kodory-Tabs-panel kodory-Tabs-panel--reviews panel entry-content kodory-tab" id="tab-reviews" role="tabpanel" aria-labelledby="tab-title-reviews">
+                        <div class="kodory-Tabs-panel kodory-Tabs-panel--reviews panel entry-content kodory-tab"
+                            id="tab-reviews" role="tabpanel" aria-labelledby="tab-title-reviews">
                             <div id="reviews" class="kodory-Reviews">
                                 <div id="comments">
                                     <h2 class="kodory-Reviews-title">Reviews</h2>
@@ -200,11 +223,10 @@
                                 <div id="review_form_wrapper">
                                     <div {{-- id="review_form" --}}>
                                         <div id="respond" class="comment-respond">
-                                            <span id="reply-title" class="comment-reply-title">Be the first to review this product</span>
+                                            <span id="reply-title" class="comment-reply-title">
+                                                Be the first to review this product
+                                            </span>
                                             <form action="{{ route('storeUlasan') }}" method="post" class="comment-form">
-                                                <p class="comment-notes">
-                                                    <span id="email-notes">Your email address will not be published.</span> Required fields are marked <span class="required">*</span>
-                                                </p>
 
                                                 <p class="comment-form-author">
                                                     <label for="nama">Name&nbsp;
@@ -212,47 +234,50 @@
                                                     </label>
                                                     <input id="nama" name="nama" required="" type="text">
                                                 </p>
-
-                                                <p class="comment-form-email">
-                                                    <label for="email">Email&nbsp;
-                                                        <span class="required">*</span>
-                                                    </label>
-                                                    <input id="email" name="email" required="" type="email">
-                                                </p>
-
-                                                {{-- <div class="comment-form-rating"><label for="rating">Your rating</label>
-                                                    <p class="stars">
-                                                        <span>
-                                                            <a class="star-1" href="#">1</a>
-                                                            <a class="star-2" href="#">2</a>
-                                                            <a class="star-3" href="#">3</a>
-                                                            <a class="star-4" href="#">4</a>
-                                                            <a class="star-5" href="#">5</a>
-                                                        </span>
-                                                    </p>
-                                                    <select title="product_cat" name="rating" id="rating" required=""
-                                                        style="display: none;">
-                                                        <option value="">Rate…</option>
-                                                        <option value="5">Perfect</option>
-                                                        <option value="4">Good</option>
-                                                        <option value="3">Average</option>
-                                                        <option value="2">Not that bad</option>
-                                                        <option value="1">Very poor</option>
-                                                    </select>
-                                                </div> --}}
                                                 <p class="comment-form-comment">
                                                     <label for="penilaian">Your review&nbsp;
                                                         <span class="required">*</span>
                                                     </label>
                                                     <textarea id="penilaian" name="penilaian" rows="3" cols="50" required=""></textarea>
                                                 </p>
-                                                <button type="submit"  onclick="save(this)" class="btn btn-primary">Submit</button>
+                                                <button type="submit" onclick="save(this)" class="btn btn-primary">Submit</button>
                                             </form>
-                                        </div><!-- #respond -->
+                                            <div class="card">
+                                                <div class="body">
+                                                    <div class="row">
+                                                        <div class="col-md-12">
+                                                            {{-- <h3 class="text-center mb-5">
+                                                                Nested comment section
+                                                            </h3> --}}
+                                                            <div class="row">
+                                                                <div class="col-md-12">
+                                                                    <div class="media">
+                                                                        <img class="mr-3 rounded-circle" alt="img" src="https://img1.pngdownload.id/20180714/ggq/kisspng-user-profile-computer-icons-login-clip-art-profile-picture-icon-5b49de2f1ef441.4301202215315676631268.jpg" />
+                                                                        <div class="media-body">
+                                                                            <div class="row">
+                                                                                <div class="col-8 d-flex">
+                                                                                    <h5>{{Auth::user()->name}}</h5>
+                                                                                </div>
+                                                                            </div>
+                                                                            <p>
+                                                                                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                                                                Non at recusandae quasi sequi, nihil repudiandae nam quibusdam 
+                                                                                quaerat consequatur nesciunt excepturi labore quisquam pariatur, 
+                                                                                et in suscipit deserunt corrupti blanditiis?
+                                                                            </p>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
-                                <div class="clear"></div>
                             </div>
+                            <div class="clear"></div>
                         </div>
                     </div>
                 </div>
@@ -260,6 +285,45 @@
         </div>
     </div>
 </div>
+ 
+
+<style>
+
+    .body {
+        display: grid;
+        place-items: center;
+        font-family: 'Source Sans Pro', sans-serif;
+    }
+
+    .card {
+        position: relative;
+        display: flex;
+        padding:20px;
+        flex-direction: column;
+        min-width: 0;
+        word-wrap: break-word;
+        background-color: #fff;
+        background-clip: border-box;
+        border: 1px solid #d2d2dc;
+        border-radius: 11px;
+        -webkit-box-shadow: 0px 0px 5px 0px rgb(249, 249, 250);
+        -moz-box-shadow: 0px 0px 5px 0px rgba(212, 182, 212, 1);
+        box-shadow: 0px 0px 5px 0px rgb(161, 163, 164)
+    }
+
+    .media img{
+        
+        width: 60px;
+        height: 60px;
+    }
+
+
+    .reply a {
+        
+        text-decoration: none;
+    }
+</style>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300&display=swap">
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <script>

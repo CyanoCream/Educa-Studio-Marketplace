@@ -28,17 +28,17 @@
 
 						<div class="form-group">
 							<label for="id_order">id order</label>
-							<input type="text" name="id_order" id="id_order" class="form-control" required="required" value="{{ $detail_order->id_order }}" placeholder="Masukkan id_order">
+							<input type="text" name="id_order" id="id_order" class="form-control" required="required" value="{{ $detail_order->id_order }}" placeholder="Masukkan id order">
 						</div>
 
 						<div class="form-group">
 							<label for="id_produk">idproduk</label>
-							<input type="text" name="id_produk" id="id_produk" class="form-control" required="required" value="{{ $detail_order->id_produk }}" placeholder="Masukkan id_produk">
+							<input type="text" name="id_produk" id="id_produk" class="form-control" required="required" value="{{ $detail_order->id_produk }}" placeholder="Masukkan id produk">
 						</div>
 
 						<div class="form-group">
 							<label for="nama_produk">nama produk</label>
-							<input type="text" name="nama_produk" id="nama_produk" class="form-control" required="required" value="{{ $detail_order->nama_produk }}" placeholder="Masukkan nama_produk">
+							<input type="text" name="nama_produk" id="nama_produk" class="form-control" required="required" value="{{ $detail_order->nama_produk }}" placeholder="Masukkan nama produk">
 						</div>
 
 						<div class="form-group">
@@ -58,7 +58,7 @@
 
 						<div class="form-group">
 							<label for="total_harga">total harga</label>
-							<input type="text" name="total_harga" id="total_harga" class="form-control" required="required" value="{{ $detail_order->total_harga }}" placeholder="Masukkan total_harga">
+							<input type="text" name="total_harga" id="total_harga" class="form-control" required="required" value="{{ $detail_order->total_harga }}" placeholder="Masukkan total harga">
 						</div>
 
 						<div class="text-right">

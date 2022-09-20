@@ -57,7 +57,7 @@
                         <div class="form-group">
                             <label for="jam_operasional">jam operasional</label>
                             <input type="text" name="jam_operasional" id="jam_operasional" class="form-control"
-                                required="required" placeholder="Masukkan jam_operasional">
+                                required="required" placeholder="Masukkan jam operasional">
                         </div>
 
                         <div class="text-right">

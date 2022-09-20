@@ -28,17 +28,17 @@
 
 						<div class="form-group">
 							<label for="id_order">id order</label>
-							<input type="text" name="id_order" id="id_order" class="form-control" required="required" placeholder="Masukkan id_order">
+							<input type="text" name="id_order" id="id_order" class="form-control" required="required" placeholder="Masukkan id order">
 						</div>
 
 						<div class="form-group">
 							<label for="id_produk">id produk</label>
-							<input type="text" name="id_produk" id="id_produk" class="form-control" required="required" placeholder="Masukkan id_produk">
+							<input type="text" name="id_produk" id="id_produk" class="form-control" required="required" placeholder="Masukkan id produk">
 						</div>
 
 						<div class="form-group">
 							<label for="nama_produk">nama produk</label>
-							<input type="text" name="nama_produk" id="nama_produk" class="form-control" required="required" placeholder="Masukkan nama_produk">
+							<input type="text" name="nama_produk" id="nama_produk" class="form-control" required="required" placeholder="Masukkan nama produk">
 						</div>
 
 						<div class="form-group">
@@ -58,7 +58,7 @@
 
 						<div class="form-group">
 							<label for="jumlah_harga">jumlah harga</label>
-							<input type="text" name="jumlah_harga" id="jumlah_harga" class="form-control" required="required" placeholder="Masukkan jumlah_harga">
+							<input type="text" name="jumlah_harga" id="jumlah_harga" class="form-control" required="required" placeholder="Masukkan jumlah harga">
 						</div>
 
 						<div class="text-right">

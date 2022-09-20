@@ -131,7 +131,7 @@ Auth::routes();
     Route::get('/penyelenggara_produk/{penyelenggara_produk}/delete', 'AdminProdukController@destroy_p')->name('deletePenyelenggara_produk');
 // });
 
-Route::group(['middleware' => 'Auth'], function() {
+// Route::group(['middleware' => 'Auth'], function() {
 
     // detail_order
     Route::get('/detail_order', 'AdminDetailOrderController@index')->name('daftarDetail_Order');
@@ -209,7 +209,7 @@ Route::group(['middleware' => 'Auth'], function() {
     Route::post('/user/{user}/edit', 'AdminUserController@update')->name('updateUser');
     Route::post('/user/{user}/update', 'AdminUserController@userupdate')->name('userUpdate');
     Route::get('/user/{user}/delete', 'AdminUserController@destroy')->name('deleteUser');
-});
+// });
 // Pencarian
 Route::get('/read', 'ProdukController@read');
 Route::get('/ajax', 'ProdukController@ajax');

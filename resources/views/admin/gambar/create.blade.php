@@ -33,7 +33,7 @@
 
 						<div class="form-group">
 							<label for="id_produk">id produk</label>
-							<input type="text" name="id_produk" id="id_produk" class="form-control" required="required" placeholder="Masukkan id_produk">
+							<input type="text" name="id_produk" id="id_produk" class="form-control" required="required" placeholder="Masukkan id produk">
 						</div>
 
 						<div class="text-right">
