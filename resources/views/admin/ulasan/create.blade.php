@@ -32,12 +32,6 @@
                         </div>
 
                         <div class="form-group">
-                            <label for="email">email</label>
-                            <input type="email" name="email" id="email" class="form-control" required="required"
-                                placeholder="Masukkan email">
-                        </div>
-
-                        <div class="form-group">
                             <label for="penilaian">penilaian</label>
                             <textarea name="penilaian" id="penilaian" rows="3" class="form-control" required="required"
                                 placeholder="Masukkan penilaian"></textarea>

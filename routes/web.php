@@ -131,6 +131,11 @@ Auth::routes();
     Route::get('/penyelenggara_produk/{penyelenggara_produk}/delete', 'AdminProdukController@destroy_p')->name('deletePenyelenggara_produk');
 // });
 
+    //produk-detail review
+    Route::get('/produk_detail', 'AdminUlasanController@index_pd')->name('daftarUlasan_pd');
+    Route::post('/produk_detail', 'AdminUlasanController@store_pd')->name('storeUlasan_pd');
+    // Route::get('/ulasan/{ulasan}/delete', 'AdminUlasanController@destroy')->name('deleteUlasan');
+
 // Route::group(['middleware' => 'Auth'], function() {
 
     // detail_order

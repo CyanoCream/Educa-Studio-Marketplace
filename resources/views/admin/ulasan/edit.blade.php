@@ -31,10 +31,10 @@
 							<input type="text" name="nama" id="nama" class="form-control" required="required" value="{{ $ulasan->nama }}" placeholder="Masukkan nama">
 						</div>
 
-						<div class="form-group">
+						{{-- <div class="form-group">
 							<label for="email">email</label>
 							<input type="email" name="email" id="email" class="form-control" required="required" value="{{ $ulasan->email }}" placeholder="Masukkan email">
-						</div>
+						</div> --}}
 
 						<div class="form-group">
 							<label for="penilaian">penilaian</label>

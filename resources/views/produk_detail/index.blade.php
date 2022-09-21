@@ -215,66 +215,63 @@
 
                         <div class="kodory-Tabs-panel kodory-Tabs-panel--reviews panel entry-content kodory-tab"
                             id="tab-reviews" role="tabpanel" aria-labelledby="tab-title-reviews">
-                            <div id="reviews" class="kodory-Reviews">
-                                <div id="comments">
-                                    <h2 class="kodory-Reviews-title">Reviews</h2>
-                                    <p class="kodory-noreviews">There are no reviews yet.</p>
+                            {{-- {{csrf_field()}}
+                            <form action="" method="post">
+                                <div class="form-group">
+                                    <label for="penilaian">Your review&nbsp;</label>
+                                    @if (empty(Auth::user()))
+                                        <textarea class="form-control" id="penilaian" name="penilaian" rows="3"></textarea>
+                                    @endif
+                                    @if (empty(Auth::user()))
+                                        <input type="hidden" class="form-control" name="nama">
+                                        <input class="form-control" type="text" id="nama" name="nama">
+                                    @endif
                                 </div>
-                                <div id="review_form_wrapper">
-                                    <div {{-- id="review_form" --}}>
-                                        <div id="respond" class="comment-respond">
-                                            <span id="reply-title" class="comment-reply-title">
-                                                Be the first to review this product
-                                            </span>
-                                            <form action="{{ route('storeUlasan') }}" method="post" class="comment-form">
-
-                                                <p class="comment-form-author">
-                                                    <label for="nama">Name&nbsp;
-                                                        <span class="required">*</span>
-                                                    </label>
-                                                    <input id="nama" name="nama" required="" type="text">
-                                                </p>
-                                                <p class="comment-form-comment">
-                                                    <label for="penilaian">Your review&nbsp;
-                                                        <span class="required">*</span>
-                                                    </label>
-                                                    <textarea id="penilaian" name="penilaian" rows="3" cols="50" required=""></textarea>
-                                                </p>
-                                                <button type="submit" class="btn btn-primary">Submit</button>
-                                            </form>
-                                            <div class="card">
-                                                <div class="body">
-                                                    <div class="row">
-                                                        <div class="col-md-12">
-                                                            <div class="row">
-                                                                <div class="col-md-12">
-                                                                    <div class="media">
-                                                                        <img class="mr-3 rounded-circle" alt="img" src="https://img1.pngdownload.id/20180714/ggq/kisspng-user-profile-computer-icons-login-clip-art-profile-picture-icon-5b49de2f1ef441.4301202215315676631268.jpg" />
-                                                                        <div class="media-body">
-                                                                            <div class="row">
-                                                                                <div class="col-8 d-flex">
-                                                                                    <h5>{{Auth::user()->name}}</h5>
-                                                                                </div>
-                                                                            </div>
-                                                                            <p>
-                                                                                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                                                                                Non at recusandae quasi sequi, nihil repudiandae nam quibusdam 
-                                                                                quaerat consequatur nesciunt excepturi labore quisquam pariatur, 
-                                                                                et in suscipit deserunt corrupti blanditiis?
-                                                                            </p>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
+                                <button type="submit" class="btn-primary">Submit</button>
+                            </form>
+                            <div class="card mt-3">
+                                <div class="card-body">
+                                    @foreach ($ulasans as $u)
+                                        <div class="media">
+                                            <img class="mr-3 rounded-circle" alt="img" src="https://img1.pngdownload.id/20180714/ggq/kisspng-user-profile-computer-icons-login-clip-art-profile-picture-icon-5b49de2f1ef441.4301202215315676631268.jpg" />
+                                            <div class="media-body">
+                                                <h5>{{$u->name}}</h5>
+                                                <p>{{$u->penilaian}}</p>
                                             </div>
                                         </div>
-                                    </div>
+                                    @endforeach
+                                </div>
+                            </div> --}}
+                            <div class="card">
+                                <div class="card-body">
+                                    {{csrf_field()}}
+                                    <form action="{{route('daftarUlasan_pd')}}" method="post">
+                                        <div class="form-group">
+                                            <p>Komentar :</p>
+                                            @if (empty(Auth::user()))
+                                                <textarea class="form-control" name="penilaian" id="penilaian" readonly>Login dulu sebelum berkomentar!</textarea>
+                                            @endif
+                                            @if (!empty(Auth::user()))
+                                                <input class="form-control" type="hidden" name="nama" id="nama">
+                                                <textarea class="form-control" name="penilaian" id="penilaian"></textarea>
+                                            @endif
+                                        </div>
+                                        <button type="submit" class="btn-primary">Submit</button>
+                                    </form>
                                 </div>
                             </div>
-                            <div class="clear"></div>
+
+                            {{-- @foreach ($ulasans as $ulasan)
+                                @if ($ulasan->id_produk==$id)
+                                    <div class="media mb-4">
+                                        <img class="mr-3 rounded-circle" alt="img" src="https://img1.pngdownload.id/20180714/ggq/kisspng-user-profile-computer-icons-login-clip-art-profile-picture-icon-5b49de2f1ef441.4301202215315676631268.jpg">
+                                        <div class="media-body">
+                                            <h5 class="mt-0">{{$ulasan->name}}</h5>
+                                            <p>{{$ulasan->penilaian}}</p>
+                                        </div>
+                                    </div>
+                                @endif
+                            @endforeach --}}
                         </div>
                     </div>
                 </div>
@@ -282,44 +279,8 @@
         </div>
     </div>
 </div>
- 
-
-<style>
-
-    .body {
-        display: grid;
-        place-items: center;
-        font-family: 'Source Sans Pro', sans-serif;
-    }
-
-    .card {
-        position: relative;
-        display: flex;
-        padding:20px;
-        flex-direction: column;
-        min-width: 0;
-        word-wrap: break-word;
-        background-color: #fff;
-        background-clip: border-box;
-        border: 1px solid #d2d2dc;
-        border-radius: 11px;
-        -webkit-box-shadow: 0px 0px 5px 0px rgb(249, 249, 250);
-        -moz-box-shadow: 0px 0px 5px 0px rgba(212, 182, 212, 1);
-        box-shadow: 0px 0px 5px 0px rgb(161, 163, 164)
-    }
-
-    .media img{
-        
-        width: 60px;
-        height: 60px;
-    }
 
 
-    .reply a {
-        
-        text-decoration: none;
-    }
-</style>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300&display=swap">
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
