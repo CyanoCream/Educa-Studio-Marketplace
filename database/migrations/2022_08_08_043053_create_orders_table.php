@@ -30,6 +30,7 @@ class CreateOrdersTable extends Migration
             $table->string('kota')->nullable();
             $table->string('kecamatan')->nullable();
             $table->string('metode_pembayaran')->nullable();
+            $table->string('nama_produk');
 
         });
     }
