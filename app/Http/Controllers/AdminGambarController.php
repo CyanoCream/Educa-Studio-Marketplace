@@ -28,15 +28,11 @@ class AdminGambarController extends Controller
     //admin penyelenggara
     public function index_p()
     {
+        $id = auth()->user()->id;
         
-        $produk = Produk::where('id_penyelenggara',Auth::id())->pluck('id');
-        // dd($produk);
-        // $gambars = Gambar::where('id_produk', $produk)->get();
+        $gambars = Gambar::where('user_id', $id)->get();
         // dd($gambars);
-        foreach ($produk as $produks) {
-        $gambars = Gambar::where('id_produk', $produks)->get();
-            dd($gambars);
-        }
+
         return view('Penyelenggara.gambar.index', [
             'gambars' => $gambars
         ]);
