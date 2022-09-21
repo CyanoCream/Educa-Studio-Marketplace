@@ -92,7 +92,7 @@ class DetailOrderController extends Controller
 
         
         // dd ($orders);
-        dump($orders);
+        // dump($orders);
        
         return view('history.index', [
             'orders' => $orders,

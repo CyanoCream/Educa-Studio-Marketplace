@@ -61,7 +61,7 @@
             <div id="kodory_product_search-2" class="widget kodory widget_product_search">
                 <form class="kodory-product-search" acton="{{route('history')}}" methode="get">
                   <input id="kodory-product-search-field-0" class="search-field"
-                   placeholder="Search products…" value="" name="cari" type="search">
+                   placeholder="Search products…" value="{{request('cari')}}" name="cari" type="search">
                 <button type="submit" value="Search">Search</button>
                 </form>
 

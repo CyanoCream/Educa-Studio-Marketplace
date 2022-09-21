@@ -160,7 +160,7 @@ class AdminUserController extends Controller
         $user->notelp = $request->notelp;
         $user->foto = $fileNameToStore;
         $user->save();
-
+        // dd($request);
         return redirect()->back();
     }
 

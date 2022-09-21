@@ -208,7 +208,6 @@ class AdminPenyelenggaraController extends Controller
     {
 
 
-        
         $penyelenggara = user::find($penyelenggara);
 
         if ($request->hasFile('icon_penyelenggara')) {
