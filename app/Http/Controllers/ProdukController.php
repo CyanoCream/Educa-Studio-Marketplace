@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 use App\Produk;
 use App\Order;
 use App\Gambar;
+use App\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
@@ -55,7 +56,7 @@ class ProdukController extends Controller
     public function getProdukPopular()
     {
 
-        $popular = Produk::with('gambar')->where('kategori','Gratis')->get();
+        $popular = Produk::with('gambar')->where('kategori','0')->get();
         return $popular;
     }
 
@@ -177,8 +178,8 @@ class ProdukController extends Controller
      */
     public function show($id)
     {
-        $produks = Produk::with('gambar', 'penyelenggara')->where('id', $id)->first();
-        
+        $produks = Produk::with('gambar')->where('id', $id)->first();
+        // dd($produks);
         // return $produks;
         return view('produk_detail.index', ['produk' => $produks]);
     }

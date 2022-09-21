@@ -31,7 +31,7 @@ class AdminProdukController extends Controller
     {
 
         $id = auth()->user()->id;
-        $produks = Produk::where('id_penyelenggara', $id)->get();
+        $produks = Produk::where('user_id', $id)->get();
         // dd($produks);
         return view('Penyelenggara.produk.index', [
             'produks' => $produks

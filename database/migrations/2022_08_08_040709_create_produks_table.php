@@ -17,8 +17,8 @@ class CreateProduksTable extends Migration
             $table->increments('id');
             $table->timestamps();
             $table->string('nama_produk',255);
-            $table->integer('id_penyelenggara')->unsigned();
-            $table->foreign('id_penyelenggara')->references('id')->on('tbl_penyelenggaras');
+            // $table->integer('id_penyelenggara')->unsigned();
+            // $table->foreign('id_penyelenggara')->references('id')->on('tbl_penyelenggaras');
             $table->string('kategori');
             $table->char('harga_produk');
             $table->string('status_pertemuan');
@@ -29,6 +29,7 @@ class CreateProduksTable extends Migration
             $table->string('keterangan');
             $table->string('manfaat');
             $table->string('bundling');
+            $table->string('user_id')->nullable();
             // $table->integer('id_ulasan')->unsigned();
             // $table->foreign('id_ulasan')->references('id')->on('tbl_ulasans');
 
