@@ -104,11 +104,11 @@ Route::post('/insert-ulasan', 'UlasanController@insertUlasan');
 Route::get('/delete-ulasan/{id}', 'UlasanController@deleteUlasan');
 Route::get('/edit-ulasan{id}', 'UlasanController@editUlasan');
 
-//Tabel-Varian
-Route::get('/get-varian', 'VarianController@getVarian');
-Route::post('/insert-varian', 'VarianController@insertVarian');
-Route::get('/delete-varian/{id}', 'VarianController@deleteVarian');
-Route::get('/edit-varian{id}', 'VarianController@editVarian');
+// //Tabel-Varian
+// Route::get('/get-varian', 'VarianController@getVarian');
+// Route::post('/insert-varian', 'VarianController@insertVarian');
+// Route::get('/delete-varian/{id}', 'VarianController@deleteVarian');
+// Route::get('/edit-varian{id}', 'VarianController@editVarian');
 
 // Tabel-Gambar
 Route::get('/gambar', 'GambarController@index');

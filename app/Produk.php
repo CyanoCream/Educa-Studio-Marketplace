@@ -56,4 +56,14 @@ class Produk extends Model
     {
         return $this->belongsTo('App\Penyelenggara', 'id_penyelenggara');
     }
+
+    /**
+     * Get the user that owns the Produk
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
+     */
+    public function ulasan()
+    {
+        return $this->belongsTo('App\Ulasan', 'nama');
+    }
 }

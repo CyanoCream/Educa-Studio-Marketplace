@@ -5,6 +5,7 @@ use App\Produk;
 use App\Order;
 use App\Gambar;
 use App\User;
+use App\Ulasan; 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
@@ -179,9 +180,12 @@ class ProdukController extends Controller
     public function show($id)
     {
         $produks = Produk::with('gambar')->where('id', $id)->first();
-        // dd($produks);
-        // return $produks;
-        return view('produk_detail.index', ['produk' => $produks]);
+        $ulasans = Ulasan::where('id_produk', $id)->get();
+        // dd($ulasans);
+        return view('produk_detail.index', [
+            'produk' => $produks,
+            'ulasans' =>$ulasans
+        ]);
     }
 
     /**

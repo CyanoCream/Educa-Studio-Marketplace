@@ -45,11 +45,11 @@
     <img src="{{asset('images/home 1.jpg')}}"
          class="img-responsive attachment-1920x447 size-1920x447" alt="img">
     <div class="banner-wrapper-inner container">
-        <h1 class="page-title">Cart</h1>
+        <h1 class="page-title">History</h1>
         <div role="navigation" aria-label="Breadcrumbs" class="breadcrumb-trail breadcrumbs">
             <ul class="trail-items breadcrumb">
                 <li class="trail-item trail-begin"><a href="/"><span>Home</span></a></li>
-                <li class="trail-item trail-end active"><span>Cart</span>
+                <li class="trail-item trail-end active"><span>History</span>
                 </li>
             </ul>
         </div>

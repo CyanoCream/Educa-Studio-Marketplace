@@ -180,7 +180,6 @@
                             <table>
                                 <thead>
                                     <tr>
-                                        <th>id produk</th>
                                         <th>icon penyelenggara</th>
                                         <th>nama penyelenggara</th>
                                         <th>kota penyelenggara</th>
@@ -215,63 +214,36 @@
 
                         <div class="kodory-Tabs-panel kodory-Tabs-panel--reviews panel entry-content kodory-tab"
                             id="tab-reviews" role="tabpanel" aria-labelledby="tab-title-reviews">
-                            {{-- {{csrf_field()}}
-                            <form action="" method="post">
-                                <div class="form-group">
-                                    <label for="penilaian">Your review&nbsp;</label>
-                                    @if (empty(Auth::user()))
-                                        <textarea class="form-control" id="penilaian" name="penilaian" rows="3"></textarea>
-                                    @endif
-                                    @if (empty(Auth::user()))
-                                        <input type="hidden" class="form-control" name="nama">
-                                        <input class="form-control" type="text" id="nama" name="nama">
-                                    @endif
-                                </div>
-                                <button type="submit" class="btn-primary">Submit</button>
-                            </form>
-                            <div class="card mt-3">
+                            <div class="card" style="border-radius: 20px;">
                                 <div class="card-body">
-                                    @foreach ($ulasans as $u)
-                                        <div class="media">
-                                            <img class="mr-3 rounded-circle" alt="img" src="https://img1.pngdownload.id/20180714/ggq/kisspng-user-profile-computer-icons-login-clip-art-profile-picture-icon-5b49de2f1ef441.4301202215315676631268.jpg" />
-                                            <div class="media-body">
-                                                <h5>{{$u->name}}</h5>
-                                                <p>{{$u->penilaian}}</p>
-                                            </div>
-                                        </div>
-                                    @endforeach
-                                </div>
-                            </div> --}}
-                            <div class="card">
-                                <div class="card-body">
-                                    {{csrf_field()}}
-                                    <form action="{{route('daftarUlasan_pd')}}" method="post">
+                                    <form action="{{route('storeUlasan_pd')}}" method="post">
+                                        {{csrf_field()}}
                                         <div class="form-group">
                                             <p>Komentar :</p>
                                             @if (empty(Auth::user()))
                                                 <textarea class="form-control" name="penilaian" id="penilaian" readonly>Login dulu sebelum berkomentar!</textarea>
                                             @endif
                                             @if (!empty(Auth::user()))
-                                                <input class="form-control" type="hidden" name="nama" id="nama">
-                                                <textarea class="form-control" name="penilaian" id="penilaian"></textarea>
+                                                <textarea class="form-control" rows="3" name="penilaian" id="penilaian" value="Masukkan komentar" style="border-radius: 10px;"></textarea>
                                             @endif
                                         </div>
+                                        <input type="hidden" name="id_produk" value="{{$produk->id}}">
                                         <button type="submit" class="btn-primary">Submit</button>
                                     </form>
                                 </div>
                             </div>
-
-                            {{-- @foreach ($ulasans as $ulasan)
-                                @if ($ulasan->id_produk==$id)
-                                    <div class="media mb-4">
-                                        <img class="mr-3 rounded-circle" alt="img" src="https://img1.pngdownload.id/20180714/ggq/kisspng-user-profile-computer-icons-login-clip-art-profile-picture-icon-5b49de2f1ef441.4301202215315676631268.jpg">
-                                        <div class="media-body">
-                                            <h5 class="mt-0">{{$ulasan->name}}</h5>
+                            
+                            @foreach ($ulasans as $ulasan)
+                               
+                                    <div class="media m-5">
+                                        <img class="rounded-circle" src="{{asset('images/logoo.png')}}" alt="img" width="80px">
+                                        <div class="media-body pl-3">
+                                            <h4>{{$ulasan->nama}}</h4>
                                             <p>{{$ulasan->penilaian}}</p>
                                         </div>
                                     </div>
-                                @endif
-                            @endforeach --}}
+                            
+                            @endforeach
                         </div>
                     </div>
                 </div>

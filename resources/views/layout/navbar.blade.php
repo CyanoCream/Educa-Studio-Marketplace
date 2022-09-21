@@ -15,8 +15,8 @@
                     </div>
                     <div class="header-logo-nav">
                         <div class="header-logo">
-                            <a href="/"><img alt="" src="{{asset('images/logoo.png')}}" width="100px"
-                            class="logo"></a></div>
+                            <a href="/"><img alt="" src="{{asset('images/logoo.png')}}" width="100px" class="logo"></a>
+                        </div>
                         <div class="box-header-nav menu-nocenter">
                             <ul id="menu-primary-menu"
                                 class="clone-main-menu kodory-clone-mobile-menu kodory-nav main-menu">

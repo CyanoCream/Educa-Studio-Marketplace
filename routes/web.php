@@ -89,18 +89,6 @@ Route::get('/pesanan/cek', 'OrderController@navindex')->name('pesanan.cek');
 Route::post('checkout/{id}', 'ProdukController@addData')->name('checkout');
 
 Auth::routes();
-//home penyelenggara
-// Route::get('/penyelenggara/admin', function () {
-//     return view('Penyelenggara.dashboard');
-// })->name('penyelenggaras');
-
-// Route::get('/Penyelenggara-gambar', function () {
-//     return view('Penyelenggara.gambar');
-// });
-
-// Route::get('/Penyelenggara-produk', function () {
-//     return view('Penyelenggara.produk');
-// });
 
 // Route::group(['middleware' => 'Auth'], function() {
     //penyelenggara admin
@@ -134,7 +122,6 @@ Auth::routes();
     //produk-detail review
     Route::get('/produk_detail', 'AdminUlasanController@index_pd')->name('daftarUlasan_pd');
     Route::post('/produk_detail', 'AdminUlasanController@store_pd')->name('storeUlasan_pd');
-    // Route::get('/ulasan/{ulasan}/delete', 'AdminUlasanController@destroy')->name('deleteUlasan');
 
 // Route::group(['middleware' => 'Auth'], function() {
 

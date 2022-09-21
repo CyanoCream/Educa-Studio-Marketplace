@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 use App\Ulasan;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class AdminUlasanController extends Controller
 {
@@ -24,8 +25,8 @@ class AdminUlasanController extends Controller
     public function index_pd()
     {
         $ulasans = ulasan::all();
-
-        return view('produk_detail', [
+        
+        return view('produk_detail.index', [
             'ulasans' => $ulasans
         ]);
     }
@@ -45,12 +46,6 @@ class AdminUlasanController extends Controller
     public function create(Request $request)
     {
         return view('admin.ulasan.create');
-    }
-
-    //produk-detail review
-    public function create_pd(Request $request)
-    {
-        return view('produk_detail');
     }
 
     /**
@@ -76,16 +71,22 @@ class AdminUlasanController extends Controller
     //produk-detail review
     public function store_pd(Request $request)
     {
-        $validatedData = $request->validate([
-            'nama' => 'required|string|max:255' ,
-            // 'email' => 'required|string|max:255' ,
-            'penilaian' => 'required|string|max:255' ,
-        ]);
+        // $validatedData = $request->validate([
+        //     'nama' => 'required|string|max:255' ,
+        //     // 'email' => 'required|string|max:255' ,
+        //     'penilaian' => 'required|string|max:255' ,
+        // ]);
 
-        $ulasan = new ulasan($validatedData);
+        $ulasan = new ulasan();
+        
+        $ulasan->nama = Auth::user()->name;
+        $ulasan->id_produk = $request->id_produk; 
+        $ulasan->penilaian = $request->penilaian;
         $ulasan->save();
 
-        return redirect(route('daftarUlasan_pd'));
+
+        // return redirect(route('daftarUlasan_pd'));
+        return redirect()->back();
     }
 
     /**
