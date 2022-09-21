@@ -60,7 +60,7 @@
                             <tr>
                                 <th>id</th>
                                 <th>nama</th>
-                                <th>email</th>
+                                {{-- <th>email</th> --}}
                                 <th>penilaian</th>
                                 <th>aksi</th>
                             </tr>
@@ -71,7 +71,7 @@
                             <tr>
                                 <td>{{ $loop->index + 1 }}</td>
                                 <td>{{ $ulasan->nama }}</td>
-                                <td>{{ $ulasan->email }}</td>
+                                {{-- <td>{{ $ulasan->email }}</td> --}}
                                 <td>{{ $ulasan->penilaian }}</td>
                                 <td>
                                     <a onclick="edit(this)" data-url="{{route('editUlasan', ['id' => $ulasan->id])}}"

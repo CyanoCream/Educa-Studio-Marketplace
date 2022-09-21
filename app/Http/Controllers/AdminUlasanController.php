@@ -20,6 +20,16 @@ class AdminUlasanController extends Controller
         ]);
     }
 
+    //produk-detail review
+    public function index_pd()
+    {
+        $ulasans = ulasan::all();
+
+        return view('produk_detail', [
+            'ulasans' => $ulasans
+        ]);
+    }
+
     public function getUlasan()
     {
         $ulasans = ulasan::all();
@@ -37,6 +47,12 @@ class AdminUlasanController extends Controller
         return view('admin.ulasan.create');
     }
 
+    //produk-detail review
+    public function create_pd(Request $request)
+    {
+        return view('produk_detail');
+    }
+
     /**
      * Store a newly created resource in storage.
      *
@@ -47,7 +63,7 @@ class AdminUlasanController extends Controller
     {
         $validatedData = $request->validate([
             'nama' => 'required|string|max:255' ,
-            'email' => 'required|string|max:255' ,
+            // 'email' => 'required|string|max:255' ,
             'penilaian' => 'required|string|max:255' ,
         ]);
 
@@ -55,6 +71,21 @@ class AdminUlasanController extends Controller
         $ulasan->save();
 
         return redirect(route('daftarUlasan'));
+    }
+
+    //produk-detail review
+    public function store_pd(Request $request)
+    {
+        $validatedData = $request->validate([
+            'nama' => 'required|string|max:255' ,
+            // 'email' => 'required|string|max:255' ,
+            'penilaian' => 'required|string|max:255' ,
+        ]);
+
+        $ulasan = new ulasan($validatedData);
+        $ulasan->save();
+
+        return redirect(route('daftarUlasan_pd'));
     }
 
     /**
@@ -93,14 +124,14 @@ class AdminUlasanController extends Controller
     {
         $validatedData = $request->validate([
             'nama' => 'required|string|max:255' ,
-            'email' => 'required|string|max:255' ,
+            // 'email' => 'required|string|max:255' ,
             'penilaian' => 'required|string' ,
         ]);
 
         $ulasan = ulasan::find($ulasan);
 
         $ulasan->nama = $request->nama;
-        $ulasan->email = $request->email;
+        // $ulasan->email = $request->email;
         $ulasan->penilaian = $request->penilaian;
         $ulasan->save();
 

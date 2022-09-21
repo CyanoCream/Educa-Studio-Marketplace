@@ -166,7 +166,7 @@
 				save = function (button) {
 					swal({
 					title: "Sukses",
-					text: "Produk Berhasil dihapus!",
+					text: "Anda Telah Berhasil Login!",
 					icon: "error",
 					button: false,
 					timer: 2000,
