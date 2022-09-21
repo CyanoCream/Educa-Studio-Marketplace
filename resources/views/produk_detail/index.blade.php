@@ -79,6 +79,7 @@
                                         class="variations_form cart" method="post">
                                         {{csrf_field()}}
                                         <input type="hidden" name="id_produk" value="{{$produk->id}}">
+                                        <input type="hidden" name="nama_produk" value="{{$produk->nama_produk}}">
                                         {{-- <input type="hidden" name="id_penyelenggara" value="{{$produk->penyelenggara[0]->id}}">
                                         --}}
                                         <div class="single_variation_wrap">

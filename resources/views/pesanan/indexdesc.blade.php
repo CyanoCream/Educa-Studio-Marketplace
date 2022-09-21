@@ -68,6 +68,18 @@
          </div>
     </div> --}}
     <div class="container">
+        <div class="col-xl-3" style="margin-left:900px; padding-bottom:15px;">
+            <div id="" class="">
+                <div id="kodory_product_search-2" class="widget kodory widget_product_search">
+                    <form class="kodory-product-search" acton="" methode="get">
+                      <input id="kodory-product-search-field-0" class="search-field"
+                       placeholder="Search products…" value="{{request('cari')}}" name="cari" type="search">
+                    <button type="submit" value="Search">Search</button>
+                    </form>
+    
+               </div>
+             </div>
+        </div>
         <div class="row">
             <div class="col-md-12">
                 <div class="page-main-content">

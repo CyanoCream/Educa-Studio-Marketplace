@@ -279,7 +279,7 @@ class ProdukController extends Controller
         $orders->kecamatan = 'null';
         $orders->metode_pembayaran = 'null';
         $orders->status_order = 0;
-
+        $orders->nama_produk = $request->nama_produk;
         $orders->jumlah_pesanan = $request->jumlah_pesanan;
         $orders->total_harga = $produks->harga_produk * $request->jumlah_pesanan;
         $orders->save();

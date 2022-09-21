@@ -39,7 +39,7 @@ class OrderController extends Controller
             $sumorders = 0;
             $totalpesan = 0;
         }
-       
+    
         return view('layout.master', [
             'orders' => $orders,
             'sumorders' => $sumorders,
@@ -67,16 +67,26 @@ class OrderController extends Controller
         ]);
     }
 
-    public function navpesanan()
+    public function navpesanan(Request $request)
     {
-        
+       
+           
+
         if(auth()->user()){
+            $id = auth()->user()->id;
+            $orders = Order::where('id_user', $id)->where('status_order', 0)->where('nama_produk', 'like','%'.$request->cari.'%')->get();
+            $sumorders = Order::where('id_user', $id)->where('status_order', 0)->sum('total_harga');
+            $totalpesan = Order::where('id_user', $id)->where('status_order', 0)->count();
+            
+        }
+        elseif(auth()->user()){
+
             $id = auth()->user()->id;
             $orders = Order::where('id_user', $id)->where('status_order', 0)->get();
             $sumorders = Order::where('id_user', $id)->where('status_order', 0)->sum('total_harga');
             $totalpesan = Order::where('id_user', $id)->where('status_order', 0)->count();
-            
-        }else{
+        }
+        else{
             $orders = [];
             $sumorders = 0;
             $totalpesan = 0;
@@ -141,7 +151,7 @@ class OrderController extends Controller
     {
         if(auth()->user()){
             $id = auth()->user()->id;
-            $orders = Order::where('id_user', $id)->where('status_order', 0)->orderByRaw('updated_at - created_at DESC')->get();
+            $orders = Order::where('id_user', $id)->where('status_order', 0)->where('nama_produk', 'like','%'.$request->cari.'%')->orderByRaw('updated_at - created_at DESC')->get();
             $sumorders = Order::where('id_user', $id)->where('status_order', 0)->sum('total_harga');
             $totalpesan = Order::where('id_user', $id)->where('status_order', 0)->count();
          
@@ -162,7 +172,7 @@ class OrderController extends Controller
     {
         if(auth()->user()){
             $id = auth()->user()->id;
-            $orders = Order::where('id_user', $id)->where('status_order', 0)->orderByRaw('updated_at - created_at ASC')->get();
+            $orders = Order::where('id_user', $id)->where('status_order', 0)->where('nama_produk', 'like','%'.$request->cari.'%')->orderByRaw('updated_at - created_at ASC')->get();
             $sumorders = Order::where('id_user', $id)->where('status_order', 0)->sum('total_harga');
             $totalpesan = Order::where('id_user', $id)->where('status_order', 0)->count();
          

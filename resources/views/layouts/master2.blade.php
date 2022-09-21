@@ -19,6 +19,7 @@
     <link rel="stylesheet" type="text/css" href="{{asset('css/megamenu.css')}}"/>
     <link rel="stylesheet" type="text/css" href="{{asset('css/dreaming-attribute.css')}}"/>
     <link rel="stylesheet" type="text/css" href="{{asset('css/style.css')}}"/>
+    
     <style>
         .main-content{
             box-shadow: none !important;
@@ -54,6 +55,8 @@
 <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+<script src="https://cdn.datatables.net/1.12.1/js/jquery.dataTables.min.js"></script>
+
 @yield('script')
 </body>
 </html>

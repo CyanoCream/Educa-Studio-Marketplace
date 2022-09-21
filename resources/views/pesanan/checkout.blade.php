@@ -11,27 +11,30 @@
         <div class="modal-body">
             <div class="form">
                 </div>
-                <div class="css-4r2xna">
-                <p class="css-utaa48 mb-2"><strong>Pilih Metode Pembayaran</strong></p>
-                <div style="display: flex;">
-                <select required id="cars" class="w-50 " name="metode_pembayaran">
+                <div class="row">
+                  
+                <div class="col-md-6">
+                  <p class="css-utaa48 mb-2"><strong>Pilih Metode Pembayaran</strong></p>
+                  <div style="display: flex;">
+                  <select required id="cars" class="w-100 " name="metode_pembayaran">
 
-                  <option value="BNI">BNI Virtual Account</option>
-                  <option value="BRI">BRI Virtual Account</option>
-                </select>
+                    <option value="BNI">BNI Virtual Account</option>
+                    <option value="BRI">BRI Virtual Account</option>
+                  </select>
+                  </div>
                 </div>
-                </div>
-                <div class="css-4r2xna">
+                <div class="col-md-6">
                   <p class="css-utaa48 mb-2"><strong>Pilih Jasa Pengiriman</strong></p>
                   <div style="display: flex;">
-                  <select Required id="cars" class="w-50" name="kurir">
+                  <select Required id="cars" class="w-100" name="kurir">
 
                     <option value="JNE">JNE</option>
                     <option value="J&T">J&T</option>
                     <option value="Kantor pos">Kantor Pos</option>
                   </select>
                   </div>
-                  </div>
+                </div>
+              </div>
               </div>
             <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
