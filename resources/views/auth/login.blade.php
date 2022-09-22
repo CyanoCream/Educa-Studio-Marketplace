@@ -8,7 +8,7 @@
 
 <style>
 			.main-content{
-			width: 50%;
+			width: 60%;
 			border-radius: 20px;
 			box-shadow: 0 5px 5px rgba(0,0,0,.4);
 			margin: 5em auto;
@@ -53,7 +53,7 @@
 				padding: 0 2em;
 			}
 			.form__input{
-				width: 100%;
+				width: 70%;
 				border:0px solid transparent;
 				border-radius: 0;
 				border-bottom: 1px solid #aaa;
@@ -70,14 +70,12 @@
 			}
 			.btn{
 				transition: all .5s ease;
-				width: 70%;
-				border-radius: 30px;
+				width: 150%;
+				border-radius: 20px;
 				color:#008080;
 				font-weight: 600;
 				background-color: #fff;
 				border: 1px solid #008080;
-				margin-top: 1.5em;
-				margin-bottom: 1em;
 			}
 			.btn:hover, .btn:focus{
 				background-color: #008080;
@@ -86,12 +84,12 @@
 		</style>
 	</head>
 	<body>
-        <div class="modal fade" id="login" tabindex="-1" aria-labelledby="loginLabel" aria-hidden="true">
+        <div class="modal fade" id="login" tabindex="-1" aria-labelledby="loginLabel" aria-hidden="true" >
 			<div class="modal-dialog">
 				<div class="modal-content" style="border-radius: 20px; background-color:transparent;">
 				<div class="modal-body">
 					<div class="container-fluid">
-						<div class="row main-content bg-success w-100">
+						<div class="row main-content bg-success">
 							<div class="col-md-4 company__info">
 								<span class="company__logo">
 									<h2>
@@ -109,7 +107,7 @@
                                 {{ csrf_field() }}
 
                                 <div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">
-                                    <label for="email" class="col-md-4 control-label">E-Mail Address</label>
+                                    <label for="email" class="col-md-12 control-label m-0">E-Mail Address</label>
 
                                         <input id="email" type="email" class="form-control" name="email" value="{{ old('email') }}" required autofocus placeholder="Masukkan Email">
 
@@ -122,7 +120,7 @@
                                 </div>
 
                                 <div class="form-group{{ $errors->has('password') ? ' has-error' : '' }}">
-                                    <label for="password" class="col-md-4 control-label">Password</label>
+                                    <label for="password" class="col-md-4 control-label m-0">Password</label>
 
                                         <input id="password" type="password" class="form-control" name="password" required placeholder="Masukkan Password">
 
@@ -136,7 +134,7 @@
                                 <div class="form-group">
                                     <div class="col-md-6 col-md-offset-4">
                                         <div class="checkbox">
-                                            <label>
+                                            <label class=" m-0">
                                                 <input type="checkbox" name="remember" {{ old('remember') ? 'checked' : '' }}> Remember Me
                                             </label>
                                         </div>
@@ -144,12 +142,12 @@
                                 </div>   
 
                                 <div class="form-group">
-                                    <div class="col-md-8 col-md-offset-4">
-                                        <button onclick="save('this')" type="submit" class="btn btn-primary">
+                                    <div class="col-md-8 col-md-offset-4 p-0">
+                                        <button type="submit" class="btn btn-primary m-0">
                                             Login
                                         </button>
 
-                                        <a class="btn btn-link" href="{{ route('password.request') }}">
+                                        <a class="btn btn-link mb-0 mt-3" href="{{ route('password.request') }}">
                                             Forgot Your Password?
                                         </a>
                                     </div>
