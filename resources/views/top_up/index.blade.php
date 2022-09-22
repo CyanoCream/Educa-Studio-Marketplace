@@ -130,6 +130,8 @@
                 </div>
             </div>
         </div>
+<<<<<<< HEAD
+=======
         <div class="section-040">
             <div class="kodory-heading style-01">
                 <div class="heading-inner">
@@ -226,65 +228,5 @@
             </div>
         </div>
     </div>
-    <footer id="footer" class="footer style-01">
-        <div class="section-001 section-009">
-            <div class="container">
-                <div class="kodory-newsletter style-01">
-                    <div class="newsletter-inner">
-                        <div class="newsletter-info">
-                            <div class="newsletter-wrap">
-                                <h3 class="title">News</h3>
-                                <h4 class="subtitle">Get Discount 100%</h4>
-                                <p class="desc">send your suggestions and criticism</p>
-                            </div>
-                        </div>
-                        <div class="newsletter-form-wrap">
-                            <div class="newsletter-form-inner">
-                                <input class="email email-newsletter" name="email" placeholder="Enter your email ..."
-                                    type="email">
-                                <a href="#" class="button btn-submit submit-newsletter">
-                                    <span class="text">Subscribe</span>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="section-010">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-6">
-                        <p>© Copyright 2022 <a href="#">Child</a>. All Rights Reserved.</p>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="kodory-socials style-01">
-                            <div class="content-socials">
-                                <ul class="socials-list">
-                                    <li>
-                                        <a href="https://facebook.com" target="_blank">
-                                            <i class="fa fa-facebook"></i>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="https://www.instagram.com" target="_blank">
-                                            <i class="fa fa-instagram"></i>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="https://twitter.com" target="_blank">
-                                            <i class="fa fa-twitter"></i>
-                                        </a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </footer>
-    <a href="#" class="backtotop active">
-        <i class="fa fa-angle-double-up"></i>
-    </a>
+>>>>>>> 0ec8ed3fadd48de7c5e7724ebf24f2a99efc7a79
 @endsection

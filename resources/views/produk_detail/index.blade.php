@@ -44,42 +44,42 @@
                                             src="https://s.w.org/images/core/emoji/11/svg/1f50d.svg"></a>
                                     <div class="flex-viewport">
                                         <figure class="kodory-product-gallery__wrapper">
-                                            @foreach ($produk->gambar as $g)
+                                            {{-- @foreach ($produk->gambar as $g) --}}
                                             <div class="kodory-product-gallery__image">
-                                                <img alt="img" src="/images/{{$g->gambar}}">
+                                                <img alt="img" src="/images/{{$produk[0]->gambar}}">
                                             </div>
-                                            @endforeach
+                                            {{-- @endforeach --}}
                                         </figure>
                                     </div>
                                     <ol class="flex-control-nav flex-control-thumbs">
-                                        @foreach ($produk->gambar as $g)
+                                        {{-- @foreach ($produk->gambar as $g) --}}
 
-                                        <li><img src="/images/{{$g->gambar}}" alt="img">
+                                        <li><img src="/images/{{$produk[0]->gambar}}" alt="img">
                                         </li>
-                                        @endforeach
+                                        {{-- @endforeach --}}
                                     </ol>
                                 </div>
                             </div>
                             <div class="summary entry-summary">
                                 <div class="flash">
                                     <span class="onnew"><span class="text">New</span></span></div>
-                                <h1 class="product_title entry-title">{{ $produk->nama_produk }}</h1>
+                                <h1 class="product_title entry-title">{{ $produk[0]->nama_produk }}</h1>
                                 <p class="price"><span class="kodory-Price-amount amount"><span
-                                            class="kodory-Price-currencySymbol">Rp.</span>{{ $produk->harga_produk }}</span>
+                                            class="kodory-Price-currencySymbol">Rp.</span>{{ $produk[0]->harga_produk }}</span>
                                     <p class="stock in-stock">
-                                        Stock Available: <span>{{ $produk->stock }}</span>
+                                        Stock Available: <span>{{ $produk[0]->stock }}</span>
                                     </p>
                                     <div class="kodory-product-details__short-description">
-                                        <p>{{ $produk->keterangan }}</p>
+                                        <p>{{ $produk[0]->keterangan }}</p>
                                         <ul>
-                                            <li>{{ $produk->manfaat }}</li>
+                                            <li>{{ $produk[0]->manfaat }}</li>
                                         </ul>
                                     </div>
-                                    <form action="{{ route ('checkout', [$id = $produk->id]) }}"
+                                    <form action="{{ route ('checkout', [$id = $produk[0]->id]) }}"
                                         class="variations_form cart" method="post">
                                         {{csrf_field()}}
-                                        <input type="hidden" name="id_produk" value="{{$produk->id}}">
-                                        <input type="hidden" name="nama_produk" value="{{$produk->nama_produk}}">
+                                        <input type="hidden" name="id_produk" value="{{$produk[0]->id}}">
+                                        <input type="hidden" name="nama_produk" value="{{$produk[0]->nama_produk}}">
                                         {{-- <input type="hidden" name="id_penyelenggara" value="{{$produk->penyelenggara[0]->id}}">
                                         --}}
                                         <div class="single_variation_wrap">
@@ -127,7 +127,7 @@
                                             </ul>
                                         </div>
                                         <span class="posted_in">Categories:
-                                            <a href="#" rel="tag">{{ $produk->kategori }}</a>
+                                            <a href="#" rel="tag">{{ $produk[0]->kategori }}</a>
                                         </span>
                                     </div>
                             </div>
@@ -156,19 +156,19 @@
                                     <tr>
                                         <th>Manfaat:</th>
                                         <td>
-                                            <p>{{ $produk->manfaat }}</p>
+                                            <p>{{ $produk[0]->manfaat }}</p>
                                         </td>
                                     </tr>
                                     <tr>
                                         <th>Metode Pembelajaran:</th>
                                         <td>
-                                            <p>{{ $produk->status_pertemuan }}</p>
+                                            <p>{{ $produk[0]->status_pertemuan }}</p>
                                         </td>
                                     </tr>
                                     <tr>
                                         <th>Harga Termasuk:</th>
                                         <td>
-                                            <p>{{ $produk->bundling }}</p>
+                                            <p>{{ $produk[0]->bundling }}</p>
                                         </td>
                                     </tr>
                                 </tbody>
@@ -181,13 +181,13 @@
                                 <div class="card-body p-0">
                                     <div class="row">
                                         <div class="col-md-6">
-                                            <img src="{{asset('images/logoo.png')}}" alt="" width="500px">
+                                            <img src="/images/{{$produk[0]->icon_penyelenggara}}" alt="" width="500px">
                                         </div>
                                         <div class="col-lg-6 pl-3">
-                                            <h4>Nama Penyelenggara</h4>
-                                            <p>Kota Penyelenggara</p>
-                                            <p>Deskripsi</p>
-                                            <p>Jam Operasional</p>
+                                            <h4>{{$produk[0]->nama_penyelenggara}}</h4>
+                                            <p>{{$produk[0]->kota_penyelenggara}}</p>
+                                            <p>{{$produk[0]->deskripsi}}</p>
+                                            <p>{{$produk[0]->jam_operasional}}</p>
                                         </div>
                                     </div>
                                 </div>
@@ -196,11 +196,11 @@
 
                         <div class="kodory-Tabs-panel kodory-Tabs-panel--reviews panel entry-content justify-content-center kodory-tab"
                             id="tab-reviews" role="tabpanel" aria-labelledby="tab-title-reviews">
-                            <div class="col-lg-6 " style="border-radius: 20px;">
+                            <div class="col-lg-6 text-center" style="border-radius: 20px; left: 25%">
                                 <form action="{{route('storeUlasan_pd')}}" method="post">
                                     {{csrf_field()}}
                                     <div class="form-group">
-                                        <h4>Komentar :</h4>
+                                        <h4>Komentar</h4>
                                         @if (empty(Auth::user()))
                                             <textarea class="form-control" name="penilaian" id="penilaian" readonly>Login dulu sebelum berkomentar!</textarea>
                                         @endif
@@ -208,7 +208,7 @@
                                             <textarea class="form-control" rows="3" name="penilaian" id="penilaian" style="border-radius: 10px;"></textarea>
                                         @endif
                                     </div>
-                                    <input type="hidden" name="id_produk" value="{{$produk->id}}">
+                                    <input type="hidden" name="id_produk" value="{{$produk[0]->id}}">
                                     <div class="text-right m-3">
                                         <button type="submit" class="btn-primary">Submit</button>
                                     </div>
@@ -226,7 +226,7 @@
                                         </div>
                                     </div>
                                     <div class="text-right">
-                                        <button data-url="{{route('deleteUlasan_pd', ['id' => $ulasan->id])}}" class="btn btn-danger col-sm-3">Hapus</button>
+                                        <a href="{{route('deleteUlasan_pd', ['id' => $ulasan->id])}}"><i class="fa fa-trash" aria-hidden="true"></i></a>
                                     </div>
                             @endforeach
                         </div>

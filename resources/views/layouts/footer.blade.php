@@ -18,7 +18,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-6">
-                    <p>© Copyright 2022 <a href="#">Child</a>. All Rights Reserved.</p>
+                    <p>© Copyright 2022 <a href="mailto:chlid6630@gmail.com">Child</a>. All Rights Reserved.</p>
                 </div>
                 <div class="col-md-6">
                     <div class="kodory-socials style-01">
