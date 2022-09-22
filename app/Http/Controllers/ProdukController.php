@@ -5,7 +5,8 @@ use App\Produk;
 use App\Order;
 use App\Gambar;
 use App\User;
-use App\Ulasan; 
+use App\Ulasan;
+use App\Penyelenggara;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
@@ -184,7 +185,7 @@ class ProdukController extends Controller
         // dd($ulasans);
         return view('produk_detail.index', [
             'produk' => $produks,
-            'ulasans' =>$ulasans
+            'ulasans' => $ulasans
         ]);
     }
 
