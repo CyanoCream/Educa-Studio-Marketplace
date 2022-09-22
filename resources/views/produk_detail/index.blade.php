@@ -177,73 +177,57 @@
 
                         <div class="kodory-Tabs-panel kodory-Tabs-panel--description panel entry-content kodory-tab"
                             id="tab-description" role="tabpanel" aria-labelledby="tab-title-description">
-                            <h2>Penyelenggara</h2>
-                            <table>
-                                <thead>
-                                    <tr>
-                                        <th>icon penyelenggara</th>
-                                        <th>nama penyelenggara</th>
-                                        <th>kota penyelenggara</th>
-                                        <th>deskripsi</th>
-                                        <th>jam operasional</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    {{-- @foreach ($penyelenggaras as $penyelenggara)
-                                    <tr>
-                                        <td>{{ $loop->index + 1 }}</td>
-                                    <td>{{ $penyelenggara->produk }}</td>
-                                    <td><img src="/images/{{ $penyelenggara->icon_penyelenggara}}" alt="" width="100px">
-                                    </td>
-                                    <td>{{ $penyelenggara->nama_penyelenggara }}</td>
-                                    <td>{{ $penyelenggara->kota_penyelenggara }}</td>
-                                    <td>{{ $penyelenggara->deskripsi }}</td>
-                                    <td>{{ $penyelenggara->jam_operasional }}</td>
-                                    <td>
-                                        <a onclick="edit(this)"
-                                            data-url="{{route('editPenyelenggara_penyelenggara', ['id' => $penyelenggara->id])}}"
-                                            class="btn btn-warning btn-sm" role="button">Edit</a>
-                                        <a onclick="confirmDelete(this)"
-                                            data-url="{{route('deletePenyelenggara_penyelenggara', ['id' => $penyelenggara->id])}}"
-                                            class="btn btn-danger btn-sm" role="button">Hapus</a>
-                                    </td>
-                                    </tr>
-                                    @endforeach --}}
-                                </tbody>
-                            </table>
-                        </div>
-
-                        <div class="kodory-Tabs-panel kodory-Tabs-panel--reviews panel entry-content kodory-tab"
-                            id="tab-reviews" role="tabpanel" aria-labelledby="tab-title-reviews">
-                            <div class="card" style="border-radius: 20px;">
-                                <div class="card-body">
-                                    <form action="{{route('storeUlasan_pd')}}" method="post">
-                                        {{csrf_field()}}
-                                        <div class="form-group">
-                                            <p>Komentar :</p>
-                                            @if (empty(Auth::user()))
-                                                <textarea class="form-control" name="penilaian" id="penilaian" readonly>Login dulu sebelum berkomentar!</textarea>
-                                            @endif
-                                            @if (!empty(Auth::user()))
-                                                <textarea class="form-control" rows="3" name="penilaian" id="penilaian" value="Masukkan komentar" style="border-radius: 10px;"></textarea>
-                                            @endif
+                            <div class="card">
+                                <div class="card-body p-0">
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <img src="{{asset('images/logoo.png')}}" alt="" width="500px">
                                         </div>
-                                        <input type="hidden" name="id_produk" value="{{$produk->id}}">
-                                        <button type="submit" class="btn-primary">Submit</button>
-                                    </form>
+                                        <div class="col-lg-6 pl-3">
+                                            <h4>Nama Penyelenggara</h4>
+                                            <p>Kota Penyelenggara</p>
+                                            <p>Deskripsi</p>
+                                            <p>Jam Operasional</p>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
+                        </div>
+
+                        <div class="kodory-Tabs-panel kodory-Tabs-panel--reviews panel entry-content justify-content-center kodory-tab"
+                            id="tab-reviews" role="tabpanel" aria-labelledby="tab-title-reviews">
+                            <div class="col-lg-6 " style="border-radius: 20px;">
+                                <form action="{{route('storeUlasan_pd')}}" method="post">
+                                    {{csrf_field()}}
+                                    <div class="form-group">
+                                        <h4>Komentar :</h4>
+                                        @if (empty(Auth::user()))
+                                            <textarea class="form-control" name="penilaian" id="penilaian" readonly>Login dulu sebelum berkomentar!</textarea>
+                                        @endif
+                                        @if (!empty(Auth::user()))
+                                            <textarea class="form-control" rows="3" name="penilaian" id="penilaian" style="border-radius: 10px;"></textarea>
+                                        @endif
+                                    </div>
+                                    <input type="hidden" name="id_produk" value="{{$produk->id}}">
+                                    <div class="text-right m-3">
+                                        <button type="submit" class="btn-primary">Submit</button>
+                                    </div>
+                                </form>
+                            </div>
+                            <hr>
                             
                             @foreach ($ulasans as $ulasan)
                                
-                                    <div class="media m-5">
-                                        <img class="rounded-circle" src="{{asset('images/logoo.png')}}" alt="img" width="80px">
+                                    <div class="media ml-5 mt-5 mr-5">
+                                        <img class="rounded-circle" src="https://www.pngitem.com/pimgs/m/150-1503945_transparent-user-png-default-user-image-png-png.png" alt="img" width="80px" style="align-items: center">
                                         <div class="media-body pl-3">
                                             <h4>{{$ulasan->nama}}</h4>
                                             <p>{{$ulasan->penilaian}}</p>
                                         </div>
                                     </div>
-                            
+                                    <div class="text-right">
+                                        <button data-url="{{route('deleteUlasan_pd', ['id' => $ulasan->id])}}" class="btn btn-danger col-sm-3">Hapus</button>
+                                    </div>
                             @endforeach
                         </div>
                     </div>

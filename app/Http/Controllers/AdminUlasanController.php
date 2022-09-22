@@ -150,4 +150,11 @@ class AdminUlasanController extends Controller
         $ulasan = Ulasan::find($id)->delete();
         return redirect()->back();
     }
+
+    //produk-detail review
+    public function destroy_pd($id)
+    {
+        $ulasan = Ulasan::find($id)->delete();
+        return redirect()->back();
+    }
 }
