@@ -31,7 +31,7 @@
                                 </span>
                                 <div class="phone-number">
                                     <p>Support & Order</p>
-                                    <a href="">085743736401</a>
+                                    <a href="Https://wa.me/6285743736401" class="text-light">085743736401</a>
                                 </div>
                             </div>
                         </div>
@@ -266,5 +266,4 @@
     </div>
 </div>
 
-{{-- @include('layouts.footer') --}}
 @endsection

@@ -196,11 +196,11 @@
 
                         <div class="kodory-Tabs-panel kodory-Tabs-panel--reviews panel entry-content justify-content-center kodory-tab"
                             id="tab-reviews" role="tabpanel" aria-labelledby="tab-title-reviews">
-                            <div class="col-lg-6 " style="border-radius: 20px;">
+                            <div class="col-lg-6 text-center" style="border-radius: 20px; left: 25%">
                                 <form action="{{route('storeUlasan_pd')}}" method="post">
                                     {{csrf_field()}}
                                     <div class="form-group">
-                                        <h4>Komentar :</h4>
+                                        <h4>Komentar</h4>
                                         @if (empty(Auth::user()))
                                             <textarea class="form-control" name="penilaian" id="penilaian" readonly>Login dulu sebelum berkomentar!</textarea>
                                         @endif
@@ -226,7 +226,7 @@
                                         </div>
                                     </div>
                                     <div class="text-right">
-                                        <button data-url="{{route('deleteUlasan_pd', ['id' => $ulasan->id])}}" class="btn btn-danger col-sm-3">Hapus</button>
+                                        <a href="{{route('deleteUlasan_pd', ['id' => $ulasan->id])}}"><i class="fa fa-trash" aria-hidden="true"></i></a>
                                     </div>
                             @endforeach
                         </div>
