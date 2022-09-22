@@ -147,7 +147,7 @@ class OrderController extends Controller
         ]);
     }
 
-    public function orderup()
+    public function orderup(Request $request)
     {
         if(auth()->user()){
             $id = auth()->user()->id;
@@ -168,7 +168,7 @@ class OrderController extends Controller
         ]);
     }
 
-    public function orderdown()
+    public function orderdown(Request $request)
     {
         if(auth()->user()){
             $id = auth()->user()->id;

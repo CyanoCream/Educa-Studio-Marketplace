@@ -73,7 +73,7 @@ class DetailOrderController extends Controller
         if(auth()->user()){
             $id = auth()->user()->id;
             $produks = Produk::all();
-            $orders = Order::where('id_user', $id)->where('status_order', 1)->where('id', 'like','%'.$request->cari.'%')->get();
+            $orders = Order::where('id_user', $id)->where('status_order', 1)->where('nama_produk', 'like','%'.$request->cari.'%')->get();
             $sumorders = Order::where('id_user', $id)->where('status_order', 1)->sum('total_harga');
             $totalpesan = Order::where('id_user', $id)->where('status_order', 1)->count();
         }
@@ -102,12 +102,12 @@ class DetailOrderController extends Controller
         ]);
     }
 
-    public function filterhistoryup()
+    public function filterhistoryup(Request $request)
     {
                 
         if(auth()->user()){
             $id = auth()->user()->id;
-            $orders = Order::where('id_user', $id)->where('status_order', 1)->orderByRaw('updated_at - created_at DESC')->get();
+            $orders = Order::where('id_user', $id)->where('status_order', 1)->where('nama_produk', 'like','%'.$request->cari.'%')->orderByRaw('updated_at - created_at DESC')->get();
             $sumorders = Order::where('id_user', $id)->where('status_order', 1)->sum('total_harga');
             $totalpesan = Order::where('id_user', $id)->where('status_order', 1)->count();
         }else{
@@ -123,12 +123,12 @@ class DetailOrderController extends Controller
         ]);
     }
 
-    public function filterhistorydown()
+    public function filterhistorydown(Request $request)
     {
                 
         if(auth()->user()){
             $id = auth()->user()->id;
-            $orders = Order::where('id_user', $id)->where('status_order', 1)->orderByRaw('updated_at - created_at ASC')->get();
+            $orders = Order::where('id_user', $id)->where('status_order', 1)->where('nama_produk', 'like','%'.$request->cari.'%')->orderByRaw('updated_at - created_at ASC')->get();
             $sumorders = Order::where('id_user', $id)->where('status_order', 1)->sum('total_harga');
             $totalpesan = Order::where('id_user', $id)->where('status_order', 1)->count();
         }else{
