@@ -8,6 +8,7 @@ use App\User;
 use App\Ulasan; 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use DB;
 
 class ProdukController extends Controller
 {
@@ -179,11 +180,15 @@ class ProdukController extends Controller
      */
     public function show($id)
     {
-        $produks = Produk::with('gambar')->where('id', $id)->first();
+        $produks = DB::table('tbl_produks')->join('tbl_gambars', 'tbl_gambars.id_produk', '=', 'tbl_produks.id')
+        ->join('users', 'users.id', '=', 'tbl_produks.user_id')
+        ->select('tbl_produks.*','tbl_gambars.gambar', 'users.nama_penyelenggara','users.kota_penyelenggara','users.icon_penyelenggara','users.deskripsi','users.jam_operasional')->get();
+        $produk = $produks->where('id',$id);
+        // ->where('id', $id)->first();
         $ulasans = Ulasan::where('id_produk', $id)->get();
-        // dd($ulasans);
+        // dd($produk);
         return view('produk_detail.index', [
-            'produk' => $produks,
+            'produk' => $produk,
             'ulasans' =>$ulasans
         ]);
     }
