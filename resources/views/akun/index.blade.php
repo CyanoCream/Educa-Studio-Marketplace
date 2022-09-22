@@ -23,15 +23,20 @@
         <div class="header-position">
             <div class="header-nav">
                 <div class="container">
+                    <div class="kodory-menu-wapper"></div>
                     <div class="header-nav-inner">
-                        <div class="phone-header">
+                        <div class="phone-header" style="top: 50px;">
                             <div class="phone-inner">
                                 <span class="phone-icon">
                                     <span class="pe-7s-call"></span>
                                 </span>
                                 <div class="phone-number">
                                     <p>Support & Order</p>
+<<<<<<< HEAD
+                                   <p><a href="Https://wa.me/6285743736401" class="text-light">085743736401</a></p>
+=======
                                     <a href="Https://wa.me/6285743736401" class="text-light">085743736401</a>
+>>>>>>> 0ec8ed3fadd48de7c5e7724ebf24f2a99efc7a79
                                 </div>
                             </div>
                         </div>
@@ -54,8 +59,8 @@
         </div>
     </div>
 </div>
-<div class="card p-5 m-5" style="border-radius: 20px; background: rgb(217, 193, 247);
-    background: linear-gradient(180deg, rgb(234, 219, 255) 0%, rgb(254, 203, 255) 53%, rgb(242, 218, 218) 100%);">
+<div class="card p-5 m-5" style="border-radius: 20px; background: rgb(196, 156, 246);
+    background: linear-gradient(180deg, rgb(223, 202, 251) 0%, rgb(254, 203, 255) 53%, rgb(242, 218, 218) 100%);">
     <img src="/storage/images/{{Auth::user()->foto}}" class="rounded mx-auto d-block"
         style="border: 4px solid #71c0ef; border-radius:50% !important;" width="13%" alt="Profile Picture">
     <div class="card m-2 text-center" style="border-radius: 20px">
@@ -118,152 +123,56 @@
     </form>
 
 </div>
-<div class="site-main  main-container no-sidebar">
-    <div class="section-006 section-001">
-        <div class="container">
-            <div class="kodory-slide">
-                <div class="owl-slick equal-container better-height"
-                    data-slick="{&quot;arrows&quot;:true,&quot;slidesMargin&quot;:60,&quot;dots&quot;:false,&quot;infinite&quot;:false,&quot;speed&quot;:300,&quot;slidesToShow&quot;:5,&quot;rows&quot;:1}"
-                    data-responsive="[{&quot;breakpoint&quot;:480,&quot;settings&quot;:{&quot;slidesToShow&quot;:3,&quot;slidesMargin&quot;:&quot;30&quot;}},{&quot;breakpoint&quot;:768,&quot;settings&quot;:{&quot;slidesToShow&quot;:3,&quot;slidesMargin&quot;:&quot;30&quot;}},{&quot;breakpoint&quot;:992,&quot;settings&quot;:{&quot;slidesToShow&quot;:4,&quot;slidesMargin&quot;:&quot;40&quot;}},{&quot;breakpoint&quot;:1200,&quot;settings&quot;:{&quot;slidesToShow&quot;:5,&quot;slidesMargin&quot;:&quot;50&quot;}},{&quot;breakpoint&quot;:1500,&quot;settings&quot;:{&quot;slidesToShow&quot;:5,&quot;slidesMargin&quot;:&quot;60&quot;}}]">
-                    <div class="dreaming_single_image dreaming_content_element az_align_center">
-                        <figure class="dreaming_wrapper az_figure">
-                            <div class="az_single_image-wrapper az_box_border_grey effect bounce-in "><img
-                                    src="{{ asset('images/loggo2.1.jpeg') }}"
-                                    class="az_single_image-img attachment-full" alt="img" width="200" height="100">
-                            </div>
-                        </figure>
-                    </div>
-                    <div class="dreaming_single_image dreaming_content_element az_align_center">
-                        <figure class="dreaming_wrapper az_figure">
-                            <div class="az_single_image-wrapper   az_box_border_grey effect bounce-in "><img
-                                    src="{{ asset('images/loggo2.5.jpeg') }}"
-                                    class="az_single_image-img attachment-full" alt="img" width="200" height="100">
-                            </div>
-                        </figure>
-                    </div>
-                    <div class="dreaming_single_image dreaming_content_element az_align_center">
-                        <figure class="dreaming_wrapper az_figure">
-                            <div class="az_single_image-wrapper  az_box_border_grey effect bounce-in "><img
-                                    src="{{ asset('images/loggo2.2.jpeg') }}"
-                                    class="az_single_image-img attachment-full" alt="img" width="200" height="100">
-                            </div>
-                        </figure>
-                    </div>
-                    <div class="dreaming_single_image dreaming_content_element az_align_center">
-                        <figure class="dreaming_wrapper az_figure">
-                            <div class="az_single_image-wrapper az_box_border_grey effect bounce-in "><img
-                                    src="{{ asset('images/loggo2.3.jpeg') }}"
-                                    class="az_single_image-img attachment-full" alt="img" width="200" height="100">
-                            </div>
-                        </figure>
-                    </div>
-                    <div class="dreaming_single_image dreaming_content_element az_align_center">
-                        <figure class="dreaming_wrapper az_figure">
-                            <div class="az_single_image-wrapper az_box_border_grey effect bounce-in "><img
-                                    src="{{ asset('images/loggo2.4.jpeg') }}"
-                                    class="az_single_image-img attachment-full" alt="img" width="200" height="100">
-                            </div>
-                        </figure>
-                    </div>
+<div class="section-006 section-001">
+    <div class="container">
+        <div class="kodory-slide">
+            <div class="owl-slick equal-container better-height"
+                 data-slick="{&quot;arrows&quot;:true,&quot;slidesMargin&quot;:60,&quot;dots&quot;:false,&quot;infinite&quot;:false,&quot;speed&quot;:300,&quot;slidesToShow&quot;:5,&quot;rows&quot;:1}"
+                 data-responsive="[{&quot;breakpoint&quot;:480,&quot;settings&quot;:{&quot;slidesToShow&quot;:3,&quot;slidesMargin&quot;:&quot;30&quot;}},{&quot;breakpoint&quot;:768,&quot;settings&quot;:{&quot;slidesToShow&quot;:3,&quot;slidesMargin&quot;:&quot;30&quot;}},{&quot;breakpoint&quot;:992,&quot;settings&quot;:{&quot;slidesToShow&quot;:4,&quot;slidesMargin&quot;:&quot;40&quot;}},{&quot;breakpoint&quot;:1200,&quot;settings&quot;:{&quot;slidesToShow&quot;:5,&quot;slidesMargin&quot;:&quot;50&quot;}},{&quot;breakpoint&quot;:1500,&quot;settings&quot;:{&quot;slidesToShow&quot;:5,&quot;slidesMargin&quot;:&quot;60&quot;}}]">
+                <div class="dreaming_single_image dreaming_content_element az_align_center">
+                    <figure class="dreaming_wrapper az_figure">
+                        <div class="az_single_image-wrapper az_box_border_grey effect bounce-in "><img
+                                src="{{asset('images/loggo2.1.jpeg')}}"
+                                class="az_single_image-img attachment-full" alt="img" width="200" height="100">
+                        </div>
+                    </figure>
+                </div>
+                <div class="dreaming_single_image dreaming_content_element az_align_center">
+                    <figure class="dreaming_wrapper az_figure">
+                        <div class="az_single_image-wrapper   az_box_border_grey effect bounce-in "><img
+                                src="{{asset('images/loggo2.5.jpeg')}}"
+                                class="az_single_image-img attachment-full" alt="img" width="200" height="100">
+                        </div>
+                    </figure>
+                </div>
+                <div class="dreaming_single_image dreaming_content_element az_align_center">
+                    <figure class="dreaming_wrapper az_figure">
+                        <div class="az_single_image-wrapper  az_box_border_grey effect bounce-in "><img
+                                src="{{asset('images/loggo2.2.jpeg')}}"
+                                class="az_single_image-img attachment-full" alt="img" width="200" height="100">
+                        </div>
+                    </figure>
+                </div>
+                <div class="dreaming_single_image dreaming_content_element az_align_center">
+                    <figure class="dreaming_wrapper az_figure">
+                        <div class="az_single_image-wrapper az_box_border_grey effect bounce-in "><img
+                                src="{{asset('images/loggo2.3.jpeg')}}"
+                                class="az_single_image-img attachment-full" alt="img" width="200" height="100">
+                        </div>
+                    </figure>
+                </div>
+                <div class="dreaming_single_image dreaming_content_element az_align_center">
+                    <figure class="dreaming_wrapper az_figure">
+                        <div class="az_single_image-wrapper az_box_border_grey effect bounce-in "><img
+                                src="{{asset('images/loggo2.4.jpeg')}}"
+                                class="az_single_image-img attachment-full" alt="img" width="200" height="100">
+                        </div>
+                    </figure>
                 </div>
             </div>
         </div>
     </div>
-    <div class="section-040">
-        <div class="kodory-heading style-01">
-            <div class="heading-inner">
-                <h3 class="title">
-                    Follow Us <span></span></h3>
-                <div class="subtitle">
-                    @childstore
-                </div>
-            </div>
-        </div>
-        <div class="kodory-instagram style-01">
-            <div class="instagram-owl owl-slick"
-                data-slick="{&quot;arrows&quot;:false,&quot;slidesMargin&quot;:0,&quot;dots&quot;:false,&quot;infinite&quot;:false,&quot;speed&quot;:300,&quot;slidesToShow&quot;:6,&quot;rows&quot;:1}"
-                data-responsive="[{&quot;breakpoint&quot;:480,&quot;settings&quot;:{&quot;slidesToShow&quot;:2,&quot;slidesMargin&quot;:&quot;0&quot;}},{&quot;breakpoint&quot;:768,&quot;settings&quot;:{&quot;slidesToShow&quot;:3,&quot;slidesMargin&quot;:&quot;0&quot;}},{&quot;breakpoint&quot;:992,&quot;settings&quot;:{&quot;slidesToShow&quot;:4,&quot;slidesMargin&quot;:&quot;0&quot;}},{&quot;breakpoint&quot;:1200,&quot;settings&quot;:{&quot;slidesToShow&quot;:5,&quot;slidesMargin&quot;:&quot;0&quot;}},{&quot;breakpoint&quot;:1500,&quot;settings&quot;:{&quot;slidesToShow&quot;:6,&quot;slidesMargin&quot;:&quot;0&quot;}}]">
-                <div class="rows-space-0">
-                    <a href="#" class="item">
-                        <img class="img-responsive" src="{{ asset('images/poto 1.1.jpg') }}" alt="About">
-                        <span class="instagram-info">
-                            <span class="social-wrap">
-                                <span class="social-info">1 <i class="flaticon-chat"></i>
-                                </span>
-                                <span class="social-info">0 <i class="flaticon-heart-shape-outline"></i>
-                                </span>
-                            </span>
-                        </span>
-                    </a>
-                </div>
-                <div class="rows-space-0">
-                    <a href="#" class="item">
-                        <img class="img-responsive" src="{{ asset('images/poto 1.2.jpg') }}" alt="About">
-                        <span class="instagram-info">
-                            <span class="social-wrap">
-                                <span class="social-info">1 <i class="flaticon-chat"></i>
-                                </span>
-                                <span class="social-info">0 <i class="flaticon-heart-shape-outline"></i>
-                                </span>
-                            </span>
-                        </span>
-                    </a>
-                </div>
-                <div class="rows-space-0">
-                    <a href="#" class="item">
-                        <img class="img-responsive" src="{{ asset('images/poto 1.3.jpg') }}" alt="About">
-                        <span class="instagram-info">
-                            <span class="social-wrap">
-                                <span class="social-info">1 <i class="flaticon-chat"></i>
-                                </span>
-                                <span class="social-info">0 <i class="flaticon-heart-shape-outline"></i>
-                                </span>
-                            </span>
-                        </span>
-                    </a>
-                </div>
-                <div class="rows-space-0">
-                    <a href="#" class="item">
-                        <img class="img-responsive" src="{{ asset('images/poto 1.4.jpg') }}" alt="About">
-                        <span class="instagram-info">
-                            <span class="social-wrap">
-                                <span class="social-info">1 <i class="flaticon-chat"></i>
-                                </span>
-                                <span class="social-info">0 <i class="flaticon-heart-shape-outline"></i>
-                                </span>
-                            </span>
-                        </span>
-                    </a>
-                </div>
-                <div class="rows-space-0">
-                    <a href="#" class="item">
-                        <img class="img-responsive" src="{{ asset('images/poto 1.5.jpg') }}" alt="About">
-                        <span class="instagram-info">
-                            <span class="social-wrap">
-                                <span class="social-info">1 <i class="flaticon-chat"></i>
-                                </span>
-                                <span class="social-info">0 <i class="flaticon-heart-shape-outline"></i>
-                                </span>
-                            </span>
-                        </span>
-                    </a>
-                </div>
-                <div class="rows-space-0">
-                    <a href="#" class="item">
-                        <img class="img-responsive" src="{{ asset('images/poto 1.6.jpg') }}" alt="About">
-                        <span class="instagram-info">
-                            <span class="social-wrap">
-                                <span class="social-info">1 <i class="flaticon-chat"></i>
-                                </span>
-                                <span class="social-info">0 <i class="flaticon-heart-shape-outline"></i>
-                                </span>
-                            </span>
-                        </span>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </div>
+</div>
 </div>
 
 @endsection

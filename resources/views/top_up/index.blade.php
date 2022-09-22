@@ -130,6 +130,8 @@
                 </div>
             </div>
         </div>
+<<<<<<< HEAD
+=======
         <div class="section-040">
             <div class="kodory-heading style-01">
                 <div class="heading-inner">
@@ -226,4 +228,5 @@
             </div>
         </div>
     </div>
+>>>>>>> 0ec8ed3fadd48de7c5e7724ebf24f2a99efc7a79
 @endsection
