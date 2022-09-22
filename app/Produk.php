@@ -47,6 +47,16 @@ class Produk extends Model
         return $this->hasMany('App\Gambar', 'id_produk');
     }
 
+   
+     /**
+     * Get all of the gambar for the Produk
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     */
+   public function user()
+   {
+       return $this->hasMany('App\User','id');
+   }
     /**
      * Get the user that owns the Produk
      *
