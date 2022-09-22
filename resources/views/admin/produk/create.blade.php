@@ -83,15 +83,23 @@
                             <textarea name="keterangan" id="keterangan" rows="3" class="form-control"
                                 required="required" placeholder="Masukkan keterangan"></textarea>
                         </div>
+
                         <div class="form-group">
                             <label for="manfaat">manfaat</label>
                             <textarea name="manfaat" id="manfaat" rows="3" class="form-control" required="required"
                                 placeholder="Masukkan manfaat"></textarea>
                         </div>
+
                         <div class="form-group">
                             <label for="bundling">bundling</label>
                             <input type="text" name="bundling" id="bundling" class="form-control" required="required"
                                 placeholder="Masukkan bundling">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="user_id">user id</label>
+                            <input type="text" name="user_id" id="user_id" class="form-control" required="required"
+                                placeholder="Masukkan user id">
                         </div>
 
                         <div class="text-right">

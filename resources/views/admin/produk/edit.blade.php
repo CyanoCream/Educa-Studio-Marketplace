@@ -87,6 +87,11 @@
 							<input type="text" name="bundling" id="bundling" class="form-control" required="required" value="{{ $produk->bundling }}" placeholder="Masukkan bundling">
 						</div>
 
+						<div class="form-group">
+							<label for="user_id">user id</label>
+							<input type="text" name="user_id" id="user_id" class="form-control" required="required" value="{{ $produk->user_id }}" placeholder="Masukkan user id">
+						</div>
+
 						<div class="text-right">
 							<a href="{{ route('daftarProduk') }}" class="btn btn-outline-secondary mr-2" role="button">Batal</a>
 							<button type="submit" onclick="save(this)" class="btn btn-primary">Simpan</button>
