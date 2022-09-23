@@ -176,13 +176,7 @@
             </div>
             <div class="sidebar col-xl-3 col-lg-4 col-md-4 col-sm-12">
                 <div id="widget-area" class="widget-area shop-sidebar">
-                    <div id="kodory_product_search-2" class="widget kodory widget_product_search">
-                        <form class="kodory-product-search">
-                            <input id="kodory-product-search-field-0" class="search-field"
-                                placeholder="Search products…" value="" name="s" type="search">
-                            <button type="submit" value="Search">Search</button>
-                        </form>
-                    </div>
+
 
                     <div id="kodory_kodory_layered_nav-4"
                         class="widget kodory_widget_layered_nav widget_layered_nav">

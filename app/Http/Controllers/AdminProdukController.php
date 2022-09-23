@@ -208,6 +208,7 @@ class AdminProdukController extends Controller
         ]);
 
         $produk = produk::find($produk);
+        $id = auth()->user()->id;
 
         $produk->kategori = $request->kategori;
         $produk->nama_produk = $request->nama_produk;
@@ -220,6 +221,7 @@ class AdminProdukController extends Controller
         $produk->keterangan = $request->keterangan;
         $produk->manfaat = $request->manfaat;
         $produk->bundling = $request->bundling;
+        $produk->user_id = $request->$id;
         $produk->save();
 
         return redirect(route('daftarPenyelenggara_produk'));
