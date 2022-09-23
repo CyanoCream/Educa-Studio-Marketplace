@@ -71,17 +71,18 @@ class AdminProdukController extends Controller
     public function store(Request $request)
     {
         $validatedData = $request->validate([
-            'kategori' => 'required|string|max:255' ,
             'nama_produk' => 'required|string|max:255' ,
-            'harga_produk' => 'required|integer' ,
+            'kategori' => 'required|string|max:255' ,
+            'harga_produk' => 'required|string|max:255' ,
             'status_produk' => 'required|string|max:255' ,
             'stock' => 'required|integer' ,
             'pertemuan' => 'required|string|max:255' ,
             'waktu_temu' => 'required|integer' ,
             'umur' => 'required|string|max:255' ,
-            'keterangan' => 'required|string' ,
-            'manfaat' => 'required|string' ,
+            'keterangan' => 'required|string|max:255' ,
+            'manfaat' => 'required|string|max:255' ,
             'bundling' => 'required|string|max:255' ,
+            'user_id' => 'required|integer' ,
         ]);
 
         $produk = new produk($validatedData);
@@ -94,17 +95,18 @@ class AdminProdukController extends Controller
     public function store_p(Request $request)
     {
         $validatedData = $request->validate([
-            'kategori' => 'required|string|max:255' ,
             'nama_produk' => 'required|string|max:255' ,
-            'harga_produk' => 'required|integer' ,
+            'kategori' => 'required|string|max:255' ,
+            'harga_produk' => 'required|string|max:255' ,
             'status_produk' => 'required|string|max:255' ,
             'stock' => 'required|integer' ,
             'pertemuan' => 'required|string|max:255' ,
             'waktu_temu' => 'required|integer' ,
             'umur' => 'required|string|max:255' ,
-            'keterangan' => 'required|string' ,
-            'manfaat' => 'required|string' ,
+            'keterangan' => 'required|string|max:255' ,
+            'manfaat' => 'required|string|max:255' ,
             'bundling' => 'required|string|max:255' ,
+            'user_id' => 'required|integer' ,
         ]);
 
         $produk = new produk($validatedData);
@@ -158,23 +160,24 @@ class AdminProdukController extends Controller
     {
     
         $validatedData = $request->validate([
-            'kategori' => 'required|string|max:255' ,
             'nama_produk' => 'required|string|max:255' ,
-            'harga_produk' => 'required|integer' ,
+            'kategori' => 'required|string|max:255' ,
+            'harga_produk' => 'required|string|max:255' ,
             'status_produk' => 'required|string|max:255' ,
             'stock' => 'required|integer' ,
             'pertemuan' => 'required|string|max:255' ,
             'waktu_temu' => 'required|integer' ,
             'umur' => 'required|string|max:255' ,
-            'keterangan' => 'required|string' ,
-            'manfaat' => 'required|string' ,
+            'keterangan' => 'required|string|max:255' ,
+            'manfaat' => 'required|string|max:255' ,
             'bundling' => 'required|string|max:255' ,
+            'user_id' => 'required|integer' ,
         ]);
 
         $produk = produk::find($produk);
 
-        $produk->kategori = $request->kategori;
         $produk->nama_produk = $request->nama_produk;
+        $produk->kategori = $request->kategori;
         $produk->harga_produk = $request->harga_produk;
         $produk->status_pertemuan = $request->status_pertemuan;
         $produk->stock = $request->stock;
@@ -184,6 +187,7 @@ class AdminProdukController extends Controller
         $produk->keterangan = $request->keterangan;
         $produk->manfaat = $request->manfaat;
         $produk->bundling = $request->bundling;
+        $produk->user_id = $request->user_id;
         $produk->save();
 
         return redirect(route('daftarProduk'));
@@ -194,23 +198,24 @@ class AdminProdukController extends Controller
     {
     
         $validatedData = $request->validate([
-            'kategori' => 'required|string|max:255' ,
             'nama_produk' => 'required|string|max:255' ,
-            'harga_produk' => 'required|integer' ,
+            'kategori' => 'required|string|max:255' ,
+            'harga_produk' => 'required|string|max:255' ,
             'status_produk' => 'required|string|max:255' ,
             'stock' => 'required|integer' ,
             'pertemuan' => 'required|string|max:255' ,
             'waktu_temu' => 'required|integer' ,
             'umur' => 'required|string|max:255' ,
-            'keterangan' => 'required|string' ,
-            'manfaat' => 'required|string' ,
+            'keterangan' => 'required|string|max:255' ,
+            'manfaat' => 'required|string|max:255' ,
             'bundling' => 'required|string|max:255' ,
+            'user_id' => 'required|integer' ,
         ]);
 
         $produk = produk::find($produk);
 
-        $produk->kategori = $request->kategori;
         $produk->nama_produk = $request->nama_produk;
+        $produk->kategori = $request->kategori;
         $produk->harga_produk = $request->harga_produk;
         $produk->status_pertemuan = $request->status_pertemuan;
         $produk->stock = $request->stock;
@@ -220,6 +225,7 @@ class AdminProdukController extends Controller
         $produk->keterangan = $request->keterangan;
         $produk->manfaat = $request->manfaat;
         $produk->bundling = $request->bundling;
+        $produk->user_id = $request->user_id;
         $produk->save();
 
         return redirect(route('daftarPenyelenggara_produk'));

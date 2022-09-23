@@ -25,6 +25,11 @@
 				<div class="card-body">
 					<form action="{{ route('updateProduk',['id'=>$produk->id]) }}" method="post">
 						{{ csrf_field() }}
+						
+						<div class="form-group">
+							<label for="nama_produk">nama produk</label>
+							<input type="text" name="nama_produk" id="nama_produk" class="form-control" required="required" value="{{ $produk->nama_produk }}" placeholder="Masukkan nama produk">
+						</div>
 
 						<div class="form-group">
                             <label for="kategori">Kategori</label>
@@ -36,11 +41,6 @@
                                     <option value="gratis">Gratis</option>
                             </select>
                         </div>
-
-						<div class="form-group">
-							<label for="nama_produk">nama produk</label>
-							<input type="text" name="nama_produk" id="nama_produk" class="form-control" required="required" value="{{ $produk->nama_produk }}" placeholder="Masukkan nama produk">
-						</div>
 
 						<div class="form-group">
 							<label for="harga_produk">harga produk</label>

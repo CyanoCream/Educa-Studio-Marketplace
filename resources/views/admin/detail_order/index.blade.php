@@ -63,11 +63,14 @@
                                 <th>id</th>
                                 <th>id order</th>
                                 <th>id produk</th>
+                                <th>id user</th>
+                                <th>status order</th>
                                 <th>nama produk</th>
                                 <th>harga</th>
                                 <th>kurir</th>
                                 <th>jumlah</th>
                                 <th>total harga</th>
+                                <th>pembayaran</th>
                                 <th>aksi</th>
                             </tr>
                         </thead>
@@ -77,11 +80,14 @@
                                 <td>{{ $loop->index + 1 }}</td>
                                 <td>{{ $detail_order->id_order }}</td>
                                 <td>{{ $detail_order->id_produk }}</td>
+                                <td>{{ $detail_order->id_user }}</td>
+                                <td>{{ $detail_order->status_order }}</td>
                                 <td>{{ $detail_order->nama_produk }}</td>
                                 <td>{{ $detail_order->harga }}</td>
                                 <td>{{ $detail_order->kurir }}</td>
                                 <td>{{ $detail_order->jumlah }}</td>
                                 <td>{{ $detail_order->total_harga }}</td>
+                                <td>{{ $detail_order->pembayaran }}</td>
                                 <td>
                                     <a onclick="edit(this)"
                                         data-url="{{route('editDetail_Order', ['id' => $detail_order->id])}}"

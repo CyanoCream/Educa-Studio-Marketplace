@@ -59,8 +59,8 @@
                         <thead>
                             <tr>
                                 <th>id</th>
-                                <th>kategori</th>
                                 <th>nama produk</th>
+                                <th>kategori</th>
                                 <th>harga produk</th>
                                 <th>status pertemuan</th>
                                 <th>stock</th>
@@ -78,8 +78,8 @@
                             @foreach ($produks as $produk)
                             <tr>
                                 <td>{{ $loop->index + 1 }}</td>
-                                <td>{{ $produk->kategori }}</td>
                                 <td>{{ $produk->nama_produk }}</td>
+                                <td>{{ $produk->kategori }}</td>
                                 <td>{{ $produk->harga_produk }}</td>
                                 <td>{{ $produk->status_pertemuan }}</td>
                                 <td>{{ $produk->stock }}</td>

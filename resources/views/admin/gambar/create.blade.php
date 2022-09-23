@@ -36,6 +36,11 @@
 							<input type="text" name="id_produk" id="id_produk" class="form-control" required="required" placeholder="Masukkan id produk">
 						</div>
 
+						<div class="form-group">
+							<label for="user_id">user id</label>
+							<input type="text" name="user_id" id="user_id" class="form-control" required="required" placeholder="Masukkan user id">
+						</div>
+
 						<div class="text-right">
 							<a href="{{ route('daftarGambar') }}" class="btn btn-outline-secondary mr-2" role="button">Batal</a>
 							<button type="submit" class="btn btn-primary">Simpan</button>

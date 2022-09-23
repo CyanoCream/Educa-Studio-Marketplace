@@ -66,9 +66,16 @@ class AdminOrderController extends Controller
             'status_order' => 'required|string|max:255' ,
             'id_produk' => 'required|integer' ,
             'id_penyelenggara' => 'required|integer' ,
+            'id_user' => 'required|integer' ,
             'jumlah_pesanan' => 'required|integer' ,
+            'total_harga' => 'required|string|max:255' ,
             'kurir' => 'required|string|max:255' ,
             'alamat_pen' => 'required|string|max:255' ,
+            'provinsi' => 'required|string|max:255' ,
+            'kota' => 'required|string|max:255' ,
+            'kecamatan' => 'required|string|max:255' ,
+            'metode_pembayaran' => 'required|string|max:255' ,
+            'nama_produk' => 'required|string|max:255' ,
         ]);
         $order = new order($validatedData);
         $order->save();
@@ -114,9 +121,16 @@ class AdminOrderController extends Controller
             'status_order' => 'required|string|max:255' ,
             'id_produk' => 'required|integer' ,
             'id_penyelenggara' => 'required|integer' ,
+            'id_user' => 'required|integer' ,
             'jumlah_pesanan' => 'required|integer' ,
+            'total_harga' => 'required|string|max:255' ,
             'kurir' => 'required|string|max:255' ,
             'alamat_pen' => 'required|string|max:255' ,
+            'provinsi' => 'required|string|max:255' ,
+            'kota' => 'required|string|max:255' ,
+            'kecamatan' => 'required|string|max:255' ,
+            'metode_pembayaran' => 'required|string|max:255' ,
+            'nama_produk' => 'required|string|max:255' ,
         ]);
 
         $order = order::find($order);
@@ -124,9 +138,16 @@ class AdminOrderController extends Controller
         $order->status_order = $request->status_order;
         $order->id_produk = $request->id_produk;
         $order->id_penyelenggara = $request->id_penyelenggara;
+        $order->id_user = $request->id_user;
         $order->jumlah_pesanan = $request->jumlah_pesanan;
+        $order->total_harga = $request->total_harga;
         $order->kurir = $request->kurir;
         $order->alamat_pen = $request->alamat_pen;
+        $order->provinsi = $request->provinsi;
+        $order->kota = $request->kota;
+        $order->kecamatan= $request->kecamatan;
+        $order->metode_pembayaran = $request->metode_pembayaran;
+        $order->nama_produk = $request->nama_produk;
         $order->save();
 
         return redirect(route('daftarOrder'));

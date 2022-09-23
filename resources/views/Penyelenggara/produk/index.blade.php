@@ -59,8 +59,8 @@
                         <thead>
                             <tr>
                                 <th>id</th>
-                                <th>kategori</th>
                                 <th>nama produk</th>
+                                <th>kategori</th>
                                 <th>harga produk</th>
                                 <th>status pertemuan</th>
                                 <th>stock</th>
@@ -70,6 +70,7 @@
                                 <th>keterangan</th>
                                 <th>manfaat</th>
                                 <th>bundling</th>
+                                <th>user id</th>
                                 <th>aksi</th>
                             </tr>
                         </thead>
@@ -77,8 +78,8 @@
                             @foreach ($produks as $produk)
                             <tr>
                                 <td>{{ $loop->index + 1 }}</td>
-                                <td>{{ $produk->kategori }}</td>
                                 <td>{{ $produk->nama_produk }}</td>
+                                <td>{{ $produk->kategori }}</td>
                                 <td>{{ $produk->harga_produk }}</td>
                                 <td>{{ $produk->status_pertemuan }}</td>
                                 <td>{{ $produk->stock }}</td>
@@ -88,6 +89,7 @@
                                 <td>{{ $produk->keterangan }}</td>
                                 <td>{{ $produk->manfaat }}</td>
                                 <td>{{ $produk->bundling }}</td>
+                                <td>{{ $produk->user_id }}</td>
                                 <td>
                                     <a onclick="edit(this)"
                                         data-url="{{route('editPenyelenggara_produk', ['id' => $produk->id])}}"

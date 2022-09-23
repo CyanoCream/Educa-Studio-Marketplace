@@ -26,32 +26,32 @@
                         {{ csrf_field() }}
 
                         <div class="form-group">
+                            <label for="nama_produk">nama produk</label>
+                            <input type="text" name="nama_produk" id="nama_produk" class="form-control"
+                                required="required" placeholder="Masukkan nama produk">
+                        </div>
+                        
+                        <div class="form-group">
                             <label for="kategori">Kategori</label>
                                 <select id="kategori" name="kategori" class="form-control">
                                     <option selected>pilih kategori</option>
-                                    <option value="aktivitas">Aktivitas</option>
-                                    <option value="kursus">Kursus</option>
-                                    <option value="experience">Experience</option>
-                                    <option value="gratis">Gratis</option>
+                                    <option value="">Aktivitas</option>
+                                    <option value="">Kursus</option>
+                                    <option value="">Experience</option>
+                                    <option value="">Gratis</option>
                             </select>
-                        </div>
-
-                        <div class="form-group">
-                            <label for="nama_produk">nama produk</label>
-                            <input type="text" name="nama_produk" id="nama_produk" class="form-control"
-                                required="required" placeholder="Masukkan nama_produk">
                         </div>
 
                         <div class="form-group">
                             <label for="harga_produk">harga produk</label>
                             <input type="text" name="harga_produk" id="harga_produk" class="form-control"
-                                required="required" placeholder="Masukkan harga_produk">
+                                required="required" placeholder="Masukkan harga produk">
                         </div>
 
                         <div class="form-group">
                             <label for="status_pertemuan">status pertemuan</label>
                             <input type="text" name="status_pertemuan" id="status_pertemuan" class="form-control"
-                                required="required" placeholder="Masukkan status_pertemuan">
+                                required="required" placeholder="Masukkan status pertemuan">
                         </div>
 
                         <div class="form-group">
@@ -69,7 +69,7 @@
                         <div class="form-group">
                             <label for="waktu_temu">waktu temu</label>
                             <input type="text" name="waktu_temu" id="waktu_temu" class="form-control"
-                                required="required" placeholder="Masukkan waktu_temu">
+                                required="required" placeholder="Masukkan waktu temu">
                         </div>
 
                         <div class="form-group">
@@ -83,15 +83,23 @@
                             <textarea name="keterangan" id="keterangan" rows="3" class="form-control"
                                 required="required" placeholder="Masukkan keterangan"></textarea>
                         </div>
+
                         <div class="form-group">
                             <label for="manfaat">manfaat</label>
                             <textarea name="manfaat" id="manfaat" rows="3" class="form-control" required="required"
                                 placeholder="Masukkan manfaat"></textarea>
                         </div>
+
                         <div class="form-group">
                             <label for="bundling">bundling</label>
                             <input type="text" name="bundling" id="bundling" class="form-control" required="required"
                                 placeholder="Masukkan bundling">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="user_id">user id</label>
+                            <input type="text" name="user_id" id="user_id" class="form-control" required="required"
+                                placeholder="Masukkan user id">
                         </div>
 
                         <div class="text-right">

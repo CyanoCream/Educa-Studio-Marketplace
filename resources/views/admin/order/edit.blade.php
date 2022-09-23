@@ -42,8 +42,18 @@
 						</div>
 
 						<div class="form-group">
+							<label for="id_user">id user</label>
+							<input type="text" name="id_user" id="id_user" class="form-control" required="required" value="{{ $order->id_user }}" placeholder="Masukkan id user">
+						</div>
+
+						<div class="form-group">
 							<label for="jumlah_pesanan">jumlah pesanan</label>
 							<input type="text" name="jumlah_pesanan" id="jumlah_pesanan" class="form-control" required="required" value="{{ $order->jumlah_pesanan }}" placeholder="Masukkan jumlah pesanan">
+						</div>
+
+						<div class="form-group">
+							<label for="total_harga">total harga</label>
+							<input type="text" name="total_harga" id="total_harga" class="form-control" required="required" value="{{ $order->total_harga }}" placeholder="Masukkan total harga">
 						</div>
 
 						<div class="form-group">
@@ -55,6 +65,32 @@
 							<label for="alamat_pen">alamat penerima</label>
 							<input type="text" name="alamat_pen" id="alamat_pen" class="form-control" required="required" value="{{ $order->alamat_pen }}" placeholder="Masukkan alamat pen">
 						</div>
+
+						<div class="form-group">
+							<label for="provinsi">provinsi</label>
+							<input type="text" name="provinsi" id="provinsi" class="form-control" required="required" value="{{ $order->provinsi }}" placeholder="Masukkan provinsi">
+						</div>
+
+						<div class="form-group">
+							<label for="kota">kota</label>
+							<input type="text" name="kota" id="kota" class="form-control" required="required" value="{{ $order->kota }}" placeholder="Masukkan kota">
+						</div>
+
+						<div class="form-group">
+							<label for="kecamatan">kecamatan</label>
+							<input type="text" name="kecamatan" id="kecamatan" class="form-control" required="required" value="{{ $order->kecamatan }}" placeholder="Masukkan kecamatan">
+						</div>
+
+						<div class="form-group">
+							<label for="metode_pembayaran">metode pembayaran</label>
+							<input type="text" name="metode_pembayaran" id="metode_pembayaran" class="form-control" required="required" value="{{ $order->metode_pembayaran }}" placeholder="Masukkan metode pembayaran">
+						</div>
+
+						<div class="form-group">
+							<label for="nama_produk">nama produk</label>
+							<input type="text" name="nama_produk" id="nama_produk" class="form-control" required="required" value="{{ $order->nama_produk }}" placeholder="Masukkan nama produk">
+						</div>
+
 						<div class="text-right">
 							<a href="{{ route('daftarOrder') }}" class="btn btn-outline-secondary mr-2" role="button">Batal</a>
 							<button type="submit" onclick="save(this)" class="btn btn-primary">Simpan</button>

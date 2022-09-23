@@ -63,9 +63,16 @@
                                 <th>status order</th>
                                 <th>id produk</th>
                                 <th>id penyelenggara</th>
+                                <th>id user</th>
                                 <th>jumlah pesanan</th>
+                                <th>total harga</th>
                                 <th>kurir</th>
                                 <th>alamat penerima</th>
+                                <th>provinsi</th>
+                                <th>kota</th>
+                                <th>kecamatan</th>
+                                <th>metode pembayaran</th>
+                                <th>nama produk</th>
                                 <th>aksi</th>
                             </tr>
                         </thead>
@@ -76,9 +83,16 @@
                                 <td>{{ $order->status_order }}</td>
                                 <td>{{ $order->id_produk }}</td>
                                 <td>{{ $order->id_penyelenggara }}</td>
+                                <td>{{ $order->id_user }}</td>
                                 <td>{{ $order->jumlah_pesanan }}</td>
+                                <td>{{ $order->total_harga }}</td>
                                 <td>{{ $order->kurir }}</td>
                                 <td>{{ $order->alamat_pen }}</td>
+                                <td>{{ $order->provinsi }}</td>
+                                <td>{{ $order->kota }}</td>
+                                <td>{{ $order->kecamatan }}</td>
+                                <td>{{ $order->metode_pembayaran }}</td>
+                                <td>{{ $order->nama_produk }}</td>
                                 <td>
                                     <a onclick="edit(this)"
                                         data-url="{{route('editOrder', ['id' => $order->id])}}"

@@ -84,6 +84,7 @@ class AdminGambarController extends Controller
         $gambar = new Gambar();
         $gambar->gambar = $fileName;
         $gambar->id_produk =  $request->id_produk;
+        $gambar->user_id = $request->user_id;
         $gambar->save();
 
         return redirect(route('daftarGambar'));
@@ -107,6 +108,7 @@ class AdminGambarController extends Controller
         $gambar = new Gambar();
         $gambar->gambar = $fileName;
         $gambar->id_produk =  $request->id_produk;
+        $gambar->user_id = $request->user_id;
         $gambar->save();
 
         return redirect(route('daftarPenyelenggara_gambar'));
@@ -169,6 +171,7 @@ class AdminGambarController extends Controller
 
         $gambar->gambar = $request->gambar;
         $gambar->id_produk = $request->id_produk;
+        $gambar->user_id = $request->user_id;
         $gambar->save();
 
         return redirect(route('daftarGambar'));
@@ -191,6 +194,7 @@ class AdminGambarController extends Controller
 
         $gambar->gambar = $request->gambar;
         $gambar->id_produk = $request->id_produk;
+        $gambar->user_id = $request->user_id;
         $gambar->save();
 
         return redirect(route('daftarPenyelenggara'));

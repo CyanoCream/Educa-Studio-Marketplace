@@ -124,6 +124,9 @@ Auth::routes();
     Route::post('/produk_detail', 'AdminUlasanController@store_pd')->name('storeUlasan_pd');
     Route::get('/produk_detail/{produk_detail}/delete', 'AdminUlasanController@destroy_pd')->name('deleteUlasan_pd');
 
+    //akun (hubungi kami)
+    Route::post('/hubungi_kami_akun/create', 'AdminHubungikamiController@store_akun')->name('storeHubungi_Kami_akun');
+
 // Route::group(['middleware' => 'Auth'], function() {
 
     // detail_order

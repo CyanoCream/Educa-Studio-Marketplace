@@ -49,7 +49,7 @@ class AdminHubungikamiController extends Controller
             'email' => 'required|string|max:255' ,
             'nomorponsel' => 'required|string|max:255' ,
             'topik' => 'required|string|max:255' ,
-            'pesan' => 'required|string|max:255' ,
+            'pesan' => 'required|string' ,
         ]);
 
         $hubungikami = new hubungikami($validatedData);
@@ -58,14 +58,14 @@ class AdminHubungikamiController extends Controller
         return redirect(route('daftarHubungi_Kami'));
     }
 
-    public function userstore(Request $request)
+    public function store_akun(Request $request)
     {
         $validatedData = $request->validate([
             'nama' => 'required|string|max:255' ,
             'email' => 'required|string|max:255' ,
             'nomorponsel' => 'required|string|max:255' ,
             'topik' => 'required|string|max:255' ,
-            'pesan' => 'required|string|max:255' ,
+            'pesan' => 'required|string' ,
         ]);
 
         $hubungikami = new hubungikami($validatedData);
@@ -112,7 +112,7 @@ class AdminHubungikamiController extends Controller
             'email' => 'required|string|max:255' ,
             'nomorponsel' => 'required|string|max:255' ,
             'topik' => 'required|string|max:255' ,
-            'pesan' => 'required|string|max:255' ,
+            'pesan' => 'required|string' ,
         ]);
 
         $hubungikami = hubungikami::find($hubungikami);
