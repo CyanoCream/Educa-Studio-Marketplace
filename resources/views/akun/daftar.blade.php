@@ -109,7 +109,7 @@
                                     </div>                 --}}
                                 
                                    <p class="kodory-FormRow form-row">
-                                        <button type="submit" class="kodory-Button button"  onclick="alert('Anda Berhasil Register')"
+                                        <button type="submit" class="kodory-Button button"  
                                                 value="Register">Register
                                         </button>
                                     </p>

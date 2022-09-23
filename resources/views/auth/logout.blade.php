@@ -87,7 +87,7 @@
 
 		.btn {
 			transition: all .5s ease;
-			width: 70%;
+			width: 70% !important;
 			border-radius: 30px;
 			color: #008080;
 			font-weight: 600;
