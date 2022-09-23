@@ -163,7 +163,7 @@
 		
 								<div class="form-group">
 									<div class="col-md-8 col-md-offset-4">
-										<button type="submit" onclick="alert('Anda Berhasil Register')" class="btn btn-primary">
+										<button type="submit" class="btn btn-primary">
 											Register
 										</button> 
 									</div>
@@ -176,9 +176,7 @@
 			  </div>
 			</div>
 		  </div>
-
-
-</body>
+	</body>
 </html> 
 
 
