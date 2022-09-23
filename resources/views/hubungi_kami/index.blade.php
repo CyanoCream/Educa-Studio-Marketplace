@@ -21,7 +21,7 @@
             </div>
             <div class="modal-body">
                 <div class="css-6c9knn">
-                    <form action="{{ route('userHubungi_Kami') }}" method="post">
+                    <form action="{{ route('storeHubungi_Kami_akun') }}" method="post">
 						{{csrf_field()}}
 
 						<div class="form-group">
@@ -35,8 +35,8 @@
 						</div>
 
 						<div class="form-group">
-							<label for="nomor_ponsel">nomor ponsel</label>
-							<input type="text" name="nomorponsel" id="nomor_ponsel" class="form-control" required="required" placeholder="Masukkan nomor_ponsel">
+							<label for="nomorponsel">nomor ponsel</label>
+							<input type="text" name="nomorponsel" id="nomorponsel" class="form-control" required="required" placeholder="Masukkan nomor ponsel">
 						</div>
 
 						<div class="form-group">
@@ -46,14 +46,9 @@
 
 						<div class="form-group">
 							<label for="pesan">pesan</label>
-							<textarea type="text" name="pesan" id="pesan" rows="3" class="form-control" required="required" placeholder="Masukkan pesan"></textarea>
+							<textarea type="text" name="pesan" id="pesan" rows="3" class="form-control" required="required"></textarea>
 						</div>
 
-						{{-- <div class="text-right">
-							<a href="{{ route('daftarHubungi_Kami') }}" class="btn btn-outline-secondary mr-2"
-								role="button">Batal</a>
-							<button type="submit" class="btn btn-primary">Simpan</button>
-						</div> --}}
                         <div class="modal-footer">
                             <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
                             <button type="submit"  class="btn btn-primary">Submit</button>

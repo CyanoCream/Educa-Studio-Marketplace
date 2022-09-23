@@ -37,8 +37,8 @@
 						</div>
 
 						<div class="form-group">
-							<label for="nomor_ponsel">nomor ponsel</label>
-							<input type="text" name="nomorponsel" id="nomor_ponsel" class="form-control" required="required" placeholder="Masukkan nomor ponsel">
+							<label for="nomorponsel">nomor ponsel</label>
+							<input type="text" name="nomorponsel" id="nomorponsel" class="form-control" required="required" placeholder="Masukkan nomor ponsel">
 						</div>
 
 						<div class="form-group">
@@ -48,7 +48,7 @@
 
 						<div class="form-group">
 							<label for="pesan">pesan</label>
-							<textarea type="text" name="pesan" id="pesan" rows="3" class="form-control" required="required" placeholder="Masukkan pesan"></textarea>
+							<textarea type="text" name="pesan" id="pesan" rows="3" class="form-control" required="required"></textarea>
 						</div>
 
 						<div class="text-right">

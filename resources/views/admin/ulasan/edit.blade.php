@@ -27,8 +27,23 @@
 						{{ csrf_field() }}
 
 						<div class="form-group">
+							<label for="id_user">id user</label>
+							<input type="text" name="id_user" id="id_user" class="form-control" required="required" value="{{ $ulasan->id_user }}" placeholder="Masukkan id user">
+						</div>
+
+						<div class="form-group">
+							<label for="id_produk">id produk</label>
+							<input type="text" name="id_produk" id="id_produk" class="form-control" required="required" value="{{ $ulasan->id_produk }}" placeholder="Masukkan id produk">
+						</div>
+
+						<div class="form-group">
 							<label for="nama">nama</label>
 							<input type="text" name="nama" id="nama" class="form-control" required="required" value="{{ $ulasan->nama }}" placeholder="Masukkan nama">
+						</div>
+
+						<div class="form-group">
+							<label for="email">email</label>
+							<input type="text" name="email" id="email" class="form-control" required="required" value="{{ $ulasan->email }}" placeholder="Masukkan email">
 						</div>
 
 						<div class="form-group">

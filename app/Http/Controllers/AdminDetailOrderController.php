@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 use App\Detail_order;
+use App\Produk;
 use Illuminate\Http\Request;
 
 class AdminDetailOrderController extends Controller
@@ -14,6 +15,15 @@ class AdminDetailOrderController extends Controller
     public function index()
     {
         $detail_orders = Detail_order::all();
+
+        foreach ($detail_orders as &$do) {
+            $produk = Produk::find($do['id_produk']);
+            if($produk){
+                $do['produk'] = $produk->nama_produk;
+            }else{
+                $do['produk'] = '-';
+            }
+        }
         return view('admin.detail_order.index', [
             'detail_orders' => $detail_orders
         ]);
@@ -47,11 +57,14 @@ class AdminDetailOrderController extends Controller
         $validatedData = $request->validate([
             'id_order' => 'required|integer' ,
             'id_produk' => 'required|integer' ,
+            'id_user' => 'required|integer' ,
+            'status_order' => 'required|integer' ,
             'nama_produk' => 'required|string|max:255' ,
             'harga' => 'required|integer' ,
             'kurir' => 'required|string|max:255' ,
             'jumlah' => 'required|integer' ,
             'total_harga' => 'required|integer' ,
+            'pembayaran' => 'required|string|max:255' ,
         ]);
 
         $detail_order = new detail_order($validatedData);
@@ -98,22 +111,28 @@ class AdminDetailOrderController extends Controller
         $validatedData = $request->validate([
             'id_order' => 'required|integer' ,
             'id_produk' => 'required|integer' ,
+            'id_user' => 'required|integer' ,
+            'status_order' => 'required|integer' ,
             'nama_produk' => 'required|string|max:255' ,
             'harga' => 'required|integer' ,
             'kurir' => 'required|string|max:255' ,
             'jumlah' => 'required|integer' ,
             'total_harga' => 'required|integer' ,
+            'pembayaran' => 'required|string|max:255' ,
         ]);
 
         $detail_order = Detail_order::find($detail_order);
 
         $detail_order->id_order = $request->id_order;
         $detail_order->id_produk = $request->id_produk;
+        $detail_order->id_user = $request->id_user;
+        $detail_order->status_order = $request->status_order;
         $detail_order->nama_produk = $request->nama_produk;
         $detail_order->harga = $request->harga;
         $detail_order->kurir = $request->kurir;
         $detail_order->jumlah = $request->jumlah;
         $detail_order->total_harga = $request->total_harga;
+        $detail_order->pembayaran = $request->pembayaran;
         $detail_order->save();
 
         return redirect(route('daftarDetail_Order'));

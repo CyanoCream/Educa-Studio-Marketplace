@@ -26,20 +26,20 @@
                         {{ csrf_field() }}
                         
                         <div class="form-group">
-                            <label for="kategori">Kategori</label>
-                                <select id="kategori" name="kategori" class="form-control">
-                                    <option selected>pilih kategori</option>
-                                    <option value="aktivitas">Aktivitas</option>
-                                    <option value="kursus">Kursus</option>
-                                    <option value="experience">Experience</option>
-                                    <option value="gratis">Gratis</option>
-                            </select>
-                        </div>
-
-                        <div class="form-group">
                             <label for="nama_produk">nama produk</label>
                             <input type="text" name="nama_produk" id="nama_produk" class="form-control"
                                 required="required" placeholder="Masukkan nama produk">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="kategori">Kategori</label>
+                                <select id="kategori" name="kategori" class="form-control">
+                                    <option selected>pilih kategori</option>
+                                    <option value="">Aktivitas</option>
+                                    <option value="">Kursus</option>
+                                    <option value="">Experience</option>
+                                    <option value="">Gratis</option>
+                            </select>
                         </div>
 
                         <div class="form-group">

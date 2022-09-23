@@ -27,6 +27,11 @@
 						{{ csrf_field() }}
 
 						<div class="form-group">
+							<label for="nama_produk">nama produk</label>
+							<input type="text" name="nama_produk" id="nama_produk" class="form-control" required="required" value="{{ $produk->nama_produk }}" placeholder="Masukkan nama produk">
+						</div>
+
+						<div class="form-group">
                             <label for="kategori">Kategori</label>
                                 <select id="kategori" name="kategori" class="form-control">
                                     <option selected>pilih kategori</option>
@@ -38,18 +43,13 @@
                         </div>
 
 						<div class="form-group">
-							<label for="nama_produk">nama produk</label>
-							<input type="text" name="nama_produk" id="nama_produk" class="form-control" required="required" value="{{ $produk->nama_produk }}" placeholder="Masukkan nama_produk">
-						</div>
-
-						<div class="form-group">
 							<label for="harga_produk">harga produk</label>
-							<input type="text" name="harga_produk" id="harga_produk" class="form-control" required="required" value="{{ $produk->harga_produk }}" placeholder="Masukkan harga_produk">
+							<input type="text" name="harga_produk" id="harga_produk" class="form-control" required="required" value="{{ $produk->harga_produk }}" placeholder="Masukkan harga produk">
 						</div>
 
 						<div class="form-group">
 							<label for="status_pertemuan">status pertemuan</label>
-							<input type="text" name="status_pertemuan" id="status_pertemuan" class="form-control" required="required" value="{{ $produk->status_pertemuan }}" placeholder="Masukkan status_pertemuan">
+							<input type="text" name="status_pertemuan" id="status_pertemuan" class="form-control" required="required" value="{{ $produk->status_pertemuan }}" placeholder="Masukkan status pertemuan">
 						</div>
 
 						<div class="form-group">
@@ -64,7 +64,7 @@
 
 						<div class="form-group">
 							<label for="waktu_temu">waktu temu</label>
-							<input type="text" name="waktu_temu" id="waktu_temu" class="form-control" required="required" value="{{ $produk->waktu_temu }}" placeholder="Masukkan waktu_temu">
+							<input type="text" name="waktu_temu" id="waktu_temu" class="form-control" required="required" value="{{ $produk->waktu_temu }}" placeholder="Masukkan waktu temu">
 						</div>
 
 						<div class="form-group">
@@ -85,6 +85,11 @@
                         <div class="form-group">
 							<label for="bundling">bundling</label>
 							<input type="text" name="bundling" id="bundling" class="form-control" required="required" value="{{ $produk->bundling }}" placeholder="Masukkan bundling">
+						</div>
+
+						<div class="form-group">
+							<label for="user_id">user id</label>
+							<input type="text" name="user_id" id="user_id" class="form-control" required="required" value="{{ $produk->user_id }}" placeholder="Masukkan user id">
 						</div>
 
 						<div class="text-right">

@@ -69,18 +69,6 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a href="{{route('daftarPelanggan')}}" class="nav-link">
-                        <i class="nav-icon fas fa-copy"></i>
-                        <p>Pelanggan</p>
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a href="{{route('daftarPenyelenggara')}}" class="nav-link">
-                        <i class="nav-icon fas fa-columns"></i>
-                        <p>Penyelenggara</p>
-                    </a>
-                </li>
-                <li class="nav-item">
                     <a href="{{route('daftarUlasan')}}" class="nav-link">
                         <i class="nav-icon far fa-plus-square"></i>
                         <p>Ulasan</p>
@@ -89,7 +77,7 @@
                 <li class="nav-item">
                     <a href="{{route('daftarUser')}}" class="nav-link">
                         <i class="nav-icon fas fa-user"></i>
-                        <p>User</p>
+                        <p>User & Penyelenggara</p>
                 </li>
                 <li class="nav-item">
 

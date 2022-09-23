@@ -32,8 +32,18 @@
 						</div>
 
 						<div class="form-group">
-							<label for="id_produk">idproduk</label>
+							<label for="id_produk">id produk</label>
 							<input type="text" name="id_produk" id="id_produk" class="form-control" required="required" value="{{ $detail_order->id_produk }}" placeholder="Masukkan id produk">
+						</div>
+
+						<div class="form-group">
+							<label for="id_user">id user</label>
+							<input type="text" name="id_user" id="id_user" class="form-control" required="required" value="{{ $detail_order->id_user }}" placeholder="Masukkan id user">
+						</div>
+
+						<div class="form-group">
+							<label for="status_order">status order</label>
+							<input type="text" name="status_order" id="status_order" class="form-control" required="required" value="{{ $detail_order->status_order }}" placeholder="Masukkan status order">
 						</div>
 
 						<div class="form-group">
@@ -59,6 +69,11 @@
 						<div class="form-group">
 							<label for="total_harga">total harga</label>
 							<input type="text" name="total_harga" id="total_harga" class="form-control" required="required" value="{{ $detail_order->total_harga }}" placeholder="Masukkan total harga">
+						</div>
+
+						<div class="form-group">
+							<label for="pembayaran">pembayaran</label>
+							<input type="text" name="pembayaran" id="pembayaran" class="form-control" required="required" value="{{ $detail_order->pembayaran }}" placeholder="Masukkan pembayaran">
 						</div>
 
 						<div class="text-right">

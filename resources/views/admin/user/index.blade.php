@@ -62,10 +62,23 @@
                                 <thead>
                                     <tr>
                                         <th>id</th>
-                                        <th>name</th>
+                                        <th>nama</th>
                                         <th>email</th>
-                                        <th>role</th>
                                         <th>password</th>
+                                        <th>role</th>
+                                        <th>foto</th>
+                                        <th>panggilan</th>
+                                        <th>tgl.lahir</th>
+                                        <th>alamat</th>
+                                        <th>provinsi</th>
+                                        <th>kota</th>
+                                        <th>kecamatan</th>
+                                        <th>no.telp</th>
+                                        <th>icon penyelenggara</th>
+                                        <th>nama penyelenggara</th>
+                                        <th>kota penyelenggara</th>
+                                        <th>deskripsi</th>
+                                        <th>jam operasional</th>
                                         <th>aksi</th>
                                     </tr>
                                 </thead>
@@ -75,8 +88,21 @@
                                         <td>{{ $loop->index + 1 }}</td>
                                         <td>{{ $user->name }}</td>
                                         <td>{{ $user->email }}</td>
-                                        <td>{{ $user->role }}</td>
                                         <td>********</td>
+                                        <td>{{ $user->role }}</td>
+                                        <td><img src="/images/{{ $user->foto }}" alt="" width="100px"></td>
+                                        <td>{{ $user->panggilan }}</td>
+                                        <td>{{ $user->tgl_lahir }}</td>
+                                        <td>{{ $user->alamat }}</td>
+                                        <td>{{ $user->provinsi }}</td>
+                                        <td>{{ $user->kota }}</td>
+                                        <td>{{ $user->kecamatan }}</td>
+                                        <td>{{ $user->notelp }}</td>
+                                        <td>{{ $user->icon_penyelenggara }}</td>
+                                        <td>{{ $user->nama_penyelenggara }}</td>
+                                        <td>{{ $user->kota_penyelenggara }}</td>
+                                        <td>{{ $user->deskripsi }}</td>
+                                        <td>{{ $user->jam_operasional }}</td>
                                         <td>
                                             <a onclick="edit(this)"
                                                 data-url="{{route('editUser', ['id' => $user->id])}}"
