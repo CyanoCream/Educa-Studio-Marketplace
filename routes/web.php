@@ -120,7 +120,7 @@ Auth::routes();
 // });
 
     //produk-detail review
-    Route::get('/produk_detail', 'AdminUlasanController@index_pd')->name('daftarUlasan_pd');
+    // Route::get('/produk_detail', 'AdminUlasanController@index_pd')->name('daftarUlasan_pd');
     Route::post('/produk_detail', 'AdminUlasanController@store_pd')->name('storeUlasan_pd');
     Route::get('/produk_detail/{produk_detail}/delete', 'AdminUlasanController@destroy_pd')->name('deleteUlasan_pd');
 

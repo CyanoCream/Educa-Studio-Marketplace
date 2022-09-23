@@ -43,7 +43,7 @@
 
 						<div class="form-group">
 							<label for="email">email</label>
-							<input type="text" name="email" id="email" class="form-control" required="required" value="{{ $ulasan->email }}" placeholder="Masukkan email">
+							<input type="email" name="email" id="email" class="form-control" required="required" value="{{ $ulasan->email }}" placeholder="Masukkan email">
 						</div>
 
 						<div class="form-group">
