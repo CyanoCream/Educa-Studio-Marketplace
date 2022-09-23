@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 use App\Detail_order;
+use App\Produk;
 use Illuminate\Http\Request;
 
 class AdminDetailOrderController extends Controller
@@ -14,6 +15,15 @@ class AdminDetailOrderController extends Controller
     public function index()
     {
         $detail_orders = Detail_order::all();
+
+        foreach ($detail_orders as &$do) {
+            $produk = Produk::find($do['id_produk']);
+            if($produk){
+                $do['produk'] = $produk->nama_produk;
+            }else{
+                $do['produk'] = '-';
+            }
+        }
         return view('admin.detail_order.index', [
             'detail_orders' => $detail_orders
         ]);
