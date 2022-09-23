@@ -32,14 +32,7 @@
                                 </span>
                                 <div class="phone-number">
                                     <p>Support & Order</p>
-<<<<<<< HEAD
-                                   <p><a href="Https://wa.me/6285743736401" class="text-light">085743736401</a></p>
-=======
-                                    <a href="Https://wa.me/6285743736401" class="text-light">085743736401</a>
->>>>>>> 0ec8ed3fadd48de7c5e7724ebf24f2a99efc7a79
-                                </div>
-                            </div>
-                        </div>
+                                    <p><a href="Https://wa.me/6285743736401" class="text-light">085743736401</a></p>
                     </div>
                 </div>
             </div>
