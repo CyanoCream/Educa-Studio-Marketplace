@@ -226,11 +226,7 @@ class AdminProdukController extends Controller
         $produk->keterangan = $request->keterangan;
         $produk->manfaat = $request->manfaat;
         $produk->bundling = $request->bundling;
-<<<<<<< HEAD
         $produk->user_id = $request->$id;
-=======
-        $produk->user_id = $request->user_id;
->>>>>>> 3eb7038865b214863b39a3bfe8522a02537b2ec5
         $produk->save();
 
         return redirect(route('daftarPenyelenggara_produk'));

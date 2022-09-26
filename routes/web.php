@@ -20,6 +20,10 @@ Route::get('/dashboard', function () {
     return view('admin.master');
 });
 
+Route::get('/premium', function () {
+    return view('premium.index');
+})->name('premium.index');
+
 Route::get('/pesanan/cek', function () {
     return view('layout.master');
 });
@@ -46,9 +50,7 @@ Route::get('/pilihan', function () {
     return view('katalog.pilihan');
 })->name('pilihan');
 
-Route::get('/premium', function () {
-    return view('premium.index');
-})->name('premium.index');
+
 
 Route::get('/topup', function () {
     return view('top_up.index');
@@ -205,6 +207,11 @@ Auth::routes();
     Route::post('/user/{user}/edit', 'AdminUserController@update')->name('updateUser');
     Route::post('/user/{user}/update', 'AdminUserController@userupdate')->name('userUpdate');
     Route::get('/user/{user}/delete', 'AdminUserController@destroy')->name('deleteUser');
-// Pencarian
-Route::get('/read', 'ProdukController@read');
-Route::get('/ajax', 'ProdukController@ajax');
+    
+    // Pencarian
+    Route::get('/read', 'ProdukController@read');
+    Route::get('/ajax', 'ProdukController@ajax');
+
+    //Tentang
+    Route::get('/about','AdminHomeController@indextentang')->name('tentang');
+

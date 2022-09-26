@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Produk;
 use App\User;
+use App\Tentang;
 use Illuminate\Support\Facades\Auth;
 
 class AdminHomeController extends Controller
@@ -46,4 +47,28 @@ class AdminHomeController extends Controller
         return view('Penyelenggara.dashboard');
     }
 
+    public function indextentang()
+    {
+        $about = Tentang::all();
+        // dd($about);
+        return view('premium.index', [
+            'about' => $about
+        ]);    
+    }
+    public function createtentang()
+    {
+        // 
+    }
+    public function edittentang()
+    {
+        // 
+    }
+    public function updatetentang()
+    {
+        // 
+    }
+    public function destroytentang()
+    {
+        //
+    }
 }
