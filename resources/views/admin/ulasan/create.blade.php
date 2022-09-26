@@ -45,7 +45,7 @@
 
                         <div class="form-group">
                             <label for="email">email</label>
-                            <input type="text" name="email" id="email" class="form-control" required="required"
+                            <input type="email" name="email" id="email" class="form-control" required="required"
                                 placeholder="Masukkan email">
                         </div>
 

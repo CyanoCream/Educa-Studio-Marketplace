@@ -103,6 +103,7 @@
 <script src="https://cdn.datatables.net/1.12.1/js/jquery.dataTables.min.js"></script>
 <script src="{{ asset('js2/sweetalert.min.js') }}"></script>
 <script>
+
     $(function () {
         $("#data-table").DataTable();
     })

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 use App\ Hubungikami;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class AdminHubungikamiController extends Controller
 {

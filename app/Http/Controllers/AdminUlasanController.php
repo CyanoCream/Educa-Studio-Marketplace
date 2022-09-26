@@ -56,15 +56,21 @@ class AdminUlasanController extends Controller
      */
     public function store(Request $request)
     {
-        $validatedData = $request->validate([
-            'id_user' => 'required|integer' ,
-            'id_produk' => 'required|integer' ,
-            'nama' => 'required|string|max:255' ,
-            'email' => 'required|string|max:255' ,
-            'penilaian' => 'required|string|max:255' ,
-        ]);
+        // $validatedData = $request->validate([
+        //     'id_user' => 'required|integer' ,
+        //     'id_produk' => 'required|integer' ,
+        //     'nama' => 'required|string|max:255' ,
+        //     'email' => 'required|string|max:255' ,
+        //     'penilaian' => 'required|string|max:255' ,
+        // ]);
 
-        $ulasan = new ulasan($validatedData);
+        $ulasan = new ulasan();
+        
+        $ulasan->id_user = $request->id_user;
+        $ulasan->id_produk = $request->id_produk;
+        $ulasan->nama = Auth::user()->name;
+        $ulasan->email = $request->email;
+        $ulasan->penilaian = $request->penilaian;
         $ulasan->save();
 
         return redirect(route('daftarUlasan'));
@@ -81,14 +87,15 @@ class AdminUlasanController extends Controller
 
         $ulasan = new ulasan();
         
-        $ulasan->nama = Auth::user()->name;
         $ulasan->id_user = $request->id_user;
         $ulasan->id_produk = $request->id_produk;
-        $ulasan->nama = $request->nama;
+        $ulasan->nama = Auth::user()->name;
         $ulasan->email = $request->email;
         $ulasan->penilaian = $request->penilaian;
         $ulasan->save();
 
+
+        // return redirect(route('daftarUlasan_pd'));
         return redirect()->back();
     }
 
@@ -138,7 +145,7 @@ class AdminUlasanController extends Controller
 
         $ulasan->id_user = $request->id_user;
         $ulasan->id_produk = $request->id_produk;
-        $ulasan->nama = $request->nama;
+        $ulasan->nama = Auth::user()->name;
         $ulasan->email = $request->email;
         $ulasan->penilaian = $request->penilaian;
         $ulasan->save();

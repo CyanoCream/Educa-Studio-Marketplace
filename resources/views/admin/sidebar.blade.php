@@ -37,12 +37,6 @@
                     </a>
                     <ul class="nav nav-treeview">
                         <li class="nav-item">
-                            <a href="{{route('daftarDetail_Order')}}" class="nav-link">
-                                <i class="nav-icon fas fa-th"></i>
-                                <p>Detail Order</p>
-                            </a>
-                        </li>
-                        <li class="nav-item">
                             <a href="{{route('daftarOrder')}}" class="nav-link">
                                 <i class="nav-icon fas fa-table"></i>
                                 <p>Order</p>
@@ -87,7 +81,7 @@
                     <div>
                         {{ csrf_field() }}
                         <button class="btn btn-lg btn-info btn-block btn-sm" type="submit">
-                            <i class="fa fa-reply" aria-hidden="true"></i>
+                            <i class="fa fa-reply" aria-hidden="true"></i> log out
                         </button>
                     </div>
                 </form>
