@@ -26,7 +26,7 @@ class Order extends Model
       */
       public function produk()
       {
-          return $this->BelongsTo('App\Produk','id_produk','id');
+          return $this->BelongsTo('App\Produk','id_produk','id', 'nama_produk');
       }
 
       public function gambar()
@@ -51,7 +51,7 @@ class Order extends Model
       */
      public function penyelenggara(): BelongsTo
      {
-         return $this->belongsTo('App\Penyelenggara','id_penyelenggara');
+         return $this->belongsTo('App\Penyelenggara','id_penyelenggara','nama_penyelenggara');
      }
 
           public function user(): BelongsTo

@@ -34,11 +34,11 @@
                         <div class="form-group">
                             <label for="kategori">Kategori</label>
                                 <select id="kategori" name="kategori" class="form-control">
-                                    <option selected>pilih kategori</option>
-                                    <option value="">Aktivitas</option>
-                                    <option value="">Kursus</option>
-                                    <option value="">Experience</option>
-                                    <option value="">Gratis</option>
+                                    <option>---  Select  ---</option>
+                                    <option>Aktivitas</option>
+                                    <option>Kursus</option>
+                                    <option>Experience</option>
+                                    <option>Gratis</option>
                             </select>
                         </div>
 
@@ -97,9 +97,12 @@
                         </div>
 
                         <div class="form-group">
-                            <label for="user_id">user id</label>
-                            <input type="text" name="user_id" id="user_id" class="form-control" required="required"
-                                placeholder="Masukkan user id">
+                            <label for="user_id">Nama Penyelenggara</label>
+                            <select class="form-control" name="user_id" id="user_id" required="required">
+                                @foreach ($user as $u)                                    
+                                   <option value="{{$u->id}}">{{$u->nama_penyelenggara}}</option>
+                                @endforeach
+                            </select>
                         </div>
 
                         <div class="text-right">

@@ -70,11 +70,12 @@
                                 <th>keterangan</th>
                                 <th>manfaat</th>
                                 <th>bundling</th>
-                                <th>user id</th>
+                                <th>nama penyelenggara</th>
                                 <th>aksi</th>
                             </tr>
                         </thead>
                         <tbody>
+                           
                             @foreach ($produks as $produk)
                             <tr>
                                 <td>{{ $loop->index + 1 }}</td>
@@ -89,7 +90,7 @@
                                 <td>{{ $produk->keterangan }}</td>
                                 <td>{{ $produk->manfaat }}</td>
                                 <td>{{ $produk->bundling }}</td>
-                                <td>{{ $produk->user_id }}</td>
+                                <td>{{ $produk->nama_penyelenggara }}</td>
                                 <td>
                                     <a onclick="edit(this)"
                                         data-url="{{route('editProduk', ['id' => $produk->id])}}"

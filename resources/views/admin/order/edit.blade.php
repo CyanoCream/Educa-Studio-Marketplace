@@ -31,19 +31,18 @@
 							<input type="text" name="status_order" id="status_order" class="form-control" required="required" value="{{ $order->status_order }}" placeholder="Masukkan status order">
 						</div>
 
-						<div class="form-group">
-							<label for="id_produk">id produk</label>
-							<input type="text" name="id_produk" id="id_produk" class="form-control" required="required" value="{{ $order->id_produk }}" placeholder="Masukkan id produk">
-						</div>
+						{{-- <div class="form-group">
+							<label for="id_produk">nama produk</label>
+							<select class="form-control" name="id_produk" id="id_produk" required="required">
+								@foreach ($produk as $pdk)                                    
+								   <option value="{{$pdk->id}}">{{$pdk->nama_produk}}</option>
+									@endforeach
+							</select>
+						</div> --}}
 
 						<div class="form-group">
 							<label for="id_penyelenggara">id penyelenggara</label>
 							<input type="text" name="id_penyelenggara" id="id_penyelenggara" class="form-control" required="required" value="{{ $order->id_penyelenggara }}" placeholder="Masukkan id penyelenggara">
-						</div>
-
-						<div class="form-group">
-							<label for="id_user">id user</label>
-							<input type="text" name="id_user" id="id_user" class="form-control" required="required" value="{{ $order->id_user }}" placeholder="Masukkan id user">
 						</div>
 
 						<div class="form-group">
@@ -88,7 +87,11 @@
 
 						<div class="form-group">
 							<label for="nama_produk">nama produk</label>
-							<input type="text" name="nama_produk" id="nama_produk" class="form-control" required="required" value="{{ $order->nama_produk }}" placeholder="Masukkan nama produk">
+							<select class="form-control" name="id_produk" id="id_produk" required="required">
+								{{-- @foreach ($produk as $pdk)                                    
+								   <option value="{{$pdk->id}}">{{$pdk->nama_produk}}</option>
+								@endforeach --}}
+							</select>
 						</div>
 
 						<div class="text-right">
