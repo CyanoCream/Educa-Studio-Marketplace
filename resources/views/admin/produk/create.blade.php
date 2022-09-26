@@ -34,7 +34,7 @@
                         <div class="form-group">
                             <label for="kategori">Kategori</label>
                                 <select id="kategori" name="kategori" class="form-control">
-                                    <option>---  Select  ---</option>
+                                    <option selected>---  Select  ---</option>
                                     <option>Aktivitas</option>
                                     <option>Kursus</option>
                                     <option>Experience</option>

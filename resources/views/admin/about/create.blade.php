@@ -10,8 +10,8 @@
                 </div>
                 <div class="col-sm-6">
                     <ol class="breadcrumb float-sm-right ml-0">
-                        <li class="breadcrumb-item"><a href="{{ route('daftarProduk') }}">Dashboard</a></li>
-                        <li class="breadcrumb-item active">Tambah Produk</li>
+                        <li class="breadcrumb-item"><a href="{{ route('about') }}">Dashboard</a></li>
+                        <li class="breadcrumb-item active">Tambah About</li>
                     </ol>
                 </div>
             </div>
@@ -22,25 +22,25 @@
         <div class="container-fluid">
             <div class="card">
                 <div class="card-body">
-                    <form action="{{ route('about.created') }}" method="post">
+                    <form action="{{ route('about.store') }}" method="post" enctype="multipart/form-data">
                         {{ csrf_field() }}
                         
                         <div class="form-group">
-                            <label for="nama_produk">Gambar</label>
-                            <input type="file" name="gambar" id="nama_produk" class="form-control"
-                                required="required" placeholder="Masukkan nama produk">
+                            <label for="gambar">gambar</label>
+                            <input type="file" name="gambar" id="gambar" class="form-control"
+                                required="required">
                         </div>
 
                         <div class="form-group">
-                            <label for="status_pertemuan">Judul</label>
-                            <input type="text" name="judul" id="status_pertemuan" class="form-control"
-                                required="required" placeholder="Masukkan status pertemuan">
+                            <label for="judul">judul</label>
+                            <input type="text" name="judul" id="judul" class="form-control"
+                                required="required" placeholder="Masukkan judul">
                         </div>
 
                         <div class="form-group">
-                            <label for="stock">Keterangan</label>
-                            <input type="text" name="keterangan" id="stock" class="form-control" required="required"
-                                placeholder="Masukkan stock">
+                            <label for="keterangan">keterangan</label>
+                            <textarea name="keterangan" id="keterangan" rows="3" class="form-control" required="required"
+                                placeholder="Masukkan keterangan"></textarea>
                         </div>
                         <div class="text-right">
                             <a href="{{ route('about') }}" class="btn btn-outline-secondary mr-2" role="button">Batal</a>

@@ -11,9 +11,8 @@
 				</div>
 				<div class="col-sm-6">
 					<ol class="breadcrumb float-sm-right d-flex">
-						<li class="breadcrumb-item" style="align-items: center; display: flex;"><a
-								href="{{route('daftarGambar')}}">Dashboard</a></li>
-						<li class="breadcrumb-item active" style="align-items: center; display: flex;">Edit Gambar</li>
+						<li class="breadcrumb-item"><a href="{{route('daftarGambar')}}">Dashboard</a></li>
+						<li class="breadcrumb-item active">Edit Gambar</li>
 					</ol>
 				</div>
 			</div>
@@ -24,7 +23,7 @@
 		<div class="container-fluid">
 			<div class="card">
 				<div class="card-body">
-					<form action="{{ route('updateGambar',['id'=>$gambar->id]) }}" method="post">
+					<form action="{{ route('updateGambar',['id'=>$gambar->id]) }}" method="post" enctype="multipart/form-data">
 						{{ csrf_field() }}
 
 						<div class="form-group">

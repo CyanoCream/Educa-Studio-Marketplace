@@ -10,9 +10,9 @@
 					<h1 class="m-0 text-dark">Create</h1>
 				</div>
 				<div class="col-sm-6">
-					<ol class="breadcrumb float-sm-right d-flex">
-						<li class="breadcrumb-item" style="align-items: center; display: flex;"><a href="{{route('daftarDetail_Order')}}">Dashboard</a></li>
-						<li class="breadcrumb-item active" style="align-items: center; display: flex;">Edit Detail Order</li>
+					<ol class="breadcrumb float-sm-right">
+						<li class="breadcrumb-item"><a href="{{route('daftarDetail_Order')}}">Dashboard</a></li>
+						<li class="breadcrumb-item active">Edit Detail Order</li>
 					</ol>
 				</div>
 			</div>
