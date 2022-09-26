@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 use App\Produk;
 use App\User;
+use DB;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
@@ -20,7 +21,11 @@ class AdminProdukController extends Controller
         {
             return redirect()->back();
         }
-        $produks = produk::all();
+        $produks = DB::table('users')
+        ->join('tbl_produks', 'users.id', '=', 'tbl_produks.user_id')
+        ->select('users.*', 'tbl_produks.*')
+        ->get();
+        // dd($produks);
         return view('admin.produk.index', [
             'produks' => $produks
         ]);
@@ -52,7 +57,12 @@ class AdminProdukController extends Controller
     //  */
     public function create(Request $request)
     {
-        return view('admin.produk.create');
+        $user = User::where('role','penyelenggara')->get();
+        // dd($user);
+        $penyelenggara = User::all();
+        return view('admin.produk.create', [
+            'user' => $user
+        ]);
     }
 
     //admin penyelenggara
@@ -84,7 +94,7 @@ class AdminProdukController extends Controller
             'bundling' => 'required|string|max:255' ,
             'user_id' => 'required|integer' ,
         ]);
-
+      
         $produk = new produk($validatedData);
         $produk->save();
 
@@ -108,10 +118,10 @@ class AdminProdukController extends Controller
             'bundling' => 'required|string|max:255' ,
             'user_id' => 'required|integer' ,
         ]);
-
+        
         $produk = new produk($validatedData);
         $produk->save();
-
+        // dd($penyelenggara);
         return redirect(route('daftarPenyelenggara_produk'));
     }
 
@@ -136,7 +146,7 @@ class AdminProdukController extends Controller
     {
         $produk = produk::find($id);
         return view('admin.produk.edit', [
-            'produk' => $produk
+            'user' => $user
         ]);
     }
 
@@ -145,7 +155,7 @@ class AdminProdukController extends Controller
     {
         $produk = produk::find($id);
         return view('Penyelenggara.produk.edit', [
-            'produk' => $produk
+            'user' => $user
         ]);
     }
 
@@ -226,11 +236,7 @@ class AdminProdukController extends Controller
         $produk->keterangan = $request->keterangan;
         $produk->manfaat = $request->manfaat;
         $produk->bundling = $request->bundling;
-<<<<<<< HEAD
         $produk->user_id = $request->$id;
-=======
-        $produk->user_id = $request->user_id;
->>>>>>> 3eb7038865b214863b39a3bfe8522a02537b2ec5
         $produk->save();
 
         return redirect(route('daftarPenyelenggara_produk'));

@@ -61,9 +61,7 @@
                             <tr>
                                 <th>id</th>
                                 <th>status order</th>
-                                <th>id produk</th>
                                 <th>id penyelenggara</th>
-                                <th>id user</th>
                                 <th>jumlah pesanan</th>
                                 <th>total harga</th>
                                 <th>kurir</th>
@@ -81,9 +79,7 @@
                             <tr>
                                 <td>{{ $loop->index + 1 }}</td>
                                 <td>{{ $order->status_order }}</td>
-                                <td>{{ $order->id_produk }}</td>
                                 <td>{{ $order->id_penyelenggara }}</td>
-                                <td>{{ $order->id_user }}</td>
                                 <td>{{ $order->jumlah_pesanan }}</td>
                                 <td>{{ $order->total_harga }}</td>
                                 <td>{{ $order->kurir }}</td>

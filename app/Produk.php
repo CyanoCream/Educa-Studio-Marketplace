@@ -53,10 +53,10 @@ class Produk extends Model
      *
      * @return \Illuminate\Database\Eloquent\Relations\HasMany
      */
-   public function user()
-   {
-       return $this->hasMany('App\User','id');
-   }
+    public function user()
+    {
+        return $this->hasMany('App\User','id');
+    }
     /**
      * Get the user that owns the Produk
      *
@@ -76,4 +76,8 @@ class Produk extends Model
     {
         return $this->belongsTo('App\Ulasan', 'nama');
     }
+    // public function user()
+    // {
+    //     return $this->belongsTo('App\User', 'id');
+    // }
 }

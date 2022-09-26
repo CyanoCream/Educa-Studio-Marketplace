@@ -88,8 +88,12 @@
 						</div>
 
 						<div class="form-group">
-							<label for="user_id">user id</label>
-							<input type="text" name="user_id" id="user_id" class="form-control" required="required" value="{{ $produk->user_id }}" placeholder="Masukkan user id">
+							<label for="user_id">nama penyelenggara</label>
+							<select class="form-control" name="user_id" id="user_id" required="required">
+                                @foreach ($user as $u)                                    
+                                   <option value="{{$u->id}}">{{$u->nama_penyelenggara}}</option>
+                                @endforeach
+                            </select>
 						</div>
 
 						<div class="text-right">

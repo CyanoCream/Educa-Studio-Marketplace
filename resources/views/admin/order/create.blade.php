@@ -31,18 +31,8 @@
 						</div>
 
 						<div class="form-group">
-							<label for="id_produk">id produk</label>
-							<input type="text" name="id_produk" id="id_produk" class="form-control" required="required" placeholder="Masukkan id produk">
-						</div>
-
-						<div class="form-group">
 							<label for="id_penyelenggara">id penyelenggara</label>
 							<input type="text" name="id_penyelenggara" id="id_penyelenggara" class="form-control" required="required" placeholder="Masukkan id penyelenggara">
-						</div>
-
-						<div class="form-group">
-							<label for="id_user">id user</label>
-							<input type="text" name="id_user" id="id_user" class="form-control" required="required" placeholder="Masukkan id user">
 						</div>
 
 						<div class="form-group">
@@ -86,8 +76,12 @@
 						</div>
 
 						<div class="form-group">
-							<label for="nama_produk">nama produk</label>
-							<input type="text" name="nama_produk" id="nama_produk" class="form-control" required="required" placeholder="Masukkan nama produk">
+							<label for="id_produk">nama produk</label>
+							<select class="form-control" name="id_produk" id="id_produk" required="required">
+								{{-- @foreach ($produks as $pdk)
+								   <option value="{{$pdk->id}}">{{$pdk->nama_produk}}</option>
+								@endforeach --}}
+							</select>
 						</div>
 
 						<div class="text-right">
