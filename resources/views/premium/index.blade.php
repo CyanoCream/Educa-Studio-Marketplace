@@ -54,25 +54,24 @@
         </div>
     </div>
 </div>
+@foreach ($about as $a)
+    
+@endforeach
 <div class="site-main  main-container no-sidebar" style="padding-top:110px;">
     <div class="section-037" style="padding-bottom: 100px;">
         <div class="container">
             <div class="kodory-popupvideo style-01">
                 <div class="popupvideo-inner">
                     <div class="icon">
-                        <img src="{{asset('images/home.jpg')}}" class="attachment-full size-full" alt="img">
+                        <img src="images/{{$a->gambar}}" class="attachment-full size-full" alt="img">
                     </div>
                     <div class="popupvideo-wrap">
                         <h4 class="title">
-                            Who we are </h4>
-                        <p class="desc">We believe in a world where you have total freedom to be you, without judgement.
-                            To experiment. To express yourself. To be brave and grab life as the extraordinary adventure
-                            it is. So we make sure everyone has an equal chance to discover all the amazing things
-                            they’re capable of – no matter who they are, where they’re from or what looks they like to
-                            boss.</p>
-                        <p>Our audience (AKA you) is wonderfully unique. And we do everything we can to help you find
+                            {{$a->judul}} </h4>
+                        <p class="desc">{{$a->keterangan}}</p>
+                        {{-- <p>Our audience (AKA you) is wonderfully unique. And we do everything we can to help you find
                             your fit, offering our Ciloe Brands in more than 30 sizes – and we’re committed to providing
-                            all sizes at the same price</p>
+                            all sizes at the same price</p> --}}
                     </div>
                 </div>
             </div>
