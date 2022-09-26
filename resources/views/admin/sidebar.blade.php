@@ -71,11 +71,12 @@
                 <li class="nav-item">
                     <a href="{{route('daftarUser')}}" class="nav-link">
                         <i class="nav-icon fas fa-user"></i>
-                        <p>User & Penyelenggara</p>
+                        <p>User & Penyelenggara</p></a>
                 </li>
                 <li class="nav-item">
-
-                    <a></a>
+                    <a href="{{route('about')}}" class="nav-link">
+                        <i class="nav-icon fas fa-info-circle"></i>
+                        <p>About</p></a>
                 </li>
                 <form action="{{ route ('logout')}}" method="post">
                     <div>

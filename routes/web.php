@@ -214,4 +214,10 @@ Auth::routes();
 
     //Tentang
     Route::get('/about','AdminHomeController@indextentang')->name('tentang');
+    Route::get('/admin/about','AdminHomeController@indexabout')->name('about');
+    Route::get('/admin/about/create','AdminHomeController@createtoabout')->name('about.create');
+    Route::post('/admin/about/create/created','AdminHomeController@createabout')->name('about.created');
+    Route::get('/admin/about/edit/{id}','AdminHomeController@edittentang')->name('about.edit');
+    Route::get('/admin/about/delete/{id}','AdminHomeController@destroyabout')->name('about.delete');
+    Route::post('/admin/about/delete/{id}','AdminHomeController@updateabout')->name('about.update');
 

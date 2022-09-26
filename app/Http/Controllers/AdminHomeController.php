@@ -53,22 +53,55 @@ class AdminHomeController extends Controller
         // dd($about);
         return view('premium.index', [
             'about' => $about
+        ]);  
+    }
+    public function createtoabout(Request $request)
+    {
+            return view('admin.about.create');
+    }
+    public function createabout(Request $request)
+    {
+        $about = new Tentang;
+        $about->gambar = $request->gambar;
+        $about->judul = $request->judul;
+        $about->keterangan = $request->keterangan;
+        $about->save();
+
+        return view('admin.about.index');
+    }
+
+    public function indexabout()
+    {
+        $about = Tentang::all();
+        // dd($about);
+        return view('admin.about.index', [
+            'about' => $about
         ]);    
     }
-    public function createtentang()
+    public function edittentang(id $id)
     {
-        // 
+        $about = Tentang::find($id);
+        return view('admin.about.edit', [
+            'about' => $about
+        ]);
     }
-    public function edittentang()
+    public function updateabout()
     {
-        // 
+        $about = new Tentang;
+        $about->gambar = $request->gambar;
+        $about->judul = $request->judul;
+        $about->keterangan = $request->keterangan;
+        $about->update();
+        return view('admin.about.edit', [
+            'about' => $about
+        ]);
+
     }
-    public function updatetentang()
+    public function destroyabout($id)
     {
-        // 
-    }
-    public function destroytentang()
-    {
-        //
+        $about = Tentang::find('id', $id);
+        return view('admin.about.edit', [
+            'about' => $about
+        ]);
     }
 }
