@@ -33,12 +33,12 @@
 
 						<div class="form-group">
                             <label for="kategori">Kategori</label>
-                                <select id="kategori" name="kategori" class="form-control">
-                                    <option selected>pilih kategori</option>
-                                    <option value="aktivitas">Aktivitas</option>
-                                    <option value="kursus">Kursus</option>
-                                    <option value="experience">Experience</option>
-                                    <option value="gratis">Gratis</option>
+							<select id="kategori" name="kategori" class="form-control">
+                                <option selected>---  Select  ---</option>
+                                <option>Aktivitas</option>
+                                <option>Kursus</option>
+                                <option>Experience</option>
+                                <option>Gratis</option>
                             </select>
                         </div>
 

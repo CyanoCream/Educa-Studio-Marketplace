@@ -33,12 +33,12 @@
                         
                         <div class="form-group">
                             <label for="kategori">Kategori</label>
-                                <select id="kategori" name="kategori" class="form-control">
-                                    <option selected>---  Select  ---</option>
-                                    <option>Aktivitas</option>
-                                    <option>Kursus</option>
-                                    <option>Experience</option>
-                                    <option>Gratis</option>
+                            <select id="kategori" name="kategori" class="form-control">
+                                <option selected>---  Select  ---</option>
+                                <option>Aktivitas</option>
+                                <option>Kursus</option>
+                                <option>Experience</option>
+                                <option>Gratis</option>
                             </select>
                         </div>
 
@@ -97,7 +97,7 @@
                         </div>
 
                         <div class="form-group">
-                            <label for="user_id">Nama Penyelenggara</label>
+                            <label for="user_id">nama Penyelenggara</label>
                             <select class="form-control" name="user_id" id="user_id" required="required">
                                 @foreach ($user as $u)                                    
                                    <option value="{{$u->id}}">{{$u->nama_penyelenggara}}</option>
