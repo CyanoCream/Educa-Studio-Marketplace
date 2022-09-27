@@ -47,10 +47,12 @@ class AdminHomeController extends Controller
         return view('Penyelenggara.dashboard');
     }
 
+
+    //about
     public function indextentang()
     {
         $about = Tentang::all();
-        // dd($about);
+        dd($about);
         return view('premium.index', [
             'about' => $about
         ]);  
@@ -59,15 +61,25 @@ class AdminHomeController extends Controller
     {
             return view('admin.about.create');
     }
-    public function createabout(Request $request)
+    public function storeabout(Request $request)
     {
+        if ($request->hasFile('gambar')) {
+            $about = $request->file('gambar');
+            $fileName = str_random(30).'.'.$about->getClientOriginalExtension();
+            $imageName = $fileName;
+            $about->move('images/', $fileName);
+        } else {
+            $fileName = 'noimage.png';
+        }
+
         $about = new Tentang;
-        $about->gambar = $request->gambar;
+        $about->gambar = $fileName;
         $about->judul = $request->judul;
         $about->keterangan = $request->keterangan;
         $about->save();
 
-        return view('admin.about.index');
+        // return view('admin.about.index');
+        return redirect(route('about'));
     }
 
     public function indexabout()
@@ -78,30 +90,42 @@ class AdminHomeController extends Controller
             'about' => $about
         ]);    
     }
-    public function edittentang(id $id)
+
+    public function edittentang($id)
     {
         $about = Tentang::find($id);
         return view('admin.about.edit', [
             'about' => $about
         ]);
     }
-    public function updateabout()
+
+    public function updateabout(Request $request, $about)
     {
-        $about = new Tentang;
-        $about->gambar = $request->gambar;
+        $about = Tentang::find($about);
+
+        if ($request->hasFile('gambar')) {
+            $about = $request->file('gambar');
+            $fileName = str_random(30).'.'.$about->getClientOriginalExtension();
+            $imageName = $fileName;
+            $about->move('images/', $fileName);
+        } else {
+            $fileName = 'noimage.png';
+        }
+
+        $about->gambar = $fileName;
         $about->judul = $request->judul;
         $about->keterangan = $request->keterangan;
-        $about->update();
-        return view('admin.about.edit', [
+        $about->save();
+
+        return view('admin.about.index', [
             'about' => $about
         ]);
 
     }
+
     public function destroyabout($id)
     {
-        $about = Tentang::find('id', $id);
-        return view('admin.about.edit', [
-            'about' => $about
-        ]);
+        $about = Tentang::find($id)->delete();
+        return redirect()->back();
     }
 }

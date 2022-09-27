@@ -212,8 +212,6 @@ class AdminGambarController extends Controller
         return redirect()->back();
     }
 
-
-
     public function destroy_p($id)
     {
         $gambar = Gambar::find($id)->delete();

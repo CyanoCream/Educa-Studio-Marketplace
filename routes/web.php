@@ -213,11 +213,21 @@ Auth::routes();
     Route::get('/ajax', 'ProdukController@ajax');
 
     //Tentang
-    Route::get('/about','AdminHomeController@indextentang')->name('tentang');
-    Route::get('/admin/about','AdminHomeController@indexabout')->name('about');
-    Route::get('/admin/about/create','AdminHomeController@createtoabout')->name('about.create');
-    Route::post('/admin/about/create/created','AdminHomeController@createabout')->name('about.created');
-    Route::get('/admin/about/edit/{id}','AdminHomeController@edittentang')->name('about.edit');
-    Route::get('/admin/about/delete/{id}','AdminHomeController@destroyabout')->name('about.delete');
-    Route::post('/admin/about/update/{id}','AdminHomeController@updateabout')->name('about.update');
+
+    // Route::get('/about','AdminHomeController@indextentang')->name('tentang');
+    
+    // Route::get('/about','AdminHomeController@indexabout')->name('about');
+    Route::get('/about/create','AdminHomeController@createtoabout')->name('about.create');
+    Route::post('/about/create','AdminHomeController@storeabout')->name('about.store');
+    Route::get('/about/{about}/edit','AdminHomeController@edittentang')->name('about.edit');
+    Route::post('/about/{about}/edit','AdminHomeController@updateabout')->name('about.update');
+    Route::get('/about/delete/{id}','AdminHomeController@destroyabout')->name('about.delete');
+
+    // Route::get('/about', 'AdminHomeController@index_about')->name('daftarAbout');
+    // Route::get('/about/create', 'AdminHomeController@create_about')->name('createAbout');
+    // Route::post('/about/create', 'AdminHomeController@store_about')->name('storeAbout');
+    // Route::get('/about/{about}/edit', 'AdminHomeController@edit_about')->name('editAbout');
+    // Route::post('/about/{about}/edit', 'AdminHomeController@update_about')->name('updateAbout');
+    // Route::get('/about/{about}/delete', 'AdminHomeController@destroy_about')->name('deleteAbout');
+
 
