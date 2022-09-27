@@ -52,7 +52,7 @@ class AdminHomeController extends Controller
     public function indextentang()
     {
         $about = Tentang::all();
-        dd($about);
+        // dd($about);
         return view('premium.index', [
             'about' => $about
         ]);  
@@ -101,25 +101,24 @@ class AdminHomeController extends Controller
 
     public function updateabout(Request $request, $about)
     {
-        $about = Tentang::find($about);
+        
+        $kabuto = Tentang::find($about);
 
         if ($request->hasFile('gambar')) {
-            $about = $request->file('gambar');
-            $fileName = str_random(30).'.'.$about->getClientOriginalExtension();
+            $kabutoo = $request->file('gambar');
+            $fileName = str_random(30).'.'.$kabutoo->getClientOriginalExtension();
             $imageName = $fileName;
-            $about->move('images/', $fileName);
+            $kabutoo->move('images/', $fileName);
         } else {
             $fileName = 'noimage.png';
         }
 
-        $about->gambar = $fileName;
-        $about->judul = $request->judul;
-        $about->keterangan = $request->keterangan;
-        $about->save();
+        $kabuto->gambar = $fileName;
+        $kabuto->judul = $request->judul;
+        $kabuto->keterangan = $request->keterangan;
+        $kabuto->update();
 
-        return view('admin.about.index', [
-            'about' => $about
-        ]);
+        return redirect(route('about'));
 
     }
 

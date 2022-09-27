@@ -54,9 +54,15 @@ div@extends('layouts.master2')
         </div>
     </div>
 </div>
+<<<<<<< HEAD
 
 @foreach ($about as $a)
+=======
+    
+
+>>>>>>> cf8b0a64026edd3ebe46f546e999ef52dec1ca4a
 <div class="site-main  main-container no-sidebar" style="padding-top:110px;">
+    @foreach ($about as $a)
     <div class="section-037" style="padding-bottom: 100px;">
         <div class="container">
             <div class="kodory-popupvideo style-01">
@@ -67,12 +73,19 @@ div@extends('layouts.master2')
                     <div class="popupvideo-wrap">
                         <h4 class="title">
                             {{$a->judul}} </h4>
+<<<<<<< HEAD
                             <p class="desc">{{$a->keterangan}}</p>
                             {{-- <p>Our audience (AKA you) is wonderfully unique. And we do everything we can to help you find
                                 your fit, offering our Ciloe Brands in more than 30 sizes – and we’re committed to providing
                                 all sizes at the same price</p> --}}
                             </div>
                         </div>
+=======
+                        <p class="desc">{{$a->keterangan}}</p>
+                        {{-- <p>Our audience (AKA you) is wonderfully unique. And we do everything we can to help you find
+                            your fit, offering our Ciloe Brands in more than 30 sizes – and we’re committed to providing
+                            all sizes at the same price</p> --}}
+>>>>>>> cf8b0a64026edd3ebe46f546e999ef52dec1ca4a
                     </div>
                 </div>
             </div>

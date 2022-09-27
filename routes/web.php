@@ -73,8 +73,8 @@ Route::get('/daftar', function () {
 
 Auth::routes();
 
-Route::post('/postlogin', 'LoginController@postlogin')->name('postlogin');
-Route::post('/logout', 'LoginController@logout')->name('logout');
+// Route::post('/postlogin', 'LoginController@postlogin')->name('postlogin');
+// Route::post('/logout', 'LoginController@logout')->name('logout');
 
 Auth::routes();
 // home admin
@@ -213,11 +213,27 @@ Auth::routes();
     Route::get('/ajax', 'ProdukController@ajax');
 
     //Tentang
-    // Route::get('/about','AdminHomeController@indextentang')->name('tentang');
-    
+    Route::get('/tentang','AdminHomeController@indextentang')->name('premium.index');
+    Route::get('/premium', function () {
+        return view('premium.index');
+    })->name('tentang');
+
     Route::get('/about','AdminHomeController@indexabout')->name('about');
     Route::get('/about/create','AdminHomeController@createtoabout')->name('about.create');
     Route::post('/about/create','AdminHomeController@storeabout')->name('about.store');
     Route::get('/about/{about}/edit','AdminHomeController@edittentang')->name('about.edit');
+<<<<<<< HEAD
     Route::post('/about/{about}/edit','AdminHomeController@updateabout')->name('about.update');
     Route::get('/about/delete/{id}','AdminHomeController@destroyabout')->name('about.delete');
+=======
+    Route::post('/about/{about}/update','AdminHomeController@updateabout')->name('about.update');
+    Route::get('/about/delete/{id}','AdminHomeController@destroyabout')->name('about.delete');
+
+    // Route::get('/about', 'AdminHomeController@index_about')->name('daftarAbout');
+    // Route::get('/about/create', 'AdminHomeController@create_about')->name('createAbout');
+    // Route::post('/about/create', 'AdminHomeController@store_about')->name('storeAbout');
+    // Route::get('/about/{about}/edit', 'AdminHomeController@edit_about')->name('editAbout');
+    // Route::post('/about/{about}/edit', 'AdminHomeController@update_about')->name('updateAbout');
+    // Route::get('/about/{about}/delete', 'AdminHomeController@destroy_about')->name('deleteAbout');
+
+>>>>>>> cf8b0a64026edd3ebe46f546e999ef52dec1ca4a
