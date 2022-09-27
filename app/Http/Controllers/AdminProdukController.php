@@ -199,7 +199,7 @@ class AdminProdukController extends Controller
         $produk->bundling = $request->bundling;
         $produk->user_id = $request->user_id;
         $produk->save();
-
+        //user_id ditrequest dengan tabel user menggunakan select option
         return redirect(route('daftarProduk'));
     }
 
