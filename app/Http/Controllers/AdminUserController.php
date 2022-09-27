@@ -45,25 +45,6 @@ class AdminUserController extends Controller
      */
     public function store(Request $request)
     {
-        // $validatedData = $request->validate([
-        //     'name' => 'required|string|max:255' ,
-        //     'email' => 'required|string|max:255' ,
-        //     'password' => 'required|string|max:255' ,
-        //     'role' => 'required|string|max:255' ,
-        //     'foto' => 'required|string|max:255' ,
-        //     'panggilan' => 'required|string|max:255' ,
-        //     'tgl_lahir' => 'required|string|max:255' ,
-        //     'alamat' => 'required|string|max:255' ,
-        //     'provinsi' => 'required|string|max:255' ,
-        //     'kota' => 'required|string|max:255' ,
-        //     'kecamatan' => 'required|string|max:255' ,
-        //     'notelp' => 'required|string|max:255' ,
-        //     'icon_penyelenggara' => 'required|string|max:255' ,
-        //     'nama_penyelenggara' => 'required|string|max:255' ,
-        //     'kota_penyelenggara' => 'required|string|max:255' ,
-        //     'deskripsi' => 'required|string|max:255' ,
-        //     'jam_operasional' => 'required|string|max:255' ,
-        // ]);
 
         if ($request->hasFile('foto')) {
             $user = $request->file('foto');
@@ -84,6 +65,7 @@ class AdminUserController extends Controller
         }
 
         $user = new user($validatedData);
+        
         $user->name = $request->name;
         $user->email = $request->email;
         $user->password = $request->password;

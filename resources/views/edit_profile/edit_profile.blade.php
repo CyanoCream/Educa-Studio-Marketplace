@@ -10,7 +10,7 @@
     <hr>
 </div>
 
-<div class="modal fade" id="editProfile" tabindex="-1" aria-labelledby="editProfileLabel" aria-hidden="true">
+<div class="modal fade" id="editProfile" tabindex="-1" aria-labelledby="editProfileLabel" aria-hidden="true" style="max-height: calc(100% - 60px);">
     <div class="modal-dialog">
         <div class="modal-content" style="border-radius: 20px">
             <div class="modal-header">

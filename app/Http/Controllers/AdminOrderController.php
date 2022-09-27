@@ -16,10 +16,10 @@ class AdminOrderController extends Controller
     public function index()
     {
         // $orders = order::all();
-        $orders = DB::table('tbl_produks')
-        ->join('tbl_orders','tbl_orders.id_produk' , '=', 'tbl_produks.id' )
+        $orders = DB::table('tbl_orders')
+        ->leftjoin('tbl_produks','tbl_orders.id_produk' , '=', 'tbl_produks.id' )
         // ->join('tbl_orders', 'users.id', '=', 'tbl_orders.id_penyelenggara')
-        ->select('tbl_orders.nama_produk')
+        ->select('tbl_orders.nama_produk', 'tbl_orders.*')
         ->get();
         // dd($orders);
         return view('admin.order.index', [

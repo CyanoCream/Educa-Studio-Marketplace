@@ -44,10 +44,10 @@
 						<div class="form-group">
                             <label for="role">role</label>
                                 <select id="role" name="role" class="form-control">
-                                <option selected>pilih role</option>
-                                <option value="">Admin</option>
-                                <option value="">Penyelenggara</option>
-                                <option value="">User</option>
+                                <option selected>--- Select ---</option>
+                                <option value="admin">Admin</option>
+                                <option value="penyelenggara">Penyelenggara</option>
+                                <option value="user">User</option>
                             </select>
                         </div>
 
