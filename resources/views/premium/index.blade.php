@@ -54,11 +54,6 @@
         </div>
     </div>
 </div>
-<<<<<<< HEAD
-
-=======
-@foreach ($abouts as $about)
->>>>>>> aa618825cecd03788e79014861c3934cdcd714fb
     
 
 <div class="site-main  main-container no-sidebar" style="padding-top:110px;">
@@ -68,12 +63,12 @@
             <div class="kodory-popupvideo style-01">
                 <div class="popupvideo-inner">
                     <div class="icon">
-                        <img src="images/{{$about->gambar}}" class="attachment-full size-full" alt="img">
+                        <img src="images/{{$a->gambar}}" class="attachment-full size-full" alt="img">
                     </div>
                     <div class="popupvideo-wrap">
                         <h4 class="title">
-                            {{$about->judul}} </h4>
-                        <p class="desc">{{$about->keterangan}}</p>
+                            {{$a->judul}} </h4>
+                        <p class="desc">{{$a->keterangan}}</p>
                         {{-- <p>Our audience (AKA you) is wonderfully unique. And we do everything we can to help you find
                             your fit, offering our Ciloe Brands in more than 30 sizes – and we’re committed to providing
                             all sizes at the same price</p> --}}
