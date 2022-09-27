@@ -54,10 +54,11 @@
         </div>
     </div>
 </div>
-@foreach ($about as $a)
+
     
-@endforeach
+
 <div class="site-main  main-container no-sidebar" style="padding-top:110px;">
+    @foreach ($about as $a)
     <div class="section-037" style="padding-bottom: 100px;">
         <div class="container">
             <div class="kodory-popupvideo style-01">
@@ -77,6 +78,7 @@
             </div>
         </div>
     </div>
+    @endforeach
     <div class="section-006 section-001">
         <div class="container">
             <div class="kodory-slide">

@@ -73,8 +73,8 @@ Route::get('/daftar', function () {
 
 Auth::routes();
 
-Route::post('/postlogin', 'LoginController@postlogin')->name('postlogin');
-Route::post('/logout', 'LoginController@logout')->name('logout');
+// Route::post('/postlogin', 'LoginController@postlogin')->name('postlogin');
+// Route::post('/logout', 'LoginController@logout')->name('logout');
 
 Auth::routes();
 // home admin
@@ -219,5 +219,5 @@ Auth::routes();
     Route::post('/admin/about/create/created','AdminHomeController@createabout')->name('about.created');
     Route::get('/admin/about/edit/{id}','AdminHomeController@edittentang')->name('about.edit');
     Route::get('/admin/about/delete/{id}','AdminHomeController@destroyabout')->name('about.delete');
-    Route::post('/admin/about/delete/{id}','AdminHomeController@updateabout')->name('about.update');
+    Route::post('/admin/about/update/{id}','AdminHomeController@updateabout')->name('about.update');
 
