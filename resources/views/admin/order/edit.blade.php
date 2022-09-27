@@ -31,18 +31,13 @@
 							<input type="text" name="status_order" id="status_order" class="form-control" required="required" value="{{ $order->status_order }}" placeholder="Masukkan status order">
 						</div>
 
-						{{-- <div class="form-group">
-							<label for="id_produk">nama produk</label>
-							<select class="form-control" name="id_produk" id="id_produk" required="required">
-								@foreach ($produk as $pdk)                                    
-								   <option value="{{$pdk->id}}">{{$pdk->nama_produk}}</option>
-									@endforeach
-							</select>
-						</div> --}}
-
 						<div class="form-group">
 							<label for="id_penyelenggara">id penyelenggara</label>
-							<input type="text" name="id_penyelenggara" id="id_penyelenggara" class="form-control" required="required" value="{{ $order->id_penyelenggara }}" placeholder="Masukkan id penyelenggara">
+							<select class="form-control" name="id_penyelenggara" id="id_penyelenggara" required="required">
+								@foreach ($produks as $pdk)
+								   <option value="{{$pdk->id}}">{{$pdk->nama_penyelenggara}}</option>
+								@endforeach
+							</select>
 						</div>
 
 						<div class="form-group">
@@ -88,9 +83,9 @@
 						<div class="form-group">
 							<label for="nama_produk">nama produk</label>
 							<select class="form-control" name="id_produk" id="id_produk" required="required">
-								{{-- @foreach ($produk as $pdk)                                    
+								@foreach ($produk as $pdk)                                    
 								   <option value="{{$pdk->id}}">{{$pdk->nama_produk}}</option>
-								@endforeach --}}
+								@endforeach
 							</select>
 						</div>
 

@@ -113,7 +113,7 @@
 
 						<div class="form-group">
 							<label for="jam_operasional">jam operasional</label>
-							<input type="text" name="jam_operasional" id="jam_operasional" class="form-control" required="required" value="{{ $user->jam_operasional }}" placeholder="Masukkan jam operasional">
+							<input type="time" name="jam_operasional" id="jam_operasional" class="form-control" required="required" value="{{ $user->jam_operasional }}" placeholder="Masukkan jam operasional">
 						</div>
 
 						<div class="text-right">

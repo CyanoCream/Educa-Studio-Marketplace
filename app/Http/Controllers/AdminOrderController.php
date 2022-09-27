@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 use App\Order;
 use App\Produk;
+use App\User;
 use DB;
 use Illuminate\Http\Request;
 class AdminOrderController extends Controller
@@ -16,8 +17,9 @@ class AdminOrderController extends Controller
     {
         // $orders = order::all();
         $orders = DB::table('tbl_produks')
-        ->join('tbl_orders', 'tbl_produks.nama_produk', '=', 'tbl_orders.nama_produk')
-        ->select('tbl_produks.*', 'tbl_orders.*')
+        ->join('tbl_orders','tbl_orders.id_produk' , '=', 'tbl_produks.id' )
+        // ->join('tbl_orders', 'users.id', '=', 'tbl_orders.id_penyelenggara')
+        ->select('tbl_orders.nama_produk')
         ->get();
         // dd($orders);
         return view('admin.order.index', [
@@ -43,7 +45,7 @@ class AdminOrderController extends Controller
         $produks = Produk::all();
         // dd($produks);
         return view('admin.order.create',[
-            'produks' => $produks
+            'produks' => $produks,
         ]);
     }
 
@@ -57,7 +59,6 @@ class AdminOrderController extends Controller
     {
         $validatedData = $request->validate([
             'status_order' => 'required|string|max:255' ,
-            // 'id_produk' => 'required|integer' ,
             'id_penyelenggara' => 'required|integer' ,
             'jumlah_pesanan' => 'required|integer' ,
             'total_harga' => 'required|string|max:255' ,
@@ -111,7 +112,6 @@ class AdminOrderController extends Controller
     {
         $validatedData = $request->validate([
             'status_order' => 'required|string|max:255' ,
-            // 'id_produk' => 'required|integer' ,
             'id_penyelenggara' => 'required|integer' ,
             'jumlah_pesanan' => 'required|integer' ,
             'total_harga' => 'required|string|max:255' ,
@@ -127,7 +127,6 @@ class AdminOrderController extends Controller
         $order = order::find($order);
 
         $order->status_order = $request->status_order;
-        // $order->id_produk = $request->id_produk;
         $order->id_penyelenggara = $request->id_penyelenggara;
         $order->jumlah_pesanan = $request->jumlah_pesanan;
         $order->total_harga = $request->total_harga;
