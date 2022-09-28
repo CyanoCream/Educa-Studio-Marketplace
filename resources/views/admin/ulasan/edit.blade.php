@@ -27,8 +27,7 @@
 						{{ csrf_field() }}
 
 						<div class="form-group">
-							<label for="id_user">id user</label>
-							<input type="text" name="id_user" id="id_user" class="form-control" required="required" value="{{ $ulasan->id_user }}" placeholder="Masukkan id user">
+							<input type="hidden" name="id_user" value="{{ Auth::user()->id }}">
 						</div>
 
 						<div class="form-group">
@@ -37,14 +36,12 @@
 						</div>
 
 						<div class="form-group">
-							<label for="nama">nama</label>
-							<input type="text" name="nama" id="nama" class="form-control" required="required" value="{{ $ulasan->nama }}" placeholder="Masukkan nama">
-						</div>
+                            <input type="hidden" name="nama" value="{{ Auth::user()->name }}">
+                        </div>
 
-						<div class="form-group">
-							<label for="email">email</label>
-							<input type="email" name="email" id="email" class="form-control" required="required" value="{{ $ulasan->email }}" placeholder="Masukkan email">
-						</div>
+                        <div class="form-group">
+                            <input type="hidden" name="email" value="{{ Auth::user()->email }}">
+                        </div>
 
 						<div class="form-group">
 							<label for="penilaian">penilaian</label>
