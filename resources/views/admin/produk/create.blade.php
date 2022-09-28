@@ -35,6 +35,7 @@
                             <label for="kategori">Kategori</label>
                             <select id="kategori" name="kategori" class="form-control">
                                 <option selected>---  Select  ---</option>
+                                <option>Pilihan</option>
                                 <option>Aktivitas</option>
                                 <option>Kursus</option>
                                 <option>Experience</option>
@@ -95,7 +96,15 @@
                             <input type="text" name="bundling" id="bundling" class="form-control" required="required"
                                 placeholder="Masukkan bundling">
                         </div>
-                        <input type="hidden" name="user_id" value="{{ Auth::user()->id }}">
+
+                        <div class="form-group">
+							<label for="user_id">nama penyelenggara</label>
+							<select class="form-control" name="user_id" id="user_id" required="required">
+                                @foreach ($user as $u)                                    
+                                   <option value="{{$u->id}}">{{$u->nama_penyelenggara}}</option>
+                                @endforeach
+                            </select>
+						</div>
                         <div class="text-right">
                             <a href="{{ route('daftarProduk') }}" class="btn btn-outline-secondary mr-2" role="button">Batal</a>
                             <button type="submit" onclick="save(this)" class="btn btn-primary">Simpan</button>

@@ -27,7 +27,7 @@
 
 						<div class="form-group">
 							<label for="status_order">status order</label>
-							<input type="text" name="status_order" id="status_order" class="form-control" required="required" placeholder="Masukkan status order">
+							<input type="text" name="status_order" id="status_order" class="form-control" required="required" placeholder="Masukkan status order 0">
 						</div>
 
 						<div class="form-group">

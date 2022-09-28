@@ -84,55 +84,7 @@
 
 <script src="{{ asset('calendar/app.js') }}"></script> --}}
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-{{-- <script>
-    const labels = [
-        'Januari',
-        'Februari',
-        'Maret',
-        'April',
-        'Mei',
-        'Juni',
-        'Juli',
-        'Agustus',
-        'September',
-        'Oktober',
-        'November',
-        'Desember'
-    ];
 
-    const data = {
-        labels: labels,
-        datasets: [{
-            label: 'My First dataset',
-            backgroundColor: [
-                'white',
-                'blue',
-                'pink',
-                'gray',
-                'yellow',
-                'orange',
-                'purple',
-                'red',
-                'black',
-                'navy',
-                'violet',
-                'brown'
-            ],
-            data: [3, 1, 3, 2, 1, 1, 1, 1, 3, 5, 2, 1],
-        }]
-    };
-
-    const config = {
-        type: 'doughnut',
-        data: data,
-        options: {}
-    };
-
-    var myChart = new Chart(
-        document.getElementById('myChart'),
-        config
-    );
-</script> --}}
 <script>
     var myDate = new Date();
     var hrs = myDate.getHours();
