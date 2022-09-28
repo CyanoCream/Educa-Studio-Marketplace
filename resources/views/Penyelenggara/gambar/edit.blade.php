@@ -32,13 +32,15 @@
 							<input type="file" name="gambar" id="gambar" class="form-control" required="required"
 								value="{{ $gambar->gambar }}" placeholder="Masukkan gambar">
 						</div>
-
 						<div class="form-group">
-							<label for="id_produk">id produk</label>
-							<input type="text" name="id_produk" id="id_produk" class="form-control" required="required"
-								value="{{ $gambar->id_produk }}" placeholder="Masukkan id_produk">
+							<label for="user_id">nama produk</label>
+							<select class="form-control" name="id_produk" id="nama_produk" required="required">
+                                @foreach ($produk as $u)                                    
+                                   <option value="{{$u->id}}">{{$u->nama_produk}}</option>
+                                @endforeach
+                            </select>
 						</div>
-
+						<input type="hidden" value="{{Auth::user()->id}}" name="user_id">
 						<div class="text-right">
 							<a href="{{ route('daftarPenyelenggara_gambar') }}" class="btn btn-outline-secondary mr-2" role="button">Batal</a>
 							<button type="submit" onclick="save(this)" class="btn btn-primary">Simpan</button>

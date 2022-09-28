@@ -29,12 +29,17 @@ class AdminGambarController extends Controller
     public function index_p()
     {
         $id = auth()->user()->id;
-        
-        $gambars = Gambar::where('user_id', $id)->get();
-        // dd($gambars);
-
+        // $produk = Produk::with('gambar')->where('user_id', $id)->get();
+        // $gambars = Gambar::where('user_id', $id)->get();
+        // dd($produk);
+        $gambars = DB::table('tbl_gambars')
+            ->leftjoin('tbl_produks', 'tbl_gambars.id_produk', '=', 'tbl_produks.id')
+            ->select('tbl_produks.*', 'tbl_gambars.*')->having('tbl_produks.user_id', $id)
+            ->get();
+            // dd($users);
         return view('Penyelenggara.gambar.index', [
-            'gambars' => $gambars
+            'gambars' => $gambars,
+            
         ]);
         
     }
@@ -59,7 +64,13 @@ class AdminGambarController extends Controller
     //admin penyelenggara
     public function create_p()
     {
-        return view('Penyelenggara.gambar.create');
+        $id = auth()->user()->id;
+        $produk = Produk::where('user_id', $id)->get();
+        // return $produk;
+        return view('Penyelenggara.gambar.create',[
+            'produk' => $produk
+        ]);
+        
     }
 
     /**
@@ -142,9 +153,13 @@ class AdminGambarController extends Controller
     //admin penyelenggara
     public function edit_p($id)
     {
+        $id = auth()->user()->id;
+        $produk = Produk::where('user_id', $id)->get();
         $gambar = Gambar::find($id);
+        // return $produk;
         return view('Penyelenggara.gambar.edit', [
-            'gambar' => $gambar
+            'gambar' => $gambar,
+            'produk' => $produk
         ]);
     }
 
