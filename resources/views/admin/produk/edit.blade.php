@@ -35,6 +35,7 @@
                             <label for="kategori">Kategori</label>
 							<select id="kategori" name="kategori" class="form-control">
                                 <option selected>---  Select  ---</option>
+								<option>Pilihan</option>
                                 <option>Aktivitas</option>
                                 <option>Kursus</option>
                                 <option>Experience</option>
