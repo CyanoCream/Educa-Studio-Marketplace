@@ -102,23 +102,22 @@ class AdminProdukController extends Controller
     //admin penyelenggara
     public function store_p(Request $request)
     {
-        $validatedData = $request->validate([
-            'nama_produk' => 'required|string|max:255' ,
-            'kategori' => 'required|string|max:255' ,
-            'harga_produk' => 'required|string|max:255' ,
-            'status_produk' => 'required|string|max:255' ,
-            'stock' => 'required|integer' ,
-            'pertemuan' => 'required|string|max:255' ,
-            'waktu_temu' => 'required|integer' ,
-            'umur' => 'required|string|max:255' ,
-            'keterangan' => 'required|string|max:255' ,
-            'manfaat' => 'required|string|max:255' ,
-            'bundling' => 'required|string|max:255' ,
-            'user_id' => 'required|integer' ,
-        ]);
-        
-        $produk = new produk($validatedData);
+        $produk = new produk;
+        $produk->nama_produk = $request->nama_produk;
+        $produk->kategori = $request->kategori;
+        $produk->harga_produk = $request->harga_produk;
+        $produk->status_pertemuan = $request->status_pertemuan;
+        $produk->stock = $request->stock;
+        $produk->pertemuan = $request->pertemuan;
+        $produk->waktu_temu = $request->waktu_temu;
+        $produk->umur = $request->umur;
+        $produk->keterangan = $request->keterangan;
+        $produk->manfaat = $request->manfaat;
+        $produk->bundling = $request->bundling;
+        $produk->user_id = $request->user_id;
         $produk->save();
+
+       
         // dd($penyelenggara);
         return redirect(route('daftarPenyelenggara_produk'));
     }
@@ -153,9 +152,11 @@ class AdminProdukController extends Controller
     //admin penyelenggara
     public function edit_p($id)
     {
+        $user = User::all();
         $produk = produk::find($id);
         return view('Penyelenggara.produk.edit', [
-            'user' => $user
+            'user' => $user,
+            'produk' => $produk
         ]);
     }
 
@@ -207,23 +208,7 @@ class AdminProdukController extends Controller
     public function update_p(Request $request, $produk)
     {
     
-        $validatedData = $request->validate([
-            'nama_produk' => 'required|string|max:255' ,
-            'kategori' => 'required|string|max:255' ,
-            'harga_produk' => 'required|string|max:255' ,
-            'status_produk' => 'required|string|max:255' ,
-            'stock' => 'required|integer' ,
-            'pertemuan' => 'required|string|max:255' ,
-            'waktu_temu' => 'required|integer' ,
-            'umur' => 'required|string|max:255' ,
-            'keterangan' => 'required|string|max:255' ,
-            'manfaat' => 'required|string|max:255' ,
-            'bundling' => 'required|string|max:255' ,
-            'user_id' => 'required|integer' ,
-        ]);
-
         $produk = produk::find($produk);
-        $id = auth()->user()->id;
 
         $produk->nama_produk = $request->nama_produk;
         $produk->kategori = $request->kategori;
@@ -236,8 +221,8 @@ class AdminProdukController extends Controller
         $produk->keterangan = $request->keterangan;
         $produk->manfaat = $request->manfaat;
         $produk->bundling = $request->bundling;
-        $produk->user_id = $request->$id;
-        $produk->save();
+        $produk->user_id = $request->user_id;
+        $produk->update();
 
         return redirect(route('daftarPenyelenggara_produk'));
     }

@@ -35,10 +35,10 @@
                             <label for="kategori">Kategori</label>
                                 <select id="kategori" name="kategori" class="form-control">
                                     <option selected>pilih kategori</option>
-                                    <option value="">Aktivitas</option>
-                                    <option value="">Kursus</option>
-                                    <option value="">Experience</option>
-                                    <option value="">Gratis</option>
+                                    <option value="Aktivitas">Aktivitas</option>
+                                    <option value="Kursus">Kursus</option>
+                                    <option value="Experience">Experience</option>
+                                    <option value="0">Gratis</option>
                             </select>
                         </div>
 
@@ -95,13 +95,7 @@
                             <input type="text" name="bundling" id="bundling" class="form-control" required="required"
                                 placeholder="Masukkan bundling">
                         </div>
-
-                        <div class="form-group">
-                            <label for="user_id">user id</label>
-                            <input type="text" name="user_id" id="user_id" class="form-control" required="required"
-                                placeholder="Masukkan user id">
-                        </div>
-
+                        <input type="hidden" name="user_id" value="{{ Auth::user()->id }}">
                         <div class="text-right">
                             <a href="{{ route('daftarPenyelenggara_produk') }}" class="btn btn-outline-secondary mr-2" role="button">Batal</a>
                             <button type="submit" onclick="save(this)" class="btn btn-primary">Simpan</button>
