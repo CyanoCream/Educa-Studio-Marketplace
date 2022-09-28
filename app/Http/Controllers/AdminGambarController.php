@@ -18,8 +18,11 @@ class AdminGambarController extends Controller
      */
     public function index()
     {
-        $gambars = Gambar::all();
-
+        // $gambars = Gambar::all();
+        $gambars = DB::table('tbl_gambars')
+        ->leftjoin('tbl_produks', 'tbl_gambars.id_produk', '=', 'tbl_produks.id')
+        ->select('tbl_produks.*', 'tbl_gambars.*')->get();
+        // return $gambars;
         return view('admin.gambar.index', [
             'gambars' => $gambars
         ]);
@@ -58,7 +61,12 @@ class AdminGambarController extends Controller
      */
     public function create()
     {
-        return view('admin.gambar.create');
+        $produk = Produk::all();
+        // return $produk;
+        return view('admin.gambar.create',[
+            'produk' => $produk
+        ]);
+
     }
 
     //admin penyelenggara
@@ -145,8 +153,10 @@ class AdminGambarController extends Controller
     public function edit($id)
     {
         $gambar = Gambar::find($id);
+        $produk = Produk::all();
         return view('admin.gambar.edit', [
-            'gambar' => $gambar
+            'gambar' => $gambar,
+            'produk' => $produk
         ]);
     }
 

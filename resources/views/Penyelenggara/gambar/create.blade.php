@@ -25,12 +25,6 @@
 				<div class="card-body">
 					<form action="{{ route('storePenyelenggara_gambar') }}" method="post" enctype="multipart/form-data">
 						{{csrf_field()}}
-
-						<div class="form-group">
-							<label for="gambar">gambar</label>
-							<input type="file" name="gambar" id="gambar" class="form-control" required="required" placeholder="Masukkan gambar">
-						</div>
-
 						<div class="form-group">
 							<label for="user_id">nama produk</label>
 							<select class="form-control" name="id_produk" id="nama_produk" required="required">
@@ -38,6 +32,10 @@
                                    <option value="{{$u->id}}">{{$u->nama_produk}}</option>
                                 @endforeach
                             </select>
+						</div>
+						<div class="form-group">
+							<label for="gambar">gambar</label>
+							<input type="file" name="gambar" id="gambar" class="form-control" required="required" placeholder="Masukkan gambar">
 						</div>
 						<input type="hidden" name="user_id" value="{{Auth::user()->id}}">
 						<div class="text-right">

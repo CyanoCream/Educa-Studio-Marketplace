@@ -61,8 +61,7 @@
                             <tr>
                                 <th>id</th>
                                 <th>gambar</th>
-                                <th>id produk</th>
-                                <th>user id</th>
+                                <th>nama produk</th>
                                 <th>aksi</th>
                             </tr>
                         </thead>
@@ -71,8 +70,7 @@
                             <tr>
                                 <td>{{ $loop->index + 1 }}</td>
                                 <td><img src="/images/{{ $gambar->gambar }}" alt="" width="100px"></td>
-                                <td>{{ $gambar->id_produk }}</td>
-                                <td>{{ $gambar->user_id }}</td>
+                                <td>{{ $gambar->nama_produk }}</td>
                                 <td>
                                     <a onclick="edit(this)"
                                         data-url="{{route('editGambar', ['id' => $gambar->id])}}"
