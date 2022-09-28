@@ -53,8 +53,8 @@
             </div>
         </div>
     </div>
-    <div class="card p-5 m-5" style="border-radius: 20px; background: rgb(182, 141, 235);
-    background: linear-gradient(180deg, rgb(214, 191, 244) 0%, rgb(244, 177, 245) 53%, rgb(243, 133, 133) 100%);">
+    <div class="card p-5 m-5" style="border-radius: 20px; background: rgb(160, 128, 202);
+    background: linear-gradient(180deg, rgb(197, 175, 225) 0%, rgb(236, 188, 237) 53%, rgb(213, 145, 145) 100%);">
         <div class="card m-2 text-center" style="border-radius: 20px">
             <h2><strong> TOP UP </strong></h2>
         </div>
