@@ -226,13 +226,8 @@ Auth::routes();
     Route::post('/about/{about}/edit','AdminHomeController@updateabout')->name('about.update');
     Route::get('/about/delete/{id}','AdminHomeController@destroyabout')->name('about.delete');
 
-<<<<<<< HEAD
     // Route::post('/about/{about}/update','AdminHomeController@updateabout')->name('about.update');
     // Route::get('/about/delete/{id}','AdminHomeController@destroyabout')->name('about.delete');
-=======
-    Route::post('/about/{about}/update','AdminHomeController@updateabout')->name('about.update');
-    Route::get('/about/delete/{id}','AdminHomeController@destroyabout')->name('about.delete');
->>>>>>> 2a40a12e4f4c89ad411db986a4464fc3a7c45bd1
 
     // Route::get('/about', 'AdminHomeController@index_about')->name('daftarAbout');
     // Route::get('/about/create', 'AdminHomeController@create_about')->name('createAbout');
