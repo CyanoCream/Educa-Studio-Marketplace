@@ -33,12 +33,13 @@
                         
                         <div class="form-group">
                             <label for="kategori">Kategori</label>
-                                <select id="kategori" name="kategori" class="form-control">
-                                    <option selected>pilih kategori</option>
-                                    <option value="Aktivitas">Aktivitas</option>
-                                    <option value="Kursus">Kursus</option>
-                                    <option value="Experience">Experience</option>
-                                    <option value="0">Gratis</option>
+                            <select id="kategori" name="kategori" class="form-control">
+                                <option selected>---  Select  ---</option>
+                                <option>Pilihan</option>
+                                <option>Aktivitas</option>
+                                <option>Kursus</option>
+                                <option>Experience</option>
+                                <option>Gratis</option>
                             </select>
                         </div>
 
@@ -49,7 +50,7 @@
                         </div>
 
                         <div class="form-group">
-                            <label for="status_pertemuan">status pertemuan</label>
+                            <label for="status_pertemuan">status pertemuan (contoh : Online atau Offline)</label>
                             <input type="text" name="status_pertemuan" id="status_pertemuan" class="form-control"
                                 required="required" placeholder="Masukkan status pertemuan">
                         </div>
@@ -61,19 +62,19 @@
                         </div>
 
                         <div class="form-group">
-                            <label for="pertemuan">pertemuan</label>
+                            <label for="pertemuan">pertemuan (contoh : 1x Seminggu)</label>
                             <input type="text" name="pertemuan" id="pertemuan" class="form-control" required="required"
                                 placeholder="Masukkan pertemuan">
                         </div>
 
                         <div class="form-group">
-                            <label for="waktu_temu">waktu temu</label>
+                            <label for="waktu_temu">waktu temu (contoh : 1,2,3,...)</label>
                             <input type="text" name="waktu_temu" id="waktu_temu" class="form-control"
                                 required="required" placeholder="Masukkan waktu temu">
                         </div>
 
                         <div class="form-group">
-                            <label for="umur">umur</label>
+                            <label for="umur">umur (contoh : 4 Tahun)</label>
                             <input type="text" name="umur" id="umur" class="form-control" required="required"
                                 placeholder="Masukkan umur">
                         </div>
@@ -91,11 +92,20 @@
                         </div>
 
                         <div class="form-group">
-                            <label for="bundling">bundling</label>
+                            <label for="bundling">bundling (contoh : modul + sertifikat)</label>
                             <input type="text" name="bundling" id="bundling" class="form-control" required="required"
                                 placeholder="Masukkan bundling">
                         </div>
-                        <input type="hidden" name="user_id" value="{{ Auth::user()->id }}">
+
+                        <div class="form-group">
+							<label for="user_id">nama penyelenggara</label>
+							<select class="form-control" name="user_id" id="user_id" required="required">
+                                @foreach ($user as $u)                                    
+                                   <option value="{{$u->id}}">{{$u->nama_penyelenggara}}</option>
+                                @endforeach
+                            </select>
+						</div>
+
                         <div class="text-right">
                             <a href="{{ route('daftarPenyelenggara_produk') }}" class="btn btn-outline-secondary mr-2" role="button">Batal</a>
                             <button type="submit" onclick="save(this)" class="btn btn-primary">Simpan</button>

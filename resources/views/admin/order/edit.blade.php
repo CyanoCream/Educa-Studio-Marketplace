@@ -18,7 +18,7 @@
 			</div>
 		</div>
 	</div>
-	{{$order}}
+	
 	<div class="content">
 		<div class="container-fluid">
 			<div class="card">

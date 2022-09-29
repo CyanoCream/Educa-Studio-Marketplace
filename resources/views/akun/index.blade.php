@@ -57,9 +57,8 @@
 </div>
 <div class="card p-5 m-5" style="border-radius: 20px; background: rgb(196, 156, 246);
     background: linear-gradient(180deg, rgb(223, 202, 251) 0%, rgb(254, 203, 255) 53%, rgb(242, 218, 218) 100%);">
-    <img src="{{asset('images/user.png')}}" class="rounded mx-auto d-block"
-        style="border: 4px solid #71c0ef; border-radius:50% !important;" width="13%" alt="Profile Picture">
-        {{-- <img src="/images/{{ Auth::user()->foto }}" alt="" width="100px"> --}}
+    <img src="{{asset('images/user.png'/* .Auth::user()->foto */)}}" class="rounded mx-auto d-block mt-0"
+        style="border: 4px solid #71c0ef; border-radius:50% !important;" width="10%" alt="Profile Picture">
     <div class="card m-2 text-center" style="border-radius: 20px">
         <h2>{{ Auth::user()->name }}</h2>
         @if (Auth::user()->role == 'penyelenggara')

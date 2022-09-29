@@ -68,7 +68,7 @@
                         </div>
 
                         <div class="form-group">
-                            <label for="waktu_temu">waktu temu (contoh : 1,2,3,...)</label>
+                            <label for="waktu_temu">waktu temu (contoh : 1,2,3,... ->Menit)</label>
                             <input type="text" name="waktu_temu" id="waktu_temu" class="form-control"
                                 required="required" placeholder="Masukkan waktu temu">
                         </div>
@@ -105,6 +105,7 @@
                                 @endforeach
                             </select>
 						</div>
+
                         <div class="text-right">
                             <a href="{{ route('daftarProduk') }}" class="btn btn-outline-secondary mr-2" role="button">Batal</a>
                             <button type="submit" onclick="save(this)" class="btn btn-primary">Simpan</button>

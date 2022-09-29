@@ -57,21 +57,20 @@
                 <div class="card-body p-2">
                     <table class="table-update" id="data-table">
                         <thead>
-                            <tr>
-                                <th>id</th>
-                                <th>nama produk</th>
-                                <th>kategori</th>
-                                <th>harga produk</th>
-                                <th>status pertemuan</th>
-                                <th>stock</th>
-                                <th>pertemuan</th>
-                                <th>waktu temu</th>
-                                <th>umur</th>
-                                <th>keterangan</th>
-                                <th>manfaat</th>
-                                <th>bundling</th>
-                                <th>aksi</th>
-                            </tr>
+                            <th>id</th>
+                            <th>nama produk</th>
+                            <th>kategori</th>
+                            <th>harga produk</th>
+                            <th>status pertemuan</th>
+                            <th>stock</th>
+                            <th>pertemuan</th>
+                            <th>waktu temu</th>
+                            <th>umur</th>
+                            <th>keterangan</th>
+                            <th>manfaat</th>
+                            <th>bundling</th>
+                            <th>nama penyelenggara</th>
+                            <th>aksi</th>
                         </thead>
                         <tbody>
                             @foreach ($produks as $produk)
@@ -88,6 +87,7 @@
                                 <td>{{ $produk->keterangan }}</td>
                                 <td>{{ $produk->manfaat }}</td>
                                 <td>{{ $produk->bundling }}</td>
+                                <td>{{ $produk->nama_penyelenggara }}</td>
                                 <td>
                                     <a onclick="edit(this)"
                                         data-url="{{route('editPenyelenggara_produk', ['id' => $produk->id])}}"
