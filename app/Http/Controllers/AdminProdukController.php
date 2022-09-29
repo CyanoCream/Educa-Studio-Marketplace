@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 use App\Produk;
 use App\User;
 use DB;
+use App\Gambar;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
@@ -96,6 +97,27 @@ class AdminProdukController extends Controller
         $produk->user_id = $request->user_id;
         $produk->save();
 
+        if ($request->hasFile('gambar')) {
+            $gambar = $request->file('gambar');
+            $fileName = str_random(30).'.'.$gambar->getClientOriginalExtension();
+            $imageName = $fileName;
+            $gambar->move('images/', $fileName);
+        } else {
+            $fileName = 'noimage.png';
+        }
+        
+        // mencari id produk terbaru
+        // $idproduk = produk::latest()->limit(1)->pluck('id');
+        // // dd();
+        // $gambar = new Gambar();
+        // $gambar->gambar = $fileName;
+        // $gambar->id_produk = $idproduk[0];
+        // $gambar->user_id = $request->user_id;
+        // $gambar->save();
+
+
+
+
         return redirect(route('daftarProduk'));
     }
 
@@ -117,7 +139,23 @@ class AdminProdukController extends Controller
         $produk->user_id = $request->user_id;
         $produk->save();
 
-       
+        if ($request->hasFile('gambar')) {
+            $gambar = $request->file('gambar');
+            $fileName = str_random(30).'.'.$gambar->getClientOriginalExtension();
+            $imageName = $fileName;
+            $gambar->move('images/', $fileName);
+        } else {
+            $fileName = 'noimage.png';
+        }
+        
+        $idproduk = produk::latest()->limit(1)->pluck('id');
+        // dd();
+        $gambar = new Gambar();
+        $gambar->gambar = $fileName;
+        $gambar->id_produk = $idproduk[0];
+        $gambar->user_id = $request->user_id;
+        $gambar->save();
+        
         // dd($penyelenggara);
         return redirect(route('daftarPenyelenggara_produk'));
     }
@@ -200,6 +238,8 @@ class AdminProdukController extends Controller
         $produk->bundling = $request->bundling;
         $produk->user_id = $request->user_id;
         $produk->update();
+
+        
         //user_id ditrequest dengan tabel user menggunakan select option
         return redirect(route('daftarProduk'));
     }

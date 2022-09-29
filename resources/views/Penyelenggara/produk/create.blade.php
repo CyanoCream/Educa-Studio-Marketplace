@@ -30,6 +30,11 @@
                             <input type="text" name="nama_produk" id="nama_produk" class="form-control"
                                 required="required" placeholder="Masukkan nama produk">
                         </div>
+						<div class="form-group">
+							<label for="gambar">gambar</label>
+							<input type="file" name="gambar" id="gambar" class="form-control" required="required" placeholder="Masukkan gambar">
+						</div>
+						<input type="hidden" name="user_id" value="{{Auth::user()->id}}">
                         
                         <div class="form-group">
                             <label for="kategori">Kategori</label>

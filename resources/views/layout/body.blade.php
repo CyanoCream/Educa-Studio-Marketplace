@@ -167,9 +167,13 @@
                                         style="background: rgb(171, 179, 254);
                                             background: linear-gradient(180deg, rgb(187, 191, 239) 0%, rgb(225, 228, 254)  53%, rgb(251, 226, 246) 100%); width:280px; height:480px; margin-right:2ex;">
                                         <div class="product-thumb">
-                                            <a class="thumb-link" href="#" v-on:click="getData(po.id)">
+                                            <a v-if="po.gambar[0] != null" class="thumb-link" href="#" v-on:click="getData(pr.id)">
                                                 <img class="img-responsive" width="270" height="350"
                                                     :src="'/images/'+ po.gambar[0].gambar" alt="">
+                                            </a>
+                                            <a v-else class="thumb-link" href="#" v-on:click="getData(pr.id)">
+                                                <img class="img-responsive" width="270" height="350"
+                                                    src="{{asset('images/apro134-1-600x778.jpg')}}" alt="">
                                             </a>
                                             <div class="flash">
                                                 <span class="onnew"><span class="text">New</span></span></div>
@@ -213,9 +217,10 @@
                 id="tab-additional_information" role="tabpanel" aria-labelledby="tab-title-additional_information">
                 <h2>Product</h2>
                 <div class="tab-container row">
-
+              
                     <div v-for="pr in produks" :key="pr.id" class="tab-panel active col-6 col-md-4 col-lg-3"
                         id="1547652538969-4e9e849f-123a-5d80aefaa70e2">
+                        {{-- @{{pr.gambar}} v-if="pr.gambar[0] != null" --}}
                         <div class="kodory-products style-01">
                             <div
                                 class="response-product product-list-grid row auto-clear equal-container better-height ">
@@ -226,10 +231,15 @@
                                         style="background: rgb(133, 143, 240);
                                             background: linear-gradient(180deg, rgb(187, 191, 239) 0%, rgb(225, 228, 254)  53%, rgb(251, 226, 246) 100%); width:280px; height:480px; margin-right:2ex;">
                                         <div class="product-thumb">
-                                            <a class="thumb-link" href="#" v-on:click="getData(pr.id)">
+                                            <a v-if="pr.gambar[0] != null" class="thumb-link" href="#" v-on:click="getData(pr.id)">
                                                 <img class="img-responsive" width="270" height="350"
                                                     :src="'/images/'+ pr.gambar[0].gambar" alt="">
                                             </a>
+                                            <a v-else class="thumb-link" href="#" v-on:click="getData(pr.id)">
+                                                <img class="img-responsive" width="270" height="350"
+                                                src="{{asset('images/apro134-1-600x778.jpg')}}" alt="">
+                                            </a>
+                                            
                                             <div class="flash">
                                                 <span class="onnew"><span class="text">New</span></span></div>
                                             <div class="group-button">
@@ -264,6 +274,7 @@
                             </div>
                             <!-- OWL Products -->
                         </div>
+                        {{-- <div style="display: none !important;" v-else>yyyyy</div> --}}
                     </div>
                 </div>
             </div>
@@ -288,9 +299,13 @@
                                             style="background: rgb(133, 143, 240);
                                                 background: linear-gradient(180deg, rgb(187, 191, 239) 0%, rgb(225, 228, 254)  53%, rgb(251, 226, 246) 100%); width:280px; height:480px; margin-right:2ex;">
                                             <div class="product-thumb">
-                                                <a class="thumb-link" href="#" v-on:click="getData(l.id)">
+                                                <a v-if="l.gambar[0] != null" class="thumb-link" href="#" v-on:click="getData(pr.id)">
                                                     <img class="img-responsive" width="270" height="350"
                                                         :src="'/images/'+ l.gambar[0].gambar" alt="">
+                                                </a>
+                                                <a v-else class="thumb-link" href="#" v-on:click="getData(pr.id)">
+                                                    <img class="img-responsive" width="270" height="350"
+                                                    src="{{asset('images/apro134-1-600x778.jpg')}}" alt="">
                                                 </a>
                                                 <div class="flash">
                                                     <span class="onnew"><span class="text">New</span></span></div>
