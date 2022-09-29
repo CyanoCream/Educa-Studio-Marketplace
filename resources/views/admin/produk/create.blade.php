@@ -50,7 +50,7 @@
                         </div>
 
                         <div class="form-group">
-                            <label for="status_pertemuan">status pertemuan</label>
+                            <label for="status_pertemuan">status pertemuan (contoh : Online atau Offline)</label>
                             <input type="text" name="status_pertemuan" id="status_pertemuan" class="form-control"
                                 required="required" placeholder="Masukkan status pertemuan">
                         </div>
@@ -62,19 +62,19 @@
                         </div>
 
                         <div class="form-group">
-                            <label for="pertemuan">pertemuan</label>
+                            <label for="pertemuan">pertemuan (contoh : 1x Seminggu)</label>
                             <input type="text" name="pertemuan" id="pertemuan" class="form-control" required="required"
                                 placeholder="Masukkan pertemuan">
                         </div>
 
                         <div class="form-group">
-                            <label for="waktu_temu">waktu temu</label>
+                            <label for="waktu_temu">waktu temu (contoh : 1,2,3,...)</label>
                             <input type="text" name="waktu_temu" id="waktu_temu" class="form-control"
                                 required="required" placeholder="Masukkan waktu temu">
                         </div>
 
                         <div class="form-group">
-                            <label for="umur">umur</label>
+                            <label for="umur">umur (contoh : 4 Tahun)</label>
                             <input type="text" name="umur" id="umur" class="form-control" required="required"
                                 placeholder="Masukkan umur">
                         </div>
@@ -92,7 +92,7 @@
                         </div>
 
                         <div class="form-group">
-                            <label for="bundling">bundling</label>
+                            <label for="bundling">bundling (contoh : modul + sertifikat)</label>
                             <input type="text" name="bundling" id="bundling" class="form-control" required="required"
                                 placeholder="Masukkan bundling">
                         </div>

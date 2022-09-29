@@ -27,16 +27,11 @@
 
 						<div class="form-group">
 							<label for="status_order">status order</label>
-							<input type="text" name="status_order" id="status_order" class="form-control" required="required" placeholder="Masukkan status order 0">
-						</div>
-
-						<div class="form-group">
-							<label for="id_penyelenggara">nama penyelenggara</label>
-							<select class="form-control" name="id_penyelenggara" id="id_penyelenggara" required="required">
-								@foreach ($produks[0]->user as $pdk)
-								   <option value="{{$pdk->id}}">{{$pdk->nama_penyelenggara}}</option>
-								@endforeach
-							</select>
+							<select id="status_order" name="status_order" class="form-control">
+                                <option selected>---  Select  ---</option>
+                                <option value="0">Di Keranjang</option>
+                                <option value="1">Di Bayar</option>
+                            </select>
 						</div>
 
 						<div class="form-group">

@@ -35,7 +35,7 @@ class ProdukController extends Controller
 
     public function getProduk()
     {
-        $produks = Produk::with('gambar','penyelenggara')->get();
+        $produks = Produk::with('gambar')->get();
         // $gambars = Gambar::all();
         // $produks = Produk::with('gambar')->where('stock','<=',10)->get();
 

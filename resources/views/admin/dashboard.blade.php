@@ -88,8 +88,8 @@
 
                     <div class="small-box bg-danger">
                         <div class="inner">
-                            <h3>@{{ penyelenggara.length }}</h3>
-                            <p>Penyelenggara</p>
+                            <h3>{{DB::table('tbl_orders')->where('status_order', 1)->count()}}</h3>
+                            <p>Sukses Order</p>
                         </div>
                         <div class="icon">
                             <i class="nav-icon fas fa-columns"></i>

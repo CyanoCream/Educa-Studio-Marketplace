@@ -18,7 +18,7 @@
 			</div>
 		</div>
 	</div>
-
+	{{$order}}
 	<div class="content">
 		<div class="container-fluid">
 			<div class="card">
@@ -28,20 +28,11 @@
 
 						<div class="form-group">
 							<label for="status_order">status order</label>
-							<select class="form-control" name="id_penyelenggara" id="id_penyelenggara" required="required">
-								@foreach ($produks[0]->user as $pdk)
-								   <option value="{{$pdk->id}}">{{$pdk->nama_penyelenggara}}</option>
-								@endforeach
-							</select>
-						</div>
-
-						<div class="form-group">
-							<label for="id_penyelenggara">id penyelenggara</label>
-							<select class="form-control" name="id_penyelenggara" id="id_penyelenggara" required="required">
-								@foreach ($produks as $pdk)
-								   <option value="{{$pdk->id}}">{{$pdk->nama_penyelenggara}}</option>
-								@endforeach
-							</select>
+							<select id="status_order" name="status_order" class="form-control">
+                                <option selected>---  Select  ---</option>
+                                <option value="0">Di Keranjang</option>
+                                <option value="1">Di Bayar</option>
+                            </select>
 						</div>
 
 						<div class="form-group">
@@ -86,11 +77,7 @@
 
 						<div class="form-group">
 							<label for="nama_produk">nama produk</label>
-							<select class="form-control" name="id_produk" id="id_produk" required="required">
-								@foreach ($produk as $pdk)                                    
-								   <option value="{{$pdk->id}}">{{$pdk->nama_produk}}</option>
-								@endforeach
-							</select>
+							<input type="text" name="nama_produk" id="nama_produk" class="form-control" required="required" value="{{ $order->nama_produk }}" placeholder="Masukkan nama produk">
 						</div>
 
 						<div class="text-right">
