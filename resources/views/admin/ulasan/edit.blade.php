@@ -23,26 +23,40 @@
 		<div class="container-fluid">
 			<div class="card">
 				<div class="card-body">
-					<form action="{{ route('updateUlasan',['id'=>$ulasan->id]) }}" method="post">
+					<form action="" method="post">
 						{{ csrf_field() }}
 
 						<div class="form-group">
-							<input type="hidden" name="id_user" value="{{ Auth::user()->id }}">
+							{{-- <input type="hidden" name="id_user" value="{{ Auth::user()->id }}"> --}}
 						</div>
 
 						<div class="form-group">
-							<label for="id_produk">id produk</label>
-							<input type="text" name="id_produk" id="id_produk" class="form-control" required="required" value="{{ $ulasan->id_produk }}" placeholder="Masukkan id produk">
+							<label for="id_produk">nama produk</label>
+							<select class="form-control" name="id_produk" id="nama_produk" required="required">
+                                @foreach ($produk as $u)                                    
+                                   <option value="{{$u->id}}">{{$u->nama_produk}}</option>
+                                @endforeach
+                            </select>
 						</div>
 
 						<div class="form-group">
-                            <input type="hidden" name="nama" value="{{ Auth::user()->name }}">
-                        </div>
+							<label for="id_produk">nama user</label>
+							<select class="form-control" name="id_user" id="id_user" required="required">
+                                @foreach ($user as $u)                                    
+                                   <option value="{{$u->id}}">{{$u->name}}</option>
+                                @endforeach
+                            </select>
+						</div>
+
+					
 
                         <div class="form-group">
-                            <input type="hidden" name="email" value="{{ Auth::user()->email }}">
+                            {{-- <input type="hidden" name="email" value="{{ Auth::user()->email }}"> --}}
                         </div>
-
+						<div class="form-group">
+							<label for="nama">nama</label>
+							<textarea name="nama" id="nama" rows="3" class="form-control" required="required" placeholder="Masukkan penilaian"></textarea>
+						</div>
 						<div class="form-group">
 							<label for="penilaian">penilaian</label>
 							<textarea name="penilaian" id="penilaian" rows="3" class="form-control" required="required" placeholder="Masukkan penilaian"></textarea>

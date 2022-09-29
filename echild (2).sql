@@ -1,14 +1,13 @@
 -- phpMyAdmin SQL Dump
--- version 4.8.3
+-- version 5.2.0
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Sep 14, 2022 at 10:33 AM
--- Server version: 10.1.36-MariaDB
--- PHP Version: 7.0.32
+-- Waktu pembuatan: 29 Sep 2022 pada 04.51
+-- Versi server: 10.4.24-MariaDB
+-- Versi PHP: 7.4.29
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-SET AUTOCOMMIT = 0;
 START TRANSACTION;
 SET time_zone = "+00:00";
 
@@ -25,7 +24,7 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Table structure for table `migrations`
+-- Struktur dari tabel `migrations`
 --
 
 CREATE TABLE `migrations` (
@@ -35,7 +34,7 @@ CREATE TABLE `migrations` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Dumping data for table `migrations`
+-- Dumping data untuk tabel `migrations`
 --
 
 INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES
@@ -54,7 +53,7 @@ INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `password_resets`
+-- Struktur dari tabel `password_resets`
 --
 
 CREATE TABLE `password_resets` (
@@ -66,7 +65,7 @@ CREATE TABLE `password_resets` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tbl_detail_orders`
+-- Struktur dari tabel `tbl_detail_orders`
 --
 
 CREATE TABLE `tbl_detail_orders` (
@@ -75,17 +74,21 @@ CREATE TABLE `tbl_detail_orders` (
   `updated_at` timestamp NULL DEFAULT NULL,
   `id_order` int(10) UNSIGNED NOT NULL,
   `id_produk` int(10) UNSIGNED NOT NULL,
+  `id_user` int(11) NOT NULL,
   `nama_produk` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `harga` int(255) NOT NULL,
   `kurir` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `jumlah` int(11) NOT NULL,
-  `total_harga` int(11) NOT NULL
+  `total_harga` int(11) NOT NULL,
+  `alamat` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `pembayaran` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `status_order` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tbl_gambars`
+-- Struktur dari tabel `tbl_gambars`
 --
 
 CREATE TABLE `tbl_gambars` (
@@ -93,35 +96,36 @@ CREATE TABLE `tbl_gambars` (
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL,
   `gambar` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `id_produk` int(10) UNSIGNED NOT NULL
+  `id_produk` int(10) UNSIGNED NOT NULL,
+  `user_id` int(25) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Dumping data for table `tbl_gambars`
+-- Dumping data untuk tabel `tbl_gambars`
 --
 
-INSERT INTO `tbl_gambars` (`id`, `created_at`, `updated_at`, `gambar`, `id_produk`) VALUES
-(1, '2022-07-07 07:47:21', '2022-08-08 17:00:00', 'Kindergarten English Course Power.jpeg', 1),
-(2, '2022-07-07 07:47:21', '2022-08-08 17:00:00', 'Private English Course Les Bahasa Inggris Privat.jpeg\r\n', 2),
-(3, '2022-08-10 17:00:00', '2022-08-11 17:00:00', 'Program Trial Coding.jpg', 3),
-(4, '2022-07-31 17:00:00', '2022-08-02 17:00:00', 'FREE 1 Month Trial - English - P3 (Mon and Wed).jpg\r\n', 4),
-(5, '2022-07-07 07:47:21', '2022-08-08 17:00:00', 'Promo USG 2D Klinik Ibu Anak Cinere.jpeg', 5),
-(6, '2022-07-07 07:47:21', '2022-08-08 17:00:00', 'Promo Vaksin BCG & MR - Klinik Ibu Anak Cinere.jpeg', 6),
-(7, '2022-07-07 07:47:21', '2022-08-08 17:00:00', 'Les Baca - Tulis - Hitung (CALISTUNG).jpg', 7),
-(8, '2022-08-10 17:00:00', '2022-08-11 17:00:00', 'ENGLISH FOR KIDS - 4-6 YEARS OLD.jpg', 8),
-(9, '2022-07-07 07:47:21', '2022-08-08 17:00:00', 'Number Board Papan Angka.jpg\r\n', 9),
-(10, '2022-08-10 17:00:00', '2022-08-11 17:00:00', 'Nut n Bold Mur & Baut - Toddler.jpg\r\n', 10),
-(11, '2022-07-31 17:00:00', '2022-08-02 17:00:00', 'Enak Berbakat  Membuat Sarapan Sendiri.jpg\r\n', 11),
-(12, '2022-08-03 17:00:00', '2022-08-05 17:00:00', 'Keterampilan Kreatif Pandai Berbicara.jpg\r\n', 12),
-(13, '2022-07-07 07:47:21', '2022-08-08 17:00:00', 'Pijat Laktasi  Oksitosin - Klinik Bidan Asih.jpeg  \r\n', 13),
-(14, '2022-08-10 17:00:00', '2022-08-11 17:00:00', 'Baby Kids Spa - Klinik Bidan Asih.jpeg   \r\n', 14),
-(15, '2022-07-07 07:47:21', '2022-08-08 17:00:00', 'Vaksin Engerix B (Hep B) 0.5 ml Kiara Healthcare.jpeg\r\n', 15),
-(16, '2022-08-10 17:00:00', '2022-08-11 17:00:00', 'Natasha - Moisturizing Milk Cleanser.jpeg', 16);
+INSERT INTO `tbl_gambars` (`id`, `created_at`, `updated_at`, `gambar`, `id_produk`, `user_id`) VALUES
+(1, '2022-07-07 07:47:21', '2022-08-08 17:00:00', 'Kindergarten English Course Power.jpeg', 1, 6),
+(2, '2022-07-07 07:47:21', '2022-08-08 17:00:00', 'Private English Course Les Bahasa Inggris Privat.jpeg\r\n', 2, 6),
+(3, '2022-08-10 17:00:00', '2022-08-11 17:00:00', 'Program Trial Coding.jpg', 3, 6),
+(4, '2022-07-31 17:00:00', '2022-08-02 17:00:00', 'FREE 1 Month Trial - English - P3 (Mon and Wed).jpg\r\n', 4, 6),
+(5, '2022-07-07 07:47:21', '2022-08-08 17:00:00', 'Promo USG 2D Klinik Ibu Anak Cinere.jpeg', 5, 6),
+(6, '2022-07-07 07:47:21', '2022-08-08 17:00:00', 'Promo Vaksin BCG & MR - Klinik Ibu Anak Cinere.jpeg', 6, 6),
+(7, '2022-07-07 07:47:21', '2022-08-08 17:00:00', 'Les Baca - Tulis - Hitung (CALISTUNG).jpg', 7, 6),
+(8, '2022-08-10 17:00:00', '2022-08-11 17:00:00', 'ENGLISH FOR KIDS - 4-6 YEARS OLD.jpg', 8, 6),
+(9, '2022-07-07 07:47:21', '2022-08-08 17:00:00', 'Number Board Papan Angka.jpg\r\n', 9, 6),
+(10, '2022-08-10 17:00:00', '2022-08-11 17:00:00', 'Nut n Bold Mur & Baut - Toddler.jpg\r\n', 10, 6),
+(11, '2022-07-31 17:00:00', '2022-08-02 17:00:00', 'Enak Berbakat  Membuat Sarapan Sendiri.jpg\r\n', 11, 6),
+(12, '2022-08-03 17:00:00', '2022-08-05 17:00:00', 'Keterampilan Kreatif Pandai Berbicara.jpg\r\n', 12, 6),
+(13, '2022-07-07 07:47:21', '2022-08-08 17:00:00', 'Pijat Laktasi  Oksitosin - Klinik Bidan Asih.jpeg  \r\n', 13, 6),
+(14, '2022-08-10 17:00:00', '2022-08-11 17:00:00', 'Baby Kids Spa - Klinik Bidan Asih.jpeg   \r\n', 14, 6),
+(15, '2022-07-07 07:47:21', '2022-08-08 17:00:00', 'Vaksin Engerix B (Hep B) 0.5 ml Kiara Healthcare.jpeg\r\n', 15, 6),
+(16, '2022-08-10 17:00:00', '2022-08-11 17:00:00', 'Natasha - Moisturizing Milk Cleanser.jpeg', 16, 6);
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tbl_hubungikamis`
+-- Struktur dari tabel `tbl_hubungikamis`
 --
 
 CREATE TABLE `tbl_hubungikamis` (
@@ -136,7 +140,7 @@ CREATE TABLE `tbl_hubungikamis` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Dumping data for table `tbl_hubungikamis`
+-- Dumping data untuk tabel `tbl_hubungikamis`
 --
 
 INSERT INTO `tbl_hubungikamis` (`id`, `created_at`, `updated_at`, `nama`, `email`, `nomorponsel`, `topik`, `pesan`) VALUES
@@ -145,7 +149,7 @@ INSERT INTO `tbl_hubungikamis` (`id`, `created_at`, `updated_at`, `nama`, `email
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tbl_orders`
+-- Struktur dari tabel `tbl_orders`
 --
 
 CREATE TABLE `tbl_orders` (
@@ -153,7 +157,7 @@ CREATE TABLE `tbl_orders` (
   `id_user` int(11) NOT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL,
-  `status_order` tinyint(1) NOT NULL DEFAULT '0',
+  `status_order` int(1) NOT NULL DEFAULT 0,
   `id_produk` int(10) UNSIGNED NOT NULL,
   `jumlah_pesanan` int(11) NOT NULL,
   `total_harga` char(25) COLLATE utf8mb4_unicode_ci NOT NULL,
@@ -162,16 +166,17 @@ CREATE TABLE `tbl_orders` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Dumping data for table `tbl_orders`
+-- Dumping data untuk tabel `tbl_orders`
 --
 
 INSERT INTO `tbl_orders` (`id`, `id_user`, `created_at`, `updated_at`, `status_order`, `id_produk`, `jumlah_pesanan`, `total_harga`, `kurir`, `alamat_pen`) VALUES
-(30, 6, '2022-09-14 01:03:50', '2022-09-14 01:03:50', 0, 6, 6, '450', 'jnt', 'tidak tahu');
+(30, 6, '2022-09-14 01:03:50', '2022-09-14 01:03:50', 1, 6, 6, '450', 'jnt', 'tidak tahu'),
+(32, 6, '2022-09-16 22:08:35', '2022-09-16 22:08:35', 1, 7, 1, '150', 'jnt', 'tidak tahu');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tbl_pelanggans`
+-- Struktur dari tabel `tbl_pelanggans`
 --
 
 CREATE TABLE `tbl_pelanggans` (
@@ -190,7 +195,7 @@ CREATE TABLE `tbl_pelanggans` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tbl_penyelenggaras`
+-- Struktur dari tabel `tbl_penyelenggaras`
 --
 
 CREATE TABLE `tbl_penyelenggaras` (
@@ -208,7 +213,7 @@ CREATE TABLE `tbl_penyelenggaras` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tbl_pivot_ulasans`
+-- Struktur dari tabel `tbl_pivot_ulasans`
 --
 
 CREATE TABLE `tbl_pivot_ulasans` (
@@ -223,7 +228,7 @@ CREATE TABLE `tbl_pivot_ulasans` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tbl_produks`
+-- Struktur dari tabel `tbl_produks`
 --
 
 CREATE TABLE `tbl_produks` (
@@ -244,7 +249,7 @@ CREATE TABLE `tbl_produks` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Dumping data for table `tbl_produks`
+-- Dumping data untuk tabel `tbl_produks`
 --
 
 INSERT INTO `tbl_produks` (`id`, `created_at`, `updated_at`, `kategori`, `nama_produk`, `harga_produk`, `status_pertemuan`, `stock`, `pertemuan`, `waktu_temu`, `umur`, `keterangan`, `manfaat`, `bundling`) VALUES
@@ -268,7 +273,7 @@ INSERT INTO `tbl_produks` (`id`, `created_at`, `updated_at`, `kategori`, `nama_p
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tbl_ulasans`
+-- Struktur dari tabel `tbl_ulasans`
 --
 
 CREATE TABLE `tbl_ulasans` (
@@ -283,7 +288,7 @@ CREATE TABLE `tbl_ulasans` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `users`
+-- Struktur dari tabel `users`
 --
 
 CREATE TABLE `users` (
@@ -297,7 +302,7 @@ CREATE TABLE `users` (
   `updated_at` timestamp NULL DEFAULT NULL,
   `panggilan` varchar(11) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `tgl_lahir` date DEFAULT NULL,
-  `alamat` text COLLATE utf8mb4_unicode_ci,
+  `alamat` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `provinsi` varchar(11) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `kota` varchar(11) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `kecamatan` varchar(11) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
@@ -306,30 +311,30 @@ CREATE TABLE `users` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Dumping data for table `users`
+-- Dumping data untuk tabel `users`
 --
 
 INSERT INTO `users` (`id`, `name`, `email`, `password`, `role`, `remember_token`, `created_at`, `updated_at`, `panggilan`, `tgl_lahir`, `alamat`, `provinsi`, `kota`, `kecamatan`, `notelp`, `foto`) VALUES
-(6, 'Anang Eko Fitriyanto', 'anangeko9@gmail.com', '$2y$10$OkXB8pHIISUdzSe7mIGvme45CiXoj0We.X4tK1E43eLq.DEEm5KfO', 'user', 'RAL8U0n1WLOfeMNFhRIdzEWOp90E2E0N8c47FbgwMgcGewa9zWE9MKs462yN', '2022-09-10 02:19:49', '2022-09-10 02:19:49', 'Cak Anang', '1999-01-16', 'Karanggawang', 'Jawa tengah', 'Semarang', 'Ungaran Tim', '08132974940', 'ab 1.jpg');
+(6, 'Anang Eko Fitriyanto', 'anangeko9@gmail.com', '$2y$10$OkXB8pHIISUdzSe7mIGvme45CiXoj0We.X4tK1E43eLq.DEEm5KfO', 'user', 'yDfWG5LRhnXphI9QNxu8cwp934plWtckgQ7K8Jip6hMTvzvgYTTaqWRNUANg', '2022-09-10 02:19:49', '2022-09-10 02:19:49', 'Cak Anang', '1999-01-16', 'Karanggawang', 'Jawa tengah', 'Semarang', 'Ungaran Tim', '08132974940', 'ab 1.jpg');
 
 --
 -- Indexes for dumped tables
 --
 
 --
--- Indexes for table `migrations`
+-- Indeks untuk tabel `migrations`
 --
 ALTER TABLE `migrations`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `password_resets`
+-- Indeks untuk tabel `password_resets`
 --
 ALTER TABLE `password_resets`
   ADD KEY `password_resets_email_index` (`email`);
 
 --
--- Indexes for table `tbl_detail_orders`
+-- Indeks untuk tabel `tbl_detail_orders`
 --
 ALTER TABLE `tbl_detail_orders`
   ADD PRIMARY KEY (`id`),
@@ -337,40 +342,40 @@ ALTER TABLE `tbl_detail_orders`
   ADD KEY `tbl_detail_orders_id_produk_foreign` (`id_produk`);
 
 --
--- Indexes for table `tbl_gambars`
+-- Indeks untuk tabel `tbl_gambars`
 --
 ALTER TABLE `tbl_gambars`
   ADD PRIMARY KEY (`id`),
   ADD KEY `tbl_gambars_id_produk_foreign` (`id_produk`);
 
 --
--- Indexes for table `tbl_hubungikamis`
+-- Indeks untuk tabel `tbl_hubungikamis`
 --
 ALTER TABLE `tbl_hubungikamis`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `tbl_orders`
+-- Indeks untuk tabel `tbl_orders`
 --
 ALTER TABLE `tbl_orders`
   ADD PRIMARY KEY (`id`),
   ADD KEY `tbl_orders_id_produk_foreign` (`id_produk`);
 
 --
--- Indexes for table `tbl_pelanggans`
+-- Indeks untuk tabel `tbl_pelanggans`
 --
 ALTER TABLE `tbl_pelanggans`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `tbl_penyelenggaras`
+-- Indeks untuk tabel `tbl_penyelenggaras`
 --
 ALTER TABLE `tbl_penyelenggaras`
   ADD PRIMARY KEY (`id`),
   ADD KEY `tbl_penyelenggaras_id_produk_foreign` (`id_produk`);
 
 --
--- Indexes for table `tbl_pivot_ulasans`
+-- Indeks untuk tabel `tbl_pivot_ulasans`
 --
 ALTER TABLE `tbl_pivot_ulasans`
   ADD PRIMARY KEY (`id`),
@@ -379,125 +384,125 @@ ALTER TABLE `tbl_pivot_ulasans`
   ADD KEY `tbl_pivot_ulasans_id_pelanggan_foreign` (`id_pelanggan`);
 
 --
--- Indexes for table `tbl_produks`
+-- Indeks untuk tabel `tbl_produks`
 --
 ALTER TABLE `tbl_produks`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `tbl_ulasans`
+-- Indeks untuk tabel `tbl_ulasans`
 --
 ALTER TABLE `tbl_ulasans`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `users`
+-- Indeks untuk tabel `users`
 --
 ALTER TABLE `users`
   ADD PRIMARY KEY (`id`),
   ADD UNIQUE KEY `users_email_unique` (`email`);
 
 --
--- AUTO_INCREMENT for dumped tables
+-- AUTO_INCREMENT untuk tabel yang dibuang
 --
 
 --
--- AUTO_INCREMENT for table `migrations`
+-- AUTO_INCREMENT untuk tabel `migrations`
 --
 ALTER TABLE `migrations`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
--- AUTO_INCREMENT for table `tbl_detail_orders`
+-- AUTO_INCREMENT untuk tabel `tbl_detail_orders`
 --
 ALTER TABLE `tbl_detail_orders`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `tbl_gambars`
+-- AUTO_INCREMENT untuk tabel `tbl_gambars`
 --
 ALTER TABLE `tbl_gambars`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
 
 --
--- AUTO_INCREMENT for table `tbl_hubungikamis`
+-- AUTO_INCREMENT untuk tabel `tbl_hubungikamis`
 --
 ALTER TABLE `tbl_hubungikamis`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
--- AUTO_INCREMENT for table `tbl_orders`
+-- AUTO_INCREMENT untuk tabel `tbl_orders`
 --
 ALTER TABLE `tbl_orders`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=32;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=33;
 
 --
--- AUTO_INCREMENT for table `tbl_pelanggans`
+-- AUTO_INCREMENT untuk tabel `tbl_pelanggans`
 --
 ALTER TABLE `tbl_pelanggans`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `tbl_penyelenggaras`
+-- AUTO_INCREMENT untuk tabel `tbl_penyelenggaras`
 --
 ALTER TABLE `tbl_penyelenggaras`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `tbl_pivot_ulasans`
+-- AUTO_INCREMENT untuk tabel `tbl_pivot_ulasans`
 --
 ALTER TABLE `tbl_pivot_ulasans`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `tbl_produks`
+-- AUTO_INCREMENT untuk tabel `tbl_produks`
 --
 ALTER TABLE `tbl_produks`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
 
 --
--- AUTO_INCREMENT for table `tbl_ulasans`
+-- AUTO_INCREMENT untuk tabel `tbl_ulasans`
 --
 ALTER TABLE `tbl_ulasans`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `users`
+-- AUTO_INCREMENT untuk tabel `users`
 --
 ALTER TABLE `users`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
--- Constraints for dumped tables
+-- Ketidakleluasaan untuk tabel pelimpahan (Dumped Tables)
 --
 
 --
--- Constraints for table `tbl_detail_orders`
+-- Ketidakleluasaan untuk tabel `tbl_detail_orders`
 --
 ALTER TABLE `tbl_detail_orders`
   ADD CONSTRAINT `tbl_detail_orders_id_order_foreign` FOREIGN KEY (`id_order`) REFERENCES `tbl_orders` (`id`),
   ADD CONSTRAINT `tbl_detail_orders_id_produk_foreign` FOREIGN KEY (`id_produk`) REFERENCES `tbl_produks` (`id`);
 
 --
--- Constraints for table `tbl_gambars`
+-- Ketidakleluasaan untuk tabel `tbl_gambars`
 --
 ALTER TABLE `tbl_gambars`
   ADD CONSTRAINT `tbl_gambars_id_produk_foreign` FOREIGN KEY (`id_produk`) REFERENCES `tbl_produks` (`id`);
 
 --
--- Constraints for table `tbl_orders`
+-- Ketidakleluasaan untuk tabel `tbl_orders`
 --
 ALTER TABLE `tbl_orders`
   ADD CONSTRAINT `tbl_orders_id_produk_foreign` FOREIGN KEY (`id_produk`) REFERENCES `tbl_produks` (`id`);
 
 --
--- Constraints for table `tbl_penyelenggaras`
+-- Ketidakleluasaan untuk tabel `tbl_penyelenggaras`
 --
 ALTER TABLE `tbl_penyelenggaras`
   ADD CONSTRAINT `tbl_penyelenggaras_id_produk_foreign` FOREIGN KEY (`id_produk`) REFERENCES `tbl_produks` (`id`);
 
 --
--- Constraints for table `tbl_pivot_ulasans`
+-- Ketidakleluasaan untuk tabel `tbl_pivot_ulasans`
 --
 ALTER TABLE `tbl_pivot_ulasans`
   ADD CONSTRAINT `tbl_pivot_ulasans_id_pelanggan_foreign` FOREIGN KEY (`id_pelanggan`) REFERENCES `tbl_pelanggans` (`id`),
@@ -508,4 +513,3 @@ COMMIT;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
-echild

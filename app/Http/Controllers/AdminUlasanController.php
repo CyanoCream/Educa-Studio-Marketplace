@@ -2,8 +2,11 @@
 
 namespace App\Http\Controllers;
 use App\Ulasan;
+use App\Produk;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use DB;
+use App\User;
 
 class AdminUlasanController extends Controller
 {
@@ -14,10 +17,18 @@ class AdminUlasanController extends Controller
      */
     public function index()
     {
-        $ulasans = ulasan::all();
+        // $ulasans = ulasan::all();
+        // $produks = Produk::where('id', )->get();
+        // return $id;
 
+        $ulasans = DB::table('tbl_ulasans')
+            ->join('tbl_produks', 'tbl_ulasans.id_produk', '=', 'tbl_produks.id')
+            ->select('tbl_ulasans.*', 'tbl_produks.*')
+            ->get();
+
+        // return $ulasans;    
         return view('admin.ulasan.index', [
-            'ulasans' => $ulasans
+            'ulasans' => $ulasans,
         ]);
     }
 
@@ -45,7 +56,12 @@ class AdminUlasanController extends Controller
      */
     public function create(Request $request)
     {
-        return view('admin.ulasan.create');
+        $user = User::all();
+        $produks = Produk::all();
+        return view('admin.ulasan.create',[
+            'produks' => $produks,
+            'user' => $user
+        ]);
     }
 
     /**
@@ -68,7 +84,7 @@ class AdminUlasanController extends Controller
         
         $ulasan->id_user = $request->id_user;
         $ulasan->id_produk = $request->id_produk;
-        $ulasan->nama = Auth::user()->name;
+        $ulasan->nama = $request->nama;
         $ulasan->email = $request->email;
         $ulasan->penilaian = $request->penilaian;
         $ulasan->save();
@@ -118,9 +134,14 @@ class AdminUlasanController extends Controller
      */
     public function edit($id)
     {
+        $user = User::all();
+        $produks = Produk::all();
         $ulasan = ulasan::find($id);
+        // return $user;
         return view('admin.ulasan.edit', [
-            'ulasan' => $ulasan
+            'ulasan' => $ulasan,
+            'produk' => $produks,
+            'user' => $user
         ]);
     }
 
@@ -145,7 +166,7 @@ class AdminUlasanController extends Controller
 
         $ulasan->id_user = $request->id_user;
         $ulasan->id_produk = $request->id_produk;
-        $ulasan->nama = Auth::user()->name;
+        $ulasan->nama = $request->nama;
         $ulasan->email = $request->email;
         $ulasan->penilaian = $request->penilaian;
         $ulasan->save();

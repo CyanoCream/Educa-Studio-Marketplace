@@ -25,18 +25,28 @@
                     <form action="{{ route('storeUlasan') }}" method="post">
                         {{ csrf_field() }}
 
+                       
                         <div class="form-group">
-                            <input type="hidden" name="id_user" value="{{ Auth::user()->id }}">
-                        </div>
+							<label for="user_id">nama produk</label>
+							<select class="form-control" name="id_produk" id="nama_produk" required="required">
+                                @foreach ($produks as $u)                                    
+                                   <option value="{{$u->id}}">{{$u->nama_produk}}</option>
+                                @endforeach
+                            </select>
+						</div>
+                        <div class="form-group">
+							<label for="id_produk">nama user</label>
+							<select class="form-control" name="id_user" id="id_user" required="required">
+                                @foreach ($user as $u)                                    
+                                   <option value="{{$u->id}}">{{$u->name}}</option>
+                                @endforeach
+                            </select>
+						</div>
 
                         <div class="form-group">
-                            <label for="id_produk">id produk</label>
-                            <input type="text" name="id_produk" id="id_produk" class="form-control" required="required"
-                                placeholder="Masukkan id produk">
-                        </div>
-
-                        <div class="form-group">
-                            <input type="hidden" name="nama" value="{{ Auth::user()->name }}">
+                            <label for="nama">nama</label>
+                            <input type="text" name="nama" id="nama" class="form-control"
+                                required="required" placeholder="Masukkan nama">
                         </div>
 
                         <div class="form-group">
