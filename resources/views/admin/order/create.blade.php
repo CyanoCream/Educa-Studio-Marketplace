@@ -33,7 +33,7 @@
 						<div class="form-group">
 							<label for="id_penyelenggara">nama penyelenggara</label>
 							<select class="form-control" name="id_penyelenggara" id="id_penyelenggara" required="required">
-								@foreach ($produks as $pdk)
+								@foreach ($produks[0]->user as $pdk)
 								   <option value="{{$pdk->id}}">{{$pdk->nama_penyelenggara}}</option>
 								@endforeach
 							</select>
