@@ -70,7 +70,6 @@
                                 <th>keterangan</th>
                                 <th>manfaat</th>
                                 <th>bundling</th>
-                                <th>user id</th>
                                 <th>aksi</th>
                             </tr>
                         </thead>
@@ -89,7 +88,6 @@
                                 <td>{{ $produk->keterangan }}</td>
                                 <td>{{ $produk->manfaat }}</td>
                                 <td>{{ $produk->bundling }}</td>
-                                <td>{{ $produk->user_id }}</td>
                                 <td>
                                     <a onclick="edit(this)"
                                         data-url="{{route('editPenyelenggara_produk', ['id' => $produk->id])}}"

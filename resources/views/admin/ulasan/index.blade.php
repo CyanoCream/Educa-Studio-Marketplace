@@ -47,8 +47,7 @@
             </div>
         </div>
     </div>
-
-    <div class="content">
+     <div class="content">
         <div class="container-fluid">
             <div class="card">
                 <div class="card-header text-right">
@@ -59,8 +58,7 @@
                         <thead>
                             <tr>
                                 <th>id</th>
-                                <th>id user</th>
-                                <th>id produk</th>
+                                <th>nama produk</th>
                                 <th>nama</th>
                                 <th>email</th>
                                 <th>penilaian</th>
@@ -72,8 +70,7 @@
                             @foreach ($ulasans as $ulasan)
                             <tr>
                                 <td>{{ $loop->index + 1 }}</td>
-                                <td>{{ $ulasan->id_user }}</td>
-                                <td>{{ $ulasan->id_produk }}</td>
+                                <td>{{ $ulasan->nama_produk }}</td>
                                 <td>{{ $ulasan->nama }}</td>
                                 <td>{{ $ulasan->email }}</td>
                                 <td>{{ $ulasan->penilaian }}</td>

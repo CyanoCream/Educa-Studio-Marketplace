@@ -19,6 +19,7 @@ class CreateGambarsTable extends Migration
             $table->string('gambar');
             $table->integer('id_produk')->unsigned();
             $table->foreign('id_produk')->references('id')->on('tbl_produks');
+            $table->string('user_id');
 
         });
     }
