@@ -81,8 +81,11 @@
                             data-wow-duration="1s" data-wow-delay="0ms" data-wow="fadeInUp">
                             <div class="product-inner tooltip-left">
                                 <div class="product-thumb">
-                                    <a class="thumb-link" href="#" v-on:click="getData(p.id)">
+                                    <a v-if="p.gambar[0] != null" class="thumb-link" href="#" v-on:click="getData(p.id)">
                                         <img class="img-responsive" width="600" height="778" :src="'/images/'+ p.gambar[0].gambar" alt="">
+                                    </a>
+                                    <a v-else class="thumb-link" href="#" v-on:click="getData(p.id)">
+                                        <img class="img-responsive" width="600" height="778" src="{{asset('images/apro134-1-600x778.jpg')}}" alt="">
                                     </a>
                                     <div class="flash">
                                         <span class="onnew"><span class="text">New</span></span>

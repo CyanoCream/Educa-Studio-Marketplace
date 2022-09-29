@@ -59,7 +59,7 @@ class ProdukController extends Controller
     public function getProdukPopular()
     {
 
-        $popular = Produk::with('gambar')->where('kategori','0')->get();
+        $popular = Produk::with('gambar')->where('harga_produk', 0)->get();
         return $popular;
     }
 
@@ -101,7 +101,7 @@ class ProdukController extends Controller
     public function getProdukGratis()
     {
 
-        $gratis = Produk::with('gambar')->where('kategori','gratis')->get();
+        $gratis = Produk::with('gambar')->where('kategori',0)->get();
         return $gratis;
     }
 
