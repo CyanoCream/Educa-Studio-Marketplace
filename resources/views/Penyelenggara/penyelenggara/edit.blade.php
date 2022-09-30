@@ -32,13 +32,10 @@
 								<div class="css-4r2xna">
 									<div class="container-body">
 										<div class="body">
-											<img src="https://kiddo.id/wp-content/uploads/2020/02/icon-kiddo.png"
-												alt="" width="150px">
+											<img src="https://kiddo.id/wp-content/uploads/2020/02/icon-kiddo.png" alt="" width="150px">
 										</div>
 										<div class="container-btn-ubah">
 											<input type="file" name="icon_penyelenggara" accept="image/png, image/jpeg, image/jpg" class="css-17jnaqn">
-											{{-- <button color="white" type="button" class="css-1ynihft">Ubah Foto
-												Profile</button> --}}
 										</div>
 									</div>
 								</div>

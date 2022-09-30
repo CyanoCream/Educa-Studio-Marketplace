@@ -90,7 +90,8 @@
                                         <td>{{ $user->email }}</td>
                                         <td>********</td>
                                         <td>{{ $user->role }}</td>
-                                        <td><img src="{{asset('/images/'.$user->foto) }}" alt="" width="100px"></td>
+                                        {{-- <td><img src="{{asset('/images/'.$user->foto) }}" alt="" width="100px"></td> --}}
+                                        <td><img src="/images/{{ $user->foto }}" alt="" width="100px"></td>
                                         <td>{{ $user->panggilan }}</td>
                                         <td>{{ $user->tgl_lahir }}</td>
                                         <td>{{ $user->alamat }}</td>
@@ -98,7 +99,7 @@
                                         <td>{{ $user->kota }}</td>
                                         <td>{{ $user->kecamatan }}</td>
                                         <td>{{ $user->notelp }}</td>
-                                        <td>{{ $user->icon_penyelenggara }}</td>
+                                        <td><img src="/images/{{ $user->icon_penyelenggara }}" alt="" width="100px"></td>
                                         <td>{{ $user->nama_penyelenggara }}</td>
                                         <td>{{ $user->kota_penyelenggara }}</td>
                                         <td>{{ $user->deskripsi }}</td>

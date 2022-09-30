@@ -35,7 +35,10 @@ class AdminProdukController extends Controller
     //admin penyelenggara
     public function index_p()
     {
-
+        $produks = DB::table('users')
+        ->join('tbl_produks', 'users.id', '=', 'tbl_produks.user_id')
+        ->select('users.*', 'tbl_produks.*')
+        ->get();
         $id = auth()->user()->id;
         $produks = Produk::where('user_id', $id)->get();
         // dd($produks);
@@ -69,6 +72,7 @@ class AdminProdukController extends Controller
     //admin penyelenggara
     public function create_p(Request $request)
     {
+        $user = User::where('role','penyelenggara')->get();
         return view('Penyelenggara.produk.create');
     }
 
@@ -274,16 +278,16 @@ class AdminProdukController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($produk)
+    public function destroy($id)
     {
-        $produk->delete();
-        return redirect(route('daftarProduk'));
+        $produk = produk::find($id)->delete();
+        return redirect()->back();
     }
 
     //admin penyelenggara
-    public function destroy_p($produk)
+    public function destroy_p($id)
     {
-        $produk->delete();
-        return redirect(route('daftarPenyelenggara_produk'));
+        $produk = produk::find($id)->delete();
+        return redirect()->back();
     }
 }

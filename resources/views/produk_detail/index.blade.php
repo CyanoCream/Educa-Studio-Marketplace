@@ -181,7 +181,7 @@
                                 <div class="card-body p-0">
                                     <div class="row">
                                         <div class="col-md-6">
-                                            <img src="/images/{{$produk[0]->icon_penyelenggara}}" alt="" width="500px">
+                                            <img src="{{$produk[0]->icon_penyelenggara}}" alt="" width="500px">
                                         </div>
                                         <div class="col-lg-6 pl-3">
                                             <h4>{{$produk[0]->nama_penyelenggara}}</h4>
@@ -209,6 +209,11 @@
                                         @endif
                                     </div>
                                     <input type="hidden" name="id_produk" value="{{$produk[0]->id}}">
+                                    <input type="hidden" name="nama_produk" value="{{$produk[0]->nama_produk}}">
+                                    {{-- @foreach ($users as $us)
+                                        <input type="hidden" name="name" value="{{$us->name}}">
+                                    <input type="hidden" name="email" value="{{$us->email}}">
+                                    @endforeach --}}
                                     <div class="text-right m-3">
                                         <button type="submit" class="btn-primary">Submit</button>
                                     </div>

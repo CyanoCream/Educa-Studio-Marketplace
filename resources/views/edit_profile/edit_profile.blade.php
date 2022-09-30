@@ -25,23 +25,18 @@
                     {{ csrf_field() }}
                     <div class="form-field">
                         <div class="css-1k4vibs text-center">
-                            
                             <canvas style="width: 50px; height: 25px;"></canvas>
                             <div class="css-4r2xna">
                                 <div class="container-body">
                                     <div class="body">
-                                        <img src="https://kiddo.id/wp-content/uploads/2020/02/icon-kiddo.png"
-                                            alt="" width="150px">
+                                        <img src="https://kiddo.id/wp-content/uploads/2020/02/icon-kiddo.png" alt="" width="150px">
                                     </div>
                                     <div class="container-btn-ubah">
-                                        <input type="file" name="foto" accept="image/png, image/jpeg, image/jpg" class="css-17jnaqn">
-                                        {{-- <button color="white" type="button" class="css-1ynihft">Ubah Foto
-                                            Profile</button> --}}
+                                        <input type="file" name="foto" accept="image/png, image/jpeg, image/jpg" class="form-group css-17jnaqn">
                                     </div>
                                 </div>
                             </div>
-                            <div class="css-1y5cgar">
-                            </div>
+                            <div class="css-1y5cgar"></div>
                         </div>
                         <div class="css-4r2xna">
                             <div class="css-utaa48"><strong>Nama </strong></div>
