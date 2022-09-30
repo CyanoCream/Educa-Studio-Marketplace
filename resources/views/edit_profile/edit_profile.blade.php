@@ -31,9 +31,9 @@
                                     <div class="body">
                                         <img src="https://kiddo.id/wp-content/uploads/2020/02/icon-kiddo.png" alt="" width="150px">
                                     </div>
-                                    <div class="container-btn-ubah">
+                                    {{-- <div class="container-btn-ubah">
                                         <input type="file" name="foto" accept="image/png, image/jpeg, image/jpg" class="form-group css-17jnaqn">
-                                    </div>
+                                    </div> --}}
                                 </div>
                             </div>
                             <div class="css-1y5cgar"></div>

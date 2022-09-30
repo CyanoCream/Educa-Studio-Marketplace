@@ -73,7 +73,9 @@ class AdminProdukController extends Controller
     public function create_p(Request $request)
     {
         $user = User::where('role','penyelenggara')->get();
-        return view('Penyelenggara.produk.create');
+        return view('Penyelenggara.produk.create',[
+            'user' => $user
+        ]);
     }
 
 
@@ -111,13 +113,13 @@ class AdminProdukController extends Controller
         }
         
         // mencari id produk terbaru
-        // $idproduk = produk::latest()->limit(1)->pluck('id');
+        $idproduk = produk::latest()->limit(1)->pluck('id');
         // // dd();
-        // $gambar = new Gambar();
-        // $gambar->gambar = $fileName;
-        // $gambar->id_produk = $idproduk[0];
-        // $gambar->user_id = $request->user_id;
-        // $gambar->save();
+        $gambar = new Gambar();
+        $gambar->gambar = $fileName;
+        $gambar->id_produk = $idproduk[0];
+        $gambar->user_id = $request->user_id;
+        $gambar->save();
 
 
 
@@ -151,9 +153,9 @@ class AdminProdukController extends Controller
         } else {
             $fileName = 'noimage.png';
         }
-        
+
         $idproduk = produk::latest()->limit(1)->pluck('id');
-        // dd();
+        
         $gambar = new Gambar();
         $gambar->gambar = $fileName;
         $gambar->id_produk = $idproduk[0];
@@ -211,22 +213,6 @@ class AdminProdukController extends Controller
      */
     public function update(Request $request, $produk)
     {
-    
-        // $validatedData = $request->validate([
-        //     'nama_produk' => 'required|string|max:255' ,
-        //     'kategori' => 'required|string|max:255' ,
-        //     'harga_produk' => 'required|string|max:255' ,
-        //     'status_produk' => 'required|string|max:255' ,
-        //     'stock' => 'required|integer' ,
-        //     'pertemuan' => 'required|string|max:255' ,
-        //     'waktu_temu' => 'required|integer' ,
-        //     'umur' => 'required|string|max:255' ,
-        //     'keterangan' => 'required|string|max:255' ,
-        //     'manfaat' => 'required|string|max:255' ,
-        //     'bundling' => 'required|string|max:255' ,
-        //     'user_id' => 'required|integer' ,
-        // ]);
-
         $produk = produk::find($produk);
 
         $produk->nama_produk = $request->nama_produk;
@@ -243,15 +229,29 @@ class AdminProdukController extends Controller
         $produk->user_id = $request->user_id;
         $produk->update();
 
+        if ($request->hasFile('gambar')) {
+            $gambar = $request->file('gambar');
+            $fileName = str_random(30).'.'.$gambar->getClientOriginalExtension();
+            $imageName = $fileName;
+            $gambar->move('images/', $fileName);
+        } else {
+            $fileName = 'noimage.png';
+        }
+
+        $idproduk = produk::latest()->limit(1)->pluck('id');
         
-        //user_id ditrequest dengan tabel user menggunakan select option
+        $gambar = new Gambar();
+        $gambar->gambar = $fileName;
+        $gambar->id_produk = $idproduk[0];
+        $gambar->user_id = $request->user_id;
+        $gambar->save();
+
         return redirect(route('daftarProduk'));
     }
 
     //admin penyelenggara
     public function update_p(Request $request, $produk)
     {
-    
         $produk = produk::find($produk);
 
         $produk->nama_produk = $request->nama_produk;
@@ -267,6 +267,23 @@ class AdminProdukController extends Controller
         $produk->bundling = $request->bundling;
         $produk->user_id = $request->user_id;
         $produk->update();
+
+        if ($request->hasFile('gambar')) {
+            $gambar = $request->file('gambar');
+            $fileName = str_random(30).'.'.$gambar->getClientOriginalExtension();
+            $imageName = $fileName;
+            $gambar->move('images/', $fileName);
+        } else {
+            $fileName = 'noimage.png';
+        }
+
+        $idproduk = produk::latest()->limit(1)->pluck('id');
+        
+        $gambar = new Gambar();
+        $gambar->gambar = $fileName;
+        $gambar->id_produk = $idproduk[0];
+        $gambar->user_id = $request->user_id;
+        $gambar->save();
 
         return redirect(route('daftarPenyelenggara_produk'));
     }

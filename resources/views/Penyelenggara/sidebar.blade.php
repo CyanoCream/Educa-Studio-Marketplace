@@ -2,7 +2,7 @@
 <aside class="main-sidebar sidebar-dark-primary elevation-4">
     <!-- Brand Logo -->
     <a href="/" class="brand-link">
-        <span class="brand-text font-weight-light">Penyelenggara Child</span>
+        <span class="brand-text font-weight-light ml-4">Penyelenggara Child</span>
     </a>
 
     <!-- Sidebar -->

@@ -182,8 +182,8 @@ class AdminGambarController extends Controller
      */
     public function update(Request $request, $gambar)
     {
-                
-        $gambar = Gambar::find($gambar);
+        // return $request;
+        $gambar = Gambar::find($gambar)->first();
 
         if ($request->hasFile('gambar')) {
             $gambar = $request->file('gambar');
@@ -199,6 +199,7 @@ class AdminGambarController extends Controller
         $gambar->user_id = $request->user_id;
         $gambar->save();
 
+        ($gambars);
         return redirect(route('daftarGambar'));
     }
 
