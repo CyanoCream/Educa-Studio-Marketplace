@@ -139,8 +139,7 @@
                                 </div>
                                 <div class="product-info equal-elem">
                                     <h3 class="product-name product_title">
-                                        <a href="#" v-if="p.gambar[0] != null"  v-on:click="getData(p.id)">@{{ p.nama_produk }} </a>
-                                        <a href="#" v-else >@{{ p.nama_produk }} </a>
+                                        <a href="#" v-on:click="getData(p.id)">@{{ p.nama_produk }} </a>
                                     </h3>
                                     <span class="price"><span class="kodory-Price-amount amount"><span
                                                 class="kodory-Price-currencySymbol">Rp.</span>@{{ p.harga_produk }}</span>
