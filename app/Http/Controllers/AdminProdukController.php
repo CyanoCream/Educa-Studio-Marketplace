@@ -73,7 +73,9 @@ class AdminProdukController extends Controller
     public function create_p(Request $request)
     {
         $user = User::where('role','penyelenggara')->get();
-        return view('Penyelenggara.produk.create');
+        return view('Penyelenggara.produk.create',[
+            'user' => $user
+        ]);
     }
 
 
