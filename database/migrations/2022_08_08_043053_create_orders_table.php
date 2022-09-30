@@ -19,8 +19,6 @@ class CreateOrdersTable extends Migration
             $table->boolean('status_order')->default(0);
             $table->integer('id_produk')->unsigned();
             $table->foreign('id_produk')->references('id')->on('tbl_produks');
-            $table->integer('id_penyelenggara')->unsigned();
-            $table->foreign('id_penyelenggara')->references('id')->on('tbl_penyelenggaras');
             $table->integer('id_user');
             $table->integer('jumlah_pesanan');
             $table->char('total_harga');
@@ -43,8 +41,6 @@ class CreateOrdersTable extends Migration
     public function down()
     {
         Schema::dropIfExists('tbl_orders');
-        $table->dropForeign('tbl_penyelenggaras_id_produk_foreign');
-        $table->dropForeign('tbl_penyelenggaras_id_pelanggan_foreign');
-        $table->dropForeign('tbl_penyelenggaras_id_penyelenggara_foreign');
+ 
     }
 }
