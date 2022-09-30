@@ -19,7 +19,7 @@ class CreateUlasansTable extends Migration
             $table->integer('id_user');
             $table->integer('id_produk');
             $table->string('nama');
-            $table->string('email');
+            $table->string('email')->nullable;
             $table->string('penilaian');
             $table->integer('bintang')->nullable();
         });
