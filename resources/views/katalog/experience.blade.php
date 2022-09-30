@@ -86,7 +86,7 @@
                                     <a v-if="p.gambar[0] != null" class="thumb-link" href="#" v-on:click="getData(p.id)">
                                         <img class="img-responsive" width="600" height="778" :src="'/images/'+ p.gambar[0].gambar" alt="">
                                     </a>
-                                    <a v-else class="thumb-link" href="#" v-on:click="getData(p.id)">
+                                    <a v-else class="thumb-link" href="#" >
                                         <img class="img-responsive" width="600" height="778" src="{{asset('images/apro134-1-600x778.jpg')}}" alt="">
                                     </a>
                                     <div class="flash">
@@ -147,7 +147,8 @@
                                 </div>
                                 <div class="product-info equal-elem">
                                     <h3 class="product-name product_title">
-                                        <a href="#"  v-on:click="getData(p.id)">@{{ p.nama_produk }} </a>
+                                        <a href="#" v-if="p.gambar[0] != null"  v-on:click="getData(p.id)">@{{ p.nama_produk }} </a>
+                                        <a href="#"  v-else >@{{ p.nama_produk }} </a>
                                     </h3>
                                     <span class="price"><span class="kodory-Price-amount amount"><span
                                                 class="kodory-Price-currencySymbol">Rp.</span>@{{ p.harga_produk }}</span>
