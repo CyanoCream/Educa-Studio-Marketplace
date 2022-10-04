@@ -208,6 +208,7 @@
                                             <textarea class="form-control" rows="3" name="penilaian" id="penilaian" style="border-radius: 10px;"></textarea>
                                         @endif
                                     </div>
+                                    {{-- <input type="hidden" name="id_user" value="{{Auth::User()->id}}"> --}}
                                     <input type="hidden" name="id_produk" value="{{$produk[0]->id}}">
                                     <input type="hidden" name="nama_produk" value="{{$produk[0]->nama_produk}}">
                                     {{-- @foreach ($users as $us)

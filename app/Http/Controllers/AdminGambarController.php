@@ -32,16 +32,17 @@ class AdminGambarController extends Controller
     public function index_p()
     {
         $id = auth()->user()->id;
-        // $produk = Produk::with('gambar')->where('user_id', $id)->get();
-        // $gambars = Gambar::where('user_id', $id)->get();
+        $produk = Produk::where('user_id', $id)->get();
+        $gambars = Gambar::where('user_id', $id)->get();
         // dd($produk);
-        $gambars = DB::table('tbl_gambars')
-            ->leftjoin('tbl_produks', 'tbl_gambars.id_produk', '=', 'tbl_produks.id')
-            ->select('tbl_produks.*', 'tbl_gambars.*')->having('tbl_produks.user_id', $id)
-            ->get();
-            // dd($users);
+        // $gambars = DB::table('tbl_gambars')
+        //     ->leftjoin('tbl_produks', 'tbl_gambars.id_produk', '=', 'tbl_produks.id')
+        //     ->select('tbl_produks.*', 'tbl_gambars.*')
+        //     ->get();
+            // dd($gambars);
         return view('Penyelenggara.gambar.index', [
             'gambars' => $gambars,
+            'produk'=> $produk,
             
         ]);
         
@@ -223,7 +224,7 @@ class AdminGambarController extends Controller
         $gambar->user_id = $request->user_id;
         $gambar->save();
 
-        return redirect(route('daftarPenyelenggara'));
+        return redirect(route('daftarPenyelenggara_gambar'));
     }
 
     /**

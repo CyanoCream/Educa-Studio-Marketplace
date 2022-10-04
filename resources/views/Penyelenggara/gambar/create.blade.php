@@ -25,7 +25,7 @@
 				<div class="card-body">
 					<form action="{{ route('storePenyelenggara_gambar') }}" method="post" enctype="multipart/form-data">
 						{{csrf_field()}}
-						{{-- <div class="form-group">
+						<div class="form-group">
 							<label for="user_id">nama produk</label>
 							<select class="form-control" name="id_produk" id="nama_produk" required="required">
                                 @foreach ($produk as $u)                                    
@@ -37,7 +37,7 @@
 							<label for="gambar">gambar</label>
 							<input type="file" name="gambar" id="gambar" class="form-control" required="required" placeholder="Masukkan gambar">
 						</div>
-						<input type="hidden" name="user_id" value="{{Auth::user()->id}}"> --}}
+						<input type="hidden" name="user_id" value="{{Auth::user()->id}}">
 						<div class="text-right">
 							<a href="{{ route('daftarPenyelenggara_gambar') }}" class="btn btn-outline-secondary mr-2" role="button">Batal</a>
 							<button type="submit" class="btn btn-primary">Simpan</button>

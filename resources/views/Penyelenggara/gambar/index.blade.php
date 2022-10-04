@@ -70,7 +70,10 @@
                             <tr>
                                 <td>{{ $loop->index + 1 }}</td>
                                 <td><img src="/images/{{ $gambar->gambar }}" alt="" width="100px"></td>
-                                <td>{{ $gambar->nama_produk }}</td>
+                                @foreach ($produk as$p )
+                                <td>{{ $p->nama_produk }}</td>
+                                    
+                                @endforeach
                                 <td>
                                     <a onclick="edit(this)"
                                         data-url="{{route('editPenyelenggara_gambar', ['id' => $gambar->id])}}"

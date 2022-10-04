@@ -103,7 +103,7 @@ class AdminUlasanController extends Controller
 
         $ulasan = new ulasan();
         
-        $ulasan->id_user = $request->id_user;
+        $ulasan->id_user = Auth::user()->id;
         $ulasan->id_produk = $request->id_produk;
         $ulasan->nama = Auth::user()->name;
         $ulasan->email = Auth::user()->email;
