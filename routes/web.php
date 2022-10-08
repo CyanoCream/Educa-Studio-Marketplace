@@ -34,7 +34,7 @@ Route::get('/pesanan', 'OrderController@navpesanan')->name('pesanan.index');
 Route::get('nav', function () {
     return view('katalog.index');
 });
-Route::get('/katalog/aktivitas', function () {
+Route::get('/aktivitas', function () {
     return view('katalog.aktivitas');
 })->name('aktivitas');
 Route::get('/kursus', function () {
@@ -89,6 +89,8 @@ Route::get('/navbar', 'OrderController@index');
 Route::get('/history/invoice/{invoice}', 'OrderController@invoice')->middleware('auth')->name('pesanan.invoice');
 Route::get('/pesanan/cek', 'OrderController@navindex')->name('pesanan.cek');
 Route::post('checkout/{id}', 'ProdukController@addData')->name('checkout');
+Route::post('wishlist/{id}', 'ProdukController@addWishlist')->name('add.wishlist');
+Route::post('compare/{id}', 'ProdukController@addCompare')->name('add.compare');
 
 Auth::routes();
 
@@ -139,6 +141,8 @@ Auth::routes();
     Route::post('/detail_order/{detail_order}/edit', 'AdminDetailOrderController@update')->name('updateDetail_Order');
     Route::get('/detail_order/{detail_order}/delete', 'AdminDetailOrderController@destroy')->name('deleteDetail_Order');
     Route::post('/pembayaran/{id}', 'DetailOrderController@pembayaran')->name('pembayaran');
+    Route::get('/compare', 'DetailOrderController@compare')->name('compare');
+    Route::get('/wishlist', 'DetailOrderController@wishlist')->name('wishlist');
 
     // gambar
     Route::get('/gambar', 'AdminGambarController@index')->name('daftarGambar');
@@ -198,6 +202,7 @@ Auth::routes();
     Route::get('/ulasan/{ulasan}/edit', 'AdminUlasanController@edit')->name('editUlasan');
     Route::post('/ulasan/{ulasan}/edit', 'AdminUlasanController@update')->name('updateUlasan');
     Route::get('/ulasan/{ulasan}/delete', 'AdminUlasanController@destroy')->name('deleteUlasan');
+    Route::get('/bintang', 'ProdukController@bintang');
 
     //user
     Route::get('/user', 'AdminUserController@index')->name('daftarUser');

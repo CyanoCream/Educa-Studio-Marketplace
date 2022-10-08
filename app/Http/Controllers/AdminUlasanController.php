@@ -36,7 +36,7 @@ class AdminUlasanController extends Controller
     public function index_pd()
     {
         $ulasans = ulasan::all();
-        
+        // return $ulasan;
         return view('produk_detail.index', [
             'ulasans' => $ulasans
         ]);
@@ -107,8 +107,16 @@ class AdminUlasanController extends Controller
         $ulasan->id_produk = $request->id_produk;
         $ulasan->nama = Auth::user()->name;
         $ulasan->email = Auth::user()->email;
+        $ulasan->bintang = $request->bintang;
         $ulasan->penilaian = $request->penilaian;
         $ulasan->save();
+        
+        
+        // $bin = Ulasan::where('id_produk', $id)->pluck('bintang')->avg();
+        // $produk = Produk::find('id_produk');
+        // $produk->bintang = $request->bintang;
+        // $produk->update();
+
 
 
         // return redirect(route('daftarUlasan_pd'));

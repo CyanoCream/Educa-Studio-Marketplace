@@ -35,9 +35,15 @@ class ProdukController extends Controller
 
     public function getProduk()
     {
-        $produks = Produk::with('gambar')->get();
+        // $produks = DB::table('tbl_produks')
+        // ->leftjoin('tbl_gambars', 'tbl_produks.id', '=', 'tbl_gambars.id_produk')
+        // ->leftjoin('tbl_ulasans', 'tbl_produks.id', '=', 'tbl_ulasans.id_produk')
+        // ->select('tbl_produks.*', 'tbl_ulasans.bintang->', 'tbl_gambars.gambar')
+        // ->get();
+        
         // $gambars = Gambar::all();
-        // $produks = Produk::with('gambar')->where('stock','<=',10)->get();
+        $produks = Produk::with('gambar')->with('Ulasan')->get();
+        $ulasan = Ulasan::all();
 
         return $produks;
     }
@@ -107,10 +113,19 @@ class ProdukController extends Controller
 
     public function getDetailProduk($id)
     {
-        $produks = Produk::with('gambar', 'penyelenggara')->where('id', $id)->first();
+        $produks = Produk::with('gambar')->where('id', $id)->first();
         // $gambars = Gambar::all();
         
         return $produks;
+    }
+
+    public function bintang()
+    {
+        
+        $bintang = Ulasan::all();
+        // $gambars = Gambar::all();
+        
+        return $bintang;
     }
 
     /**
@@ -186,11 +201,15 @@ class ProdukController extends Controller
         ->select('tbl_produks.*','tbl_gambars.gambar', 'users.nama_penyelenggara','users.kota_penyelenggara','users.icon_penyelenggara','users.deskripsi','users.jam_operasional')->get();
         $produk = $produks->where('id',$id);
         // ->where('id', $id)->first();
+        $bintang = Ulasan::where('id_produk', $id)->pluck('bintang')->avg();
         $ulasans = Ulasan::where('id_produk', $id)->get();
         // dd($produk);
+        // dd($ulasans);
+        // dd($bintang);
         return view('produk_detail.index', [
             'produk' => $produk,
-            'ulasans' =>$ulasans
+            'ulasans' => $ulasans,
+            'bintang' => $bintang
         ]);
     }
 
@@ -363,5 +382,183 @@ class ProdukController extends Controller
         {
             return view ('search');
          }
+
+         public function addWishlist(Request $request, $id) {
+        
+            // $data = $request->all();
+            // dd($request);
+            // $data_order = [
+            //     "id_users" => Auth::user()->id,
+            //     "status_order" => 0,
+            //     "id_produk" => $data['id_produk'],
+            //     "id_penyelenggara" => $data['id_penyelenggara'],
+            //     "kurir" => $data ['kurir'],
+            //     "alamat_pen" => ['alamat_pen'],
+            // ];
+    
+            // $data_peserta = [
+            //     "id_produk" => $data ['id_produk'],
+            //     "tgl_lahir" => $data['tgl_lahir'],
+            //     "nama_peserta" => $data['nama_peserta'],
+            //     "nama_panggilan" => $data['nama_panggilan'],
+            //     "jenis_kelamin" => $data['jenis_kelamin'],
+            //     "hubungan" => $data['hubungan'],
+            // ];
+            //     $order = new Order($data_order);
+            //     $order->save();
+            //     $peserta = new Peserta($data_peserta);
+            //     $peserta-> save();
+            //     $produk = new Produk($data);
+            //     $produk->save();
+            
+    
+            //     return view('pesanan.index');
+    
+            $produks = Produk::where('id', $id)->first();
+            //validasi apakah melebihi stok
+            if($request->jumlah_pesan > $produks->stock)
+            {
+                return redirect('pesanan'.$id);
+            }
+    
+            //cek validasi
+            $cek_orders = Order::where('id', Auth::user()->id)->where('status_order',0)->first();
+            //simpan ke database pesanan
+    
+            $orders = new Order;
+            $orders->id_user = Auth::user()->id;
+            $orders->id_produk =  $request->id_produk;
+            $orders->kurir = 'null';
+            $orders->alamat_pen = 'null';
+            $orders->provinsi ='null';
+            $orders->kota = 'null';
+            $orders->kecamatan = 'null';
+            $orders->metode_pembayaran = 'null';
+            $orders->status_order = 2;
+            $orders->nama_produk = $request->nama_produk;
+            $orders->jumlah_pesanan = $request->jumlah_pesanan;
+            $orders->total_harga = $produks->harga_produk * $request->jumlah_pesanan;
+            $orders->save();
+    
+            if(empty($cek_orders))
+            {
+                
+            } 
+            return redirect()->back();
+    
+    
+            // //simpan ke database pesanan detail
+            // $pesanan_baru = Pesanan::where('user_id', Auth::user()->id)->where('status',0)->first();
+    
+            // //cek pesanan detail
+            // $cek_pesanan_detail = PesananDetail::where('barang_id', $barang->id)->where('pesanan_id', $pesanan_baru->id)->first();
+            // if(empty($cek_pesanan_detail))
+            // {
+            // 	$pesanan_detail = new PesananDetail;
+            // 	$pesanan_detail->barang_id = $barang->id;
+            // 	$pesanan_detail->pesanan_id = $pesanan_baru->id;
+            // 	$pesanan_detail->jumlah = $request->jumlah_pesan;
+            // 	$pesanan_detail->jumlah_harga = $barang->harga*$request->jumlah_pesan;
+            // 	$pesanan_detail->save();
+            // }else
+            // {
+            // 	$pesanan_detail = PesananDetail::where('barang_id', $barang->id)->where('pesanan_id', $pesanan_baru->id)->first();
+    
+            // 	$pesanan_detail->jumlah = $pesanan_detail->jumlah+$request->jumlah_pesan;
+    
+            // 	//harga sekarang
+            // 	$harga_pesanan_detail_baru = $barang->harga*$request->jumlah_pesan;
+            // 	$pesanan_detail->jumlah_harga = $pesanan_detail->jumlah_harga+$harga_pesanan_detail_baru;
+            // 	$pesanan_detail->update();
+            }
+            
+            public function addCompare(Request $request, $id) {
+        
+                // $data = $request->all();
+                // dd($request);
+                // $data_order = [
+                //     "id_users" => Auth::user()->id,
+                //     "status_order" => 0,
+                //     "id_produk" => $data['id_produk'],
+                //     "id_penyelenggara" => $data['id_penyelenggara'],
+                //     "kurir" => $data ['kurir'],
+                //     "alamat_pen" => ['alamat_pen'],
+                // ];
+        
+                // $data_peserta = [
+                //     "id_produk" => $data ['id_produk'],
+                //     "tgl_lahir" => $data['tgl_lahir'],
+                //     "nama_peserta" => $data['nama_peserta'],
+                //     "nama_panggilan" => $data['nama_panggilan'],
+                //     "jenis_kelamin" => $data['jenis_kelamin'],
+                //     "hubungan" => $data['hubungan'],
+                // ];
+                //     $order = new Order($data_order);
+                //     $order->save();
+                //     $peserta = new Peserta($data_peserta);
+                //     $peserta-> save();
+                //     $produk = new Produk($data);
+                //     $produk->save();
+                
+        
+                //     return view('pesanan.index');
+        
+                $produks = Produk::where('id', $id)->first();
+                //validasi apakah melebihi stok
+                if($request->jumlah_pesan > $produks->stock)
+                {
+                    return redirect('pesanan'.$id);
+                }
+        
+                //cek validasi
+                $cek_orders = Order::where('id', Auth::user()->id)->where('status_order',0)->first();
+                //simpan ke database pesanan
+        
+                $orders = new Order;
+                $orders->id_user = Auth::user()->id;
+                $orders->id_produk =  $request->id_produk;
+                $orders->kurir = 'null';
+                $orders->alamat_pen = 'null';
+                $orders->provinsi ='null';
+                $orders->kota = 'null';
+                $orders->kecamatan = 'null';
+                $orders->metode_pembayaran = 'null';
+                $orders->status_order = 3;
+                $orders->nama_produk = $request->nama_produk;
+                $orders->jumlah_pesanan = $request->jumlah_pesanan;
+                $orders->total_harga = $produks->harga_produk * $request->jumlah_pesanan;
+                $orders->save();
+        
+                if(empty($cek_orders))
+                {
+                    
+                } 
+                return redirect()->back();
+        
+        
+                // //simpan ke database pesanan detail
+                // $pesanan_baru = Pesanan::where('user_id', Auth::user()->id)->where('status',0)->first();
+        
+                // //cek pesanan detail
+                // $cek_pesanan_detail = PesananDetail::where('barang_id', $barang->id)->where('pesanan_id', $pesanan_baru->id)->first();
+                // if(empty($cek_pesanan_detail))
+                // {
+                // 	$pesanan_detail = new PesananDetail;
+                // 	$pesanan_detail->barang_id = $barang->id;
+                // 	$pesanan_detail->pesanan_id = $pesanan_baru->id;
+                // 	$pesanan_detail->jumlah = $request->jumlah_pesan;
+                // 	$pesanan_detail->jumlah_harga = $barang->harga*$request->jumlah_pesan;
+                // 	$pesanan_detail->save();
+                // }else
+                // {
+                // 	$pesanan_detail = PesananDetail::where('barang_id', $barang->id)->where('pesanan_id', $pesanan_baru->id)->first();
+        
+                // 	$pesanan_detail->jumlah = $pesanan_detail->jumlah+$request->jumlah_pesan;
+        
+                // 	//harga sekarang
+                // 	$harga_pesanan_detail_baru = $barang->harga*$request->jumlah_pesan;
+                // 	$pesanan_detail->jumlah_harga = $pesanan_detail->jumlah_harga+$harga_pesanan_detail_baru;
+                // 	$pesanan_detail->update();
+                }
     
 }

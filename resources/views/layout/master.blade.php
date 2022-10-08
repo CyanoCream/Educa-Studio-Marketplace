@@ -64,6 +64,7 @@ var appComponent = new Vue({
             limited: [],
             popular: [],
             new: [],
+            bintang: [],
             
             
         },
@@ -99,6 +100,14 @@ var appComponent = new Vue({
                         console.log(rsp);
                         appComponent.popular = rsp;
                         // console.log(this.products);
+                }
+                });
+                $.ajax({
+                    url: "/bintang",
+                    success: function(rsp){
+                        console.log(rsp);
+                        appComponent.bintang = rsp;
+                        // console.log(this.bintang);
                 }
                 });
                 

@@ -134,6 +134,12 @@
                                             </li>
                                             @endif
                                             <li class=" menu-item kodory-MyAccount-navigation-link kodory-MyAccount-navigation-link--orders">
+                                                <a href="{{ route ('wishlist') }}">Wishlist</a>
+                                            </li>
+                                            <li class=" menu-item kodory-MyAccount-navigation-link kodory-MyAccount-navigation-link--orders">
+                                                <a href="{{ route ('compare') }}">Compare</a>
+                                            </li>
+                                            <li class=" menu-item kodory-MyAccount-navigation-link kodory-MyAccount-navigation-link--orders">
                                                 <a href="{{ route ('history') }}">History Pembelian</a>
                                             </li>
                                            

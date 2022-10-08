@@ -1,6 +1,7 @@
 @extends('layouts.master2')
 
 @section('content')
+
 <header id="header" class="header style-04">
 
     <div class="header-middle">
@@ -69,6 +70,27 @@
                                     <p class="stock in-stock">
                                         Stock Available: <span>{{ $produk[0]->stock }}</span>
                                     </p>
+                                    <p> Rating :
+                                    @if($bintang == 1)
+                                        <label id="str5" for="str5"><i class=" text-warning fa-solid fa fa-star"></i></label>
+                                        @elseif($bintang <= 2)
+                                        <label id="str5" for="str5"><i class=" text-warning fa-solid fa fa-star"></i></label>
+                                        <label id="str5" for="str5"><i class=" text-warning fa-solid fa fa-star"></i></label>
+                                        @elseif($bintang <= 3)
+                                        <label id="str5" for="str5"><i class=" text-warning fa-solid fa fa-star"></i></label>
+                                        <label id="str5" for="str5"><i class=" text-warning fa-solid fa fa-star"></i></label>
+                                        <label id="str5" for="str5"><i class=" text-warning fa-solid fa fa-star"></i></label>
+                                        @elseif($bintang <= 4)
+                                        <label id="str5" for="str5"><i class=" text-warning fa-solid fa fa-star"></i></label>
+                                        <label id="str5" for="str5"><i class=" text-warning fa-solid fa fa-star"></i></label>
+                                        <label id="str5" for="str5"><i class=" text-warning fa-solid fa fa-star"></i></label>
+                                        <label id="str5" for="str5"><i class=" text-warning fa-solid fa fa-star"></i></label>
+                                        @else
+                                        <label id="str5" for="str5"><i class=" text-warning fa-solid fa fa-star"></i></label>
+                                        <label id="str5" for="str5"><i class=" text-warning fa-solid fa fa-star"></i></label>
+                                        <label id="str5" for="str5"><i class=" text-warning fa-solid fa fa-star"></i></label>
+                                        <label id="str5" for="str5"><i class=" text-warning fa-solid fa fa-star"></i></label>
+                                        @endif </p>
                                     <div class="kodory-product-details__short-description">
                                         <p>{{ $produk[0]->keterangan }}</p>
                                         <ul>
@@ -112,7 +134,71 @@
                                         </div>
                                     </div>
                                     <div class="clear"></div>
+                                    <form action="{{ route ('add.wishlist', [$id = $produk[0]->id]) }}"
+                                        class="variations_form cart" method="post">
+                                        {{csrf_field()}}
+                                        <input type="hidden" name="id_produk" value="{{$produk[0]->id}}">
+                                        <input type="hidden" name="nama_produk" value="{{$produk[0]->nama_produk}}">
+                                        {{-- <input type="hidden" name="id_penyelenggara" value="{{$produk->penyelenggara[0]->id}}">
+                                        --}}
+                                       
+                                            <div class="kodory-variation single_variation"></div>
+                                            <div class="kodory-variation-add-to-cart variations_button ">
 
+                                                
+                                                    
+                                                        <input required type="hidden" data-step="1" name="jumlah_pesanan"
+                                                            value="1" title="Qty" class="input-qty input-text qty text"
+                                                            size="4" pattern="[0-9]*">
+                        
+                                                {{-- <button type="submit" onclick="PesanSekarang(this)"
+                                                    class="single_add_to_cart_button button alt kodory-variation-selection-needed">
+                                                    Add to wishlist
+                                                </button> --}}
+                                                <div class="yith-wcwl-add-to-wishlist">
+                                                    <div class="yith-wcwl-add-button show">
+                                                        <a href="#" rel="nofollow" role="button" type="submit" onclick="document.getElementById('test').submit();"
+                                                           data-product-id="27" data-product-type="variable" class="add_to_wishlist">
+                                                            Add to Wishlist</a>
+                                                    </div>
+                                                </div>
+
+                                                <input name="add-to-cart" value="27" type="hidden">
+                                                <input name="product_id" value="27" type="hidden">
+                                                <input name="variation_id" class="variation_id" value="0" type="hidden">
+                                        </div>
+                                    </form>
+                                    <form action="{{ route ('add.compare', [$id = $produk[0]->id]) }}"
+                                        class="variations_form cart" method="post">
+                                        {{csrf_field()}}
+                                        <input type="hidden" name="id_produk" value="{{$produk[0]->id}}">
+                                        <input type="hidden" name="nama_produk" value="{{$produk[0]->nama_produk}}">
+                                        {{-- <input type="hidden" name="id_penyelenggara" value="{{$produk->penyelenggara[0]->id}}">
+                                        --}}
+                                       
+                                            <div class="kodory-variation single_variation"></div>
+                                            <div class="kodory-variation-add-to-cart variations_button ">
+
+                                                
+                                                    
+                                                        <input required type="hidden" data-step="1" name="jumlah_pesanan"
+                                                            value="1" title="Qty" class="input-qty input-text qty text"
+                                                            size="4" pattern="[0-9]*">
+                        
+                                                {{-- <button type="submit" onclick="PesanSekarang(this)"
+                                                    class="single_add_to_cart_button button alt kodory-variation-selection-needed">
+                                                    Add to wishlist
+                                                </button> --}}
+                                                <a href="#"
+                                                class="compare button" data-product_id="27" rel="nofollow">Compare</a>
+
+                                                <input name="add-to-cart" value="27" type="hidden">
+                                                <input name="product_id" value="27" type="hidden">
+                                                <input name="variation_id" class="variation_id" value="0" type="hidden">
+                                        </div>
+                                    </form>
+                                    <div class="clear"></div>
+                                    
                                     <div class="product_meta">
                                         <div class="wcml-dropdown product wcml_currency_switcher">
                                             <ul>
@@ -196,17 +282,50 @@
 
                         <div class="kodory-Tabs-panel kodory-Tabs-panel--reviews panel entry-content justify-content-center kodory-tab"
                             id="tab-reviews" role="tabpanel" aria-labelledby="tab-title-reviews">
-                            <div class="col-lg-6 text-center" style="border-radius: 20px; left: 25%">
+                            @guest
+                            <div class="media ml-3 mt-5 mr-5 mb-4">
+                                <img class="rounded-circle" src="https://www.pngitem.com/pimgs/m/150-1503945_transparent-user-png-default-user-image-png-png.png" alt="img" width="80px" style="align-items: center">
+                                <div class="media-body pl-3">
+                                    <h4>Anonymous</h4>
+                                    {{-- <p>{{$ulasan->penilaian}}</p> --}}
+                                </div>
+                            </div>
+                            @endguest
+                           
+                            @auth
+                            <div class="media ml-3 mt-5 mr-5 mb-4">
+                                <img class="rounded-circle" src="https://www.pngitem.com/pimgs/m/150-1503945_transparent-user-png-default-user-image-png-png.png" alt="img" width="80px" style="align-items: center">
+                                <div class="media-body pl-3">
+                                    <h4>{{auth::user()->name}}</h4>
+                                    {{-- <p>{{$ulasan->penilaian}}</p> --}}
+                                </div>
+                            </div>
+                            @endauth
+                           
+                            <div style="border-radius: 20px; left: 25%; padding-right:500px;">
+                             
                                 <form action="{{route('storeUlasan_pd')}}" method="post">
                                     {{csrf_field()}}
                                     <div class="form-group">
-                                        <h4>Komentar</h4>
+                                        
                                         @if (empty(Auth::user()))
                                             <textarea class="form-control" name="penilaian" id="penilaian" readonly>Login dulu sebelum berkomentar!</textarea>
                                         @endif
                                         @if (!empty(Auth::user()))
-                                            <textarea class="form-control" rows="3" name="penilaian" id="penilaian" style="border-radius: 10px;"></textarea>
-                                        @endif
+                                        <div class="rating">
+                                            <span><input type="radio" name="bintang" id="str5" value="5"><label for="str5"><i class="fa-solid fa fa-star"></i></label></span>
+                                            <span><input type="radio" name="bintang" id="str4" value="4"><label for="str4"><i class="fa-solid fa fa-star"></i></label></span>
+                                            <span><input type="radio" name="bintang" id="str3" value="3"><label for="str3"><i class="fa-solid fa fa-star"></i></label></span>
+                                            <span><input type="radio" name="bintang" id="str2" value="2"><label for="str2"><i class="fa-solid fa fa-star"></i></label></span>
+                                            <span><input type="radio" name="bintang" id="str1" value="1"><label for="str1"><i class="fa-solid fa fa-star"></i></label></span>
+                                        </div>
+
+                                            <textarea placeholder="Masukan Komentar" class="form-control" rows="3" name="penilaian" id="penilaian" style="border-radius: 10px;"></textarea>
+                                            <div class="text-right m-3">
+                                                <button type="submit" class="btn-primary">Submit</button>
+                                            </div>
+                                            @endif
+                                        
                                     </div>
                                     {{-- <input type="hidden" name="id_user" value="{{Auth::User()->id}}"> --}}
                                     <input type="hidden" name="id_produk" value="{{$produk[0]->id}}">
@@ -215,9 +334,7 @@
                                         <input type="hidden" name="name" value="{{$us->name}}">
                                     <input type="hidden" name="email" value="{{$us->email}}">
                                     @endforeach --}}
-                                    <div class="text-right m-3">
-                                        <button type="submit" class="btn-primary">Submit</button>
-                                    </div>
+                                    
                                 </form>
                             </div>
                             <hr>
@@ -227,13 +344,37 @@
                                     <div class="media ml-5 mt-5 mr-5">
                                         <img class="rounded-circle" src="https://www.pngitem.com/pimgs/m/150-1503945_transparent-user-png-default-user-image-png-png.png" alt="img" width="80px" style="align-items: center">
                                         <div class="media-body pl-3">
-                                            <h4>{{$ulasan->nama}}</h4>
+                                            <h4>{{$ulasan->nama}} 
+                                            @if($ulasan->bintang == 1)
+                                            <label id="str5" for="str5"><i class=" text-warning fa-solid fa fa-star"></i></label>
+                                            @elseif($ulasan->bintang == 2)
+                                            <label id="str5" for="str5"><i class=" text-warning fa-solid fa fa-star"></i></label>
+                                            <label id="str5" for="str5"><i class=" text-warning fa-solid fa fa-star"></i></label>
+                                            @elseif($ulasan->bintang == 3)
+                                            <label id="str5" for="str5"><i class=" text-warning fa-solid fa fa-star"></i></label>
+                                            <label id="str5" for="str5"><i class=" text-warning fa-solid fa fa-star"></i></label>
+                                            <label id="str5" for="str5"><i class=" text-warning fa-solid fa fa-star"></i></label>
+                                            @elseif($ulasan->bintang == 4)
+                                            <label id="str5" for="str5"><i class=" text-warning fa-solid fa fa-star"></i></label>
+                                            <label id="str5" for="str5"><i class=" text-warning fa-solid fa fa-star"></i></label>
+                                            <label id="str5" for="str5"><i class=" text-warning fa-solid fa fa-star"></i></label>
+                                            <label id="str5" for="str5"><i class=" text-warning fa-solid fa fa-star"></i></label>
+                                            @else
+                                            <label id="str5" for="str5"><i class=" text-warning fa-solid fa fa-star"></i></label>
+                                            <label id="str5" for="str5"><i class=" text-warning fa-solid fa fa-star"></i></label>
+                                            <label id="str5" for="str5"><i class=" text-warning fa-solid fa fa-star"></i></label>
+                                            <label id="str5" for="str5"><i class=" text-warning fa-solid fa fa-star"></i></label>
+                                            @endif
+                                            </h4>
                                             <p>{{$ulasan->penilaian}}</p>
                                         </div>
                                     </div>
+
+                                    @if ($ulasan->id_user == Auth::user()->id)
                                     <div class="text-right">
                                         <a href="{{route('deleteUlasan_pd', ['id' => $ulasan->id])}}"><i class="fa fa-trash" aria-hidden="true"></i></a>
                                     </div>
+                                    @endif
                             @endforeach
                         </div>
                     </div>

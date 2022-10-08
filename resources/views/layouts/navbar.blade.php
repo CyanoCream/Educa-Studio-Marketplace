@@ -135,7 +135,12 @@
                                         <li class=" menu-item kodory-MyAccount-navigation-link kodory-MyAccount-navigation-link--orders">
                                             <a href="{{ route ('akun.index') }}">{{ Auth::user()->name }}</a>
                                         </li>
-                                       
+                                        <li class=" menu-item kodory-MyAccount-navigation-link kodory-MyAccount-navigation-link--orders">
+                                            <a href="{{ route ('wishlist') }}">Wishlist</a>
+                                        </li>
+                                        <li class=" menu-item kodory-MyAccount-navigation-link kodory-MyAccount-navigation-link--orders">
+                                            <a href="{{ route ('compare') }}">Compare</a>
+                                        </li>
                                         <li class=" menu-item kodory-MyAccount-navigation-link kodory-MyAccount-navigation-link--orders">
                                         <a href="#" data-toggle="modal" data-target="#exampleModal">Logout</a>
                                         </li> 

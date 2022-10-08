@@ -149,7 +149,9 @@
                     </li>
                 </ul>
             </div>
-
+            {{-- <div v-for="bi in bintang">
+                <i class="fa fa-stars">@{{bi.bintang}}</i>
+            </div> --}}
             <div class="kodory-Tabs-panel kodory-Tabs-panel--description panel entry-content kodory-tab justify-content-conter"
                 id="tab-description" role="tabpanel" aria-labelledby="tab-title-description">
                 <h2>Popular</h2>
@@ -264,6 +266,8 @@
                                                 @{{ pr.waktu_temu }}.Menit</p>
                                             <p class="m-1"><i class="fa fa-map-marker pr-2" aria-hidden="true"></i>
                                                 @{{ pr.status_pertemuan }}</p>
+                                    
+                                               
                                             <span class="price">
                                                 <span class="kodory-Price-amount amount">
                                                     <span

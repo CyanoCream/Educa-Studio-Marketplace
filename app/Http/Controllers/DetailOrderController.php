@@ -196,4 +196,36 @@ class DetailOrderController extends Controller
         $detail_order = Detail_order::find($id)->delete();
         return redirect()->back();
     }
+
+    public function compare()
+    {
+        $id = auth()->user()->id;
+        $orders = Order::with('produk')->where('id_user', $id)->where('status_order', 3)->get();
+        $sumorders = Order::where('id_user', $id)->sum('total_harga');
+        
+        
+        // dd($orders);
+        // return ($orders[0]->produk->stock);
+        return view('compare.index', [
+            'orders' => $orders,
+            'sumorders' => $sumorders
+        ]);
+    }
+
+    public function wishlist()
+    {
+
+        $id = auth()->user()->id;
+        $orders = Order::with('produk')->where('id_user', $id)->where('status_order', 2)->get();
+        $sumorders = Order::where('id_user', $id)->sum('total_harga');
+        
+        
+        // dd($orders);
+        // return ($orders[0]->produk->stock);
+        return view('compare.wishlist', [
+            'orders' => $orders,
+            'sumorders' => $sumorders
+        ]);
+        
+    }
 }

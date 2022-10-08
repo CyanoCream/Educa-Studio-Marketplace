@@ -20,7 +20,7 @@ class OrderController extends Controller
         $sumorders = Order::where('id_user', $id)->sum('total_harga');
         
         
-
+        // dd($orders);
         return view('pesanan.index', [
             'orders' => $orders,
             'sumorders' => $sumorders
